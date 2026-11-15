@@ -89,7 +89,7 @@ p{margin:0;text-wrap:pretty}
 .p4{width:30vw;max-width:260px;left:-6vw;bottom:4svh}
 .copy-a{position:absolute;left:var(--gut);right:var(--gut-r);top:76px;z-index:4}
 .copy-a h1{font-size:clamp(60px, 17vw, 120px);line-height:.85}
-.copy-a .sub{font-weight:700;font-size:16px;color:var(--teal);margin-top:8px}
+.copy-a .sub{font-weight:700;font-size:16px;color:#0d6f72;margin-top:8px}
 .copy-a .lede{margin-top:10px;font-size:17px;line-height:1.45;max-width:30ch}
 .hex{position:absolute;width:var(--hw);height:var(--hh);left:calc(50% - var(--hw) / 2);bottom:calc(5svh + env(safe-area-inset-bottom,0px));z-index:2}
 .w{position:absolute;inset:0;will-change:transform,opacity}
@@ -199,7 +199,7 @@ figure{margin:0}
 }
 
 /* ACT 7: book */
-.book{background:var(--teal);color:#fff;padding-top:72px;padding-bottom:80px}
+.book{background:#0d6f72;color:#fff;padding-top:72px;padding-bottom:80px}
 .book .lede{margin-top:14px;max-width:46ch}
 .book .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
 .book .btn{background:var(--bottle);border-color:var(--bottle)}
@@ -318,7 +318,7 @@ html:not(.js) .copy-b{display:none}
       </div>
       <ul class="sleeps">
         <li><b>4</b>guests, in a queen and two king singles</li>
-        <li><b>+1</b>on the daybed, linen on request</li>
+        <li><b>1</b>single daybed, linen on request</li>
         <li><b>2</b>showers, one of them outdoors</li>
         <li><b>3</b>dogs at most. Pets are welcome</li>
       </ul>
@@ -354,7 +354,7 @@ html:not(.js) .copy-b{display:none}
   <div class="inner">
     <div class="lead">
       <h2>Bring the dog.</h2>
-      <p>Little Norma is pet friendly, with a fully fenced private backyard, a deck and a warm outdoor shower in the garden. Up to three pets.</p>
+      <p>Little Norma is pet friendly, with a deck, a garden bench in the morning sun and a warm outdoor shower. Up to three pets.</p>
     </div>
     <div class="pics">
       <figure>
@@ -377,10 +377,10 @@ html:not(.js) .copy-b{display:none}
     <div class="grid">
       <div class="head">
         <h2>Five minutes to the sand.</h2>
-        <p>Down the street to Normanville Beach and the jetty, or the other way to the cafes, shops and the pub on Main Road. Chelsea drew the map.</p>
+        <p>Down the street to Normanville Beach and the jetty, or the other way to the cafes, shops and the pub on Main Road.</p>
       </div>
       <figure class="map">
-        <img src="img/map.jpg" srcset="img/map-700.jpg 700w, img/map.jpg 1400w" sizes="(min-width:820px) 58vw, 100vw" alt="Chelsea's hand-drawn map of Normanville: Little Norma off Field Street, the beach, jetty, surf club, Main Road and the road to Adelaide" width="1400" height="990" loading="lazy">
+        <img src="img/map.jpg" srcset="img/map-700.jpg 700w, img/map.jpg 1400w" sizes="(min-width:820px) 58vw, 100vw" alt="Little Norma's own illustrated map of Normanville: Little Norma off Field Street, the beach, jetty, surf club, Main Road and the road to Adelaide" width="1400" height="990" loading="lazy">
       </figure>
     </div>
     <div class="beachrow" tabindex="0" role="region" aria-label="Photos of Normanville Beach">
@@ -449,7 +449,7 @@ html:not(.js) .copy-b{display:none}
   <div class="inner">
     <div>
       <h2>Check dates</h2>
-      <p class="lede">A$710 for two nights on Airbnb for the February 2027 dates we checked. Two-night minimum, up to four guests, pets welcome.</p>
+      <p class="lede">A$710 for two nights, 9 to 11 February 2027, as Airbnb showed it on 15 November 2026. Two-night minimum, up to four guests, pets welcome.</p>
       <div class="acts">
         <a class="btn" href="https://airbnb.com/h/littlenorma" rel="noopener" target="_blank">See dates on Airbnb</a>
         <a class="btn line" href="https://www.instagram.com/littlenorma_/" rel="noopener" target="_blank">@littlenorma_</a>
@@ -478,7 +478,7 @@ html:not(.js) .copy-b{display:none}
 
 <footer class="wrap">
   <div class="inner">
-    <p>A preview made by Lamplit Studio for Little Norma. Not affiliated, not live.</p>
+    <p>A preview made by Lamplit Studio for Little Norma. Not affiliated, and not their real site.</p>
     <p>Photos, the map and the sign are Little Norma's own, from their Airbnb listing. Quotes are from Chelsea's listing and guests' Airbnb reviews.</p>
   </div>
 </footer>
@@ -532,6 +532,7 @@ html:not(.js) .copy-b{display:none}
   if(!reduce){ for(var i=0;i<ws.length;i++){ ws[i].style.opacity=0; } for(var j=0;j<lbls.length;j++){ lbls[j].style.opacity=0; } }
   function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
   window.addEventListener('scroll',onScroll,{passive:true});
+  bar.addEventListener('focusin',function(){bar.classList.add('on')});
   window.addEventListener('resize',onScroll);
   var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
   if(mq.addEventListener) mq.addEventListener('change',function(){location.reload()});

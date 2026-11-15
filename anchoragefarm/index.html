@@ -211,6 +211,7 @@ footer .inner{display:grid;gap:6px}
   .m1{grid-column:1/-1;grid-row:auto}.m1 img{aspect-ratio:4/3}
   .m2,.m3{grid-column:auto}.m2 img,.m3 img{aspect-ratio:1}
   .m4{grid-column:1/-1}.m4 img{aspect-ratio:3/2}
+  .mosaic figure img{height:auto}
   .m5,.m6{grid-column:auto}
   .has{grid-template-columns:minmax(0,1fr)}
   .quotes blockquote:first-child{grid-row:auto}
@@ -338,7 +339,7 @@ footer .inner{display:grid;gap:6px}
   <div class="wrap"><div class="inner">
     <div class="in-head">
       <h2 id="in-h">Small, warm, all yours</h2>
-      <p>The van and annex are fully self contained and sit apart from the farmhouse. There's heating, linen supplied, and no wifi, on purpose.</p>
+      <p>The van and annex are fully self contained and sit apart from the farmhouse. There's heating, linen supplied, a TV, and no wifi.</p>
     </div>
     <div class="mosaic">
       <figure class="m1"><img class="reveal" src="img/van-bed-1200.jpg" srcset="img/van-bed-700.jpg 700w, img/van-bed-1200.jpg 1200w" sizes="(max-width:820px) 100vw, 58vw" width="1200" height="881" alt="The double bed inside the van, with windows on both sides" loading="lazy"></figure>
@@ -353,7 +354,7 @@ footer .inner{display:grid;gap:6px}
       <li><b>Kitchenette</b>: microwave, bar fridge, toaster, kettle, electric frypan, Nespresso</li>
       <li><b>Bathroom</b> with shower and toilet</li>
       <li><b>Outside</b>: patio, gas barbecue, fire pit</li>
-      <li><b>Baskets</b> for breakfast, cheese or s'mores, with 24 hours' notice</li>
+      <li><b>Baskets</b> to buy for breakfast, cheese or s'mores, with 24 hours' notice</li>
       <li><b>Pets</b> considered on request</li>
     </ul>
   </div></div>
@@ -385,7 +386,7 @@ footer .inner{display:grid;gap:6px}
 <section class="here" aria-labelledby="here-h">
   <div class="wrap"><div class="inner here-grid">
     <div>
-      <h2 id="here-h">Close to Narooma, out of earshot</h2>
+      <h2 id="here-h">Close to Narooma</h2>
       <ul class="dist">
         <li><b>3.5 km</b><span>to Narooma's main street, about four minutes' drive</span></li>
         <li><b>2 ridges</b><span>north to the Narooma mountain bike trails</span></li>
@@ -449,9 +450,9 @@ footer .inner{display:grid;gap:6px}
   </div>
 </footer>
 
-<div class="phonebar" aria-hidden="true">
+<div class="phonebar">
   <p><b>The Shucker Shack</b>For two, North Narooma</p>
-  <a class="btn" href="https://www.airbnb.com.au/rooms/998815610011591330" rel="noopener" tabindex="-1">Check dates</a>
+  <a class="btn" href="https://www.airbnb.com.au/rooms/998815610011591330" rel="noopener">Check dates</a>
 </div>
 
 <script>
@@ -462,11 +463,12 @@ footer .inner{display:grid;gap:6px}
   var bar = document.querySelector('.phonebar');
   var hero = document.querySelector('.hero');
   function showBar(){
-    var past = hero.getBoundingClientRect().bottom < window.innerHeight * 0.6;
+    var past = hero.getBoundingClientRect().bottom < window.innerHeight * 0.6 || bar.contains(document.activeElement);
     bar.classList.toggle('show', past);
     bar.setAttribute('aria-hidden', past ? 'false' : 'true');
     bar.querySelector('a').tabIndex = past ? 0 : -1;
   }
+  showBar();
   var rv = document.querySelectorAll('.reveal');
   if (reduce || !('IntersectionObserver' in window)) { rv.forEach(function(e){ e.classList.add('in'); }); }
   else {

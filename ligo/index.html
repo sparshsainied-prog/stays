@@ -65,6 +65,7 @@ p{margin:0;text-wrap:pretty}
 .mark span{font-family:var(--display);font-weight:400;font-size:20px;letter-spacing:.32em}
 .top nav{display:flex;gap:22px;align-items:center;font-weight:600;font-size:16px}
 .top nav a{color:var(--bath);text-decoration:none}
+.top nav a.btn{color:#fff}
 .top nav a:hover{text-decoration:underline;text-underline-offset:4px}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:0;
   font-family:var(--text);font-weight:700;font-size:17px;text-decoration:none;border:0;cursor:pointer;background:var(--corten);color:#fff}
@@ -106,7 +107,7 @@ p{margin:0;text-wrap:pretty}
   .cap{bottom:calc(16px + env(safe-area-inset-bottom,0px));right:var(--gut-r)}
   .cap p{font-size:16px}
 }
-@media (max-height:560px){.lede-a p,.award{display:none}.cap p{display:none}}
+@media (max-height:560px) and (prefers-reduced-motion: no-preference){.lede-a p,.award{display:none}.cap p{display:none}}
 
 /* ---------- Sections ---------- */
 .wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
@@ -311,7 +312,7 @@ footer .inner{display:grid;gap:6px}
   </div>
   <div class="rail" tabindex="0" role="region" aria-label="Photos inside Ligo">
     <figure><img src="img/bed-600.jpg" srcset="img/bed-600.jpg 600w, img/bed-1000.jpg 768w" sizes="(max-width:880px) 72vw, 27vw" alt="The bed under the triangle window, with the escarpment framed in it" width="600" height="751" loading="lazy"><figcaption>The bed under the triangle</figcaption></figure>
-    <figure><img src="img/kitchen-600.jpg" srcset="img/kitchen-600.jpg 600w, img/kitchen-1000.jpg 768w" sizes="(max-width:880px) 72vw, 27vw" alt="Black kitchenette cabinets against ply walls, with two white robes on hooks" width="600" height="751" loading="lazy"><figcaption>Kitchenette</figcaption></figure>
+    <figure><img src="img/kitchen-600.jpg" srcset="img/kitchen-600.jpg 600w, img/kitchen-1000.jpg 768w" sizes="(max-width:880px) 72vw, 27vw" alt="Black kitchenette cabinets against ply walls, a lit shelf of cups and a stove-top espresso maker, and a steel sink" width="600" height="751" loading="lazy"><figcaption>Kitchenette</figcaption></figure>
     <figure><img src="img/table-600.jpg" srcset="img/table-600.jpg 600w, img/table-1000.jpg 1000w" sizes="(max-width:880px) 72vw, 27vw" alt="Two cups and a stove-top espresso maker on the small table" width="600" height="750" loading="lazy"><figcaption>Coffee is supplied</figcaption></figure>
     <figure><img src="img/shower-600.jpg" srcset="img/shower-600.jpg 600w, img/shower-1000.jpg 768w" sizes="(max-width:880px) 72vw, 27vw" alt="The glass shower with a rainfall head, a round mirror and a white basin" width="600" height="751" loading="lazy"><figcaption>Rainfall shower</figcaption></figure>
     <figure><img src="img/basin-600.jpg" srcset="img/basin-600.jpg 600w, img/basin-1000.jpg 1000w" sizes="(max-width:880px) 72vw, 27vw" alt="A square white basin with copper tapware under an arched mirror" width="600" height="750" loading="lazy"><figcaption>The basin</figcaption></figure>
@@ -383,7 +384,7 @@ footer .inner{display:grid;gap:6px}
         <li>Self-catered. Bring all your food.</li>
         <li>No wifi or phone reception. Satellite internet is there for emergencies only.</li>
         <li>Only booked guests at the property, children and infants included. No parties.</li>
-        <li>No smoking or vaping inside. The bush around is bushfire country.</li>
+        <li>No smoking or vaping inside.</li>
       </ul>
     </div>
     <figure>
