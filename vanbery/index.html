@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<script>document.documentElement.className+=" js"</script>
+<title>Vanbery Cottage and Chapel | Two stays for two at Mount Alford, Scenic Rim</title>
+<meta name="description" content="A restored chapel and an old schoolhouse cottage on a 43-acre cattle farm at Mount Alford, in Queensland's Scenic Rim. A website idea made by Lamplit Studio for Vanbery Cottage and Chapel.">
+<meta property="og:title" content="Vanbery Cottage and Chapel, Mount Alford">
+<meta property="og:description" content="A website idea made by Lamplit Studio for Vanbery Cottage and Chapel. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/vanbery/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/vanbery/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2316212f'/%3E%3Cpath d='M10 27V14l6-8 6 8v13z' fill='none' stroke='%23f1f2ef' stroke-width='2'/%3E%3Cpath d='M14 27v-6a2 2 0 0 1 4 0v6' fill='%239b1f33'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/hill-1920.jpg" media="(min-width: 821px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/rows-1000.jpg" media="(max-width: 820px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Zilla+Slab:wght@600;700&display=swap">
+<style>
+/* Tokens come from their own photos (see brand.md):
+   night   = the sky over the cottage in their star photos
+   board   = the chapel's painted weatherboards in sun (cool white, not cream)
+   rosella = the red calyxes on the bushes under the chapel
+   timber  = the restored pine walls inside the chapel
+   range   = the Main Range blue behind the chapel
+   Zilla Slab reads like a painted hall noticeboard. Karla is for reading. */
+:root{
+  --night:#16212f;
+  --night-2:#223044;
+  --board:#f1f2ef;
+  --board-2:#dfe2df;
+  --rosella:#9b1f33;
+  --rosella-2:#b3283e;
+  --timber:#8a4524;
+  --range:#6d84a3;
+  --glow:#f2c26b;
+  --ink:#16212f;
+  --ink-soft:#4f5b69;
+  --display:"Zilla Slab","Rockwell","Georgia",serif;
+  --text:"Karla","Avenir Next","Segoe UI",sans-serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--board);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rosella);outline-offset:3px}
+.dark :focus-visible,.strip :focus-visible,.top :focus-visible,.walk :focus-visible,.roof :focus-visible,.guests :focus-visible,.close :focus-visible,.phonebar :focus-visible,footer :focus-visible,.direct :focus-visible{outline-color:var(--glow)}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.04;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--board);padding:8px 12px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.strip{background:var(--night);color:var(--board);font-size:14px;text-align:center;margin:0;
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  padding:14px var(--gut-r) 0 var(--gut)}
+.word{display:block;width:clamp(150px,16vw,210px);filter:drop-shadow(0 1px 6px rgba(10,16,24,.7))}
+.word img{width:100%;height:auto}
+.top nav{display:flex;gap:22px;align-items:center;font-weight:700;font-size:15px}
+.top nav a{color:#fff;text-decoration:none;text-shadow:0 1px 8px rgba(10,16,24,.7)}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:3px;
+  font-family:var(--text);font-weight:700;font-size:16px;text-decoration:none;border:0;cursor:pointer;text-align:center;
+  background:var(--rosella);color:#fff}
+.btn:hover{background:var(--rosella-2)}
+.btn.ink{background:var(--night);color:var(--board)}
+.btn.ink:hover{background:var(--night-2)}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.line:hover{background:rgba(255,255,255,.08)}
+.top nav .btn{text-shadow:none;color:#fff}
+@media (max-width:820px){.top nav a:not(.btn){display:none}}
+
+/* ---------- Act 1: up the rosella rows to the chapel ---------- */
+.walk{position:relative;height:280vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--night)}
+.layer{position:absolute;inset:0;will-change:transform,opacity}
+.layer img{width:100%;height:100%;object-fit:cover}
+.l-back{transform-origin:53% 52%}
+.l-back img{object-position:53% 50%}
+.l-row{pointer-events:none}
+.l-row.left img{object-position:0 100%}
+.l-row.right img{object-position:100% 100%}
+@media (min-width:821px){
+  .l-row{inset:0 auto 0 0;width:auto}
+  .l-row.right{left:auto;right:0}
+  .l-row img{width:auto;height:100%;max-width:none}
+}
+@media (max-width:820px){
+  .l-back{transform-origin:58% 28%}
+  .l-back img,.l-row img{object-position:58% 50%}
+}
+.copy-a{position:absolute;z-index:6;left:var(--gut);bottom:clamp(30px,9vh,96px);max-width:min(640px, calc(100% - 40px));color:#fff}
+.panel{background:rgba(22,33,47,.84);padding:clamp(20px,2.4vw,32px) clamp(20px,2.6vw,36px);border-radius:3px}
+.copy-a .where{font-weight:700;font-size:15px;color:var(--glow)}
+.copy-a h1{font-size:clamp(40px,6vw,86px);margin-top:8px}
+.copy-a p.lede{font-size:clamp(17px,1.5vw,20px);margin-top:14px;max-width:30em}
+.copy-b{position:absolute;z-index:6;right:var(--gut-r);bottom:clamp(30px,8vh,90px);max-width:460px;opacity:0;color:#fff}
+.copy-b h2{font-size:clamp(28px,3.2vw,42px)}
+.copy-b p{margin-top:10px;font-size:17px}
+@media (max-width:820px){
+  .walk{height:250vh}
+  .copy-a{top:78px;bottom:auto;right:var(--gut-r)}
+  .copy-b{left:var(--gut);right:var(--gut-r);bottom:22px;max-width:none}
+}
+@media (max-height:620px){.copy-a p.lede{display:none}}
+@media (max-height:520px){.copy-a .where{display:none}.copy-a h1{font-size:clamp(28px,4.4vw,44px);margin-top:0}.panel{padding:14px 18px}.copy-b p{display:none}}
+
+/* ---------- Act 2: the roof goes back on ---------- */
+.roof{position:relative;height:460vh;background:var(--night)}
+.roof-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--night);color:var(--board)}
+.draw{position:absolute;right:var(--gut-r);top:50%;width:min(62vw, 120vh);transform:translateY(-50%)}
+.draw svg{width:100%;height:auto;display:block;overflow:visible}
+.draw g{transform-box:view-box}
+.ln{fill:none;stroke:var(--board);stroke-width:2.4;stroke-linejoin:round;stroke-linecap:round}
+.ln.thin{stroke-width:1.2;opacity:.55}
+.ln.rng{stroke:var(--range)}
+.fill-wall{fill:var(--night)}
+.fill-stump{fill:#0b1119}
+.win{fill:var(--glow)}
+.hay{fill:#c9a55c;stroke:#e2c88a;stroke-width:1.4}
+.steps{position:absolute;left:var(--gut);top:50%;transform:translateY(-50%);width:min(30vw,420px)}
+.step{position:absolute;left:0;right:0;top:0;transform:translateY(-50%);opacity:0}
+.step:first-child{opacity:1}
+.step .yr{font-family:var(--display);font-weight:700;font-size:clamp(20px,1.8vw,26px);color:var(--glow)}
+.step h2{font-size:clamp(32px,3.6vw,52px);margin-top:6px}
+.step p{margin-top:12px;font-size:clamp(17px,1.3vw,19px);color:#d8dde2}
+.photo-now{position:absolute;inset:0;margin:0;opacity:0;will-change:opacity}
+.photo-now img{width:100%;height:100%;object-fit:cover;object-position:45% 50%}
+.photo-now figcaption{position:absolute;left:var(--gut);bottom:clamp(24px,7vh,70px);max-width:min(520px, calc(100% - 40px))}
+.photo-now figcaption h2{font-size:clamp(30px,3.4vw,48px)}
+.photo-now figcaption p{margin-top:10px;font-size:17px}
+.photo-now figcaption a{display:inline-block;margin-top:8px;font-weight:700;color:var(--glow);min-height:44px;line-height:44px;text-underline-offset:4px}
+@media (max-width:820px){
+  .roof{height:430vh}
+  .draw{left:var(--gut);right:var(--gut-r);top:84px;width:auto;transform:scale(1.12);transform-origin:50% 0}
+  .steps{top:auto;bottom:calc(28px + env(safe-area-inset-bottom,0px));left:var(--gut);right:var(--gut-r);width:auto;transform:none;height:13.5em}
+  .step{top:auto;bottom:0;transform:none}
+  .step h2{font-size:clamp(28px,8vw,36px)}
+  .step p{font-size:16px}
+}
+@media (max-width:820px) and (max-height:700px){.step p:not(.yr){display:none}.steps{height:7.5em}}
+
+/* ---------- Sections ---------- */
+.wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
+.inner{max-width:1200px;margin:0 auto}
+section{scroll-margin-top:10px}
+.lede{font-size:clamp(19px,1.6vw,21px);max-width:34em}
+.quote{font-size:clamp(20px,1.9vw,25px);line-height:1.4;font-weight:500}
+.who{font-size:15px;color:var(--ink-soft);margin-top:8px}
+.cap-s{font-size:14px;color:var(--ink-soft);margin-top:8px}
+dl.facts{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:22px;row-gap:12px;font-size:17px;line-height:1.5}
+dl.facts dt{font-weight:700;font-size:15px;padding-top:2px;white-space:nowrap}
+dl.facts dd{margin:0;border-bottom:1px solid var(--board-2);padding-bottom:12px}
+.big{font-size:clamp(44px,6vw,80px)}
+
+/* The Chapel: light, a rail of the inside */
+.chapel{padding-block:clamp(72px,9vw,130px) 0}
+.chapel .inner{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:start}
+.chapel .lede{margin-top:18px}
+.chapel dl.facts{margin-top:28px}
+.chapel .mezz img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
+@media (max-width:880px){.chapel .inner{grid-template-columns:minmax(0,1fr)}.chapel .mezz{order:-1}}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;
+  padding:clamp(36px,5vw,60px) var(--gut-r) clamp(64px,8vw,110px) var(--gut);margin:0}
+.rail figure{margin:0;flex:0 0 auto;width:clamp(240px,26vw,380px);scroll-snap-align:start}
+.rail img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px;background:var(--board-2)}
+.rail figcaption{font-size:15px;margin-top:8px;color:var(--ink-soft)}
+
+/* The Cottage: night */
+.dark{background:var(--night);color:var(--board)}
+.cottage{padding-block:0 clamp(72px,9vw,130px)}
+.cottage .night{margin:0}
+.cottage .night img{width:100%;aspect-ratio:1920/1000;object-fit:cover;object-position:50% 55%}
+@media (max-width:700px){.cottage .night img{aspect-ratio:4/3}}
+.cottage .inner{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:start;margin-top:clamp(40px,6vw,80px)}
+.cottage .lede{margin-top:18px;color:#d8dde2}
+.cottage dl.facts dd{border-color:#33445a}
+.cottage .who{color:#aeb8c4}
+.cottage .k-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:clamp(36px,5vw,64px)}
+.k-strip figure{margin:0}
+.k-strip img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
+.k-strip figcaption{font-size:14px;color:#aeb8c4;margin-top:8px}
+@media (max-width:880px){.cottage .inner{grid-template-columns:minmax(0,1fr)}.cottage .k-strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* The farm */
+.farm{padding-block:clamp(72px,9vw,130px)}
+.farm-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:end}
+.wide{margin:clamp(30px,4vw,48px) 0 0}
+.wide img{width:100%;aspect-ratio:1920/900;object-fit:cover;border-radius:3px}
+.rosella{margin-top:clamp(36px,5vw,60px);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,56px);align-items:center}
+.rosella img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
+.rosella h3{font-size:clamp(28px,3vw,40px)}
+.rosella p{margin-top:12px}
+.rosella .note{font-size:15px;background:var(--board-2);padding:12px 14px;border-radius:3px;margin-top:18px}
+.animals{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,3fr) minmax(0,3fr);align-items:end;gap:12px;margin-top:clamp(36px,5vw,60px)}
+.animals figure{margin:0}
+.animals img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
+.animals figcaption{font-size:15px;color:var(--ink-soft);margin-top:8px}
+@media (max-width:880px){.farm-head,.rosella{grid-template-columns:minmax(0,1fr)}.animals{grid-template-columns:repeat(2,minmax(0,1fr))}.animals figure:first-child{grid-column:span 2}.animals figure:first-child img{aspect-ratio:4/3}}
+
+/* Guests */
+.guests{background:var(--timber);color:#fff;padding-block:clamp(72px,9vw,120px)}
+.scores{display:flex;gap:clamp(28px,6vw,90px);flex-wrap:wrap;margin-top:28px}
+.score b{display:block;font-family:var(--display);font-size:clamp(60px,8vw,110px);line-height:.9;font-variant-numeric:tabular-nums}
+.score span{display:block;font-size:17px;margin-top:8px;max-width:14em}
+.quotes{list-style:none;margin:clamp(40px,5vw,64px) 0 0;padding:0;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:22px clamp(28px,5vw,64px)}
+.quotes li{border-top:1px solid rgba(255,255,255,.4);padding-top:16px}
+.quotes li:first-child{grid-row:span 2}
+.quotes li:first-child .quote{font-size:clamp(24px,2.8vw,36px);line-height:1.3}
+.guests .who{color:#f6dccb}
+.guests .more{margin-top:28px;font-size:16px}
+@media (max-width:880px){.quotes{grid-template-columns:minmax(0,1fr)}.quotes li:first-child{grid-row:auto}}
+
+/* Around */
+.around{padding-block:clamp(72px,9vw,130px)}
+.around .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+table.dist{width:100%;border-collapse:collapse;margin-top:24px;font-size:17px}
+table.dist th{text-align:left;font-size:15px;color:var(--ink-soft);font-weight:700;padding:0 0 8px}
+table.dist td{padding:12px 0;border-top:1px solid var(--board-2);vertical-align:top}
+table.dist td:last-child{text-align:right;font-weight:700;white-space:nowrap;padding-left:16px;font-variant-numeric:tabular-nums}
+.around .ph img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px}
+.small{font-size:15px;color:var(--ink-soft);margin-top:12px}
+@media (max-width:880px){.around .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Book */
+.book{background:var(--board-2);padding-block:clamp(72px,9vw,130px)}
+.book .lede{margin-top:16px}
+.stays{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,3vw,32px);margin-top:34px}
+.stay{background:var(--board);border-radius:3px;overflow:hidden;display:flex;flex-direction:column}
+.stay img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.stay .body{padding:22px clamp(18px,2.4vw,28px) 26px;display:grid;gap:10px}
+.stay h3{font-size:clamp(30px,3vw,40px)}
+.stay .price{font-weight:700}
+.stay .meta{font-size:16px;color:var(--ink-soft)}
+.stay .btn{justify-self:start;margin-top:6px}
+.direct{margin-top:clamp(24px,3vw,36px);background:var(--night);color:var(--board);border-radius:3px;padding:clamp(22px,3vw,36px);
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center}
+.direct h3{font-size:clamp(28px,3vw,40px)}
+.direct p{margin-top:8px;color:#d8dde2;max-width:36em}
+.direct .acts{display:flex;gap:12px;flex-wrap:wrap}
+.rules{margin-top:24px;font-size:16px;columns:2;column-gap:40px;padding-left:18px}
+.rules li{break-inside:avoid;margin-bottom:6px}
+@media (max-width:760px){.stays{grid-template-columns:minmax(0,1fr)}.direct{grid-template-columns:minmax(0,1fr)}.rules{columns:1}}
+
+/* Close */
+.close{position:relative;color:#fff;background:var(--night)}
+.close img{width:100%;height:min(86vh,760px);object-fit:cover;object-position:50% 60%}
+.close .panel{position:absolute;left:var(--gut);bottom:clamp(24px,6vh,60px);max-width:560px}
+.close h2{font-size:clamp(34px,4.4vw,58px)}
+.close p{margin-top:10px}
+.close .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+@media (max-width:700px){.close img{height:62vh}.close .panel{position:relative;left:auto;bottom:auto;max-width:none;border-radius:0;background:var(--night)}}
+footer{background:var(--night);color:#c2cad3;font-size:14px;padding-block:28px calc(28px + env(safe-area-inset-bottom,0px))}
+footer .inner{display:grid;gap:6px}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;
+  padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);
+  background:rgba(22,33,47,.97);transform:translateY(110%);visibility:hidden;transition:transform .25s ease-out,visibility 0s .25s}
+.phonebar.on{transform:none;visibility:visible;transition:transform .25s ease-out}
+.phonebar .btn{flex:1;min-height:50px}
+.phonebar .btn.line{color:var(--board)}
+@media (max-width:820px){.phonebar{display:flex}footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}}
+
+@media (prefers-reduced-motion: reduce){
+  .walk,.roof{height:auto}
+  .stage,.roof-stage{position:relative;height:auto;overflow:visible}
+  .stage{display:flex;flex-direction:column}
+  .layer{position:relative;inset:auto;opacity:1 !important;transform:none !important}
+  .l-row{display:none}
+  .l-back img{height:auto;aspect-ratio:3/4;max-height:80vh}
+  .copy-a,.copy-b{position:relative;left:auto;right:auto;top:auto;bottom:auto;max-width:none;opacity:1 !important;transform:none !important}
+  .copy-a .panel,.copy-b .panel{border-radius:0;background:var(--night)}
+  .roof-stage{display:flex;flex-direction:column;padding:56px var(--gut-r) 0 var(--gut)}
+  .draw{position:relative;inset:auto;transform:none;width:min(720px,100%);margin:0 auto}
+  .draw g{transform:none !important}
+  .steps{position:relative;inset:auto;transform:none;width:auto;height:auto;max-width:720px;margin:32px auto 0;display:grid;gap:28px}
+  .step{position:relative;inset:auto;transform:none;opacity:1 !important}
+  .step p{display:block !important}
+  .photo-now{position:relative;inset:auto;opacity:1 !important;margin:48px calc(-1 * var(--gut-r)) 0 calc(-1 * var(--gut))}
+  .photo-now img{height:auto;aspect-ratio:4/5;max-height:90vh}
+  .photo-now figcaption{position:relative;left:auto;bottom:auto;max-width:none;padding:24px var(--gut-r) 40px var(--gut)}
+  .phonebar,.phonebar.on{transition:none}
+}
+/* Without JavaScript, show everything in reading order, like reduced motion */
+html:not(.js) .walk,html:not(.js) .roof{height:auto}
+html:not(.js) .stage,html:not(.js) .roof-stage{position:relative;height:auto;overflow:visible}
+html:not(.js) .stage{display:flex;flex-direction:column}
+html:not(.js) .layer{position:relative;inset:auto;opacity:1 !important;transform:none !important}
+html:not(.js) .l-row{display:none}
+html:not(.js) .l-back img{height:auto;aspect-ratio:3/4;max-height:80vh}
+html:not(.js) .copy-a,html:not(.js) .copy-b{position:relative;left:auto;right:auto;top:auto;bottom:auto;max-width:none;opacity:1 !important;transform:none !important}
+html:not(.js) .copy-a .panel,html:not(.js) .copy-b .panel{border-radius:0;background:var(--night)}
+html:not(.js) .roof-stage{display:flex;flex-direction:column;padding:56px var(--gut-r) 0 var(--gut)}
+html:not(.js) .draw{position:relative;inset:auto;transform:none;width:min(720px,100%);margin:0 auto}
+html:not(.js) .draw g{transform:none !important}
+html:not(.js) .steps{position:relative;inset:auto;transform:none;width:auto;height:auto;max-width:720px;margin:32px auto 0;display:grid;gap:28px}
+html:not(.js) .step{position:relative;inset:auto;transform:none;opacity:1 !important}
+html:not(.js) .step p{display:block !important}
+html:not(.js) .photo-now{position:relative;inset:auto;opacity:1 !important;margin:48px calc(-1 * var(--gut-r)) 0 calc(-1 * var(--gut))}
+html:not(.js) .photo-now img{height:auto;aspect-ratio:4/5;max-height:90vh}
+html:not(.js) .photo-now figcaption{position:relative;left:auto;bottom:auto;max-width:none;padding:24px var(--gut-r) 40px var(--gut)}
+html:not(.js) .phonebar,html:not(.js) .phonebar.on{transition:none}
+</style>
+</head>
+<body>
+<a class="skip" href="#book">Skip to booking</a>
+<p class="strip">A website idea made by Lamplit Studio for Vanbery Cottage and Chapel. Not their official site.</p>
+
+<header class="top">
+  <a class="word" href="#walk"><img src="img/script.png" alt="Vanbery Cottage, back to top" width="600" height="160"></a>
+  <nav aria-label="Main">
+    <a href="#chapel">The Chapel</a>
+    <a href="#cottage">The Cottage</a>
+    <a href="#farm">The farm</a>
+    <a class="btn" href="#book">Check dates</a>
+  </nav>
+</header>
+
+<main>
+<section class="walk" id="walk" aria-label="Up the rosella rows to the Chapel">
+  <div class="stage">
+    <div class="layer l-back">
+      <picture>
+        <source media="(min-width:821px)" srcset="img/hill-1920.jpg">
+        <img src="img/rows-1000.jpg" srcset="img/rows-1000.jpg 1000w, img/rows-1500.jpg 1500w" sizes="100vw" alt="Vanbery Chapel, a small white weatherboard church on stumps, on the hilltop at Mount Alford" width="1000" height="1333" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="layer l-row left" aria-hidden="true">
+      <picture>
+        <source media="(min-width:821px)" srcset="img/rows-l.webp">
+        <img src="img/rows-l-full.webp" alt="" width="1000" height="1333">
+      </picture>
+    </div>
+    <div class="layer l-row right" aria-hidden="true">
+      <picture>
+        <source media="(min-width:821px)" srcset="img/rows-r.webp">
+        <img src="img/rows-r-full.webp" alt="" width="1000" height="1333">
+      </picture>
+    </div>
+    <div class="copy-a">
+      <div class="panel">
+        <p class="where">Mount Alford, in Queensland's Scenic Rim</p>
+        <h1>An old church and an old schoolhouse, on one hill.</h1>
+        <p class="lede">Vanbery Chapel and Vanbery Cottage each sleep two, on Helen and Terry's 43&#8209;acre cattle farm, with the Main Range across the valley.</p>
+      </div>
+    </div>
+    <div class="copy-b">
+      <div class="panel">
+        <h2>Rosellas grow wild right under the Chapel.</h2>
+        <p>The farm grows them for its own rosella jam. Picking season runs January to June, and guests are welcome to lend a hand.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="roof" id="story" aria-label="How the Chapel came to Mount Alford">
+  <div class="roof-stage">
+    <div class="draw" aria-hidden="true">
+      <svg viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg" role="presentation">
+        <g id="sky" style="opacity:0">
+          <circle cx="90" cy="60" r="2" fill="#f1f2ef"/><circle cx="170" cy="110" r="1.4" fill="#f1f2ef"/><circle cx="300" cy="40" r="1.8" fill="#f1f2ef"/>
+          <circle cx="470" cy="70" r="1.4" fill="#f1f2ef"/><circle cx="610" cy="36" r="2" fill="#f1f2ef"/><circle cx="720" cy="98" r="1.6" fill="#f1f2ef"/>
+          <circle cx="400" cy="20" r="1.2" fill="#f1f2ef"/><circle cx="760" cy="30" r="1.2" fill="#f1f2ef"/><circle cx="40" cy="130" r="1.2" fill="#f1f2ef"/>
+        </g>
+        <g id="alford" style="opacity:0">
+          <path class="ln rng" d="M0 330 L60 300 L110 312 L170 262 L215 285 L260 240 L300 268 L350 228 L395 250 L450 205 L500 246 L560 222 L610 262 L670 236 L730 276 L800 258"/>
+          <path class="ln rng thin" d="M0 362 L90 340 L180 352 L280 330 L380 346 L480 326 L590 344 L700 330 L800 340"/>
+          <path class="ln" d="M0 500 C160 470 260 462 400 462 C540 462 650 474 800 500"/>
+        </g>
+        <g id="tarome">
+          <path class="ln" d="M0 466 L800 466"/>
+          <path class="ln thin" d="M60 466 L60 400 M60 410 C40 390 30 370 48 352 C66 340 86 356 84 376 C96 384 92 404 70 410 Z"/>
+          <path class="ln thin" d="M720 466 L720 392 M720 402 C700 384 696 360 714 350 C734 342 752 360 746 380 C758 392 748 410 728 404 Z"/>
+        </g>
+        <g id="bldg">
+          <path class="fill-stump" d="M196 432h10v34h-10zM330 434h10v32h-10zM470 432h10v34h-10zM612 430h10v36h-10z"/>
+          <path class="fill-wall ln" d="M184 434 L184 258 L262 160 L340 258 L340 436 Z"/>
+          <path class="fill-wall ln" d="M340 258 L630 268 L630 430 L340 436 Z"/>
+          <path class="ln thin" d="M340 282 L630 290 M340 306 L630 312 M340 330 L630 334 M340 354 L630 356 M340 378 L630 378 M340 402 L630 400 M340 424 L630 422 M184 282 L340 282 M184 306 L340 306 M184 330 L230 330 M294 330 L340 330 M184 354 L230 354 M294 354 L340 354 M184 378 L230 378 M294 378 L340 378 M184 402 L230 402 M294 402 L340 402 M208 234 L316 234 M228 210 L296 210"/>
+          <g id="wins">
+            <path class="ln" d="M380 380 L380 318 Q392 292 404 318 L404 380 Z M440 380 L440 318 Q452 292 464 318 L464 380 Z M500 380 L500 318 Q512 292 524 318 L524 380 Z M560 380 L560 318 Q572 292 584 318 L584 380 Z M250 250 L250 214 Q262 196 274 214 L274 250 Z"/>
+            <path id="glow" class="win" style="opacity:0" d="M381 379 L381 318 Q392 294 403 318 L403 379 Z M441 379 L441 318 Q452 294 463 318 L463 379 Z M501 379 L501 318 Q512 294 523 318 L523 379 Z M561 379 L561 318 Q572 294 583 318 L583 379 Z M251 249 L251 214 Q262 198 273 214 L273 249 Z M241 379 L241 352 Q262 330 283 352 L283 379 Z"/>
+          </g>
+          <path class="fill-wall ln" d="M228 436 L228 330 L262 300 L296 330 L296 436 Z"/>
+          <path class="ln" d="M240 380 L240 352 Q262 328 284 352 L284 380 Z"/>
+          <path class="ln thin" d="M244 436 L244 466 M280 436 L280 466 M236 446 L288 446 M236 456 L288 456"/>
+          <g id="hay" style="opacity:0">
+            <rect class="hay" x="354" y="226" width="78" height="40" rx="8"/>
+            <rect class="hay" x="428" y="214" width="84" height="52" rx="8"/>
+            <rect class="hay" x="506" y="230" width="74" height="40" rx="8"/>
+            <rect class="hay" x="570" y="240" width="56" height="30" rx="8"/>
+            <path class="ln thin" d="M370 226 L362 210 M400 226 L404 206 M450 214 L444 196 M482 214 L490 194 M530 230 L526 214 M598 240 L604 226"/>
+          </g>
+          <g id="verandah" style="opacity:0">
+            <path class="ln" d="M630 300 L712 312 L712 430 M630 300 L630 430 M674 306 L674 430 M630 372 L712 376 M630 392 L712 396 M712 430 L712 466"/>
+            <path class="ln thin" d="M640 372 L640 392 M652 372 L652 393 M664 373 L664 393 M686 374 L686 394 M698 375 L698 395"/>
+            <path class="ln" d="M712 430 L748 466 M720 438 L732 438 M728 446 L740 446 M736 454 L748 454"/>
+          </g>
+        </g>
+        <g id="roofg">
+          <path class="fill-wall ln" d="M168 266 L262 146 L356 266"/>
+          <path class="fill-wall ln" d="M262 146 L568 156 L646 272 L348 262 Z"/>
+          <path class="ln thin" d="M302 148 L382 262 M346 150 L428 263 M390 151 L474 265 M434 152 L520 267 M478 153 L566 269 M522 155 L610 270"/>
+          <path class="ln" d="M540 156 L540 128 L556 128 L556 158"/>
+        </g>
+      </svg>
+    </div>
+    <div class="steps">
+      <div class="step"><p class="yr">Tarome</p><h2>It started as a little church at Tarome.</h2><p>A small weatherboard church, with pointed windows down each side.</p></div>
+      <div class="step"><p class="yr">1968</p><h2>A storm took the roof off.</h2></div>
+      <div class="step"><p class="yr">After the storm</p><h2>It became a hay shed.</h2><p>The old church was used to store hay.</p></div>
+      <div class="step"><p class="yr">Facebook Marketplace</p><h2>Then it turned up for sale online.</h2><p>It was moved, sight unseen, to the top of a hill at Mount Alford, looking across to the Main Range.</p></div>
+      <div class="step"><p class="yr">Mount Alford</p><h2>The roof went back on.</h2><p>Restored and lit again, it sits beside Vanbery Cottage, which was the old Tarome schoolhouse.</p></div>
+    </div>
+    <figure class="photo-now" id="now">
+      <img src="img/chapel-800.jpg" srcset="img/chapel-800.jpg 800w, img/chapel-1400.jpg 1400w" sizes="100vw" alt="Vanbery Chapel today: white weatherboards, pointed windows, black stumps and a side verandah, on green grass under a blue sky" width="800" height="1000" loading="lazy">
+      <figcaption class="panel">
+        <h2>Vanbery Chapel, today.</h2>
+        <p>Restored by Helen and Terry as a stay for two, part of their mission to preserve local history.</p>
+        <a href="#chapel">Step inside</a>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="chapel" id="chapel">
+  <div class="wrap">
+    <div class="inner">
+      <div>
+        <h2 class="big">The Chapel</h2>
+        <p class="lede">Inside, the church walls are warm timber. A staircase climbs to a mezzanine bedroom, and the tall pointed windows look out to the Main Range National Park.</p>
+        <dl class="facts">
+          <dt>Sleeps 2</dt><dd>A queen bed on the mezzanine, with linen bedding.</dd>
+          <dt>Warm</dt><dd>An indoor fireplace, and a fire pit outside for stargazing or morning coffee.</dd>
+          <dt>Kitchen</dt><dd>Stocked with the basics, with a vintage monastery cupboard. No oven, but there's a barbecue outside.</dd>
+          <dt>Bathroom</dt><dd>A big tiled bathroom with a rainwater shower.</dd>
+          <dt>Pool</dt><dd>The farm's in-ground pool, shared with the Cottage, in the warmer months.</dd>
+          <dt>Note</dt><dd>No wifi. Phone reception is usually fine.</dd>
+        </dl>
+      </div>
+      <figure class="mezz" style="margin:0">
+        <img src="img/c-mezz-800.jpg" srcset="img/c-mezz-800.jpg 800w, img/c-mezz-1400.jpg 1400w" sizes="(max-width:880px) 100vw, 55vw" alt="Looking down from the mezzanine into the Chapel: timber walls, pointed windows, a lounge and rug below" width="800" height="1000" loading="lazy">
+        <figcaption class="cap-s">From the mezzanine, looking down into the old church.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="rail" tabindex="0" role="region" aria-label="Photos inside the Chapel">
+    <figure><img src="img/c-stairs-1000.jpg" srcset="img/c-stairs-600.jpg 600w, img/c-stairs-1000.jpg 1000w" sizes="(max-width:880px) 72vw, 26vw" alt="A timber staircase with steel cable rails climbing to the mezzanine" width="1000" height="1250" loading="lazy"><figcaption>Up to the mezzanine</figcaption></figure>
+    <figure><img src="img/c-bed-1000.jpg" srcset="img/c-bed-600.jpg 600w, img/c-bed-1000.jpg 1000w" sizes="(max-width:880px) 72vw, 26vw" alt="The queen bed under the raked ceiling, with a small window to the paddock" width="1000" height="1250" loading="lazy"><figcaption>The bed under the roof</figcaption></figure>
+    <figure><img src="img/c-window-1000.jpg" srcset="img/c-window-600.jpg 600w, img/c-window-1000.jpg 1000w" sizes="(max-width:880px) 72vw, 26vw" alt="A pointed church window above a round table with a vase of dark leaves" width="1000" height="1250" loading="lazy"><figcaption>One of the old windows</figcaption></figure>
+    <figure><img src="img/c-fire-1000.jpg" srcset="img/c-fire-600.jpg 600w, img/c-fire-1000.jpg 984w" sizes="(max-width:880px) 72vw, 26vw" alt="A black wood heater burning against the timber wall" width="984" height="1231" loading="lazy"><figcaption>The fireplace</figcaption></figure>
+    <figure><img src="img/c-kitchen-1000.jpg" srcset="img/c-kitchen-600.jpg 600w, img/c-kitchen-1000.jpg 1000w" sizes="(max-width:880px) 72vw, 26vw" alt="The kitchen with a stone bench, green cupboards and a round-cornered fridge" width="1000" height="1250" loading="lazy"><figcaption>Kitchen</figcaption></figure>
+    <figure><img src="img/c-bath-1000.jpg" srcset="img/c-bath-600.jpg 600w, img/c-bath-1000.jpg 1000w" sizes="(max-width:880px) 72vw, 26vw" alt="The bathroom with patterned floor tiles, a timber vanity and a round mirror" width="1000" height="1250" loading="lazy"><figcaption>The bathroom</figcaption></figure>
+    <figure><img src="img/c-door-1000.jpg" srcset="img/c-door-600.jpg 600w, img/c-door-1000.jpg 1000w" sizes="(max-width:880px) 72vw, 26vw" alt="The Chapel's front door with a pointed glass panel, at the top of the timber steps" width="1000" height="1250" loading="lazy"><figcaption>The front steps</figcaption></figure>
+  </div>
+</section>
+
+<section class="cottage dark" id="cottage">
+  <figure class="night">
+    <img src="img/k-night-1000.jpg" srcset="img/k-night-1000.jpg 1000w, img/k-night-1920.jpg 1920w" sizes="100vw" alt="Vanbery Cottage at night, its windows and verandah lit gold under a starry sky" width="1920" height="1280" loading="lazy">
+  </figure>
+  <div class="wrap">
+    <div class="inner">
+      <div>
+        <h2 class="big">The Cottage</h2>
+        <p class="lede">The old Tarome schoolhouse, moved to the farm and done up for two. A verandah runs across the front with a hammock, and the view goes straight down the valley to the mountains.</p>
+        <blockquote style="margin:28px 0 0;padding:0">
+          <p class="quote">"Every evening we enjoyed the sunset from the verandah with a glass of wine."</p>
+          <p class="who">Cara, on Stayz</p>
+        </blockquote>
+      </div>
+      <dl class="facts">
+        <dt>Sleeps 2</dt><dd>A queen bed with good linen and dual electric blankets.</dd>
+        <dt>Bathroom</dt><dd>An ensuite with a full-size bath.</dd>
+        <dt>Kitchen</dt><dd>Fully equipped, with a full-size fridge, electric stove and microwave, and proper china.</dd>
+        <dt>Warm, cool</dt><dd>A wood fire from May to September. Air-conditioning and ceiling fans for summer.</dd>
+        <dt>Outside</dt><dd>The furnished verandah and hammock, and the in-ground pool and gazebo, shared with Chapel guests.</dd>
+        <dt>Rainy days</dt><dd>Books, DVDs, board games and cards.</dd>
+      </dl>
+    </div>
+    <div class="inner k-strip">
+      <figure><img src="img/k-hammock-1000.jpg" srcset="img/k-hammock-600.jpg 600w, img/k-hammock-1000.jpg 1000w" sizes="(max-width:880px) 46vw, 23vw" alt="A striped hammock on the verandah, with the valley and the range beyond" width="1000" height="1250" loading="lazy"><figcaption>The hammock</figcaption></figure>
+      <figure><img src="img/k-bed-1000.jpg" srcset="img/k-bed-600.jpg 600w, img/k-bed-1000.jpg 1000w" sizes="(max-width:880px) 46vw, 23vw" alt="A white iron bed with a floral quilt beside two windows" width="1000" height="1250" loading="lazy"><figcaption>The bedroom</figcaption></figure>
+      <figure><img src="img/k-kitchen-1000.jpg" srcset="img/k-kitchen-600.jpg 600w, img/k-kitchen-1000.jpg 1000w" sizes="(max-width:880px) 46vw, 23vw" alt="The kitchen with a black and white chequered floor and a timber dresser of china" width="1000" height="1250" loading="lazy"><figcaption>Kitchen and dresser</figcaption></figure>
+      <figure><img src="img/k-fire-1000.jpg" srcset="img/k-fire-600.jpg 600w, img/k-fire-1000.jpg 1000w" sizes="(max-width:880px) 46vw, 23vw" alt="The wood fire alight on a tiled hearth" width="1000" height="1250" loading="lazy"><figcaption>Fire season, May to September</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="farm wrap" id="farm">
+  <div class="inner">
+    <div class="farm-head">
+      <h2 class="big">Dulhunty, the farm</h2>
+      <p class="lede">Forty-three acres of cattle country near Boonah. Guests can wander the mown areas, or walk the 800-metre track down to the gate to see the cattle up close.</p>
+    </div>
+    <figure class="wide"><img src="img/f-range-900.jpg" srcset="img/f-range-900.jpg 900w, img/f-range-1920.jpg 1920w" sizes="100vw" alt="Cattle grazing a green paddock in the morning, with mist in the valley and the mountains behind" width="1920" height="1222" loading="lazy"></figure>
+    <div class="rosella">
+      <img src="img/f-rosella-1000.jpg" srcset="img/f-rosella-600.jpg 600w, img/f-rosella-1000.jpg 1000w" sizes="(max-width:880px) 100vw, 40vw" alt="A cane basket full of picked red rosellas between the bushes" width="1000" height="1250" loading="lazy">
+      <div>
+        <h3>The rosella farm</h3>
+        <p>Dulhunty is home to the Vanbery Jam Company and its rosella jam. The season runs from January to June, and guests are welcome to get their hands in and learn how the rosellas are grown, picked and preserved.</p>
+        <p class="note">Rosella season: January to June. Ask Helen when you book if you'd like to help pick.</p>
+      </div>
+    </div>
+    <div class="animals">
+      <figure><img src="img/f-koala-1000.jpg" srcset="img/f-koala-600.jpg 600w, img/f-koala-1000.jpg 1000w" sizes="(max-width:880px) 100vw, 33vw" alt="A koala climbing a gum tree beside the cottage" width="1000" height="1250" loading="lazy"><figcaption>Two koalas visit regularly. They're called Kevin and Ketchup.</figcaption></figure>
+      <figure><img src="img/f-parrots-1000.jpg" srcset="img/f-parrots-600.jpg 600w, img/f-parrots-1000.jpg 1000w" sizes="(max-width:880px) 50vw, 33vw" alt="A pair of king parrots on a bird bath" width="1000" height="1250" loading="lazy"><figcaption>King parrots</figcaption></figure>
+      <figure><img src="img/f-wallabies-1000.jpg" srcset="img/f-wallabies-600.jpg 600w, img/f-wallabies-1000.jpg 800w" sizes="(max-width:880px) 50vw, 33vw" alt="Two wallabies standing in dry grass under the trees" width="800" height="1000" loading="lazy"><figcaption>Kangaroos, wallabies and joeys</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="guests wrap" id="guests">
+  <div class="inner">
+    <h2 class="big">What guests say</h2>
+    <div class="scores">
+      <p class="score"><b>4.99</b><span>The Cottage, from 107 Airbnb reviews</span></p>
+      <p class="score"><b>5.0</b><span>The Chapel, from 25 Airbnb reviews</span></p>
+      <p class="score"><b>10/10</b><span>The Cottage, from 48 Stayz reviews</span></p>
+    </div>
+    <ul class="quotes">
+      <li><p class="quote">"A beautiful location and wonderful cottage. Helen &amp; Terry were extremely welcoming."</p><p class="who">Jason, Stayz</p></li>
+      <li><p class="quote">"Beautiful place and amazing hosts."</p><p class="who">Grace, Stayz</p></li>
+      <li><p class="quote">"Surrounded by beautiful scenery, the cottage is idyllic."</p><p class="who">Kate, Stayz</p></li>
+    </ul>
+    <p class="more">On the Cottage's Airbnb listing, 66 reviews mention the hospitality.</p>
+  </div>
+</section>
+
+<section class="around wrap" id="around">
+  <div class="inner">
+    <div>
+      <h2 class="big">Getting here</h2>
+      <table class="dist">
+        <thead><tr><th scope="col">By car, roughly</th><th scope="col"><span class="vh">Distance</span></th></tr></thead>
+        <tbody>
+          <tr><td>Kooroomba Vineyard and Lavender Farm</td><td>5 km</td></tr>
+          <tr><td>Boonah</td><td>19 km</td></tr>
+          <tr><td>Brisbane city</td><td>105 km</td></tr>
+          <tr><td>Brisbane Airport</td><td>120 km</td></tr>
+          <tr><td>Surfers Paradise</td><td>121 km</td></tr>
+        </tbody>
+      </table>
+      <p class="small">Road distances from Ganthorpe Road on OpenStreetMap, rounded. The last 800 metres is a winding gravel drive up the hill.</p>
+    </div>
+    <figure class="ph" style="margin:0">
+      <img src="img/aerial-800.jpg" srcset="img/aerial-800.jpg 800w, img/aerial-1600.jpg 1440w" sizes="(max-width:880px) 100vw, 44vw" alt="The Chapel from above: a white church with two rainwater tanks, a lawn and a fire pit circle" width="1440" height="1080" loading="lazy">
+      <figcaption class="cap-s">The Chapel from above, with its fire pit.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="book wrap" id="book">
+  <div class="inner">
+    <h2 class="big">Check dates</h2>
+    <p class="lede">Both stays are for two adults, with a two-night minimum.</p>
+    <div class="stays">
+      <article class="stay">
+        <img src="img/card-chapel-800.jpg" srcset="img/card-chapel-800.jpg 800w, img/card-chapel-1600.jpg 1600w" sizes="(max-width:760px) 100vw, 50vw" alt="Inside the Chapel, from the mezzanine" width="1600" height="1066" loading="lazy">
+        <div class="body">
+          <h3>The Chapel</h3>
+          <p class="price">From A$280 a night</p>
+          <p class="meta">Mezzanine bedroom, fireplace, rainwater shower. 5.0 from 25 reviews.</p>
+          <a class="btn ink" href="https://www.airbnb.com.au/rooms/1392592487733238733" rel="noopener" target="_blank">Chapel dates on Airbnb</a>
+        </div>
+      </article>
+      <article class="stay">
+        <img src="img/card-cottage-800.jpg" srcset="img/card-cottage-800.jpg 800w, img/card-cottage-1600.jpg 1600w" sizes="(max-width:760px) 100vw, 50vw" alt="Vanbery Cottage under a big shady tree, with the range behind" width="1600" height="1066" loading="lazy">
+        <div class="body">
+          <h3>The Cottage</h3>
+          <p class="price">From A$250 a night</p>
+          <p class="meta">Verandah and hammock, bath, wood fire in winter. 4.99 from 107 reviews.</p>
+          <a class="btn ink" href="https://www.airbnb.com.au/rooms/698081691848917836" rel="noopener" target="_blank">Cottage dates on Airbnb</a>
+        </div>
+      </article>
+    </div>
+    <div class="direct" id="direct">
+      <div>
+        <h3>Or book direct with Helen and Terry</h3>
+        <p>Ask about direct rates. Tell them which stay, your dates and how many guests, and they'll confirm what's free.</p>
+      </div>
+      <div class="acts">
+        <a class="btn" href="tel:+61409646280">Call or text 0409 646 280</a>
+        <a class="btn line" href="mailto:stay@vanberycottage.com.au">Email</a>
+      </div>
+    </div>
+    <ul class="rules">
+      <li>Two nights minimum. No single nights.</li>
+      <li>Check in after 2 pm, check out by 10 am.</li>
+      <li>A$50 deposit, refunded if you cancel more than 14 days out.</li>
+      <li>No pets.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="close" aria-label="Sunset at the Chapel">
+  <picture>
+    <source media="(max-width:700px)" srcset="img/dusk-tall-1000.jpg">
+    <img src="img/dusk-1000.jpg" srcset="img/dusk-1000.jpg 1000w, img/dusk-1920.jpg 1920w" sizes="100vw" alt="The Chapel at dusk under a pink and blue sky" width="1920" height="1080" loading="lazy">
+  </picture>
+  <div class="panel">
+    <h2>Sunsets and starry nights, at the top of the hill.</h2>
+    <p>Vanbery Chapel and Vanbery Cottage, 503 Ganthorpe Road, Mount Alford.</p>
+    <div class="acts">
+      <a class="btn" href="#book">Check dates</a>
+      <a class="btn line" href="https://www.instagram.com/vanberychapel/" rel="noopener" target="_blank">@vanberychapel</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="inner">
+    <p>A preview made by Lamplit Studio for Vanbery Cottage and Chapel. Not affiliated, not live.</p>
+    <p>Photos are Vanbery's own, from their website and Airbnb listings. The Chapel drawing is based on their photos.</p>
+  </div>
+</footer>
+
+<div class="phonebar" id="phonebar">
+  <a class="btn" href="#book">Check dates</a>
+  <a class="btn line" href="tel:+61409646280">Call or text</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var bar = document.getElementById('phonebar');
+  var walk = document.getElementById('walk'), roof = document.getElementById('story');
+  var q = function(s){return document.querySelector(s)};
+  var back=q('.l-back'), rl=q('.l-row.left'), rr=q('.l-row.right'), ca=q('.copy-a'), cb=q('.copy-b');
+  var g={roof:q('#roofg'), hay:q('#hay'), bldg:q('#bldg'), tarome:q('#tarome'), alford:q('#alford'), sky:q('#sky'), ver:q('#verandah'), glow:q('#glow')};
+  var steps=[].slice.call(document.querySelectorAll('.step')), now=document.getElementById('now');
+  var clamp=function(v){return v<0?0:v>1?1:v};
+  var seg=function(p,a,b){return clamp((p-a)/(b-a))};
+  var ease=function(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
+  function prog(el){var r=el.getBoundingClientRect();var st=el.firstElementChild;var span=el.offsetHeight-(st?st.offsetHeight:window.innerHeight);return span>0?clamp(-r.top/span):0}
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    var vh=window.innerHeight;
+    var bk=document.getElementById('book').getBoundingClientRect();
+    bar.classList.toggle('on', bar.contains(document.activeElement) || (roof.getBoundingClientRect().bottom<vh*.5 && (bk.top>vh*.9 || bk.bottom<0)));
+    if(reduce) return;
+    // Act 1: the rosella rows part, the chapel comes closer
+    var p=prog(walk);
+    var e=ease(seg(p,0,.85));
+    var phone=window.innerWidth<=820;
+    back.style.transform='scale('+(1+e*(phone?.45:.22)).toFixed(4)+')';
+    rl.style.transform='translate3d('+(-e*70).toFixed(2)+'%,0,0) scale('+(1+e*.25).toFixed(4)+')';
+    rr.style.transform='translate3d('+(e*70).toFixed(2)+'%,0,0) scale('+(1+e*.25).toFixed(4)+')';
+    ca.style.opacity=(1-seg(p,.12,.3)).toFixed(3);
+    ca.style.transform='translate3d(0,'+(-seg(p,.12,.3)*40).toFixed(1)+'px,0)';
+    var b=seg(p,.55,.75);
+    cb.style.opacity=b.toFixed(3);
+    cb.style.transform='translate3d(0,'+((1-b)*24).toFixed(1)+'px,0)';
+    // Act 2: the roof's story
+    var k=prog(roof);
+    var up=ease(seg(k,.12,.26)), down=ease(seg(k,.64,.78));
+    var ry= up*-260 + down*260, rx= up*-60 + down*60, rot= up*-14 + down*14;
+    g.roof.style.transform='translate('+rx.toFixed(1)+'px,'+ry.toFixed(1)+'px) rotate('+rot.toFixed(2)+'deg)';
+    g.roof.style.opacity=(1-up+down).toFixed(3);
+    g.hay.style.opacity=(seg(k,.28,.36)*(1-seg(k,.5,.54))).toFixed(3);
+    var out=ease(seg(k,.44,.52)), inn=ease(seg(k,.52,.62));
+    var bx= k<.52 ? out*900 : (inn-1)*900;
+    g.bldg.style.transform='translate('+bx.toFixed(1)+'px,0)';
+    g.tarome.style.opacity=(1-seg(k,.48,.52)).toFixed(3);
+    g.alford.style.opacity=seg(k,.52,.6).toFixed(3);
+    g.ver.style.opacity=seg(k,.72,.8).toFixed(3);
+    g.glow.style.opacity=seg(k,.76,.84).toFixed(3);
+    g.sky.style.opacity=seg(k,.76,.86).toFixed(3);
+    var cuts=[0,.11,.27,.41,.63,1];
+    for(var i=0;i<steps.length;i++){
+      var o = seg(k,cuts[i],cuts[i]+.025);
+      if(i===0) o=1;
+      if(i<steps.length-1) o*=1-seg(k,cuts[i+1]-.035,cuts[i+1]-.005); else o*=1-seg(k,.84,.87);
+      steps[i].style.opacity=o.toFixed(3);
+    }
+    var n=seg(k,.87,.95);
+    now.style.opacity=n.toFixed(3);
+    now.inert = n<.5;
+  }
+  if(reduce){g.tarome.style.opacity=0;g.hay.style.opacity=0;g.alford.style.opacity=1;g.ver.style.opacity=1;g.glow.style.opacity=1;g.sky.style.opacity=1;}
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(mq.addEventListener) mq.addEventListener('change',function(){location.reload()});
+  frame();
+})();
+</script>
+</body>
+</html>
