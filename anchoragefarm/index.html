@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>The Shucker Shack at Anchorage Farm | A 1960s caravan over Wagonga Inlet, Narooma</title>
+<meta name="description" content="A restored 1960s caravan and annex for two on a 108-acre farm above Wagonga Inlet, North Narooma. A website idea made by Lamplit Studio for Anchorage Farm.">
+<meta property="og:title" content="The Shucker Shack at Anchorage Farm, Narooma">
+<meta property="og:description" content="A website idea made by Lamplit Studio for Anchorage Farm. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/anchoragefarm/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/anchoragefarm/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231f2a1c'/%3E%3Cpath d='M26 21a11 11 0 1 1 1-6' fill='none' stroke='%23d1c8ad' stroke-width='2'/%3E%3Cpath d='M10 23l6-14 6 14M12.5 18h7' fill='none' stroke='%23eef1f2' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/inlet-1800.jpg" media="(min-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/inlet-tall-900.jpg" media="(max-width: 699px)" fetchpriority="high">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
+<style>
+/* Tokens come from the farm itself (see brand.md):
+   bush   = the shade under the rainforest canopy by their spring
+   mist   = the pale water and sky over Wagonga Inlet
+   parrot = the king parrots that visit the farm
+   sand   = their logo colour
+   inlet  = the inlet water
+   Barlow Condensed follows the narrow capitals on their old "OYSTER FARM" sign. */
+:root{
+  --bush:#1f2a1c;
+  --bush-2:#2a3826;
+  --mist:#eef1f2;
+  --mist-2:#dde4e6;
+  --parrot:#c7361f;
+  --parrot-2:#ad2c17;
+  --sand:#d1c8ad;
+  --inlet:#3f6274;
+  --ink:#1b2219;
+  --ink-soft:#4b5649;
+  --display:"Barlow Condensed","Arial Narrow",sans-serif;
+  --text:"Barlow","Avenir Next","Segoe UI",sans-serif;
+  --gut:max(clamp(16px,4vw,56px), env(safe-area-inset-left, 0px));
+  --gut-r:max(clamp(16px,4vw,56px), env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--mist);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.dark :focus-visible,.strip :focus-visible,.phonebar :focus-visible,footer :focus-visible,.top :focus-visible{outline-color:var(--sand)}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:.98;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+figure{margin:0}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--mist);padding:8px 12px}
+.wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
+.inner{max-width:1180px;margin:0 auto}
+
+.strip{background:var(--bush);color:var(--mist);font-size:14px;text-align:center;margin:0;
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;
+  background:var(--parrot);color:#fff;font-weight:600;text-decoration:none;border-radius:2px;font-size:17px;
+  transition:background-color .15s ease}
+.btn:hover{background:var(--parrot-2)}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.line:hover{background:rgba(31,42,28,.06)}
+
+.top{position:absolute;left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:flex-end;gap:16px;
+  padding:16px var(--gut-r) 0 var(--gut);color:var(--mist)}
+.top .btn{min-height:44px;padding:10px 18px;font-size:16px}
+
+/* ---------- hero: photo, logo, swing ---------- */
+.hero{position:relative;height:180vh;background:var(--bush);color:var(--mist)}
+.hero-pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.hero-bg{position:absolute;inset:-4% 0 -4% 0;will-change:transform}
+.hero-bg img{width:100%;height:100%;object-fit:cover}
+.hero-shade{position:absolute;left:0;right:0;bottom:0;height:60%;background:linear-gradient(to top,rgba(20,28,18,.85),rgba(20,28,18,0))}
+.hero-top{position:absolute;left:0;right:0;top:0;height:40%;background:linear-gradient(to bottom,rgba(20,28,18,.62),rgba(20,28,18,0))}
+.logo{position:absolute;left:var(--gut);top:clamp(56px,9vh,96px);width:clamp(150px,15vw,230px);filter:drop-shadow(0 2px 6px rgba(0,0,0,.45));will-change:transform,opacity}
+.logo img{width:100%;height:auto}
+.hero-copy{position:absolute;left:var(--gut);right:var(--gut-r);bottom:clamp(40px,9vh,96px);max-width:820px;will-change:transform,opacity}
+.hero h1{font-size:clamp(58px,9.5vw,150px);text-transform:uppercase}
+.hero .lede{font-size:clamp(18px,1.6vw,22px);max-width:32em;margin-top:16px}
+/* the rope swing from their gum over the inlet: a separate plane */
+.branch{position:absolute;right:-4vw;top:0;width:min(62vw,820px);height:auto;will-change:transform;pointer-events:none}
+.branch svg{width:100%;height:auto;display:block}
+.swing{position:absolute;right:clamp(16px,12vw,220px);top:24px;width:clamp(90px,11vw,170px);height:62vh;transform-origin:50% 0;will-change:transform;pointer-events:none}
+.swing svg{width:100%;height:100%;display:block;overflow:visible}
+
+/* ---------- shuck the shack (signature) ---------- */
+.shuck{position:relative;height:340vh;background:var(--bush);color:var(--mist)}
+.shuck-pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);align-items:center;gap:clamp(20px,4vw,64px);
+  padding:24px var(--gut-r) 24px var(--gut);max-width:1400px;margin:0 auto}
+.shuck-copy h2{font-size:clamp(44px,6vw,92px);text-transform:uppercase}
+.shuck-copy .sub{color:var(--sand);font-size:18px;margin-top:10px}
+.lines{position:relative;margin-top:26px;min-height:8.5em}
+.lines p{position:absolute;left:0;right:0;top:0;font-size:clamp(19px,1.7vw,23px);opacity:0;transform:translateY(16px);transition:opacity .45s ease,transform .45s ease}
+.lines p.on{opacity:1;transform:none}
+.oyster{position:relative;width:min(100%,72vh);aspect-ratio:600/520;justify-self:center}
+.oyster svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.pearl{transform-box:fill-box;transform-origin:50% 50%;will-change:transform}
+.lid{transform-box:fill-box;transform-origin:50% 9%;will-change:transform,opacity}
+.shell-hint{font-size:14px;color:var(--sand);margin-top:18px}
+
+/* ---------- inside the van ---------- */
+.inside{padding-block:clamp(64px,9vw,120px)}
+.in-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:end}
+.inside h2{font-size:clamp(46px,6.4vw,96px);text-transform:uppercase}
+.in-head p{color:var(--ink-soft);max-width:32em}
+.mosaic{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;margin-top:40px}
+.mosaic figure img{width:100%;height:100%;object-fit:cover}
+.m1{grid-column:1/8;grid-row:span 2}.m1 img{aspect-ratio:auto}
+.m2{grid-column:8/13}.m3{grid-column:8/13}
+.m2 img,.m3 img{aspect-ratio:3/2}
+.m4{grid-column:1/5}.m5{grid-column:5/9}.m6{grid-column:9/13}
+.m4 img,.m5 img,.m6 img{aspect-ratio:4/5}
+.mosaic figcaption{font-size:14px;color:var(--ink-soft);margin-top:6px}
+.has{list-style:none;padding:0;margin:40px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:40px}
+.has li{padding:12px 0;border-top:1px solid #c3ccce}
+.has li b{font-weight:600}
+
+/* ---------- the farm ---------- */
+.farm{background:var(--bush);color:var(--mist);padding-block:clamp(64px,9vw,120px)}
+.farm h2{font-size:clamp(46px,6.4vw,96px);text-transform:uppercase}
+.farm .lead{max-width:34em;margin-top:16px;color:#dfe5dc}
+.poem{margin:28px 0 0;padding:0;max-width:34em;font-size:18px;color:var(--sand)}
+.poem cite{display:block;font-style:normal;font-size:14px;margin-top:6px;color:#b9b39f}
+.rows{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);margin-top:48px;align-items:start}
+.rows .tall img{width:100%;aspect-ratio:2/3;object-fit:cover}
+.trio{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.trio figure:first-child{grid-column:1/-1}
+.trio img{width:100%;object-fit:cover;aspect-ratio:1}
+.trio figure:first-child img{aspect-ratio:3/2}
+.farm figcaption{font-size:14px;color:#b9c2b5;margin-top:6px}
+.little{list-style:none;padding:0;margin:24px 0 0}
+.little li{padding:10px 0;border-top:1px solid rgba(209,200,173,.3)}
+.reveal{transition:transform .9s cubic-bezier(.2,.7,.2,1),opacity .9s ease}
+.js .reveal{transform:translateY(36px);opacity:0}
+.js .reveal.in{transform:none;opacity:1}
+
+/* ---------- getting here ---------- */
+.here{padding-block:clamp(64px,9vw,120px)}
+.here-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,5vw,72px);align-items:center}
+.here h2{font-size:clamp(42px,5.6vw,84px);text-transform:uppercase}
+.dist{list-style:none;margin:24px 0 0;padding:0;font-variant-numeric:tabular-nums}
+.dist li{display:grid;grid-template-columns:6.5em 1fr;gap:12px;padding:12px 0;border-top:1px solid #c3ccce}
+.dist li:last-child{border-bottom:1px solid #c3ccce}
+.dist b{font-family:var(--display);font-weight:700;font-size:26px;line-height:1}
+.here figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.here figcaption{font-size:14px;color:var(--ink-soft);margin-top:6px}
+
+/* ---------- guests ---------- */
+.guests{background:var(--inlet);color:#fff;padding-block:clamp(64px,9vw,120px)}
+.g-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 24px}
+.g-top b{font-family:var(--display);font-size:clamp(80px,12vw,160px);line-height:.85;font-variant-numeric:tabular-nums}
+.g-top span{max-width:22em;color:#e3ecef}
+.quotes{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px 48px;margin-top:40px}
+.quotes blockquote{margin:0;padding-top:16px;border-top:1px solid rgba(255,255,255,.35)}
+.quotes blockquote:first-child{grid-row:span 2;font-size:clamp(24px,2.6vw,34px);line-height:1.3;font-family:var(--display);font-weight:600}
+.quotes cite{display:block;font-style:normal;font-family:var(--text);font-size:15px;font-weight:400;color:#d5e2e7;margin-top:10px}
+
+/* ---------- camping + book ---------- */
+.camp{padding-block:clamp(56px,7vw,96px) 0}
+.camp-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:center}
+.camp h2{font-size:clamp(36px,4.4vw,64px);text-transform:uppercase}
+.camp p{margin-top:14px;color:var(--ink-soft);max-width:32em}
+.camp img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.camp .btn{margin-top:20px}
+.book{padding-block:clamp(64px,9vw,120px)}
+.book-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:center}
+.book h2{font-size:clamp(50px,7vw,104px);text-transform:uppercase}
+.book ul{list-style:none;padding:0;margin:22px 0 0}
+.book li{padding:12px 0;border-top:1px solid #c3ccce}
+.book li:last-child{border-bottom:1px solid #c3ccce}
+.book .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.book .btn.line{color:var(--ink)}
+.book figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.small{font-size:15px;color:var(--ink-soft);margin-top:16px}
+.small a{color:var(--inlet)}
+
+footer{background:var(--bush);color:#c5ccc1;font-size:14px;padding-block:28px calc(28px + env(safe-area-inset-bottom,0px))}
+footer .inner{display:grid;gap:6px}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:none;align-items:center;justify-content:space-between;gap:12px;
+  padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);background:var(--bush);color:var(--mist);
+  transform:translateY(110%);transition:transform .3s ease}
+.phonebar.show{transform:none}
+.phonebar p{font-size:15px;line-height:1.3}
+.phonebar b{display:block;font-family:var(--display);font-size:20px;text-transform:uppercase}
+.phonebar .btn{flex:none}
+
+@media (max-width:820px){
+  .phonebar{display:flex}
+  footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+  .top .btn{display:none}
+  .hero{height:165vh}
+  .swing{right:12vw;width:84px;height:40vh;top:14px}
+  .branch{width:96vw;right:-14vw}
+  .shuck{height:360vh}
+  .shuck-pin{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto;align-content:center;gap:18px;padding-top:16px;padding-bottom:84px}
+  .oyster{width:min(100%,46vh);order:-1}
+  .lines{min-height:7.5em;margin-top:14px}
+  .shell-hint{display:none}
+  .in-head,.rows,.here-grid,.quotes,.camp-grid,.book-grid{grid-template-columns:minmax(0,1fr)}
+  .mosaic{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .m1{grid-column:1/-1;grid-row:auto}.m1 img{aspect-ratio:4/3}
+  .m2,.m3{grid-column:auto}.m2 img,.m3 img{aspect-ratio:1}
+  .m4{grid-column:1/-1}.m4 img{aspect-ratio:3/2}
+  .m5,.m6{grid-column:auto}
+  .has{grid-template-columns:minmax(0,1fr)}
+  .quotes blockquote:first-child{grid-row:auto}
+  .book figure{order:-1}
+}
+@media (max-width:820px) and (orientation:landscape){
+  .shuck-pin{grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding-bottom:70px}
+  .oyster{width:min(100%,62vh);order:0}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .hero{height:auto}
+  .hero-pin{position:relative}
+  .shuck{height:auto}
+  .shuck-pin{position:relative;height:auto;overflow:visible;padding-block:64px}
+  .lines{min-height:0}
+  .lines p{position:relative;opacity:1;transform:none;transition:none;margin-top:12px}
+  .lid{display:none}
+  .js .reveal{transform:none;opacity:1;transition:none}
+  .phonebar{transition:none}
+  .shell-hint{display:none}
+}
+</style>
+<noscript><style>
+.hero{height:auto}.hero-pin{position:relative}
+.shuck{height:auto}.shuck-pin{position:relative;height:auto;overflow:visible;padding-block:64px}
+.lines{min-height:0}.lines p{position:relative;opacity:1;transform:none;margin-top:12px}
+.lid,.shell-hint{display:none}.phonebar{transform:none}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<p class="strip">A website idea made by Lamplit Studio for Anchorage Farm. Not their official site.</p>
+
+<header class="top">
+  <a class="btn" href="https://www.airbnb.com.au/rooms/998815610011591330" rel="noopener">Check dates</a>
+</header>
+
+<main id="main">
+<section class="hero" aria-label="The Shucker Shack at Anchorage Farm">
+  <div class="hero-pin">
+    <div class="hero-bg" data-plane="bg">
+      <picture>
+        <source media="(max-width: 699px)" srcset="img/inlet-tall-900.jpg">
+        <img src="img/inlet-1800.jpg" width="1800" height="1348" alt="Anchorage Farm from the air: green paddocks and rainforest running down to Wagonga Inlet" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="hero-top"></div>
+    <div class="hero-shade"></div>
+    <div class="logo" data-plane="logo"><img src="img/logo-white.png" width="600" height="599" alt="Anchorage Farm, Narooma"></div>
+    <div class="branch" data-plane="branch" aria-hidden="true">
+      <svg viewBox="0 0 800 120">
+        <path d="M800 18C700 22 600 30 470 36 360 41 250 44 150 52 100 56 50 64 0 78l2 10c60-10 110-16 160-19 100-6 210-8 320-12 120-5 220-12 318-16z" fill="#2b2418"/>
+        <path d="M520 34c-20-14-46-22-80-24M300 44c-10 14-30 26-60 34M640 26c14 14 34 22 60 26" fill="none" stroke="#2b2418" stroke-width="6" stroke-linecap="round"/>
+        <g fill="#2f3d25">
+          <ellipse cx="438" cy="10" rx="26" ry="7" transform="rotate(-12 438 10)"/><ellipse cx="236" cy="82" rx="28" ry="7" transform="rotate(24 236 82)"/>
+          <ellipse cx="704" cy="56" rx="26" ry="7" transform="rotate(30 704 56)"/><ellipse cx="120" cy="86" rx="24" ry="6" transform="rotate(-18 120 86)"/>
+          <ellipse cx="560" cy="58" rx="22" ry="6" transform="rotate(48 560 58)"/><ellipse cx="360" cy="64" rx="22" ry="6" transform="rotate(-36 360 64)"/>
+        </g>
+      </svg>
+    </div>
+    <div class="swing" data-plane="swing" aria-hidden="true">
+      <svg viewBox="0 0 120 500" preserveAspectRatio="xMidYMin meet">
+        <g stroke="#d1c8ad" stroke-width="3" stroke-linecap="round">
+          <line x1="24" y1="0" x2="20" y2="430"/><line x1="96" y1="0" x2="100" y2="430"/>
+        </g>
+        <rect x="6" y="428" width="108" height="16" rx="3" fill="#6b5236"/>
+        <rect x="6" y="428" width="108" height="5" rx="2" fill="#8a6c48"/>
+      </svg>
+    </div>
+    <div class="hero-copy" data-plane="copy">
+      <h1>The Shucker Shack</h1>
+      <p class="lede">A restored 1960s caravan and annex for two, on 108 acres of farm and rainforest above Wagonga Inlet. Four minutes from Narooma's main street.</p>
+    </div>
+  </div>
+</section>
+
+<section class="shuck dark" id="shack" aria-labelledby="shuck-h">
+  <div class="shuck-pin">
+    <div class="shuck-copy">
+      <h2 id="shuck-h">Shuck the shack</h2>
+      <p class="sub">A 1960s van and annex, restored for two.</p>
+      <div class="lines" aria-live="polite">
+        <p class="on" data-step="0">From the outside it's a 1960s van with a timber annex, sitting on the grass above the water.</p>
+        <p data-step="1">Inside: a double bed, a kitchenette with a Nespresso machine, a lounge with a TV and its own little bathroom.</p>
+        <p data-step="2">Out front: a patio with a gas barbecue, two chairs and a fire pit. Wood is supplied, and they'll light it for you.</p>
+      </div>
+      <p class="shell-hint">Keep scrolling to open it.</p>
+    </div>
+    <div class="oyster">
+      <svg viewBox="0 0 600 520" role="img" aria-label="The Shucker Shack at dusk, inside a drawn oyster shell">
+        <defs>
+          <clipPath id="meat"><path d="M300 52c92-6 196 40 236 120 38 78 20 176-40 238-58 60-150 84-232 70C178 468 86 410 58 326 30 240 56 150 120 100c48-36 112-46 180-48z"/></clipPath>
+        </defs>
+        <path d="M300 30c104-8 222 44 266 134 44 90 22 200-46 268-66 66-170 94-262 78C164 494 60 428 30 332 0 234 28 132 104 76c56-40 128-44 196-46z" fill="#cfc7b2"/>
+        <path d="M300 30c104-8 222 44 266 134 44 90 22 200-46 268-66 66-170 94-262 78C164 494 60 428 30 332 0 234 28 132 104 76c56-40 128-44 196-46z" fill="none" stroke="#8c8471" stroke-width="3"/>
+        <path d="M300 42c98-8 208 42 250 126 40 84 20 186-42 250-62 62-158 88-244 74C172 478 76 418 46 328 18 238 44 142 114 90c52-38 120-46 186-48z" fill="#e9e5da"/>
+        <g clip-path="url(#meat)">
+          <g class="pearl">
+            <image href="img/van-dusk-big-800.jpg" x="20" y="40" width="580" height="386" preserveAspectRatio="xMidYMid slice"/>
+          </g>
+        </g>
+        <path d="M300 52c92-6 196 40 236 120 38 78 20 176-40 238-58 60-150 84-232 70C178 468 86 410 58 326 30 240 56 150 120 100c48-36 112-46 180-48z" fill="none" stroke="#f2f3ef" stroke-width="4" opacity=".7"/>
+        <g class="lid">
+          <path d="M300 26c106-8 226 44 270 136 44 92 22 204-48 272-66 66-172 94-264 80C162 500 58 432 28 334-2 236 26 130 104 74c56-40 128-46 196-48z" fill="#7d7a6d"/>
+          <g fill="none" stroke="#a7a294" stroke-width="5" stroke-linecap="round" opacity=".9">
+            <path d="M84 300c20 90 110 150 214 150 96 0 186-58 214-146"/>
+            <path d="M110 270c18 76 96 128 188 128 86 0 162-50 186-124"/>
+            <path d="M138 240c16 62 82 104 160 104 74 0 136-40 158-102"/>
+            <path d="M170 212c14 46 66 78 128 78 58 0 108-30 126-78"/>
+            <path d="M206 186c12 30 50 52 92 52 40 0 78-20 92-52"/>
+          </g>
+          <g fill="none" stroke="#5c594e" stroke-width="3" opacity=".8">
+            <path d="M60 210c30-10 50-40 62-70"/><path d="M540 220c-30-14-46-44-54-74"/><path d="M300 30v40"/>
+          </g>
+          <path d="M300 26c106-8 226 44 270 136 44 92 22 204-48 272-66 66-172 94-264 80C162 500 58 432 28 334-2 236 26 130 104 74c56-40 128-46 196-48z" fill="none" stroke="#4f4c42" stroke-width="4"/>
+          <text x="300" y="300" text-anchor="middle" fill="#eef1f2" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="700" font-size="44" letter-spacing="3">THE SHUCKER SHACK</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="inside" aria-labelledby="in-h">
+  <div class="wrap"><div class="inner">
+    <div class="in-head">
+      <h2 id="in-h">Small, warm, all yours</h2>
+      <p>The van and annex are fully self contained and sit apart from the farmhouse. There's heating, linen supplied, and no wifi, on purpose.</p>
+    </div>
+    <div class="mosaic">
+      <figure class="m1"><img class="reveal" src="img/van-bed-1200.jpg" srcset="img/van-bed-700.jpg 700w, img/van-bed-1200.jpg 1200w" sizes="(max-width:820px) 100vw, 58vw" width="1200" height="881" alt="The double bed inside the van, with windows on both sides" loading="lazy"></figure>
+      <figure class="m2"><img src="img/van-lounge-1000.jpg" srcset="img/van-lounge-600.jpg 600w, img/van-lounge-1000.jpg 1000w" sizes="(max-width:820px) 50vw, 40vw" width="1000" height="709" alt="The annex lounge with a TV and big windows to the trees" loading="lazy"></figure>
+      <figure class="m3"><img src="img/van-window-1100.jpg" srcset="img/van-window-600.jpg 600w, img/van-window-1100.jpg 1100w" sizes="(max-width:820px) 50vw, 40vw" width="1100" height="901" alt="A bench and two stools at the van's front window, looking over the paddock" loading="lazy"></figure>
+      <figure class="m4"><img src="img/van-kitchen-800.jpg" width="800" height="903" alt="The kitchenette with a kettle, microwave and bar fridge" loading="lazy"><figcaption>The kitchenette</figcaption></figure>
+      <figure class="m5"><img src="img/eggs-honey-800.jpg" width="800" height="902" alt="A welcome card, fresh eggs and a jar of the farm's honey on a timber board" loading="lazy"><figcaption>Eggs from the chooks, honey from their hives</figcaption></figure>
+      <figure class="m6"><img src="img/mugs-800.jpg" width="800" height="711" alt="Two ribbed blue mugs on the windowsill, the farm outside" loading="lazy"><figcaption>Morning coffee</figcaption></figure>
+    </div>
+    <ul class="has">
+      <li><b>Sleeps 2</b>, one double bed</li>
+      <li><b>Kitchenette</b>: microwave, bar fridge, toaster, kettle, electric frypan, Nespresso</li>
+      <li><b>Bathroom</b> with shower and toilet</li>
+      <li><b>Outside</b>: patio, gas barbecue, fire pit</li>
+      <li><b>Baskets</b> for breakfast, cheese or s'mores, with 24 hours' notice</li>
+      <li><b>Pets</b> considered on request</li>
+    </ul>
+  </div></div>
+</section>
+
+<section class="farm dark" aria-labelledby="farm-h">
+  <div class="wrap"><div class="inner">
+    <h2 id="farm-h">108 acres to wander</h2>
+    <p class="lead">Six kilometres of walking trails run through paddocks, bush and rainforest down to a natural spring. There are cows, chooks, wallabies, kangaroos, wombats and plenty of birds, and the views run east over the inlet and south to Gulaga.</p>
+    <blockquote class="poem">"West of the bridge no crowding but soft, green-grey bush and paddocks roll to shore."<cite>Peggy Norris, original owner of 360 Riverview Road</cite></blockquote>
+    <div class="rows">
+      <figure class="tall"><img class="reveal" src="img/spring-700.jpg" width="700" height="1050" alt="A creek running through ferns and rainforest on the farm" loading="lazy"><figcaption>Down to the spring</figcaption></figure>
+      <div>
+        <div class="trio">
+          <figure><img src="img/oysters-fire-1200.jpg" srcset="img/oysters-fire-700.jpg 700w, img/oysters-fire-1200.jpg 1200w" sizes="(max-width:820px) 100vw, 40vw" width="1200" height="800" alt="A plate of oysters and prawns by the fire pit" loading="lazy"><figcaption>Oysters by the fire</figcaption></figure>
+          <figure><img src="img/king-parrot-800.jpg" width="800" height="1000" alt="A king parrot eating from a guest's hand" loading="lazy"><figcaption>King parrots</figcaption></figure>
+          <figure><img src="img/silkie-700.jpg" width="700" height="1050" alt="A fluffy white silkie chook in the grass" loading="lazy"><figcaption>One of the chooks</figcaption></figure>
+        </div>
+        <ul class="little">
+          <li>Collect eggs from the chook shed</li>
+          <li>Help feed the cows, on request</li>
+          <li>Campfires when there's no fire ban</li>
+        </ul>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<section class="here" aria-labelledby="here-h">
+  <div class="wrap"><div class="inner here-grid">
+    <div>
+      <h2 id="here-h">Close to Narooma, out of earshot</h2>
+      <ul class="dist">
+        <li><b>3.5 km</b><span>to Narooma's main street, about four minutes' drive</span></li>
+        <li><b>2 ridges</b><span>north to the Narooma mountain bike trails</span></li>
+        <li><b>218 km</b><span>from Canberra, under three hours</span></li>
+        <li><b>348 km</b><span>from Sydney, under four and a half hours</span></li>
+        <li><b>1 hr</b><span>or less from Moruya Airport</span></li>
+      </ul>
+      <p class="small">Seals at Australia Rock, whales from September to November, and boat trips to Montague Island.</p>
+    </div>
+    <figure><img class="reveal" src="img/swing-1352.jpg" srcset="img/swing-700.jpg 700w, img/swing-1352.jpg 1024w" sizes="(max-width:820px) 100vw, 52vw" width="1024" height="767" alt="The rope swing on a gum above Wagonga Inlet, with Narooma across the water" loading="lazy"><figcaption>The swing above the inlet</figcaption></figure>
+  </div></div>
+</section>
+
+<section class="guests" aria-labelledby="g-h">
+  <div class="wrap"><div class="inner">
+    <div class="g-top"><b id="g-h">4.95</b><span>from 84 guest reviews on Airbnb. Cleanliness and communication both 4.99.</span></div>
+    <div class="quotes">
+      <blockquote>"We loved the unique, creative, cosy space and the view. It is peaceful and quiet too."<cite>Sarah, Airbnb, October 2026</cite></blockquote>
+      <blockquote>"Merri and Brad were very responsive and very inviting. They were also great at providing local recommendations."<cite>Rubain, Airbnb, October 2026</cite></blockquote>
+      <blockquote>"Loved being surrounded by nature and having a campfire in the evening."<cite>Mark, Airbnb, October 2026</cite></blockquote>
+    </div>
+  </div></div>
+</section>
+
+<section class="camp" aria-labelledby="camp-h">
+  <div class="wrap"><div class="inner camp-grid">
+    <figure><img class="reveal" src="img/camp-1200.jpg" srcset="img/camp-700.jpg 700w, img/camp-1200.jpg 1200w" sizes="(max-width:820px) 100vw, 50vw" width="1200" height="899" alt="Campers and their cars spread out on a big grassy paddock under gums" loading="lazy"></figure>
+    <div>
+      <h2 id="camp-h">Bringing a tent or a van?</h2>
+      <p>Five campsites on the paddock, with plenty of shade and room. Campers bring their own water and toilet; there's no power. Dogs welcome on request.</p>
+      <a class="btn line" href="https://www.hipcamp.com/en-AU/land/new-south-wales-riverview-farmstays-9mxhw8vx" rel="noopener">Book a campsite on Hipcamp</a>
+    </div>
+  </div></div>
+</section>
+
+<section class="book" id="book" aria-labelledby="book-h">
+  <div class="wrap"><div class="inner book-grid">
+    <div>
+      <h2 id="book-h">Check dates</h2>
+      <ul>
+        <li>The Shucker Shack, for two</li>
+        <li>Self contained, apart from the farmhouse</li>
+        <li>Fresh eggs (when the hens are laying) and farm honey</li>
+        <li>360 Riverview Road, North Narooma</li>
+      </ul>
+      <div class="btns">
+        <a class="btn" href="https://www.airbnb.com.au/rooms/998815610011591330" rel="noopener">Check dates on Airbnb</a>
+        <a class="btn line" href="https://www.instagram.com/anchorage__farm_narooma/" rel="noopener">Instagram</a>
+      </div>
+      <p class="small">Or call Merri and Brad on <a href="tel:+61450332794">0450 332 794</a>.</p>
+    </div>
+    <figure><img src="img/honey-700.jpg" width="700" height="934" alt="A jar of Anchorage Farm honey beside a tray of fresh eggs" loading="lazy"></figure>
+  </div></div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="inner">
+    <p>A preview made by Lamplit Studio for Anchorage Farm. Not affiliated, not live.</p>
+    <p>Photos and details from Anchorage Farm's own website, Airbnb listing and Visit NSW page.</p>
+  </div>
+</footer>
+
+<div class="phonebar" aria-hidden="true">
+  <p><b>The Shucker Shack</b>For two, North Narooma</p>
+  <a class="btn" href="https://www.airbnb.com.au/rooms/998815610011591330" rel="noopener" tabindex="-1">Check dates</a>
+</div>
+
+<script>
+(function(){
+  var mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var reduce = mq.matches;
+  if (mq.addEventListener) mq.addEventListener('change', function(){ location.reload(); });
+  var bar = document.querySelector('.phonebar');
+  var hero = document.querySelector('.hero');
+  function showBar(){
+    var past = hero.getBoundingClientRect().bottom < window.innerHeight * 0.6;
+    bar.classList.toggle('show', past);
+    bar.setAttribute('aria-hidden', past ? 'false' : 'true');
+    bar.querySelector('a').tabIndex = past ? 0 : -1;
+  }
+  var rv = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) { rv.forEach(function(e){ e.classList.add('in'); }); }
+  else {
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {rootMargin:'0px 0px -10% 0px'});
+    rv.forEach(function(e){ io.observe(e); });
+  }
+  if (reduce) { window.addEventListener('scroll', showBar, {passive:true}); showBar(); return; }
+
+  var bg = hero.querySelector('[data-plane=bg]'), logo = hero.querySelector('[data-plane=logo]'),
+      copy = hero.querySelector('[data-plane=copy]'), swing = hero.querySelector('[data-plane=swing]'), branch = hero.querySelector('[data-plane=branch]');
+  var shuck = document.querySelector('.shuck');
+  var lid = shuck.querySelector('.lid'), pearl = shuck.querySelector('.pearl'), lines = shuck.querySelectorAll('.lines p');
+  var step = -1;
+  function clamp(v){ return v < 0 ? 0 : v > 1 ? 1 : v; }
+  function ease(t){ return t < .5 ? 2*t*t : 1 - Math.pow(-2*t + 2, 2) / 2; }
+  function setStep(n){
+    if (n === step) return; step = n;
+    lines.forEach(function(l){ l.classList.toggle('on', +l.dataset.step === n); });
+  }
+  var ticking = false;
+  function frame(){
+    ticking = false;
+    var vh = window.innerHeight;
+    var r = hero.getBoundingClientRect();
+    var p = clamp(-r.top / (r.height - vh));
+    bg.style.transform = 'translate3d(0,' + (p * 4) + '%,0) scale(' + (1 + p * 0.06) + ')';
+    logo.style.transform = 'translate3d(0,' + (p * -40) + 'px,0)';
+    logo.style.opacity = String(1 - clamp((p - 0.5) / 0.4));
+    copy.style.transform = 'translate3d(0,' + (p * -90) + 'px,0)';
+    // the swing goes out and comes back, a little further each way as you scroll
+    var ang = Math.sin(p * Math.PI * 2.2) * (6 + p * 10);
+    swing.style.transform = 'translate3d(0,' + (p * -8) + 'vh,0) rotate(' + ang + 'deg)';
+    branch.style.transform = 'translate3d(0,' + (p * -8) + 'vh,0)';
+
+    var sr = shuck.getBoundingClientRect();
+    var q = clamp(-sr.top / (sr.height - vh));
+    var open = ease(clamp((q - 0.08) / 0.5));
+    lid.style.transform = 'perspective(1400px) rotateX(' + (open * 118) + 'deg)';
+    lid.style.opacity = String(1 - clamp((open - 0.75) / 0.25));
+    pearl.style.transform = 'scale(' + (1.18 - open * 0.18) + ')';
+    setStep(q < 0.4 ? 0 : q < 0.72 ? 1 : 2);
+    showBar();
+  }
+  function onScroll(){ if (!ticking){ ticking = true; requestAnimationFrame(frame); } }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+  frame();
+})();
+</script>
+</body>
+</html>
