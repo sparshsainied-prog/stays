@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>The Gladys, Carey Gully</title>
+<meta name="description" content="A restored 1860s cottage among the vineyards at Carey Gully in the Adelaide Hills. A website idea made by Lamplit Studio for The Gladys.">
+<meta property="og:title" content="The Gladys, Carey Gully">
+<meta property="og:description" content="A website idea made by Lamplit Studio for The Gladys. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/thegladys/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/thegladys/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231c4070'/%3E%3Cpath d='M8 20h48M8 52h48M14 20v32M50 20v32M14 20l36 32M50 20L14 52' stroke='%23ffc2ca' stroke-width='5' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Karla:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1c4070; --navy-deep:#132d50; --white:#f4f5f6; --paper:#ffffff;
+  --pink:#ffc2ca; --slate:#4a545e; --vine:#5f7a34; --ink:#1d2731; --ink-soft:#4d5966;
+  --display:"Bricolage Grotesque", Georgia, serif; --text:"Karla", system-ui, sans-serif;
+  --r-s:4px; --r-m:10px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--white);color:var(--ink);font:400 1.0625rem/1.6 var(--text)}
+img{display:block;max-width:100%;height:auto}
+figure{margin:0}
+a{color:var(--navy)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--navy);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--display);font-weight:700;color:var(--navy);line-height:1.08;margin:0;text-wrap:balance}
+h2{font-size:clamp(1.9rem,6vw,3.2rem);letter-spacing:-.01em}
+h3{font-size:1.2rem;letter-spacing:0}
+p{margin:0 0 1em;text-wrap:pretty}
+.skip{position:absolute;left:-999px;top:0;background:var(--paper);padding:10px 14px;z-index:60}
+.skip:focus{left:8px;top:8px}
+.book a:focus-visible,footer a:focus-visible,.copy-b a:focus-visible{outline-color:var(--pink)}
+
+.strip{margin:0;padding:8px 16px;background:var(--navy-deep);color:#e8edf4;font-size:.85rem;text-align:center;line-height:1.35}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 16px;background:var(--paper);border-bottom:1px solid #e1e5ea}
+.top .logo img{width:150px}
+.top nav{display:flex;gap:22px;align-items:center;font-weight:600;font-size:.95rem}
+.top nav a{text-decoration:none;color:var(--navy);padding:10px 0}
+.top nav a.go{background:var(--navy);color:#fff;padding:10px 16px;border-radius:var(--r-s)}
+.top nav .opt{display:none}
+@media(min-width:760px){.top{padding:12px 32px}.top .logo img{width:180px}.top nav .opt{display:inline}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;border-radius:var(--r-s);font:600 1rem/1.2 var(--text);text-decoration:none;border:2px solid var(--navy);background:var(--navy);color:#fff}
+.btn.pink{background:var(--pink);border-color:var(--pink);color:var(--navy-deep)}
+.btn.line{background:transparent;color:var(--navy)}
+.btn.line-w{background:transparent;color:#fff;border-color:rgba(255,255,255,.75)}
+
+/* The verandah: pinned scroll moment */
+.verandah{position:relative;height:300vh;background:#cfd8c4}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.plane{position:absolute;inset:0}
+.plane img{width:100%;height:100%;object-fit:cover}
+.l-vines img{object-position:60% 40%}
+.l-cottage{transform-origin:22% 58%}
+.l-cottage img{object-position:20% 60%}
+.l-rail{top:auto;bottom:0;height:46%;pointer-events:none}
+.l-rail svg{width:100%;height:100%;display:block}
+.rail-wide{display:block}.rail-tall{display:none}
+.copy{position:absolute;left:16px;right:16px;max-width:36rem}
+.copy-a{top:auto;bottom:clamp(48px,12vh,120px)}
+.copy-a .plate{background:rgba(244,245,246,.94);padding:20px 20px 18px;border-radius:var(--r-m);box-shadow:0 10px 30px -12px rgba(19,45,80,.45)}
+.copy-a h1{font-size:clamp(2rem,7vw,3.6rem)}
+.copy-a p{margin:12px 0 0;color:var(--ink-soft);font-size:1.05rem}
+.copy-b{top:clamp(64px,12vh,120px);right:16px;left:auto;max-width:30rem;background:rgba(19,45,80,.88);color:#fff;padding:20px;border-radius:var(--r-m)}
+.copy-b h2{color:#fff;font-size:clamp(1.7rem,5vw,2.6rem)}
+.copy-b p{margin:10px 0 0;color:#e3e9f1}
+@media(min-width:900px){.copy{left:6vw}.copy-b{right:6vw}}
+@media(max-width:820px) and (orientation:portrait){
+  .rail-wide{display:none}.rail-tall{display:block}
+  .l-rail{height:40%}
+  .copy-b{left:16px;right:16px;max-width:none;top:76px}
+  .copy-a{bottom:150px}
+}
+html:not(.js) .l-rail{display:none}
+.js .copy-b{opacity:0}
+.js .l-rail{transform:translate3d(0,100%,0)}
+@media(prefers-reduced-motion:reduce){
+  .verandah{height:auto}
+  .stage{position:relative;height:auto;min-height:100svh;display:flex;flex-direction:column}
+  .l-cottage{display:none}
+  .js .l-rail,.l-rail{transform:none}
+  .js .copy-b{opacity:1}
+  .copy-a{position:relative;bottom:auto;margin:24px 16px 0}
+  .copy-b{position:relative;top:auto;margin:16px 16px 50vh}
+}
+
+.wrap{padding:72px 16px}
+.inner{max-width:1120px;margin:0 auto}
+@media(min-width:760px){.wrap{padding:112px 32px}}
+
+/* Inside */
+.inside .head{display:grid;gap:16px;margin-bottom:32px}
+.inside .head p{max-width:34rem;color:var(--ink-soft);font-size:1.1rem}
+.rooms{display:grid;gap:28px}
+.rooms .lead img{border-radius:var(--r-m)}
+.rooms .lead figcaption{font-size:.9rem;color:var(--ink-soft);margin-top:8px}
+.roomlist{margin:0;padding:0;list-style:none;border-top:2px solid var(--navy)}
+.roomlist li{padding:14px 0;border-bottom:1px solid #d5dbe2;display:grid;gap:2px}
+.roomlist b{font-family:var(--display);color:var(--navy);font-size:1.1rem}
+.roomlist span{color:var(--ink-soft)}
+.shots{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:36px}
+.shots img{border-radius:var(--r-s);aspect-ratio:3/2;object-fit:cover;width:100%}
+.shots figure{margin:0}
+.shots figcaption{font-size:.85rem;color:var(--ink-soft);margin-top:6px}
+@media(min-width:900px){
+  .inside .head{grid-template-columns:1fr 1fr;align-items:end}
+  .rooms{grid-template-columns:1.35fr 1fr;align-items:start}
+  .shots{grid-template-columns:1.4fr 1fr 1fr 1fr}
+}
+
+/* Pantry */
+.pantry{background:var(--slate);color:#eef1f4}
+.pantry h2{color:#fff}
+.pantry .grid{display:grid;gap:32px}
+.pantry ul{margin:20px 0 0;padding:0;list-style:none}
+.pantry li{padding:10px 0 10px 30px;position:relative;border-bottom:1px solid rgba(255,255,255,.18)}
+.pantry li::before{content:"";position:absolute;left:0;top:18px;width:16px;height:10px;border-top:2px solid var(--pink);border-bottom:2px solid var(--pink)}
+.pantry .pics{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:start}
+.pantry .pics img{border-radius:var(--r-s)}
+.pantry .pics figure{margin:0}
+.pantry .pics figure:last-child{margin-top:48px}
+.pantry .pics figcaption{font-size:.85rem;color:#cfd6de;margin-top:6px}
+@media(min-width:900px){.pantry .grid{grid-template-columns:1fr 1.1fr;align-items:center}}
+
+/* Garden */
+.garden .split{display:grid;gap:28px}
+.garden .big img{border-radius:var(--r-m)}
+.garden .text p{color:var(--ink-soft)}
+.garden .text h2{margin-bottom:16px}
+.garden .row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.garden .row img{border-radius:var(--r-s);aspect-ratio:3/2;object-fit:cover;width:100%}
+.garden .row figure{margin:0}
+.garden .row figcaption{font-size:.85rem;color:var(--ink-soft);margin-top:6px}
+.wild{margin-top:24px;padding:16px 0 0;border-top:1px solid #d5dbe2;font-size:1rem}
+@media(min-width:900px){.garden .split{grid-template-columns:1fr 1.25fr;align-items:start}.garden .text{position:sticky;top:40px}}
+
+/* Getting here */
+.here{background:var(--paper)}
+.here .grid{display:grid;gap:32px}
+.route{list-style:none;margin:28px 0 0;padding:0;position:relative}
+.route::before{content:"";position:absolute;left:9px;top:12px;bottom:12px;width:3px;background:var(--navy)}
+.route li{position:relative;padding:0 0 22px 40px}
+.route li::before{content:"";position:absolute;left:2px;top:6px;width:17px;height:17px;border-radius:50%;background:var(--paper);border:3px solid var(--navy)}
+.route li.home::before{background:var(--pink);border-color:var(--navy)}
+.route b{display:block;font-family:var(--display);color:var(--navy);font-size:1.15rem}
+.route span{color:var(--ink-soft)}
+.here .note{font-size:.95rem;color:var(--ink-soft)}
+.here figure{margin:0}
+.here figure img{border-radius:var(--r-m)}
+.here figcaption{font-size:.85rem;color:var(--ink-soft);margin-top:8px}
+@media(min-width:900px){.here .grid{grid-template-columns:1fr 1fr;align-items:center}}
+
+/* Guests */
+.guests h2{margin-bottom:8px}
+.guests .score{color:var(--ink-soft);margin-bottom:28px}
+.quotes{display:grid;gap:0;margin:0;padding:0;list-style:none}
+.quotes li{padding:22px 0;border-top:1px solid #cfd6de}
+.quotes blockquote{margin:0;font-family:var(--display);font-weight:500;font-size:clamp(1.3rem,3.6vw,1.9rem);line-height:1.2;color:var(--navy)}
+.quotes cite{display:block;margin-top:8px;font-style:normal;color:var(--ink-soft);font-size:.95rem}
+@media(min-width:900px){.quotes li:nth-child(2){padding-left:12%}.quotes li:nth-child(3){padding-left:24%}}
+
+/* Book */
+.book{background:var(--navy);color:#e8edf4}
+.book h2{color:#fff}
+.book .lede{font-size:1.15rem;max-width:38rem;margin-top:12px}
+.book .ways{display:grid;gap:14px;margin-top:28px}
+.book .way{background:var(--navy-deep);border-radius:var(--r-m);padding:20px}
+.book .way h3{color:#fff;margin-bottom:8px}
+.book .way p{color:#cdd7e4;font-size:.98rem}
+.book .acts{display:flex;flex-wrap:wrap;gap:10px}
+.book ul{margin:28px 0 0;padding:0 0 0 18px;color:#cdd7e4;font-size:.95rem}
+.book li{margin-bottom:6px}
+@media(min-width:900px){.book .ways{grid-template-columns:1.2fr 1fr}}
+
+/* Close */
+.close{position:relative;min-height:80svh;display:flex;align-items:flex-end}
+.close img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.close .panel{position:relative;margin:16px;max-width:34rem;background:rgba(244,245,246,.95);padding:24px;border-radius:var(--r-m)}
+.close .panel img{position:static;width:160px;height:auto;margin-bottom:12px}
+.close h2{font-size:clamp(1.6rem,4.6vw,2.4rem)}
+.close p{margin:12px 0 18px;color:var(--ink-soft)}
+.close .acts{display:flex;flex-wrap:wrap;gap:10px}
+@media(min-width:900px){.close .panel{margin:0 0 64px 6vw}}
+
+footer{padding:28px 16px 110px;background:var(--navy-deep);color:#cdd7e4;font-size:.9rem}
+footer p{max-width:1120px;margin:0 auto 6px}
+@media(min-width:900px){footer{padding-bottom:28px}}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--paper);border-top:1px solid #d5dbe2;box-shadow:0 -6px 20px -10px rgba(19,45,80,.35);transform:translate3d(0,110%,0);transition:transform .25s ease-out}
+.phonebar.on{transform:none}
+.phonebar .btn{flex:1}
+@media(min-width:900px){.phonebar{display:none}}
+@media(prefers-reduced-motion:reduce){.phonebar{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#inside">Skip to the cottage</a>
+<p class="strip">A website idea made by Lamplit Studio for The Gladys. Not their official site.</p>
+
+<header class="top">
+  <a class="logo" href="#top"><img src="img/logo.png" alt="The Gladys, Carey Gully, Adelaide Hills" width="720" height="240"></a>
+  <nav aria-label="Main">
+    <a class="opt" href="#inside">The cottage</a>
+    <a class="opt" href="#here">Getting here</a>
+    <a class="go" href="#book">Check dates</a>
+  </nav>
+</header>
+
+<main>
+<section class="verandah" id="top" aria-label="From the front path onto the verandah">
+  <div class="stage">
+    <div class="plane l-vines">
+      <picture>
+        <source media="(max-width:820px) and (orientation:portrait)" srcset="img/vineyard-tall.jpg">
+        <img src="img/vineyard-2000.jpg" srcset="img/vineyard-1000.jpg 1000w, img/vineyard-2000.jpg 2000w" sizes="100vw" alt="A white picnic table under a tree, looking over the vineyard rows" width="2000" height="1333">
+      </picture>
+    </div>
+    <div class="plane l-cottage">
+      <picture>
+        <source media="(max-width:820px) and (orientation:portrait)" srcset="img/cottage-tall.jpg">
+        <img src="img/cottage-2000.jpg" srcset="img/cottage-1000.jpg 1000w, img/cottage-2000.jpg 2000w" sizes="100vw" alt="The Gladys from the gravel path: slate-grey cottage, white cross-braced verandah, wide lawn" width="2000" height="1333" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="copy copy-a">
+      <div class="plate">
+        <h1>An 1860s cottage among the vines at Carey Gully.</h1>
+        <p>Two king bedrooms, a wood fire and a gin nook, 25 minutes from Adelaide.</p>
+      </div>
+    </div>
+    <div class="copy copy-b">
+      <h2>Breakfast on the front verandah, looking at the vines.</h2>
+      <p>Out the back, sheep graze in the next paddock. At dusk, kangaroos come through.</p>
+    </div>
+    <div class="plane l-rail" aria-hidden="true">
+      <svg class="rail-wide" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMax slice">
+        <defs>
+          <g id="panelW">
+            <line x1="22" y1="52" x2="178" y2="328" stroke="#fff" stroke-width="16"/>
+            <line x1="178" y1="52" x2="22" y2="328" stroke="#fff" stroke-width="16"/>
+            <rect x="0" y="36" width="200" height="16" fill="#fff"/>
+            <rect x="0" y="328" width="200" height="14" fill="#fff"/>
+          </g>
+        </defs>
+        <rect x="0" y="342" width="1200" height="58" fill="#7d8790"/>
+        <rect x="0" y="342" width="1200" height="6" fill="#5b646d"/>
+        <use href="#panelW" x="0"/><use href="#panelW" x="200"/><use href="#panelW" x="400"/><use href="#panelW" x="600"/><use href="#panelW" x="800"/><use href="#panelW" x="1000"/>
+        <rect x="0" y="14" width="1200" height="26" fill="#fff"/>
+        <rect x="0" y="40" width="1200" height="5" fill="#d9dee3"/>
+        <g fill="#fff"><rect x="-8" y="0" width="30" height="342"/><rect x="390" y="0" width="30" height="342"/><rect x="790" y="0" width="30" height="342"/><rect x="1178" y="0" width="30" height="342"/></g>
+        <g fill="#e3e7eb"><rect x="410" y="14" width="10" height="328"/><rect x="810" y="14" width="10" height="328"/></g>
+      </svg>
+      <svg class="rail-tall" viewBox="0 0 390 400" preserveAspectRatio="xMidYMax slice">
+        <defs>
+          <g id="panelT">
+            <line x1="16" y1="52" x2="174" y2="328" stroke="#fff" stroke-width="13"/>
+            <line x1="174" y1="52" x2="16" y2="328" stroke="#fff" stroke-width="13"/>
+            <rect x="0" y="38" width="190" height="14" fill="#fff"/>
+            <rect x="0" y="328" width="190" height="12" fill="#fff"/>
+          </g>
+        </defs>
+        <rect x="0" y="340" width="390" height="60" fill="#7d8790"/>
+        <rect x="0" y="340" width="390" height="5" fill="#5b646d"/>
+        <use href="#panelT" x="5"/><use href="#panelT" x="195"/>
+        <rect x="0" y="16" width="390" height="24" fill="#fff"/>
+        <rect x="0" y="40" width="390" height="4" fill="#d9dee3"/>
+        <g fill="#fff"><rect x="-6" y="0" width="22" height="340"/><rect x="184" y="0" width="22" height="340"/><rect x="374" y="0" width="22" height="340"/></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="inside wrap" id="inside">
+  <div class="inner">
+    <div class="head">
+      <h2>Inside the cottage</h2>
+      <p>Built in the 1860s and restored, with Jarrah floors, a record player and room for four. Firewood is supplied.</p>
+    </div>
+    <div class="rooms">
+      <figure class="lead">
+        <img src="img/lounge-1024.jpg" srcset="img/lounge-600.jpg 600w, img/lounge-1024.jpg 1024w" sizes="(max-width:900px) 100vw, 60vw" alt="The lounge: white walls, a pale corner sofa and the combustion wood fire in a red brick surround" width="1024" height="682" loading="lazy">
+        <figcaption>The lounge, with the combustion fire.</figcaption>
+      </figure>
+      <ul class="roomlist">
+        <li><b>Lounge</b><span>Wood fire with firewood, kindling and firelighters supplied. Smart TV, record player.</span></li>
+        <li><b>Dining room</b><span>A round table for four and the gin nook, with a welcome bottle of Dapper Chap gin.</span></li>
+        <li><b>Two king bedrooms</b><span>One looks out to the vineyard. The other is light filled, on Jarrah floors.</span></li>
+        <li><b>Kitchen</b><span>Fully equipped, with a DeLonghi pod machine and an AeroPress.</span></li>
+        <li><b>Bathroom</b><span>Separate toilet, al.ive body products, a Dyson Supersonic hairdryer.</span></li>
+        <li><b>And the rest</b><span>Laundry with washer and dryer, reverse-cycle air conditioning, lockable bike storage.</span></li>
+      </ul>
+    </div>
+    <div class="shots">
+      <figure><img src="img/bed1-1024.jpg" srcset="img/bed1-600.jpg 600w, img/bed1-1024.jpg 1024w" sizes="(max-width:900px) 50vw, 34vw" alt="King bedroom one, grey linen and a window to the garden" width="1024" height="682" loading="lazy"><figcaption>King bedroom one</figcaption></figure>
+      <figure><img src="img/bed2-1024.jpg" srcset="img/bed2-600.jpg 600w, img/bed2-1024.jpg 1024w" sizes="(max-width:900px) 50vw, 22vw" alt="King bedroom two, white bed on dark Jarrah floorboards" width="1024" height="683" loading="lazy"><figcaption>King bedroom two</figcaption></figure>
+      <figure><img src="img/kitchen-1024.jpg" srcset="img/kitchen-600.jpg 600w, img/kitchen-1024.jpg 1024w" sizes="(max-width:900px) 50vw, 22vw" alt="White kitchen with terracotta floor tiles" width="1024" height="682" loading="lazy"><figcaption>Kitchen</figcaption></figure>
+      <figure><img src="img/basin-1024.jpg" srcset="img/basin-600.jpg 600w, img/basin-1024.jpg 1024w" sizes="(max-width:900px) 50vw, 22vw" alt="A pink basin with brass tapware under a round lit mirror" width="1024" height="682" loading="lazy"><figcaption>Bathroom</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="pantry wrap" id="pantry">
+  <div class="inner grid">
+    <div>
+      <h2>On the bench when you arrive</h2>
+      <ul>
+        <li>Uraidla Bakery sourdough and butter</li>
+        <li>Farm-fresh eggs</li>
+        <li>Beerenberg jam and honey</li>
+        <li>A bottle of CRFT wine. Their cellar door is 250m up the road.</li>
+        <li>200ml of Dapper Chap gin for the gin nook</li>
+        <li>Urban Brew compostable coffee pods, made in South Australia</li>
+      </ul>
+    </div>
+    <div class="pics">
+      <figure><img src="img/bread-1024.jpg" srcset="img/bread-600.jpg 600w, img/bread-1024.jpg 1024w" sizes="(max-width:900px) 50vw, 26vw" alt="A sourdough loaf, eggs and a block of butter on a marble board" width="1024" height="682" loading="lazy"><figcaption>Sourdough from Uraidla Bakery</figcaption></figure>
+      <figure><img src="img/gin-1024.jpg" srcset="img/gin-600.jpg 600w, img/gin-1024.jpg 1024w" sizes="(max-width:900px) 50vw, 26vw" alt="The gin nook: a jar of dried orange, a bottle of gin and a gin book on a brass tray" width="1024" height="682" loading="lazy"><figcaption>The gin nook</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="garden wrap" id="garden">
+  <div class="inner split">
+    <div class="text">
+      <h2>A quarter acre of garden</h2>
+      <p>Lawns, a dining terrace that looks over the vineyard, an undercover patio with a four-burner Beefmaster barbecue, and a fire pit ringed with Adirondack chairs. Bocce and Connect 4 are on the lawn.</p>
+      <p class="wild">Kangaroos come through at dusk, kookaburras call from the gums, and now and then there's a koala.</p>
+    </div>
+    <div>
+      <figure class="big"><img src="img/terrace-1024.jpg" srcset="img/terrace-600.jpg 600w, img/terrace-1024.jpg 1024w" sizes="(max-width:900px) 100vw, 56vw" alt="Guests at a picnic table under a tree facing the vineyard while two children play on the lawn" width="1024" height="682" loading="lazy"></figure>
+      <div class="row">
+        <figure><img src="img/firepit-1024.jpg" srcset="img/firepit-600.jpg 600w, img/firepit-1024.jpg 1024w" sizes="(max-width:900px) 50vw, 28vw" alt="White Adirondack chairs around the fire pit on gravel" width="1024" height="682" loading="lazy"><figcaption>The fire pit (not in fire ban season)</figcaption></figure>
+        <figure><img src="img/patio-1024.jpg" srcset="img/patio-600.jpg 600w, img/patio-1024.jpg 1024w" sizes="(max-width:900px) 50vw, 28vw" alt="The long outdoor table under the white pergola beside the lawn" width="1024" height="682" loading="lazy"><figcaption>The undercover patio</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="here wrap" id="here">
+  <div class="inner grid">
+    <div>
+      <h2>Getting here</h2>
+      <p>19 Rangeview Drive, Carey Gully. Take Greenhill Road through Uraidla and turn right onto Rangeview Drive. The cottage is 190m from the corner.</p>
+      <ol class="route">
+        <li class="home"><b>The Gladys</b><span>Carey Gully</span></li>
+        <li><b>CRFT Cellar Door</b><span>250m</span></li>
+        <li><b>Uraidla</b><span>3 minutes</span></li>
+        <li><b>Stirling</b><span>10 minutes</span></li>
+        <li><b>Adelaide CBD</b><span>25 minutes</span></li>
+      </ol>
+      <p class="note">Bring walking boots and a coat for the hills.</p>
+    </div>
+    <figure>
+      <img src="img/aerial-1024.jpg" srcset="img/aerial-600.jpg 600w, img/aerial-1024.jpg 1024w" sizes="(max-width:900px) 100vw, 50vw" alt="From above: the cottage among its gardens and trees, beside the road" width="1024" height="766" loading="lazy">
+      <figcaption>The cottage and its garden from above.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="guests wrap" id="guests">
+  <div class="inner">
+    <h2>What guests say</h2>
+    <p class="score">5.0 from 51 reviews on Airbnb, where it's a Guest favourite.</p>
+    <ul class="quotes">
+      <li><blockquote>"The Gladys exceeded all our expectations."</blockquote><cite>Liz and Jim, on The Gladys website</cite></li>
+      <li><blockquote>"The Gladys is truly a hidden gem in the Adelaide Hills."</blockquote><cite>Annalisa and Matt, on The Gladys website</cite></li>
+      <li><blockquote>"The Gladys is the perfect place for a romantic getaway."</blockquote><cite>Bec and Lachlan, on The Gladys website</cite></li>
+    </ul>
+  </div>
+</section>
+
+<section class="book wrap" id="book">
+  <div class="inner">
+    <h2>Check dates</h2>
+    <p class="lede">Sleeps four in two king bedrooms. Two-night minimum.</p>
+    <div class="ways">
+      <div class="way">
+        <h3>See what's free</h3>
+        <p>Pick your nights on the calendar.</p>
+        <div class="acts">
+          <a class="btn pink" href="https://www.airbnb.com.au/rooms/1145953780712888895" rel="noopener" target="_blank">Dates on Airbnb</a>
+          <a class="btn line-w" href="https://www.booking.com/hotel/au/adelaide-hills-luxury-cottage-the-gladys.en-gb.html" rel="noopener" target="_blank">Dates on Booking.com</a>
+        </div>
+      </div>
+      <div class="way">
+        <h3>Or ask us</h3>
+        <p>Tell us your dates and how many of you are coming.</p>
+        <div class="acts">
+          <a class="btn line-w" href="mailto:stayhere@thegladys.au">stayhere@thegladys.au</a>
+          <a class="btn line-w" href="tel:+61400685983">Call 0400 685 983</a>
+        </div>
+      </div>
+    </div>
+    <ul>
+      <li>No pets, as the property isn't fully fenced and there are animals next door. Guide dogs: get in touch.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="close" aria-label="The front lawn">
+  <img src="img/picnic-2000.jpg" srcset="img/picnic-1000.jpg 1000w, img/picnic-2000.jpg 2000w" sizes="100vw" alt="A picnic rug, basket, hat and book on the front lawn, with the vineyard behind" width="2000" height="1333" loading="lazy">
+  <div class="panel">
+    <img src="img/logo.png" alt="" width="720" height="240" loading="lazy">
+    <h2>Turn right at Rangeview Drive.</h2>
+    <p>19 Rangeview Drive, Carey Gully. Sleeps four, two-night minimum.</p>
+    <div class="acts">
+      <a class="btn" href="#book">Check dates</a>
+      <a class="btn line" href="https://www.instagram.com/thegladys_adelaidehills/" rel="noopener" target="_blank">@thegladys_adelaidehills</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>A preview made by Lamplit Studio for The Gladys. Not affiliated, not live.</p>
+  <p>Photos and logo are The Gladys' own, from thegladys.au.</p>
+</footer>
+
+<div class="phonebar" id="phonebar">
+  <a class="btn" href="#book">Check dates</a>
+  <a class="btn line" href="mailto:stayhere@thegladys.au">Email us</a>
+</div>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  var reduce=mq.matches;
+  var q=function(s){return document.querySelector(s)};
+  var sec=q('.verandah'), cot=q('.l-cottage'), vin=q('.l-vines'), rail=q('.l-rail'), ca=q('.copy-a'), cb=q('.copy-b');
+  var bar=document.getElementById('phonebar'), book=document.getElementById('book'), inside=document.getElementById('inside');
+  var clamp=function(v){return v<0?0:v>1?1:v};
+  var seg=function(p,a,b){return clamp((p-a)/(b-a))};
+  var ease=function(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
+  function prog(){var r=sec.getBoundingClientRect();var span=sec.offsetHeight-window.innerHeight;return span>0?clamp(-r.top/span):1}
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    var vh=window.innerHeight, bk=book.getBoundingClientRect();
+    var on=inside.getBoundingClientRect().top<vh*.6 && (bk.top>vh*.9 || bk.bottom<0);
+    bar.classList.toggle('on', on); bar.inert=!on;
+    if(reduce) return;
+    var p=prog();
+    var w=ease(seg(p,0,.6));
+    cot.style.transform='scale('+(1+w*.7).toFixed(4)+')';
+    cot.style.opacity=(1-seg(p,.42,.56)).toFixed(3);
+    vin.style.transform='scale('+(1.18-ease(seg(p,.3,1))*.18).toFixed(4)+')';
+    var r=ease(seg(p,.22,.55));
+    rail.style.transform='translate3d(0,'+((1-r)*100).toFixed(2)+'%,0)';
+    var a=seg(p,.08,.26);
+    ca.style.opacity=(1-a).toFixed(3);
+    ca.style.transform='translate3d(0,'+(-a*40).toFixed(1)+'px,0)';
+    var b=seg(p,.66,.82);
+    cb.style.opacity=b.toFixed(3);
+    cb.style.transform='translate3d(0,'+((1-b)*24).toFixed(1)+'px,0)';
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  if(mq.addEventListener) mq.addEventListener('change',function(){location.reload()});
+  frame();
+})();
+</script>
+</body>
+</html>
