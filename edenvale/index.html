@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Edenvale Farmstay, Nethercote</title>
+<meta name="description" content="An adults-only tiny house for two on a 90-acre Highland cattle farm at Nethercote, on the Far South Coast of NSW. A website idea made by Lamplit Studio for Edenvale Farmstay.">
+<meta property="og:title" content="Edenvale Farmstay, Nethercote">
+<meta property="og:description" content="A website idea made by Lamplit Studio for Edenvale Farmstay. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/edenvale/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/edenvale/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600;700&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --dark:#1e1d1b; --mist:#eef1ef; --paper:#fbfcfb; --ginger:#a64d24; --ginger-lt:#e7a27a;
+  --pasture:#4c5a2d; --night:#131a29; --ink:#22231f; --ink-soft:#50544c; --line:#d3d9d4;
+  --display:"Zilla Slab", Rockwell, serif; --text:"Public Sans", system-ui, sans-serif;
+  --r-s:3px; --r-m:8px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--mist);color:var(--ink);font:400 1.0625rem/1.6 var(--text)}
+img{display:block;max-width:100%;height:auto}
+figure{margin:0}
+a{color:var(--ginger)}
+a:focus-visible{outline:3px solid var(--ginger);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.05;margin:0;color:var(--dark);text-wrap:balance}
+h2{font-size:clamp(2rem,6.4vw,3.4rem)}
+h3{font-size:1.3rem}
+p{margin:0 0 1em;text-wrap:pretty}
+.skip{position:absolute;left:-999px;top:0;background:var(--paper);padding:10px 14px;z-index:60}
+.skip:focus{left:8px;top:8px}
+
+.strip{margin:0;padding:8px 16px;background:var(--dark);color:#e9ebe7;font-size:.85rem;text-align:center;line-height:1.35}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 16px;background:var(--paper);border-bottom:1px solid var(--line)}
+.top .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--dark);font:700 1.2rem/1 var(--display)}
+.top .logo img{width:44px}
+.top nav{display:flex;gap:22px;align-items:center;font-weight:600;font-size:.95rem}
+.top nav a{text-decoration:none;color:var(--dark);padding:10px 0}
+.top nav a.go{background:var(--ginger);color:#fff;padding:10px 16px;border-radius:var(--r-s)}
+.top nav .opt{display:none}
+@media(min-width:760px){.top{padding:10px 32px}.top nav .opt{display:inline}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;border-radius:var(--r-s);font:600 1rem/1.2 var(--text);text-decoration:none;border:2px solid var(--ginger);background:var(--ginger);color:#fff}
+.btn.line{background:transparent;color:var(--dark);border-color:var(--dark)}
+.btn.line-w{background:transparent;color:#fff;border-color:rgba(255,255,255,.75)}
+
+/* Day to night at the bath */
+.dusk{position:relative;height:340vh;background:var(--dark)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:#9fa9a8}
+.plane{position:absolute;inset:0}
+.l-valley img{width:100%;height:100%;object-fit:cover;object-position:30% 60%}
+.frame{position:absolute;right:6vw;top:50%;width:min(34vw,460px);aspect-ratio:3/4;transform:translateY(-50%);border:10px solid var(--paper);box-shadow:0 24px 50px -20px rgba(0,0,0,.6);overflow:hidden;background:#333}
+.frame .ph{position:absolute;inset:0}
+.frame img{width:100%;height:100%;object-fit:cover}
+.ph-house img{object-position:50% 60%}
+.night{background:var(--night);opacity:0}
+.stars{pointer-events:none;opacity:0}
+.stars svg{width:100%;height:100%;display:block}
+.copy{position:absolute;left:6vw;max-width:30rem;background:rgba(251,252,251,.95);padding:22px 22px 20px;border-radius:var(--r-m)}
+.copy h1{font-size:clamp(2.2rem,5vw,3.8rem)}
+.copy h2{font-size:clamp(1.8rem,4vw,2.8rem)}
+.copy p{margin:12px 0 0;color:var(--ink-soft)}
+.copy-a{top:50%;transform:translateY(-50%)}
+.copy-b{top:50%;transform:translateY(-50%)}
+.copy-c{top:50%;transform:translateY(-50%);background:rgba(19,26,41,.9);color:#e8ecf3}
+.copy-c h2{color:#fff}
+.copy-c p{color:#d6dce8}
+.copy-c q{display:block;margin-top:14px;font-style:italic;color:#fff}
+.copy-c cite{display:block;font-style:normal;font-size:.9rem;color:#b9c3d4;margin-top:4px}
+.js .copy-b,.js .copy-c{opacity:0}
+@media(max-width:820px){
+  .l-valley{display:none}
+  .frame{inset:0;width:auto;transform:none;border:0;box-shadow:none;aspect-ratio:auto;top:0;right:0}
+  .copy{left:16px;right:16px;max-width:none;padding:18px}
+  .copy-a{top:auto;bottom:170px;transform:none}
+  .copy-b{top:16px;bottom:auto;transform:none}
+  .copy-c{top:auto;bottom:120px;transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .dusk{height:auto}
+  .stage{position:relative;height:auto;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:40vh 0 24px}
+  .ph-house{display:none}
+  .night{opacity:.55}
+  .stars{opacity:1}
+  .copy,.copy-a,.copy-b,.copy-c{position:relative;top:auto;bottom:auto;left:auto;right:auto;transform:none;margin:12px 16px 0;opacity:1}
+  .js .copy-b,.js .copy-c{opacity:1}
+  .copy-b{display:none}
+}
+@media(prefers-reduced-motion:reduce) and (min-width:821px){
+  .copy{max-width:34rem;margin-left:6vw}
+}
+
+.wrap{padding:72px 16px}
+.inner{max-width:1120px;margin:0 auto}
+@media(min-width:760px){.wrap{padding:112px 32px}}
+
+/* Inside */
+.inside .grid{display:grid;gap:28px}
+.inside .lead p{color:var(--ink-soft);font-size:1.1rem;max-width:34rem;margin-top:16px}
+.facts{margin:24px 0 0;padding:0;list-style:none;border-top:3px solid var(--dark)}
+.facts li{padding:12px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:8.5rem 1fr;gap:12px}
+.facts b{font-family:var(--display);font-size:1.05rem}
+.facts span{color:var(--ink-soft)}
+.pics3{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pics3 figure:first-child{grid-row:span 2}
+.pics3 img{width:100%;height:100%;object-fit:cover;border-radius:var(--r-s)}
+.pics3 figcaption{font-size:.85rem;color:var(--ink-soft);margin-top:6px}
+@media(min-width:900px){.inside .grid{grid-template-columns:1fr 1.1fr;align-items:start}}
+
+/* Fold */
+.fold{background:var(--paper)}
+.fold .head{display:grid;gap:16px;margin-bottom:32px}
+.fold .head p{color:var(--ink-soft);max-width:36rem}
+.herd{display:grid;gap:0;margin:0;padding:0;list-style:none}
+.herd li{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:14px 0;border-top:1px solid var(--line)}
+.herd b{font-family:var(--display);font-size:clamp(1.6rem,5vw,2.4rem);color:var(--dark);line-height:1}
+.herd span{color:var(--ginger);font-weight:600;text-align:right}
+.fold .split{display:grid;gap:28px}
+.fold .photos{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:start}
+.fold .photos figure:nth-child(2){margin-top:56px}
+.fold .photos img{border-radius:var(--r-s)}
+.fold .photos figcaption{font-size:.85rem;color:var(--ink-soft);margin-top:6px}
+.also{margin-top:24px;color:var(--ink-soft)}
+@media(min-width:900px){.fold .head{grid-template-columns:1fr 1fr;align-items:end}.fold .split{grid-template-columns:1.1fr 1fr;align-items:start}}
+
+/* People */
+.people .grid{display:grid;gap:28px}
+.people p{max-width:36rem}
+.people figure img{border-radius:var(--r-m)}
+.people figcaption{font-size:.85rem;color:var(--ink-soft);margin-top:8px}
+@media(min-width:900px){.people .grid{grid-template-columns:1fr 1fr;align-items:center}}
+
+/* Land */
+.land{position:relative;color:#fff;background:var(--dark)}
+.land img{width:100%;height:auto;max-height:78svh;object-fit:cover}
+.land .cap{padding:24px 16px 56px;max-width:1120px;margin:0 auto}
+.land h2{color:#fff}
+.land p{color:#dfe3dc;max-width:38rem;margin-top:12px}
+@media(min-width:760px){.land .cap{padding:40px 32px 80px}}
+
+/* Guests */
+.guests ul{margin:24px 0 0;padding:0;list-style:none;display:grid;gap:0}
+.guests li{padding:22px 0;border-top:1px solid var(--line)}
+.guests blockquote{margin:0;font-family:var(--display);font-weight:600;font-size:clamp(1.3rem,3.6vw,1.9rem);line-height:1.2}
+.guests cite{display:block;margin-top:8px;font-style:normal;color:var(--ink-soft);font-size:.95rem}
+.guests .score{color:var(--ink-soft);margin-top:8px}
+@media(min-width:900px){.guests ul{grid-template-columns:1fr 1fr;column-gap:48px}}
+
+/* Here */
+.here{background:var(--paper)}
+.here .grid{display:grid;gap:28px}
+.here ul{margin:16px 0 0;padding:0 0 0 18px;color:var(--ink-soft)}
+.here li{margin-bottom:8px}
+.here figure img{border-radius:var(--r-m)}
+.here figcaption{font-size:.85rem;color:var(--ink-soft);margin-top:8px}
+@media(min-width:900px){.here .grid{grid-template-columns:1fr 1fr;align-items:center}}
+
+/* Book */
+.book{background:var(--night);color:#dfe5ef}
+.book h2{color:#fff}
+.book .lede{font-size:1.15rem;max-width:38rem;margin-top:12px}
+.book .ways{display:grid;gap:14px;margin-top:28px}
+.book .way{background:#1c2438;border-radius:var(--r-m);padding:20px}
+.book .way h3{color:#fff;margin-bottom:8px}
+.book .way p{color:#c6cfdd;font-size:.98rem}
+.book .acts{display:flex;flex-wrap:wrap;gap:10px}
+.book a:focus-visible,footer a:focus-visible{outline-color:#fff}
+@media(min-width:900px){.book .ways{grid-template-columns:1fr 1fr}}
+
+/* Close */
+.close{position:relative;min-height:80svh;display:flex;align-items:flex-end}
+.close>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.close .panel{position:relative;margin:16px;max-width:32rem;background:rgba(251,252,251,.96);padding:24px;border-radius:var(--r-m)}
+.close h2{font-size:clamp(1.6rem,4.6vw,2.4rem)}
+.close p{margin:12px 0 18px;color:var(--ink-soft)}
+.close .acts{display:flex;flex-wrap:wrap;gap:10px}
+@media(min-width:900px){.close .panel{margin:0 0 64px 6vw}}
+
+footer{padding:28px 16px 110px;background:var(--dark);color:#cfd3cc;font-size:.9rem}
+footer p{max-width:1120px;margin:0 auto 6px}
+@media(min-width:900px){footer{padding-bottom:28px}}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--paper);border-top:1px solid var(--line);box-shadow:0 -6px 20px -10px rgba(0,0,0,.35);transform:translate3d(0,110%,0);transition:transform .25s ease-out}
+.phonebar.on{transform:none}
+.phonebar .btn{flex:1}
+@media(min-width:900px){.phonebar{display:none}}
+@media(prefers-reduced-motion:reduce){.phonebar{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#inside">Skip to the tiny house</a>
+<p class="strip">A website idea made by Lamplit Studio for Edenvale Farmstay. Not their official site.</p>
+
+<header class="top">
+  <a class="logo" href="#top"><img src="img/logo.png" alt="" width="240" height="234">Edenvale Farm</a>
+  <nav aria-label="Main">
+    <a class="opt" href="#fold">The fold</a>
+    <a class="opt" href="#here">Getting here</a>
+    <a class="go" href="#book">Check dates</a>
+  </nav>
+</header>
+
+<main>
+<section class="dusk" id="top" aria-label="The tiny house, from day to night">
+  <div class="stage">
+    <div class="plane l-valley">
+      <img src="img/gum-1600.jpg" srcset="img/gum-800.jpg 800w, img/gum-1600.jpg 1600w" sizes="100vw" alt="" width="1600" height="900" fetchpriority="high">
+    </div>
+    <div class="frame">
+      <div class="ph ph-bath"><img src="img/bath-960.jpg" srcset="img/bath-600.jpg 600w, img/bath-960.jpg 960w" sizes="(max-width:820px) 100vw, 34vw" alt="The white bath set into the timber deck, looking out over paddocks to the wooded hills" width="960" height="1280"></div>
+      <div class="ph ph-house"><img src="img/house-1200.jpg" srcset="img/house-700.jpg 700w, img/house-1200.jpg 1200w" sizes="(max-width:820px) 100vw, 34vw" alt="The tiny house: dark cladding, timber front and a wide covered deck on the hillside" width="1200" height="1500"></div>
+    </div>
+    <div class="plane night"></div>
+    <div class="plane stars" aria-hidden="true"><svg viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMin slice" fill="#fff"><g><circle cx="326" cy="65" r="1.2" fill-opacity="0.6"/><circle cx="818" cy="42" r="2.8" fill-opacity="0.6"/><circle cx="906" cy="90" r="1.2" fill-opacity="0.8"/><circle cx="419" cy="100" r="2.8" fill-opacity="0.8"/><circle cx="64" cy="228" r="1.5" fill-opacity="1"/><circle cx="626" cy="379" r="2.8" fill-opacity="1"/><circle cx="398" cy="391" r="1.2" fill-opacity="1"/><circle cx="855" cy="119" r="1.5" fill-opacity="1"/><circle cx="122" cy="127" r="1.5" fill-opacity="0.6"/><circle cx="581" cy="257" r="1.8" fill-opacity="0.6"/><circle cx="547" cy="30" r="1.2" fill-opacity="1"/><circle cx="209" cy="274" r="2.2" fill-opacity="0.8"/><circle cx="466" cy="370" r="1.8" fill-opacity="0.8"/><circle cx="251" cy="76" r="1.5" fill-opacity="0.6"/><circle cx="574" cy="212" r="1.8" fill-opacity="1"/><circle cx="449" cy="246" r="1.2" fill-opacity="0.6"/><circle cx="512" cy="70" r="1.8" fill-opacity="0.6"/><circle cx="929" cy="172" r="1.2" fill-opacity="1"/><circle cx="572" cy="351" r="1.8" fill-opacity="0.8"/><circle cx="693" cy="240" r="2.8" fill-opacity="0.8"/><circle cx="73" cy="42" r="1.8" fill-opacity="0.8"/><circle cx="695" cy="31" r="1.8" fill-opacity="1"/></g><g><circle cx="577" cy="274" r="2.2" fill-opacity="0.8"/><circle cx="714" cy="355" r="1.8" fill-opacity="0.6"/><circle cx="936" cy="145" r="2.8" fill-opacity="0.6"/><circle cx="494" cy="91" r="1.8" fill-opacity="0.6"/><circle cx="736" cy="162" r="2.2" fill-opacity="0.6"/><circle cx="170" cy="164" r="1.8" fill-opacity="0.6"/><circle cx="816" cy="346" r="1.8" fill-opacity="1"/><circle cx="416" cy="147" r="2.2" fill-opacity="0.6"/><circle cx="154" cy="75" r="1.5" fill-opacity="1"/><circle cx="236" cy="197" r="2.8" fill-opacity="0.6"/><circle cx="265" cy="7" r="2.2" fill-opacity="1"/><circle cx="371" cy="229" r="1.5" fill-opacity="1"/><circle cx="856" cy="380" r="1.2" fill-opacity="0.8"/><circle cx="896" cy="313" r="2.8" fill-opacity="0.8"/><circle cx="399" cy="161" r="2.2" fill-opacity="1"/><circle cx="401" cy="80" r="1.5" fill-opacity="0.8"/><circle cx="166" cy="139" r="1.2" fill-opacity="0.6"/><circle cx="5" cy="65" r="1.2" fill-opacity="0.8"/><circle cx="613" cy="33" r="1.5" fill-opacity="1"/><circle cx="377" cy="256" r="1.8" fill-opacity="1"/><circle cx="366" cy="54" r="2.2" fill-opacity="0.8"/><circle cx="481" cy="128" r="1.5" fill-opacity="0.6"/></g><g><circle cx="747" cy="297" r="2.2" fill-opacity="1"/><circle cx="165" cy="14" r="2.8" fill-opacity="0.8"/><circle cx="150" cy="220" r="1.2" fill-opacity="1"/><circle cx="300" cy="259" r="1.2" fill-opacity="1"/><circle cx="842" cy="210" r="1.5" fill-opacity="0.8"/><circle cx="769" cy="215" r="2.8" fill-opacity="0.8"/><circle cx="635" cy="247" r="1.5" fill-opacity="0.6"/><circle cx="815" cy="297" r="1.5" fill-opacity="0.6"/><circle cx="517" cy="145" r="1.2" fill-opacity="0.6"/><circle cx="787" cy="192" r="1.5" fill-opacity="1"/><circle cx="604" cy="141" r="1.8" fill-opacity="0.8"/><circle cx="85" cy="45" r="2.2" fill-opacity="0.6"/><circle cx="339" cy="196" r="2.8" fill-opacity="0.6"/><circle cx="480" cy="263" r="1.2" fill-opacity="1"/><circle cx="124" cy="158" r="1.5" fill-opacity="0.8"/><circle cx="885" cy="176" r="1.8" fill-opacity="0.6"/><circle cx="798" cy="389" r="2.2" fill-opacity="0.8"/><circle cx="402" cy="379" r="1.5" fill-opacity="0.6"/><circle cx="988" cy="16" r="2.8" fill-opacity="0.8"/><circle cx="803" cy="63" r="2.8" fill-opacity="0.8"/><circle cx="656" cy="143" r="2.8" fill-opacity="1"/><circle cx="135" cy="11" r="1.2" fill-opacity="1"/></g><g><circle cx="747" cy="60" r="2.4" fill-opacity="0.6"/><circle cx="33" cy="89" r="2.4" fill-opacity="1"/><circle cx="328" cy="220" r="2.4" fill-opacity="0.6"/><circle cx="906" cy="145" r="3.0" fill-opacity="1"/><circle cx="583" cy="362" r="3.0" fill-opacity="1"/><circle cx="134" cy="65" r="2.4" fill-opacity="0.8"/><circle cx="774" cy="245" r="2.4" fill-opacity="0.6"/><circle cx="145" cy="250" r="2.4" fill-opacity="1"/><circle cx="66" cy="275" r="3.0" fill-opacity="0.6"/><circle cx="879" cy="27" r="2.4" fill-opacity="0.8"/><circle cx="47" cy="44" r="3.0" fill-opacity="1"/><circle cx="33" cy="358" r="2.4" fill-opacity="0.8"/><circle cx="327" cy="389" r="2.4" fill-opacity="1"/><circle cx="279" cy="206" r="3.0" fill-opacity="1"/><circle cx="937" cy="281" r="3.0" fill-opacity="1"/><circle cx="889" cy="85" r="3.0" fill-opacity="0.6"/><circle cx="417" cy="160" r="3.0" fill-opacity="0.6"/><circle cx="669" cy="174" r="2.4" fill-opacity="1"/><circle cx="305" cy="53" r="2.4" fill-opacity="1"/><circle cx="642" cy="150" r="3.0" fill-opacity="0.6"/><circle cx="963" cy="92" r="2.4" fill-opacity="0.8"/><circle cx="881" cy="69" r="2.4" fill-opacity="0.6"/></g></svg></div>
+    <div class="copy copy-a">
+      <h1>A tiny house amongst the Highlands.</h1>
+      <p>For two adults, on a 90-acre cattle farm at Nethercote on the Far South Coast of NSW.</p>
+    </div>
+    <div class="copy copy-b">
+      <h2>The bath is set into the deck.</h2>
+      <p>It faces down the valley, with the fire pit close by.</p>
+    </div>
+    <div class="copy copy-c">
+      <h2>Then the stars come out.</h2>
+      <q>Having a bath under the stars with the fire right next to you was incredible.</q>
+      <cite>Melissa Jane, Airbnb review</cite>
+    </div>
+  </div>
+</section>
+
+<section class="inside wrap" id="inside">
+  <div class="inner grid">
+    <div class="lead">
+      <h2>Inside the tiny house</h2>
+      <p>One room for living, a queen bedroom and a bathroom, separate from the homestead. Josh built much of it himself.</p>
+      <ul class="facts">
+        <li><b>Sleeps</b><span>Two adults. One queen bed.</span></li>
+        <li><b>Kitchen</b><span>Full kitchen and a living area with a sofa.</span></li>
+        <li><b>Outside</b><span>Wraparound deck, the outdoor bath, a fire pit and a barbecue.</span></li>
+        <li><b>Comforts</b><span>Reverse-cycle air conditioning, a washing machine, a composting toilet.</span></li>
+        <li><b>Switched off</b><span>No wifi and no TV. Phone signal is patchy unless you're on Telstra.</span></li>
+      </ul>
+    </div>
+    <div class="pics3">
+      <figure><img src="img/living-960.jpg" srcset="img/living-600.jpg 600w, img/living-960.jpg 960w" sizes="(max-width:900px) 50vw, 28vw" alt="The living area: a dark sofa, timber floor and glass doors out to the deck" width="960" height="1280" loading="lazy"><figcaption>Living area</figcaption></figure>
+      <figure><img src="img/kitchen-960.jpg" srcset="img/kitchen-600.jpg 600w, img/kitchen-960.jpg 960w" sizes="(max-width:900px) 50vw, 26vw" alt="White kitchen bench along the wall, with a painting and a high window" width="960" height="1200" loading="lazy"><figcaption>Kitchen</figcaption></figure>
+      <figure><img src="img/bathroom-960.jpg" srcset="img/bathroom-600.jpg 600w, img/bathroom-960.jpg 960w" sizes="(max-width:900px) 50vw, 26vw" alt="Bathroom vanity with a round basin, and the queen bed through the doorway" width="960" height="1280" loading="lazy"><figcaption>Bathroom and bedroom</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="fold wrap" id="fold">
+  <div class="inner">
+    <div class="head">
+      <h2>Meet the fold</h2>
+      <p>Edenvale breeds registered Scottish Highland cattle. The calves are handled, brushed and hand-fed from young, and depending on where the herd is grazing, some are friendly with guests.</p>
+    </div>
+    <div class="split">
+      <ul class="herd">
+        <li><b>Jamie</b><span>the matriarch</span></li>
+        <li><b>Charlotte</b><span>the gentle leader</span></li>
+        <li><b>Delilah</b><span>the affection seeker</span></li>
+        <li><b>Lucy</b><span>the easy going one</span></li>
+        <li><b>Ruby</b><span>the social butterfly</span></li>
+        <li><b>Margot</b><span>loves being brushed</span></li>
+      </ul>
+      <div>
+        <div class="photos">
+          <figure><img src="img/jamie-1000.jpg" srcset="img/jamie-600.jpg 600w, img/jamie-1000.jpg 1000w" sizes="(max-width:900px) 50vw, 24vw" alt="Jamie, a black Highland cow with long horns, standing in the paddock" width="1000" height="1333" loading="lazy"><figcaption>Jamie</figcaption></figure>
+          <figure><img src="img/nuzzle-1200.jpg" srcset="img/nuzzle-700.jpg 700w, img/nuzzle-1200.jpg 1200w" sizes="(max-width:900px) 50vw, 24vw" alt="A ginger Highland cow nuzzling her young calf" width="1200" height="1383" loading="lazy"><figcaption>A cow and her calf</figcaption></figure>
+        </div>
+        <p class="also">Also on the farm: goats, donkeys, chooks and guinea fowl, with kangaroos and wombats in the paddocks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="land" aria-label="The farm">
+  <img src="img/valley-2000.jpg" srcset="img/valley-1000.jpg 1000w, img/valley-2000.jpg 2000w" sizes="100vw" alt="Lying in the long grass with boots off, looking across the paddocks to the forested hills" width="2000" height="1125" loading="lazy">
+  <div class="cap">
+    <h2>Ninety acres to wander</h2>
+    <p>Rolling pasture and native bush, bordered by national park. The farm has its own waterfall, a weir and walking trails, and mountain bike trails are close by.</p>
+  </div>
+</section>
+
+<section class="people wrap" id="people">
+  <div class="inner grid">
+    <div>
+      <h2>Robyn and Josh</h2>
+      <p>Robyn grew up on her father's cattle station north of Marble Bar in the Pilbara. At 21 a trip to Scotland introduced her to Highland cattle, and she bought her first three, two heifers and a bull, about three weeks before the farm was hers.</p>
+      <p>Josh grew up in rural England. He built the stables and much of the tiny house, and does the fixing and building a farm keeps asking for.</p>
+    </div>
+    <figure>
+      <img src="img/fluffy-1200.jpg" srcset="img/fluffy-700.jpg 700w, img/fluffy-1200.jpg 1200w" sizes="(max-width:900px) 100vw, 50vw" alt="A woman sitting in the grass with a ginger Highland cow's face close to hers" width="1200" height="1500" loading="lazy">
+      <figcaption>"Meet our fluffy cows", from their Visit NSW listing.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="guests wrap" id="guests">
+  <div class="inner">
+    <h2>What guests say</h2>
+    <p class="score">5.0 from 61 reviews on Airbnb, where it's a Guest favourite.</p>
+    <ul>
+      <li><blockquote>"The farm animals were a highlight, including Jock the donkey."</blockquote><cite>Jesse, Airbnb, July 2026</cite></li>
+      <li><blockquote>"The house is private and you can explore the property and the national park around it."</blockquote><cite>Max, Airbnb, February 2026</cite></li>
+      <li><blockquote>The bed "can only be described as 'anti-gravitational'."</blockquote><cite>Martin, Airbnb, January 2026</cite></li>
+      <li><blockquote>"Having a bath under the stars with the fire right next to you was incredible."</blockquote><cite>Melissa Jane, Airbnb, April 2026</cite></li>
+    </ul>
+  </div>
+</section>
+
+<section class="here wrap" id="here">
+  <div class="inner grid">
+    <div>
+      <h2>Getting here</h2>
+      <p>270 Ballantyne Road, Nethercote NSW 2549. Guests say Eden and Merimbula are a short drive away.</p>
+      <ul>
+        <li>The driveway is unsealed. You don't need a 4WD.</li>
+        <li>The farm sits on rolling hills, so there are slopes everywhere. It isn't suited to anyone unsteady on their feet.</li>
+        <li>Adults only.</li>
+      </ul>
+    </div>
+    <figure>
+      <img src="img/mist-1200.jpg" srcset="img/mist-700.jpg 700w, img/mist-1200.jpg 1200w" sizes="(max-width:900px) 100vw, 50vw" alt="Highland cattle grazing hay in early morning sun, with mist in the valley behind" width="1200" height="1600" loading="lazy">
+      <figcaption>Morning on the farm.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="book wrap" id="book">
+  <div class="inner">
+    <h2>Check dates</h2>
+    <p class="lede">The tiny house is for two adults.</p>
+    <div class="ways">
+      <div class="way">
+        <h3>See what's free</h3>
+        <p>Pick your nights on the calendar.</p>
+        <div class="acts"><a class="btn" href="https://www.airbnb.com.au/rooms/1130054476615597957" rel="noopener" target="_blank">Dates on Airbnb</a></div>
+      </div>
+      <div class="way">
+        <h3>Or ask Robyn</h3>
+        <p>Tell her your dates, and anything you'd like to know about the farm.</p>
+        <div class="acts">
+          <a class="btn line-w" href="mailto:stay@edenvalefarm.com">stay@edenvalefarm.com</a>
+          <a class="btn line-w" href="tel:+61424263440">Call 0424 263 440</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="close" aria-label="Cow and calf">
+  <img src="img/cowcalf-1600.jpg" srcset="img/cowcalf-800.jpg 800w, img/cowcalf-1600.jpg 1600w" sizes="100vw" alt="A ginger Highland cow and her shaggy calf in the paddock, with bush-covered hills behind" width="1600" height="1067" loading="lazy">
+  <div class="panel">
+    <h2>Turn in at 270 Ballantyne Road.</h2>
+    <p>Nethercote, Far South Coast NSW. A tiny house for two, and the Highlands next door.</p>
+    <div class="acts">
+      <a class="btn" href="#book">Check dates</a>
+      <a class="btn line" href="https://www.instagram.com/edenvalefarm/" rel="noopener" target="_blank">@edenvalefarm</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>A preview made by Lamplit Studio for Edenvale Farmstay. Not affiliated, not live.</p>
+  <p>Photos and logo are Edenvale Farm's own, from edenvalefarm.com and their Visit NSW listing. Guest quotes are from their Airbnb reviews.</p>
+</footer>
+
+<div class="phonebar" id="phonebar">
+  <a class="btn" href="#book">Check dates</a>
+  <a class="btn line" href="mailto:stay@edenvalefarm.com">Email Robyn</a>
+</div>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  var reduce=mq.matches;
+  var q=function(s){return document.querySelector(s)};
+  var sec=q('.dusk'), house=q('.ph-house'), bath=q('.ph-bath'), night=q('.night'), stars=q('.stars'), valley=q('.l-valley');
+  var ca=q('.copy-a'), cb=q('.copy-b'), cc=q('.copy-c');
+  var groups=[].slice.call(document.querySelectorAll('.stars g'));
+  var bar=document.getElementById('phonebar'), book=document.getElementById('book'), inside=document.getElementById('inside');
+  var clamp=function(v){return v<0?0:v>1?1:v};
+  var seg=function(p,a,b){return clamp((p-a)/(b-a))};
+  var ease=function(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
+  function prog(){var r=sec.getBoundingClientRect();var span=sec.offsetHeight-window.innerHeight;return span>0?clamp(-r.top/span):1}
+  function fade(el,o,dy){var c=window.innerWidth>820?'translateY(-50%) ':'';el.style.opacity=o.toFixed(3);el.style.transform=c+'translate3d(0,'+dy.toFixed(1)+'px,0)'}
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    var vh=window.innerHeight, bk=book.getBoundingClientRect();
+    var on=inside.getBoundingClientRect().top<vh*.6 && (bk.top>vh*.9 || bk.bottom<0);
+    bar.classList.toggle('on',on); bar.inert=!on;
+    if(reduce) return;
+    var p=prog();
+    var h=ease(seg(p,.18,.42));
+    house.style.transform='translate3d(0,'+(-h*104).toFixed(2)+'%,0)';
+    bath.style.transform='scale('+(1.12-ease(seg(p,.18,.9))*.12).toFixed(4)+')';
+    if(valley) valley.style.transform='scale('+(1.06-ease(seg(p,0,1))*.06).toFixed(4)+')';
+    var n=ease(seg(p,.5,.8));
+    night.style.opacity=(n*.62).toFixed(3);
+    stars.style.opacity=seg(p,.55,.7).toFixed(3);
+    stars.style.transform='translate3d(0,'+((1-n)*30).toFixed(1)+'px,0)';
+    for(var i=0;i<groups.length;i++){groups[i].style.opacity=seg(p,.56+i*.07,.66+i*.07).toFixed(3)}
+    var a=seg(p,.1,.22); fade(ca,1-a,-a*30);
+    var b=seg(p,.34,.44)*(1-seg(p,.52,.6)); fade(cb,b,(1-b)*20);
+    var c=seg(p,.72,.84); fade(cc,c,(1-c)*20);
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  if(mq.addEventListener) mq.addEventListener('change',function(){location.reload()});
+  frame();
+})();
+</script>
+</body>
+</html>
