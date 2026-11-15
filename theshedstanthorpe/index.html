@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>The Shed Stanthorpe | An architect's shed house in the middle of town</title>
+<meta name="description" content="A black Colorbond shed house for up to six, a short walk from High Street, Stanthorpe. A website idea made by Lamplit Studio for The Shed Stanthorpe.">
+<meta property="og:title" content="The Shed Stanthorpe">
+<meta property="og:description" content="A website idea made by Lamplit Studio for The Shed Stanthorpe. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/theshedstanthorpe/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/theshedstanthorpe/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23232322'/%3E%3Cpath d='M4 19 16 9l12 10' fill='none' stroke='%23eeede9' stroke-width='2.4'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/inside-1600.jpg" media="(min-width: 700px)">
+<script>document.documentElement.className+=' js'</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Tokens come from the house (see brand.md):
+   colorbond = the black ribbed cladding
+   wall      = the white walls and pale concrete inside
+   dusk      = the sky over the gable and the festoon lights in the yard
+   brick     = the brick fence with THE SHED on it
+   cedar     = the timber lining under the eaves
+   Barlow Condensed reads like shed-door lettering and an architect's title block. Public Sans is for reading. */
+:root{
+  --colorbond:#232322;
+  --colorbond-2:#33332f;
+  --wall:#eeede9;
+  --wall-2:#dddbd5;
+  --dusk:#e9a35b;
+  --brick:#6f5a51;
+  --cedar:#9b6a43;
+  --ink:#232322;
+  --ink-soft:#57544f;
+  --display:"Barlow Condensed","Arial Narrow",sans-serif;
+  --text:"Public Sans","Segoe UI",sans-serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--wall);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--colorbond);outline-offset:3px}
+.strip :focus-visible,.top :focus-visible,.rooms :focus-visible,.guests :focus-visible,.direct :focus-visible,.close :focus-visible,.phonebar :focus-visible,footer :focus-visible{outline-color:var(--dusk)}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--wall);padding:8px 12px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.strip{background:#111;color:var(--wall);font-size:14px;text-align:center;margin:0;
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  padding:14px var(--gut-r) 0 var(--gut)}
+.word{display:grid;justify-items:center;text-decoration:none;color:var(--wall);line-height:1;padding:4px 0}
+.word svg{width:58px;height:18px}
+.word b{font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:.08em;margin-top:2px}
+.word i{font-style:normal;font-size:10px;letter-spacing:.24em;margin-top:2px}
+.top nav{display:flex;gap:22px;align-items:center;font-weight:600;font-size:15px}
+.top nav a{color:var(--wall);text-decoration:none}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:2px;
+  font-family:var(--text);font-weight:700;font-size:16px;text-decoration:none;border:0;cursor:pointer;
+  background:var(--colorbond);color:var(--wall)}
+.btn:hover{background:var(--colorbond-2)}
+.btn.dusk{background:var(--dusk);color:var(--colorbond)}
+.btn.dusk:hover{background:#f0b676}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.line:hover{background:rgba(255,255,255,.08)}
+.top nav .btn{background:var(--dusk);color:var(--colorbond)}
+@media (max-width:820px){.top nav a:not(.btn){display:none}}
+
+/* ---------- Act 1: the doors. Black Colorbond, their roofline across both, sliding apart on the dining room ---------- */
+.doors{position:relative;height:290vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--colorbond)}
+.inside{position:absolute;inset:0;will-change:transform;transform:scale(1.14)}
+.inside img{width:100%;height:100%;object-fit:cover;object-position:40% 50%}
+.door{position:absolute;top:0;bottom:0;width:50.2%;z-index:3;will-change:transform;overflow:hidden;
+  background-color:var(--colorbond);
+  /* Colorbond ribs. slop-ok: a texture of their cladding, not a decorative wash */
+  background-image:repeating-linear-gradient(90deg, rgba(255,255,255,.055) 0 2px, rgba(0,0,0,0) 2px 22px, rgba(0,0,0,.28) 22px 25px, rgba(0,0,0,0) 25px 34px)}
+.door.l{left:0;box-shadow:inset -2px 0 0 #111}
+.door.r{right:0;box-shadow:inset 2px 0 0 #111}
+.door .roof{position:absolute;left:0;right:0;top:12%;height:30%;width:100%}
+.door .roof line{stroke:var(--wall);stroke-width:3;vector-effect:non-scaling-stroke;stroke-linecap:square}
+.door .name{position:absolute;top:calc(12% + 21%);font-family:var(--display);font-weight:700;color:var(--wall);
+  font-size:clamp(46px,8.4vw,128px);letter-spacing:.08em;line-height:1}
+.door.l .name{right:clamp(10px,1.4vw,22px)}
+.door.r .name{left:clamp(14px,1.8vw,28px)}
+.door .handle{position:absolute;top:56%;width:6px;height:clamp(70px,12vh,120px);background:#0d0d0c;border-radius:1px}
+.door.l .handle{right:18px}
+.door.r .handle{left:18px}
+.copy-a{position:absolute;z-index:6;left:var(--gut);right:var(--gut-r);bottom:clamp(24px,7vh,72px);color:var(--wall);will-change:opacity,transform}
+.copy-a .in{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(18px,4vw,60px);align-items:end}
+.copy-a .where{font-weight:600;font-size:15px;color:var(--dusk);margin-bottom:8px}
+.copy-a h1{font-size:clamp(40px,5.4vw,78px);font-weight:600}
+.copy-a .lede{font-size:clamp(17px,1.4vw,19px);color:#d8d6d0}
+.copy-b{position:absolute;z-index:6;right:var(--gut-r);bottom:clamp(24px,7vh,72px);max-width:470px;opacity:0;color:var(--wall);will-change:opacity,transform}
+.copy-b .panel{background:rgba(35,35,34,.88);padding:22px 24px;border-radius:2px}
+.copy-b h2{font-size:clamp(30px,3.2vw,44px);font-weight:600}
+.copy-b p{margin-top:10px;font-size:17px}
+@media (max-width:760px){
+  .doors{height:260vh}
+  .door .roof{top:16%;height:22%}
+  .door .name{top:calc(16% + 16%);font-size:clamp(34px,11vw,60px)}
+  .door .handle{top:52%}
+  .copy-a .in{grid-template-columns:minmax(0,1fr);gap:12px}
+  .copy-b{left:var(--gut);bottom:18px}
+}
+@media (max-height:640px){.copy-a .lede{display:none}}
+@media (max-height:520px){.door .name{font-size:clamp(28px,5vw,48px)}.copy-a h1{font-size:clamp(28px,4vw,40px)}.copy-a .where{display:none}.copy-b p{display:none}}
+
+/* ---------- Sections ---------- */
+.wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
+.inner{max-width:1200px;margin:0 auto}
+section{scroll-margin-top:10px}
+.lede{font-size:clamp(19px,1.6vw,21px);max-width:34em}
+.quote{font-size:clamp(20px,1.9vw,25px);line-height:1.4;font-weight:500}
+.who{font-size:15px;color:var(--ink-soft);margin-top:8px}
+.cap-s{font-size:14px;color:var(--ink-soft);margin-top:8px}
+h2.big{font-size:clamp(48px,6.6vw,92px);font-weight:700}
+
+/* The house: an architect's shed */
+.house{padding-block:clamp(72px,9vw,130px)}
+.house .inner{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);align-items:end}
+.house .lede{margin-top:18px}
+.house .lede + .lede{margin-top:14px}
+.house figure{margin:0}
+.house figure img{width:100%;aspect-ratio:1440/1167;object-fit:cover;border-radius:2px}
+.house .inner.floor{margin-top:clamp(40px,6vw,80px);display:grid;grid-template-columns:minmax(0,4fr) minmax(0,5fr) minmax(0,3fr);gap:clamp(20px,3.5vw,48px);align-items:start}
+.floor img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
+.floor h3{font-size:clamp(30px,3vw,42px);font-weight:600}
+.floor p{margin-top:12px}
+.floor .side{border-top:3px solid var(--cedar);padding-top:14px;font-size:16px;color:var(--ink-soft)}
+.floor .side b{color:var(--ink)}
+.floor .side p{margin-top:10px}
+@media (max-width:880px){.house .inner,.house .inner.floor{grid-template-columns:minmax(0,1fr)}}
+
+/* Rooms: dark, a rail you swipe through */
+.rooms{background:var(--colorbond);color:var(--wall);padding-block:clamp(72px,9vw,130px) 0}
+.rooms .inner{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:start}
+.rooms .lede{margin-top:18px;color:#d8d6d0}
+dl.facts{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:22px;row-gap:12px;font-size:17px;line-height:1.5}
+dl.facts dt{font-family:var(--display);font-weight:600;font-size:21px;line-height:1.2;white-space:nowrap;color:var(--dusk)}
+dl.facts dd{margin:0;border-bottom:1px solid #45443f;padding-bottom:12px}
+@media (max-width:880px){.rooms .inner{grid-template-columns:minmax(0,1fr)}}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:#57544f transparent;
+  padding:clamp(36px,5vw,60px) var(--gut-r) clamp(64px,8vw,110px) var(--gut);margin:0}
+.rail figure{margin:0;flex:0 0 auto;width:clamp(240px,27vw,380px);scroll-snap-align:start}
+.rail img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px;background:var(--colorbond-2)}
+.rail figcaption{font-size:15px;margin-top:8px;color:#bdbab3}
+
+/* Town */
+.town{padding-block:clamp(72px,9vw,130px)}
+.town .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.town .lede{margin-top:16px}
+table.dist{width:100%;border-collapse:collapse;margin-top:26px;font-size:17px}
+table.dist th{text-align:left;font-size:15px;color:var(--ink-soft);font-weight:600;padding:0 0 8px}
+table.dist td{padding:12px 0;border-top:1px solid var(--wall-2);vertical-align:top}
+table.dist td:last-child{text-align:right;font-weight:600;white-space:nowrap;padding-left:16px;font-variant-numeric:tabular-nums}
+table.dist tr.walk td:last-child{color:var(--brick)}
+.town figure{margin:0}
+.town figure img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:2px}
+.small{font-size:14px;color:var(--ink-soft);margin-top:12px}
+@media (max-width:880px){.town .inner{grid-template-columns:minmax(0,1fr)}.town figure img{aspect-ratio:4/3}}
+
+/* Guests */
+.guests{background:var(--brick);color:#fff;padding-block:clamp(72px,9vw,120px)}
+.score{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-top:22px}
+.score b{font-family:var(--display);font-size:clamp(80px,10vw,140px);line-height:.85;font-variant-numeric:tabular-nums}
+.score span{font-size:17px;max-width:20em}
+.quotes{list-style:none;margin:clamp(40px,5vw,64px) 0 0;padding:0;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:22px clamp(28px,5vw,64px)}
+.quotes li{border-top:1px solid rgba(255,255,255,.4);padding-top:16px}
+.quotes li:first-child{grid-row:span 3}
+.quotes li:first-child .quote{font-size:clamp(26px,3vw,40px);line-height:1.25}
+.guests .who{color:#eee1d9}
+@media (max-width:880px){.quotes{grid-template-columns:minmax(0,1fr)}.quotes li:first-child{grid-row:auto}}
+
+/* Book */
+.book{background:var(--wall-2);padding-block:clamp(72px,9vw,130px)}
+.book .lede{margin-top:16px}
+.stay{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);margin-top:34px;background:var(--wall);border-radius:2px;overflow:hidden}
+.stay img{width:100%;height:100%;min-height:260px;object-fit:cover}
+.stay .body{padding:clamp(22px,3vw,36px);display:grid;gap:12px;align-content:start}
+.stay h3{font-size:clamp(32px,3.2vw,44px);font-weight:600}
+.stay .meta{font-size:16px;color:var(--ink-soft)}
+.stay .btn{justify-self:start;margin-top:6px}
+.direct{margin-top:clamp(20px,3vw,32px);background:var(--colorbond);color:var(--wall);border-radius:2px;padding:clamp(22px,3vw,36px);
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center}
+.direct h3{font-size:clamp(28px,3vw,40px);font-weight:600}
+.direct p{margin-top:8px;color:#d8d6d0;max-width:36em}
+.direct .acts{display:flex;gap:12px;flex-wrap:wrap}
+.notes{margin:26px 0 0;padding-left:18px;font-size:16px;columns:2;column-gap:40px}
+.notes li{break-inside:avoid;margin-bottom:6px}
+@media (max-width:760px){.stay,.direct{grid-template-columns:minmax(0,1fr)}.notes{columns:1}}
+
+/* Close: the shed at night */
+.close{position:relative;color:var(--wall);background:#0b0c10}
+.close img{width:100%;height:min(80vh,720px);min-height:440px;object-fit:cover;object-position:50% 45%}
+.close .panel{position:absolute;left:var(--gut);bottom:clamp(24px,6vh,60px);max-width:560px;background:rgba(35,35,34,.9);padding:clamp(22px,3vw,34px);border-radius:2px}
+.close h2{font-size:clamp(36px,4.4vw,60px);font-weight:600}
+.close p{margin-top:10px}
+.close .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+@media (max-width:700px){.close img{height:48vh;object-position:42% 50%}.close .panel{position:relative;left:auto;bottom:auto;max-width:none;border-radius:0;background:var(--colorbond)}}
+footer{background:#111;color:#c9c6bf;font-size:14px;padding-block:28px calc(28px + env(safe-area-inset-bottom,0px))}
+footer .inner{display:grid;gap:6px}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;
+  padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);
+  background:rgba(35,35,34,.97);transform:translateY(110%);visibility:hidden;transition:transform .25s ease-out,visibility 0s .25s}
+.phonebar.on{transform:none;visibility:visible;transition:transform .25s ease-out}
+.phonebar .btn{flex:1;min-height:50px}
+.phonebar .btn.line{color:var(--wall)}
+@media (max-width:820px){.phonebar{display:flex}footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}}
+
+html:not(.js) .doors{height:auto}
+html:not(.js) .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column}
+html:not(.js) .door{display:none}
+html:not(.js) .inside{position:relative;inset:auto;transform:none;order:2}
+html:not(.js) .inside img{height:auto;aspect-ratio:3/2}
+html:not(.js) .copy-a{position:relative;left:auto;right:auto;bottom:auto;order:1;padding:110px var(--gut-r) 36px var(--gut)}
+html:not(.js) .copy-b{position:relative;right:auto;left:auto;bottom:auto;max-width:none;order:3;opacity:1}
+html:not(.js) .copy-b .panel{border-radius:0;padding:24px var(--gut-r) 32px var(--gut)}
+
+@media (prefers-reduced-motion: reduce){
+  .doors{height:auto}
+  .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column}
+  .door{display:none}
+  .inside{position:relative;inset:auto;transform:none !important;order:2}
+  .inside img{height:auto;aspect-ratio:3/2}
+  .copy-a{position:relative;left:auto;right:auto;bottom:auto;order:1;opacity:1 !important;transform:none !important;padding:110px var(--gut-r) 36px var(--gut)}
+  .copy-b{position:relative;right:auto;left:auto;bottom:auto;max-width:none;order:3;opacity:1 !important;transform:none !important}
+  .copy-b .panel{border-radius:0;padding:24px var(--gut-r) 32px var(--gut)}
+  .phonebar,.phonebar.on{transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#book">Skip to booking</a>
+<p class="strip">A website idea made by Lamplit Studio for The Shed Stanthorpe. Not their official site.</p>
+
+<header class="top">
+  <a class="word" href="#doors" aria-label="The Shed Stanthorpe, back to top">
+    <svg viewBox="0 0 58 18" aria-hidden="true"><path d="M3 17 29 3l26 14" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    <b aria-hidden="true">THE SHED</b><i aria-hidden="true">STANTHORPE</i>
+  </a>
+  <nav aria-label="Main">
+    <a href="#house">The house</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#town">Town</a>
+    <a class="btn" href="#book">Check dates</a>
+  </nav>
+</header>
+
+<main>
+<section class="doors" id="doors" aria-label="The front doors of The Shed">
+  <div class="stage">
+    <div class="inside">
+      <picture>
+        <source media="(min-width:700px)" srcset="img/inside-1600.jpg">
+        <img src="img/inside-tall-1000.jpg" alt="Inside The Shed: a round white dining table and timber chairs under a woven pendant, the black wood heater behind, and the white ceiling rising to a high pitch" width="1000" height="1333" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="door l" aria-hidden="true">
+      <svg class="roof" viewBox="0 0 100 100" preserveAspectRatio="none"><line x1="100" y1="2" x2="6" y2="70"/></svg>
+      <span class="name">THE</span>
+      <span class="handle"></span>
+    </div>
+    <div class="door r" aria-hidden="true">
+      <svg class="roof" viewBox="0 0 100 100" preserveAspectRatio="none"><line x1="0" y1="2" x2="94" y2="70"/></svg>
+      <span class="name">SHED</span>
+      <span class="handle"></span>
+    </div>
+    <div class="copy-a">
+      <div class="in">
+        <div>
+          <p class="where">Matthew Street, Stanthorpe, in the Granite Belt</p>
+          <h1>An architect-designed shed house for six, in the middle of town.</h1>
+        </div>
+        <p class="lede">Two queen rooms, a bunk nook and a fire that warms the whole house. High Street is under five minutes away on foot.</p>
+      </div>
+    </div>
+    <div class="copy-b">
+      <div class="panel">
+        <h2>Come in out of the cold.</h2>
+        <p>Firewood is supplied. The table seats six, and the ceiling goes up to the pitch of the roof.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="house wrap" id="house">
+  <div class="inner">
+    <div>
+      <h2 class="big">Built like a shearing shed</h2>
+      <p class="lede">Karlie is an architect. She designed The Shed after the old Queensland shearing sheds and the working sheds around town: black Colorbond on the outside, a bright open room with a steep pitched ceiling inside.</p>
+      <p class="lede">After ten years of staying in other people's Airbnbs, she built the one she wanted to stay in.</p>
+    </div>
+    <figure>
+      <img src="img/dusk-1440.jpg" srcset="img/dusk-800.jpg 800w, img/dusk-1440.jpg 1440w" sizes="(max-width:880px) 100vw, 58vw" alt="The Shed at dusk: a black Colorbond gable with cedar under the eaves, a stepping-stone path to the glass front door, and THE SHED in black letters on the brick fence" width="1440" height="1167" loading="lazy">
+      <figcaption class="cap-s">Matthew Street at dusk. The path runs past the brick fence to the front door.</figcaption>
+    </figure>
+  </div>
+  <div class="inner floor">
+    <img src="img/fire-1000.jpg" srcset="img/fire-600.jpg 600w, img/fire-1000.jpg 1000w" sizes="(max-width:880px) 100vw, 33vw" alt="The black wood heater burning, with split firewood stacked in the box below, on a polished concrete floor flecked with granite" width="1000" height="1312" loading="lazy">
+    <div>
+      <h3>Granite in the floor</h3>
+      <p>Local granite stones show through the polished concrete floor.</p>
+      <p>The wood heater warms the whole house on winter nights, and the firewood is already there. The Shed is air conditioned and heated as well.</p>
+    </div>
+    <div class="side">
+      <p><b>Solar on the roof.</b> Solar panels on site, a water tank for the garden and refillable toiletries.</p>
+      <p><b>All on one level.</b> One small step at the front door, wide halls, lever handles and a step-free shower.</p>
+    </div>
+  </div>
+</section>
+
+<section class="rooms" id="rooms">
+  <div class="wrap">
+    <div class="inner">
+      <div>
+        <h2 class="big">Room for six</h2>
+        <p class="lede">Two queen bedrooms and a bunk nook off the hall, around one open living, dining and kitchen room. Queensland artists' work hangs on the walls.</p>
+      </div>
+      <dl class="facts">
+        <dt>Sleep</dt><dd>Two queen rooms. Two bunks in a nook in the hall, with sheer curtains and drawers underneath. Goose down doonas and French flax quilts.</dd>
+        <dt>Bathroom</dt><dd>One bathroom with one toilet, shared by the house.</dd>
+        <dt>Cook</dt><dd>A full kitchen, Campos coffee pods, and a table for six by the fire.</dd>
+        <dt>Read</dt><dd>A small library under the TV. Take a book home when you go.</dd>
+        <dt>Outside</dt><dd>A private yard with a fire pit, and a clothesline out the back.</dd>
+        <dt>Also</dt><dd>Linen and towels, washer-dryer, wifi and parking on site.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="rail" tabindex="0" role="region" aria-label="Photos of the rooms">
+    <figure><img src="img/r-living.jpg" srcset="img/r-living-600.jpg 600w, img/r-living.jpg 1000w" sizes="(max-width:880px) 72vw, 27vw" alt="The living room: two green lounge chairs, a round white coffee table and a landscape painting under a high window" width="1000" height="1250" loading="lazy"><figcaption>The living room</figcaption></figure>
+    <figure><img src="img/r-kitchen.jpg" srcset="img/r-kitchen-600.jpg 600w, img/r-kitchen.jpg 1000w" sizes="(max-width:880px) 72vw, 27vw" alt="The kitchen sink with a brass tap, open shelves and a trailing plant" width="1000" height="1250" loading="lazy"><figcaption>Kitchen</figcaption></figure>
+    <figure><img src="img/r-bed1.jpg" srcset="img/r-bed1-600.jpg 600w, img/r-bed1.jpg 1000w" sizes="(max-width:880px) 72vw, 27vw" alt="A queen bed with a black knitted throw and green cushions between two tall windows" width="1000" height="1250" loading="lazy"><figcaption>Queen room</figcaption></figure>
+    <figure><img src="img/r-bed2.jpg" srcset="img/r-bed2-600.jpg 600w, img/r-bed2.jpg 1000w" sizes="(max-width:880px) 72vw, 27vw" alt="An open book on a striped quilt on the second queen bed" width="1000" height="1250" loading="lazy"><figcaption>The second queen room</figcaption></figure>
+    <figure><img src="img/r-bunks.jpg" srcset="img/r-bunks-600.jpg 600w, img/r-bunks.jpg 1000w" sizes="(max-width:880px) 72vw, 27vw" alt="White bunk beds in the hall nook with a sheer curtain drawn back" width="1000" height="1250" loading="lazy"><figcaption>The bunk nook</figcaption></figure>
+    <figure><img src="img/r-bath.jpg" srcset="img/r-bath-600.jpg 600w, img/r-bath.jpg 1000w" sizes="(max-width:880px) 72vw, 27vw" alt="A round white basin on a curved timber vanity with a brass tap" width="1000" height="1250" loading="lazy"><figcaption>Bathroom</figcaption></figure>
+    <figure><img src="img/r-library.jpg" srcset="img/r-library-600.jpg 600w, img/r-library.jpg 1000w" sizes="(max-width:880px) 72vw, 27vw" alt="Shelves of paperbacks in the cabinet under the TV" width="1000" height="1250" loading="lazy"><figcaption>The library</figcaption></figure>
+    <figure><img src="img/r-lawn.jpg" srcset="img/r-lawn-600.jpg 600w, img/r-lawn.jpg 1000w" sizes="(max-width:880px) 72vw, 27vw" alt="A glass of bubbles held up over the lawn in the back yard" width="1000" height="1250" loading="lazy"><figcaption>The yard</figcaption></figure>
+  </div>
+</section>
+
+<section class="town wrap" id="town">
+  <div class="inner">
+    <div>
+      <h2 class="big">Leave the car in the drive</h2>
+      <p class="lede">The Shed is on a quiet street in the middle of Stanthorpe. Restaurants, pubs and cafes are a walk away, and so is Quart Pot Creek, where the big thermometer gives the morning temperature.</p>
+      <table class="dist">
+        <thead><tr><th scope="col">From the front door</th><th scope="col"><span class="vh">Distance</span></th></tr></thead>
+        <tbody>
+          <tr class="walk"><td>Quart Pot Creek and the creek path</td><td>300 m walk</td></tr>
+          <tr class="walk"><td>High Street shops and cafes</td><td>under 5 min walk</td></tr>
+          <tr><td>Mt Marlay lookout</td><td>2 km</td></tr>
+          <tr><td>Girraween National Park</td><td>about 35 km</td></tr>
+          <tr><td>Ballandean</td><td>30 km</td></tr>
+          <tr><td>Tenterfield</td><td>56 km</td></tr>
+          <tr><td>Brisbane</td><td>216 km</td></tr>
+        </tbody>
+      </table>
+      <p class="small">Road and walking distances on OpenStreetMap, rounded. High Street time from The Shed's own guide; Girraween from Granite Belt Wine Country.</p>
+    </div>
+    <figure>
+      <img src="img/path-1000.jpg" srcset="img/path-600.jpg 600w, img/path-1000.jpg 1000w" sizes="(max-width:880px) 100vw, 44vw" alt="The stepping-stone path lit by small garden lights at night, between the black cladding and the brick wall" width="1000" height="1333" loading="lazy">
+      <figcaption class="cap-s">The front path after dark.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="guests wrap" id="guests">
+  <div class="inner">
+    <h2 class="big">What guests say</h2>
+    <p class="score"><b>4.98</b><span>from 88 reviews on Airbnb, with 5.0 for cleanliness and for communication</span></p>
+    <ul class="quotes">
+      <li><p class="quote">"It is an absolutely GORGEOUS space and Karlie is so responsive and makes everything super easy right from the very first message."</p><p class="who">Christine, Airbnb, October 2026</p></li>
+      <li><p class="quote">"Great layout and design. We were a group of friends and it worked well for us."</p><p class="who">Benita, Airbnb, October 2026</p></li>
+      <li><p class="quote">"Cafes, shops and restaurants were all just a walk away."</p><p class="who">Cindy, Airbnb, October 2026</p></li>
+      <li><p class="quote">"My parents had a lovely little bike ride with the bikes provided."</p><p class="who">Lillie, Airbnb, October 2026</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="book wrap" id="book">
+  <div class="inner">
+    <h2 class="big">Check dates</h2>
+    <p class="lede">The whole house is yours, for up to six people.</p>
+    <article class="stay">
+      <img src="img/yard-1440.jpg" srcset="img/yard-800.jpg 800w, img/yard-1440.jpg 1440w" sizes="(max-width:760px) 100vw, 55vw" alt="The back of The Shed at sunset: black cladding, a cedar gable and a pergola strung with lights over the lawn" width="1440" height="960" loading="lazy">
+      <div class="body">
+        <h3>The Shed</h3>
+        <p class="meta">Two queen rooms, a bunk nook, one bathroom. 4.98 from 88 reviews.</p>
+        <a class="btn" href="https://www.airbnb.com.au/h/theshedstanthorpe" rel="noopener" target="_blank">See dates on Airbnb</a>
+      </div>
+    </article>
+    <div class="direct" id="ask">
+      <div>
+        <h3>Or ask Karlie</h3>
+        <p>Tell her your dates and how many are coming. If you'd rather a pull-out couch than the bunks, say so and she'll leave linen out.</p>
+      </div>
+      <div class="acts">
+        <a class="btn dusk" href="mailto:stay@theshedstanthorpe.com.au">Email us</a>
+        <a class="btn line" href="tel:+61438875022">Call 0438 875 022</a>
+      </div>
+    </div>
+    <ul class="notes">
+      <li>One bathroom and one toilet for the house.</li>
+      <li>The bunk nook is in the hall, curtained, not a closed room.</li>
+      <li>Firewood is supplied for the wood heater.</li>
+      <li>A high chair is there for babies.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="close" aria-label="The Shed at night">
+  <img src="img/night-1440.jpg" srcset="img/night-800.jpg 800w, img/night-1440.jpg 1440w" sizes="100vw" alt="The Shed at night: the gable in silhouette against a dark blue sky, its windows and the yard lights glowing" width="1440" height="768" loading="lazy">
+  <div class="panel">
+    <h2>Find the black shed on Matthew Street.</h2>
+    <p>26 Matthew Street, Stanthorpe, Queensland. About three hours' drive from Brisbane.</p>
+    <div class="acts">
+      <a class="btn dusk" href="#book">Check dates</a>
+      <a class="btn line" href="https://www.instagram.com/theshedstanthorpe/" rel="noopener" target="_blank">@theshedstanthorpe</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="inner">
+    <p>A preview made by Lamplit Studio for The Shed Stanthorpe. Not affiliated, not live.</p>
+    <p>Photos are The Shed Stanthorpe's own, from their Airbnb listing and website.</p>
+  </div>
+</footer>
+
+<div class="phonebar" id="phonebar">
+  <a class="btn dusk" href="https://www.airbnb.com.au/h/theshedstanthorpe" rel="noopener" target="_blank">Check dates</a>
+  <a class="btn line" href="tel:+61438875022">Call Karlie</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var bar = document.getElementById('phonebar');
+  var doors = document.getElementById('doors');
+  var q = function(s){return document.querySelector(s)};
+  var dl=q('.door.l'), dr=q('.door.r'), ins=q('.inside'), ca=q('.copy-a'), cb=q('.copy-b');
+  var clamp=function(v){return v<0?0:v>1?1:v};
+  var seg=function(p,a,b){return clamp((p-a)/(b-a))};
+  var ease=function(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
+  function prog(el){var r=el.getBoundingClientRect();var st=el.firstElementChild;var span=el.offsetHeight-(st?st.offsetHeight:window.innerHeight);return span>0?clamp(-r.top/span):0}
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    var vh=window.innerHeight;
+    var bk=document.getElementById('book').getBoundingClientRect();
+    bar.classList.toggle('on', bar.contains(document.activeElement) || (doors.getBoundingClientRect().bottom<vh*.5 && (bk.top>vh*.9 || bk.bottom<0)));
+    if(reduce) return;
+    var p=prog(doors);
+    // the words step back first, then the doors run apart on their rails
+    var c=seg(p,.04,.2);
+    ca.style.opacity=(1-c).toFixed(3);
+    ca.style.transform='translate3d(0,'+(c*-30).toFixed(1)+'px,0)';
+    var o=ease(seg(p,.12,.66));
+    dl.style.transform='translate3d('+(-o*101).toFixed(2)+'%,0,0)';
+    dr.style.transform='translate3d('+(o*101).toFixed(2)+'%,0,0)';
+    ins.style.transform='scale('+(1.14-ease(seg(p,.1,.8))*.14).toFixed(4)+')';
+    var b=seg(p,.7,.84);
+    cb.style.opacity=b.toFixed(3);
+    cb.style.transform='translate3d(0,'+((1-b)*20).toFixed(1)+'px,0)';
+    cb.inert=b<.5;
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(mq.addEventListener) mq.addEventListener('change',function(){location.reload()});
+  frame();
+})();
+</script>
+</body>
+</html>
