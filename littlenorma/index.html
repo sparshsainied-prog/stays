@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Little Norma, Normanville | A hexagon-shaped beach house for four</title>
+<meta name="description" content="A colourful 1980s hexagon-shaped house for four, a five-minute stroll from Normanville Beach on the Fleurieu. A website idea made by Lamplit Studio for Little Norma.">
+<meta property="og:title" content="Little Norma, Normanville">
+<meta property="og:description" content="A website idea made by Lamplit Studio for Little Norma. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/littlenorma/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/littlenorma/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='16,1 29,8.5 29,23.5 16,31 3,23.5 3,8.5' fill='%23183a2c'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23e2694f'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/sign.webp" fetchpriority="high">
+<script>document.documentElement.className+=" js"</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nunito:wght@400;600;700&display=swap">
+<style>
+/* Tokens come from Chelsea's hand-painted sign by the front door (see brand.md):
+   bottle = the darkest patch; blush = the pink bathroom tiles, washed out;
+   coral = the coral patch, taken darker for white text; teal, aqua, mustard, pink, sand = the other patches.
+   Gaegu echoes the hand lettering on her sign and map; Nunito is for reading. */
+:root{
+  --bottle:#183a2c;
+  --bottle-2:#24503e;
+  --blush:#fbf0ec;
+  --blush-2:#f3dcd5;
+  --coral:#c4472f;
+  --coral-2:#a83a25;
+  --coral-paint:#e2694f;
+  --teal:#12969a;
+  --aqua:#9fdbe0;
+  --mustard:#e7b52a;
+  --pink:#f2c3c0;
+  --sand:#e8c99a;
+  --ink:#183a2c;
+  --ink-soft:#4d5f55;
+  --display:"Gaegu","Comic Neue","Chalkboard SE",cursive;
+  --text:"Nunito","Avenir Next","Segoe UI",sans-serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--blush);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.on-dark :focus-visible{outline-color:var(--mustard)}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1;margin:0;text-wrap:balance}
+h2{font-size:clamp(42px, 10vw, 72px)}
+h3{font-size:32px}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--blush);padding:8px 12px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.strip{background:var(--bottle);color:var(--blush);font-size:14px;line-height:1.4;text-align:center;margin:0;
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;border-radius:999px;
+  font:700 17px/1.2 var(--text);text-decoration:none;background:var(--coral);color:#fff;border:2px solid var(--coral)}
+.btn:hover{background:var(--coral-2);border-color:var(--coral-2)}
+.btn.line{background:transparent;color:inherit;border-color:currentColor}
+.btn.line:hover{background:rgba(127,127,127,.12)}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px var(--gut-r) 0 var(--gut)}
+.top .home{display:block;width:44px;height:44px}
+.top .home svg{width:44px;height:44px;display:block}
+.top nav{display:flex;align-items:center;gap:22px;font-size:16px;font-weight:600}
+.top nav a:not(.btn){text-decoration:none;padding:12px 0;display:none}
+.top nav a:not(.btn):hover{text-decoration:underline}
+.top .btn{min-height:44px;padding:8px 18px;font-size:16px}
+@media (min-width:820px){.top nav a:not(.btn){display:inline-block}}
+
+/* ACT 1: the hexagon. Her sign sits in the middle and the six rooms close in round it. */
+.hexact{position:relative;height:320vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--blush);
+  --hw:min(86vw, 46svh);--hh:calc(var(--hw) * 1.1547)}
+.patch{position:absolute;will-change:transform;opacity:.9}
+.patch svg{display:block;width:100%;height:auto}
+.p1{width:46vw;max-width:420px;left:-24vw;top:42svh}
+.p2{width:40vw;max-width:360px;right:-12vw;top:4svh}
+.p3{width:52vw;max-width:480px;right:-18vw;bottom:-10svh}
+.p4{width:30vw;max-width:260px;left:-6vw;bottom:4svh}
+.copy-a{position:absolute;left:var(--gut);right:var(--gut-r);top:76px;z-index:4}
+.copy-a h1{font-size:clamp(60px, 17vw, 120px);line-height:.85}
+.copy-a .sub{font-weight:700;font-size:16px;color:var(--teal);margin-top:8px}
+.copy-a .lede{margin-top:10px;font-size:17px;line-height:1.45;max-width:30ch}
+.hex{position:absolute;width:var(--hw);height:var(--hh);left:calc(50% - var(--hw) / 2);bottom:calc(5svh + env(safe-area-inset-bottom,0px));z-index:2}
+.w{position:absolute;inset:0;will-change:transform,opacity}
+.w img{position:absolute;object-fit:cover;width:var(--bw);height:var(--bh);left:var(--bx);top:var(--by);max-width:none}
+.w0{clip-path:polygon(50% 50%,50% 0,100% 25%);--bx:50%;--by:0;--bw:50%;--bh:50%}
+.w1{clip-path:polygon(50% 50%,100% 25%,100% 75%);--bx:50%;--by:25%;--bw:50%;--bh:50%}
+.w2{clip-path:polygon(50% 50%,100% 75%,50% 100%);--bx:50%;--by:50%;--bw:50%;--bh:50%}
+.w3{clip-path:polygon(50% 50%,50% 100%,0 75%);--bx:0;--by:50%;--bw:50%;--bh:50%}
+.w4{clip-path:polygon(50% 50%,0 75%,0 25%);--bx:0;--by:25%;--bw:50%;--bh:50%}
+.w5{clip-path:polygon(50% 50%,0 25%,50% 0);--bx:0;--by:0;--bw:50%;--bh:50%}
+.walls{position:absolute;inset:0;width:100%;height:100%;opacity:0;pointer-events:none}
+.lbl{position:absolute;transform:translate(-50%,-50%);font:700 15px/1 var(--text);background:var(--bottle);color:#fff;padding:5px 10px;border-radius:999px;white-space:nowrap;opacity:0}
+.sign{position:absolute;left:50%;top:50%;width:36%;aspect-ratio:1;margin:-18% 0 0 -18%;z-index:3;will-change:transform;transform:scale(1.8)}
+.sign img{width:100%;height:100%;filter:drop-shadow(0 6px 10px rgba(24,58,44,.28))}
+.copy-b{position:absolute;left:var(--gut);right:var(--gut-r);top:76px;z-index:4;opacity:0}
+.copy-b h2{font-size:clamp(46px, 12vw, 86px)}
+.copy-b p{margin-top:10px;font-size:17px;line-height:1.45;max-width:34ch}
+@media (min-width:820px){
+  .stage{--hw:min(42vw, calc(80vh / 1.1547))}
+  .p1{left:-10vw;top:10vh}
+  .p4{left:30vw;bottom:-12vh}
+  .hex{left:auto;right:7vw;bottom:auto;top:calc(50% - var(--hh) / 2 + 20px)}
+  .copy-a,.copy-b{top:auto;bottom:18vh;left:max(6vw, var(--gut));right:auto;width:40%}
+  .copy-a .lede,.copy-b p{font-size:19px}
+  .lbl{font-size:16px}
+}
+
+/* shared */
+.wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
+.inner{max-width:1180px;margin:0 auto}
+.cap{font-size:15px;line-height:1.45;color:var(--ink-soft);margin-top:8px}
+figure{margin:0}
+
+/* ACT 2: inside */
+.inside{padding-top:72px;padding-bottom:72px}
+.inside .intro{display:grid;gap:22px}
+.inside .intro p{max-width:58ch}
+.sleeps{list-style:none;padding:0;margin:8px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sleeps li{background:#fff;border-radius:14px;padding:12px 14px;font-size:16px;line-height:1.35}
+.sleeps b{display:block;font:700 26px/1 var(--display);color:var(--coral)}
+.bathband{margin-top:48px;display:grid;gap:14px;grid-template-columns:3fr 2fr;align-items:end}
+.bathband .note{grid-column:1 / -1;font:700 clamp(30px, 7vw, 46px)/1.05 var(--display);max-width:22ch}
+.bits{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.bits figure:first-child{grid-column:1 / -1}
+@media (min-width:820px){
+  .inside .intro{grid-template-columns:6fr 5fr;gap:56px;align-items:end}
+  .sleeps{grid-template-columns:repeat(2,1fr)}
+  .bathband{grid-template-columns:7fr 4fr 3fr;gap:24px}
+  .bathband .note{grid-column:auto;align-self:center}
+  .bits{grid-template-columns:5fr 4fr 3fr;gap:24px}
+  .bits figure:first-child{grid-column:auto}
+}
+
+/* ACT 3: dogs and the garden (bottle green) */
+.dogs{background:var(--bottle);color:var(--blush);padding-top:72px;padding-bottom:72px}
+.dogs .cap{color:#c9d8cf}
+.dogs .inner{display:grid;gap:28px}
+.dogs .lead p{margin-top:12px;max-width:44ch;color:#e9f0ec}
+.dogs .pics{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.dogs .pics figure:nth-child(2){margin-top:48px}
+.dogs .pics figure:nth-child(3){grid-column:1 / -1}
+@media (min-width:820px){
+  .dogs .inner{grid-template-columns:4fr 7fr;gap:56px;align-items:start}
+  .dogs .pics{grid-template-columns:5fr 4fr 5fr;gap:20px}
+  .dogs .pics figure:nth-child(3){grid-column:auto;margin-top:96px}
+}
+
+/* ACT 4: the walk to the beach, on her own map */
+.walk{padding-top:72px;padding-bottom:72px}
+.walk .head p{margin-top:12px;max-width:50ch}
+.walk .map{margin-top:28px;border-radius:18px;overflow:hidden;background:#fff}
+.beachrow{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:24px calc(-1 * var(--gut-r)) 0 calc(-1 * var(--gut));padding:0 var(--gut-r) 12px var(--gut)}
+.beachrow figure{flex:0 0 76%;scroll-snap-align:start}
+.beachrow img{aspect-ratio:4/3;object-fit:cover;width:100%;height:auto;border-radius:12px}
+@media (min-width:820px){
+  .walk .grid{display:grid;grid-template-columns:4fr 7fr;gap:56px;align-items:center}
+  .walk .map{margin-top:0}
+  .beachrow{display:grid;grid-template-columns:4fr 5fr 3fr;overflow:visible;margin:40px 0 0;padding:0;align-items:start}
+}
+
+/* ACT 5: guests */
+.guests{background:var(--blush-2);padding-top:72px;padding-bottom:72px}
+.score{display:flex;align-items:baseline;gap:12px;margin-top:14px}
+.score b{font:700 64px/1 var(--display);color:var(--coral)}
+.score span{font-size:16px;color:var(--ink-soft);max-width:24ch}
+.quotes{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:16px}
+.quotes li{background:#fff;border-radius:16px;padding:18px 20px}
+.quotes .q{font-size:19px;line-height:1.45}
+.quotes .who{font-size:15px;color:var(--ink-soft);margin-top:8px}
+@media (min-width:820px){
+  .guests .inner{display:grid;grid-template-columns:4fr 8fr;gap:56px}
+  .quotes{margin-top:0;grid-template-columns:1fr 1fr;gap:20px}
+  .quotes li:nth-child(odd){transform:translateY(24px)}
+}
+
+/* ACT 6: around */
+.around{padding-top:72px;padding-bottom:72px}
+.dist{width:100%;border-collapse:collapse;margin-top:18px;font-variant-numeric:tabular-nums}
+.dist td{padding:11px 0;border-bottom:1px solid var(--blush-2)}
+.dist td:last-child{text-align:right;color:var(--ink-soft);white-space:nowrap;padding-left:12px}
+.dist th{text-align:left;font-weight:400;font-size:15px;color:var(--ink-soft);padding-bottom:6px}
+.around .small{font-size:14px;color:var(--ink-soft);margin-top:10px}
+.around .places{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px;align-items:start}
+@media (min-width:820px){
+  .around .inner{display:grid;grid-template-columns:5fr 6fr;gap:56px;align-items:start}
+  .around .places{margin-top:0}
+}
+
+/* ACT 7: book */
+.book{background:var(--teal);color:#fff;padding-top:72px;padding-bottom:80px}
+.book .lede{margin-top:14px;max-width:46ch}
+.book .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.book .btn{background:var(--bottle);border-color:var(--bottle)}
+.book .btn:hover{background:#0f281e;border-color:#0f281e}
+.book .btn.line{background:transparent;border-color:#fff;color:#fff}
+.book .know{margin-top:32px;list-style:none;padding:0;display:grid;gap:10px;font-size:16px;max-width:60ch}
+.book .know li{padding-left:24px;position:relative}
+.book .know li::before{content:"";position:absolute;left:0;top:.45em;width:12px;height:12px;background:var(--mustard);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+@media (min-width:820px){
+  .book .inner{display:grid;grid-template-columns:7fr 5fr;gap:56px;align-items:start}
+  .book .know{margin-top:6px}
+}
+
+/* close */
+.close{position:relative;background:#3b2a3a;color:#fff;overflow:hidden}
+.close img{width:100%;height:auto;min-height:70svh;max-height:92svh;object-fit:cover}
+.close .panel{position:absolute;left:var(--gut);right:var(--gut-r);bottom:calc(32px + env(safe-area-inset-bottom,0px));max-width:560px;background:rgba(24,58,44,.78);padding:20px 22px 22px;border-radius:16px}
+.close h2{font-size:clamp(40px, 9vw, 70px)}
+.close p{margin-top:8px}
+.close .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+@media (min-width:820px){.close .panel{left:max(6vw, var(--gut))}}
+
+footer{background:var(--bottle);color:#c9d8cf;font-size:14px;padding-top:28px;padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+footer p+p{margin-top:6px}
+@media (min-width:820px){footer{padding-bottom:28px}}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;gap:10px;
+  padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);
+  background:rgba(24,58,44,.95);transform:translateY(110%);transition:transform .25s ease-out;color:#fff}
+.phonebar.on{transform:none}
+.phonebar .btn{flex:1;min-height:50px}
+@media (min-width:820px){.phonebar{display:none}}
+
+@media (prefers-reduced-motion: reduce){
+  /* the end state: the house assembled, her sign in the middle */
+  .hexact{height:auto}
+  .stage{position:relative}
+  .sign{transform:none}
+  .walls,.lbl{opacity:1}
+  .copy-b{display:none}
+  .phonebar{transition:none}
+}
+/* without JavaScript, the same still end state */
+html:not(.js) .hexact{height:auto}
+html:not(.js) .stage{position:relative}
+html:not(.js) .sign{transform:none}
+html:not(.js) .walls,html:not(.js) .lbl{opacity:1}
+html:not(.js) .copy-b{display:none}
+</style>
+</head>
+<body>
+<a class="skip" href="#inside">Skip to the house</a>
+<p class="strip">A website idea made by Lamplit Studio for Little Norma. Not their official site.</p>
+
+<header class="top">
+  <a class="home" href="#hexact" aria-label="Little Norma, back to top"><svg viewBox="0 0 44 44" aria-hidden="true"><polygon points="22,3 39,12.5 39,31.5 22,41 5,31.5 5,12.5" fill="none" stroke="#183a2c" stroke-width="2.5"/><circle cx="22" cy="22" r="7.5" fill="#e2694f"/></svg></a>
+  <nav aria-label="Main">
+    <a href="#inside">Inside</a>
+    <a href="#walk">The beach</a>
+    <a href="#around">Around</a>
+    <a class="btn" href="#book">Check dates</a>
+  </nav>
+</header>
+
+<main>
+<section class="hexact" id="hexact" aria-label="Little Norma's hexagon">
+  <div class="stage">
+    <div class="patch p1" aria-hidden="true"><svg viewBox="0 0 200 160"><path d="M20 70C10 30 60 4 110 12s88 40 78 86-60 64-108 52S30 110 20 70Z" fill="#9fdbe0"/></svg></div>
+    <div class="patch p2" aria-hidden="true"><svg viewBox="0 0 200 160"><path d="M30 40C60 0 150 6 180 50s0 104-60 102S0 80 30 40Z" fill="#e7b52a"/></svg></div>
+    <div class="patch p3" aria-hidden="true"><svg viewBox="0 0 200 180"><path d="M12 92C0 40 70 8 128 18s76 70 56 112-90 52-128 30S24 140 12 92Z" fill="#f2c3c0"/></svg></div>
+    <div class="patch p4" aria-hidden="true"><svg viewBox="0 0 160 140"><path d="M20 60C24 18 90 0 128 30s28 90-20 102S16 102 20 60Z" fill="#12969a"/></svg></div>
+
+    <div class="copy-a">
+      <h1>Little Norma</h1>
+      <p class="sub">Normanville, on the Fleurieu Peninsula</p>
+      <p class="lede">A colourful 1980s house for four, a five-minute stroll from Normanville Beach.</p>
+    </div>
+
+    <div class="hex">
+      <div class="w w0"><img src="img/w-bed2.jpg" alt="Bedroom 2: two king single beds and a vintage dressing table" width="900" height="900"></div>
+      <div class="w w1"><img src="img/w-bed1.jpg" alt="Bedroom 1: the queen bed under a woven wall hanging" width="900" height="900"></div>
+      <div class="w w2"><img src="img/w-bath.jpg" alt="The bathroom: a freestanding bath against pink tiles" width="900" height="900"></div>
+      <div class="w w3"><img src="img/w-lounge.jpg" alt="The lounge: a jumbo wooden chess set on the coffee table" width="900" height="900"></div>
+      <div class="w w4"><img src="img/w-daybed.jpg" alt="The daybed by the window, piled with cushions" width="900" height="900"></div>
+      <div class="w w5"><img src="img/w-kitchen.jpg" alt="The kitchen with its breakfast bar and stools" width="900" height="900"></div>
+      <svg class="walls" viewBox="0 0 100 115.47" preserveAspectRatio="none" aria-hidden="true">
+        <polygon points="50,0 100,28.87 100,86.6 50,115.47 0,86.6 0,28.87" fill="none" stroke="#183a2c" stroke-width="3" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+        <g stroke="#183a2c" stroke-width="2" vector-effect="non-scaling-stroke">
+          <line x1="50" y1="57.73" x2="50" y2="0" vector-effect="non-scaling-stroke"/><line x1="50" y1="57.73" x2="100" y2="28.87" vector-effect="non-scaling-stroke"/>
+          <line x1="50" y1="57.73" x2="100" y2="86.6" vector-effect="non-scaling-stroke"/><line x1="50" y1="57.73" x2="50" y2="115.47" vector-effect="non-scaling-stroke"/>
+          <line x1="50" y1="57.73" x2="0" y2="86.6" vector-effect="non-scaling-stroke"/><line x1="50" y1="57.73" x2="0" y2="28.87" vector-effect="non-scaling-stroke"/>
+        </g>
+      </svg>
+      <span class="lbl" style="left:72%;top:22%">Bed 2</span>
+      <span class="lbl" style="left:88%;top:50%">Bed 1</span>
+      <span class="lbl" style="left:72%;top:80%">Bath</span>
+      <span class="lbl" style="left:28%;top:80%">Lounge</span>
+      <span class="lbl" style="left:13%;top:50%">Daybed</span>
+      <span class="lbl" style="left:28%;top:22%">Kitchen</span>
+      <div class="sign"><img src="img/sign.webp" alt="Little Norma's round hand-painted sign" width="900" height="900" fetchpriority="high"></div>
+    </div>
+
+    <div class="copy-b">
+      <h2>She's hexagon&#8209;shaped.</h2>
+      <p>Six rooms round the middle, laid out like Chelsea's own floor plan (simplified here). Two bedrooms, a bath, a daybed, a lounge and the kitchen.</p>
+    </div>
+  </div>
+</section>
+
+<section class="inside wrap" id="inside">
+  <div class="inner">
+    <div class="intro">
+      <div>
+        <h2>1980s bones, reimagined inside.</h2>
+        <p style="margin-top:16px">Art by local artists, homewares from local makers, and vintage furniture. Beach and picnic gear is there for you to use, and the cupboards come stocked.</p>
+      </div>
+      <ul class="sleeps">
+        <li><b>4</b>guests, in a queen and two king singles</li>
+        <li><b>+1</b>on the daybed, linen on request</li>
+        <li><b>2</b>showers, one of them outdoors</li>
+        <li><b>3</b>dogs at most. Pets are welcome</li>
+      </ul>
+    </div>
+    <div class="bathband">
+      <p class="note">"Our favourite room in the house. We think you'll agree."</p>
+      <figure>
+        <img src="img/bathroom.jpg" srcset="img/bathroom-700.jpg 700w, img/bathroom.jpg 1400w" sizes="(min-width:820px) 46vw, 60vw" alt="The pink tiled bathroom with a freestanding bath, a timber vanity and a round backlit mirror" width="1400" height="934" loading="lazy">
+      </figure>
+      <figure>
+        <img src="img/basin.jpg" srcset="img/basin-700.jpg 700w, img/basin.jpg 1400w" sizes="(min-width:820px) 22vw, 40vw" alt="A blush basin with brass tapware under the round mirror" width="1400" height="2099" loading="lazy">
+        <figcaption class="cap">Pink, brass and warm light.</figcaption>
+      </figure>
+    </div>
+    <div class="bits">
+      <figure>
+        <img src="img/living.jpg" srcset="img/living-700.jpg 700w, img/living.jpg 1400w" sizes="(min-width:820px) 38vw, 100vw" alt="The open living room: sofa with chaise, chess table and the kitchen bench beyond" width="1400" height="933" loading="lazy">
+        <figcaption class="cap">The living room opens onto the deck and garden.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/ceramics.jpg" srcset="img/ceramics-700.jpg 700w, img/ceramics.jpg 1400w" sizes="(min-width:820px) 30vw, 50vw" alt="Open shelves of handmade ceramic bowls and cups in soft colours" width="1400" height="1708" loading="lazy">
+        <figcaption class="cap">Ceramics by local maker Studio OH.10.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/birds.jpg" srcset="img/birds-700.jpg 700w, img/birds.jpg 1400w" sizes="(min-width:820px) 22vw, 50vw" alt="Three small hand-painted bird blocks beside a vase of yellow billy buttons" width="1400" height="934" loading="lazy">
+        <figcaption class="cap">The resident birds, hand-painted.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="dogs wrap on-dark" id="dogs">
+  <div class="inner">
+    <div class="lead">
+      <h2>Bring the dog.</h2>
+      <p>Little Norma is pet friendly, with a fully fenced private backyard, a deck and a warm outdoor shower in the garden. Up to three pets.</p>
+    </div>
+    <div class="pics">
+      <figure>
+        <img src="img/dog.jpg" srcset="img/dog-700.jpg 700w, img/dog.jpg 1400w" sizes="(min-width:820px) 24vw, 50vw" alt="A small black dog sitting on the sofa next to the chess table" width="1400" height="1117" loading="lazy">
+      </figure>
+      <figure>
+        <img src="img/outshower.jpg" srcset="img/outshower-700.jpg 700w, img/outshower.jpg 1400w" sizes="(min-width:820px) 20vw, 50vw" alt="The outdoor shower on the brick wall, with succulents and grasses round it" width="1400" height="1455" loading="lazy">
+        <figcaption class="cap">"The outdoor shower is a little luxury."</figcaption>
+      </figure>
+      <figure>
+        <img src="img/dogbeach.jpg" srcset="img/dogbeach-700.jpg 700w, img/dogbeach.jpg 1400w" sizes="(min-width:820px) 24vw, 100vw" alt="A small dog trotting along an empty sandy beach" width="1400" height="1859" loading="lazy">
+        <figcaption class="cap">"This beach was made for them!"</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="walk wrap" id="walk">
+  <div class="inner">
+    <div class="grid">
+      <div class="head">
+        <h2>Five minutes to the sand.</h2>
+        <p>Down the street to Normanville Beach and the jetty, or the other way to the cafes, shops and the pub on Main Road. Chelsea drew the map.</p>
+      </div>
+      <figure class="map">
+        <img src="img/map.jpg" srcset="img/map-700.jpg 700w, img/map.jpg 1400w" sizes="(min-width:820px) 58vw, 100vw" alt="Chelsea's hand-drawn map of Normanville: Little Norma off Field Street, the beach, jetty, surf club, Main Road and the road to Adelaide" width="1400" height="990" loading="lazy">
+      </figure>
+    </div>
+    <div class="beachrow" tabindex="0" role="region" aria-label="Photos of Normanville Beach">
+      <figure>
+        <img src="img/path.jpg" srcset="img/path-700.jpg 700w, img/path.jpg 1400w" sizes="(min-width:820px) 32vw, 76vw" alt="A sandy track through the dunes down to a sparkling sea" width="1400" height="929" loading="lazy">
+        <figcaption class="cap">Follow the path.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/aerial.jpg" srcset="img/aerial-700.jpg 700w, img/aerial.jpg 1400w" sizes="(min-width:820px) 32vw, 76vw" alt="From the air: clear blue water, the long white beach and the jetty" width="1400" height="1050" loading="lazy">
+        <figcaption class="cap">The jetty and the long beach.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/jetty.jpg" srcset="img/jetty-700.jpg 700w, img/jetty.jpg 1400w" sizes="(min-width:820px) 32vw, 76vw" alt="The Normanville jetty at sunset under a pink sky" width="1400" height="938" loading="lazy">
+        <figcaption class="cap">Sunset off the jetty.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="guests wrap" id="guests">
+  <div class="inner">
+    <div>
+      <h2>Guests</h2>
+      <p class="score"><b>4.97</b><span>from 136 reviews on Airbnb</span></p>
+    </div>
+    <ul class="quotes">
+      <li><p class="q">"From the outdoor shower and comfy day bed overlooking the gardens, to the giant chessboard coffee table and beautifully renovated bathroom, there is so much to love about this space."</p><p class="who">Kimberley, Airbnb, May 2026</p></li>
+      <li><p class="q">"Wonderful to hear the wind rustling through the Moreton bay figs."</p><p class="who">Gillian, Airbnb, January 2026</p></li>
+      <li><p class="q">"The extra mile to put together a hard cover book of local attractions and places to eat was super helpful!"</p><p class="who">David, Airbnb, August 2026</p></li>
+      <li><p class="q">"This was our second time at Little Norma ... Love that we can bring our dog with us too."</p><p class="who">Danielle, Airbnb, April 2026</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="around wrap" id="around">
+  <div class="inner">
+    <div>
+      <h2>Around Normy</h2>
+      <table class="dist">
+        <thead><tr><th scope="col">Roughly</th><th scope="col"><span class="vh">Distance</span></th></tr></thead>
+        <tbody>
+          <tr><td>Normanville Jetty, on foot</td><td>1 km</td></tr>
+          <tr><td>Ingalalla Falls</td><td>11 km</td></tr>
+          <tr><td>Second Valley</td><td>16 km</td></tr>
+          <tr><td>Cape Jervis, for the Kangaroo Island ferry</td><td>33 km</td></tr>
+          <tr><td>Adelaide Airport</td><td>74 km</td></tr>
+          <tr><td>Adelaide</td><td>76 km</td></tr>
+        </tbody>
+      </table>
+      <p class="small">Distances on OpenStreetMap, rounded.</p>
+    </div>
+    <div class="places">
+      <figure>
+        <img src="img/falls.jpg" srcset="img/falls-700.jpg 700w, img/falls.jpg 1400w" sizes="(min-width:820px) 26vw, 50vw" alt="Ingalalla Falls running down a dark rock face" width="1400" height="2099" loading="lazy">
+        <figcaption class="cap">Ingalalla Falls, best after winter rain.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/ladybay.jpg" srcset="img/ladybay-700.jpg 700w, img/ladybay.jpg 1400w" sizes="(min-width:820px) 26vw, 50vw" alt="Lady Bay: rocky shore below dry hills" width="1400" height="965" loading="lazy">
+        <figcaption class="cap">Lady Bay, a few km south, for beachcombing.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="book wrap on-dark" id="book">
+  <div class="inner">
+    <div>
+      <h2>Check dates</h2>
+      <p class="lede">A$710 for two nights on Airbnb for the February 2027 dates we checked. Two-night minimum, up to four guests, pets welcome.</p>
+      <div class="acts">
+        <a class="btn" href="https://airbnb.com/h/littlenorma" rel="noopener" target="_blank">See dates on Airbnb</a>
+        <a class="btn line" href="https://www.instagram.com/littlenorma_/" rel="noopener" target="_blank">@littlenorma_</a>
+      </div>
+    </div>
+    <ul class="know">
+      <li>Self check-in. Two car spaces, one under a tight carport.</li>
+      <li>Fast wifi, reverse cycle air conditioning and a washing machine.</li>
+      <li>A quiet street: no parties, quiet after 10pm, and no Schoolies bookings.</li>
+      <li>Chelsea answers within the hour.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="close on-dark" aria-label="Golden hour at Normanville Beach">
+  <img src="img/golden.jpg" srcset="img/golden-700.jpg 700w, img/golden.jpg 1400w" sizes="100vw" alt="Golden hour on Normanville Beach in winter, dune grass in the foreground" width="1400" height="933" loading="lazy">
+  <div class="panel">
+    <h2>Golden hour, five minutes away.</h2>
+    <p>Normanville Beach in winter.</p>
+    <div class="acts">
+      <a class="btn" href="#book">Check dates</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="inner">
+    <p>A preview made by Lamplit Studio for Little Norma. Not affiliated, not live.</p>
+    <p>Photos, the map and the sign are Little Norma's own, from their Airbnb listing. Quotes are from Chelsea's listing and guests' Airbnb reviews.</p>
+  </div>
+</footer>
+
+<div class="phonebar on-dark" id="phonebar">
+  <a class="btn" href="#book">Check dates</a>
+  <a class="btn line" href="https://airbnb.com/h/littlenorma" rel="noopener" target="_blank">Airbnb</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var q=function(s){return document.querySelector(s)}, qa=function(s){return document.querySelectorAll(s)};
+  var act=q('#hexact'), stage=q('.stage'), sign=q('.sign'), walls=q('.walls'), ca=q('.copy-a'), cb=q('.copy-b');
+  var ws=qa('.w'), lbls=qa('.lbl'), patches=qa('.patch');
+  var bar=q('#phonebar'), book=q('#book');
+  var clamp=function(v){return v<0?0:v>1?1:v};
+  var seg=function(p,a,b){return clamp((p-a)/(b-a))};
+  var ease=function(t){return 1-Math.pow(1-t,3)};
+  // each room flies in from outside its own wall
+  var dirs=[[.5,-.87],[1,0],[.5,.87],[-.5,.87],[-1,0],[-.5,-.87]];
+  var order=[5,0,1,2,3,4];
+  function prog(){var r=act.getBoundingClientRect();var span=act.offsetHeight-stage.offsetHeight;return span>0?clamp(-r.top/span):0}
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    var vh=window.innerHeight;
+    var b=book.getBoundingClientRect(), a=act.getBoundingClientRect();
+    bar.classList.toggle('on', bar.contains(document.activeElement) || (a.bottom<vh*.4 && (b.top>vh*.85 || b.bottom<0)));
+    if(reduce) return;
+    var p=prog();
+    sign.style.transform='scale('+(1.8-.8*ease(seg(p,.05,.55))).toFixed(4)+')';
+    for(var k=0;k<6;k++){
+      var i=order[k], s=.1+k*.075, t=ease(seg(p,s,s+.22)), d=dirs[i], off=(1-t)*90;
+      ws[i].style.transform='translate3d('+(d[0]*off).toFixed(2)+'%,'+(d[1]*off).toFixed(2)+'%,0) scale('+(.7+.3*t).toFixed(4)+')';
+      ws[i].style.opacity=seg(p,s,s+.12).toFixed(3);
+    }
+    var wl=seg(p,.58,.7);
+    walls.style.opacity=wl.toFixed(3);
+    for(var j=0;j<lbls.length;j++) lbls[j].style.opacity=seg(p,.66+j*.02,.74+j*.02).toFixed(3);
+    ca.style.opacity=(1-seg(p,.1,.28)).toFixed(3);
+    ca.style.transform='translate3d(0,'+(-seg(p,.1,.28)*30).toFixed(1)+'px,0)';
+    var c=seg(p,.78,.9);
+    cb.style.opacity=c.toFixed(3);
+    cb.style.transform='translate3d(0,'+((1-c)*24).toFixed(1)+'px,0)';
+    for(var m=0;m<patches.length;m++){
+      var sp=[-60,40,-90,70][m];
+      patches[m].style.transform='translate3d(0,'+(p*sp).toFixed(1)+'px,0) rotate('+(p*(m%2?8:-8)).toFixed(2)+'deg)';
+    }
+  }
+  if(!reduce){ for(var i=0;i<ws.length;i++){ ws[i].style.opacity=0; } for(var j=0;j<lbls.length;j++){ lbls[j].style.opacity=0; } }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(mq.addEventListener) mq.addEventListener('change',function(){location.reload()});
+  frame();
+})();
+</script>
+</body>
+</html>
