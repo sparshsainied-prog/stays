@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.className+=" js"</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>The Gallery Farm | The Regent Cottage, Collombatti, sauna and plunge pool</title>
+<meta name="description" content="The Regent Cottage at The Gallery Farm: the restored original farmhouse on an 82 acre working farm near Kempsey, for two adults, with a red cedar barrel sauna and plunge pool. A website idea made by Lamplit Studio.">
+<meta property="og:title" content="The Gallery Farm, Collombatti">
+<meta property="og:description" content="A website idea made by Lamplit Studio for The Gallery Farm. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/thegalleryfarm/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/thegalleryfarm/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231f2422'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%23a4512d' stroke-width='3'/%3E%3Cpath d='M11 12h10M16 12v10' stroke='%23f3f4f0' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/hero-2000.jpg" media="(min-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-m.jpg" media="(max-width: 699px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Rokkitt:wght@600;700;800&display=swap">
+<style>
+/* Colours come from their own photos (see brand.md):
+   steel   = the laser-cut gate sign and the black deck frames
+   board   = the white weatherboards of the Regent Cottage
+   brahman = the red-brown coat of their cattle
+   paddock = the wet green of the hills
+   cedar   = the red cedar barrel sauna
+   Rokkitt is close to the slab capitals cut into their gate sign. Karla is for reading. */
+:root{
+  --steel:#1f2422;
+  --steel-2:#2e3431;
+  --board:#f3f4f0;
+  --board-2:#dfe2dc;
+  --brahman:#a4512d;
+  --brahman-2:#8e4425;
+  --paddock:#4f6b2a;
+  --cedar:#b07a4f;
+  --ink:#1f2422;
+  --ink-soft:#525a55;
+  --display:"Rokkitt","Rockwell","Georgia",serif;
+  --text:"Karla","Helvetica Neue","Segoe UI",sans-serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--board);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--steel);outline-offset:3px}
+.dark :focus-visible,.hero :focus-visible,.day :focus-visible,.phonebar :focus-visible,footer :focus-visible,.strip :focus-visible,.book :focus-visible{outline-color:#f0b48f}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:.98;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--board);padding:8px 12px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.strip{background:var(--steel);color:var(--board);font-size:14px;text-align:center;margin:0;
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  padding:14px var(--gut-r) 26px var(--gut);background:linear-gradient(rgba(31,36,34,.6),rgba(31,36,34,0))}
+.word{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+.word svg{width:38px;height:38px;flex:none}
+.word b{font-family:var(--display);font-weight:800;font-size:21px;letter-spacing:.04em;line-height:1;text-transform:uppercase} /* slop-ok: their gate sign is set in slab capitals */
+.top nav{display:flex;gap:22px;align-items:center;font-weight:600;font-size:15px}
+.top nav a{color:#fff;text-decoration:none}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:2px;white-space:nowrap;
+  font-family:var(--text);font-weight:700;font-size:16px;text-decoration:none;border:0;cursor:pointer;background:var(--brahman);color:#fff}
+.btn:hover{background:var(--brahman-2)}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.line:hover{background:rgba(255,255,255,.08)}
+.top nav .btn{min-height:44px;padding:0 16px}
+@media (max-width:820px){.top nav a:not(.btn){display:none}}
+
+/* ---------- Hero: sauna, pool and cottage on the hill, behind the post-and-rail ---------- */
+.hero{position:relative;height:200vh;background:var(--steel)}
+.h-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.plane{position:absolute;inset:0;will-change:transform,opacity}
+.p-photo{transform:scale(1.08);transform-origin:60% 55%}
+.p-photo img{width:100%;height:100%;object-fit:cover;object-position:70% 50%}
+.p-haze{background:#f3f4f0;opacity:0}
+.p-fence{inset:auto -3% -2px -3%;height:24%;z-index:4;transform:translateY(55%)}
+.p-fence svg{width:100%;height:100%;display:block}
+.h-copy{position:absolute;z-index:3;left:var(--gut);top:clamp(96px,16vh,150px);max-width:min(760px, calc(100% - 40px))}
+.h-copy .panel{background:rgba(31,36,34,.86);color:var(--board);padding:clamp(20px,2.4vw,32px) clamp(20px,2.6vw,34px);border-radius:2px}
+.h-copy .where{font-weight:700;font-size:15px;color:#f0b48f}
+.h-copy h1{font-size:clamp(44px,6vw,86px);margin-top:8px}
+.h-copy p.lede{font-size:clamp(17px,1.5vw,20px);margin-top:14px;max-width:32em}
+.h-late{position:absolute;z-index:5;right:var(--gut-r);bottom:clamp(30px,8vh,80px);max-width:440px;opacity:0}
+.h-late p{background:var(--board);color:var(--ink);padding:18px 22px;border-radius:2px;font-size:clamp(18px,1.6vw,21px);line-height:1.45;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.h-late b{color:var(--brahman)}
+@media (max-width:699px){
+  .p-photo img{object-position:50% 50%}
+  .h-copy{top:92px;right:var(--gut-r)}
+  .h-copy p.lede{font-size:16px}
+  .h-late{left:var(--gut);right:var(--gut-r);bottom:96px;max-width:none}
+  .p-fence{height:18%}
+}
+@media (max-height:560px){.h-copy p.lede{display:none}.h-copy{top:66px}.h-copy h1{font-size:clamp(32px,5vw,52px)}.h-late{display:none}}
+
+/* ---------- Signature: one day from the deck, sunrise to stars ---------- */
+.day{position:relative;height:560vh;background:var(--steel);color:var(--board)}
+.d-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.shot{position:absolute;inset:0;margin:0;opacity:0;will-change:opacity}
+.shot:first-of-type{opacity:1}
+.shot img{width:100%;height:100%;object-fit:cover}
+.d-sky{position:absolute;z-index:4;right:var(--gut-r);top:clamp(20px,4vh,40px);width:clamp(170px,19vw,250px);background:rgba(31,36,34,.86);border-radius:2px;padding:12px 16px 14px}
+.d-sky svg{width:100%;height:auto;display:block;overflow:visible}
+.d-sky .hour{font-family:var(--display);font-weight:800;font-size:clamp(34px,3.6vw,52px);line-height:1;font-variant-numeric:tabular-nums;margin-top:4px}
+.d-sky .lbl{font-size:13px;font-weight:600;color:#c9cec8}
+#orb{transform-origin:100px 100px;will-change:transform}
+.d-title{position:absolute;z-index:4;left:var(--gut);top:clamp(20px,4vh,40px);max-width:min(520px, calc(100% - 300px))}
+.d-title h2{font-size:clamp(30px,3.4vw,48px);background:rgba(31,36,34,.86);display:inline;padding:4px 10px;line-height:1.35;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.caps{position:absolute;z-index:4;left:var(--gut);bottom:clamp(30px,8vh,80px);width:min(480px, calc(100% - 40px));height:9em}
+.cap{position:absolute;left:0;right:0;bottom:0;opacity:0;will-change:opacity,transform;background:var(--board);color:var(--ink);padding:16px 20px;border-radius:2px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.cap:first-child{opacity:1}
+.cap b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(26px,2.4vw,34px);line-height:1;color:var(--brahman);margin-bottom:6px}
+.cap p{font-size:clamp(16px,1.3vw,19px);line-height:1.45}
+@media (max-width:699px){
+  .day{height:520vh}
+  .d-title{max-width:none;right:150px}
+  .d-title h2{font-size:24px}
+  .d-sky{width:130px;padding:8px 10px 10px}
+  .d-sky .hour{font-size:30px}
+  .caps{bottom:96px}
+}
+
+/* ---------- Sections ---------- */
+.wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
+.inner{max-width:1200px;margin:0 auto}
+section{scroll-margin-top:10px}
+.lede{font-size:clamp(19px,1.6vw,21px);max-width:34em}
+.small{font-size:15px;color:var(--ink-soft)}
+h2.big{font-size:clamp(44px,5.8vw,80px)}
+
+/* Cottage */
+.cottage{padding:clamp(72px,9vw,130px) 0 0}
+.cottage .inner{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:end}
+.cottage .lede{margin-top:18px}
+.cottage dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:20px;font-size:17px;border-top:3px solid var(--steel)}
+.cottage dt{font-family:var(--display);font-weight:700;font-size:21px;padding:12px 0;border-bottom:1px solid var(--board-2)}
+.cottage dd{margin:0;padding:13px 0 12px;border-bottom:1px solid var(--board-2)}
+@media (max-width:880px){.cottage .inner{grid-template-columns:minmax(0,1fr)}}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;
+  padding:clamp(36px,5vw,60px) var(--gut-r) clamp(64px,8vw,110px) var(--gut);margin:0}
+.rail figure{margin:0;flex:0 0 auto;width:clamp(250px,30vw,420px);scroll-snap-align:start}
+.rail figure.tall{width:clamp(170px,18vw,250px)}
+.rail img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px;background:var(--board-2)}
+.rail figure.tall img{aspect-ratio:3/4}
+.rail figcaption{font-size:15px;margin-top:8px;color:var(--ink-soft)}
+
+/* Sauna and pool */
+.sauna{background:var(--paddock);color:#fff;padding:clamp(72px,9vw,130px) 0}
+.sauna .inner{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,64px);align-items:center}
+.sauna .lede{margin-top:16px;color:#eef2e6}
+.sauna ul{margin:22px 0 0;padding:0;list-style:none;font-size:17px}
+.sauna li{padding:9px 0;border-top:1px solid rgba(255,255,255,.28)}
+.sauna figure{margin:0}
+.sauna .big-img img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:2px}
+.sauna .pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:12px}
+.sauna .pair img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px}
+.sauna figcaption{font-size:15px;margin-top:6px;color:#e2e8d8}
+@media (max-width:880px){.sauna .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Farm life */
+.farm{padding:clamp(72px,9vw,130px) 0}
+.farm .head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,4vw,60px);align-items:end}
+.farm-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:14px;margin-top:clamp(30px,4vw,50px);align-items:start}
+.farm-grid figure{margin:0}
+.farm-grid img{width:100%;object-fit:cover;border-radius:2px}
+.farm-grid .a img{aspect-ratio:4/5}
+.farm-grid .b img{aspect-ratio:1/1}
+.farm-grid .c img{aspect-ratio:9/16}
+.farm-grid figcaption{font-size:15px;color:var(--ink-soft);margin-top:8px}
+.farm-grid .stack{display:grid;gap:14px}
+@media (max-width:820px){.farm .head{grid-template-columns:minmax(0,1fr)}.farm-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.farm-grid .c{grid-column:2}.farm-grid .a{grid-column:1 / -1}.farm-grid .a img{aspect-ratio:4/3}}
+
+/* Getting there */
+.there{padding:clamp(72px,9vw,120px) 0 0;background:var(--steel);color:var(--board)}
+.there .inner{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(28px,5vw,72px)}
+.there ol{list-style:none;margin:0;padding:0}
+.there li{display:grid;grid-template-columns:6.6em minmax(0,1fr);gap:16px;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(243,244,240,.18)}
+.there li:first-child{border-top:1px solid rgba(243,244,240,.18)}
+.there .k{font-family:var(--display);font-weight:800;font-size:clamp(28px,2.8vw,40px);color:#f0b48f;line-height:1;font-variant-numeric:tabular-nums}
+.there .v{font-size:17px}
+.there .warn{margin-top:18px;font-size:17px;padding:14px 16px;border:2px solid var(--cedar);border-radius:2px}
+.there .rail figcaption{color:#c9cec8}
+@media (max-width:820px){.there .inner{grid-template-columns:minmax(0,1fr)}.there li{grid-template-columns:5.4em minmax(0,1fr)}}
+
+/* Hosts and guests */
+.hosts{padding:clamp(72px,9vw,130px) 0 clamp(40px,5vw,70px)}
+.hosts .inner{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:center}
+.hosts img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px}
+.hosts figure{margin:0}
+.hosts figcaption{font-size:15px;color:var(--ink-soft);margin-top:8px}
+.hosts .lede{margin-top:18px}
+.hosts p+p{margin-top:14px}
+@media (max-width:880px){.hosts .inner{grid-template-columns:minmax(0,1fr)}}
+.guests{padding:0 0 clamp(72px,9vw,130px)}
+.guests .inner{border-top:3px solid var(--steel);padding-top:clamp(32px,4vw,52px);display:grid;grid-template-columns:minmax(0,3fr) minmax(0,8fr);gap:clamp(28px,5vw,72px)}
+.score{font-family:var(--display);font-weight:800;font-size:clamp(60px,7vw,96px);line-height:.9;color:var(--brahman)}
+.guests blockquote{margin:0}
+.guests blockquote p{font-family:var(--display);font-weight:600;font-size:clamp(26px,2.8vw,38px);line-height:1.2}
+.guests cite{display:block;font-style:normal;font-size:15px;color:var(--ink-soft);margin-top:14px}
+@media (max-width:820px){.guests .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Good to know */
+.know{padding:clamp(64px,8vw,110px) 0;background:var(--board-2)}
+.know .inner{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(28px,5vw,72px)}
+.know ul{margin:0;padding:0;list-style:none;columns:2;column-gap:40px}
+.know li{break-inside:avoid;padding:10px 0;border-bottom:1px solid #c3c8c0;font-size:17px}
+@media (max-width:820px){.know .inner{grid-template-columns:minmax(0,1fr)}.know ul{columns:1}}
+
+/* Book */
+.book{background:var(--steel);color:var(--board);padding:clamp(72px,9vw,130px) 0}
+.book .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:center}
+.book .lede{margin-top:16px;color:#dde1db}
+.book .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.book .also{margin-top:20px;font-size:16px;color:#c9cec8}
+.book .also a{color:#f0b48f;font-weight:600}
+.book figure{margin:0}
+.book img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:2px}
+.book figcaption{font-size:15px;margin-top:8px;color:#c9cec8}
+@media (max-width:880px){.book .inner{grid-template-columns:minmax(0,1fr)}}
+
+footer{background:#151917;color:#c4c9c3;font-size:15px;padding:30px var(--gut-r) calc(110px + env(safe-area-inset-bottom,0px)) var(--gut)}
+footer .inner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+@media (min-width:821px){footer{padding-bottom:30px}}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:none;gap:10px;align-items:center;color:var(--board);
+  padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);background:rgba(21,25,23,.96);
+  transform:translateY(110%);transition:transform .25s ease-out}
+.phonebar.on,.phonebar:focus-within{transform:none}
+.phonebar .btn{flex:1;min-height:52px}
+.phonebar .mail{flex:0 0 auto;padding:0 18px}
+@media (max-width:820px){.phonebar{display:flex}}
+
+@media (prefers-reduced-motion: reduce){
+  .hero{height:auto}
+  .h-stage{position:relative;height:100vh;height:100svh}
+  .p-photo,.p-fence{transform:none}
+  .h-late{opacity:1}
+  .day{height:auto}
+  .d-stage{position:relative;height:auto;overflow:visible;display:grid;gap:4px;padding-bottom:4px}
+  .d-title{position:relative;left:auto;top:auto;max-width:none;margin:0 var(--gut-r) 0 var(--gut);padding:40px 0 16px;order:-1}
+  .d-sky{display:none}
+  .shot{position:relative;inset:auto;opacity:1}
+  .shot img{height:auto;aspect-ratio:3/2}
+  .caps{position:relative;left:auto;bottom:auto;width:auto;height:auto;display:grid;gap:4px;margin:0}
+  .cap{position:relative;opacity:1;box-shadow:none;border-radius:0}
+  .phonebar{transition:none}
+}
+/* Without JavaScript, show the same static end state */
+html:not(.js) .hero{height:auto}
+html:not(.js) .h-stage{position:relative;height:100vh;height:100svh}
+html:not(.js) .p-photo,html:not(.js) .p-fence{transform:none}
+html:not(.js) .h-late{opacity:1}
+html:not(.js) .day{height:auto}
+html:not(.js) .d-stage{position:relative;height:auto;overflow:visible;display:grid;gap:4px;padding-bottom:4px}
+html:not(.js) .d-title{position:relative;left:auto;top:auto;max-width:none;margin:0 var(--gut-r) 0 var(--gut);padding:40px 0 16px;order:-1}
+html:not(.js) .d-sky{display:none}
+html:not(.js) .shot{position:relative;inset:auto;opacity:1}
+html:not(.js) .shot img{height:auto;aspect-ratio:3/2}
+html:not(.js) .caps{position:relative;left:auto;bottom:auto;width:auto;height:auto;display:grid;gap:4px;margin:0}
+html:not(.js) .cap{position:relative;opacity:1;box-shadow:none;border-radius:0}
+html:not(.js) .phonebar{transition:none}
+</style>
+</head>
+<body>
+<a class="skip" href="#cottage">Skip to the cottage</a>
+<p class="strip">A website idea made by Lamplit Studio for The Gallery Farm. Not their official site.</p>
+
+<header class="top">
+  <a class="word" href="#top" aria-label="The Gallery Farm, back to top">
+    <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16.5" fill="#1f2422" stroke="#f3f4f0" stroke-width="3"/><circle cx="20" cy="20" r="11" fill="none" stroke="#a4512d" stroke-width="2"/><text x="20" y="25" text-anchor="middle" font-family="Rokkitt, Georgia, serif" font-weight="800" font-size="14" fill="#f3f4f0">56</text></svg>
+    <b>The Gallery Farm</b>
+  </a>
+  <nav aria-label="Sections">
+    <a href="#cottage">The cottage</a>
+    <a href="#there">Getting here</a>
+    <a href="#book">How to book</a>
+    <a class="btn" href="https://www.airbnb.com.au/rooms/46468452">Check dates</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="h-stage">
+    <div class="plane p-photo">
+      <picture>
+        <source media="(max-width: 699px)" srcset="img/hero-m.jpg">
+        <img src="img/hero-2000.jpg" srcset="img/hero-1000.jpg 1000w, img/hero-2000.jpg 2000w" sizes="100vw" width="2000" height="901" alt="The red cedar barrel sauna and plunge pool beside the white Regent Cottage, on a green hill under blue sky" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="plane p-haze" aria-hidden="true"></div>
+    <div class="h-copy">
+      <div class="panel">
+        <p class="where">Collombatti, in the Macleay Valley hinterland</p>
+        <h1 id="h1">The Regent Cottage at The Gallery Farm</h1>
+        <p class="lede">The original farmhouse, from the early 1900s, restored by Brett for two adults. A red cedar barrel sauna and a plunge pool outside, and Brahman cattle in the paddocks.</p>
+      </div>
+    </div>
+    <div class="h-late">
+      <p>On arrival: <b>Denise's sourdough</b>, farm-fresh eggs when the hens are laying, and something sweet.</p>
+    </div>
+    <div class="plane p-fence" aria-hidden="true">
+      <svg viewBox="0 0 1440 260" preserveAspectRatio="none"><path fill="#2c2924" d="M-30 260V41q11 -8 22 0V260zM239 260V32q12 -8 24 0V260zM533 260V36q14 -8 28 0V260zM812 260V36q14 -8 27 0V260zM1110 260V30q13 -8 26 0V260zM1411 260V42q13 -8 26 0V260zM-30 78Q105 82 239 78V94Q105 98 -30 94zM239 78Q386 83 533 78V94Q386 99 239 94zM533 78Q672 83 812 78V94Q672 99 533 94zM812 78Q961 80 1110 78V94Q961 96 812 94zM1110 78Q1261 83 1411 78V94Q1261 99 1110 94zM-30 150Q105 154 239 150V166Q105 170 -30 166zM239 150Q386 153 533 150V166Q386 169 239 166zM533 150Q672 152 812 150V166Q672 168 533 166zM812 150Q961 155 1110 150V166Q961 171 812 166zM1110 150Q1261 154 1411 150V166Q1261 170 1110 166zM0 260V236Q720 224 1440 232V260z"/></svg>
+    </div>
+  </div>
+</section>
+
+<section class="day" aria-labelledby="day-h">
+  <div class="d-stage">
+    <figure class="shot"><img src="img/d1.jpg" srcset="img/d1-800.jpg 800w, img/d1.jpg 1440w" sizes="100vw" width="1440" height="1080" alt="Winter sunrise over the hills, the sky orange behind a dark ridge" loading="lazy"></figure>
+    <figure class="shot"><img src="img/d2.jpg" srcset="img/d2-800.jpg 800w, img/d2.jpg 1600w" sizes="100vw" width="1600" height="721" alt="The covered deck with a table, looking over green paddocks" loading="lazy"></figure>
+    <figure class="shot"><img src="img/d3.jpg" srcset="img/d3-800.jpg 800w, img/d3.jpg 1600w" sizes="100vw" width="1600" height="721" alt="A guest in the round plunge pool on the deck, paddocks behind" loading="lazy"></figure>
+    <figure class="shot"><img src="img/d4.jpg" srcset="img/d4-800.jpg 800w, img/d4.jpg 1440w" sizes="100vw" width="1440" height="648" alt="A red Brahman bull at the timber rails of the yard" loading="lazy"></figure>
+    <figure class="shot"><img src="img/d5.jpg" srcset="img/d5-800.jpg 800w, img/d5.jpg 1440w" sizes="100vw" width="1440" height="649" alt="Orange sunset reflected in the farm dam" loading="lazy"></figure>
+    <figure class="shot"><img src="img/d6.jpg" srcset="img/d6-800.jpg 800w, img/d6.jpg 1440w" sizes="100vw" width="1440" height="2963" alt="A fire burning in the fire pit at night under a starry sky" loading="lazy"></figure>
+    <div class="d-title"><h2 id="day-h">One day at the cottage</h2></div>
+    <div class="d-sky" aria-hidden="true">
+      <svg viewBox="0 0 200 108"><path d="M10 100a90 90 0 0 1 180 0" fill="none" stroke="#5f6863" stroke-width="2" stroke-dasharray="3 5"/><line x1="0" y1="100" x2="200" y2="100" stroke="#5f6863" stroke-width="2"/><g id="orb"><circle cx="10" cy="100" r="9" fill="#f0b48f"/></g></svg>
+      <p class="hour" id="hour">6am</p>
+      <p class="lbl">at the cottage</p>
+    </div>
+    <div class="caps">
+      <div class="cap"><b>Sunrise</b><p>From the deck, over the dam and the hills. Binoculars are provided for the cattle and the wildlife.</p></div>
+      <div class="cap"><b>Breakfast</b><p>Denise's sourdough and the farm's eggs, at the table on the deck.</p></div>
+      <div class="cap"><b>The plunge pool</b><p>A dip with the whole farm laid out in front of you.</p></div>
+      <div class="cap"><b>The Brahmans</b><p>The cattle graze past through the afternoon, and some come over to say hello.</p></div>
+      <div class="cap"><b>Sunset</b><p>Over the dam. Then the red cedar barrel sauna.</p></div>
+      <div class="cap"><b>The fire pit</b><p>Clear country air and a sky full of stars. Toast marshmallows, or pack a swag.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cottage" id="cottage" aria-labelledby="cot-h">
+  <div class="wrap"><div class="inner">
+    <div>
+      <h2 class="big" id="cot-h">Restored by a kitchen designer</h2>
+      <p class="lede">Brett has spent 15 years designing kitchens, bathrooms and joinery, and won HIA Kitchen Design of the Year. The cottage got the same treatment. It's for two adults, with its own driveway and entrance.</p>
+    </div>
+    <dl>
+      <dt>Bedroom</dt><dd>Queen bed, Koala mattress, bamboo and cotton linen.</dd>
+      <dt>Study</dt><dd>A desk, a small library and Starlink wifi.</dd>
+      <dt>Kitchen</dt><dd>Designer kitchen with an induction cooktop.</dd>
+      <dt>Bathroom</dt><dd>Walk-in shower inside, and a hot and cold shower outdoors.</dd>
+      <dt>Winter</dt><dd>A fire, plus Foxtel and Netflix.</dd>
+    </dl>
+  </div></div>
+  <div class="rail" role="region" aria-label="Photos of the cottage" tabindex="0">
+    <figure><img src="img/c-living.jpg" width="1000" height="667" alt="Living room with a grey lounge and French doors to the deck" loading="lazy"><figcaption>The living room.</figcaption></figure>
+    <figure><img src="img/c-kitchen.jpg" width="1000" height="667" alt="The designer kitchen with a stone bench" loading="lazy"><figcaption>The kitchen.</figcaption></figure>
+    <figure><img src="img/c-bed.jpg" width="1000" height="451" alt="Queen bedroom with a window to the paddocks" loading="lazy"><figcaption>The queen bedroom.</figcaption></figure>
+    <figure><img src="img/c-study.jpg" width="1000" height="451" alt="Study with a white desk and armchair" loading="lazy"><figcaption>The study.</figcaption></figure>
+    <figure><img src="img/c-bath.jpg" width="1000" height="667" alt="Bathroom with a round mirror and walk-in shower" loading="lazy"><figcaption>The bathroom.</figcaption></figure>
+    <figure class="tall"><img src="img/c-shower.jpg" width="1000" height="1333" alt="Outdoor shower against weathered timber, stone pavers below" loading="lazy"><figcaption>The outdoor shower.</figcaption></figure>
+  </div>
+</section>
+
+<section class="sauna" aria-labelledby="sauna-h">
+  <div class="wrap"><div class="inner">
+    <div>
+      <h2 class="big" id="sauna-h">The sauna and the pool are yours</h2>
+      <p class="lede">Only cottage guests use them. The plunge pool looks over the farm, and the barrel sauna sits beside it in red cedar.</p>
+      <ul>
+        <li>Fire pit down by the dam</li>
+        <li>Swim in the dam, or the freshwater creek when it's flowing</li>
+        <li>Walks around the farm and Collombatti State Forest</li>
+      </ul>
+    </div>
+    <div>
+      <figure class="big-img"><img src="img/o-sauna.jpg" width="1000" height="451" alt="The barrel sauna and plunge pool on the deck beside the cottage" loading="lazy"><figcaption>The sauna and plunge pool.</figcaption></figure>
+      <div class="pair">
+        <figure><img src="img/o-firepit.jpg" width="1000" height="667" alt="A fire pit with log seats beside the dam" loading="lazy"><figcaption>The fire pit by the dam.</figcaption></figure>
+        <figure><img src="img/o-creek.jpg" width="1000" height="451" alt="A clear freshwater creek between grassy banks" loading="lazy"><figcaption>The creek, when it's flowing.</figcaption></figure>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<section class="farm" aria-labelledby="farm-h">
+  <div class="wrap"><div class="inner">
+    <div class="head">
+      <h2 class="big" id="farm-h">A working farm, 82 acres</h2>
+      <p class="lede">Denise and Brett breed Brahman cattle here. The chooks come out after 10am, and dogs are welcome if you keep an eye on them around the calves.</p>
+    </div>
+    <div class="farm-grid">
+      <figure class="a"><img src="img/f-cattle.jpg" width="1000" height="450" alt="Brahman cattle grazing a green paddock" loading="lazy"><figcaption>The Brahmans.</figcaption></figure>
+      <div class="stack">
+        <figure class="b"><img src="img/f-hens.jpg" width="1000" height="667" alt="Two black hens in long grass" loading="lazy"><figcaption>Scarlet and Birtha, the egg layers.</figcaption></figure>
+        <figure class="b"><img src="img/f-kookie.jpg" width="1000" height="750" alt="A dog sitting in a misty paddock at dawn" loading="lazy"><figcaption>Kookie, in her winter coat.</figcaption></figure>
+      </div>
+      <figure class="c"><img src="img/f-welcome.jpg" width="1000" height="1806" alt="A loaf of sourdough, eggs and a bottle of wine on the kitchen bench" loading="lazy"><figcaption>The welcome pack. Stay three nights and there's a bottle of Cassegrain wine.</figcaption></figure>
+    </div>
+  </div></div>
+</section>
+
+<section class="there dark" id="there" aria-labelledby="there-h">
+  <div class="wrap"><div class="inner">
+    <div>
+      <h2 class="big" id="there-h">Getting here</h2>
+      <p class="warn">Don't follow your GPS. It can send you into the wrong part of the State Forest. Denise and Brett send a map once you've booked.</p>
+    </div>
+    <ol>
+      <li><span class="k">25 min</span><span class="v">to Kempsey for supplies. The L-Bo butcher on Elbow Street is their pick.</span></li>
+      <li><span class="k">14 km</span><span class="v">of graded dirt road at the end. Take it slow after rain.</span></li>
+      <li><span class="k">Minutes</span><span class="v">to Collombatti Lookout, with views from Crescent Head to Sugarloaf Mountain.</span></li>
+      <li><span class="k">Coast</span><span class="v">Hat Head, Crescent Head, South West Rocks, Grassy Head and Point Plomer, a short drive away.</span></li>
+    </ol>
+  </div></div>
+  <div class="rail" role="region" aria-label="Photos of the region" tabindex="0">
+    <figure><img src="img/r-lookout.jpg" width="1000" height="750" alt="View from Collombatti Lookout across the valley" loading="lazy"><figcaption>Collombatti Lookout.</figcaption></figure>
+    <figure><img src="img/r-crescent.jpg" width="1000" height="743" alt="Crescent Head, a curve of beach and headland" loading="lazy"><figcaption>Crescent Head.</figcaption></figure>
+    <figure><img src="img/r-hathead.jpg" width="1000" height="562" alt="Timber viewing platform over the water at Hat Head" loading="lazy"><figcaption>Hat Head.</figcaption></figure>
+    <figure><img src="img/r-swr.jpg" width="1000" height="486" alt="Blue water and rocks at South West Rocks" loading="lazy"><figcaption>South West Rocks.</figcaption></figure>
+    <figure><img src="img/r-river.jpg" width="1000" height="1000" alt="The Macleay River at dusk" loading="lazy"><figcaption>The Macleay River.</figcaption></figure>
+  </div>
+</section>
+
+<section class="hosts" aria-labelledby="hosts-h">
+  <div class="wrap"><div class="inner">
+    <figure><img src="img/hosts.jpg" width="1000" height="750" alt="Denise and Brett smiling outdoors in hats" loading="lazy"><figcaption>Denise and Brett.</figcaption></figure>
+    <div>
+      <h2 class="big" id="hosts-h">Denise and Brett</h2>
+      <p class="lede">They run the farm, the cottage and Gallery Design Studio from here, and they're building a demonstration centre for magnetic gear pumps on the property.</p>
+      <p>Guests know Denise for her sourdough. Australian Traveller put the farm in its 100 Unique Stays.</p>
+    </div>
+  </div></div>
+</section>
+
+<section class="guests" aria-labelledby="guests-h">
+  <div class="wrap"><div class="inner">
+    <div>
+      <h2 class="vh" id="guests-h">What guests say</h2>
+      <p class="score">4.99</p>
+      <p class="small">from 178 reviews on Airbnb. Guest favourite, Superhost.</p>
+    </div>
+    <blockquote>
+      <p>“We used the sauna and pool every day of the stay and went on a few walks around Collombatti State Forest. The scenery both day and night was incredible.”</p>
+      <cite>John, September 2025</cite>
+    </blockquote>
+  </div></div>
+</section>
+
+<section class="know" aria-labelledby="know-h">
+  <div class="wrap"><div class="inner">
+    <h2 class="big" id="know-h">Good to know</h2>
+    <ul>
+      <li>Two adults (18+) only. Not suited to children or infants.</li>
+      <li>Dogs welcome. Vaccinated, tick and flea treated, off the couch and bed.</li>
+      <li>Mobile coverage is patchy. Starlink wifi is fast and unlimited.</li>
+      <li>Bring supplies. Town is 25 to 30 minutes away.</li>
+      <li>Non-smoking, and no parties.</li>
+      <li>If you sleep out in a swag, stay inside the fence. The cattle roam.</li>
+    </ul>
+  </div></div>
+</section>
+
+<section class="book" id="book" aria-labelledby="book-h">
+  <div class="wrap"><div class="inner">
+    <div>
+      <h2 class="big" id="book-h">Book the Regent Cottage</h2>
+      <p class="lede">Pick your nights on the calendar. Your map and directions come once it's confirmed.</p>
+      <div class="acts">
+        <a class="btn" href="https://www.airbnb.com.au/rooms/46468452">Check dates</a>
+        <a class="btn line" href="mailto:accommodation@thegalleryfarm.com.au">Email Denise and Brett</a>
+      </div>
+      <p class="also">Or follow the farm on <a href="https://www.instagram.com/thegalleryfarm">Instagram</a>.</p>
+    </div>
+    <figure><img src="img/sign.jpg" width="1000" height="450" alt="The laser-cut steel gate sign: a Brahman's head in a ring and THE GALLERY FARM, with the number 56" loading="lazy"><figcaption>Look for the 56 on the gate.</figcaption></figure>
+  </div></div>
+</section>
+</main>
+
+<footer>
+  <div class="inner">
+    <p>A preview made by Lamplit Studio for The Gallery Farm. Not affiliated, not live.</p>
+    <p>Photos: The Gallery Farm's own listing and website.</p>
+  </div>
+</footer>
+
+<div class="phonebar" id="phonebar">
+  <a class="btn" href="https://www.airbnb.com.au/rooms/46468452">Check dates</a>
+  <a class="btn line mail" href="mailto:accommodation@thegalleryfarm.com.au" aria-label="Email The Gallery Farm">Email</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var hero = document.querySelector('.hero');
+  var photo = document.querySelector('.p-photo');
+  var haze = document.querySelector('.p-haze');
+  var fence = document.querySelector('.p-fence');
+  var copy = document.querySelector('.h-copy');
+  var late = document.querySelector('.h-late');
+  var day = document.querySelector('.day');
+  var shots = day.querySelectorAll('.shot');
+  var caps = day.querySelectorAll('.cap');
+  var orb = document.getElementById('orb');
+  var hour = document.getElementById('hour');
+  var bar = document.getElementById('phonebar');
+  var hours = ['6am','9am','1pm','4pm','7pm','9pm'];
+
+  function prog(el){
+    var r = el.getBoundingClientRect(), span = r.height - window.innerHeight;
+    return span <= 0 ? 0 : Math.min(1, Math.max(0, -r.top / span));
+  }
+  function seg(p,a,b){ return Math.min(1, Math.max(0, (p-a)/(b-a))); }
+
+  var ticking = false;
+  function draw(){
+    ticking = false;
+    bar.classList.toggle('on', window.scrollY > window.innerHeight * 0.6);
+    if (reduce.matches) return;
+
+    var p = prog(hero);
+    photo.style.transform = 'scale(' + (1.08 - 0.08*p) + ')';
+    fence.style.transform = 'translateY(' + (55 - 55*seg(p,0,.75)) + '%)';
+    haze.style.opacity = (0.12*seg(p,.5,1)).toFixed(3);
+    copy.style.opacity = (1 - seg(p,.5,.78)).toFixed(3);
+    copy.style.transform = 'translateY(' + (-28*seg(p,.5,.78)) + 'px)';
+    late.style.opacity = seg(p,.62,.86).toFixed(3);
+    late.style.transform = 'translateY(' + (18 - 18*seg(p,.62,.86)) + 'px)';
+
+    var d = prog(day), n = shots.length, pos = d * (n - 1);
+    for (var i = 0; i < n; i++){
+      // each photo holds, then cross-fades into the next over the last 40% of its slot
+      var o = i === 0 ? 1 : seg(pos, i - 0.4, i);
+      shots[i].style.opacity = o.toFixed(3);
+      var c = 1 - Math.min(1, Math.abs(pos - i) / 0.35);
+      c = Math.max(0, Math.min(1, (c - 0.15) / 0.85));
+      caps[i].style.opacity = c.toFixed(3);
+      caps[i].style.transform = 'translateY(' + ((1 - c) * 14) + 'px)';
+    }
+    var idx = Math.min(n - 1, Math.round(pos));
+    if (hour.textContent !== hours[idx]) hour.textContent = hours[idx];
+    orb.style.transform = 'rotate(' + (d * 180).toFixed(2) + 'deg)';
+  }
+  function req(){ if(!ticking){ ticking = true; requestAnimationFrame(draw); } }
+  window.addEventListener('scroll', req, {passive:true});
+  window.addEventListener('resize', req);
+  reduce.addEventListener && reduce.addEventListener('change', function(){ location.reload(); });
+  draw();
+})();
+</script>
+</body>
+</html>
