@@ -51,7 +51,7 @@ body{margin:0;background:var(--board);color:var(--ink);font-family:var(--text);f
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--steel);outline-offset:3px}
-.dark :focus-visible,.hero :focus-visible,.day :focus-visible,.phonebar :focus-visible,footer :focus-visible,.strip :focus-visible,.book :focus-visible{outline-color:#f0b48f}
+.dark :focus-visible,.sauna :focus-visible,.hero :focus-visible,.day :focus-visible,.phonebar :focus-visible,footer :focus-visible,.strip :focus-visible,.book :focus-visible{outline-color:#f0b48f}
 h1,h2,h3{font-family:var(--display);font-weight:800;line-height:.98;margin:0;text-wrap:balance}
 p{margin:0;text-wrap:pretty}
 .skip{position:absolute;left:-9999px;top:0}
@@ -130,6 +130,7 @@ p{margin:0;text-wrap:pretty}
   .caps{bottom:96px}
 }
 
+@media (max-height:520px){.d-sky{width:116px;padding:6px 10px}.d-sky .hour{font-size:24px}.d-sky .lbl{display:none}.caps{bottom:80px;width:min(420px, calc(100% - 170px))}.cap{padding:10px 14px}.cap b{font-size:22px}.cap p{font-size:14px}.d-title h2{font-size:22px}}
 /* ---------- Sections ---------- */
 .wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
 .inner{max-width:1200px;margin:0 auto}
