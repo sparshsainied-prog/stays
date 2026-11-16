@@ -140,7 +140,7 @@ dl.facts dd{margin:0;border-bottom:1px solid var(--board-2);padding-bottom:12px}
 .flock{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;margin-top:12px}
 .flock figure{margin:0;grid-column:span 3}
 .flock img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px}
-.flock figcaption{font-size:14px;color:#f6e4cf;margin-top:8px}
+.flock figcaption{font-size:15px;color:#fff;margin-top:8px}
 .feed{margin-top:clamp(36px,5vw,60px);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,56px);align-items:center}
 .feed img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:4px}
 .feed h3{font-size:clamp(28px,3vw,40px)}
@@ -154,7 +154,7 @@ dl.facts dd{margin:0;border-bottom:1px solid var(--board-2);padding-bottom:12px}
 .score b{display:block;font-family:var(--display);font-size:clamp(84px,11vw,150px);line-height:.9;font-variant-numeric:tabular-nums}
 .score span{display:block;font-size:17px;margin-top:10px}
 table.cats{width:100%;border-collapse:collapse;font-size:17px}
-table.cats td{padding:12px 0;border-top:1px solid #4d4a42}
+table.cats td,table.cats th{padding:12px 0;border-top:1px solid #4d4a42;text-align:left;font-weight:400}
 table.cats td:last-child{text-align:right;font-weight:800;font-variant-numeric:tabular-nums}
 .guests .who{color:#c9c6bd}
 @media (max-width:880px){.guests .inner{grid-template-columns:minmax(0,1fr)}}
@@ -194,7 +194,7 @@ table.dist td:last-child{text-align:right;font-weight:800;white-space:nowrap;pad
 .close h2{font-size:clamp(32px,4vw,52px)}
 .close p{margin-top:10px}
 .close .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-@media (max-width:700px){.close > img{height:56vh}.close .panel{position:relative;left:auto;bottom:auto;max-width:none;border-radius:0;background:var(--bark)}}
+@media (max-width:700px), (max-height:520px){.close > img{height:56vh}.close .panel{position:relative;left:auto;bottom:auto;max-width:none;border-radius:0;background:var(--bark)}}
 footer{background:var(--bark);color:#cfcdc6;font-size:14px;padding-block:28px calc(28px + env(safe-area-inset-bottom,0px))}
 footer .inner{display:grid;gap:6px}
 
@@ -208,22 +208,26 @@ footer .inner{display:grid;gap:6px}
 
 @media (prefers-reduced-motion: reduce){
   .hero{height:auto}
-  .stage{position:relative;height:100vh;height:100svh;min-height:560px}
-  .l-cottage{transform:none !important}
-  .leaf.l{transform:rotateY(-78deg) !important}
-  .leaf.r{transform:rotateY(78deg) !important}
-  .copy-a{opacity:1 !important;transform:none !important}
-  .copy-b{opacity:1 !important;transform:none !important}
+  .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column;background:var(--bark);perspective:none}
+  .l-cottage{position:relative;inset:auto;order:2;transform:none !important}
+  .l-cottage img{height:auto;aspect-ratio:16/10}
+  .gates{display:none}
+  .copy-a,.copy-b{position:relative;left:auto;right:auto;top:auto;bottom:auto;max-width:none;opacity:1 !important;transform:none !important}
+  .copy-a{order:1;padding-top:64px}
+  .copy-b{order:3}
+  .copy-a .panel,.copy-b .panel{border-radius:0;background:var(--bark)}
   .phonebar,.phonebar.on{transition:none}
 }
 /* Without JavaScript, show the same still end state as reduced motion */
   html.nojs .hero{height:auto}
-  html.nojs .stage{position:relative;height:100vh;height:100svh;min-height:560px}
-  html.nojs .l-cottage{transform:none !important}
-  html.nojs .leaf.l{transform:rotateY(-78deg) !important}
-  html.nojs .leaf.r{transform:rotateY(78deg) !important}
-  html.nojs .copy-a{opacity:1 !important;transform:none !important}
-  html.nojs .copy-b{opacity:1 !important;transform:none !important}
+  html.nojs .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column;background:var(--bark);perspective:none}
+  html.nojs .l-cottage{position:relative;inset:auto;order:2;transform:none !important}
+  html.nojs .l-cottage img{height:auto;aspect-ratio:16/10}
+  html.nojs .gates{display:none}
+  html.nojs .copy-a,html.nojs .copy-b{position:relative;left:auto;right:auto;top:auto;bottom:auto;max-width:none;opacity:1 !important;transform:none !important}
+  html.nojs .copy-a{order:1;padding-top:64px}
+  html.nojs .copy-b{order:3}
+  html.nojs .copy-a .panel,html.nojs .copy-b .panel{border-radius:0;background:var(--bark)}
   html.nojs .phonebar,html.nojs .phonebar.on{transition:none}
 </style>
 </head>
@@ -297,7 +301,7 @@ footer .inner{display:grid;gap:6px}
   </div>
   <div class="rail" tabindex="0" role="region" aria-label="Photos inside the cottage">
     <figure><img src="img/r-living.jpg" srcset="img/r-living-600.jpg 600w, img/r-living.jpg 1000w" sizes="(max-width:880px) 72vw, 28vw" alt="A round timber dining table with cross-back chairs, the white kitchen behind" width="1000" height="1250" loading="lazy"><figcaption>Kitchen and dining</figcaption></figure>
-    <figure><img src="img/r-kitchen.jpg" srcset="img/r-kitchen-600.jpg 600w, img/r-kitchen.jpg 768w" sizes="(max-width:880px) 72vw, 28vw" alt="The white kitchen with an island bench and windows onto the garden" width="768" height="960" loading="lazy"><figcaption>The kitchen</figcaption></figure>
+    <figure><img src="img/r-kitchen.jpg" srcset="img/r-kitchen-600.jpg 600w, img/r-kitchen.jpg 768w" sizes="(max-width:880px) 72vw, 28vw" alt="The white kitchen, with cupboards along the walls and windows onto the garden" width="768" height="960" loading="lazy"><figcaption>The kitchen</figcaption></figure>
     <figure><img src="img/r-bed1.jpg" srcset="img/r-bed1-600.jpg 600w, img/r-bed1.jpg 864w" sizes="(max-width:880px) 72vw, 28vw" alt="A queen bed made up in grey and white with patterned cushions" width="864" height="1080" loading="lazy"><figcaption>Main bedroom</figcaption></figure>
     <figure><img src="img/r-bed2.jpg" srcset="img/r-bed2-600.jpg 600w, img/r-bed2.jpg 864w" sizes="(max-width:880px) 72vw, 28vw" alt="The second bedroom with a check quilt and two bedside lamps" width="864" height="1080" loading="lazy"><figcaption>Second bedroom</figcaption></figure>
     <figure><img src="img/r-bath.jpg" srcset="img/r-bath-600.jpg 600w, img/r-bath.jpg 768w" sizes="(max-width:880px) 72vw, 28vw" alt="A white bathroom with a glass shower" width="768" height="960" loading="lazy"><figcaption>One of two bathrooms</figcaption></figure>
@@ -341,12 +345,12 @@ footer .inner{display:grid;gap:6px}
     <table class="cats">
       <caption class="vh">Airbnb category scores</caption>
       <tbody>
-        <tr><td>Accuracy</td><td>5.0</td></tr>
-        <tr><td>Check-in</td><td>5.0</td></tr>
-        <tr><td>Communication</td><td>5.0</td></tr>
-        <tr><td>Cleanliness</td><td>4.99</td></tr>
-        <tr><td>Location</td><td>4.97</td></tr>
-        <tr><td>Value</td><td>4.89</td></tr>
+        <tr><th scope="row">Accuracy</th><td>5.0</td></tr>
+        <tr><th scope="row">Check-in</th><td>5.0</td></tr>
+        <tr><th scope="row">Communication</th><td>5.0</td></tr>
+        <tr><th scope="row">Cleanliness</th><td>4.99</td></tr>
+        <tr><th scope="row">Location</th><td>4.97</td></tr>
+        <tr><th scope="row">Value</th><td>4.89</td></tr>
       </tbody>
     </table>
   </div>
@@ -361,7 +365,7 @@ footer .inner{display:grid;gap:6px}
         <thead><tr><th scope="col">By car, roughly</th><th scope="col"><span class="vh">Distance and time</span></th></tr></thead>
         <tbody>
           <tr><td>Murrumbateman village</td><td>5 km, 10 min</td></tr>
-          <tr><td>Yass</td><td>26 km, 27 min</td></tr>
+          <tr><th scope="row">Yass</th><td>26 km, 27 min</td></tr>
           <tr><td>Canberra city</td><td>40 km, 42 min</td></tr>
           <tr><td>Canberra Airport</td><td>46 km, 50 min</td></tr>
         </tbody>
@@ -379,6 +383,7 @@ footer .inner{display:grid;gap:6px}
   <div class="inner">
     <h2>Check dates</h2>
     <p class="lede">From A$300 a night for two, with the breakfast basket and cleaning included. One-night stays on request.</p>
+    <p class="small">Rate as shown on the cottage's Australia's Guide listing. Airbnb shows the current price for your dates.</p>
     <div class="book-grid">
       <img src="img/b-steps.jpg" srcset="img/b-steps-800.jpg 800w, img/b-steps.jpg 1440w" sizes="(max-width:820px) 100vw, 54vw" alt="Timber steps up to the front deck, grevillea beside them" width="1440" height="960" loading="lazy">
       <div>
