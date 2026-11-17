@@ -31,6 +31,7 @@ body{margin:0;background:var(--wall);color:var(--ink);font:400 17px/1.6 var(--te
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 a:focus-visible,button:focus-visible{outline:3px solid var(--rust);outline-offset:3px}
+.bar a:focus-visible,.dates a:focus-visible,.hero a:focus-visible,.rooms a:focus-visible{outline-color:#fff}
 h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.02;margin:0;text-wrap:balance}
 p{margin:0 0 1em;text-wrap:pretty}
 .skip{position:absolute;left:-999px;top:0;background:var(--navy);color:#fff;padding:10px 14px;z-index:40}
@@ -51,6 +52,7 @@ p{margin:0 0 1em;text-wrap:pretty}
 .hero .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
 .hero .photo{position:absolute;inset:0;transform:scale(calc(1.14 - .14*var(--p,0)));transform-origin:58% 45%;will-change:transform}
 .hero .photo img{width:100%;height:100%;object-fit:cover}
+.hero .stage::before{content:"";position:absolute;left:0;right:0;top:0;height:120px;z-index:1;background:linear-gradient(to bottom,rgba(20,28,37,.7),rgba(20,28,37,0))}
 .hero .shade{position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(to top,rgba(20,28,37,.88),rgba(20,28,37,0))}
 .hero .words{position:absolute;left:20px;right:20px;bottom:150px;color:#fff;transform:translateY(calc(40px - 80px*var(--p,0)))}
 .hero h1{font-size:clamp(44px,12vw,112px);letter-spacing:-.02em}
@@ -91,6 +93,7 @@ p{margin:0 0 1em;text-wrap:pretty}
 .around h2{font-size:clamp(32px,7vw,64px);margin-bottom:24px;max-width:14ch}
 .walk{border-top:2px solid var(--navy);margin:0;padding:0;list-style:none}
 .walk li{display:grid;grid-template-columns:7.5em 1fr;gap:16px;padding:16px 0;border-bottom:1px solid #c8cecc}
+@media (max-width:380px){.walk li{grid-template-columns:1fr;gap:4px}}
 .walk b{font:800 20px/1.2 var(--display);color:var(--rust)}
 
 /* reviews */
@@ -128,6 +131,12 @@ footer{background:var(--navy);color:#b8c2cb;font-size:14px;padding:28px 20px 110
   .sun .stage{padding:40px 40px}
   .sun svg{width:100%;margin:0}
   .sun .note{position:absolute;right:0;top:0;text-align:right}
+}
+@media (max-height:520px) and (orientation:landscape){
+  .hero .later{display:none}
+  .hero .words{bottom:96px}.hero h1{font-size:40px}.hero .sub{font-size:16px;margin-top:6px}
+  .sun{height:auto}.sun .stage{position:relative;height:auto;padding-bottom:110px}
+  .sun .note{position:static;opacity:1;transform:none}
 }
 @media (prefers-reduced-motion:reduce){
   .hero{height:auto}.hero .stage{position:relative;height:100svh}
@@ -244,8 +253,8 @@ footer{background:var(--navy);color:#b8c2cb;font-size:14px;padding:28px 20px 110
     <ol class="walk">
       <li><b>Across the road</b><span>Open the gate behind the studio, close it after you, cross the road and walk down the driveway past the vineyard to Cape Mentelle's tasting room.</span></li>
       <li><b>5 minutes</b><span>Drive into Margaret River town, or out to the beach.</span></li>
-      <li><b>Summer nights</b><span>Movies in the Vineyard at Cape Mentelle, picnic rug on the lawn.</span></li>
-      <li><b>May</b><span>Cabin Fever Festival: ten days of fires, food and wine around town.</span></li>
+      <li><b>Summer nights</b><span>Cape Mentelle ran Movies in the Vineyard through the 25/26 summer, picnic rugs on the lawn.</span></li>
+      <li><b>Winter</b><span>Cabin Fever Festival: ten days of fires, food and wine around town.</span></li>
       <li><b>At home</b><span>A family of kangaroos lives close by. Take the shared driveway at 20 km/h with high beams off.</span></li>
     </ol>
   </div>
@@ -259,7 +268,7 @@ footer{background:var(--navy);color:#b8c2cb;font-size:14px;padding:28px 20px 110
       <blockquote><p>“Beautiful quiet location, yet close enough to everywhere.”</p><cite>Wendy, Airbnb</cite></blockquote>
       <blockquote><p>“Their doggies Harry and George coming to visit us every night.”</p><cite>Shehan, Airbnb</cite></blockquote>
       <blockquote><p>“Some lovely walks from the front door.”</p><cite>Liz, Airbnb</cite></blockquote>
-      <blockquote><p>“It retains the sun during the day.”</p><cite>Jen, Airbnb</cite></blockquote>
+      <blockquote><p>“Lovely, light-filled, spacious and comfortable home.”</p><cite>Cheryl, Airbnb</cite></blockquote>
     </div>
   </div>
 </section>
