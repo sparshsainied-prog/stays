@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Barambah View Cottage, Redgate</title>
+<meta name="description" content="A one bedroom cottage on the Nuova Scuola Wines vineyard at Redgate in the South Burnett, looking over the Barambah Valley. A website idea made by Lamplit Studio.">
+<meta property="og:title" content="Barambah View Cottage, Redgate">
+<meta property="og:description" content="A cottage on the vineyard at Nuova Scuola Wines, over the Barambah Valley.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/barambahview/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/barambahview/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23162231'/%3E%3Ccircle cx='22' cy='10' r='3' fill='%23F0B54A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#162231;   /* the valley after dark */
+  --day:#EEF2F0;     /* washed sky over the paddocks */
+  --trim:#2B7F86;    /* the cottage's teal verandah trim */
+  --dusk:#F0B54A;    /* last light behind the gums */
+  --vine:#5E7F2E;    /* vine leaves */
+  --ink:#1B2430;
+  --display:"Barlow Condensed", "Arial Narrow", sans-serif;
+  --text:"Source Serif 4", Georgia, serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-bottom:90px}
+body{margin:0;background:var(--day);color:var(--ink);font-family:var(--text);font-size:17px;line-height:1.6;padding-bottom:84px}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--dusk);outline-offset:3px}
+.strip{background:var(--night);color:#fff;font-size:14px;line-height:1.4;padding:10px 16px;text-align:center}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:8px;background:#fff;padding:8px 12px;z-index:30}
+
+/* Pinned dusk-to-stars moment */
+.hero{position:relative;height:260vh;background:var(--night)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.plane{position:absolute;inset:0;will-change:transform,opacity}
+.photo{inset:-4%;background:url(img/dusk.jpg) 40% 55%/cover no-repeat}
+.dark{background:linear-gradient(180deg,#0B1420 0%,#162231 55%,#1E2A35 100%)}
+.stars{inset:-6% -4% 30%;background:url(img/stars.png) center top/cover no-repeat}
+.land{inset:-4%;background:url(img/night.png) 40% 55%/cover no-repeat}
+.scrim{background:linear-gradient(180deg,rgba(11,20,32,.62) 0%,rgba(11,20,32,.35) 40%,rgba(11,20,32,0) 62%)}
+.copy{position:absolute;left:0;right:0;padding:0 20px;color:#fff;max-width:1100px;margin:0 auto}
+.c1{top:14%}
+.c1 h1{margin:0;font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(46px,9vw,104px);line-height:.92;text-shadow:0 2px 18px rgba(0,0,0,.35)}
+.c1 p{margin:14px 0 0;font-size:18px;max-width:34ch;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+.c2{top:22%;opacity:0}
+.c2 blockquote{margin:0;font-family:var(--display);font-weight:600;font-size:clamp(34px,6vw,64px);line-height:1.02;max-width:16ch}
+.c2 cite{display:block;margin-top:12px;font-family:var(--text);font-style:normal;font-size:16px;opacity:.85}
+
+main section{padding:68px 20px}
+.wrap{max-width:1080px;margin:0 auto}
+h2{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(34px,5vw,52px);line-height:1;margin:0 0 18px;color:var(--night)}
+.lead{font-size:19px;max-width:56ch}
+.cottage{display:grid;gap:26px}
+.cottage .pics{display:grid;grid-template-columns:3fr 2fr;gap:10px}
+.cottage .pics img{width:100%;height:100%;object-fit:cover;border-radius:3px}
+.cottage .pics .wide{grid-column:1 / -1}
+dl.spec{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin:20px 0 0;font-size:16px}
+dl.spec dt{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:17px;color:var(--trim)}
+dl.spec dd{margin:0}
+
+.wine{background:var(--night);color:#fff}
+.wine h2{color:#fff}
+.winegrid{display:grid;gap:26px;align-items:start}
+.tasting{border-top:2px solid var(--dusk);padding-top:12px;margin-top:18px}
+.tasting h3{margin:0;font-family:var(--display);font-size:24px;font-weight:600;text-transform:uppercase}
+.tasting p{margin:4px 0 0}
+.wine a.text{color:var(--dusk)}
+.wine img{border-radius:3px}
+
+.around ul{list-style:none;padding:0;margin:0;max-width:62ch}
+.around li{padding:12px 0;border-top:1px solid rgba(27,36,48,.18)}
+.around li strong{font-family:var(--display);font-size:21px;text-transform:uppercase;font-weight:600;display:block}
+
+.reviews{background:#fff}
+.revs{display:grid;gap:22px}
+.revs blockquote{margin:0;font-size:19px;line-height:1.45}
+.revs cite{display:block;font-style:normal;font-size:15px;margin-top:6px;color:#4A5563}
+.score{font-family:var(--display);font-size:22px;text-transform:uppercase;font-weight:600;margin:0 0 22px;color:var(--trim)}
+
+.book ol{padding-left:22px;max-width:60ch}
+.book li{margin-bottom:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;background:var(--dusk);color:var(--night);font-family:var(--display);font-weight:700;font-size:20px;text-transform:uppercase;text-decoration:none;border-radius:3px}
+.btn:hover{background:#F5C76E}
+
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--night);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px calc(12px + env(safe-area-inset-bottom))}
+.bar p{margin:0;font-size:15px;line-height:1.3}
+.bar p b{font-family:var(--display);font-size:20px;font-weight:600}
+footer{background:var(--night);color:#fff;text-align:center;font-size:14px;padding:26px 16px}
+
+@media (min-width:860px){
+  .cottage{grid-template-columns:5fr 6fr;align-items:start}
+  .winegrid{grid-template-columns:1fr 1fr}
+  .revs{grid-template-columns:1fr 1fr}
+  .c1{top:16%}
+}
+@media (max-width:859px){
+  .photo{background-image:url(img/dusk-m.jpg);background-position:50% 50%}
+  .land{background-image:url(img/night-m.png);background-position:50% 50%}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero{height:auto}
+  .stage{position:relative;height:100svh}
+  .photo{opacity:0!important}
+  .dark,.stars{opacity:1!important;transform:none!important}
+  .c1,.scrim{opacity:1!important;transform:none!important}
+  .c2{top:52%}
+  .c2{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#cottage">Skip to the cottage</a>
+<div class="strip">A website idea made by Lamplit Studio for Barambah View Cottage. Not their official site.</div>
+
+<header class="hero" id="hero">
+  <div class="stage">
+    <div class="plane dark" aria-hidden="true"></div>
+    <div class="plane stars" id="stars" aria-hidden="true"></div>
+    <div class="plane land" id="land" aria-hidden="true"></div>
+    <div class="plane photo" id="photo" role="img" aria-label="The cottage and two gum trees at sunset, looking across the Barambah Valley."></div>
+    <div class="plane scrim" id="scrim" aria-hidden="true"></div>
+    <div class="copy c1" id="c1">
+      <h1>Barambah View Cottage</h1>
+      <p>A one bedroom cottage on the vineyard at Nuova Scuola Wines, Redgate, looking over the Barambah Valley.</p>
+    </div>
+    <div class="copy c2" id="c2">
+      <blockquote>“Stunning views, the Milky Way, delicious wine and great coffee.”</blockquote>
+      <cite>Ali, guest review on Airbnb, October 2026</cite>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="cottage" class="cottage-sec">
+    <div class="wrap cottage">
+      <div>
+        <h2>The cottage</h2>
+        <p class="lead">A self-contained cabin among the vines, a short walk from the cellar door. Breakfast is included, and you can order a charcuterie board to your room if you'd rather stay on the couch with a glass of wine than drive out for dinner.</p>
+        <dl class="spec">
+          <dt>Sleeps</dt><dd>Up to 4, with a maximum of 3 adults</dd>
+          <dt>Beds</dt><dd>1 queen, plus a sofa bed in the lounge</dd>
+          <dt>Breakfast</dt><dd>Generous continental breakfast included</dd>
+          <dt>Inside</dt><dd>Kitchen, BBQ, air conditioning, wi-fi, TV</dd>
+          <dt>Times</dt><dd>Check in 12pm, check out 11am</dd>
+        </dl>
+      </div>
+      <div class="pics">
+        <img class="wide" src="img/verandah.jpg" width="1100" height="495" loading="lazy" alt="Two timber chairs and a round table on the verandah, looking over the vineyard.">
+        <img src="img/lounge.jpg" width="1100" height="700" loading="lazy" alt="The lounge with a sofa, a small dining table and glass doors to the verandah.">
+        <img src="img/bedroom.jpg" width="1100" height="1635" loading="lazy" alt="The bedroom with a queen bed and an iron bedhead.">
+        <img class="wide" src="img/cottage.jpg" width="1100" height="733" loading="lazy" alt="The cottage from outside, with teal trim and a windmill in the garden.">
+      </div>
+    </div>
+  </section>
+
+  <section class="wine">
+    <div class="wrap winegrid">
+      <div>
+        <h2>The cellar door is next door</h2>
+        <p>Stefano and Sarah make the wine here, working with old European varieties that suit the South Burnett climate: Verdelho, Viognier, Rosato, Barbera, Tempranillo. The cellar door opens by appointment, and you can walk to it from the cottage.</p>
+        <div class="tasting">
+          <h3>Private tasting, $5 a head</h3>
+          <p>Taste the current wines with the winemakers. Redeemable on your first bottle.</p>
+        </div>
+        <div class="tasting">
+          <h3>Weekend wine experience, $30 a head</h3>
+          <p>A vineyard tour with a glass of bubbles, a hosted tasting with Stefano, an Italian-style tagliere board and a taste of the award-winning fortified Verdelho.</p>
+        </div>
+        <p><a class="text" href="https://www.nuovascuola.com.au/book-your-visit">Book a tasting with Nuova Scuola</a></p>
+      </div>
+      <img src="img/board.jpg" width="1100" height="733" loading="lazy" alt="A charcuterie board with prosciutto, olives, crackers and grissini on a timber table.">
+    </div>
+  </section>
+
+  <section class="around">
+    <div class="wrap">
+      <h2>Around Redgate</h2>
+      <ul>
+        <li><strong>Moffatdale wineries</strong>Several more cellar doors a few kilometres away.</li>
+        <li><strong>Bjelke-Petersen Dam</strong>Close by, for fishing, skiing and kayaking.</li>
+        <li><strong>Kingaroy and the Bunya Mountains</strong>Both a short drive.</li>
+        <li><strong>Sunday nights</strong>Plan to cook in the cottage. Few places nearby are open.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="wrap">
+      <h2>From guests</h2>
+      <p class="score">Rated 4.94 from 120 reviews on Airbnb</p>
+      <div class="revs">
+        <div><blockquote>“Enjoyed the country air, big skies and all the stars.”</blockquote><cite>Lisa, Airbnb</cite></div>
+        <div><blockquote>“We enjoyed the peaceful and private location and the opportunity to book in for a wine tasting.”</blockquote><cite>Katrin, Airbnb</cite></div>
+        <div><blockquote>“Great getaway, excellent hosts and beautiful location.”</blockquote><cite>Jared, Airbnb</cite></div>
+        <div><blockquote>“Comfortable little cottage with a lovely outlook.”</blockquote><cite>Dan, Airbnb</cite></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="book" id="book">
+    <div class="wrap">
+      <h2>How to book</h2>
+      <ol>
+        <li>Pick your dates. Prices start from $150 a night for two.</li>
+        <li>Booking for two but want the sofa bed made up? Book for three and add a note.</li>
+        <li>Book at least 24 hours before you arrive.</li>
+        <li>Want a tasting? Book it separately with the cellar door.</li>
+      </ol>
+      <p><a class="btn" href="https://www.airbnb.com.au/rooms/51177710">Check dates</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>A preview made by Lamplit Studio for Barambah View Cottage. Not affiliated, not live.<br>167 Tipperary Road, Redgate QLD 4605</footer>
+
+<div class="bar">
+  <p><b>From $150 a night</b><br>for two, breakfast included</p>
+  <a class="btn" href="https://www.airbnb.com.au/rooms/51177710">Check dates</a>
+</div>
+
+<script>
+(function(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var hero=document.getElementById('hero'), photo=document.getElementById('photo'), land=document.getElementById('land'), stars=document.getElementById('stars'),
+      c1=document.getElementById('c1'), scrim=document.getElementById('scrim'), c2=document.getElementById('c2'), t=false;
+  function cl(v){return v<0?0:v>1?1:v}
+  function draw(){
+    t=false;
+    var r=hero.getBoundingClientRect(), p=cl(-r.top/(hero.offsetHeight-innerHeight));
+    var night=cl((p-0.12)/0.5);                     // the sun goes down under the reader's thumb
+    photo.style.opacity=(1-night).toFixed(3);
+    photo.style.transform='scale('+(1.0+p*0.06)+')';
+    land.style.transform='scale('+(1.0+p*0.06)+')';
+    stars.style.opacity=cl((p-0.3)/0.4).toFixed(3);
+    stars.style.transform='translate3d(0,'+(4-p*6)+'%,0)';
+    c1.style.opacity=(1-cl(p/0.25)).toFixed(3);
+    scrim.style.opacity=(1-cl(p/0.3)).toFixed(3);
+    c1.style.transform='translate3d(0,'+(-p*60)+'px,0)';
+    var q=cl((p-0.55)/0.2);
+    c2.style.opacity=q.toFixed(3);
+    c2.style.transform='translate3d(0,'+((1-q)*24)+'px,0)';
+  }
+  function on(){ if(!t){t=true;requestAnimationFrame(draw);} }
+  addEventListener('scroll',on,{passive:true}); addEventListener('resize',on); draw();
+})();
+</script>
+</body>
+</html>
