@@ -32,7 +32,7 @@ html{-webkit-text-size-adjust:100%;scroll-padding-bottom:90px}
 body{margin:0;background:var(--chalk);color:var(--ink);font-family:var(--text);font-size:17px;line-height:1.6;padding-bottom:84px}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--ochre);outline-offset:3px}
+:focus-visible{outline:3px solid #1E1A24;outline-offset:2px;box-shadow:0 0 0 6px #F2C38E}
 .strip{background:var(--night);color:#fff;font-size:14px;line-height:1.4;padding:10px 16px;text-align:center}
 .skip{position:absolute;left:-999px}.skip:focus{left:16px;top:8px;background:#fff;padding:8px 12px;z-index:30}
 
@@ -63,12 +63,12 @@ h3{font-family:var(--display);font-weight:600;font-size:26px;line-height:1.1;mar
 
 .levels{display:grid;gap:34px}
 .level{display:grid;gap:18px}
-.level .tag{font-family:var(--display);font-weight:600;font-size:18px;color:var(--earth);margin:0}
+.level .tag{font-family:var(--display);font-weight:600;font-size:18px;color:#8E3F20;margin:0}
 .level img{border-radius:3px;width:100%}
 .pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .pair img{height:100%;object-fit:cover}
 dl.spec{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin:8px 0 0}
-dl.spec dt{font-family:var(--display);font-weight:600;font-size:18px;color:var(--earth)}
+dl.spec dt{font-family:var(--display);font-weight:600;font-size:18px;color:#8E3F20}
 dl.spec dd{margin:0}
 
 .out{background:var(--night);color:#F3ECE3}
@@ -110,11 +110,17 @@ footer{background:var(--night);color:#fff;text-align:center;font-size:14px;paddi
   .room{background-image:url(img/room-m.jpg)}
   .c1{top:9%}
 }
+html:not(.js) .hero{height:auto}
+html:not(.js) .stage{position:relative;height:100svh}
+html:not(.js) .sky,html:not(.js) .sun,html:not(.js) .heaps,html:not(.js) .rock{opacity:0}
+html:not(.js) .c1,html:not(.js) .c2{opacity:1}
+html:not(.js) .c1{top:0;max-width:none;padding:9vh 20px 80px;background:linear-gradient(180deg,rgba(30,26,36,.78) 0%,rgba(30,26,36,.55) 60%,rgba(30,26,36,0) 100%)}
 @media (prefers-reduced-motion:reduce){
   .hero{height:auto}
   .stage{position:relative;height:100svh}
   .sky,.sun,.heaps,.rock{opacity:0!important}
   .c1,.c2{opacity:1!important;transform:none!important}
+  .c1{top:0;max-width:none;padding:9vh 20px 80px;background:linear-gradient(180deg,rgba(30,26,36,.78) 0%,rgba(30,26,36,.55) 60%,rgba(30,26,36,0) 100%)}
 }
 </style>
 </head>
@@ -186,7 +192,7 @@ footer{background:var(--night);color:#fff;text-align:center;font-size:14px;paddi
           <div>
             <p class="tag">Underground</p>
             <h3>The dugout</h3>
-            <p>The main bedroom and a living area sit in the rock, with rooms shaped by the stone walls and hallways. Further in, the second bedroom has two single beds under a high ceiling. The couch folds out into a sofa bed.</p>
+            <p>The main bedroom and a living area sit in the rock, divided by stone walls and hallways. Further in, the second bedroom has two single beds under a high ceiling. The couch folds out into a sofa bed.</p>
             <dl class="spec">
               <dt>Sleeps</dt><dd>4</dd>
               <dt>Beds</dt><dd>1 queen, 2 singles, plus a sofa bed</dd>
@@ -225,7 +231,7 @@ footer{background:var(--night);color:#fff;text-align:center;font-size:14px;paddi
     <div class="wrap">
       <h2>Good to know</h2>
       <ul>
-        <li>The bedrooms have no doors. The stone walls give them some privacy, and the main bedroom can be seen from the living area.</li>
+        <li>The bedrooms have no doors. Stone walls and hallways give some privacy, but the main bedroom can be seen from the living area.</li>
         <li>Coming with children? Say so when you book. The dugout is set up a little differently for families. Bring your own port-a-cot.</li>
         <li>The driveway is uphill and a bit rocky. A 2WD is fine; take it slowly.</li>
         <li>The nearest big shops are a 600 km round trip, so bring what you need.</li>
@@ -270,6 +276,7 @@ footer{background:var(--night);color:#fff;text-align:center;font-size:14px;paddi
 <script>
 (function(){
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
   var hero=document.getElementById('hero'), sky=document.getElementById('sky'), sun=document.getElementById('sun'), heaps=document.getElementById('heaps'),
       rock=document.getElementById('rock'), c1=document.getElementById('c1'), c2=document.getElementById('c2'), t=false;
   function cl(v){return v<0?0:v>1?1:v}
