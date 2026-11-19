@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Sereno Costa | A four-bedroom beach house at Red Head, NSW</title>
+<meta name="description" content="A four-bedroom beach house for up to 12, in the rainforest above Red Head beach on the Barrington Coast. A website idea made by Lamplit Studio for Sereno Costa.">
+<meta property="og:title" content="Sereno Costa, Red Head">
+<meta property="og:description" content="A website idea made by Lamplit Studio for Sereno Costa. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/serenocosta/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/serenocosta/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c2730'/%3E%3Cpath d='M6 21c4-3 7-3 10 0s6 3 10 0' stroke='%23c9a27a' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/hero-1440.jpg" media="(min-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/heroM-720.jpg" media="(max-width: 699px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* Colours come from the host's own photos (see brand.md):
+   headland = the dark headland in the storm photo
+   foam     = white walls and sea foam
+   wave     = the face of a wave at Blackhead
+   sand     = wet sand at Red Head
+   storm    = the sky as a storm rolls in over Blackhead */
+:root{
+  --headland:#1c2730;
+  --headland-2:#26343f;
+  --foam:#eef2f3;
+  --foam-2:#d9e0e3;
+  --wave:#2e5d74;
+  --wave-2:#3a6d86;
+  --sand:#c9a27a;
+  --storm:#8d9db6;
+  --ink:#1c2730;
+  --ink-soft:#4c5a64;
+  --display:"Bricolage Grotesque","Avenir Next Condensed","Arial Narrow",sans-serif;
+  --text:"Figtree","Avenir Next","Segoe UI",sans-serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--foam);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--wave);outline-offset:3px}
+.dark :focus-visible,.strip :focus-visible,.top :focus-visible,.phonebar :focus-visible,footer :focus-visible{outline-color:var(--sand)}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.02;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--foam);padding:8px 12px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.strip{background:var(--headland);color:var(--foam);font-size:14px;text-align:center;margin:0;
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  padding:16px var(--gut-r) 26px var(--gut)}
+.word{display:grid;text-decoration:none;color:#fff;line-height:1;text-shadow:0 1px 10px rgba(14,20,26,.55)}
+.word b{font-family:var(--display);font-weight:800;font-size:30px;letter-spacing:-.02em}
+.word i{font-style:normal;font-size:13px;font-weight:600;margin-top:5px;padding-left:1px}
+.top nav{display:flex;gap:22px;align-items:center;font-weight:600;font-size:15px}
+.top nav a{color:#fff;text-decoration:none;text-shadow:0 1px 8px rgba(14,20,26,.7)}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:6px;
+  font-family:var(--text);font-weight:700;font-size:16px;text-decoration:none;border:0;cursor:pointer;
+  background:var(--wave);color:#fff}
+.btn:hover{background:var(--wave-2)}
+.btn.sand{background:var(--sand);color:var(--headland)}
+.btn.sand:hover{background:#d6b48f}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.line:hover{background:rgba(255,255,255,.08)}
+.top nav .btn{background:var(--sand);color:var(--headland);text-shadow:none}
+@media (max-width:820px){.top nav a:not(.btn){display:none}}
+
+/* ---------- Act 1: looking out through the rainforest at Red Head beach ---------- */
+.arrive{position:relative;height:250vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--headland)}
+.layer{position:absolute;inset:0;will-change:transform,opacity}
+.layer img{width:100%;height:100%;object-fit:cover}
+.l-photo{transform:scale(1.12);transform-origin:50% 55%}
+.l-photo img{object-position:30% 55%}
+.l-leaf{z-index:4;pointer-events:none}
+.l-leaf svg{position:absolute;top:-4%;height:108%;width:auto;display:block}
+.leaf-l svg{left:-2%}
+.leaf-r svg{right:-2%;transform:scaleX(-1)}
+.l-shade{inset:auto 0 0 0;height:50%;z-index:3;background:linear-gradient(to top,rgba(20,28,35,.6),rgba(20,28,35,0))}
+.copy-a{position:absolute;z-index:6;left:clamp(20px,9vw,150px);bottom:clamp(30px,9vh,100px);max-width:min(680px, calc(100% - 40px));color:#fff}
+.panel{background:rgba(28,39,48,.86);padding:clamp(20px,2.4vw,32px) clamp(20px,2.6vw,36px);border-radius:6px}
+.copy-a .where{font-weight:600;font-size:15px;color:var(--sand)}
+.copy-a h1{font-size:clamp(38px,4.6vw,66px);margin-top:8px}
+.copy-a p.lede{font-size:clamp(17px,1.5vw,20px);margin-top:14px;max-width:30em}
+.copy-b{position:absolute;z-index:6;right:clamp(20px,8vw,140px);top:clamp(100px,20vh,200px);max-width:440px;opacity:0;color:#fff}
+.copy-b p.q{font-family:var(--display);font-weight:800;font-size:clamp(30px,3.2vw,44px);line-height:1.08}
+.copy-b p.who{margin-top:12px;font-size:15px;color:#d5dde2}
+@media (max-width:699px){
+  .arrive{height:220vh}
+  .l-leaf svg{height:62%;top:auto;bottom:-2%}
+  .leaf-l svg{left:-30%}
+  .leaf-r svg{right:-30%}
+  .copy-a{top:86px;bottom:auto;left:var(--gut);right:var(--gut-r)}
+  .copy-b{left:var(--gut);right:var(--gut-r);top:auto;bottom:28px;max-width:none}
+}
+@media (max-height:620px) and (prefers-reduced-motion: no-preference){.copy-a p.lede{display:none}}
+@media (max-height:520px) and (prefers-reduced-motion: no-preference){.copy-a .where{display:none}.copy-a h1{font-size:clamp(26px,4vw,40px);margin-top:0}.panel{padding:14px 18px}}
+
+/* ---------- Act 2 (the peak): the walk from the house to Blackhead. The dot walks the drawn beach ---------- */
+.walk{position:relative;height:460vh;background:var(--headland)}
+.walk-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--headland);color:var(--foam);
+  display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.pics{position:relative;overflow:hidden}
+.pic{position:absolute;inset:0;margin:0;will-change:transform}
+.pic img{width:100%;height:100%;object-fit:cover}
+.pic + .pic{transform:translate3d(0,100%,0)}
+.pic figcaption{position:absolute;left:16px;bottom:14px;max-width:calc(100% - 32px);background:rgba(28,39,48,.85);color:#e6ecef;font-size:14px;padding:6px 10px;border-radius:4px}
+.side{position:relative;display:grid;grid-template-columns:120px minmax(0,1fr);gap:clamp(16px,2vw,28px);
+  padding:clamp(80px,12vh,120px) var(--gut-r) 40px clamp(18px,2.4vw,36px);align-items:center}
+.map{height:min(64vh,520px);width:120px}
+.map svg{width:100%;height:100%;display:block;overflow:visible}
+.map .dot{will-change:transform}
+.side h2{font-size:clamp(32px,3.6vw,54px)}
+.stops{position:relative;margin-top:clamp(20px,3vh,34px);min-height:11em}
+.stop{position:absolute;inset:0 0 auto 0;opacity:0;will-change:opacity,transform}
+.stop:first-child{opacity:1}
+.stop b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(24px,2.3vw,32px);color:var(--sand)}
+.stop p{margin-top:8px;font-size:18px;max-width:24em}
+.stop .who{font-size:15px;color:#b9c5cc;margin-top:8px}
+@media (max-width:820px){
+  .walk{height:420vh}
+  .walk-stage{grid-template-columns:minmax(0,1fr);grid-template-rows:52vh minmax(0,1fr);grid-template-rows:52svh minmax(0,1fr)}
+  .side{grid-template-columns:64px minmax(0,1fr);gap:14px;padding:18px var(--gut-r) calc(20px + env(safe-area-inset-bottom,0px)) var(--gut);align-items:start}
+  .map{height:min(36svh,300px);width:64px}
+  .map text{display:none}
+  .side h2{font-size:26px}
+  .stops{margin-top:10px;min-height:9.2em}
+  .stop b{font-size:22px}
+  .stop p{font-size:16px}
+}
+@media (max-width:820px) and (max-height:700px) and (prefers-reduced-motion: no-preference){.stop .who{display:none}.side h2{font-size:22px}}
+@media (max-height:480px){
+  .walk{height:auto}
+  .walk-stage{position:relative;height:auto;display:block}
+  .pics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
+  .pic{position:relative;inset:auto;transform:none !important}
+  .pic img{height:auto;aspect-ratio:4/3}
+  .side{display:block;padding:32px var(--gut-r) 40px var(--gut)}
+  .map{display:none}
+  .stops{min-height:0;display:grid;gap:22px}
+  .stop{position:relative;opacity:1 !important;transform:none !important}
+}
+@media (min-width:821px) and (max-height:600px) and (prefers-reduced-motion: no-preference){.side{padding-top:60px;padding-bottom:16px}.side h2{font-size:28px}.stop .who{display:none}.stops{min-height:6.5em}.stop p{font-size:16px}}
+
+/* ---------- Sections ---------- */
+.wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
+.inner{max-width:1200px;margin:0 auto}
+section{scroll-margin-top:10px}
+.lede{font-size:clamp(19px,1.6vw,21px);max-width:34em}
+.quote{font-size:clamp(20px,1.9vw,25px);line-height:1.4;font-weight:500}
+.who{font-size:15px;color:var(--ink-soft);margin-top:8px}
+h2.big{font-size:clamp(42px,5.6vw,76px)}
+dl.facts{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:22px;row-gap:12px;font-size:17px;line-height:1.5}
+dl.facts dt{font-weight:700;font-size:15px;padding-top:2px;white-space:nowrap}
+dl.facts dd{margin:0;border-bottom:1px solid var(--foam-2);padding-bottom:12px}
+
+/* The house, floor by floor */
+.house{padding-block:clamp(72px,9vw,130px) 0}
+.house-head{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:end}
+.house-head .lede{margin-top:18px}
+.floors{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,3vw,40px);margin-top:clamp(36px,5vw,64px)}
+.floor{display:grid;gap:16px;align-content:start}
+.floor h3{font-size:clamp(28px,2.8vw,38px)}
+.floor .plan{background:#fff;border-radius:6px;padding:10px;border:1px solid var(--foam-2)}
+.floor .plan img{width:100%;aspect-ratio:4/3;object-fit:contain}
+.floor .plan figcaption{font-size:14px;color:var(--ink-soft);margin-top:6px}
+.floor ul{margin:0;padding-left:20px}
+.floor li{margin-bottom:6px}
+@media (max-width:820px){.house-head,.floors{grid-template-columns:minmax(0,1fr)}}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;
+  padding:clamp(36px,5vw,60px) var(--gut-r) clamp(30px,4vw,48px) var(--gut);margin:0}
+.rail figure{margin:0;flex:0 0 auto;width:clamp(280px,36vw,520px);scroll-snap-align:start}
+.rail img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;background:var(--foam-2)}
+.rail figure.tall{width:clamp(210px,24vw,340px)}
+.rail figure.tall img{aspect-ratio:3/4}
+.rail figcaption{font-size:15px;margin-top:8px;color:var(--ink-soft)}
+
+/* Guests */
+.guests{background:var(--headland);color:var(--foam);padding-block:clamp(72px,9vw,120px)}
+.guests .who{color:#b9c5cc}
+.score{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-top:24px;border-bottom:2px solid var(--storm);padding-bottom:20px}
+.score b{font-family:var(--display);font-weight:800;font-size:clamp(72px,9vw,120px);line-height:.9;font-variant-numeric:tabular-nums;color:var(--sand)}
+.score span{font-size:18px;max-width:22em}
+.quotes{list-style:none;margin:clamp(30px,4vw,52px) 0 0;padding:0;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:26px clamp(28px,5vw,64px)}
+.quotes li{border-top:1px solid #3a4955;padding-top:16px}
+.quotes li:first-child{grid-row:span 2}
+.quotes li:first-child .quote{font-size:clamp(24px,2.8vw,34px);line-height:1.28;font-family:var(--display);font-weight:600}
+@media (max-width:880px){.quotes{grid-template-columns:minmax(0,1fr)}.quotes li:first-child{grid-row:auto}}
+
+/* Around */
+.around{padding-block:clamp(72px,9vw,130px)}
+.around .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+table.dist{width:100%;border-collapse:collapse;margin-top:24px;font-size:17px}
+table.dist th{text-align:left;font-size:15px;color:var(--ink-soft);font-weight:600;padding:0 0 8px}
+table.dist td{padding:12px 0;border-top:1px solid var(--foam-2);vertical-align:top}
+table.dist td:last-child{text-align:right;font-weight:600;white-space:nowrap;padding-left:16px}
+.around .ph img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px}
+.small{font-size:14px;color:var(--ink-soft);margin-top:12px}
+@media (max-width:880px){.around .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Book */
+.book{background:var(--foam-2);padding-block:clamp(72px,9vw,130px)}
+.book .lede{margin-top:16px}
+.book-card{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);margin-top:34px;background:var(--foam);border-radius:6px;overflow:hidden}
+.book-card img{width:100%;height:100%;min-height:280px;object-fit:cover}
+.book-card .body{padding:clamp(22px,3vw,40px);display:grid;gap:14px;align-content:start}
+.book-card h3{font-size:clamp(30px,3vw,42px)}
+.book-card .btn{justify-self:start;margin-top:6px}
+.direct{margin-top:clamp(20px,3vw,32px);background:var(--headland);color:var(--foam);border-radius:6px;padding:clamp(22px,3vw,36px);
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center}
+.direct h3{font-size:clamp(28px,3vw,40px)}
+.direct p{margin-top:8px;color:#d5dde2;max-width:36em}
+.direct .acts{display:flex;gap:12px;flex-wrap:wrap}
+@media (max-width:760px){.book-card,.direct{grid-template-columns:minmax(0,1fr)}.book-card img{aspect-ratio:4/3;min-height:0;height:auto}}
+
+/* Close: the balcony table at night */
+.close{position:relative;color:#fff;background:var(--headland);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:center}
+.close img{width:100%;height:min(88vh,820px);object-fit:cover;object-position:40% 60%}
+.close .panel{max-width:560px;background:none;padding:clamp(28px,4vw,56px)}
+.close h2{font-size:clamp(34px,4.2vw,56px)}
+.close p{margin-top:12px}
+.close .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+@media (max-width:760px){.close{grid-template-columns:minmax(0,1fr)}.close img{height:56vh;object-position:30% 70%}.close .panel{max-width:none}}
+footer{background:var(--headland);color:#c3ccd2;font-size:14px;padding-block:28px calc(28px + env(safe-area-inset-bottom,0px));border-top:1px solid #33424d}
+footer .inner{display:grid;gap:6px}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;
+  padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);
+  background:rgba(28,39,48,.97);transform:translateY(110%);visibility:hidden;transition:transform .25s ease-out,visibility 0s .25s}
+.phonebar.on{transform:none;visibility:visible;transition:transform .25s ease-out}
+.phonebar .btn{flex:1;min-height:50px}
+.phonebar .btn.line{color:var(--foam)}
+@media (max-width:820px){.phonebar{display:flex}footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}}
+
+@media (prefers-reduced-motion: reduce){
+  .arrive,.walk{height:auto}
+  .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column}
+  .layer{position:relative;inset:auto;opacity:1 !important;transform:none !important}
+  .l-photo img{height:auto;aspect-ratio:16/10}
+  .l-leaf,.l-shade{display:none}
+  .copy-a,.copy-b{position:relative;left:auto;right:auto;top:auto;bottom:auto;max-width:none;opacity:1 !important;transform:none !important}
+  .copy-a .panel,.copy-b .panel{border-radius:0;background:var(--headland)}
+  .walk-stage{position:relative;height:auto;display:block}
+  .pics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
+  .pic{position:relative;inset:auto;transform:none !important}
+  .pic img{height:auto;aspect-ratio:4/3}
+  .side{display:block;padding:48px var(--gut-r) 56px var(--gut)}
+  .map{display:none}
+  .stops{min-height:0;display:grid;gap:22px}
+  .stop{position:relative;opacity:1 !important;transform:none !important}
+  .phonebar,.phonebar.on{transition:none}
+}
+html:not(.js) .arrive,html:not(.js) .walk{height:auto}
+html:not(.js) .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column}
+html:not(.js) .layer{position:relative;inset:auto;opacity:1 !important;transform:none !important}
+html:not(.js) .l-photo img{height:auto;aspect-ratio:16/10}
+html:not(.js) .l-leaf,html:not(.js) .l-shade{display:none}
+html:not(.js) .copy-a,html:not(.js) .copy-b{position:relative;left:auto;right:auto;top:auto;bottom:auto;max-width:none;opacity:1 !important;transform:none !important}
+html:not(.js) .copy-a .panel,html:not(.js) .copy-b .panel{border-radius:0;background:var(--headland)}
+html:not(.js) .walk-stage{position:relative;height:auto;display:block}
+html:not(.js) .pics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
+html:not(.js) .pic{position:relative;inset:auto;transform:none !important}
+html:not(.js) .pic img{height:auto;aspect-ratio:4/3}
+html:not(.js) .side{display:block;padding:48px var(--gut-r) 56px var(--gut)}
+html:not(.js) .map{display:none}
+html:not(.js) .stops{min-height:0;display:grid;gap:22px}
+html:not(.js) .stop{position:relative;opacity:1 !important;transform:none !important}
+</style>
+</head>
+<body>
+<a class="skip" href="#book">Skip to booking</a>
+<p class="strip">A website idea made by Lamplit Studio for Sereno Costa. Not their official site.</p>
+
+<header class="top">
+  <a class="word" href="#arrive" aria-label="Sereno Costa, back to top"><b aria-hidden="true">Sereno Costa</b><i aria-hidden="true">Red Head, NSW</i></a>
+  <nav aria-label="Main">
+    <a href="#walk">The beach</a>
+    <a href="#house">The house</a>
+    <a href="#around">Nearby</a>
+    <a class="btn" href="#book">Check dates</a>
+  </nav>
+</header>
+
+<main>
+<section class="arrive" id="arrive" aria-label="Sereno Costa above Red Head beach">
+  <div class="stage">
+    <div class="layer l-photo">
+      <picture>
+        <source media="(min-width:700px)" srcset="img/hero-1440.jpg 1440w, img/hero-900.jpg 900w" sizes="100vw">
+        <img src="img/heroM-720.jpg" srcset="img/heroM-480.jpg 480w, img/heroM-720.jpg 720w" sizes="100vw" alt="Red Head beach on a clear day, with a bush-covered headland and dark rocks running out into the surf" width="720" height="1080" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="layer l-shade" aria-hidden="true"></div>
+    <div class="layer l-leaf leaf-l" aria-hidden="true">
+      <svg viewBox="0 0 800 900" fill="#16212a" stroke="#16212a" stroke-linecap="round"><g><path d="M-20 80 L12 87 L43 96 L74 107 L104 119 L133 133 L162 148 L190 165 L217 183 L243 202 L268 223 L291 246 L314 269 L335 293 L355 319 L374 346 L391 373" fill="none" stroke-width="5"/><path d="M12 87Q85 42 138 -26Q65 19 12 87z"/><path d="M12 87Q29 172 75 245Q58 160 12 87z"/><path d="M43 96Q116 56 170 -7Q97 33 43 96z"/><path d="M43 96Q56 178 96 251Q83 169 43 96z"/><path d="M74 107Q146 72 201 14Q129 49 74 107z"/><path d="M74 107Q82 186 117 258Q109 179 74 107z"/><path d="M104 119Q174 89 230 37Q160 67 104 119z"/><path d="M104 119Q108 196 138 266Q134 189 104 119z"/><path d="M133 133Q202 108 258 61Q189 85 133 133z"/><path d="M133 133Q133 206 158 275Q159 202 133 133z"/><path d="M162 148Q229 128 285 85Q218 106 162 148z"/><path d="M162 148Q158 218 179 285Q183 215 162 148z"/><path d="M190 165Q255 149 310 111Q245 127 190 165z"/><path d="M190 165Q183 231 199 296Q206 230 190 165z"/><path d="M217 183Q279 171 334 138Q271 150 217 183z"/><path d="M217 183Q207 246 219 308Q229 245 217 183z"/><path d="M243 202Q303 194 356 166Q296 174 243 202z"/><path d="M243 202Q230 262 239 321Q251 262 243 202z"/><path d="M268 223Q325 219 376 194Q319 199 268 223z"/><path d="M268 223Q253 279 258 336Q273 280 268 223z"/><path d="M291 246Q345 244 395 223Q341 225 291 246z"/><path d="M291 246Q274 297 277 351Q293 299 291 246z"/><path d="M314 269Q365 270 413 253Q362 252 314 269z"/><path d="M314 269Q296 316 295 367Q313 320 314 269z"/><path d="M335 293Q383 297 428 284Q381 280 335 293z"/><path d="M335 293Q316 337 313 384Q332 341 335 293z"/><path d="M355 319Q399 325 442 315Q398 309 355 319z"/><path d="M355 319Q335 358 330 402Q350 363 355 319z"/><path d="M374 346Q414 353 455 346Q414 338 374 346z"/><path d="M374 346Q353 381 346 422Q367 386 374 346z"/><path d="M391 373Q428 382 465 377Q429 369 391 373z"/><path d="M391 373Q370 405 362 442Q383 410 391 373z"/><path d="M-30 520 L-0 508 L30 497 L60 487 L91 479 L122 472 L154 466 L186 462 L217 459 L249 458 L281 458 L313 459 L345 462 L377 466 L408 472 L440 479" fill="none" stroke-width="5"/><path d="M-0 508Q29 437 32 361Q3 432 -0 508z"/><path d="M-0 508Q56 559 126 588Q70 537 -0 508z"/><path d="M30 497Q61 431 67 358Q36 424 30 497z"/><path d="M30 497Q81 549 148 579Q96 527 30 497z"/><path d="M60 487Q93 425 102 356Q69 418 60 487z"/><path d="M60 487Q107 539 170 571Q122 519 60 487z"/><path d="M91 479Q125 421 136 355Q102 413 91 479z"/><path d="M91 479Q134 530 192 564Q149 512 91 479z"/><path d="M122 472Q157 418 171 356Q136 409 122 472z"/><path d="M122 472Q161 523 215 557Q176 506 122 472z"/><path d="M154 466Q189 417 205 358Q169 407 154 466z"/><path d="M154 466Q189 516 239 551Q204 501 154 466z"/><path d="M186 462Q221 416 238 361Q203 407 186 462z"/><path d="M186 462Q216 511 263 546Q232 497 186 462z"/><path d="M217 459Q253 418 271 366Q236 408 217 459z"/><path d="M217 459Q245 507 287 542Q260 495 217 459z"/><path d="M249 458Q285 420 304 372Q269 410 249 458z"/><path d="M249 458Q273 504 311 539Q288 493 249 458z"/><path d="M281 458Q316 424 336 379Q302 414 281 458z"/><path d="M281 458Q302 502 336 537Q316 492 281 458z"/><path d="M313 459Q347 429 368 388Q334 419 313 459z"/><path d="M313 459Q331 502 362 535Q344 493 313 459z"/><path d="M345 462Q378 435 399 398Q366 425 345 462z"/><path d="M345 462Q360 502 387 535Q373 495 345 462z"/><path d="M377 466Q408 442 430 409Q398 433 377 466z"/><path d="M377 466Q389 504 413 536Q401 498 377 466z"/><path d="M408 472Q439 451 459 421Q429 442 408 472z"/><path d="M408 472Q418 507 439 537Q430 502 408 472z"/><path d="M440 479Q468 461 488 434Q460 452 440 479z"/><path d="M440 479Q447 512 465 540Q458 507 440 479z"/><path d="M-40 300 L-9 299 L21 301 L52 305 L82 311 L112 319 L141 329 L169 341 L196 355 L223 370 L248 388 L272 407 L294 428 L315 451 L334 475" fill="none" stroke-width="5"/><path d="M-9 299Q40 248 69 183Q19 234 -9 299z"/><path d="M-9 299Q22 364 73 413Q42 349 -9 299z"/><path d="M21 301Q72 256 104 195Q53 241 21 301z"/><path d="M21 301Q47 364 92 415Q67 351 21 301z"/><path d="M52 305Q103 265 138 210Q86 250 52 305z"/><path d="M52 305Q72 367 112 418Q92 356 52 305z"/><path d="M82 311Q134 276 170 226Q118 260 82 311z"/><path d="M82 311Q97 371 132 422Q117 362 82 311z"/><path d="M112 319Q163 289 201 244Q149 273 112 319z"/><path d="M112 319Q122 377 151 428Q141 370 112 319z"/><path d="M141 329Q191 304 230 264Q179 288 141 329z"/><path d="M141 329Q146 384 171 434Q165 379 141 329z"/><path d="M169 341Q218 321 257 286Q208 305 169 341z"/><path d="M169 341Q171 393 191 442Q189 390 169 341z"/><path d="M196 355Q244 339 283 309Q235 324 196 355z"/><path d="M196 355Q194 404 210 452Q212 402 196 355z"/><path d="M223 370Q268 359 307 333Q261 344 223 370z"/><path d="M223 370Q218 417 229 462Q234 416 223 370z"/><path d="M248 388Q291 381 329 359Q286 366 248 388z"/><path d="M248 388Q240 431 248 474Q256 431 248 388z"/><path d="M272 407Q312 403 349 385Q308 389 272 407z"/><path d="M272 407Q262 447 266 487Q276 448 272 407z"/><path d="M294 428Q332 427 367 413Q329 414 294 428z"/><path d="M294 428Q282 464 284 502Q296 466 294 428z"/><path d="M315 451Q350 452 382 441Q348 440 315 451z"/><path d="M315 451Q302 483 301 517Q314 485 315 451z"/><path d="M334 475Q366 478 396 470Q365 467 334 475z"/><path d="M334 475Q321 503 317 534Q331 506 334 475z"/><path d="M-30 860 L-8 836 L15 814 L40 793 L65 773 L92 754 L119 737 L147 722 L176 707 L206 695 L236 684 L267 674 L299 666 L330 660" fill="none" stroke-width="5"/><path d="M-8 836Q-10 760 -39 690Q-37 766 -8 836z"/><path d="M-8 836Q64 860 141 857Q68 833 -8 836z"/><path d="M15 814Q17 741 -7 673Q-9 745 15 814z"/><path d="M15 814Q83 840 156 841Q88 815 15 814z"/><path d="M40 793Q45 724 25 657Q20 726 40 793z"/><path d="M40 793Q103 821 172 826Q109 797 40 793z"/><path d="M65 773Q73 708 58 644Q50 709 65 773z"/><path d="M65 773Q124 803 189 811Q130 781 65 773z"/><path d="M92 754Q103 693 92 632Q81 693 92 754z"/><path d="M92 754Q145 786 207 796Q153 765 92 754z"/><path d="M119 737Q132 680 125 622Q112 679 119 737z"/><path d="M119 737Q168 769 225 782Q176 750 119 737z"/><path d="M147 722Q163 669 159 614Q143 667 147 722z"/><path d="M147 722Q192 754 245 769Q200 737 147 722z"/><path d="M176 707Q193 659 192 607Q175 656 176 707z"/><path d="M176 707Q216 740 265 757Q225 724 176 707z"/><path d="M206 695Q224 650 226 602Q208 647 206 695z"/><path d="M206 695Q242 727 286 745Q251 713 206 695z"/><path d="M236 684Q255 643 259 599Q240 639 236 684z"/><path d="M236 684Q268 715 308 734Q277 702 236 684z"/><path d="M267 674Q287 638 292 597Q273 634 267 674z"/><path d="M267 674Q295 705 331 724Q304 693 267 674z"/><path d="M299 666Q318 634 325 597Q306 630 299 666z"/><path d="M299 666Q322 696 354 715Q331 686 299 666z"/><path d="M330 660Q349 632 358 599Q338 627 330 660z"/><path d="M330 660Q350 688 378 707Q359 679 330 660z"/><path d="M-10 300Q134 334 241 233Q97 199 -10 300z"/><path d="M-20 720Q150 689 210 527Q40 558 -20 720z"/><path d="M0 880Q126 802 130 655Q4 732 0 880z"/><path d="M-10 140Q60 249 189 255Q120 146 -10 140z"/><path d="M40 620Q135 684 239 637Q144 574 40 620z"/><path d="M-20 420Q71 506 193 477Q102 391 -20 420z"/><path d="M-20 30Q86 148 243 126Q137 7 -20 30z"/><path d="M10 780Q145 800 236 698Q101 678 10 780z"/></g></svg>
+    </div>
+    <div class="layer l-leaf leaf-r" aria-hidden="true">
+      <svg viewBox="0 0 800 900" fill="#16212a" stroke="#16212a" stroke-linecap="round"><g transform="translate(0 60)"><g><path d="M-20 80 L12 87 L43 96 L74 107 L104 119 L133 133 L162 148 L190 165 L217 183 L243 202 L268 223 L291 246 L314 269 L335 293 L355 319 L374 346 L391 373" fill="none" stroke-width="5"/><path d="M12 87Q85 42 138 -26Q65 19 12 87z"/><path d="M12 87Q29 172 75 245Q58 160 12 87z"/><path d="M43 96Q116 56 170 -7Q97 33 43 96z"/><path d="M43 96Q56 178 96 251Q83 169 43 96z"/><path d="M74 107Q146 72 201 14Q129 49 74 107z"/><path d="M74 107Q82 186 117 258Q109 179 74 107z"/><path d="M104 119Q174 89 230 37Q160 67 104 119z"/><path d="M104 119Q108 196 138 266Q134 189 104 119z"/><path d="M133 133Q202 108 258 61Q189 85 133 133z"/><path d="M133 133Q133 206 158 275Q159 202 133 133z"/><path d="M162 148Q229 128 285 85Q218 106 162 148z"/><path d="M162 148Q158 218 179 285Q183 215 162 148z"/><path d="M190 165Q255 149 310 111Q245 127 190 165z"/><path d="M190 165Q183 231 199 296Q206 230 190 165z"/><path d="M217 183Q279 171 334 138Q271 150 217 183z"/><path d="M217 183Q207 246 219 308Q229 245 217 183z"/><path d="M243 202Q303 194 356 166Q296 174 243 202z"/><path d="M243 202Q230 262 239 321Q251 262 243 202z"/><path d="M268 223Q325 219 376 194Q319 199 268 223z"/><path d="M268 223Q253 279 258 336Q273 280 268 223z"/><path d="M291 246Q345 244 395 223Q341 225 291 246z"/><path d="M291 246Q274 297 277 351Q293 299 291 246z"/><path d="M314 269Q365 270 413 253Q362 252 314 269z"/><path d="M314 269Q296 316 295 367Q313 320 314 269z"/><path d="M335 293Q383 297 428 284Q381 280 335 293z"/><path d="M335 293Q316 337 313 384Q332 341 335 293z"/><path d="M355 319Q399 325 442 315Q398 309 355 319z"/><path d="M355 319Q335 358 330 402Q350 363 355 319z"/><path d="M374 346Q414 353 455 346Q414 338 374 346z"/><path d="M374 346Q353 381 346 422Q367 386 374 346z"/><path d="M391 373Q428 382 465 377Q429 369 391 373z"/><path d="M391 373Q370 405 362 442Q383 410 391 373z"/><path d="M-30 520 L-0 508 L30 497 L60 487 L91 479 L122 472 L154 466 L186 462 L217 459 L249 458 L281 458 L313 459 L345 462 L377 466 L408 472 L440 479" fill="none" stroke-width="5"/><path d="M-0 508Q29 437 32 361Q3 432 -0 508z"/><path d="M-0 508Q56 559 126 588Q70 537 -0 508z"/><path d="M30 497Q61 431 67 358Q36 424 30 497z"/><path d="M30 497Q81 549 148 579Q96 527 30 497z"/><path d="M60 487Q93 425 102 356Q69 418 60 487z"/><path d="M60 487Q107 539 170 571Q122 519 60 487z"/><path d="M91 479Q125 421 136 355Q102 413 91 479z"/><path d="M91 479Q134 530 192 564Q149 512 91 479z"/><path d="M122 472Q157 418 171 356Q136 409 122 472z"/><path d="M122 472Q161 523 215 557Q176 506 122 472z"/><path d="M154 466Q189 417 205 358Q169 407 154 466z"/><path d="M154 466Q189 516 239 551Q204 501 154 466z"/><path d="M186 462Q221 416 238 361Q203 407 186 462z"/><path d="M186 462Q216 511 263 546Q232 497 186 462z"/><path d="M217 459Q253 418 271 366Q236 408 217 459z"/><path d="M217 459Q245 507 287 542Q260 495 217 459z"/><path d="M249 458Q285 420 304 372Q269 410 249 458z"/><path d="M249 458Q273 504 311 539Q288 493 249 458z"/><path d="M281 458Q316 424 336 379Q302 414 281 458z"/><path d="M281 458Q302 502 336 537Q316 492 281 458z"/><path d="M313 459Q347 429 368 388Q334 419 313 459z"/><path d="M313 459Q331 502 362 535Q344 493 313 459z"/><path d="M345 462Q378 435 399 398Q366 425 345 462z"/><path d="M345 462Q360 502 387 535Q373 495 345 462z"/><path d="M377 466Q408 442 430 409Q398 433 377 466z"/><path d="M377 466Q389 504 413 536Q401 498 377 466z"/><path d="M408 472Q439 451 459 421Q429 442 408 472z"/><path d="M408 472Q418 507 439 537Q430 502 408 472z"/><path d="M440 479Q468 461 488 434Q460 452 440 479z"/><path d="M440 479Q447 512 465 540Q458 507 440 479z"/><path d="M-40 300 L-9 299 L21 301 L52 305 L82 311 L112 319 L141 329 L169 341 L196 355 L223 370 L248 388 L272 407 L294 428 L315 451 L334 475" fill="none" stroke-width="5"/><path d="M-9 299Q40 248 69 183Q19 234 -9 299z"/><path d="M-9 299Q22 364 73 413Q42 349 -9 299z"/><path d="M21 301Q72 256 104 195Q53 241 21 301z"/><path d="M21 301Q47 364 92 415Q67 351 21 301z"/><path d="M52 305Q103 265 138 210Q86 250 52 305z"/><path d="M52 305Q72 367 112 418Q92 356 52 305z"/><path d="M82 311Q134 276 170 226Q118 260 82 311z"/><path d="M82 311Q97 371 132 422Q117 362 82 311z"/><path d="M112 319Q163 289 201 244Q149 273 112 319z"/><path d="M112 319Q122 377 151 428Q141 370 112 319z"/><path d="M141 329Q191 304 230 264Q179 288 141 329z"/><path d="M141 329Q146 384 171 434Q165 379 141 329z"/><path d="M169 341Q218 321 257 286Q208 305 169 341z"/><path d="M169 341Q171 393 191 442Q189 390 169 341z"/><path d="M196 355Q244 339 283 309Q235 324 196 355z"/><path d="M196 355Q194 404 210 452Q212 402 196 355z"/><path d="M223 370Q268 359 307 333Q261 344 223 370z"/><path d="M223 370Q218 417 229 462Q234 416 223 370z"/><path d="M248 388Q291 381 329 359Q286 366 248 388z"/><path d="M248 388Q240 431 248 474Q256 431 248 388z"/><path d="M272 407Q312 403 349 385Q308 389 272 407z"/><path d="M272 407Q262 447 266 487Q276 448 272 407z"/><path d="M294 428Q332 427 367 413Q329 414 294 428z"/><path d="M294 428Q282 464 284 502Q296 466 294 428z"/><path d="M315 451Q350 452 382 441Q348 440 315 451z"/><path d="M315 451Q302 483 301 517Q314 485 315 451z"/><path d="M334 475Q366 478 396 470Q365 467 334 475z"/><path d="M334 475Q321 503 317 534Q331 506 334 475z"/><path d="M-30 860 L-8 836 L15 814 L40 793 L65 773 L92 754 L119 737 L147 722 L176 707 L206 695 L236 684 L267 674 L299 666 L330 660" fill="none" stroke-width="5"/><path d="M-8 836Q-10 760 -39 690Q-37 766 -8 836z"/><path d="M-8 836Q64 860 141 857Q68 833 -8 836z"/><path d="M15 814Q17 741 -7 673Q-9 745 15 814z"/><path d="M15 814Q83 840 156 841Q88 815 15 814z"/><path d="M40 793Q45 724 25 657Q20 726 40 793z"/><path d="M40 793Q103 821 172 826Q109 797 40 793z"/><path d="M65 773Q73 708 58 644Q50 709 65 773z"/><path d="M65 773Q124 803 189 811Q130 781 65 773z"/><path d="M92 754Q103 693 92 632Q81 693 92 754z"/><path d="M92 754Q145 786 207 796Q153 765 92 754z"/><path d="M119 737Q132 680 125 622Q112 679 119 737z"/><path d="M119 737Q168 769 225 782Q176 750 119 737z"/><path d="M147 722Q163 669 159 614Q143 667 147 722z"/><path d="M147 722Q192 754 245 769Q200 737 147 722z"/><path d="M176 707Q193 659 192 607Q175 656 176 707z"/><path d="M176 707Q216 740 265 757Q225 724 176 707z"/><path d="M206 695Q224 650 226 602Q208 647 206 695z"/><path d="M206 695Q242 727 286 745Q251 713 206 695z"/><path d="M236 684Q255 643 259 599Q240 639 236 684z"/><path d="M236 684Q268 715 308 734Q277 702 236 684z"/><path d="M267 674Q287 638 292 597Q273 634 267 674z"/><path d="M267 674Q295 705 331 724Q304 693 267 674z"/><path d="M299 666Q318 634 325 597Q306 630 299 666z"/><path d="M299 666Q322 696 354 715Q331 686 299 666z"/><path d="M330 660Q349 632 358 599Q338 627 330 660z"/><path d="M330 660Q350 688 378 707Q359 679 330 660z"/><path d="M-10 300Q134 334 241 233Q97 199 -10 300z"/><path d="M-20 720Q150 689 210 527Q40 558 -20 720z"/><path d="M0 880Q126 802 130 655Q4 732 0 880z"/><path d="M-10 140Q60 249 189 255Q120 146 -10 140z"/><path d="M40 620Q135 684 239 637Q144 574 40 620z"/><path d="M-20 420Q71 506 193 477Q102 391 -20 420z"/><path d="M-20 30Q86 148 243 126Q137 7 -20 30z"/><path d="M10 780Q145 800 236 698Q101 678 10 780z"/></g></g></svg>
+    </div>
+    <div class="copy-a">
+      <div class="panel">
+        <p class="where">Red Head, Hallidays Point, on the Barrington Coast</p>
+        <h1>A four-bedroom beach house in the rainforest above Red Head beach.</h1>
+        <p class="lede">Sleeps 12. It's the last house on a quiet cul de sac, with bush on two sides and the beach down the steps.</p>
+      </div>
+    </div>
+    <div class="copy-b">
+      <div class="panel">
+        <p class="q">"A tree-house by the sea."</p>
+        <p class="who">A guest, quoted on the Barrington Coast listing</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="walk dark" id="walk" aria-label="The walk from the house to Blackhead">
+  <div class="walk-stage">
+    <div class="pics">
+      <figure class="pic"><img src="img/w0-1440.jpg" srcset="img/w0-800.jpg 800w, img/w0-1440.jpg 1440w" sizes="(max-width:820px) 100vw, 58vw" alt="Sereno Costa from the street, a two-storey white house with a wide upstairs balcony and trees behind" width="1440" height="1080" loading="lazy"><figcaption>The house, at the end of the cul de sac</figcaption></figure>
+      <figure class="pic"><img src="img/w1-1440.jpg" srcset="img/w1-800.jpg 800w, img/w1-1440.jpg 1440w" sizes="(max-width:820px) 100vw, 58vw" alt="Early sun on wet sand and rocks at the water's edge" width="1440" height="1080" loading="lazy"><figcaption>"Early morning walks along the beach up to Blackhead." Nicole</figcaption></figure>
+      <figure class="pic"><img src="img/w2-1440.jpg" srcset="img/w2-800.jpg 800w, img/w2-1440.jpg 1440w" sizes="(max-width:820px) 100vw, 58vw" alt="A clear green wave breaking near the shore, with a pointed rock and a headland out to sea" width="1440" height="1080" loading="lazy"><figcaption>"Perfect waters at Blackhead beach." Nicole</figcaption></figure>
+      <figure class="pic"><img src="img/w3-1440.jpg" srcset="img/w3-800.jpg 800w, img/w3-1440.jpg 1440w" sizes="(max-width:820px) 100vw, 58vw" alt="Dark storm clouds over the headland at Blackhead, with white surf rolling up the beach" width="1440" height="1080" loading="lazy"><figcaption>"Looking over Blackhead as a storm rolls in." Nicole</figcaption></figure>
+    </div>
+    <div class="side">
+      <div class="map" aria-hidden="true">
+        <svg viewBox="0 0 120 520" fill="none">
+          <path d="M104 0 C 98 30, 112 52, 96 74 C 84 92, 98 110, 90 140 C 80 190, 74 260, 78 330 C 82 390, 88 430, 104 462 C 112 478, 106 500, 96 520" stroke="#8d9db6" stroke-width="2"/>
+          <path d="M96 74 C 104 70, 116 74, 120 70 M104 462 C 112 470, 118 466, 120 470" stroke="#8d9db6" stroke-width="2"/>
+          <path id="route" d="M30 46 C 50 60, 70 76, 86 92 C 78 150, 70 240, 72 330 C 74 390, 82 430, 96 456" stroke="#c9a27a" stroke-width="2.5" stroke-dasharray="3 6"/>
+          <rect x="22" y="38" width="16" height="16" rx="2" fill="#eef2f3"/>
+          <text x="0" y="24" fill="#b9c5cc" font-size="14" font-family="Figtree, sans-serif" font-weight="600">Red Head</text>
+          <text x="0" y="500" fill="#b9c5cc" font-size="14" font-family="Figtree, sans-serif" font-weight="600">Blackhead</text>
+          <circle class="dot" cx="0" cy="0" r="9" fill="#c9a27a" stroke="#1c2730" stroke-width="3" transform="translate(30 46)"/>
+        </svg>
+      </div>
+      <div>
+        <h2>Walk the beach to Blackhead.</h2>
+        <div class="stops">
+          <div class="stop"><b>Out the door</b><p>Head out the front and into the rainforest, where tracks lead down to the beaches. Guests have met a wallaby on the way.</p><p class="who">"The children being able to get close to the local kookaburras." Wendy, Airbnb</p></div>
+          <div class="stop"><b>Down the steps</b><p>A Parks staircase of 40-odd steps takes you onto the sand at Red Head. Go early, while the sun is still low on the water.</p><p class="who">"There is a lookout very close by where we were able to watch the sunrise each morning." Wendy, Airbnb</p></div>
+          <div class="stop"><b>Blackhead</b><p>About ten minutes south along the sand is Blackhead, where the surf club patrols in season. Check the flags before you swim, then walk back, or drive it in five.</p><p class="who">"A safe, patrolled surf beach." Yvonne, Airbnb</p></div>
+          <div class="stop"><b>Any weather</b><p>The walk is good in any weather. Here's Blackhead with a storm rolling in.</p><p class="who">"No matter what the weather the beach is magnificent." Nicole, Sereno Costa</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="house" id="house">
+  <div class="wrap">
+    <div class="inner">
+      <div class="house-head">
+        <h2 class="big">Room for two families</h2>
+        <p class="lede">The living is upstairs, looking out over the coast. Downstairs has its own lounge, so the kids or a second family can spread out.</p>
+      </div>
+      <div class="floors">
+        <div class="floor">
+          <h3>Upstairs</h3>
+          <figure class="plan" style="margin:0"><img src="img/plan-up-1200.jpg" srcset="img/plan-up-700.jpg 700w, img/plan-up-1200.jpg 1200w" sizes="(max-width:820px) 100vw, 50vw" alt="Floor plan of the upstairs: open plan kitchen, dining and living, the king bedroom with ensuite, and balconies on three sides" width="1200" height="900" loading="lazy"><figcaption>Upstairs plan, from the listing</figcaption></figure>
+          <ul>
+            <li>Open plan kitchen, dining and lounge, with an induction cooktop, oven and dishwasher</li>
+            <li>The king room, with a large ensuite and its own balcony</li>
+            <li>A wrap-around balcony with two big outdoor tables and a gas barbecue with a rotisserie</li>
+          </ul>
+        </div>
+        <div class="floor">
+          <h3>Downstairs</h3>
+          <figure class="plan" style="margin:0"><img src="img/plan-down-1200.jpg" srcset="img/plan-down-700.jpg 700w, img/plan-down-1200.jpg 1200w" sizes="(max-width:820px) 100vw, 50vw" alt="Floor plan of the downstairs: two queen rooms, the bunk room, a bathroom, the laundry and a second living room" width="1200" height="900" loading="lazy"><figcaption>Downstairs plan, from the listing</figcaption></figure>
+          <ul>
+            <li>Two queen rooms and a bunk room with two sets of bunks</li>
+            <li>A second lounge with a sofa bed, board games and books</li>
+            <li>A bathroom with a big bath, underfloor heating for winter, and the laundry</li>
+            <li>An outdoor hot and cold shower for sandy feet</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="rail" tabindex="0" role="region" aria-label="Photos inside Sereno Costa">
+    <figure><img src="img/r-open-1000.jpg" srcset="img/r-open-600.jpg 600w, img/r-open-1000.jpg 1000w" sizes="(max-width:880px) 82vw, 36vw" alt="The upstairs kitchen island with white stools, opening onto the lounge and glass doors to the balcony" width="1000" height="750" loading="lazy"><figcaption>Kitchen and lounge, upstairs</figcaption></figure>
+    <figure><img src="img/r-balcony-1000.jpg" srcset="img/r-balcony-600.jpg 600w, img/r-balcony-1000.jpg 1000w" sizes="(max-width:880px) 82vw, 36vw" alt="An outdoor dining table with bench seats and a covered barbecue on the balcony" width="1000" height="750" loading="lazy"><figcaption>The balcony table and barbecue</figcaption></figure>
+    <figure><img src="img/r-king-1000.jpg" srcset="img/r-king-600.jpg 600w, img/r-king-1000.jpg 1000w" sizes="(max-width:880px) 82vw, 36vw" alt="The king bedroom with a seashell print quilt and a window to the trees" width="1000" height="750" loading="lazy"><figcaption>The king room</figcaption></figure>
+    <figure class="tall"><img src="img/r-private-1000.jpg" srcset="img/r-private-600.jpg 600w, img/r-private-1000.jpg 1000w" sizes="(max-width:880px) 62vw, 24vw" alt="Two wicker chairs and a small table with a bottle of wine on the king room's private balcony" width="1000" height="1333" loading="lazy"><figcaption>Its private balcony</figcaption></figure>
+    <figure><img src="img/r-ensuite-1000.jpg" srcset="img/r-ensuite-600.jpg 600w, img/r-ensuite-1000.jpg 1000w" sizes="(max-width:880px) 82vw, 36vw" alt="The ensuite with a long vanity and a large bath under two windows" width="1000" height="750" loading="lazy"><figcaption>The ensuite</figcaption></figure>
+    <figure class="tall"><img src="img/r-queen-1000.jpg" srcset="img/r-queen-600.jpg 600w, img/r-queen-1000.jpg 1000w" sizes="(max-width:880px) 62vw, 24vw" alt="A queen bed with a starfish quilt and two lamps, under a painting of a jetty at sunset" width="1000" height="1333" loading="lazy"><figcaption>A queen room</figcaption></figure>
+    <figure><img src="img/r-bunks-1000.jpg" srcset="img/r-bunks-600.jpg 600w, img/r-bunks-1000.jpg 1000w" sizes="(max-width:880px) 82vw, 36vw" alt="The bunk room with two metal bunk beds made up in green and yellow" width="1000" height="750" loading="lazy"><figcaption>The bunk room</figcaption></figure>
+    <figure><img src="img/r-down-1000.jpg" srcset="img/r-down-600.jpg 600w, img/r-down-1000.jpg 1000w" sizes="(max-width:880px) 82vw, 36vw" alt="The downstairs lounge with a grey armchair, a coffee table and beach prints on the wall" width="1000" height="750" loading="lazy"><figcaption>The downstairs lounge</figcaption></figure>
+    <figure class="tall"><img src="img/r-shower-1000.jpg" srcset="img/r-shower-600.jpg 600w, img/r-shower-1000.jpg 1000w" sizes="(max-width:880px) 62vw, 24vw" alt="A timber outdoor shower lit up at night beside the house" width="1000" height="1333" loading="lazy"><figcaption>The outdoor shower</figcaption></figure>
+  </div>
+</section>
+
+<section class="guests wrap dark" id="guests">
+  <div class="inner">
+    <h2 class="big">What guests say</h2>
+    <div class="score"><b>4.91</b><span>from 100 reviews on Airbnb. Families come back for it.</span></div>
+    <ul class="quotes">
+      <li><p class="quote">"The multiple spaces meant that my teenagers could have their own space, I could have an adult space but we could all then come together for dinner, movies and games."</p><p class="who">Simon, Airbnb</p></li>
+      <li><p class="quote">"We are return guests and will keep coming back when we need large group accommodation at Halidays Point."</p><p class="who">Joshua, Airbnb</p></li>
+      <li><p class="quote">"My sister loved her surprise 60th birthday."</p><p class="who">Trish, Airbnb</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="around wrap" id="around">
+  <div class="inner">
+    <div>
+      <h2 class="big">Nearby</h2>
+      <table class="dist">
+        <thead><tr><th scope="col">From the house</th><th scope="col"><span class="vh">How far</span></th></tr></thead>
+        <tbody>
+          <tr><td>Red Head beach</td><td>Down the steps</td></tr>
+          <tr><td>Blackhead beach and its surf club</td><td>10 min walk</td></tr>
+          <tr><td>Hallidays Point Tavern, with a courtesy bus to the door</td><td>5 min</td></tr>
+          <tr><td>Diamond Beach takeaway and the Pizza Pasta Bar</td><td>5 min drive</td></tr>
+          <tr><td>Forster and Tuncurry, for The Sicilian and Graham Barclays Oysters</td><td>15 min drive</td></tr>
+          <tr><td>Port Macquarie</td><td>40 min drive</td></tr>
+        </tbody>
+      </table>
+      <p class="small">Times are from the listing and from guests. There's a 4WD beach drive on Nine Mile Beach, and a rainforest track to Shelly Beach.</p>
+    </div>
+    <figure class="ph" style="margin:0">
+      <img src="img/hero-900.jpg" alt="The rocks and headland at the end of Red Head beach" width="900" height="675" loading="lazy">
+      <figcaption class="small">"Red Head beach is perfect for viewing dolphins and whales." Nicole</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="book wrap" id="book">
+  <div class="inner">
+    <h2 class="big">Check dates</h2>
+    <p class="lede">The whole house, for up to 12. For two guests, Tuesday 9 to Thursday 11 February 2027 came to A$1,376 on Airbnb, fees included.</p>
+    <div class="book-card">
+      <img src="img/r-open-1000.jpg" srcset="img/r-open-600.jpg 600w, img/r-open-1000.jpg 1000w" sizes="(max-width:760px) 100vw, 55vw" alt="The upstairs kitchen and lounge with glass doors to the balcony" width="1000" height="750" loading="lazy">
+      <div class="body">
+        <h3>Sereno Costa</h3>
+        <dl class="facts">
+          <dt>Sleeps</dt><dd>12, in a king, two queens, two sets of bunks and a sofa bed</dd>
+          <dt>Check in</dt><dd>3pm to 6pm, with a key safe</dd>
+          <dt>Check out</dt><dd>By 10am</dd>
+        </dl>
+        <a class="btn" href="https://www.airbnb.com.au/rooms/31722282" rel="noopener" target="_blank">See dates on Airbnb</a>
+      </div>
+    </div>
+    <div class="direct dark">
+      <div>
+        <h3>Or ask Nicole and Lauren</h3>
+        <p>Tell them your dates and how many are coming, or ask about a birthday or a reunion.</p>
+      </div>
+      <div class="acts">
+        <a class="btn sand" href="tel:+61487637976">Call 0487 637 976</a>
+        <a class="btn line" href="https://ig.me/m/serenocostansw" rel="noopener" target="_blank">Message on Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="close dark" aria-label="The balcony at night">
+  <img src="img/close-1440.jpg" srcset="img/close-800.jpg 800w, img/close-1440.jpg 1440w" sizes="(max-width:760px) 100vw, 46vw" alt="A table and chairs on the balcony at night, lit from the glass doors" width="1440" height="1157" loading="lazy">
+  <div class="panel">
+    <h2>Dinner on the balcony, with the sea down the hill.</h2>
+    <p>Sereno Costa is Italian for "serene coast". It's 15 minutes north of Forster.</p>
+    <div class="acts">
+      <a class="btn sand" href="#book">Check dates</a>
+      <a class="btn line" href="https://www.instagram.com/serenocostansw/" rel="noopener" target="_blank">@serenocostansw</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="inner">
+    <p>A preview made by Lamplit Studio for Sereno Costa. Not affiliated, not live.</p>
+    <p>Photos and floor plans are Sereno Costa's own, from their Airbnb listing. The leaves and the beach map are drawn for this page.</p>
+  </div>
+</footer>
+
+<div class="phonebar" id="phonebar">
+  <a class="btn sand" href="#book">Check dates</a>
+  <a class="btn line" href="tel:+61487637976">Call</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var bar=document.getElementById('phonebar');
+  var arrive=document.getElementById('arrive'), walk=document.getElementById('walk');
+  var q=function(s){return document.querySelector(s)};
+  var photo=q('.l-photo'), ll=q('.leaf-l'), lr=q('.leaf-r'), shade=q('.l-shade'), ca=q('.copy-a'), cb=q('.copy-b');
+  var pics=[].slice.call(document.querySelectorAll('.pic')), stops=[].slice.call(document.querySelectorAll('.stop'));
+  var route=document.getElementById('route'), dot=q('.map .dot'), rlen=route.getTotalLength();
+  var marks=[0,.1,.62,1];
+  var clamp=function(v){return v<0?0:v>1?1:v};
+  var seg=function(p,a,b){return clamp((p-a)/(b-a))};
+  var ease=function(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
+  function prog(el){var r=el.getBoundingClientRect();var st=el.firstElementChild;var span=el.offsetHeight-(st?st.offsetHeight:window.innerHeight);return span>0?clamp(-r.top/span):0}
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    var vh=window.innerHeight;
+    var bk=document.getElementById('book').getBoundingClientRect();
+    bar.classList.toggle('on', bar.contains(document.activeElement) || (walk.getBoundingClientRect().bottom<vh*.5 && (bk.top>vh*.9 || bk.bottom<0)));
+    if(reduce) return;
+    // Act 1: the leaves part like you're stepping out of the trees; the beach eases back; the words hand over
+    var p=prog(arrive), e=ease(p);
+    photo.style.transform='scale('+(1.12-e*.12).toFixed(4)+')';
+    ll.style.transform='translate3d('+(-e*55).toFixed(2)+'%,0,0) scale('+(1+e*.25).toFixed(4)+')';
+    lr.style.transform='translate3d('+(e*55).toFixed(2)+'%,0,0) scale('+(1+e*.25).toFixed(4)+')';
+    shade.style.opacity=(1-seg(p,.5,.9)*.6).toFixed(3);
+    ca.style.opacity=(1-seg(p,.2,.38)).toFixed(3);
+    ca.style.transform='translate3d(0,'+(-seg(p,.2,.38)*40).toFixed(1)+'px,0)';
+    cb.style.opacity=seg(p,.55,.7).toFixed(3);
+    cb.style.transform='translate3d(0,'+((1-seg(p,.55,.7))*24).toFixed(1)+'px,0)';
+    // Act 2: each stop's photo slides up over the last, and the dot walks the beach to that stop
+    var k=prog(walk), n=pics.length, steps=n-1, cur=0, along=0;
+    for(var i=1;i<n;i++){
+      var a=(i-1)/steps, b=i/steps, f=ease(seg(k,a+.12/steps,b-.12/steps));
+      pics[i].style.transform='translate3d(0,'+((1-f)*100).toFixed(2)+'%,0)';
+      if(f>.5) cur=i;
+      along+= f*(marks[i]-marks[i-1]);
+    }
+    var pt=route.getPointAtLength(along*rlen);
+    dot.setAttribute('transform','translate('+pt.x.toFixed(1)+' '+pt.y.toFixed(1)+')');
+    stops.forEach(function(s,i){s.style.opacity=i===cur?'1':'0';s.style.transform='translate3d(0,'+(i===cur?0:(i<cur?-12:12))+'px,0)'});
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(mq.addEventListener) mq.addEventListener('change',function(){location.reload()});
+  frame();
+})();
+</script>
+</body>
+</html>
