@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en-AU" class="static">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<script>if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.remove('static')</script>
+<title>Bask at Green Point | A whole house on Wallis Lake, sleeps 14</title>
+<meta name="description" content="A six-bedroom house for up to 14 guests at Green Point, near Forster, with a backyard that runs down to Wallis Lake. A website idea made by Lampbound Studio.">
+<meta property="og:title" content="Bask at Green Point, Wallis Lake">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Bask at Green Point. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/baskatgreenpoint/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/baskatgreenpoint/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2313262c'/%3E%3Cpath d='M4 20h24v3H4z' fill='%23e3b23c'/%3E%3Cpath d='M4 25h24v2H4z' fill='%232d6f80'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/aerial-1440.jpg" media="(min-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/aerial-tall-700.jpg" media="(max-width: 699px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Public+Sans:wght@400;600&display=swap">
+<style>
+/* Tokens from the house and the lake (see brand.md):
+   dusk   = Wallis Lake under the dusk sky in their aerial
+   white  = the house's painted walls and weatherboards
+   lake   = the shallows off the backyard
+   kayak  = the yellow kayak on the lawn, the accent
+   gum    = the spotted gum floorboards
+   Bricolage Grotesque for headings, Public Sans for reading. */
+:root{
+  --dusk:#13262c;
+  --dusk-2:#1d353c;
+  --white:#f4f6f5;
+  --white-2:#e2e8e6;
+  --lake:#2d6f80;
+  --lake-2:#245d6b;
+  --kayak:#e3b23c;
+  --gum:#9a5b35;
+  --ink:#13262c;
+  --ink-soft:#4f6166;
+  --display:"Bricolage Grotesque","Avenir Next","Segoe UI",sans-serif;
+  --text:"Public Sans","Helvetica Neue",Arial,sans-serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lake);outline-offset:3px}
+.walk :focus-visible,.strip :focus-visible,.top :focus-visible,.lakeband :focus-visible,.guests :focus-visible,.close :focus-visible,.phonebar :focus-visible,footer :focus-visible{outline-color:var(--kayak)}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1;margin:0;text-wrap:balance;letter-spacing:-.015em}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--white);padding:8px 12px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.strip{background:var(--dusk);color:var(--white);font-size:14px;text-align:center;margin:0;
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  padding:16px var(--gut-r) 0 var(--gut)}
+.word{display:flex;align-items:baseline;gap:8px;color:#fff;text-decoration:none;text-shadow:0 1px 10px rgba(10,20,24,.6)}
+.word b{font-family:var(--display);font-weight:800;font-size:40px;line-height:.8;letter-spacing:-.03em}
+.word span{font-weight:600;font-size:14px}
+.top nav{display:flex;gap:22px;align-items:center;font-weight:600;font-size:15px}
+.top nav a{color:#fff;text-decoration:none;text-shadow:0 1px 8px rgba(10,20,24,.7)}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:24px;
+  font-family:var(--text);font-weight:600;font-size:16px;line-height:1.1;text-decoration:none;border:0;cursor:pointer;text-align:center;
+  background:var(--kayak);color:var(--dusk)}
+.btn:hover{background:#ecc25b}
+.btn.lake{background:var(--lake);color:#fff}
+.btn.lake:hover{background:var(--lake-2)}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.line:hover{background:rgba(255,255,255,.1)}
+.top nav .btn{text-shadow:none;color:var(--dusk)}
+@media (max-width:820px){.top nav a:not(.btn){display:none}.top nav .btn{min-height:44px;padding:0 16px;font-size:15px}}
+
+/* ---------- Act 1: twenty metres, from the point to the water ---------- */
+.walk{position:relative;height:420vh;background:var(--dusk)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--dusk)}
+.shot{position:absolute;inset:0;will-change:transform,opacity;opacity:0}
+.shot.k0{opacity:1}
+.shot img{width:100%;height:100%;object-fit:cover}
+.k1 img{object-position:40% 50%}
+.k2 img{object-position:60% 40%}
+.k3 img{object-position:62% 55%}
+.k4 img{object-position:30% 55%}
+.scrim{position:absolute;inset:auto 0 0 0;height:60%;z-index:2;pointer-events:none;background:linear-gradient(to top, rgba(12,24,28,.82), rgba(12,24,28,0))}
+@media (min-width:700px){.scrim{height:100%;background:linear-gradient(to top, rgba(12,24,28,.8), rgba(12,24,28,0) 62%),linear-gradient(to right, rgba(12,24,28,.5), rgba(12,24,28,0) 55%)}}
+.beat{position:absolute;z-index:5;left:var(--gut);bottom:clamp(120px,20vh,190px);max-width:min(640px, calc(100% - 40px));color:#fff;will-change:transform,opacity;opacity:0}
+.beat.b0{opacity:1}
+.beat .where{font-weight:600;font-size:15px;color:var(--kayak)}
+.beat h1{font-size:clamp(40px,6vw,84px);margin-top:10px}
+.beat h2{font-size:clamp(34px,4.6vw,64px)}
+.beat p.lede{font-size:clamp(17px,1.4vw,20px);margin-top:14px;max-width:30em;text-shadow:0 1px 10px rgba(10,20,24,.6)}
+.beat h1,.beat h2{text-shadow:0 2px 18px rgba(10,20,24,.45)}
+/* the tape: its own plane, nearest the viewer */
+.tape{position:absolute;z-index:6;left:var(--gut);right:var(--gut-r);bottom:clamp(26px,5vh,48px);height:64px;color:#fff;will-change:opacity;opacity:0}
+.tape .track{position:absolute;left:0;right:0;top:22px;height:14px;background:rgba(244,246,245,.16);border-radius:2px;overflow:hidden}
+.tape .fill{position:absolute;inset:0;background:var(--kayak);transform-origin:0 50%;transform:scaleX(0);will-change:transform}
+.tape .ticks{position:absolute;left:0;right:0;top:22px;height:14px;pointer-events:none}
+.tape .ticks svg{width:100%;height:100%;display:block}
+.tape .end{position:absolute;top:0;font-size:14px;font-weight:600;white-space:nowrap}
+.tape .end.a{left:0}
+.tape .end.b{right:0}
+@media (max-width:699px){
+  .walk{height:380vh}
+  .beat{left:var(--gut);right:var(--gut-r);max-width:none;bottom:118px}
+  .scrim{height:75%}
+}
+@media (max-height:600px){.beat p.lede{display:none}.beat .where{display:none}}
+@media (max-height:460px){.beat h1{font-size:34px}.beat h2{font-size:30px}.beat{bottom:96px}}
+
+/* ---------- Sections ---------- */
+.wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
+.inner{max-width:1200px;margin:0 auto}
+section{scroll-margin-top:10px}
+.lede{font-size:clamp(19px,1.6vw,21px);max-width:34em}
+.who{font-size:14px;font-weight:600;color:var(--ink-soft);margin-top:8px}
+.cap-s{font-size:15px;color:var(--ink-soft);margin-top:8px}
+dl.facts{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:22px;row-gap:12px;font-size:17px;line-height:1.5}
+dl.facts dt{font-weight:600;font-size:15px;padding-top:2px;white-space:nowrap}
+dl.facts dd{margin:0;border-bottom:1px solid var(--white-2);padding-bottom:12px}
+
+/* The house */
+.house{padding-block:clamp(72px,9vw,130px) 0}
+.house .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.house h2,.rooms h2,.guests h2,.around h2,.book h2{font-size:clamp(42px,5.6vw,76px)}
+.house .lede{margin-top:18px}
+.map{margin:28px 0 0}
+.map img{width:100%;max-width:520px;border-radius:2px;border:1px solid var(--white-2)}
+@media (max-width:880px){.house .inner{grid-template-columns:minmax(0,1fr)}}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;
+  padding:clamp(36px,5vw,56px) var(--gut-r) clamp(64px,8vw,104px) var(--gut);margin:0}
+.rail figure{margin:0;flex:0 0 auto;width:clamp(270px,32vw,460px);scroll-snap-align:start}
+.rail img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:2px;background:var(--white-2)}
+.rail figcaption{font-size:15px;margin-top:8px;color:var(--ink-soft)}
+
+/* Sleeping: a list of the six rooms */
+.rooms{background:var(--white-2);padding-block:clamp(72px,9vw,120px)}
+.rooms .inner{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);align-items:start}
+.rooms .lede{margin-top:16px}
+ol.beds{list-style:none;margin:0;padding:0;border-top:2px solid var(--dusk)}
+ol.beds li{display:grid;grid-template-columns:7.5em minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid #c9d3d0;font-size:17px}
+ol.beds li b{font-family:var(--display);font-weight:700;font-size:20px}
+.rooms figure{margin:28px 0 0}
+.rooms figure img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:2px}
+@media (max-width:880px){.rooms .inner{grid-template-columns:minmax(0,1fr)}ol.beds li{grid-template-columns:6.5em minmax(0,1fr)}}
+@media (max-width:420px){ol.beds li{grid-template-columns:minmax(0,1fr);gap:2px}}
+
+/* The lake */
+.lakeband{background:var(--lake);color:#fff;padding-block:clamp(72px,9vw,120px)}
+.lakeband .inner{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,64px);align-items:center}
+.lakeband h2{font-size:clamp(38px,4.8vw,66px)}
+.lakeband p{margin-top:16px;max-width:30em;color:#e7f0f1}
+.lakeband .pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.lakeband .pair figure{margin:0}
+.lakeband .pair img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
+.lakeband .pair figcaption{font-size:14px;margin-top:8px;color:#fff}
+.lakeband blockquote{margin:22px 0 0;padding:0}
+.lakeband blockquote p{font-family:var(--display);font-weight:700;font-size:clamp(22px,2vw,28px);line-height:1.25;color:#fff}
+.lakeband .who{color:#d4e3e6}
+@media (max-width:880px){.lakeband .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Guests */
+.guests{background:var(--dusk);color:var(--white);padding-block:clamp(72px,9vw,120px)}
+.score{margin-top:22px;display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
+.score b{font-family:var(--display);font-weight:800;font-size:clamp(72px,9vw,128px);line-height:.9;color:var(--kayak);font-variant-numeric:tabular-nums}
+.score span{font-size:18px;max-width:18em}
+.quotes{list-style:none;margin:clamp(40px,5vw,60px) 0 0;padding:0;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:24px clamp(28px,5vw,64px)}
+.quotes li{border-top:1px solid rgba(244,246,245,.3);padding-top:16px}
+.quotes li:first-child{grid-row:span 2}
+.quotes .q{font-size:clamp(19px,1.7vw,22px);line-height:1.45}
+.quotes li:first-child .q{font-family:var(--display);font-weight:700;font-size:clamp(26px,2.8vw,38px);line-height:1.2}
+.guests .who{color:#a9bcc0}
+@media (max-width:880px){.quotes{grid-template-columns:minmax(0,1fr)}.quotes li:first-child{grid-row:auto}}
+
+/* Around */
+.around{padding-block:clamp(72px,9vw,130px)}
+.around .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+table.dist{width:100%;border-collapse:collapse;margin-top:24px;font-size:17px}
+table.dist th{text-align:left;font-size:14px;color:var(--ink-soft);font-weight:600;padding:0 0 8px}
+table.dist td{padding:12px 0;border-top:1px solid var(--white-2);vertical-align:top}
+table.dist td:last-child{text-align:right;font-weight:600;white-space:nowrap;padding-left:16px;font-variant-numeric:tabular-nums}
+.small{font-size:14px;color:var(--ink-soft);margin-top:12px}
+.around figure{margin:0}
+.around figure img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
+@media (max-width:880px){.around .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Book */
+.book{background:var(--white-2);padding-block:clamp(72px,9vw,130px)}
+.book .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,64px);align-items:start}
+.book .lede{margin-top:16px}
+.book .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.book .card{background:var(--white);border-radius:2px;padding:clamp(22px,3vw,32px)}
+.book .card h3{font-size:24px;margin-bottom:16px}
+@media (max-width:880px){.book .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Close */
+.close{position:relative;color:#fff;background:var(--dusk)}
+.close img{width:100%;height:min(86vh,760px);object-fit:cover;object-position:50% 50%}
+.close .panel{position:absolute;right:var(--gut-r);bottom:clamp(24px,6vh,60px);max-width:540px;background:rgba(19,38,44,.9);padding:clamp(22px,3vw,34px);border-radius:2px}
+.close h2{font-size:clamp(32px,4vw,54px)}
+.close p{margin-top:10px}
+.close .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+@media (max-width:700px){.close img{height:52vh}.close .panel{position:relative;right:auto;bottom:auto;max-width:none;border-radius:0;background:var(--dusk)}}
+footer{background:var(--dusk);color:#b9c8cb;font-size:14px;padding-block:28px calc(28px + env(safe-area-inset-bottom,0px))}
+footer .inner{display:grid;gap:6px}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;
+  padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);
+  background:rgba(19,38,44,.97);transform:translateY(110%);visibility:hidden;transition:transform .25s ease-out,visibility 0s .25s}
+.phonebar.on{transform:none;visibility:visible;transition:transform .25s ease-out}
+.phonebar .btn{flex:1;min-height:50px}
+.phonebar .btn.line{color:var(--white)}
+@media (max-width:820px){.phonebar{display:flex}footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}}
+
+/* Static layout: reduced motion, or before the script runs */
+.static .walk{height:auto}
+.static .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column}
+.static .shot{position:relative;inset:auto;opacity:1 !important;transform:none !important}
+.static .shot img{height:auto;aspect-ratio:3/2}
+.static .k0 img{aspect-ratio:auto}
+.static .scrim{display:none}
+.static .beat{position:relative;left:auto;right:auto;bottom:auto;max-width:none;opacity:1 !important;transform:none !important;background:var(--dusk);padding:26px var(--gut-r) 30px var(--gut)}
+.static .k0{order:1}.static .b0{order:2}.static .k1{order:3}.static .k2{order:4}.static .b1{order:5}.static .k3{order:6}.static .k4{order:7}.static .b2{order:8}
+.static .tape{order:9;position:relative;left:auto;right:auto;bottom:auto;opacity:1 !important;margin:0 var(--gut-r) 28px var(--gut)}
+.static .tape .fill{transform:none !important}
+.static .beat p.lede,.static .beat .where{display:block}
+@media (prefers-reduced-motion: reduce){.phonebar,.phonebar.on{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#book">Skip to booking</a>
+<p class="strip">A website idea made by Lampbound Studio for Bask at Green Point. Not their official site.</p>
+
+<header class="top">
+  <a class="word" href="#walk" aria-label="Bask at Green Point, back to top"><b aria-hidden="true">bask</b><span aria-hidden="true">at Green Point</span></a>
+  <nav aria-label="Main">
+    <a href="#house">The house</a>
+    <a href="#lake">The lake</a>
+    <a class="btn" href="#book">Check dates</a>
+  </nav>
+</header>
+
+<main>
+<section class="walk" id="walk" aria-label="From the house to Wallis Lake">
+  <div class="stage">
+    <div class="shot k0">
+      <picture>
+        <source media="(min-width:700px)" srcset="img/aerial-1440.jpg">
+        <img src="img/aerial-tall-700.jpg" alt="Bask and Wallis Lake from the air at dusk, the house lit among the gums" width="700" height="875" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="shot k1"><img src="img/deck-1440.jpg" srcset="img/deck-700.jpg 700w, img/deck-1440.jpg 1440w" sizes="100vw" alt="Two friends with drinks at a rattan table on the upper deck, the lake through the gums behind them" width="1440" height="960"></div>
+    <div class="shot k2"><img src="img/lawn-1440.jpg" srcset="img/lawn-700.jpg 700w, img/lawn-1440.jpg 1440w" sizes="100vw" alt="Stepping stones from the deck onto a wide lawn under tall gums, the lake showing between the trunks" width="1440" height="1080"></div>
+    <div class="shot k3"><img src="img/shore-1440.jpg" srcset="img/shore-700.jpg 700w, img/shore-1440.jpg 1440w" sizes="100vw" alt="Two kayaks on the grass at the water's edge, Wallis Lake blue behind the trees" width="1440" height="1080"></div>
+    <div class="shot k4"><img src="img/water-1440.jpg" srcset="img/water-700.jpg 700w, img/water-1440.jpg 1440w" sizes="100vw" alt="Someone in a sun hat sitting in a white chair set in the clear, shallow lake" width="1440" height="961"></div>
+    <div class="scrim" aria-hidden="true"></div>
+    <div class="beat b0">
+      <p class="where">Green Point, a ten-minute drive south of Forster</p>
+      <h1>A whole house on the shore of Wallis Lake.</h1>
+      <p class="lede">Six bedrooms for up to 14 guests. The backyard runs down to the water.</p>
+    </div>
+    <div class="beat b1">
+      <h2>From the back deck, cross the lawn.</h2>
+      <p class="lede">The deck looks over the lake through the gums. Step off it onto the grass.</p>
+    </div>
+    <div class="beat b2">
+      <h2>Twenty metres later, you're in the lake.</h2>
+      <p class="lede">The kayak is yours to use. The water off the backyard is shallow.</p>
+    </div>
+    <div class="tape" aria-hidden="true">
+      <span class="end a">Back deck</span>
+      <span class="end b">Wallis Lake, 20 m</span>
+      <div class="track"><div class="fill"></div></div>
+      <div class="ticks"><svg viewBox="0 0 200 14" preserveAspectRatio="none"><path d="M0 0V14M10 0V6M20 0V6M30 0V6M40 0V6M50 0V9M60 0V6M70 0V6M80 0V6M90 0V6M100 0V14M110 0V6M120 0V6M130 0V6M140 0V6M150 0V9M160 0V6M170 0V6M180 0V6M190 0V6M200 0V14" stroke="#13262c" stroke-width="1" vector-effect="non-scaling-stroke" fill="none" opacity=".55"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<section class="house" id="house">
+  <div class="wrap">
+    <div class="inner">
+      <div>
+        <h2>The house</h2>
+        <p class="lede">Bask sits on the eastern shore of Wallis Lake, on Worimi country. The main bedroom, the studio, the kitchen, the dining room and the main living area all look out over the water.</p>
+        <figure class="map"><img src="img/map-1440.jpg" srcset="img/map-700.jpg 700w, img/map-1440.jpg 1440w" sizes="(max-width:880px) 100vw, 520px" alt="Their hand-drawn map of the house: the ground and first floors, the lawn, the lake on one side and Green Point Drive on the other" width="1440" height="1155" loading="lazy"><figcaption class="cap-s">Their own map of the house.</figcaption></figure>
+      </div>
+      <dl class="facts">
+        <dt>Sleeps 14</dt><dd>Six bedrooms and four bathrooms.</dd>
+        <dt>Cook</dt><dd>A big kitchen with a double fridge, a dishwasher and a servery out to the deck.</dd>
+        <dt>Little ones</dt><dd>A cot and a highchair.</dd>
+        <dt>Warm</dt><dd>A wood fire for the cooler months, reverse cycle air conditioning and ceiling fans.</dd>
+        <dt>Spread out</dt><dd>A second living area downstairs, plus a mud room for bags and shoes and a full laundry.</dd>
+        <dt>Arrive</dt><dd>Self check-in with a key safe, from 3pm to midnight. Check out before 10am.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="rail" tabindex="0" role="region" aria-label="Photos inside Bask">
+    <figure><img src="img/living-1440.jpg" srcset="img/living-700.jpg 700w, img/living-1440.jpg 1440w" sizes="(max-width:880px) 80vw, 32vw" alt="The open living room with a long white sofa, the kitchen beyond and glass doors to the deck" width="1440" height="961" loading="lazy"><figcaption>Living, dining and kitchen in one room</figcaption></figure>
+    <figure><img src="img/kitchen2-1440.jpg" srcset="img/kitchen2-700.jpg 700w, img/kitchen2-1440.jpg 1440w" sizes="(max-width:880px) 80vw, 32vw" alt="The white kitchen island with three rattan stools and woven pendant lights" width="1440" height="961" loading="lazy"><figcaption>The kitchen and its double fridge</figcaption></figure>
+    <figure><img src="img/dining-1440.jpg" srcset="img/dining-700.jpg 700w, img/dining-1440.jpg 1440w" sizes="(max-width:880px) 80vw, 32vw" alt="A long timber dining table under raked white ceilings, windows on to the trees" width="1440" height="960" loading="lazy"><figcaption>The dining table</figcaption></figure>
+    <figure><img src="img/living-fire-1440.jpg" srcset="img/living-fire-700.jpg 700w, img/living-fire-1440.jpg 1440w" sizes="(max-width:880px) 80vw, 32vw" alt="A lounge with a stone fireplace wall and built-in shelves" width="1440" height="961" loading="lazy"><figcaption>The wood fire</figcaption></figure>
+    <figure><img src="img/egg-1440.jpg" srcset="img/egg-700.jpg 700w, img/egg-1440.jpg 1440w" sizes="(max-width:880px) 80vw, 32vw" alt="A hanging rattan egg chair and a daybed on the timber deck, palms behind" width="1440" height="961" loading="lazy"><figcaption>The deck</figcaption></figure>
+    <figure><img src="img/downstairs-1440.jpg" srcset="img/downstairs-700.jpg 700w, img/downstairs-1440.jpg 1440w" sizes="(max-width:880px) 80vw, 32vw" alt="The downstairs living area with a modular sofa and a stone fireplace" width="1440" height="961" loading="lazy"><figcaption>Downstairs living</figcaption></figure>
+  </div>
+</section>
+
+<section class="rooms wrap" id="rooms">
+  <div class="inner">
+    <div>
+      <h2>Six bedrooms</h2>
+      <p class="lede">Two have their own ensuite: the main suite upstairs, and the studio, which also has a kitchenette and a spiral stair from the deck down to the yard.</p>
+      <figure><img src="img/master-1440.jpg" srcset="img/master-700.jpg 700w, img/master-1440.jpg 1440w" sizes="(max-width:880px) 100vw, 40vw" alt="The main suite: a king bed facing sliding doors on to a balcony and the treetops" width="1440" height="961" loading="lazy"><figcaption class="cap-s">The main suite, with a bath and a big walk-in robe.</figcaption></figure>
+    </div>
+    <ol class="beds">
+      <li><b>Bedroom 1</b><span>King. The main suite, with lake views, a bath, a sitting area and a walk-in robe.</span></li>
+      <li><b>Bedroom 2</b><span>King. The studio, with an ensuite and a kitchenette.</span></li>
+      <li><b>Bedroom 3</b><span>Queen.</span></li>
+      <li><b>Bedroom 4</b><span>Queen.</span></li>
+      <li><b>Bedroom 5</b><span>Two double beds.</span></li>
+      <li><b>Bedroom 6</b><span>Queen, downstairs.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="lakeband wrap" id="lake">
+  <div class="inner">
+    <div>
+      <h2>The lake is the backyard.</h2>
+      <p>There's a kayak to use whenever you like, and guests mention paddle boards too. The water off the yard is shallow, so kids can wade and play.</p>
+      <blockquote>
+        <p>"We had lovely weather and saw so many birds, including many sea eagles."</p>
+        <p class="who">Catherine, Airbnb, November 2026</p>
+      </blockquote>
+    </div>
+    <div class="pair">
+      <figure><img src="img/sup-700.jpg" srcset="img/sup-700.jpg 700w, img/sup-1440.jpg 1440w" sizes="(max-width:880px) 46vw, 22vw" alt="Two kids on a paddle board in clear blue lake water, hills behind" width="700" height="467" loading="lazy"><figcaption>Paddling off the backyard</figcaption></figure>
+      <figure><img src="img/kayaks-700.jpg" srcset="img/kayaks-700.jpg 700w, img/kayaks-1440.jpg 1440w" sizes="(max-width:880px) 46vw, 22vw" alt="A yellow kayak on the grass under palms by the lake" width="700" height="525" loading="lazy"><figcaption>A kayak on the lawn</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="guests wrap" id="guests">
+  <div class="inner">
+    <h2>What guests say</h2>
+    <p class="score"><b>4.98</b><span>from 132 reviews on Airbnb</span></p>
+    <ul class="quotes">
+      <li><p class="q">"Backyard had direct access to the lake. Water is shallow for the kids to play."</p><p class="who">Lily, Airbnb, October 2026</p></li>
+      <li><p class="q">"Having two bedrooms with ensuites was brilliant for a big family group!"</p><p class="who">Megan, Airbnb, September 2026</p></li>
+      <li><p class="q">"The view when you open the front door is just beautiful!"</p><p class="who">Georgy, Airbnb, March 2026</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="around wrap" id="around">
+  <div class="inner">
+    <div>
+      <h2>Getting here</h2>
+      <p class="lede" style="margin-top:16px">Green Point is a quiet lakeside village. The ocean beaches are about ten minutes' drive.</p>
+      <table class="dist">
+        <thead><tr><th scope="col">From Green Point, by road</th><th scope="col"><span class="vh">Distance</span></th></tr></thead>
+        <tbody>
+          <tr><td>Forster Main Beach</td><td>13 km</td></tr>
+          <tr><td>Tuncurry</td><td>14 km</td></tr>
+          <tr><td>Newcastle</td><td>145 km</td></tr>
+          <tr><td>Sydney</td><td>292 km</td></tr>
+        </tbody>
+      </table>
+      <p class="small">Road distances on OpenStreetMap, rounded.</p>
+    </div>
+    <figure><img src="img/aerial-tall-700.jpg" srcset="img/aerial-tall-700.jpg 700w, img/aerial-tall-1440.jpg 1440w" sizes="(max-width:880px) 100vw, 44vw" alt="Bask from the air at dusk, its windows lit above a strip of lawn, surrounded by tall gums" width="700" height="875" loading="lazy"><figcaption class="cap-s">Bask at dusk, lit up among the trees.</figcaption></figure>
+  </div>
+</section>
+
+<section class="book wrap" id="book">
+  <div class="inner">
+    <div>
+      <h2>Check dates</h2>
+      <p class="lede">See open dates on Airbnb, or send us a message on Instagram with your dates and group size.</p>
+      <div class="acts">
+        <a class="btn" href="https://www.airbnb.com.au/rooms/22047954" rel="noopener" target="_blank">See dates on Airbnb</a>
+        <a class="btn lake" href="https://ig.me/m/baskatgreenpoint" rel="noopener" target="_blank">Message on Instagram</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Good to know</h3>
+      <dl class="facts">
+        <dt>Guests</dt><dd>Up to 14, in six bedrooms.</dd>
+        <dt>Arrive</dt><dd>From 3pm to midnight, self check-in with a key safe.</dd>
+        <dt>Leave</dt><dd>Before 10am.</dd>
+        <dt>Water</dt><dd>The lake is at the bottom of the yard.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="close" aria-label="Bask from the lawn">
+  <img src="img/house-1440.jpg" srcset="img/house-700.jpg 700w, img/house-1440.jpg 1440w" sizes="100vw" alt="The two-storey white house with wide decks, seen from the lawn under tall gums" width="1440" height="961" loading="lazy">
+  <div class="panel">
+    <h2>Bask, from the lawn.</h2>
+    <p>97 Green Point Drive, Green Point. Six bedrooms, 14 guests, and Wallis Lake twenty metres away.</p>
+    <div class="acts">
+      <a class="btn" href="#book">Check dates</a>
+      <a class="btn line" href="https://www.instagram.com/baskatgreenpoint/" rel="noopener" target="_blank">@baskatgreenpoint</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="inner">
+    <p>A preview made by Lampbound Studio for Bask at Green Point. Not affiliated, not live.</p>
+    <p>Photos and the house map are from Bask's Airbnb listing.</p>
+  </div>
+</footer>
+
+<div class="phonebar" id="phonebar">
+  <a class="btn" href="#book">Check dates</a>
+  <a class="btn line" href="https://ig.me/m/baskatgreenpoint" rel="noopener" target="_blank">Message us</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var bar = document.getElementById('phonebar');
+  var walk = document.getElementById('walk');
+  var q = function(s){return document.querySelector(s)};
+  var shots=[q('.k0'),q('.k1'),q('.k2'),q('.k3'),q('.k4')];
+  var beats=[q('.b0'),q('.b1'),q('.b2')];
+  var tape=q('.tape'), fill=q('.tape .fill');
+  var clamp=function(v){return v<0?0:v>1?1:v};
+  var seg=function(p,a,b){return clamp((p-a)/(b-a))};
+  var ease=function(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
+  function prog(el){var r=el.getBoundingClientRect();var st=el.firstElementChild;var span=el.offsetHeight-(st?st.offsetHeight:window.innerHeight);return span>0?clamp(-r.top/span):0}
+  // when each shot fades in: aerial, deck, lawn, shore, water
+  var cut=[0,.2,.42,.62,.8];
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    var vh=window.innerHeight;
+    var bk=document.getElementById('book').getBoundingClientRect();
+    bar.classList.toggle('on', bar.contains(document.activeElement) || (walk.getBoundingClientRect().bottom<vh*.5 && (bk.top>vh*.9 || bk.bottom<0)));
+    if(reduce) return;
+    var p=prog(walk);
+    if(p>1.01) return;
+    for(var i=0;i<shots.length;i++){
+      var a=cut[i], b=i+1<cut.length?cut[i+1]:1.1;
+      var o=i===0?1:seg(p,a,a+.08);
+      shots[i].style.opacity=o.toFixed(3);
+      // each shot drifts in slowly while it is on screen: the photo plane
+      var local=clamp((p-a)/(b-a));
+      shots[i].style.transform='scale('+(1.1-local*.1).toFixed(4)+')';
+    }
+    // the copy plane moves faster than the photos
+    var o0=1-seg(p,.1,.18);
+    beats[0].style.opacity=o0.toFixed(3);
+    beats[0].style.transform='translate3d(0,'+(-(1-o0)*44).toFixed(1)+'px,0)';
+    var in1=seg(p,.26,.34), out1=seg(p,.5,.58), o1=in1*(1-out1);
+    beats[1].style.opacity=o1.toFixed(3);
+    beats[1].style.transform='translate3d(0,'+((1-in1)*30-out1*44).toFixed(1)+'px,0)';
+    var in2=seg(p,.84,.92);
+    beats[2].style.opacity=in2.toFixed(3);
+    beats[2].style.transform='translate3d(0,'+((1-in2)*30).toFixed(1)+'px,0)';
+    // the tape runs out from the deck (0.2) to the water (0.86)
+    tape.style.opacity=seg(p,.18,.26).toFixed(3);
+    var m=ease(seg(p,.22,.86));
+    fill.style.transform='scaleX('+m.toFixed(4)+')';
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(mq.addEventListener) mq.addEventListener('change',function(){location.reload()});
+  frame();
+})();
+</script>
+</body>
+</html>
