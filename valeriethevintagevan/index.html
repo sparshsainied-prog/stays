@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Valerie the Vintage Van, Cobark | A 1964 Sunliner on the Barrington River</title>
+<meta name="description" content="A 1964 Sunliner caravan for two by the Barrington River at Cobark, NSW, with an outdoor bath, a fire pit and no reception. A website idea made by Lampbound Studio for Valerie the Vintage Van.">
+<meta property="og:title" content="Valerie the Vintage Van, Cobark">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Valerie the Vintage Van. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/valeriethevintagevan/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/valeriethevintagevan/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230f1716'/%3E%3Cpath d='M5 22 Q4 11 13 10 L22 10 Q29 11 28 22 Z' fill='%23f1f3f0'/%3E%3Crect x='14' y='13' width='4' height='9' fill='%23c14d00'/%3E%3Crect x='7' y='14' width='5' height='3' fill='%23ffb347'/%3E%3Crect x='21' y='14' width='5' height='3' fill='%23ffb347'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/day-1440.jpg" media="(min-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/day-800.jpg" media="(max-width: 699px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,600;1,400&family=Righteous&display=swap">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* Tokens come from Valerie herself (see brand.md):
+   orange = the Sunliner door and cupboards
+   night  = the sky in their night photo
+   van    = the cool white body
+   check  = the checkerboard floor
+   slate  = the Barrington River
+   fire   = the lantern and fairy lights
+   Righteous for 1960s caravan-badge lettering; Karla for plain reading. */
+:root{
+  --orange:#c14d00;
+  --orange-2:#e0661a;
+  --night:#0f1716;
+  --night-2:#18221f;
+  --van:#f1f3f0;
+  --van-2:#e2e6e1;
+  --check:#151515;
+  --slate:#556175;
+  --ink:#1b2321;
+  --ink-soft:#4a5552;
+  --gum:#384b20;
+  --fire:#ffb347;
+  --display:"Righteous","Futura","Avenir Next",sans-serif;
+  --text:"Karla","Helvetica Neue",Arial,sans-serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--van);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.dark :focus-visible,.strip :focus-visible,.bar :focus-visible,footer :focus-visible{outline-color:var(--fire)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:.005em}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:44px;z-index:60;background:var(--van);padding:8px 12px}
+
+/* Preview strip */
+.strip{position:relative;z-index:40;background:var(--night);color:#d9dfdb;font-size:14px;line-height:1.4;padding:9px var(--gut-r) 9px var(--gut);text-align:center}
+
+/* Hero: dusk at the clearing */
+.hero{position:relative;height:300vh;background:var(--night)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.plate{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:48% 62%}
+.plate.night{opacity:var(--night-o,0)}
+.trees{position:absolute;inset:-2% -6% 0 -6%;pointer-events:none}
+.trees svg{position:absolute;bottom:0;height:104%;width:26vw}
+.trees .l{left:0;transform:translate3d(calc(var(--p,0) * -22vw),0,0)}
+.trees .r{right:0;transform:translate3d(calc(var(--p,0) * 22vw),0,0)}
+.stars{position:absolute;inset:0 0 45% 0;opacity:var(--stars-o,0);pointer-events:none}
+.stars svg{width:100%;height:100%}
+.scrim{position:absolute;left:0;right:0;top:0;height:58%;background:linear-gradient(to bottom,rgba(10,16,15,.62),rgba(10,16,15,.25) 60%,rgba(10,16,15,0));pointer-events:none}
+.hero-copy{position:absolute;left:var(--gut);right:var(--gut-r);top:clamp(64px,11vh,120px);max-width:880px;color:var(--van);transform:translate3d(0,calc(var(--p,0) * -6vh),0)}
+.hero h1{font-size:clamp(44px,8.4vw,112px);text-shadow:0 2px 18px rgba(0,0,0,.35)}
+.hero-copy p{margin-top:14px;font-size:clamp(18px,1.7vw,23px);font-weight:600;max-width:30ch;text-shadow:0 1px 3px rgba(0,0,0,.8),0 2px 14px rgba(0,0,0,.6)}
+.dusk-line{position:absolute;left:var(--gut);right:var(--gut-r);bottom:clamp(96px,16vh,160px);color:var(--van);max-width:30ch;font-size:clamp(20px,2.3vw,30px);line-height:1.3;opacity:var(--line-o,0);transform:translate3d(0,calc((1 - var(--line-o,0)) * 18px),0);text-shadow:0 1px 12px rgba(0,0,0,.7)}
+.dusk-line small{display:block;margin-top:8px;font-size:15px;color:#c9d1cc}
+
+/* Sections */
+section{position:relative}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--gut-r) 0 var(--gut)}
+.intro{padding:clamp(64px,10vw,130px) 0 clamp(48px,7vw,90px)}
+.intro .wrap{display:grid;grid-template-columns:1fr;gap:36px;align-items:end}
+.intro h2{font-size:clamp(34px,5vw,64px);color:var(--ink)}
+.intro h2 span{color:var(--orange)}
+.lede{font-size:clamp(19px,1.8vw,23px);margin-top:20px;max-width:36ch}
+.facts{list-style:none;margin:28px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px 22px;font-size:16px;color:var(--ink-soft)}
+.facts li{border-top:2px solid var(--orange);padding-top:6px}
+.door{margin:0}
+.door img{width:100%;border-radius:4px}
+.cap{font-size:14px;color:var(--ink-soft);margin-top:8px}
+
+.checker{height:18px;background:repeating-conic-gradient(var(--check) 0 25%, var(--van) 0 50%) 0 0/18px 18px}
+.inside{background:var(--van-2);padding:clamp(56px,8vw,100px) 0}
+.inside h2{font-size:clamp(30px,4.2vw,52px)}
+.inside .wrap > p{margin-top:12px;max-width:44ch}
+.reel{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:28px var(--gut-r) 12px var(--gut);margin-top:8px;scrollbar-width:thin}
+.reel figure{flex:0 0 auto;margin:0;scroll-snap-align:start;width:min(78vw,420px)}
+.reel figure.tall{width:min(62vw,330px)}
+.reel img{width:100%;height:auto;border-radius:3px}
+.reel figcaption{font-size:14px;color:var(--ink-soft);margin-top:6px}
+
+.river{background:var(--night);color:var(--van);padding:0 0 clamp(56px,8vw,110px)}
+.river .big{width:100%;height:min(78vh,760px);object-fit:cover;object-position:50% 55%}
+.river .wrap{display:grid;gap:32px;margin-top:-90px;position:relative}
+.river .card{background:var(--night);padding:28px 0 0;max-width:640px}
+.river h2{font-size:clamp(30px,4.4vw,56px);color:var(--van)}
+.river p{margin-top:14px;color:#cdd5d1}
+.river q{quotes:none;color:var(--fire)}
+.pair{display:grid;grid-template-columns:1fr;gap:14px}
+.pair img{width:100%;border-radius:3px}
+
+.bath{padding:clamp(60px,9vw,120px) 0}
+.bath .wrap{display:grid;grid-template-columns:1fr;gap:30px;align-items:center}
+.bath h2{font-size:clamp(30px,4.2vw,52px)}
+.bath p{margin-top:14px;max-width:40ch}
+.bath .shots{display:grid;grid-template-columns:3fr 2fr;gap:12px;align-items:end}
+.bath .shots img{width:100%;border-radius:3px}
+
+.where{background:var(--van-2);padding:clamp(56px,8vw,100px) 0}
+.where h2{font-size:clamp(28px,3.8vw,46px)}
+.where .wrap{display:grid;grid-template-columns:1fr;gap:30px}
+.legs{list-style:none;padding:0;margin:20px 0 0;font-size:17px}
+.legs li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #c7cdc8}
+.legs b{font-weight:600;color:var(--ink);text-align:right}
+.where img{width:100%;border-radius:3px}
+
+.said{padding:clamp(60px,9vw,120px) 0}
+.said h2{font-size:clamp(28px,3.8vw,46px);margin-bottom:28px}
+.said ul{list-style:none;padding:0;margin:0;columns:1;column-gap:44px}
+.said li{break-inside:avoid;margin:0 0 30px}
+.said blockquote{margin:0;font-size:clamp(19px,1.7vw,22px);line-height:1.45}
+.said cite{display:block;font-style:normal;font-size:14px;color:var(--ink-soft);margin-top:8px}
+.said li:nth-child(2) blockquote{color:#a03f00}
+
+.book{background:var(--night);color:var(--van);padding:0}
+.book .fire{width:100%;height:min(70vh,640px);object-fit:cover;object-position:50% 70%}
+.book .wrap{padding-top:clamp(44px,7vw,80px);padding-bottom:clamp(56px,8vw,96px);display:grid;gap:30px}
+.book h2{font-size:clamp(34px,5vw,64px)}
+.book p{color:#cdd5d1;max-width:46ch;margin-top:12px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 22px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none}
+.btn.primary{background:var(--orange);color:#fff}
+.btn.primary:hover{background:#a84300}
+.btn.ghost{border:2px solid #6d7a75;color:var(--van)}
+.btn.ghost:hover{border-color:var(--van)}
+.terms{list-style:none;padding:0;margin:0;font-size:16px;color:#cdd5d1}
+.terms li{padding:9px 0;border-bottom:1px solid #2a3532}
+
+footer{background:var(--check);color:#aeb7b2;font-size:14px;padding:26px var(--gut-r) calc(96px + env(safe-area-inset-bottom,0px)) var(--gut)}
+footer .wrap{padding:0}
+footer p + p{margin-top:6px}
+
+/* Check dates bar: thumb reach on phones */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(15,23,22,.96);color:var(--van);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);border-top:1px solid #26322f}
+.bar span{font-size:15px;line-height:1.3;min-width:0}
+@media (max-width:359px){.bar span{display:none}.bar{justify-content:center}}
+.bar .btn{min-height:48px;padding:10px 20px;font-size:16px;white-space:nowrap;flex:0 0 auto}
+
+@media (min-width:760px){
+  .intro .wrap{grid-template-columns:1.1fr .9fr;gap:56px}
+  .river .wrap{grid-template-columns:1.2fr 1fr;align-items:start}
+  .pair{grid-template-columns:1fr 1fr;margin-top:120px}
+  .bath .wrap{grid-template-columns:1fr 1.15fr;gap:56px}
+  .where .wrap{grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .said ul{columns:2}
+  .book .wrap{grid-template-columns:1.2fr 1fr;align-items:start}
+  .dusk-line{left:auto;right:max(48px,6vw);top:30vh;bottom:auto;text-align:right}
+  .bar{left:auto;right:24px;bottom:24px;border-radius:999px;border:1px solid #33403c;padding:8px 8px 8px 22px;gap:18px}
+  footer{padding-bottom:40px}
+}
+@media (max-width:699px){
+  .hero{height:240vh}
+  .plate{object-position:46% 64%}
+  .trees svg{height:92%}
+  .dusk-line{top:max(36%,250px);bottom:auto}
+}
+/* Without JS or with reduced motion: the end state, night, no pinning */
+html:not(.js) .hero,.rm .hero{height:auto}
+html:not(.js) .stage,.rm .stage{position:relative;height:88vh;height:88svh}
+html:not(.js) .plate.night,.rm .plate.night{opacity:1}
+html:not(.js) .stars,.rm .stars,html:not(.js) .dusk-line,.rm .dusk-line{opacity:1;transform:none}
+.rm .trees .l,.rm .trees .r,.rm .hero-copy{transform:none}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the van</a>
+<div class="strip">A website idea made by Lampbound Studio for Valerie the Vintage Van. Not their official site.</div>
+
+<header class="hero" id="top" aria-label="Valerie by the Barrington River, from day into night">
+  <div class="stage">
+    <picture>
+      <source media="(max-width:699px)" srcset="img/day-800.jpg">
+      <img class="plate day" src="img/day-1440.jpg" width="1440" height="1080" alt="Valerie, a white 1964 Sunliner caravan with an orange door, on a grassy rise among gum trees, with the bathroom hut beside her" fetchpriority="high">
+    </picture>
+    <picture>
+      <source media="(max-width:699px)" srcset="img/night-800.jpg">
+      <img class="plate night" src="img/night-1440.jpg" width="1440" height="1080" alt="The same clearing at night, Valerie's windows and fairy lights glowing" loading="eager">
+    </picture>
+    <div class="stars" aria-hidden="true">
+      <svg viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid slice">
+        <g fill="#ffe3b0">
+          <circle cx="62" cy="40" r="1.6"/><circle cx="140" cy="118" r="1.1"/><circle cx="210" cy="64" r="1.8"/><circle cx="288" cy="22" r="1.2"/><circle cx="352" cy="140" r="1.4"/><circle cx="420" cy="58" r="1"/><circle cx="476" cy="104" r="1.9"/><circle cx="538" cy="30" r="1.2"/><circle cx="604" cy="86" r="1.5"/><circle cx="660" cy="150" r="1"/><circle cx="712" cy="48" r="1.7"/><circle cx="780" cy="112" r="1.2"/><circle cx="846" cy="34" r="1.4"/><circle cx="904" cy="96" r="1.1"/><circle cx="960" cy="58" r="1.6"/><circle cx="100" cy="190" r="1"/><circle cx="250" cy="200" r="1.3"/><circle cx="580" cy="190" r="1"/><circle cx="820" cy="200" r="1.2"/><circle cx="380" cy="250" r=".9"/><circle cx="700" cy="240" r=".9"/>
+        </g>
+      </svg>
+    </div>
+    <div class="scrim"></div>
+    <div class="trees" aria-hidden="true">
+      <svg class="l" viewBox="0 0 260 900" preserveAspectRatio="xMinYMax meet">
+        <path d="M18 900 C30 720 8 560 34 380 C44 300 22 170 40 0 L150 0 C132 150 150 280 136 380 C116 560 140 730 146 900 Z" fill="#1a2215"/>
+        <path d="M60 900 C66 760 52 600 70 430 L84 430 C76 600 90 760 92 900 Z" fill="#2a331f" opacity=".7"/>
+        <path d="M120 300 C170 270 210 280 250 240 M130 470 C180 450 220 470 262 440" stroke="#1a2215" stroke-width="10" fill="none" stroke-linecap="round"/>
+        <path d="M0 0 H260 V70 C236 104 204 86 180 118 C150 150 118 124 92 150 C64 176 30 150 0 172 Z" fill="#1a2215"/>
+        <g fill="#1a2215"><ellipse cx="236" cy="236" rx="30" ry="12"/><ellipse cx="250" cy="430" rx="22" ry="9"/><ellipse cx="200" cy="120" rx="40" ry="14"/></g>
+      </svg>
+      <svg class="r" viewBox="0 0 260 900" preserveAspectRatio="xMaxYMax meet">
+        <path d="M120 900 C128 730 106 560 126 390 C136 300 114 170 132 0 L240 0 C228 160 244 290 232 390 C214 560 236 730 242 900 Z" fill="#1a2215"/>
+        <path d="M180 900 C186 780 172 640 188 500 L200 500 C194 640 206 780 208 900 Z" fill="#2a331f" opacity=".7"/>
+        <path d="M130 330 C80 300 40 310 0 270" stroke="#1a2215" stroke-width="10" fill="none" stroke-linecap="round"/>
+        <path d="M260 0 H0 V60 C30 96 64 78 92 108 C124 140 160 116 190 142 C216 164 238 146 260 160 Z" fill="#1a2215"/>
+        <g fill="#1a2215"><ellipse cx="22" cy="262" rx="34" ry="12"/><ellipse cx="70" cy="110" rx="44" ry="14"/></g>
+      </svg>
+    </div>
+    <div class="hero-copy">
+      <h1>Valerie the Vintage Van</h1>
+      <p>A 1964 Sunliner for two, parked by the Barrington River at Cobark.</p>
+    </div>
+    <p class="dusk-line">&ldquo;No WiFi or mobile reception to invade your peace and quiet, just the sounds of nature.&rdquo;<small>From Valerie&rsquo;s listing</small></p>
+  </div>
+</header>
+
+<main id="main">
+  <section class="intro" aria-labelledby="meet">
+    <div class="wrap">
+      <div>
+        <h2 id="meet">Step back in time, <span>right by the river.</span></h2>
+        <p class="lede">Valerie is a 1964 Sunliner with her own deck, a private bathroom with a hot shower, an outdoor bath with a view and a fire pit. The Barrington runs past a stone's throw away, freely flowing from the Barrington Tops wilderness.</p>
+        <ul class="facts">
+          <li>Sleeps 2</li>
+          <li>1 bedroom, 1 bath</li>
+          <li>Outdoor bath and fire pit</li>
+          <li>No WiFi, no reception</li>
+          <li>No pets</li>
+        </ul>
+      </div>
+      <figure class="door">
+        <img src="img/door-600.jpg" srcset="img/door-600.jpg 600w, img/door-1200.jpg 1200w" sizes="(min-width:760px) 40vw, 90vw" width="600" height="900" alt="Valerie's open door, with the checkerboard floor and orange cupboards inside" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <div class="checker" aria-hidden="true"></div>
+  <section class="inside" aria-labelledby="in">
+    <div class="wrap">
+      <h2 id="in">Inside Valerie</h2>
+      <p>Orange cupboards, a checkerboard floor and lots of luxury and retro features, all inside a caravan built in 1964.</p>
+    </div>
+    <div class="reel" tabindex="0" role="region" aria-label="Photos inside Valerie, scroll sideways">
+      <figure><img src="img/inside-600.jpg" srcset="img/inside-600.jpg 600w, img/inside-1200.jpg 1200w" sizes="420px" width="600" height="450" alt="Looking down the van from the bed to the dinette and galley" loading="lazy"><figcaption>From the bed to the galley</figcaption></figure>
+      <figure class="tall"><img src="img/galley-600.jpg" srcset="img/galley-600.jpg 600w, img/galley-1200.jpg 1200w" sizes="330px" width="600" height="800" alt="The galley with orange cupboard doors and a fridge, above the checkerboard floor" loading="lazy"><figcaption>The galley</figcaption></figure>
+      <figure><img src="img/bed-600.jpg" srcset="img/bed-600.jpg 600w, img/bed-1200.jpg 1200w" sizes="420px" width="600" height="400" alt="The bed under the back windows, with cushions and a guitar" loading="lazy"><figcaption>The bed, under the back windows</figcaption></figure>
+      <figure><img src="img/dinette-600.jpg" srcset="img/dinette-600.jpg 600w, img/dinette-1200.jpg 1200w" sizes="420px" width="600" height="450" alt="The dinette with orange seats and a floral tablecloth" loading="lazy"><figcaption>The dinette</figcaption></figure>
+      <figure><img src="img/stove-600.jpg" srcset="img/stove-600.jpg 600w, img/stove-1200.jpg 1200w" sizes="420px" width="600" height="400" alt="Pancakes cooking on the stove" loading="lazy"><figcaption>Breakfast on the stove</figcaption></figure>
+      <figure class="tall"><img src="img/book-600.jpg" srcset="img/book-600.jpg 600w, img/book-1200.jpg 1200w" sizes="330px" width="600" height="800" alt="A book called My Cool Caravan on the bench, with orange canisters" loading="lazy"><figcaption>My Cool Caravan, on the bench</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="river dark" aria-labelledby="riv">
+    <img class="big" src="img/river-mist-1200.jpg" srcset="img/river-mist-600.jpg 600w, img/river-mist-1200.jpg 1200w" sizes="100vw" width="1200" height="1200" alt="Mist over the Barrington River in the morning, gums leaning over the water" loading="lazy">
+    <div class="wrap">
+      <div class="card">
+        <h2 id="riv">The Barrington, a few metres away</h2>
+        <p>The clear-flowing Barrington and Cobark rivers run right past, with a deep hole for swimming and shallow rapids for lazing in. A platypus lives in the river only a few metres from Valerie. Waking up early is the best way to see it.</p>
+        <p><q>We swam every morning, despite the cold, followed by a lovely, hot outdoor bath.</q> Anastasia, Airbnb</p>
+      </div>
+      <div class="pair">
+        <img src="img/chairs-600.jpg" srcset="img/chairs-600.jpg 600w, img/chairs-1200.jpg 1200w" sizes="(min-width:760px) 25vw, 90vw" width="600" height="750" alt="Two deck chairs standing in the shallow river, with drinks cooling on the rocks" loading="lazy">
+        <img src="img/rapids-600.jpg" srcset="img/rapids-600.jpg 600w, img/rapids-1200.jpg 1200w" sizes="(min-width:760px) 25vw, 90vw" width="600" height="664" alt="The river running over rocks under a blue sky" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="bath" aria-labelledby="bth">
+    <div class="wrap">
+      <div>
+        <h2 id="bth">A bath outside, a fire after dark</h2>
+        <p>The clawfoot bath sits outside on the deck by the bathroom hut, with a view. After dark, relax beside the fire pit under the stars.</p>
+        <p><q style="quotes:none">The sound of the river and small waterfall is so peaceful, great bath, great fire pit.</q> Amy, Airbnb</p>
+      </div>
+      <div class="shots">
+        <img src="img/bath-600.jpg" srcset="img/bath-600.jpg 600w, img/bath-1200.jpg 1200w" sizes="(min-width:760px) 32vw, 55vw" width="600" height="800" alt="The clawfoot bath on the deck at dusk, with a lantern beside it" loading="lazy">
+        <img src="img/hut-600.jpg" srcset="img/hut-600.jpg 600w, img/hut-1200.jpg 1200w" sizes="(min-width:760px) 22vw, 38vw" width="600" height="450" alt="The bathroom hut with its green door and the bath out front" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="where" aria-labelledby="whr">
+    <div class="wrap">
+      <div>
+        <h2 id="whr">Getting to Valerie</h2>
+        <p style="margin-top:12px">On Scone Road at Cobark, with Barrington Tops National Park on your doorstep. You get the exact spot after booking.</p>
+        <ul class="legs">
+          <li><span>Gloucester, for a shop or a meal</span><b>about 30 min</b></li>
+          <li><span>Barrington Tops National Park</span><b>on your doorstep</b></li>
+          <li><span>Gloucester Walking Track</span><b>1.8 km return</b></li>
+          <li><span>The river</span><b>a stone's throw</b></li>
+        </ul>
+      </div>
+      <img src="img/valley-600.jpg" srcset="img/valley-600.jpg 600w, img/valley-1200.jpg 1200w" sizes="(min-width:760px) 45vw, 90vw" width="600" height="750" alt="Mist on the ranges above the valley, Valerie a white dot on the green below" loading="lazy">
+    </div>
+  </section>
+
+  <section class="said" aria-labelledby="sd">
+    <div class="wrap">
+      <h2 id="sd">Guests on Valerie</h2>
+      <ul>
+        <li><blockquote>It was even better than i imagined. Peaceful. Just wonderful to recharge.</blockquote><cite>Natalie, Airbnb</cite></li>
+        <li><blockquote>Valerie is in a beautiful location, and her generous and lovely hosts make it the perfect stay.</blockquote><cite>Lisa, Riparide</cite></li>
+        <li><blockquote>Cute and cosy van, with great bath and private view of the river.</blockquote><cite>James, Riparide</cite></li>
+        <li><blockquote>Valerie is close enough to Gloucester for a quick shop or meal, and far enough away to feel like you're in your own world.</blockquote><cite>Ryan, Airbnb</cite></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="book dark" id="book" aria-labelledby="bk">
+    <img class="fire" src="img/fire-1200.jpg" srcset="img/fire-600.jpg 600w, img/fire-1200.jpg 1200w" sizes="100vw" width="1200" height="900" alt="The fire pit burning at night, Valerie and her umbrella lit up behind" loading="lazy">
+    <div class="wrap">
+      <div>
+        <h2 id="bk">Book a few nights with Valerie</h2>
+        <p>Pick your dates on Airbnb or Riparide. Douglas usually answers within the hour.</p>
+        <div class="btns">
+          <a class="btn primary" href="https://www.airbnb.com.au/rooms/53266504" rel="noopener">Check dates on Airbnb</a>
+          <a class="btn ghost" href="https://www.riparide.com/listings/6928-valerie-the-vintage-van-barrington-tops" rel="noopener">Book on Riparide</a>
+        </div>
+      </div>
+      <ul class="terms">
+        <li>Two nights minimum</li>
+        <li>Check in after 2pm, check out by 10am</li>
+        <li>For two guests, no pets</li>
+        <li>Bring a book. There's no reception.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>A preview made by Lampbound Studio for Valerie the Vintage Van. Not affiliated, not live.</p>
+    <p>Photos and listing words are Valerie&rsquo;s own, from her public listings. Guest lines are from reviews on Airbnb and Riparide.</p>
+  </div>
+</footer>
+
+<div class="bar" role="region" aria-label="Check dates">
+  <span>Valerie, Cobark. Two nights minimum.</span>
+  <a class="btn primary" href="https://www.airbnb.com.au/rooms/53266504" rel="noopener">Check dates</a>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  var hero=document.querySelector('.hero');
+  function apply(){ if(mq.matches){root.classList.add('rm')} else {root.classList.remove('rm')} update(); }
+  function clamp(v){return v<0?0:v>1?1:v}
+  var ticking=false;
+  function update(){
+    ticking=false;
+    if(mq.matches){return}
+    var r=hero.getBoundingClientRect();
+    var span=hero.offsetHeight-window.innerHeight;
+    var p=clamp(-r.top/(span||1));
+    var s=hero.style;
+    s.setProperty('--p',clamp(p/0.45).toFixed(3));
+    s.setProperty('--night-o',clamp((p-0.3)/0.4).toFixed(3));
+    s.setProperty('--stars-o',clamp((p-0.55)/0.25).toFixed(3));
+    s.setProperty('--line-o',clamp((p-0.62)/0.2).toFixed(3));
+  }
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(update)}},{passive:true});
+  window.addEventListener('resize',update);
+  if(mq.addEventListener){mq.addEventListener('change',apply)}
+  apply();
+})();
+</script>
+</body>
+</html>
