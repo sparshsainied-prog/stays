@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Appleyard Cottage | Hanging Rock Truffle Farm, Woodend</title>
+<meta name="description" content="An 1890s shearing shed on a working truffle farm in the Macedon Ranges, looking out to Hanging Rock. A cottage for two. A website idea made by Lampbound Studio for Appleyard Cottage.">
+<meta property="og:title" content="Appleyard Cottage, Hanging Rock Truffle Farm">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Appleyard Cottage. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/appleyardcottage/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/appleyardcottage/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23262b2a'/%3E%3Cpath d='M4 25 L12 11 L16 15 L20 9 L28 25Z' fill='%23d6b56c'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/rock-1440.jpg" media="(min-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/rockM.jpg" media="(max-width: 699px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600&family=Old+Standard+TT:ital,wght@0,400;1,400&display=swap">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* Tokens come from the farm and the shed (see brand.md):
+   char    = the dark bathroom tiles and the wood heater
+   gum     = the grey eucalypt green walls (a mid tone only)
+   lime    = the white weatherboards and linen
+   copper  = the bath and the taps
+   paddock = the dry grass in front of Hanging Rock
+   slate   = the cast iron gate sign
+   Old Standard TT for the 1890s shed and the sign's Victorian capitals; Karla for reading. */
+:root{
+  --char:#262b2a;
+  --char-2:#323837;
+  --gum:#56645a;
+  --lime:#eceeeb;
+  --lime-2:#dfe2de;
+  --copper:#94532e;
+  --paddock:#d6b56c;
+  --slate:#3d4a5c;
+  --ink:#1f2423;
+  --ink-soft:#4c5552;
+  --display:"Old Standard TT","Georgia",serif;
+  --text:"Karla","Helvetica Neue",sans-serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--lime);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--copper);outline-offset:3px}
+.dark :focus-visible,.strip :focus-visible,.top :focus-visible,.phonebar :focus-visible,footer :focus-visible,.close :focus-visible,.hero :focus-visible{outline-color:var(--paddock)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--lime);padding:8px 12px}
+
+.strip{background:var(--char);color:var(--lime);font-size:14px;line-height:1.4;text-align:center;margin:0;
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  padding:16px var(--gut-r) 28px var(--gut);background:linear-gradient(rgba(31,36,35,.55),rgba(31,36,35,0))}
+.word{text-decoration:none;color:#fff;font-family:var(--display);font-size:24px;line-height:1}
+.word small{display:block;font-family:var(--text);font-size:13px;margin-top:5px;color:#e6e8e4}
+.top nav{display:flex;gap:24px;align-items:center;font-weight:600;font-size:15px}
+.top nav a{text-decoration:none;color:#fff}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:2px;
+  font-family:var(--text);font-weight:600;font-size:16px;text-decoration:none;border:0;cursor:pointer;background:var(--copper);color:#fff}
+.btn:hover{background:#7d4524}
+.btn.gold{background:var(--paddock);color:var(--ink)}
+.btn.gold:hover{background:#e3c88b}
+.top nav .btn{background:var(--paddock);color:var(--ink);white-space:nowrap;flex:none}
+@media (max-width:820px){.top nav a:not(.btn){display:none}}
+
+/* ---------- Act 1: Hanging Rock over the paddock, in two planes ---------- */
+.hero{position:relative;height:200vh;background:var(--char)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:#5d87b8}
+.pl{position:absolute;inset:0;will-change:transform}
+.pl img{width:100%;height:100%;object-fit:cover;object-position:58% 50%}
+.pl-rock{transform-origin:58% 50%}
+.pl-grass{transform-origin:50% 100%;-webkit-mask-image:linear-gradient(transparent 0,transparent 66%,#000 74%);mask-image:linear-gradient(transparent 0,transparent 66%,#000 74%)}
+.pl-shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(31,36,35,.78) 0,rgba(31,36,35,.35) 45%,rgba(31,36,35,0) 68%);z-index:1}
+@media (min-width:700px){.pl-shade{background:linear-gradient(to right,rgba(31,36,35,.62) 0,rgba(31,36,35,.3) 40%,rgba(31,36,35,0) 62%)}}
+.h-copy{position:absolute;z-index:2;left:max(var(--gut),56px);bottom:clamp(40px,11vh,120px);max-width:min(640px,calc(100% - 40px));color:#fff;will-change:transform,opacity}
+.h-copy .where{font-size:15px;color:#f6ecd2;font-weight:600}
+.h-copy h1{font-size:clamp(40px,5vw,76px);margin-top:10px}
+.h-copy .lede{margin-top:14px;font-size:clamp(17px,1.4vw,20px);max-width:32em;color:#f0f1ee}
+.sh{text-shadow:0 2px 14px rgba(20,24,23,.65)}
+.h-two{position:absolute;z-index:2;right:max(var(--gut-r),56px);top:clamp(110px,20vh,200px);max-width:440px;opacity:0;background:rgba(38,43,42,.9);color:var(--lime);padding:20px 24px;will-change:opacity}
+.h-two p{font-family:var(--display);font-style:italic;font-size:clamp(23px,2.2vw,31px);line-height:1.25}
+.h-two .src{font-family:var(--text);font-style:normal;font-size:14px;color:var(--paddock);margin-top:10px}
+@media (max-width:699px){
+  .h-copy{bottom:calc(96px + env(safe-area-inset-bottom,0px));right:var(--gut-r)}
+  .h-copy h1{font-size:clamp(34px,9.6vw,46px)}
+  .h-two{left:var(--gut);right:var(--gut-r);top:96px;max-width:none}
+}
+@media (max-width:699px) and (max-height:700px){.h-copy .lede{display:none}}
+@media (min-width:700px) and (max-height:640px){.h-copy{bottom:28px}.h-copy h1{font-size:clamp(32px,3.4vw,46px)}.h-copy .lede{display:none}.h-two{top:90px}}
+
+/* ---------- Act 2 (the peak): the farm gate ---------- */
+.gatehouse{position:relative;height:420vh;background:var(--char)}
+.g-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--char);perspective:1300px}
+.drive{position:absolute;inset:0;transform-origin:50% 62%;will-change:transform}
+.drive img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.gate{position:absolute;z-index:2;left:7%;width:86%;bottom:7%;height:min(58%,560px);transform-origin:0 50%;will-change:transform;transform-style:preserve-3d}
+.gate svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.sign{position:absolute;left:50%;top:22%;width:min(34%,330px);transform:translateX(-50%);box-shadow:0 6px 14px rgba(0,0,0,.35)}
+.post{position:absolute;z-index:1;left:calc(7% - 22px);bottom:4%;width:22px;height:calc(min(58%,560px) + 9%);background:linear-gradient(90deg,#5b5a52,#8a887d 45%,#4d4c45);border-radius:2px}
+.g-words{position:absolute;z-index:3;left:max(var(--gut),56px);top:clamp(70px,11vh,110px);max-width:440px;color:#fff;will-change:opacity}
+.g-words h2{font-size:clamp(34px,3.6vw,54px)}
+.g-words p{margin-top:12px;color:#eef0ec}
+.porch{position:absolute;inset:0;z-index:4;opacity:0;will-change:opacity}
+.porch img{width:100%;height:100%;object-fit:cover;object-position:40% 50%}
+.g-end{position:absolute;z-index:5;right:max(var(--gut-r),56px);bottom:clamp(30px,9vh,90px);max-width:520px;opacity:0;background:rgba(38,43,42,.92);color:var(--lime);padding:clamp(22px,2.4vw,32px);will-change:opacity}
+.g-end h3{font-size:clamp(32px,3.2vw,46px)}
+.g-end p{margin-top:10px}
+@media (max-width:820px){
+  .gate{left:5%;width:90%;height:44%;bottom:16%}
+  .post{left:calc(5% - 16px);width:16px;height:52%;bottom:13%}
+  .sign{width:54%;top:16%}
+  .g-words{left:var(--gut);right:var(--gut-r);top:20px;max-width:none;background:rgba(38,43,42,.86);padding:14px 18px}
+  .g-words h2{font-size:30px}
+  .g-words p{font-size:16px;margin-top:6px}
+  .g-end{left:var(--gut);right:var(--gut-r);max-width:none;bottom:calc(88px + env(safe-area-inset-bottom,0px))}
+  .gatehouse{height:380vh}
+}
+
+/* ---------- Sections ---------- */
+.wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
+.inner{max-width:1200px;margin:0 auto}
+section{scroll-margin-top:10px}
+h2.big{font-size:clamp(42px,5.4vw,78px)}
+.lede{font-size:clamp(18px,1.5vw,21px);max-width:34em}
+.who{font-size:14px;color:var(--ink-soft);margin-top:6px}
+
+/* The cottage */
+.cottage{padding-block:clamp(80px,10vw,140px)}
+.c-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,5vw,72px);align-items:end}
+.c-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:10px;margin-top:clamp(30px,4vw,52px)}
+.c-grid figure{margin:0;position:relative;overflow:hidden;background:var(--lime-2)}
+.c-grid img{width:100%;height:100%;object-fit:cover}
+.c-grid figcaption{position:absolute;left:0;bottom:0;background:rgba(38,43,42,.88);color:var(--lime);font-size:14px;padding:6px 10px}
+.g1{grid-column:1/8;aspect-ratio:3/2}
+.g2{grid-column:8/13;grid-row:span 2}
+.g3{grid-column:1/4;aspect-ratio:2/3}
+.g4{grid-column:4/8;aspect-ratio:auto}
+.g5{grid-column:1/6;aspect-ratio:3/2}
+.g6{grid-column:6/9;aspect-ratio:2/3}
+.g7{grid-column:9/13;aspect-ratio:auto}
+@media (max-width:760px){
+  .c-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .g1,.g5{grid-column:1/3;aspect-ratio:3/2}
+  .g2,.g3,.g6,.g7{grid-column:span 1;grid-row:auto;aspect-ratio:2/3}
+  .g4{grid-column:1/3;grid-row:auto;aspect-ratio:3/2}
+}
+.c-notes{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 clamp(28px,5vw,72px);list-style:none;margin:clamp(40px,5vw,60px) 0 0;padding:0}
+.c-notes li{border-top:1px solid #c3c7c2;padding:14px 0 16px}
+.c-notes b{display:block;font-family:var(--display);font-size:22px;line-height:1.2;font-weight:400}
+.c-notes span{display:block;color:var(--ink-soft);margin-top:2px}
+@media (max-width:820px){.c-head,.c-notes{grid-template-columns:minmax(0,1fr)}}
+
+/* The farm: a sideways walk */
+.farm{background:var(--char);color:var(--lime);padding-block:clamp(80px,10vw,140px)}
+.farm .lede{color:#d9ddd8;margin-top:18px}
+.f-head{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(24px,5vw,72px);align-items:end}
+.f-head .who{color:#b9bfba}
+.pan{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:clamp(30px,4vw,52px);padding:0 var(--gut-r) 14px var(--gut);scrollbar-color:var(--paddock) transparent}
+.pan figure{margin:0;flex:0 0 auto;width:min(80vw,640px);scroll-snap-align:start}
+.pan img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.pan figcaption{font-size:14px;color:#c4c9c4;margin-top:8px}
+.season{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px clamp(28px,5vw,64px);list-style:none;margin:clamp(34px,4vw,56px) 0 0;padding:0}
+.season li{border-top:1px solid #4a524f;padding-top:14px}
+.season b{display:block;font-family:var(--display);font-weight:400;font-size:22px;color:var(--paddock)}
+@media (max-width:820px){.f-head,.season{grid-template-columns:minmax(0,1fr)}}
+
+/* Around */
+.around{padding-block:clamp(80px,10vw,140px)}
+.a-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,80px);align-items:start}
+.story{margin-top:26px;border-top:2px solid var(--slate);padding-top:16px;font-size:17px;color:var(--ink-soft)}
+.story b{color:var(--ink);font-weight:600}
+.dist{list-style:none;margin:0;padding:0}
+.dist li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid #c3c7c2}
+.dist li:first-child{border-top:1px solid #c3c7c2}
+.dist b{font-family:var(--display);font-weight:400;font-size:23px;line-height:1.2}
+.dist small{display:block;font-size:15px;color:var(--ink-soft);margin-top:3px}
+.dist span{font-size:15px;text-align:right;max-width:10em}
+.a-photo{margin:28px 0 0}
+.a-photo figcaption{font-size:14px;color:var(--ink-soft);margin-top:8px}
+@media (max-width:860px){.a-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* Lynne and the guests */
+.host{background:var(--lime-2);padding-block:clamp(80px,10vw,140px)}
+.host-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,80px);align-items:start}
+.host blockquote{margin:22px 0 0;font-family:var(--display);font-style:italic;font-size:clamp(23px,2vw,28px);line-height:1.35}
+.host blockquote cite{display:block;font-family:var(--text);font-style:normal;font-size:14px;color:var(--ink-soft);margin-top:12px}
+.score{display:flex;gap:16px;align-items:baseline;margin-top:30px;flex-wrap:wrap}
+.score b{font-family:var(--display);font-weight:400;font-size:clamp(64px,8vw,108px);line-height:.9;font-variant-numeric:tabular-nums}
+.score span{font-size:16px;max-width:16em}
+.quotes{list-style:none;margin:0;padding:0}
+.quotes li{border-top:1px solid #bfc3be;padding:16px 0 20px}
+.quotes p.q{font-size:clamp(19px,1.6vw,22px);line-height:1.45}
+@media (max-width:820px){.host-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* Book */
+.book{padding-block:clamp(80px,10vw,140px)}
+.book-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(24px,4vw,56px);margin-top:30px;align-items:stretch}
+.book-grid > img{width:100%;height:100%;min-height:320px;object-fit:cover}
+.book-side{display:grid;gap:22px;align-content:start}
+.box{background:var(--char);color:var(--lime);padding:clamp(22px,3vw,34px)}
+.box h3{font-size:clamp(28px,2.8vw,38px)}
+.box p{margin-top:8px;color:#d6dad5}
+.acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.notes{margin:0;padding:0;list-style:none;font-size:16px}
+.notes li{padding:9px 0;border-bottom:1px solid #c3c7c2}
+@media (max-width:820px){.book-grid{grid-template-columns:minmax(0,1fr)}.book-grid > img{aspect-ratio:3/2;min-height:0;height:auto}}
+
+/* Close */
+.close{position:relative;color:var(--lime);background:var(--char)}
+.close img{width:100%;height:min(86vh,780px);object-fit:cover;object-position:50% 50%}
+.close .txt{position:absolute;left:max(var(--gut),56px);bottom:clamp(30px,8vh,80px);max-width:560px;background:rgba(38,43,42,.9);padding:clamp(22px,2.6vw,36px)}
+.close h2{font-size:clamp(38px,4.6vw,66px)}
+.close p{margin-top:10px;font-size:19px}
+@media (max-width:700px){.close img{height:50vh}.close .txt{position:relative;left:auto;bottom:auto;max-width:none;padding:28px var(--gut-r) 36px var(--gut)}}
+footer{background:var(--char);color:#c4c9c4;font-size:14px;line-height:1.5;padding-block:28px calc(28px + env(safe-area-inset-bottom,0px));border-top:1px solid #3a403e}
+footer p + p{margin-top:6px}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;
+  padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);
+  background:rgba(38,43,42,.97);transform:translateY(110%);visibility:hidden;transition:transform .25s ease-out,visibility 0s .25s}
+.phonebar.on{transform:none;visibility:visible;transition:transform .25s ease-out}
+.phonebar .btn{width:100%;min-height:50px}
+@media (max-width:820px){.phonebar{display:block}footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}}
+
+/* Static layout: reduced motion, very short screens, or scripts off. Shows every end state. */
+@media (prefers-reduced-motion: reduce), (max-height:480px){
+  html.js .hero,html.js .gatehouse{height:auto}
+  html.js .stage,html.js .g-stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column;perspective:none}
+  html.js .pl-rock{position:relative;inset:auto;transform:none !important}
+  html.js .pl-rock img{height:auto;aspect-ratio:3/2}
+  html.js .pl-grass,html.js .pl-shade,html.js .gate,html.js .post,html.js .drive{display:none}
+  html.js .h-copy{position:relative;left:auto;right:auto;bottom:auto;max-width:none;transform:none !important;opacity:1 !important;padding:28px var(--gut-r) 8px var(--gut);background:var(--char);text-shadow:none}
+  html.js .h-two{position:relative;left:auto;right:auto;top:auto;max-width:none;opacity:1 !important;padding:16px var(--gut-r) 36px var(--gut)}
+  html.js .g-words{position:relative;left:auto;right:auto;top:auto;max-width:none;opacity:1 !important;padding:56px var(--gut-r) 26px var(--gut);background:none}
+  html.js .porch{position:relative;inset:auto;opacity:1 !important}
+  html.js .porch img{height:auto;aspect-ratio:3/2}
+  html.js .g-end{position:relative;left:auto;right:auto;bottom:auto;max-width:none;opacity:1 !important}
+  .phonebar,.phonebar.on{transition:none}
+}
+html:not(.js) .hero,html:not(.js) .gatehouse{height:auto}
+html:not(.js) .stage,html:not(.js) .g-stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column}
+html:not(.js) .pl-rock{position:relative}
+html:not(.js) .pl-rock img{height:auto;aspect-ratio:3/2}
+html:not(.js) .pl-grass,html:not(.js) .pl-shade,html:not(.js) .gate,html:not(.js) .post,html:not(.js) .drive{display:none}
+html:not(.js) .h-copy,html:not(.js) .h-two,html:not(.js) .g-words,html:not(.js) .g-end{position:relative;left:auto;right:auto;top:auto;bottom:auto;max-width:none;opacity:1;padding:24px var(--gut-r) 24px var(--gut)}
+html:not(.js) .porch{position:relative;opacity:1}
+html:not(.js) .porch img{height:auto;aspect-ratio:3/2}
+</style>
+</head>
+<body>
+<a class="skip" href="#book">Skip to booking</a>
+<p class="strip">A website idea made by Lampbound Studio for Appleyard Cottage at Hanging Rock Truffle Farm. Not their official site.</p>
+
+<header class="top">
+  <a class="word" href="#top" aria-label="Appleyard Cottage, back to top">Appleyard Cottage<small>Hanging Rock Truffle Farm, Woodend</small></a>
+  <nav aria-label="Main">
+    <a href="#cottage">The cottage</a>
+    <a href="#farm">The farm</a>
+    <a href="#around">Around</a>
+    <a class="btn" href="#book">Check dates</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="top" aria-label="Hanging Rock from the farm">
+  <div class="stage">
+    <div class="pl pl-rock">
+      <picture><source media="(min-width:700px)" srcset="img/rock-1440.jpg"><img src="img/rockM.jpg" alt="Hanging Rock rising above the trees beyond a paddock of tall dry grass, under a blue sky" width="728" height="971" fetchpriority="high"></picture>
+    </div>
+    <div class="pl-shade" aria-hidden="true"></div>
+    <div class="h-copy sh">
+      <p class="where">Woodend, in the Macedon Ranges</p>
+      <h1>An 1890s shearing shed on a working truffle farm, looking out to Hanging Rock.</h1>
+      <p class="lede">Appleyard Cottage is made for two: a fire, a copper bath, English gardens, a lake and a tennis court.</p>
+    </div>
+    <div class="pl pl-grass" aria-hidden="true">
+      <picture><source media="(min-width:700px)" srcset="img/rock-1440.jpg"><img src="img/rockM.jpg" alt="" width="728" height="971"></picture>
+    </div>
+    <div class="h-two">
+      <p>"With over 700 truffle trees planted the property overlooks the majestic Hanging Rock."</p>
+      <p class="src">Lynne, your host</p>
+    </div>
+  </div>
+</section>
+
+<section class="gatehouse" id="gate" aria-label="The farm gate">
+  <div class="g-stage">
+    <div class="drive"><picture><source media="(min-width:700px)" srcset="img/avenue-1440.jpg"><img src="img/avenueM.jpg" alt="The gravel drive running between two rows of trees" width="720" height="960" loading="lazy"></picture></div>
+    <div class="post" aria-hidden="true"></div>
+    <div class="gate" aria-hidden="true">
+      <svg viewBox="0 0 1000 560" preserveAspectRatio="none">
+        <defs><pattern id="mesh" width="46" height="46" patternUnits="userSpaceOnUse"><path d="M0 0H46M0 0V46" stroke="#2c302e" stroke-width="3" fill="none"/></pattern></defs>
+        <rect x="12" y="12" width="976" height="536" fill="url(#mesh)"/>
+        <rect x="12" y="12" width="976" height="536" fill="none" stroke="#4a4c47" stroke-width="22" rx="8"/>
+        <path d="M12 280H988" stroke="#4a4c47" stroke-width="14"/>
+        <path d="M24 540L976 22" stroke="#4a4c47" stroke-width="12"/>
+        <rect x="0" y="80" width="26" height="40" fill="#3a3b37"/><rect x="0" y="440" width="26" height="40" fill="#3a3b37"/>
+      </svg>
+      <img class="sign" src="img/sign-600.jpg" alt="" width="600" height="441" loading="lazy">
+    </div>
+    <div class="g-words sh">
+      <h2>Through the farm gate.</h2>
+      <p>The drive runs between the trees to the cottage.</p>
+    </div>
+    <div class="porch"><img src="img/porch-1440.jpg" srcset="img/porch-900.jpg 900w, img/porch-1440.jpg 1440w" sizes="100vw" alt="The cottage porch: white weatherboards, a timber door, a wicker chair and a potted tree, with the paddocks behind" width="1440" height="960" loading="lazy"></div>
+    <div class="g-end">
+      <h3>Appleyard Cottage.</h3>
+      <p>The 1890s shearing shed, redesigned with love and styled by Lynda Gardner of Belle Bright. A top 10 finalist for Best Design Stay in the 2025 Airbnb Awards.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cottage wrap" id="cottage">
+  <div class="inner">
+    <div class="c-head">
+      <h2 class="big">The cottage</h2>
+      <p class="lede">One bedroom with a king bed, a wood fire, a copper bath and heated floors. Green walls, dark tile, a eucalypt mural and old leather.</p>
+    </div>
+    <div class="c-grid">
+      <figure class="g1"><img src="img/living-1440.jpg" srcset="img/living-900.jpg 900w, img/living-1440.jpg 1440w" sizes="(max-width:760px) 100vw, 58vw" alt="The long living room under the timber trusses: a deep sofa, a timber coffee table and glass doors at the far end" width="1440" height="960" loading="lazy"><figcaption>The living room</figcaption></figure>
+      <figure class="g2"><img src="img/bath-1100.jpg" srcset="img/bath-650.jpg 650w, img/bath-1100.jpg 1100w" sizes="(max-width:760px) 50vw, 40vw" alt="A copper bath against dark tiles and green walls, with a pressed botanical print and a wall lamp" width="1100" height="1649" loading="lazy"><figcaption>The copper bath</figcaption></figure>
+      <figure class="g3"><img src="img/fire-1100.jpg" srcset="img/fire-650.jpg 650w, img/fire-1100.jpg 1100w" sizes="(max-width:760px) 50vw, 24vw" alt="The black wood heater with a basket of split logs beside it" width="1100" height="1649" loading="lazy"><figcaption>The fire</figcaption></figure>
+      <figure class="g4"><img src="img/mural-1100.jpg" srcset="img/mural-650.jpg 650w, img/mural-1100.jpg 1100w" sizes="(max-width:760px) 50vw, 32vw" alt="A grey eucalypt forest mural behind the sofa, with a sheer linen curtain and stacked books" width="1100" height="1375" loading="lazy"><figcaption>The gum tree mural</figcaption></figure>
+      <figure class="g5"><img src="img/bed-1440.jpg" srcset="img/bed-900.jpg 900w, img/bed-1440.jpg 1440w" sizes="(max-width:760px) 100vw, 42vw" alt="The king bed in grey and white linen against a green wall" width="1440" height="960" loading="lazy"><figcaption>The bedroom</figcaption></figure>
+      <figure class="g6"><img src="img/chair-1100.jpg" srcset="img/chair-650.jpg 650w, img/chair-1100.jpg 1100w" sizes="(max-width:760px) 50vw, 24vw" alt="A buttoned leather armchair under a large framed botanical print" width="1100" height="1649" loading="lazy"><figcaption>Reading corner</figcaption></figure>
+      <figure class="g7"><img src="img/kitchen-1440.jpg" srcset="img/kitchen-900.jpg 900w, img/kitchen-1440.jpg 1440w" sizes="(max-width:760px) 50vw, 32vw" alt="The kitchen table with timber chairs, open shelves and a window onto the farm" width="1440" height="960" loading="lazy" style="object-position:40% 50%"><figcaption>The kitchen</figcaption></figure>
+    </div>
+    <ul class="c-notes" role="list">
+      <li><b>For two</b><span>One bedroom, one king bed, one bathroom.</span></li>
+      <li><b>Breakfast</b><span>Locally made muesli with yoghurt and fruit, in the cottage. Cafes are within 5 km if you'd rather go out.</span></li>
+      <li><b>A bottle on arrival</b><span>A local wine from the Macedon Ranges.</span></li>
+      <li><b>Winter</b><span>Guests have arrived to the fire already lit, and the bathroom floors are heated.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="farm dark" id="farm">
+  <div class="wrap"><div class="inner f-head">
+    <div>
+      <h2 class="big">The farm</h2>
+      <p class="lede">A working truffle farm with English gardens, a seasonal stream running down to a lake under the willows, a pool and a tennis court.</p>
+    </div>
+    <p class="who">Swipe or scroll sideways.</p>
+  </div></div>
+  <div class="pan" tabindex="0" aria-label="Photos of the farm">
+    <figure><img src="img/pool-1440.jpg" srcset="img/pool-900.jpg 900w, img/pool-1440.jpg 1440w" sizes="(max-width:800px) 80vw, 640px" alt="The pool with a white timber pavilion and a tall clipped hedge" width="1440" height="960" loading="lazy"><figcaption>The pool, open from Cup Day weekend to Easter week</figcaption></figure>
+    <figure><img src="img/tennis-1440.jpg" srcset="img/tennis-900.jpg 900w, img/tennis-1440.jpg 1440w" sizes="(max-width:800px) 80vw, 640px" alt="The tennis court and its white pavilion under the willows" width="1440" height="960" loading="lazy"><figcaption>The tennis court and pavilion</figcaption></figure>
+    <figure><img src="img/avenue-1440.jpg" srcset="img/avenue-900.jpg 900w, img/avenue-1440.jpg 1440w" sizes="(max-width:800px) 80vw, 640px" alt="The gravel drive between two rows of trees" width="1440" height="960" loading="lazy"><figcaption>The drive in</figcaption></figure>
+    <figure><img src="img/rock-1440.jpg" srcset="img/rock-900.jpg 900w, img/rock-1440.jpg 1440w" sizes="(max-width:800px) 80vw, 640px" alt="Hanging Rock across the paddock" width="1440" height="971" loading="lazy"><figcaption>Hanging Rock from the farm</figcaption></figure>
+  </div>
+  <div class="wrap"><div class="inner">
+    <ul class="season" role="list">
+      <li><b>Summer</b>Swim in the solar heated saltwater pool, have a hit of tennis and take a cold drink in the pavilion, then sit by the lake at cocktail hour.</li>
+      <li><b>Cooler months</b>Have a local wine by the fire pit. Before you leave, pick seasonal herbs from the kitchen garden to take home.</li>
+    </ul>
+  </div></div>
+</section>
+
+<section class="around wrap" id="around">
+  <div class="inner a-grid">
+    <div>
+      <h2 class="big">Around the farm</h2>
+      <p class="lede" style="margin-top:18px">Between Mount Macedon and Hanging Rock, with wineries, gin distilleries, farmers markets and food festivals across the ranges.</p>
+      <p class="story"><b>Why Appleyard?</b> In Picnic at Hanging Rock, Appleyard College was the girls' school. The cottage is named for the story.</p>
+    </div>
+    <div>
+      <ul class="dist" role="list">
+        <li><div><b>Hanging Rock Reserve</b><small>Walk the rock itself</small></div><span>A short drive, or a longer walk</span></li>
+        <li><div><b>Woodend</b><small>Supplies, shops and places to eat</small></div><span>Five minutes by car</span></li>
+        <li><div><b>Breakfast out</b><small>Cafes for breakfast and brunch</small></div><span>Within 5 km</span></li>
+        <li><div><b>Cellar doors and distilleries</b><small>Across the Macedon Ranges</small></div><span>Nearby</span></li>
+      </ul>
+      <figure class="a-photo"><img src="img/bench-1100.jpg" srcset="img/bench-650.jpg 650w, img/bench-1100.jpg 1100w" sizes="(max-width:860px) 100vw, 50vw" alt="A timber bench and a woven basket in front of the gum tree mural" width="1100" height="1649" loading="lazy" style="aspect-ratio:3/2;object-fit:cover;width:100%"><figcaption>The bench under the mural</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="host" id="lynne">
+  <div class="wrap"><div class="inner host-grid">
+    <div>
+      <h2 class="big">Lynne</h2>
+      <blockquote>"Welcome to our family farm, Hanging Rock Truffle Farm. We love our farm and look forward to sharing it with you."
+        <cite>Lynne, truffle farmer and your host, on Airbnb. A Superhost.</cite></blockquote>
+      <div class="score"><b>4.99</b><span>from 156 guest reviews on Airbnb</span></div>
+    </div>
+    <ul class="quotes" role="list">
+      <li><p class="q">"The fire place a HUGE bath and waking up to the sunrise were standouts for us."</p><p class="who">Amy, Airbnb, August 2026</p></li>
+      <li><p class="q">"The view from the bedroom was breathtaking, especially in the early morning hours when the sun comes up."</p><p class="who">Angelique, Airbnb, July 2026</p></li>
+      <li><p class="q">"I'm a very particular person regarding interiors and it was just perfect."</p><p class="who">Olivia, Airbnb, September 2026</p></li>
+      <li><p class="q">"You could even see Hanging Rock from the kitchen window."</p><p class="who">Susan, Airbnb, May 2026</p></li>
+      <li><p class="q">"We loved exploring the region including walking at Hanging Rock and enjoying the shops and eateries at Woodend."</p><p class="who">Ernestine, Airbnb, September 2026</p></li>
+    </ul>
+  </div></div>
+</section>
+
+<section class="book wrap" id="book">
+  <div class="inner">
+    <h2 class="big">Check dates</h2>
+    <div class="book-grid">
+      <img src="img/porch-1440.jpg" srcset="img/porch-900.jpg 900w, img/porch-1440.jpg 1440w" sizes="(max-width:820px) 100vw, 55vw" alt="The cottage porch with a wicker chair beside the door" width="1440" height="960" loading="lazy">
+      <div class="book-side">
+        <div class="box dark">
+          <h3>Book Appleyard Cottage</h3>
+          <p>See open dates and the price for your stay, then book.</p>
+          <div class="acts"><a class="btn gold" href="https://www.airbnb.com.au/rooms/715377288366138148">Check dates</a></div>
+        </div>
+        <ul class="notes" role="list">
+          <li>Check in after 3pm, check out by 11am. Self check-in with a keypad.</li>
+          <li>Two guests.</li>
+          <li>The pool is open from Cup Day weekend until the week of Easter.</li>
+          <li>There are security cameras outside on the property.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="close" aria-label="Wake up to the sunrise">
+  <img src="img/bed-1440.jpg" srcset="img/bed-900.jpg 900w, img/bed-1440.jpg 1440w" sizes="100vw" alt="The king bed made up in grey linen against the green bedroom wall" width="1440" height="960" loading="lazy">
+  <div class="txt">
+    <h2>Shut the gate behind you.</h2>
+    <p>Hanging Rock is in view from the kitchen window.</p>
+    <div class="acts"><a class="btn gold" href="https://www.airbnb.com.au/rooms/715377288366138148">Check dates</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap"><div class="inner">
+  <p>A preview made by Lampbound Studio for Appleyard Cottage at Hanging Rock Truffle Farm. Not affiliated, not live.</p>
+  <p>Photos from the farm's public Airbnb listing. Quotes are from their Airbnb listing and guest reviews.</p>
+</div></footer>
+
+<div class="phonebar" id="phonebar"><a class="btn gold" href="https://www.airbnb.com.au/rooms/715377288366138148">Check dates</a></div>
+
+<script>
+(function(){
+  var still = window.matchMedia('(prefers-reduced-motion: reduce), (max-height:480px)');
+  var bar = document.getElementById('phonebar');
+  var hero = document.querySelector('.hero'), gh = document.querySelector('.gatehouse');
+  var rock = document.querySelector('.pl-rock'), grass = document.querySelector('.pl-grass'), hc = document.querySelector('.h-copy'), h2 = document.querySelector('.h-two');
+  var drive = document.querySelector('.drive'), gate = document.querySelector('.gate'), post = document.querySelector('.post'), gw = document.querySelector('.g-words'), porch = document.querySelector('.porch'), ge = document.querySelector('.g-end');
+  var moved = [rock,grass,hc,h2,drive,gate,post,gw,porch,ge];
+  function cl(v){return v<0?0:v>1?1:v}
+  function seg(p,a,b){return cl((p-a)/(b-a))}
+  function ease(t){return 1-Math.pow(1-t,3)}
+  function prog(el){var r=el.getBoundingClientRect();var span=r.height-window.innerHeight;return span>0?cl(-r.top/span):0}
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    bar.classList.toggle('on', bar.contains(document.activeElement) || (window.scrollY||0) > window.innerHeight*0.6);
+    if(still.matches) return;
+    /* Act 1: the rock comes slowly closer; the paddock in front moves faster and drops away */
+    var p=prog(hero), e=ease(p);
+    rock.style.transform='scale('+(1.02+0.1*e)+')';
+    grass.style.transform='translate3d(0,'+(18*e)+'%,0) scale('+(1.02+0.3*e)+')';
+    hc.style.transform='translate3d(0,'+(-12*e)+'vh,0)';
+    hc.style.opacity=1-seg(p,0.3,0.55);
+    h2.style.opacity=seg(p,0.5,0.7);
+    /* Act 2: the gate swings open, you walk down the drive, the porch appears */
+    var q=prog(gh);
+    var open=ease(seg(q,0.12,0.5));
+    gate.style.transform='rotateY('+(-96*open)+'deg)';
+    post.style.opacity=1-seg(q,0.5,0.62);
+    gw.style.opacity=1-seg(q,0.06,0.2);
+    var walk=seg(q,0.38,0.82);
+    drive.style.transform='scale('+(1+1.6*walk*walk)+')';
+    gate.style.opacity=1-seg(q,0.55,0.66);
+    porch.style.opacity=seg(q,0.74,0.84);
+    ge.style.opacity=seg(q,0.86,0.95);
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  document.addEventListener('focusin',onScroll);
+  document.addEventListener('focusout',function(){setTimeout(onScroll,0)});
+  if(still.addEventListener) still.addEventListener('change',function(){moved.forEach(function(e){e.style.transform='';e.style.opacity='';e.style.visibility=''});frame()});
+  frame();
+})();
+</script>
+</body>
+</html>

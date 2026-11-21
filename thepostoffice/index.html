@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>The Post Office, Waratah | A 1913 post office stay on the edge of the Tarkine</title>
+<meta name="description" content="A restored 1913 heritage-listed post office across the road from the Waratah Waterfall in north-west Tasmania, for two to four guests. A website idea made by Lampbound Studio for The Post Office.">
+<meta property="og:title" content="The Post Office, Waratah">
+<meta property="og:description" content="A website idea made by Lampbound Studio for The Post Office, Waratah. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/thepostoffice/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/thepostoffice/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%233f4235'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%23dcc38c' stroke-width='2.5'/%3E%3Cpath d='M9 14h14M9 18h14' stroke='%23dcc38c' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/facade-1440.jpg" media="(min-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/facadeM-800.jpg" media="(max-width: 699px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;1,400&family=Rokkitt:wght@300;600&display=swap">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* Tokens come from the building (see brand.md):
+   olive   = the painted panelling in the bath nook
+   night   = the same panelling in shadow
+   board   = the cool grey-white weatherboard out front
+   butter  = the signboard and trim
+   rust    = the burnt orange velvet curtain
+   cedar   = the old counter and the floors
+   Rokkitt for the slab capitals on the signboard; Libre Franklin, a 1902 gothic, for reading. */
+:root{
+  --olive:#3f4235;
+  --olive-2:#4c5040;
+  --night:#25271f;
+  --board:#e6e7e3;
+  --board-2:#d6d8d2;
+  --paper:#f5f5f2;
+  --butter:#dcc38c;
+  --rust:#9e4a20;
+  --rust-2:#b25a2a;
+  --cedar:#5a2e1c;
+  --ink:#25271f;
+  --ink-soft:#4f5246;
+  --display:"Rokkitt","Rockwell","Georgia",serif;
+  --text:"Libre Franklin","Franklin Gothic Book","Helvetica Neue",sans-serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--board);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rust);outline-offset:3px}
+.dark :focus-visible,.strip :focus-visible,.phonebar :focus-visible,footer :focus-visible,.close :focus-visible{outline-color:var(--butter)}
+h1,h2,h3{font-family:var(--display);font-weight:300;line-height:1.05;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--paper);padding:8px 12px}
+
+.strip{background:var(--night);color:var(--board);font-size:14px;line-height:1.4;text-align:center;margin:0;
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  padding:16px var(--gut-r) 16px var(--gut)}
+.word{text-decoration:none;color:var(--ink);font-family:var(--display);font-weight:600;font-size:23px;line-height:1;letter-spacing:.01em}
+.word small{display:block;font-family:var(--text);font-weight:400;font-size:13px;margin-top:5px;letter-spacing:0;color:var(--ink-soft)}
+.top nav{display:flex;gap:24px;align-items:center;font-weight:600;font-size:15px}
+.top nav a{text-decoration:none}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:2px;
+  font-family:var(--text);font-weight:600;font-size:16px;text-decoration:none;border:0;cursor:pointer;
+  background:var(--rust);color:#fff}
+.btn:hover{background:#8a3f1a}
+.btn.butter{background:var(--butter);color:var(--night)}
+.btn.butter:hover{background:#e8d4a6}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.btn.line:hover{background:rgba(120,120,100,.14)}
+@media (max-width:820px){.top nav a:not(.btn){display:none}}
+
+/* ---------- Act 1: the stamp. Their front photo behind a perforated stamp edge that grows past you ---------- */
+.hero{position:relative;height:220vh;background:var(--board)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--board)}
+.ph{position:absolute;inset:0;will-change:transform}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.win{position:absolute;z-index:2;left:var(--wx);top:var(--wy);width:var(--ww);height:var(--wh);
+  transform:translate(-50%,-50%);border:16px solid var(--paper);box-shadow:0 0 0 250vmax var(--board);will-change:transform;pointer-events:none}
+.win::after{content:"";position:absolute;inset:-23px;padding:8px;
+  background:radial-gradient(circle,var(--board) 5px,transparent 5.6px) 0 0/14px 14px;
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;
+  mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+.hero{--wx:63%;--wy:54%;--ww:min(58vw,980px);--wh:min(68svh,620px)}
+.mark{position:absolute;z-index:3;left:calc(var(--wx) - var(--ww)/2 - 70px);top:calc(var(--wy) - var(--wh)/2 - 50px);width:170px;height:170px;
+  color:var(--cedar);will-change:transform,opacity;pointer-events:none}
+.mark svg{width:100%;height:100%}
+.h-copy{position:absolute;z-index:3;left:max(var(--gut),56px);top:50%;transform:translateY(-38%);width:min(28vw,400px)}
+.h-copy .where{font-size:15px;color:var(--ink-soft)}
+.h-copy h1{font-size:clamp(40px,4.4vw,72px);margin-top:10px}
+.h-copy .lede{margin-top:16px;font-size:18px}
+.h-copy .acts{margin-top:22px}
+.h-two{position:absolute;z-index:3;right:max(var(--gut-r),56px);bottom:clamp(40px,10vh,110px);max-width:470px;opacity:0;
+  background:rgba(37,39,31,.9);color:var(--board);padding:22px 26px;will-change:opacity}
+.h-two p{font-family:var(--display);font-size:clamp(25px,2.3vw,34px);line-height:1.2}
+.h-two .src{font-family:var(--text);font-size:14px;color:var(--butter);margin-top:10px;line-height:1.4}
+@media (max-width:1000px){
+  .hero{--wx:50%;--wy:39%;--ww:calc(100vw - 72px);--wh:46svh;height:200vh}
+  .top{background:var(--board)}
+  .mark{left:auto;right:6px;top:calc(var(--wy) - var(--wh)/2 - 40px);width:116px;height:116px}
+  .h-copy{left:var(--gut);right:var(--gut-r);width:auto;top:auto;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:none}
+  .h-copy h1{font-size:clamp(32px,8.6vw,46px)}
+  .h-copy .lede{font-size:16px;margin-top:10px}
+  .h-copy .acts{display:none}
+  .h-two{left:var(--gut);right:var(--gut-r);bottom:calc(92px + env(safe-area-inset-bottom,0px));max-width:none}
+}
+@media (max-width:1000px) and (max-height:700px){.h-copy .lede{display:none}}
+
+/* ---------- Act 2 (the peak): a letter to 8 Main Street ---------- */
+.letter{position:relative;height:440vh;background:var(--olive)}
+.l-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;
+  background:repeating-linear-gradient(90deg,var(--olive) 0 46px,#383b2f 46px 48px,#4a4e3f 48px 50px)}
+.env{position:absolute;left:50%;top:56%;width:min(80vw,620px,calc((100svh - 190px) * 1.5));aspect-ratio:3/2;transform:translate(-50%,-50%);perspective:1400px;will-change:transform}
+.card{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform}
+.face{position:absolute;inset:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.front{background:var(--paper);box-shadow:0 18px 40px rgba(0,0,0,.35);padding:7% 8%}
+.front .to{position:absolute;left:30%;top:48%;font-family:var(--display);font-size:clamp(17px,2.6vw,25px);line-height:1.28;color:var(--night)}
+.front .to b{font-weight:600}
+.front .from{font-size:clamp(11px,1.4vw,13px);color:var(--ink-soft);line-height:1.4}
+.stamp{position:absolute;right:6%;top:9%;width:21%;aspect-ratio:4/5;padding:7px;background:var(--paper);
+  background-image:radial-gradient(circle,var(--olive) 3.6px,transparent 4px);background-size:10px 10px;background-position:-5px -5px;box-shadow:0 1px 2px rgba(0,0,0,.2)}
+.stamp img{width:100%;height:100%;object-fit:cover;object-position:40% 60%}
+.pm{position:absolute;right:16%;top:11%;width:34%;color:var(--cedar);opacity:0;will-change:transform,opacity}
+.pm svg{width:100%;height:auto;display:block}
+.back{transform:rotateY(180deg)}
+.inner-env{position:absolute;z-index:0;inset:0;background:#d4d5cf;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.sheet{position:absolute;left:5%;right:5%;top:60.8%;height:37.5%;background:#fbfbf9;padding:6% 7%;will-change:transform;
+  box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.sheet p{font-family:var(--display);font-size:clamp(20px,3vw,30px);line-height:1.18;color:var(--night)}
+.sheet .src{font-family:var(--text);font-size:clamp(12px,1.5vw,14px);color:var(--ink-soft);margin-top:12px;line-height:1.4}
+.sheet-clip{position:absolute;z-index:1;left:0;right:0;bottom:0;top:-140%;overflow:hidden}
+.pocket{position:absolute;inset:0;z-index:2;pointer-events:none}
+.pocket svg,.flap svg{width:100%;height:100%;display:block}
+.flap{position:absolute;left:0;right:0;top:0;height:60%;z-index:3;transform-origin:50% 0;will-change:transform}
+.flap.under{z-index:0}
+.room{position:absolute;inset:0;z-index:5;opacity:0;will-change:opacity}
+.room img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.l-words{position:absolute;z-index:4;left:max(var(--gut),56px);top:clamp(70px,12vh,120px);max-width:420px;color:var(--board);will-change:opacity}
+.l-words h2{font-size:clamp(34px,3.6vw,54px)}
+.l-words p{margin-top:12px;color:#d9dbd2}
+.l-end{position:absolute;z-index:6;left:max(var(--gut),56px);bottom:clamp(30px,9vh,90px);max-width:520px;opacity:0;
+  background:rgba(37,39,31,.92);color:var(--board);padding:clamp(22px,2.4vw,32px);will-change:opacity}
+.l-end h3{font-size:clamp(32px,3.2vw,48px)}
+.l-end p{margin-top:10px}
+.l-end .src{font-size:14px;color:var(--butter);margin-top:10px}
+@media (max-width:820px){
+  .env{width:min(calc(100vw - 40px),calc((100svh - 290px) * 1.5));top:60%}
+  .front .to{left:8%;top:50%}
+  .stamp{width:24%}
+  .l-words{left:var(--gut);right:var(--gut-r);top:76px;max-width:none}
+  .l-words h2{font-size:32px}
+  .l-words p{font-size:16px}
+  .l-end{left:var(--gut);right:var(--gut-r);max-width:none;bottom:calc(88px + env(safe-area-inset-bottom,0px))}
+  .letter{height:400vh}
+}
+
+/* ---------- Sections ---------- */
+.wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
+.inner{max-width:1200px;margin:0 auto}
+section{scroll-margin-top:10px}
+h2.big{font-size:clamp(42px,5.4vw,78px)}
+.lede{font-size:clamp(18px,1.5vw,21px);max-width:34em}
+.who{font-size:14px;color:var(--ink-soft);margin-top:6px}
+
+/* Inside */
+.inside-sec{padding-block:clamp(80px,10vw,140px)}
+.inside-head{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(24px,5vw,72px);align-items:end}
+.rooms{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:10px;margin-top:clamp(30px,4vw,52px)}
+.rooms figure{margin:0;position:relative;overflow:hidden;background:var(--board-2)}
+.rooms img{width:100%;height:100%;object-fit:cover}
+.rooms figcaption{position:absolute;left:0;bottom:0;background:rgba(37,39,31,.88);color:var(--board);font-size:14px;padding:6px 10px}
+.r1{grid-column:1/6;grid-row:1/3;aspect-ratio:4/5}
+.r2{grid-column:6/13;aspect-ratio:3/2}
+.r3{grid-column:6/10;aspect-ratio:4/5}
+.r4{grid-column:10/13;aspect-ratio:3/5}
+.r5{grid-column:1/8;aspect-ratio:3/2}
+.r6{grid-column:8/13;aspect-ratio:auto}
+@media (max-width:760px){
+  .rooms{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .r1,.r2,.r5{grid-column:1/3;grid-row:auto}
+  .r1{aspect-ratio:4/5}.r3,.r4,.r6{grid-column:span 1;aspect-ratio:4/5}
+}
+.kept{margin:clamp(40px,5vw,64px) 0 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 clamp(28px,5vw,72px);list-style:none;padding:0}
+.kept li{border-top:1px solid #b9bbb2;padding:14px 0 16px}
+.kept b{display:block;font-family:var(--display);font-weight:600;font-size:22px;line-height:1.2}
+.kept span{display:block;color:var(--ink-soft);margin-top:2px}
+@media (max-width:820px){.kept,.inside-head{grid-template-columns:minmax(0,1fr)}}
+
+/* First morning */
+.morning{background:var(--olive);color:var(--board);padding-block:clamp(80px,10vw,140px)}
+.m-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:clamp(16px,2.4vw,32px);align-items:end}
+.m-grid .lede{color:#dcded5;margin-top:18px}
+.m-grid figure{margin:0}
+.m-grid img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.m-grid figcaption{font-size:14px;color:#c9ccc0;margin-top:8px}
+.m-grid .tall{margin-bottom:clamp(40px,6vw,90px)}
+.pantry{margin-top:26px;font-size:16px;color:#c9ccc0;max-width:30em}
+@media (max-width:900px){.m-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.m-grid > div:first-child{grid-column:1/3}.m-grid .tall{margin-bottom:0}}
+
+/* Waratah: a ledger from the front step */
+.town{padding-block:clamp(80px,10vw,140px)}
+.t-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,80px);align-items:start}
+.ledger{margin:30px 0 0;padding:0;list-style:none;border-top:2px solid var(--cedar)}
+.ledger li{display:flex;align-items:baseline;gap:10px;padding:13px 0;border-bottom:1px solid #c3c5bc}
+.ledger .what{font-family:var(--display);font-weight:600;font-size:21px;line-height:1.2}
+.ledger .what small{display:block;font-family:var(--text);font-weight:400;font-size:15px;color:var(--ink-soft);margin-top:3px}
+.ledger .dots{flex:1;border-bottom:2px dotted #a7a99f;transform:translateY(-6px);min-width:16px}
+.ledger .how{font-size:15px;white-space:nowrap;text-align:right}
+.t-side figure{margin:0}
+.t-side img{width:100%}
+.t-side figcaption{font-size:14px;color:var(--ink-soft);margin-top:8px}
+.t-side figure + figure{margin-top:18px;width:72%;margin-left:auto}
+.weather{margin-top:28px;background:var(--paper);padding:18px 20px;font-size:16px;border-left:0}
+@media (max-width:860px){.t-grid{grid-template-columns:minmax(0,1fr)}.ledger .how{white-space:normal;max-width:9em}}
+
+/* Madeleine and the guests */
+.host{background:var(--paper);padding-block:clamp(80px,10vw,140px)}
+.host-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,80px);align-items:start}
+.host blockquote{margin:22px 0 0;font-size:clamp(19px,1.6vw,22px);line-height:1.55;font-style:italic}
+.host blockquote cite{display:block;font-style:normal;font-size:14px;color:var(--ink-soft);margin-top:12px}
+.score{display:flex;gap:16px;align-items:baseline;margin-top:30px;flex-wrap:wrap}
+.score b{font-family:var(--display);font-weight:300;font-size:clamp(64px,8vw,108px);line-height:.9;font-variant-numeric:tabular-nums}
+.score span{font-size:16px;max-width:16em}
+.quotes{list-style:none;margin:0;padding:0}
+.quotes li{border-top:1px solid #c3c5bc;padding:16px 0 20px}
+.quotes p.q{font-family:var(--display);font-size:clamp(23px,2vw,28px);line-height:1.25}
+@media (max-width:820px){.host-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* Book */
+.book{padding-block:clamp(80px,10vw,140px)}
+.book-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,4vw,56px);margin-top:30px;align-items:stretch}
+.book-grid > img{width:100%;height:100%;min-height:340px;object-fit:cover}
+.book-side{display:grid;gap:22px;align-content:start}
+.box{background:var(--night);color:var(--board);padding:clamp(22px,3vw,34px)}
+.box h3{font-size:clamp(28px,2.8vw,38px)}
+.box p{margin-top:8px;color:#d6d8cf}
+.acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.notes{margin:0;padding:0;list-style:none;font-size:16px}
+.notes li{padding:9px 0;border-bottom:1px solid #c3c5bc}
+@media (max-width:820px){.book-grid{grid-template-columns:minmax(0,1fr)}.book-grid > img{aspect-ratio:4/5;min-height:0;height:auto}}
+
+/* Close: the arched window at dusk */
+.close{position:relative;color:var(--board);background:var(--night)}
+.close img{width:100%;height:min(86vh,780px);object-fit:cover;object-position:50% 50%}
+.close .txt{position:absolute;right:max(var(--gut-r),56px);bottom:clamp(30px,8vh,80px);max-width:560px;background:rgba(37,39,31,.9);padding:clamp(22px,2.6vw,36px)}
+.close h2{font-size:clamp(40px,5vw,72px)}
+.close p{margin-top:10px;font-size:19px}
+@media (min-width:701px) and (max-height:640px){.close img{height:60vh}.close .txt{position:relative;right:auto;bottom:auto;max-width:none;padding:28px var(--gut-r) 36px var(--gut)}}
+@media (max-width:700px){.close img{height:50vh}.close .txt{position:relative;right:auto;bottom:auto;max-width:none;padding:28px var(--gut-r) 36px var(--gut)}}
+footer{background:var(--night);color:#c9ccc0;font-size:14px;line-height:1.5;padding-block:28px calc(28px + env(safe-area-inset-bottom,0px));border-top:1px solid #3a3d31}
+footer p + p{margin-top:6px}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;
+  padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);
+  background:rgba(37,39,31,.97);transform:translateY(110%);visibility:hidden;transition:transform .25s ease-out,visibility 0s .25s}
+.phonebar.on{transform:none;visibility:visible;transition:transform .25s ease-out}
+.phonebar .btn{flex:1;min-height:50px}
+.phonebar .btn.line{color:var(--board)}
+@media (max-width:820px){.phonebar{display:flex}footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}}
+
+/* Static layout: reduced motion, very short screens, or scripts off. Shows every end state. */
+@media (prefers-reduced-motion: reduce), (max-height:480px){
+  html.js .hero,html.js .letter{height:auto}
+  html.js .stage,html.js .l-stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column;background:var(--board)}
+  html.js .l-stage{background:var(--olive)}
+  html.js .ph{position:relative;inset:auto;order:2;transform:none !important}
+  html.js .ph img{height:auto;aspect-ratio:3/2}
+  html.js .win,html.js .mark{display:none}
+  html.js .h-copy{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:auto;transform:none;order:1;padding:96px var(--gut-r) 28px var(--gut)}
+  html.js .h-copy .lede{display:block}
+  html.js .h-two{position:relative;left:auto;right:auto;bottom:auto;max-width:none;opacity:1 !important;order:3}
+  html.js .l-words{position:relative;left:auto;right:auto;top:auto;max-width:none;padding:56px var(--gut-r) 26px var(--gut);opacity:1 !important}
+  html.js .env{position:relative;left:auto;top:auto;transform:none !important;margin:0 auto 40px;width:min(calc(100% - 40px),620px)}
+  html.js .card{transform:none !important}
+  html.js .pm{opacity:1 !important;transform:rotate(-8deg) !important}
+  html.js .back{display:none}
+  html.js .room{position:relative;inset:auto;opacity:1 !important}
+  html.js .room img{height:auto;aspect-ratio:4/5;max-height:80vh}
+  html.js .l-end{position:relative;left:auto;right:auto;bottom:auto;max-width:none;opacity:1 !important}
+  .phonebar,.phonebar.on{transition:none}
+}
+html:not(.js) .hero,html:not(.js) .letter{height:auto}
+html:not(.js) .stage,html:not(.js) .l-stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column}
+html:not(.js) .ph{position:relative;order:2}
+html:not(.js) .ph img{height:auto;aspect-ratio:3/2}
+html:not(.js) .win,html:not(.js) .mark,html:not(.js) .back{display:none}
+html:not(.js) .h-copy{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:auto;transform:none;order:1;padding:96px var(--gut-r) 28px var(--gut)}
+html:not(.js) .h-two,html:not(.js) .l-end,html:not(.js) .room{position:relative;left:auto;right:auto;bottom:auto;inset:auto;max-width:none;opacity:1}
+html:not(.js) .l-words{position:relative;left:auto;top:auto;padding:56px var(--gut-r) 26px var(--gut)}
+html:not(.js) .env{position:relative;left:auto;top:auto;transform:none;margin:0 auto 40px}
+html:not(.js) .pm{opacity:1}
+html:not(.js) .room img{height:auto;aspect-ratio:4/5}
+</style>
+</head>
+<body>
+<a class="skip" href="#book">Skip to booking</a>
+<p class="strip">A website idea made by Lampbound Studio for The Post Office, Waratah. Not their official site.</p>
+
+<header class="top">
+  <a class="word" href="#top" aria-label="The Post Office, Waratah, back to top">The Post Office<small>Waratah, Tasmania</small></a>
+  <nav aria-label="Main">
+    <a href="#inside">Inside</a>
+    <a href="#waratah">Waratah</a>
+    <a href="#madeleine">Guests</a>
+    <a class="btn" href="#book">Check dates</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="top" aria-label="The Post Office from Main Street">
+  <div class="stage">
+    <div class="ph">
+      <picture>
+        <source media="(min-width:700px)" srcset="img/facade-1440.jpg">
+        <img src="img/facadeM-800.jpg" alt="The Waratah Post Office from the street: white weatherboard, butter-yellow trim, a gabled front and the WARATAH POST OFFICE signboard over the arched windows" width="720" height="960" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="win" aria-hidden="true"></div>
+    <div class="mark" aria-hidden="true">
+      <svg viewBox="0 0 200 200"><g fill="none" stroke="currentColor" stroke-width="4"><circle cx="100" cy="100" r="88"/><circle cx="100" cy="100" r="60"/></g>
+        <path id="ring" d="M100 26a74 74 0 1 1 0 148a74 74 0 1 1 0-148" fill="none"/>
+        <text font-family="Rokkitt, serif" font-weight="600" font-size="19" letter-spacing="3" fill="currentColor"><textPath href="#ring">WARATAH · TASMANIA · 7321 · </textPath></text><!-- slop-ok: separators on a postmark ring -->
+        <text x="100" y="96" text-anchor="middle" font-family="Rokkitt, serif" font-weight="600" font-size="26" fill="currentColor">1913</text>
+        <text x="100" y="122" text-anchor="middle" font-family="Rokkitt, serif" font-size="17" fill="currentColor">POST OFFICE</text></svg>
+    </div>
+    <div class="h-copy">
+      <p class="where">8 Main Street, Waratah, on the edge of the Tarkine</p>
+      <h1>A 1913 post office, restored for two.</h1>
+      <p class="lede">Heritage listed, across the road from the Waratah Waterfall, with room for up to four guests.</p>
+      <div class="acts"><a class="btn" href="#book">Check dates</a></div>
+    </div>
+    <div class="h-two">
+      <p>"Directly across the road from the Waratah Waterfall there are expansive views from every window."</p>
+      <p class="src">From The Post Office listing</p>
+    </div>
+  </div>
+</section>
+
+<section class="letter" id="letter" aria-label="A letter to The Post Office">
+  <div class="l-stage">
+    <div class="l-words">
+      <h2>Addressed to 8 Main Street.</h2>
+      <p>Built in 1913 as Waratah's post office, and heritage listed.</p>
+    </div>
+    <div class="env">
+      <div class="card">
+        <div class="face front">
+          <div class="stamp"><img src="img/falls2-900.jpg" alt="" width="900" height="600" loading="lazy"></div>
+          <div class="pm" aria-hidden="true">
+            <svg viewBox="0 0 260 120"><g fill="none" stroke="currentColor" stroke-width="3.5"><circle cx="60" cy="60" r="52"/><circle cx="60" cy="60" r="36"/>
+              <path d="M128 38c20-8 40 8 60 0s40-8 60 0M128 60c20-8 40 8 60 0s40-8 60 0M128 82c20-8 40 8 60 0s40-8 60 0"/></g>
+              <path id="pmr" d="M60 16a44 44 0 1 1 0 88a44 44 0 1 1 0-88" fill="none"/>
+              <text font-family="Rokkitt, serif" font-weight="600" font-size="12.5" letter-spacing="2" fill="currentColor"><textPath href="#pmr">WARATAH · TAS · WARATAH · TAS · </textPath></text><!-- slop-ok: separators on a postmark ring -->
+              <text x="60" y="66" text-anchor="middle" font-family="Rokkitt, serif" font-weight="600" font-size="17" fill="currentColor">1913</text></svg>
+          </div>
+          <p class="to"><b>The Post Office</b><br>8 Main Street<br>Waratah, Tasmania 7321</p>
+        </div>
+        <div class="face back">
+          <div class="inner-env"></div>
+          <div class="sheet-clip"><div class="sheet">
+            <p>"The Post Office transports you to another time and place."</p>
+            <p class="src">From The Post Office listing</p>
+          </div></div>
+          <div class="pocket" aria-hidden="true"><svg viewBox="0 0 300 200" preserveAspectRatio="none"><path d="M0 0L150 112L300 0V200H0Z" fill="#ecece8"/><path d="M0 200L150 104L300 200Z" fill="#f5f5f2"/><path d="M0 0L150 112L300 0" fill="none" stroke="#c9cbc4" stroke-width="1.2"/></svg></div>
+          <div class="flap" aria-hidden="true"><svg viewBox="0 0 300 120" preserveAspectRatio="none"><path d="M0 0H300L150 120Z" fill="#e2e3de"/><path d="M0 0L150 120L300 0" fill="none" stroke="#c4c6bf" stroke-width="1.2"/></svg></div>
+        </div>
+      </div>
+    </div>
+    <div class="room"><picture><source media="(min-width:821px)" srcset="img/living-1100.jpg"><img src="img/living-650.jpg" alt="The living room under the pressed tin ceiling: a leather armchair, a round table, the long window seat and the arched windows at the far end" width="650" height="812" loading="lazy"></picture></div>
+    <div class="l-end">
+      <h3>The property is completely yours.</h3>
+      <p>There are two ways in: the guest door, and the original double doors that post office customers used. The cedar counter is still inside, and so is the walk-in bank safe.</p>
+      <p class="src">"The property is completely yours." From the listing</p>
+    </div>
+  </div>
+</section>
+
+<section class="inside-sec wrap" id="inside">
+  <div class="inner">
+    <div class="inside-head">
+      <h2 class="big">Inside</h2>
+      <p class="lede">Restored to suit its era and filled with antiques, oil paintings and unusual finds. Dark panelled walls, 4.2 metre pressed tin ceilings and a wood pellet fire in the middle of the living room.</p>
+    </div>
+    <div class="rooms">
+      <figure class="r1"><img src="img/lounge-1100.jpg" srcset="img/lounge-650.jpg 650w, img/lounge-1100.jpg 1100w" sizes="(max-width:760px) 100vw, 40vw" alt="Leather armchairs and a velvet sofa by the arched window, with the rainforest outside" width="1100" height="1375" loading="lazy"><figcaption>The living room</figcaption></figure>
+      <figure class="r2"><img src="img/counter-1440.jpg" srcset="img/counter-900.jpg 900w, img/counter-1440.jpg 1440w" sizes="(max-width:760px) 100vw, 58vw" alt="The kitchen with the dark island bench, a round dining table and the tall arched windows" width="1440" height="960" loading="lazy"><figcaption>The old counter, now the kitchen island</figcaption></figure>
+      <figure class="r3"><img src="img/nook-1100.jpg" srcset="img/nook-650.jpg 650w, img/nook-1100.jpg 1100w" sizes="(max-width:760px) 50vw, 32vw" alt="The second bedroom's nook: a pedestal basin, flowers and a black cast iron bath against olive panelling" width="1100" height="1375" loading="lazy"><figcaption>Bath in the bed nook</figcaption></figure>
+      <figure class="r4"><img src="img/bed-1100.jpg" srcset="img/bed-650.jpg 650w, img/bed-1100.jpg 1100w" sizes="(max-width:760px) 50vw, 24vw" alt="The main bed in tan and green flax linen behind a floor to ceiling dark velvet curtain" width="1100" height="1375" loading="lazy" style="object-position:50% 70%"><figcaption>Main bedroom</figcaption></figure>
+      <figure class="r5"><img src="img/seat-1440.jpg" srcset="img/seat-900.jpg 900w, img/seat-1440.jpg 1440w" sizes="(max-width:760px) 100vw, 58vw" alt="A long window seat under an arched sash window, with a sheepskin and open double doors" width="1440" height="1152" loading="lazy"><figcaption>The velvet window seat</figcaption></figure>
+      <figure class="r6"><img src="img/shelves-1100.jpg" srcset="img/shelves-650.jpg 650w, img/shelves-1100.jpg 1100w" sizes="(max-width:760px) 50vw, 40vw" alt="Open shelves of brass pots, teapots, old jugs and dried flowers" width="1100" height="1375" loading="lazy"><figcaption>The collection</figcaption></figure>
+    </div>
+    <ul class="kept" role="list">
+      <li><b>Kept from 1913</b><span>Pressed tin ceilings, arched sash windows, brass fixtures, the cedar counter and the walk-in bank safe.</span></li>
+      <li><b>Two bedrooms</b><span>The main bed sits behind a velvet curtain and a half wall. The second has a bed nook beside a cast iron bath.</span></li>
+      <li><b>Beds</b><span>Flax linen, toppers and electric blankets.</span></li>
+      <li><b>Bathroom</b><span>Underfloor heating and a large level-access shower.</span></li>
+      <li><b>Kitchen</b><span>A five-burner ILVE, a big SMEG fridge and freezer, and the old counter as the island bench.</span></li>
+      <li><b>Sleeps</b><span>Made for a couple, with room for up to four guests.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="morning dark" id="morning">
+  <div class="wrap"><div class="inner m-grid">
+    <div>
+      <h2 class="big">The first morning</h2>
+      <p class="lede">Breakfast provisions for your first morning are waiting in the kitchen: milk, eggs, butter, jam, and a bread maker with the ingredients for a loaf.</p>
+      <p class="pantry">The pantry has freshly ground coffee, organic herbal and black teas, hot chocolate, olive oil, salt, pepper and herbs. Stock up on the rest before you arrive, as Waratah's shops are limited.</p>
+    </div>
+    <figure class="tall"><img src="img/bread-1100.jpg" srcset="img/bread-650.jpg 650w, img/bread-1100.jpg 1100w" sizes="(max-width:900px) 50vw, 32vw" alt="A corner of the kitchen: canisters, chopping boards, a SMEG fridge and a lamp on the timber bench" width="1100" height="1375" loading="lazy"><figcaption>The kitchen corner</figcaption></figure>
+    <figure><img src="img/kettle-1100.jpg" srcset="img/kettle-650.jpg 650w, img/kettle-1100.jpg 1100w" sizes="(max-width:900px) 50vw, 24vw" alt="An oil painting above a bench with a radio, a teapot and dried hydrangeas" width="1100" height="1391" loading="lazy"><figcaption>Tea under the painting</figcaption></figure>
+  </div></div>
+</section>
+
+<section class="town wrap" id="waratah">
+  <div class="inner t-grid">
+    <div>
+      <h2 class="big">Waratah, from the front step</h2>
+      <p class="lede" style="margin-top:18px">A quiet town on the edge of the Tarkine, with a waterfall in the middle of it. It's not uncommon to see wallabies and wombats grazing nearby.</p>
+      <ol class="ledger" role="list">
+        <li><span class="what">Waratah Waterfall</span><span class="dots"></span><span class="how">Across the road</span></li>
+        <li><span class="what">Bischoff Hotel<small>Meals, open seven days</small></span><span class="dots"></span><span class="how">A short walk</span></li>
+        <li><span class="what">Waratah Roadhouse<small>Takeaway and the basics</small></span><span class="dots"></span><span class="how">A short walk</span></li>
+        <li><span class="what">Lake Waratah and Ringtail Falls</span><span class="dots"></span><span class="how">Walking distance</span></li>
+        <li><span class="what">The old Waratah Power Station<small>Abandoned</small></span><span class="dots"></span><span class="how">Walking distance</span></li>
+        <li><span class="what">Cradle Mountain<small>Cradle Mountain-Lake St Clair National Park</small></span><span class="dots"></span><span class="how">A short drive</span></li>
+        <li><span class="what">Burnie<small>On the north-west coast</small></span><span class="dots"></span><span class="how">About 45 minutes by car</span></li>
+      </ol>
+      <p class="weather">Waratah is 600 metres above sea level and gets snow a few times around winter. The roads are well kept, but pack for the cold and check the forecast.</p>
+    </div>
+    <div class="t-side">
+      <figure><img src="img/street-1100.jpg" srcset="img/street-650.jpg 650w, img/street-1100.jpg 1100w" sizes="(max-width:860px) 100vw, 40vw" alt="The Post Office from above, on the bend of Main Street, with the hills behind town" width="1100" height="1381" loading="lazy"><figcaption>On the bend of Main Street</figcaption></figure>
+      <figure><img src="img/snow-1440.jpg" srcset="img/snow-900.jpg 900w, img/snow-1440.jpg 1440w" sizes="(max-width:860px) 72vw, 30vw" alt="The Post Office with snow on the ground out the front" width="1440" height="1152" loading="lazy"><figcaption>After a snowfall</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="host" id="madeleine">
+  <div class="wrap"><div class="inner host-grid">
+    <div>
+      <h2 class="big">Madeleine</h2>
+      <blockquote>"I am a passionate cook and love to dabble in interior and floral styling. When I'm not working, you'll find me in our garden or wandering through an antique shop. I am forever looking for that special piece!"
+        <cite>Madeleine, your host, on Airbnb. A Superhost, with Andy as co-host.</cite></blockquote>
+      <div class="score"><b>4.90</b><span>from 235 guest reviews on Airbnb</span></div>
+    </div>
+    <ul class="quotes" role="list">
+      <li><p class="q">"It felt like being in an interior design book."</p><p class="who">Jayne, Airbnb, November 2026</p></li>
+      <li><p class="q">"The attention to detail was like no other, even down to the music on arrival."</p><p class="who">Fleur, Airbnb, October 2026</p></li>
+      <li><p class="q">"We even made our own butter to go with the bread we made too."</p><p class="who">Jess, Airbnb, October 2026</p></li>
+      <li><p class="q">"It has rekindled childhood memories for my husband as he was a child when his dad was a Postmaster in Gulargambone NSW Post Office. The counter and money draws are the same."</p><p class="who">Julie, Airbnb, August 2026</p></li>
+      <li><p class="q">"Truly grateful for the opportunity to stay here for the second time."</p><p class="who">Sue, Airbnb, September 2026</p></li>
+    </ul>
+  </div></div>
+</section>
+
+<section class="book wrap" id="book">
+  <div class="inner">
+    <h2 class="big">Check dates</h2>
+    <div class="book-grid">
+      <img src="img/porch-1100.jpg" srcset="img/porch-650.jpg 650w, img/porch-1100.jpg 1100w" sizes="(max-width:820px) 100vw, 45vw" alt="The guest entrance porch with a chequered tile floor, a small iron table for two and a hanging plant" width="1100" height="1467" loading="lazy">
+      <div class="book-side">
+        <div class="box dark">
+          <h3>Book The Post Office</h3>
+          <p>See open dates and the price for your stay, then book.</p>
+          <div class="acts"><a class="btn butter" href="https://www.airbnb.com.au/rooms/582897566630929496">Check dates</a></div>
+        </div>
+        <div>
+          <p>Questions first, or planning an elopement or a photo shoot? Call before you book.</p>
+          <div class="acts"><a class="btn line" href="tel:+61477924999">Call 0477 924 999</a></div>
+        </div>
+        <ul class="notes" role="list">
+          <li>Check in after 3pm, check out by 11am. Self check-in with a key safe.</li>
+          <li>No children or pets unless arranged first, as the furniture and linen are delicate.</li>
+          <li>Shoes off inside, please.</li>
+          <li>Two steps up from the street at either entrance. The bath nook may not suit guests with mobility concerns.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="close" aria-label="We'll look after you">
+  <img src="img/night-1440.jpg" srcset="img/night-900.jpg 900w, img/night-1440.jpg 1440w" sizes="100vw" alt="The arched window at dusk from inside the dark living room, with the last light over the hills" width="1440" height="960" loading="lazy">
+  <div class="txt">
+    <h2>We'll look after you.</h2>
+    <p>From the long velvet seat, the view runs out over Happy Valley to the Tarkine rainforest.</p>
+    <div class="acts"><a class="btn butter" href="https://www.airbnb.com.au/rooms/582897566630929496">Check dates</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap"><div class="inner">
+  <p>A preview made by Lampbound Studio for The Post Office, Waratah. Not affiliated, not live.</p>
+  <p>Photos from The Post Office's public listings. Quotes are from their Airbnb listing and guest reviews.</p>
+</div></footer>
+
+<div class="phonebar" id="phonebar">
+  <a class="btn butter" href="https://www.airbnb.com.au/rooms/582897566630929496">Check dates</a>
+  <a class="btn line" href="tel:+61477924999">Call</a>
+</div>
+
+<script>
+(function(){
+  var still = window.matchMedia('(prefers-reduced-motion: reduce), (max-height:480px)');
+  var bar = document.getElementById('phonebar');
+  var hero = document.querySelector('.hero'), letter = document.querySelector('.letter');
+  var ph = document.querySelector('.ph'), win = document.querySelector('.win'), mark = document.querySelector('.mark'), hc = document.querySelector('.h-copy'), h2 = document.querySelector('.h-two');
+  var lw = document.querySelector('.l-words'), env = document.querySelector('.env'), card = document.querySelector('.card'), pm = document.querySelector('.pm'),
+      flap = document.querySelector('.flap'), sheet = document.querySelector('.sheet'), room = document.querySelector('.room'), le = document.querySelector('.l-end');
+  var ha = hc.querySelector('.acts');
+  var moved = [ph,win,mark,hc,ha,h2,lw,env,card,pm,flap,sheet,room,le];
+  function cl(v){return v<0?0:v>1?1:v}
+  function seg(p,a,b){return cl((p-a)/(b-a))}
+  function ease(t){return 1-Math.pow(1-t,3)}
+  function prog(el){var r=el.getBoundingClientRect();var span=r.height-window.innerHeight;return span>0?cl(-r.top/span):0}
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    bar.classList.toggle('on', bar.contains(document.activeElement) || (window.scrollY||0) > window.innerHeight*0.6);
+    if(still.matches) return;
+    /* Act 1: the stamp edge grows past the camera, the postmark rolls away, the photo settles */
+    var p=prog(hero), g=ease(seg(p,0.15,0.75));
+    ph.style.transform='scale('+(1.14-0.14*g)+')';
+    win.style.transform='translate(-50%,-50%) scale('+(1+3.2*g*g)+')';
+    mark.style.transform='translate3d('+(-40*g)+'vw,'+(-20*g)+'vh,0) rotate('+(-70*g)+'deg)';
+    mark.style.opacity=1-seg(p,0.1,0.35);
+    var hf=hc.contains(document.activeElement), ho=hf?1:1-seg(p,0.02,0.15); hc.style.opacity=ho; ha.style.visibility=ho<0.02?'hidden':'';
+    h2.style.opacity=seg(p,0.62,0.8);
+    /* Act 2: postmark lands, the envelope turns over, the flap opens, the letter rises, the room opens */
+    var q=prog(letter);
+    var land=seg(q,0.04,0.16);
+    pm.style.opacity=land>0?1:0;
+    pm.style.transform='translate3d(0,'+(-60*(1-ease(land)))+'%,0) scale('+(1.7-0.7*ease(land))+') rotate(-8deg)';
+    lw.style.opacity=1-seg(q,0.2,0.32);
+    card.style.transform='rotateY('+(180*ease(seg(q,0.24,0.42)))+'deg)';
+    var f=seg(q,0.44,0.56);
+    flap.style.transform='rotateX('+(180*f)+'deg)';
+    flap.classList.toggle('under', f>0.5);
+    var rise=ease(seg(q,0.56,0.74));
+    sheet.style.transform='translate3d(0,'+(-70*rise)+'%,0)';
+    env.style.transform='translate(-50%,-50%) translate3d(0,'+(14*rise)+'%,0)';
+    room.style.opacity=seg(q,0.78,0.85);
+    le.style.opacity=seg(q,0.87,0.95);
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  document.addEventListener('focusin',onScroll);
+  document.addEventListener('focusout',function(){setTimeout(onScroll,0)});
+  if(still.addEventListener) still.addEventListener('change',function(){moved.forEach(function(e){e.style.transform='';e.style.opacity='';e.style.visibility=''});frame()});
+  frame();
+})();
+</script>
+</body>
+</html>
