@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>The Wayfarer | A 1970s beach shack above Pirates Bay, Eaglehawk Neck</title>
+<meta name="description" content="A restored 1970s Tassie beach shack above Pirates Bay at Eaglehawk Neck. A website idea made by Lampbound Studio for The Wayfarer.">
+<meta property="og:title" content="The Wayfarer, Eaglehawk Neck">
+<meta property="og:description" content="A website idea made by Lampbound Studio for The Wayfarer. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/thewayfarer/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/thewayfarer/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c2836'/%3E%3Cpath d='M4 10h24M4 24h24M4 10l12 14M16 10l12 14M16 10L4 24M28 10L16 24' stroke='%23f2f3f0' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/hero.jpg" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Karla:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+/* Tokens come from the shack (see brand.md):
+   night = the deep navy cushions and throws in the sitting room
+   deck  = the white cross-braced railing and weatherboards, kept cool
+   sun   = the sunrise over Pirates Bay in their own photos
+   sea   = Pirates Bay on a clear day
+   Caprasimo is a soft, heavy 1970s face for a 1970s shack. Karla is for reading. */
+:root{
+  --night:#1c2836;
+  --night-2:#26364a;
+  --deck:#f2f3f0;
+  --deck-2:#e1e4e2;
+  --sun:#e58a3a;
+  --sun-2:#f09d52;
+  --sea:#5d7f99;
+  --ink:#1c2836;
+  --ink-soft:#4a5766;
+  --display:"Caprasimo","Cooper Black","Georgia",serif;
+  --text:"Karla","Avenir Next","Segoe UI",sans-serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--deck);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--deck);padding:8px 12px}
+
+.strip{background:var(--night);color:var(--deck);font-size:14px;text-align:center;margin:0;
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  padding:16px var(--gut-r) 0 var(--gut)}
+.mark{font-family:var(--display);font-size:24px;color:#fff;text-decoration:none;text-shadow:0 1px 10px rgba(10,14,20,.6)}
+.top nav{display:flex;gap:22px;align-items:center;font-weight:600;font-size:15px}
+.top nav a{color:#fff;text-decoration:none;text-shadow:0 1px 8px rgba(10,14,20,.6)}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:24px;
+  font-family:var(--text);font-weight:700;font-size:16px;text-decoration:none;border:0;cursor:pointer;
+  background:var(--sun);color:var(--night)}
+.btn:hover{background:var(--sun-2)}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.line:hover{background:rgba(255,255,255,.1)}
+.top nav .btn{text-shadow:none;color:var(--night)}
+
+/* Hero: three planes. The bay photo, the name, and the white railing in front. */
+.hero{position:relative;height:170vh;background:var(--night)}
+.hero .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.hero .photo{position:absolute;inset:-4% 0 0 0;will-change:transform}
+.hero .photo img{width:100%;height:104%;object-fit:cover;object-position:50% 45%}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,40,54,.55) 0%,rgba(28,40,54,0) 30%,rgba(28,40,54,0) 55%,rgba(28,40,54,.65) 100%)}
+.hero .name{position:absolute;left:var(--gut);right:var(--gut-r);bottom:24vh;color:#fff;will-change:transform,opacity}
+.hero h1{font-size:clamp(64px,11vw,168px);text-shadow:0 2px 24px rgba(10,14,20,.45)}
+.hero .name p{max-width:30ch;font-size:clamp(18px,1.7vw,22px);margin-top:14px;text-shadow:0 1px 10px rgba(10,14,20,.7)}
+.hero .rail{position:absolute;left:0;right:0;bottom:-2px;will-change:transform;pointer-events:none}
+.hero .rail svg{display:block;width:100%;height:auto}
+.hero .cta{position:absolute;left:var(--gut);bottom:9vh;display:flex;gap:12px;flex-wrap:wrap;z-index:3}
+.hero .cta .line{color:#fff}
+
+.lull{padding:96px var(--gut-r) 88px var(--gut);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;max-width:1200px;margin:0 auto;align-items:end}
+.lull h2{font-size:clamp(36px,4.4vw,60px)}
+.lull p{color:var(--ink-soft);max-width:44ch}
+.lull p+p{margin-top:14px}
+
+/* The signature: binoculars at arm's reach. A lens sweeps the bay as you scroll. */
+.sweep{position:relative;height:420vh;background:var(--night);color:var(--deck)}
+.sweep .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.sweep .bay,.sweep .sky{position:absolute;inset:0}
+.sweep .bay img,.sweep .sky img{width:100%;height:100%;object-fit:cover}
+.sweep .bay img{object-position:30% 0%}
+.sweep .sky{opacity:0;will-change:opacity}
+.sweep .lens{position:absolute;left:50%;top:40%;width:400vmax;height:400vmax;margin:-200vmax 0 0 -200vmax;will-change:transform,opacity}
+.sweep .lens svg{width:100%;height:100%;display:block}
+.sweep .intro{position:absolute;left:var(--gut);top:9vh;max-width:30ch;z-index:2}
+.sweep .intro h2{font-size:clamp(30px,3.4vw,46px)}
+.sweep .intro p{margin-top:10px;font-size:16px;color:#dfe4e8}
+.sweep .seen{position:absolute;right:var(--gut-r);bottom:12vh;z-index:2;text-align:right;min-height:3.2em;width:min(80vw,560px)}
+.sweep .seen span{position:absolute;right:0;bottom:0;font-family:var(--display);font-size:clamp(30px,4vw,56px);line-height:1.05;opacity:0;will-change:opacity,transform;text-shadow:0 2px 18px rgba(10,14,20,.7)}
+.sweep .note{position:absolute;left:var(--gut);bottom:5vh;z-index:2;font-size:14px;color:#c9d2da;max-width:46ch}
+
+.inside{padding:104px var(--gut-r) 40px var(--gut);max-width:1240px;margin:0 auto}
+.inside h2{font-size:clamp(36px,4.4vw,60px);max-width:16ch}
+.inside .lede{margin-top:16px;max-width:52ch;color:var(--ink-soft)}
+.rooms{margin-top:48px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:20px;align-items:start}
+.rooms figure{margin:0}
+.rooms figcaption{font-size:15px;color:var(--ink-soft);margin-top:10px;max-width:40ch}
+.rooms figcaption b{color:var(--ink);font-weight:700}
+.r1{grid-column:1 / span 7}
+.r2{grid-column:8 / span 5;margin-top:120px}
+.r3{grid-column:2 / span 4}
+.r4{grid-column:6 / span 3;margin-top:60px}
+.r5{grid-column:9 / span 4;margin-top:20px}
+.r6{grid-column:1 / span 5;margin-top:10px}
+.r7{grid-column:7 / span 6;margin-top:-80px}
+.rooms img{width:100%;border-radius:3px}
+
+.where{background:var(--night);color:var(--deck);margin-top:96px}
+.where .in{max-width:1240px;margin:0 auto;padding:96px var(--gut-r) 96px var(--gut);display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:56px;align-items:center}
+.where h2{font-size:clamp(34px,4vw,54px)}
+.where ul{list-style:none;padding:0;margin:28px 0 0}
+.where li{display:grid;grid-template-columns:9ch 1fr;gap:16px;padding:14px 0;border-top:1px solid rgba(242,243,240,.18)}
+.where li b{font-family:var(--display);font-weight:400;font-size:24px;color:var(--sun);font-variant-numeric:tabular-nums}
+.where .small{margin-top:20px;font-size:15px;color:#c9d2da;max-width:48ch}
+.where figure{margin:0}
+.where figcaption{font-size:14px;color:#c9d2da;margin-top:10px}
+
+.guests{max-width:1100px;margin:0 auto;padding:104px var(--gut-r) 40px var(--gut)}
+.guests .head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.guests h2{font-size:clamp(34px,4vw,54px)}
+.guests .score{font-size:16px;color:var(--ink-soft)}
+.guests .score b{font-family:var(--display);font-weight:400;font-size:40px;color:var(--ink);margin-right:6px}
+.quotes{margin-top:40px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,4fr);gap:36px}
+.quotes blockquote{margin:0}
+.quotes blockquote p{font-size:20px;line-height:1.45}
+.quotes blockquote:first-child p{font-family:var(--display);font-size:clamp(26px,2.6vw,34px);line-height:1.15}
+.quotes cite{display:block;margin-top:12px;font-style:normal;font-size:15px;color:var(--ink-soft)}
+
+.book{max-width:1100px;margin:0 auto;padding:88px var(--gut-r) 120px var(--gut);display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:56px;align-items:start}
+.book h2{font-size:clamp(34px,4vw,54px)}
+.book .lede{margin-top:16px;color:var(--ink-soft);max-width:44ch}
+.book .acts{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+.book .acts .line{color:var(--night)}
+.book dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:12px 24px;font-size:17px}
+.book dt{font-weight:700}
+.book dd{margin:0;color:var(--ink-soft)}
+
+footer{background:var(--night);color:#c9d2da;font-size:14px;padding:28px var(--gut-r) 110px var(--gut);text-align:center}
+footer a{color:var(--deck)}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);
+  background:rgba(28,40,54,.96);border-top:1px solid rgba(242,243,240,.15)}
+.phonebar .btn{flex:1}
+.phonebar .line{color:var(--deck);flex:0 0 auto}
+
+@media (max-width:820px){
+  .top nav a:not(.btn){display:none}
+  .hero{height:150vh}
+  .hero .photo img{object-position:62% 50%}
+  .hero .name{bottom:30vh}
+  .hero .cta{display:none}
+  .lull,.where .in,.book{grid-template-columns:1fr;gap:28px}
+  .lull{padding-top:72px;padding-bottom:64px}
+  .rooms{grid-template-columns:1fr;gap:32px}
+  .rooms figure{grid-column:auto;margin-top:0}
+  .rooms .r2,.rooms .r5{width:82%;margin-left:auto}
+  .rooms .r4{width:70%}
+  .quotes{grid-template-columns:1fr;gap:28px}
+  .sweep{height:380vh}
+  .sweep .bay img{object-position:22% 50%}
+  .sweep .seen{bottom:16vh}
+  .sweep .note{bottom:4vh;font-size:13px}
+  .where li{grid-template-columns:8ch 1fr}
+  .phonebar{display:flex}
+}
+
+/* Reduced motion: every pinned scene shows its end state and scrolls like a page. */
+@media (prefers-reduced-motion:reduce){
+  .hero,.sweep{height:auto}
+  .hero .stage,.sweep .stage{position:relative;height:100vh}
+  .hero .photo,.hero .name,.hero .rail{transform:none!important}
+  .sweep .lens{display:none}
+  .sweep .sky{opacity:1!important}
+  .sweep .seen{position:relative;right:auto;bottom:auto;margin:0 0 0 auto;padding:0 var(--gut-r) 0 var(--gut);top:60vh}
+  .sweep .seen span{position:static;display:block;opacity:1!important;transform:none!important;font-size:clamp(24px,3vw,40px)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the page</a>
+<p class="strip">A website idea made by Lampbound Studio for The Wayfarer. Not their official site.</p>
+
+<header class="top">
+  <a class="mark" href="#main">The Wayfarer</a>
+  <nav aria-label="Page">
+    <a href="#inside">Inside</a>
+    <a href="#where">Getting here</a>
+    <a href="#book">Booking</a>
+    <a class="btn" href="https://www.airbnb.com.au/rooms/34265807" rel="noopener">Check dates</a>
+  </nav>
+</header>
+
+<main id="main">
+<section class="hero" aria-label="The Wayfarer at sunrise">
+  <div class="stage">
+    <div class="photo" data-plane="photo"><img src="img/hero.jpg" width="1920" height="1280" alt="Sunrise over Pirates Bay from The Wayfarer" fetchpriority="high"></div>
+    <div class="shade"></div>
+    <div class="name" data-plane="name">
+      <h1>The Wayfarer</h1>
+      <p>A 1970s Tassie beach shack above Pirates Bay, Eaglehawk Neck.</p>
+    </div>
+    <div class="rail" data-plane="rail" aria-hidden="true">
+      <svg viewBox="0 0 1440 260" preserveAspectRatio="xMidYMax slice">
+        <g fill="none" stroke="#f2f3f0" stroke-linecap="square">
+          <path d="M0 70H1440" stroke-width="16"/>
+          <path d="M0 250H1440" stroke-width="18"/>
+          <g stroke-width="14">
+            <path d="M40 70V260M400 70V260M760 70V260M1120 70V260M1480 70V260"/>
+          </g>
+          <g stroke-width="9">
+            <path d="M40 78L400 246M400 78L40 246M400 78L760 246M760 78L400 246M760 78L1120 246M1120 78L760 246M1120 78L1480 246M1480 78L1120 246"/>
+          </g>
+        </g>
+        <path d="M0 250H1440V260H0z" fill="#d9dcd8"/>
+      </svg>
+    </div>
+    <div class="cta">
+      <a class="btn" href="https://www.airbnb.com.au/rooms/34265807" rel="noopener">Check dates</a>
+      <a class="btn line" href="#inside">See inside</a>
+    </div>
+  </div>
+</section>
+
+<section class="lull">
+  <h2>Fall asleep to the lullaby of the waves.</h2>
+  <div>
+    <p>The Wayfarer is a classic 1970s shack, lovingly restored, with big windows over Pirates Bay and the bush all round. Two bedrooms, a Nectre wood fire, and a wrap-around deck that catches the morning sun.</p>
+    <p>It suits couples, families, friends or a solo trip, and it's an easy base for Port Arthur and the Three Capes walk.</p>
+  </div>
+</section>
+
+<section class="sweep" aria-labelledby="sweep-h">
+  <div class="stage">
+    <div class="bay"><img src="img/bay.jpg" width="1920" height="1452" alt="Pirates Bay from the window of The Wayfarer, with the white deck railing on the right" loading="lazy"></div>
+    <div class="sky" data-sky><img src="img/aurora.jpg" width="1920" height="1125" alt="An aurora over the bay at night, from The Wayfarer's photos" loading="lazy"></div>
+    <div class="lens" data-lens aria-hidden="true">
+      <svg viewBox="0 0 400 400">
+        <defs>
+          <mask id="eyes">
+            <rect width="400" height="400" fill="#fff"/>
+            <circle cx="191" cy="200" r="11" fill="#000"/>
+            <circle cx="209" cy="200" r="11" fill="#000"/>
+          </mask>
+        </defs>
+        <rect width="400" height="400" fill="#0e1520" fill-opacity=".86" mask="url(#eyes)"/>
+        <circle cx="191" cy="200" r="11" fill="none" stroke="#0e1520" stroke-width=".9"/>
+        <circle cx="209" cy="200" r="11" fill="none" stroke="#0e1520" stroke-width=".9"/>
+      </svg>
+    </div>
+    <div class="intro">
+      <h2 id="sweep-h">Binoculars at arm's reach.</h2>
+      <p>Guests find a pair in the shack, with a bird guide. If you're lucky, you might spot</p>
+    </div>
+    <p class="seen" aria-live="off">
+      <span data-seen="0">a migrating whale,</span>
+      <span data-seen="1">a playful pod of dolphins,</span>
+      <span data-seen="2">a passing yacht,</span>
+      <span data-seen="3">or even an adventurous hang glider.</span>
+      <span data-seen="4">And on the right night, an aurora.</span>
+    </p>
+    <p class="note">The list comes from the shack's own description. The aurora photo is from their listing.</p>
+  </div>
+</section>
+
+<section class="inside" id="inside" aria-labelledby="inside-h">
+  <h2 id="inside-h">Simple touches and family treasures.</h2>
+  <p class="lede">Sleeps four. A queen room, a room with two singles, a new bathroom, a sun-filled sitting room and a full kitchen. Basic breakfast provisions are left for your first morning.</p>
+  <div class="rooms">
+    <figure class="r1"><img src="img/sunrise-room.jpg" width="1200" height="800" alt="The sitting room with the sun coming up through the big front windows" loading="lazy"><figcaption><b>The sitting room.</b> Big windows framing the bay, a generous sofa and a rocking chair for the sunset.</figcaption></figure>
+    <figure class="r2"><img src="img/fire.jpg" width="1200" height="883" alt="The Nectre wood fire with a stack of firewood beside it" loading="lazy"><figcaption><b>The Nectre fire.</b> For music, a board game and a blanket on a wild night.</figcaption></figure>
+    <figure class="r3"><img src="img/bed.jpg" width="1200" height="1500" alt="The queen bedroom with a window above the bed" loading="lazy"><figcaption><b>Bedroom one.</b> A queen bed.</figcaption></figure>
+    <figure class="r4"><img src="img/twin.jpg" width="1200" height="800" alt="The second bedroom with two single beds" loading="lazy"><figcaption><b>Bedroom two.</b> Two singles.</figcaption></figure>
+    <figure class="r5"><img src="img/kitchen.jpg" width="1200" height="852" alt="The white kitchen with dark lower cupboards" loading="lazy"><figcaption><b>The kitchen.</b> Fully equipped, with a breakfast bar looking out to sea.</figcaption></figure>
+    <figure class="r6"><img src="img/deck-sign.jpg" width="1200" height="960" alt="Two cane chairs on the deck beside The Wayfarer name on the weatherboards" loading="lazy"><figcaption><b>The deck.</b> It wraps around the shack, with a Weber barbecue.</figcaption></figure>
+    <figure class="r7"><img src="img/deck-dusk.jpg" width="1200" height="1637" alt="Two people on the deck at dusk, the sky orange over the bay" loading="lazy"><figcaption>The deck at dusk.</figcaption></figure>
+  </div>
+</section>
+
+<section class="where" id="where" aria-labelledby="where-h">
+  <div class="in">
+    <div>
+      <h2 id="where-h">Getting here</h2>
+      <ul>
+        <li><b>500 m</b><span>walk to the surf beach at Pirates Bay</span></li>
+        <li><b>20 min</b><span>drive to Port Arthur</span></li>
+        <li><b>50 min</b><span>drive to Hobart Airport</span></li>
+        <li><b>10 min</b><span>to the small grocery store at Murdunna</span></li>
+      </ul>
+      <p class="small">There are no big shops close by, so stop in Sorell for groceries on the way. The driveway is a little steep at the road, recently concreted and sealed, with a turning circle at the top.</p>
+    </div>
+    <figure><img src="img/aerial.jpg" width="896" height="675" alt="Aerial view of Eaglehawk Neck with a red arrow marking the shack above Pirates Bay beach" loading="lazy"><figcaption>The red arrow is the shack. Pirates Bay beach runs below it.</figcaption></figure>
+  </div>
+</section>
+
+<section class="guests" aria-labelledby="guests-h">
+  <div class="head">
+    <h2 id="guests-h">From the guest book</h2>
+    <p class="score"><b>4.99</b>from 526 reviews on Airbnb</p>
+  </div>
+  <div class="quotes">
+    <blockquote><p>"We even saw whales from the balcony with binoculars."</p><cite>Amy, Airbnb</cite></blockquote>
+    <blockquote><p>"The sunrise from the living room was our trip's highlight!"</p><cite>Megumi, Airbnb</cite></blockquote>
+    <blockquote><p>"Felt very much at home as soon as we arrived. Would not change a thing."</p><cite>Neil, Airbnb</cite></blockquote>
+  </div>
+</section>
+
+<section class="book" id="book" aria-labelledby="book-h">
+  <div>
+    <h2 id="book-h">Book your stay</h2>
+    <p class="lede">Dates and prices are on Airbnb. If your dates don't show as free, email Lainie and ask: short stays often open up between bookings.</p>
+    <div class="acts">
+      <a class="btn" href="https://www.airbnb.com.au/rooms/34265807" rel="noopener">Check dates on Airbnb</a>
+      <a class="btn line" href="mailto:lainie@thewayfarertasmania.com">Email to ask</a>
+    </div>
+  </div>
+  <dl>
+    <dt>Sleeps</dt><dd>4, in two bedrooms</dd>
+    <dt>Check in</dt><dd>After 2 pm, with a lockbox</dd>
+    <dt>Check out</dt><dd>10 am</dd>
+    <dt>Where</dt><dd>66 Blowhole Road, Eaglehawk Neck, Tasmania</dd>
+    <dt>Call</dt><dd><a href="tel:+61437760670">0437 760 670</a></dd>
+  </dl>
+</section>
+</main>
+
+<footer>
+  <p>A preview made by Lampbound Studio for The Wayfarer. Not affiliated, not live. Photos and words are The Wayfarer's own, from their public listing.</p>
+</footer>
+
+<div class="phonebar">
+  <a class="btn" href="https://www.airbnb.com.au/rooms/34265807" rel="noopener">Check dates</a>
+  <a class="btn line" href="tel:+61437760670" aria-label="Call The Wayfarer">Call</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (reduce.matches) return;
+  var hero = document.querySelector('.hero');
+  var photo = hero.querySelector('[data-plane=photo]');
+  var name = hero.querySelector('[data-plane=name]');
+  var rail = hero.querySelector('[data-plane=rail]');
+  var sweep = document.querySelector('.sweep');
+  var lens = sweep.querySelector('[data-lens]');
+  var sky = sweep.querySelector('[data-sky]');
+  var seen = sweep.querySelectorAll('[data-seen]');
+  var ticking = false;
+  function prog(el){
+    var r = el.getBoundingClientRect();
+    var span = el.offsetHeight - window.innerHeight;
+    return Math.min(1, Math.max(0, -r.top / span));
+  }
+  function clamp(v){ return Math.min(1, Math.max(0, v)); }
+  function frame(){
+    ticking = false;
+    var h = prog(hero);
+    photo.style.transform = 'translate3d(0,' + (h * -4) + '%,0) scale(' + (1.06 - h * 0.06) + ')';
+    name.style.transform = 'translate3d(0,' + (h * -18) + 'vh,0)';
+    name.style.opacity = String(1 - clamp((h - 0.55) / 0.4));
+    rail.style.transform = 'translate3d(0,' + ((1 - h) * 55) + '%,0)';
+    var s = prog(sweep);
+    var sw = clamp(s / 0.78);
+    var x = -34 + sw * 68;
+    var y = Math.sin(sw * Math.PI * 2) * 6;
+    lens.style.transform = 'translate3d(' + x + 'vw,' + y + 'vh,0)';
+    var a = clamp((s - 0.78) / 0.14);
+    sky.style.opacity = String(a);
+    lens.style.opacity = String(1 - a);
+    var idx = s < 0.78 ? Math.min(3, Math.floor(sw * 4)) : 4;
+    if (s < 0.04) idx = -1;
+    for (var i = 0; i < seen.length; i++) {
+      var on = i === idx;
+      seen[i].style.opacity = on ? '1' : '0';
+      seen[i].style.transform = on ? 'translate3d(0,0,0)' : 'translate3d(0,14px,0)';
+    }
+  }
+  function onScroll(){ if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
+  for (var i = 0; i < seen.length; i++) seen[i].style.transition = 'opacity .35s ease-out, transform .35s ease-out';
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+  frame();
+})();
+</script>
+</body>
+</html>
