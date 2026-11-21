@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Snug Haus, Snug Tasmania | A timber house for two above Storm Bay</title>
+<meta name="description" content="A cosy timber house for two in the foothills of the Snug Tiers, with views over Storm Bay, breakfast supplied and a telescope for the Iron Pot lighthouse. A website idea made by Lampbound Studio for Snug Haus.">
+<meta property="og:title" content="Snug Haus, Snug Tasmania">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Snug Haus. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/snughaus/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/snughaus/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231f3040'/%3E%3Cpath d='M5 13 L27 10 L27 24 L5 24 Z' fill='%23a0672d'/%3E%3Crect x='9' y='15' width='14' height='3' fill='%231f3040'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/haus-bay-1440.jpg" media="(min-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/haus-bay-720.jpg" media="(max-width: 699px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* Tokens come from the house and the view (see brand.md):
+   bay    = Storm Bay from the deck
+   mist   = the sky over the channel
+   oak    = the Tasmanian oak feature wall
+   clad   = the silvered timber outside
+   red    = the leather recliners
+   Jost: Bauhaus lines for a Haus. Newsreader: Heidi's words and the guest lines. */
+:root{
+  --bay:#1f3040;
+  --bay-2:#2a3f53;
+  --mist:#eef3f5;
+  --mist-2:#dfe8ec;
+  --oak:#a0672d;
+  --oak-d:#7f4f1f;
+  --clad:#635948;
+  --red:#8a3a44;
+  --ink:#1c2a36;
+  --ink-soft:#4c5a66;
+  --lens:#0b0f14;
+  --display:"Jost","Futura","Avenir Next",sans-serif;
+  --text:"Newsreader","Georgia",serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--mist);color:var(--ink);font-family:var(--text);font-size:19px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--oak-d);outline-offset:3px}
+.dark :focus-visible,.strip :focus-visible,.bar :focus-visible,footer :focus-visible{outline-color:#f0c48f}
+h1,h2,h3{font-family:var(--display);font-weight:300;line-height:1.08;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:44px;z-index:60;background:var(--mist);padding:8px 12px}
+.strip{position:relative;z-index:40;background:var(--bay);color:#d6e0e6;font-family:var(--display);font-size:14px;line-height:1.4;padding:9px var(--gut-r) 9px var(--gut);text-align:center}
+
+/* Hero: the hill, the tussocks, the echidna */
+.hero{position:relative;height:230vh;background:var(--bay)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 60%;transform:scale(calc(1 + var(--p,0) * .07));transform-origin:30% 70%}
+.scrim{position:absolute;left:0;right:0;top:0;height:55%;background:linear-gradient(to bottom,rgba(20,32,44,.6),rgba(20,32,44,.2) 65%,rgba(20,32,44,0));pointer-events:none}
+.hero-copy{position:absolute;left:var(--gut);right:var(--gut-r);top:clamp(56px,10vh,110px);color:#fff;max-width:820px;transform:translate3d(0,calc(var(--p,0) * -5vh),0)}
+.hero h1{font-size:clamp(52px,9vw,128px);font-weight:300;letter-spacing:-.01em;text-shadow:0 2px 16px rgba(0,0,0,.3)}
+.hero h1 b{font-weight:500}
+.hero-copy p{margin-top:12px;font-size:clamp(19px,1.8vw,24px);max-width:32ch;text-shadow:0 1px 3px rgba(0,0,0,.7),0 2px 14px rgba(0,0,0,.45)}
+.tussock{position:absolute;left:-4%;right:-4%;bottom:-2%;height:34%;transform:translate3d(0,calc((1 - var(--p,0)) * 14%),0);pointer-events:none}
+.tussock svg{width:100%;height:100%;display:block}
+.echidna{position:absolute;bottom:9%;left:0;width:clamp(90px,10vw,150px);transform:translate3d(calc(-20vw + var(--p,0) * 70vw),0,0);opacity:var(--e-o,0)}
+.echidna svg{width:100%;height:auto;display:block}
+.note{position:absolute;right:var(--gut-r);bottom:clamp(120px,22vh,220px);max-width:26ch;color:#fff;font-size:clamp(18px,1.8vw,24px);line-height:1.3;text-align:right;opacity:var(--n-o,0);transform:translate3d(0,calc((1 - var(--n-o,0)) * 16px),0);text-shadow:0 1px 3px rgba(0,0,0,.8),0 2px 14px rgba(0,0,0,.6)}
+.note small{display:block;font-size:15px;margin-top:6px;color:#e6edf1}
+
+section{position:relative}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--gut-r) 0 var(--gut)}
+
+.intro{padding:clamp(64px,10vw,130px) 0}
+.intro .wrap{display:grid;gap:36px}
+.intro h2{font-size:clamp(34px,5vw,62px)}
+.lede{font-size:clamp(20px,1.9vw,24px);margin-top:18px;max-width:34ch}
+.lede + p{margin-top:16px;max-width:42ch;color:var(--ink-soft)}
+.facts{list-style:none;padding:0;margin:26px 0 0;font-family:var(--display);font-size:16px;display:grid;grid-template-columns:1fr 1fr;gap:0 24px;max-width:460px}
+.facts li{padding:10px 0;border-top:1px solid #c5d1d8}
+.intro figure{margin:0}
+.intro img{width:100%;border-radius:2px}
+.cap{font-family:var(--display);font-size:14px;color:var(--ink-soft);margin-top:8px}
+
+.rooms{background:var(--mist-2);padding:clamp(56px,8vw,110px) 0}
+.rooms h2{font-size:clamp(30px,4.2vw,52px)}
+.rooms .wrap > p{margin-top:12px;max-width:46ch}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:30px}
+.grid figure{margin:0}
+.grid img{width:100%;height:auto;object-fit:cover;border-radius:2px}
+.grid .wide{grid-column:1 / -1}
+.grid figcaption{font-family:var(--display);font-size:14px;color:var(--ink-soft);margin-top:6px}
+
+.breakfast{padding:clamp(60px,9vw,120px) 0}
+.breakfast .wrap{display:grid;gap:34px;align-items:center}
+.breakfast h2{font-size:clamp(30px,4.2vw,52px)}
+.breakfast p{margin-top:14px;max-width:40ch}
+.supplies{list-style:none;padding:0;margin:22px 0 0;font-family:var(--display);font-size:17px}
+.supplies li{padding:9px 0;border-bottom:1px solid #c5d1d8;display:flex;gap:14px}
+.supplies li::before{content:"";flex:0 0 10px;height:10px;margin-top:8px;background:var(--oak)}
+.trio{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:auto auto;gap:10px}
+.trio img{width:100%;height:100%;object-fit:cover;border-radius:2px}
+.trio .t1{grid-row:1 / span 2}
+
+.wild{background:var(--bay);color:var(--mist);padding:clamp(60px,9vw,120px) 0}
+.wild .wrap{display:grid;gap:34px}
+.wild h2{font-size:clamp(30px,4.2vw,52px)}
+.wild p{margin-top:14px;max-width:42ch;color:#cdd8df}
+.wild blockquote{margin:24px 0 0;font-style:italic;font-size:clamp(20px,1.9vw,24px);color:#fff;max-width:36ch}
+.wild cite{display:block;font-style:normal;font-family:var(--display);font-size:14px;color:#b8c6cf;margin-top:6px}
+.wild .pics{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.wild .pics img{width:100%;border-radius:2px}
+
+/* The peak: Heidi's telescope */
+.scope{position:relative;height:320vh;background:var(--lens);color:#fff}
+.scope .stage{background:var(--lens)}
+.view{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 66%;transform:scale(calc(1 + var(--z,0) * 1.4));transform-origin:62% 68%}
+.lens{position:absolute;left:50%;top:46%;width:min(62vmin,560px);height:min(62vmin,560px);margin:calc(min(62vmin,560px) / -2) 0 0 calc(min(62vmin,560px) / -2);border-radius:50%;box-shadow:0 0 0 200vmax var(--lens);transform:scale(calc(3.4 - var(--l,0) * 2.4));overflow:hidden}
+.lens img{position:absolute;left:-8%;top:-8%;width:116%;max-width:none;height:116%;object-fit:cover;object-position:52% 50%;opacity:var(--i,0)}
+.scope-copy{position:absolute;left:0;right:0;top:0;padding:clamp(28px,7vh,70px) var(--gut-r) 60px var(--gut);background:linear-gradient(to bottom,rgba(11,15,20,.72),rgba(11,15,20,.35) 70%,rgba(11,15,20,0));opacity:var(--c1,1)}
+.scope-copy > *{max-width:560px}
+.scope h2{font-size:clamp(30px,4.4vw,58px);text-shadow:0 2px 14px rgba(0,0,0,.5)}
+.scope-copy p{margin-top:10px;font-size:clamp(18px,1.7vw,22px);text-shadow:0 1px 3px rgba(0,0,0,.8),0 2px 12px rgba(0,0,0,.5);max-width:34ch}
+.scope-end{position:absolute;left:var(--gut);right:var(--gut-r);bottom:clamp(84px,7vh,110px);text-align:center;opacity:var(--c2,0);transform:translate3d(0,calc((1 - var(--c2,0)) * 14px),0)}
+.scope-end p{font-size:clamp(20px,2vw,27px);max-width:30ch;margin:0 auto;font-style:italic}
+.scope-end small{display:block;font-family:var(--display);font-size:14px;color:#b8c6cf;margin-top:8px;font-style:normal}
+
+.where{padding:clamp(60px,9vw,120px) 0}
+.where .wrap{display:grid;gap:34px;align-items:center}
+.where h2{font-size:clamp(28px,3.8vw,46px)}
+.legs{list-style:none;padding:0;margin:20px 0 0;font-family:var(--display);font-size:17px}
+.legs li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #c5d1d8}
+.legs b{font-weight:500;text-align:right}
+.where img{width:100%;border-radius:2px}
+
+.said{background:var(--mist-2);padding:clamp(60px,9vw,120px) 0}
+.said h2{font-size:clamp(28px,3.8vw,46px);margin-bottom:28px}
+.said ul{list-style:none;padding:0;margin:0;display:grid;gap:30px 48px}
+.said blockquote{margin:0;font-size:clamp(20px,1.8vw,23px);line-height:1.45}
+.said cite{display:block;font-style:normal;font-family:var(--display);font-size:14px;color:var(--ink-soft);margin-top:8px}
+.said li:first-child blockquote{font-size:clamp(23px,2.4vw,32px);font-style:italic}
+
+.book{background:var(--bay);color:var(--mist)}
+.book img{width:100%;height:min(66vh,620px);object-fit:cover;object-position:50% 60%}
+.book .wrap{padding-top:clamp(44px,7vw,80px);padding-bottom:clamp(56px,8vw,96px);display:grid;gap:30px}
+.book h2{font-size:clamp(34px,5vw,62px)}
+.book p{color:#cdd8df;max-width:44ch;margin-top:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 24px;border-radius:2px;font-family:var(--display);font-weight:500;font-size:17px;text-decoration:none;white-space:nowrap}
+.btn.primary{background:var(--oak);color:#fff}
+.btn.primary:hover{background:var(--oak-d)}
+.book .btn{margin-top:24px;white-space:normal;text-align:center}
+.terms{list-style:none;padding:0;margin:0;font-family:var(--display);font-size:16px;color:#cdd8df}
+.terms li{padding:9px 0;border-bottom:1px solid #34495c}
+
+footer{background:#151f29;color:#a9b6bf;font-family:var(--display);font-size:14px;padding:26px var(--gut-r) calc(96px + env(safe-area-inset-bottom,0px)) var(--gut)}
+footer .wrap{padding:0}
+footer p + p{margin-top:6px}
+
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(31,48,64,.97);color:var(--mist);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);font-family:var(--display)}
+.bar span{font-size:15px;line-height:1.3;min-width:0}
+@media (max-width:359px){.bar span{display:none}.bar{justify-content:center}}
+.bar .btn{min-height:48px;padding:10px 18px;font-size:16px;flex:0 0 auto}
+
+@media (min-width:760px){
+  .intro .wrap{grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
+  .grid{grid-template-columns:1.2fr 1fr 1fr;grid-auto-rows:240px}
+  .grid .tall{grid-row:span 2}
+  .grid .wide{grid-column:span 2}
+  .grid figure{display:flex;flex-direction:column}
+  .grid figure img{flex:1;min-height:0;height:100%}
+  .breakfast .wrap{grid-template-columns:1fr 1.1fr;gap:60px}
+  .wild .wrap{grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .where .wrap{grid-template-columns:1fr 1fr;gap:60px}
+  .said ul{grid-template-columns:1.3fr 1fr 1fr}
+  .said li:first-child{grid-row:span 2}
+  .book .wrap{grid-template-columns:1.2fr 1fr;align-items:start}
+  .bar{left:auto;right:24px;bottom:24px;border-radius:2px;padding:8px 8px 8px 20px;gap:18px;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+  footer{padding-bottom:40px}
+}
+@media (max-width:699px){
+  .hero{height:200vh}
+  .photo{object-position:28% 60%}
+  .tussock{height:26%}
+  .note{bottom:auto;top:46%}
+  .scope{height:260vh}
+  .lens{width:84vw;height:84vw;margin:-42vw 0 0 -42vw;top:50%}
+  .scope-end{bottom:96px}
+  .grid figure.tall img{aspect-ratio:3/4}
+}
+html:not(.js) .hero,.rm .hero,html:not(.js) .scope,.rm .scope{height:auto}
+html:not(.js) .stage,.rm .stage{position:relative;height:88vh;height:88svh}
+html:not(.js) .scope .stage,.rm .scope .stage{height:auto;min-height:max(88svh,640px)}
+.rm .photo,.rm .tussock,.rm .hero-copy,.rm .echidna,.rm .note,.rm .scope-end{transform:none}
+html:not(.js) .echidna,.rm .echidna{opacity:1;transform:translate3d(40vw,0,0)}
+html:not(.js) .note,.rm .note,html:not(.js) .scope-end,.rm .scope-end,html:not(.js) .lens img,.rm .lens img{opacity:1}
+html:not(.js) .lens,.rm .lens{transform:none}
+html:not(.js) .scope-copy,.rm .scope-copy{opacity:1}
+html:not(.js) .scope-end,.rm .scope-end{background:rgba(11,15,20,.78);padding:12px 14px;max-width:640px;margin:0 auto}
+html:not(.js) .view,.rm .view{transform:scale(2.4)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the house</a>
+<div class="strip">A website idea made by Lampbound Studio for Snug Haus. Not their official site.</div>
+
+<header class="hero" aria-label="Snug Haus on its hill above Storm Bay">
+  <div class="stage">
+    <picture>
+      <source media="(max-width:699px)" srcset="img/haus-bay-720.jpg">
+      <img class="photo" src="img/haus-bay-1440.jpg" width="1440" height="960" alt="Snug Haus, a low timber house among gum trees on the hill, with Storm Bay and the hills of the channel behind" fetchpriority="high">
+    </picture>
+    <div class="scrim"></div>
+    <div class="hero-copy">
+      <h1>Snug <b>Haus</b></h1>
+      <p>A cosy little house in the hills of Snug, Tasmania. Views, serenity, simplicity.</p>
+    </div>
+    <p class="note">&ldquo;Echidna is back at Snug Haus!&rdquo;<small>Heidi, October 2026</small></p>
+    <div class="tussock" aria-hidden="true">
+      <svg viewBox="0 0 1200 300" preserveAspectRatio="none">
+        <path fill="#4a4f2a" d="M205 300 Q206 233 200 167 Q210 233 216 300Z M402 300 Q414 259 429 218 Q416 259 408 300Z M958 300 Q951 245 932 191 Q954 245 969 300Z M217 300 Q210 213 191 127 Q213 213 228 300Z M735 300 Q734 270 727 241 Q737 270 744 300Z M111 300 Q125 240 141 179 Q127 240 118 300Z M1182 300 Q1188 212 1190 124 Q1190 212 1189 300Z M635 300 Q637 282 634 265 Q639 282 643 300Z M933 300 Q941 280 946 259 Q943 280 940 300Z M55 300 Q46 273 27 246 Q49 273 64 300Z M847 300 Q849 227 845 154 Q852 227 856 300Z M169 300 Q179 211 188 123 Q181 211 176 300Z M962 300 Q958 256 947 212 Q960 256 969 300Z M-1 300 Q17 188 37 77 Q21 188 10 300Z M762 300 Q752 259 730 218 Q754 259 769 300Z M451 300 Q446 258 432 216 Q449 258 461 300Z M1080 300 Q1093 255 1105 209 Q1096 255 1090 300Z M624 300 Q640 277 655 253 Q643 277 634 300Z M845 300 Q848 261 847 221 Q849 261 851 300Z M369 300 Q384 268 396 236 Q387 268 382 300Z M1133 300 Q1144 273 1156 245 Q1147 273 1141 300Z M664 300 Q678 269 693 238 Q680 269 672 300Z M24 300 Q28 210 27 120 Q32 210 35 300Z M839 300 Q832 234 812 168 Q836 234 851 300Z M624 300 Q621 264 608 227 Q624 264 635 300Z M426 300 Q425 280 415 259 Q429 280 438 300Z M575 300 Q585 278 589 255 Q589 278 588 300Z M872 300 Q873 231 870 163 Q875 231 878 300Z M24 300 Q35 229 48 158 Q37 229 30 300Z M495 300 Q512 276 530 252 Q515 276 504 300Z M903 300 Q903 230 893 160 Q907 230 916 300Z M34 300 Q25 220 3 141 Q29 220 46 300Z M696 300 Q699 263 697 226 Q702 263 706 300Z M96 300 Q87 233 65 166 Q91 233 107 300Z M525 300 Q523 249 511 199 Q527 249 538 300Z M58 300 Q54 256 38 213 Q58 256 72 300Z M769 300 Q778 249 783 198 Q781 249 779 300Z M350 300 Q365 269 379 238 Q369 269 362 300Z M1177 300 Q1171 255 1154 209 Q1174 255 1188 300Z M1071 300 Q1091 257 1111 213 Q1095 257 1084 300Z M1024 300 Q1026 264 1022 228 Q1029 264 1033 300Z M407 300 Q404 246 390 191 Q408 246 420 300Z M687 300 Q692 268 693 237 Q694 268 695 300Z M954 300 Q950 228 935 156 Q953 228 965 300Z M618 300 Q635 262 654 224 Q637 262 627 300Z M1172 300 Q1174 191 1172 81 Q1176 191 1179 300Z M313 300 Q314 252 310 204 Q316 252 320 300Z M239 300 Q248 245 253 191 Q251 245 250 300Z M247 300 Q255 262 264 225 Q258 262 253 300Z M772 300 Q786 287 798 273 Q791 287 786 300Z M663 300 Q663 266 658 232 Q665 266 670 300Z M498 300 Q509 267 516 234 Q513 267 511 300Z M1077 300 Q1067 223 1044 146 Q1071 223 1089 300Z M39 300 Q32 193 13 85 Q35 193 50 300Z M177 300 Q181 230 182 160 Q183 230 184 300Z M1016 300 Q1015 244 1010 189 Q1017 244 1022 300Z M663 300 Q684 251 706 202 Q688 251 677 300Z M17 300 Q31 218 45 136 Q33 218 25 300Z M1076 300 Q1077 257 1067 214 Q1081 257 1090 300Z M155 300 Q165 252 175 204 Q167 252 162 300Z M733 300 Q740 250 744 200 Q742 250 741 300Z M146 300 Q155 224 158 148 Q159 224 160 300Z M936 300 Q953 223 972 147 Q956 223 945 300Z M1149 300 Q1155 225 1156 150 Q1158 225 1159 300Z M983 300 Q993 281 1003 263 Q996 281 991 300Z M1037 300 Q1048 254 1060 208 Q1051 254 1044 300Z M741 300 Q752 241 758 183 Q755 241 754 300Z M146 300 Q143 245 133 190 Q146 245 154 300Z M313 300 Q324 240 334 181 Q327 240 322 300Z M854 300 Q854 246 849 192 Q856 246 860 300Z M127 300 Q127 230 122 159 Q129 230 133 300Z M686 300 Q700 273 713 247 Q704 273 697 300Z M1052 300 Q1073 228 1096 155 Q1076 228 1063 300Z"/>
+        <path fill="#5d6233" d="M696 300 Q688 247 668 193 Q691 247 706 300Z M699 300 Q714 262 728 224 Q717 262 710 300Z M493 300 Q511 265 533 230 Q513 265 500 300Z M-13 300 Q-14 272 -21 244 Q-12 272 -7 300Z M126 300 Q130 232 129 164 Q133 232 135 300Z M349 300 Q365 271 381 243 Q368 271 359 300Z M1191 300 Q1186 191 1173 82 Q1189 191 1199 300Z M469 300 Q480 262 491 224 Q482 262 477 300Z M962 300 Q973 264 985 228 Q975 264 969 300Z M792 300 Q809 240 824 180 Q813 240 805 300Z M228 300 Q243 251 258 202 Q246 251 238 300Z M838 300 Q835 233 824 166 Q838 233 848 300Z M1012 300 Q1013 278 1010 256 Q1015 278 1018 300Z M1146 300 Q1168 232 1191 163 Q1172 232 1158 300Z M615 300 Q609 273 590 245 Q613 273 628 300Z M630 300 Q622 287 606 274 Q624 287 636 300Z M1027 300 Q1037 273 1045 247 Q1041 273 1038 300Z M233 300 Q235 262 231 223 Q239 262 244 300Z M787 300 Q787 261 782 223 Q789 261 794 300Z M771 300 Q788 257 803 214 Q792 257 785 300Z M940 300 Q949 255 956 210 Q952 255 949 300Z M639 300 Q640 250 631 200 Q644 250 652 300Z M54 300 Q62 245 69 190 Q64 245 61 300Z M236 300 Q251 216 266 132 Q253 216 244 300Z M308 300 Q317 264 323 228 Q321 264 319 300Z M535 300 Q526 257 508 214 Q528 257 542 300Z M325 300 Q319 254 301 208 Q323 254 338 300Z M88 300 Q99 253 109 207 Q102 253 97 300Z M971 300 Q964 231 944 162 Q967 231 981 300Z M1012 300 Q1009 256 999 213 Q1011 256 1019 300Z M718 300 Q709 247 689 195 Q712 247 728 300Z M1038 300 Q1035 205 1020 110 Q1038 205 1050 300Z M968 300 Q988 244 1008 189 Q991 244 980 300Z M175 300 Q196 272 219 243 Q200 272 187 300Z M977 300 Q984 254 984 209 Q988 254 991 300Z M738 300 Q754 260 773 220 Q756 260 745 300Z M442 300 Q434 259 414 218 Q438 259 453 300Z M516 300 Q514 253 503 206 Q518 253 528 300Z M88 300 Q107 228 127 156 Q111 228 101 300Z M1138 300 Q1155 210 1173 120 Q1157 210 1147 300Z M709 300 Q715 244 719 188 Q718 244 717 300Z M890 300 Q904 261 917 222 Q907 261 901 300Z M1200 300 Q1194 244 1179 187 Q1196 244 1207 300Z M459 300 Q449 258 427 216 Q453 258 469 300Z M974 300 Q980 232 983 163 Q982 232 982 300Z M911 300 Q916 236 915 173 Q920 236 923 300Z M727 300 Q722 255 707 211 Q725 255 737 300Z M1047 300 Q1060 254 1071 207 Q1064 254 1060 300Z M1181 300 Q1174 224 1155 148 Q1177 224 1192 300Z M879 300 Q894 280 907 261 Q897 280 891 300Z M728 300 Q740 265 751 229 Q743 265 738 300Z M507 300 Q519 249 528 198 Q522 249 518 300Z M1122 300 Q1132 244 1141 187 Q1135 244 1132 300Z M337 300 Q353 245 366 190 Q356 245 350 300Z M946 300 Q965 230 988 161 Q967 230 953 300Z M660 300 Q658 275 646 249 Q660 275 670 300Z M335 300 Q336 277 332 254 Q339 277 344 300Z M998 300 Q1010 216 1022 132 Q1012 216 1005 300Z M914 300 Q931 281 950 262 Q934 281 924 300Z M795 300 Q789 286 774 273 Q792 286 803 300Z M583 300 Q583 274 573 247 Q587 274 596 300Z M416 300 Q438 244 461 188 Q441 244 428 300Z M352 300 Q354 248 351 195 Q357 248 361 300Z M1077 300 Q1073 265 1058 230 Q1076 265 1088 300Z M51 300 Q46 242 29 185 Q49 242 62 300Z M363 300 Q377 234 391 168 Q379 234 371 300Z M860 300 Q873 282 883 263 Q876 282 872 300Z"/>
+        <path fill="#6f6b3c" d="M380 300 Q371 266 351 232 Q374 266 390 300Z M498 300 Q506 273 509 246 Q510 273 511 300Z M689 300 Q702 255 712 210 Q706 255 702 300Z M14 300 Q5 225 -13 150 Q7 225 21 300Z M171 300 Q185 263 201 226 Q187 263 178 300Z M963 300 Q977 255 989 210 Q982 255 977 300Z M868 300 Q869 269 866 238 Q871 269 874 300Z M1169 300 Q1161 249 1139 198 Q1164 249 1182 300Z M381 300 Q376 271 362 242 Q378 271 388 300Z M96 300 Q104 255 108 210 Q106 255 105 300Z M820 300 Q808 243 786 186 Q810 243 827 300Z M7 300 Q26 225 49 150 Q29 225 16 300Z M465 300 Q465 240 458 181 Q468 240 474 300Z M77 300 Q83 228 86 155 Q86 228 87 300Z M1202 300 Q1196 262 1181 224 Q1198 262 1209 300Z M900 300 Q905 249 907 197 Q908 249 909 300Z M751 300 Q763 255 775 211 Q765 255 758 300Z M564 300 Q585 274 607 248 Q588 274 576 300Z M913 300 Q910 230 899 160 Q912 230 921 300Z M853 300 Q851 278 843 255 Q853 278 859 300Z M97 300 Q98 250 94 199 Q101 250 105 300Z M460 300 Q474 260 488 219 Q478 260 471 300Z M1006 300 Q997 219 976 138 Q999 219 1015 300Z M822 300 Q838 241 854 183 Q841 241 833 300Z M1163 300 Q1170 225 1176 150 Q1173 225 1170 300Z M190 300 Q197 261 198 221 Q200 261 201 300Z M1162 300 Q1175 227 1184 154 Q1179 227 1175 300Z M1197 300 Q1211 212 1225 125 Q1213 212 1205 300Z M1119 300 Q1131 203 1142 105 Q1133 203 1127 300Z M102 300 Q116 221 129 143 Q119 221 111 300Z M1094 300 Q1089 275 1070 251 Q1093 275 1108 300Z M236 300 Q225 249 202 199 Q227 249 244 300Z M1117 300 Q1120 203 1117 106 Q1124 203 1128 300Z M839 300 Q849 234 855 168 Q852 234 849 300Z M917 300 Q916 262 909 223 Q918 262 924 300Z M416 300 Q431 249 446 198 Q434 249 426 300Z M56 300 Q69 205 82 110 Q71 205 63 300Z M757 300 Q777 287 799 274 Q780 287 768 300Z M925 300 Q928 257 924 214 Q931 257 935 300Z M206 300 Q224 263 244 225 Q228 263 217 300Z M875 300 Q887 266 897 231 Q890 266 885 300Z M566 300 Q565 258 554 217 Q568 258 578 300Z M340 300 Q353 268 363 236 Q357 268 353 300Z M236 300 Q242 221 247 142 Q245 221 244 300Z M503 300 Q520 247 535 193 Q524 247 517 300Z M1039 300 Q1049 226 1059 151 Q1051 226 1046 300Z M1023 300 Q1034 242 1044 184 Q1036 242 1030 300Z M1132 300 Q1123 254 1100 208 Q1127 254 1145 300Z M1113 300 Q1107 224 1088 148 Q1110 224 1125 300Z M829 300 Q848 249 868 198 Q851 249 840 300Z M1166 300 Q1164 252 1151 203 Q1167 252 1178 300Z M1007 300 Q1003 229 991 157 Q1006 229 1016 300Z M741 300 Q746 266 743 232 Q750 266 755 300Z M469 300 Q488 243 510 187 Q491 243 478 300Z M493 300 Q489 277 475 255 Q492 277 504 300Z M91 300 Q108 203 125 107 Q112 203 104 300Z M897 300 Q896 264 890 228 Q898 264 904 300Z M1196 300 Q1200 256 1195 212 Q1203 256 1209 300Z M926 300 Q925 251 918 202 Q928 251 934 300Z M193 300 Q210 272 228 243 Q212 272 202 300Z M500 300 Q502 247 496 194 Q504 247 510 300Z M809 300 Q817 233 822 167 Q820 233 819 300Z M253 300 Q261 233 266 165 Q264 233 262 300Z"/>
+        <path fill="#3a3f22" d="M672 300 Q680 258 681 217 Q683 258 685 300Z M1182 300 Q1194 248 1206 196 Q1196 248 1189 300Z M144 300 Q160 247 178 195 Q162 247 151 300Z M382 300 Q374 250 353 200 Q377 250 394 300Z M905 300 Q918 229 926 157 Q922 229 919 300Z M962 300 Q954 261 933 222 Q958 261 974 300Z M747 300 Q739 242 717 185 Q742 242 759 300Z M1048 300 Q1044 223 1031 146 Q1046 223 1056 300Z M1073 300 Q1088 214 1100 128 Q1091 214 1085 300Z M1017 300 Q1014 250 1001 200 Q1017 250 1028 300Z M107 300 Q118 247 128 194 Q121 247 116 300Z M552 300 Q549 277 535 253 Q553 277 566 300Z M1144 300 Q1156 214 1167 127 Q1159 214 1154 300Z M290 300 Q284 256 269 211 Q287 256 299 300Z M773 300 Q790 281 810 263 Q792 281 780 300Z M491 300 Q504 268 515 235 Q507 268 502 300Z M754 300 Q751 242 740 185 Q753 242 762 300Z M74 300 Q80 201 81 101 Q83 201 84 300Z M800 300 Q789 235 767 170 Q792 235 809 300Z M247 300 Q235 258 214 217 Q237 258 253 300Z M563 300 Q558 270 543 239 Q560 270 572 300Z M1139 300 Q1132 253 1113 207 Q1136 253 1151 300Z M1149 300 Q1152 232 1148 164 Q1155 232 1159 300Z M30 300 Q47 209 62 118 Q50 209 43 300Z M165 300 Q182 247 202 193 Q184 247 171 300Z M743 300 Q756 245 770 190 Q758 245 751 300Z M-11 300 Q-7 188 -10 76 Q-4 188 -0 300Z M1109 300 Q1102 239 1081 179 Q1105 239 1121 300Z M29 300 Q49 245 70 189 Q52 245 41 300Z M995 300 Q1010 278 1025 255 Q1014 278 1007 300Z M44 300 Q58 208 71 117 Q61 208 54 300Z M-8 300 Q5 222 19 143 Q7 222 -1 300Z M1129 300 Q1149 243 1170 187 Q1152 243 1141 300Z M947 300 Q955 231 961 162 Q958 231 956 300Z M326 300 Q317 230 294 160 Q321 230 339 300Z M753 300 Q757 265 755 231 Q760 265 764 300Z M857 300 Q859 228 852 155 Q863 228 870 300Z M968 300 Q978 224 985 147 Q980 224 977 300Z M506 300 Q508 257 502 214 Q512 257 519 300Z M309 300 Q312 279 312 258 Q314 279 316 300Z M-8 300 Q0 198 3 96 Q3 198 4 300Z M251 300 Q249 260 238 221 Q252 260 262 300Z M983 300 Q995 260 1006 221 Q997 260 991 300Z M161 300 Q171 218 178 135 Q175 218 172 300Z M163 300 Q171 208 173 116 Q175 208 175 300Z M674 300 Q684 258 692 216 Q687 258 683 300Z M372 300 Q386 272 397 243 Q389 272 383 300Z M911 300 Q907 263 895 226 Q909 263 918 300Z M447 300 Q466 259 486 218 Q470 259 460 300Z M1044 300 Q1046 256 1043 211 Q1048 256 1051 300Z M1011 300 Q1012 229 1005 157 Q1016 229 1024 300Z M127 300 Q139 239 150 179 Q141 239 135 300Z M513 300 Q509 270 496 239 Q511 270 522 300Z M396 300 Q399 239 398 178 Q401 239 402 300Z M184 300 Q174 243 150 186 Q177 243 195 300Z M1129 300 Q1145 233 1161 167 Q1148 233 1139 300Z M51 300 Q69 224 90 149 Q72 224 59 300Z M600 300 Q621 291 643 281 Q625 291 612 300Z M889 300 Q900 255 909 211 Q902 255 897 300Z M230 300 Q237 229 239 158 Q240 229 241 300Z M657 300 Q667 260 675 221 Q670 260 667 300Z M986 300 Q1000 237 1011 173 Q1003 237 998 300Z M169 300 Q176 215 182 131 Q179 215 176 300Z M454 300 Q470 264 487 228 Q473 264 464 300Z M1078 300 Q1077 242 1068 185 Q1080 242 1088 300Z M811 300 Q801 277 780 254 Q804 277 819 300Z M440 300 Q449 260 453 220 Q453 260 453 300Z M454 300 Q463 274 467 247 Q467 274 467 300Z M369 300 Q368 234 358 168 Q371 234 379 300Z M1180 300 Q1191 251 1199 202 Q1194 251 1190 300Z M143 300 Q158 250 171 201 Q161 250 154 300Z M1004 300 Q1006 220 999 139 Q1009 220 1016 300Z M754 300 Q757 253 756 206 Q759 253 762 300Z M828 300 Q839 267 849 233 Q842 267 838 300Z"/>
+        <path fill="#857d4a" d="M697 300 Q687 275 665 251 Q689 275 705 300Z M85 300 Q85 241 77 181 Q88 241 95 300Z M234 300 Q246 217 256 134 Q250 217 247 300Z M418 300 Q424 265 424 231 Q427 265 429 300Z M18 300 Q29 217 36 134 Q32 217 29 300Z M994 300 Q991 253 981 205 Q994 253 1002 300Z M384 300 Q397 251 410 202 Q399 251 391 300Z M912 300 Q921 224 926 147 Q924 224 922 300Z M985 300 Q1000 241 1016 183 Q1003 241 994 300Z M212 300 Q212 275 205 250 Q214 275 220 300Z M166 300 Q158 222 136 145 Q162 222 179 300Z M750 300 Q744 248 726 195 Q747 248 760 300Z M1158 300 Q1146 232 1125 165 Q1148 232 1164 300Z M814 300 Q830 276 844 252 Q834 276 826 300Z M587 300 Q598 271 607 242 Q602 271 599 300Z M1062 300 Q1082 213 1102 127 Q1086 213 1076 300Z M902 300 Q903 244 896 189 Q907 244 913 300Z M553 300 Q546 278 532 256 Q548 278 559 300Z M207 300 Q224 222 239 144 Q227 222 219 300Z M273 300 Q287 226 301 151 Q290 226 283 300Z M228 300 Q217 226 196 153 Q219 226 234 300Z M651 300 Q642 275 623 249 Q644 275 658 300Z M887 300 Q882 260 870 219 Q884 260 894 300Z M534 300 Q552 271 574 242 Q554 271 541 300Z M811 300 Q808 264 794 229 Q812 264 824 300Z M576 300 Q585 270 593 239 Q587 270 583 300Z M1136 300 Q1127 230 1108 160 Q1129 230 1143 300Z M737 300 Q742 269 745 237 Q744 269 743 300Z M180 300 Q194 214 209 128 Q196 214 187 300Z M1152 300 Q1153 238 1144 175 Q1157 238 1166 300Z M733 300 Q739 287 743 274 Q742 287 741 300Z M422 300 Q429 265 433 231 Q431 265 430 300Z M1165 300 Q1182 253 1201 205 Q1186 253 1175 300Z M1 300 Q-6 218 -24 136 Q-4 218 9 300Z M447 300 Q468 244 491 188 Q472 244 459 300Z M270 300 Q272 224 267 148 Q275 224 281 300Z M836 300 Q843 270 848 239 Q846 270 845 300Z M27 300 Q43 218 61 137 Q46 218 36 300Z M992 300 Q1014 231 1036 162 Q1017 231 1004 300Z M832 300 Q835 250 833 200 Q837 250 840 300Z M885 300 Q902 269 919 237 Q905 269 896 300Z M644 300 Q655 258 661 216 Q658 258 656 300Z M405 300 Q424 244 448 187 Q426 244 412 300Z M413 300 Q427 263 439 227 Q431 263 426 300Z M139 300 Q140 256 132 212 Q143 256 151 300Z M343 300 Q347 234 348 168 Q350 234 351 300Z M216 300 Q227 217 234 133 Q230 217 228 300Z M1045 300 Q1040 260 1023 220 Q1043 260 1057 300Z M970 300 Q968 275 956 250 Q970 275 980 300Z M1110 300 Q1106 212 1096 124 Q1108 212 1117 300Z M1115 300 Q1116 261 1111 222 Q1119 261 1125 300Z M967 300 Q977 225 980 150 Q981 225 981 300Z M861 300 Q879 281 899 261 Q881 281 869 300Z M523 300 Q528 263 525 225 Q531 263 536 300Z M283 300 Q276 264 261 227 Q279 264 291 300Z M1046 300 Q1039 260 1021 221 Q1042 260 1056 300Z M515 300 Q535 247 554 194 Q538 247 528 300Z M121 300 Q114 240 93 181 Q118 240 135 300Z M1085 300 Q1104 255 1124 210 Q1106 255 1094 300Z M984 300 Q979 263 964 226 Q982 263 994 300Z M-12 300 Q-5 203 -5 106 Q-1 203 2 300Z M830 300 Q830 259 823 218 Q833 259 840 300Z M236 300 Q224 244 200 188 Q226 244 242 300Z M617 300 Q618 266 612 233 Q620 266 626 300Z M579 300 Q600 269 623 238 Q602 269 588 300Z M609 300 Q621 278 631 256 Q625 278 622 300Z M1068 300 Q1067 236 1057 172 Q1070 236 1079 300Z M1076 300 Q1082 268 1085 236 Q1084 268 1083 300Z M178 300 Q168 261 149 221 Q171 261 185 300Z M753 300 Q743 243 722 185 Q745 243 761 300Z M377 300 Q384 272 387 245 Q386 272 386 300Z M174 300 Q185 222 191 145 Q189 222 187 300Z"/>
+        <path fill="#2f3520" d="M97 300 Q89 234 71 168 Q91 234 105 300Z M1033 300 Q1025 273 1007 246 Q1028 273 1042 300Z M1137 300 Q1128 227 1107 155 Q1132 227 1148 300Z M475 300 Q478 283 474 267 Q481 283 485 300Z M-12 300 Q-3 226 0 153 Q1 226 2 300Z M1033 300 Q1046 209 1057 117 Q1049 209 1043 300Z M974 300 Q990 213 1005 126 Q994 213 986 300Z M560 300 Q561 275 554 250 Q565 275 572 300Z M399 300 Q406 254 411 207 Q407 254 405 300Z M405 300 Q398 248 379 196 Q400 248 414 300Z M901 300 Q914 246 928 191 Q917 246 910 300Z M506 300 Q500 271 482 242 Q504 271 519 300Z M770 300 Q763 260 746 220 Q766 260 780 300Z M1123 300 Q1118 219 1104 138 Q1121 219 1132 300Z M204 300 Q199 273 187 246 Q201 273 210 300Z M602 300 Q599 255 587 210 Q602 255 612 300Z M359 300 Q356 262 341 224 Q360 262 372 300Z M355 300 Q362 261 364 222 Q366 261 367 300Z M677 300 Q690 276 698 252 Q693 276 690 300Z M756 300 Q757 267 749 234 Q760 267 768 300Z M357 300 Q347 273 326 247 Q350 273 365 300Z M459 300 Q448 243 428 185 Q450 243 465 300Z M287 300 Q294 263 295 226 Q297 263 299 300Z M389 300 Q400 265 411 230 Q401 265 395 300Z M450 300 Q463 247 478 194 Q465 247 457 300Z M400 300 Q407 262 413 224 Q410 262 408 300Z M826 300 Q838 232 849 164 Q842 232 837 300Z M147 300 Q144 235 131 171 Q147 235 157 300Z M215 300 Q212 261 199 223 Q215 261 225 300Z M1062 300 Q1052 234 1028 168 Q1055 234 1072 300Z M1176 300 Q1194 262 1214 224 Q1197 262 1185 300Z M781 300 Q772 271 752 243 Q776 271 792 300Z M691 300 Q693 266 690 231 Q695 266 698 300Z M261 300 Q251 262 229 223 Q254 262 270 300Z M1113 300 Q1104 200 1083 100 Q1108 200 1124 300Z M558 300 Q574 256 591 211 Q577 256 568 300Z M284 300 Q305 279 327 258 Q309 279 297 300Z M93 300 Q96 214 95 127 Q98 214 100 300Z M237 300 Q242 252 242 205 Q244 252 246 300Z M269 300 Q283 245 295 190 Q287 245 281 300Z M393 300 Q398 247 398 194 Q400 247 402 300Z M620 300 Q617 276 602 252 Q621 276 634 300Z M897 300 Q911 248 922 197 Q915 248 910 300Z M302 300 Q299 236 286 172 Q301 236 312 300Z M450 300 Q469 287 489 273 Q472 287 461 300Z M802 300 Q816 236 833 172 Q819 236 809 300Z M1089 300 Q1084 217 1068 135 Q1087 217 1100 300Z M442 300 Q434 260 413 219 Q437 260 453 300Z M607 300 Q598 268 576 236 Q602 268 619 300Z M407 300 Q398 265 380 231 Q401 265 414 300Z M352 300 Q364 245 378 191 Q366 245 358 300Z M731 300 Q743 254 752 207 Q746 254 742 300Z M88 300 Q95 257 101 213 Q97 257 95 300Z M593 300 Q606 268 619 235 Q609 268 602 300Z M1105 300 Q1107 266 1102 232 Q1110 266 1116 300Z M1098 300 Q1090 278 1069 256 Q1094 278 1111 300Z M409 300 Q423 270 437 240 Q425 270 417 300Z M378 300 Q372 251 359 202 Q374 251 385 300Z M375 300 Q393 267 416 234 Q395 267 381 300Z M1168 300 Q1171 253 1166 206 Q1175 253 1180 300Z M759 300 Q775 244 793 188 Q777 244 766 300Z M801 300 Q807 265 809 229 Q809 265 809 300Z M583 300 Q598 268 612 237 Q601 268 594 300Z M276 300 Q274 266 267 232 Q276 266 283 300Z M636 300 Q630 268 612 236 Q634 268 648 300Z M611 300 Q625 266 638 232 Q627 266 620 300Z M911 300 Q902 259 882 217 Q905 259 919 300Z M471 300 Q476 264 474 228 Q479 264 482 300Z M1035 300 Q1026 255 1003 209 Q1029 255 1046 300Z M413 300 Q407 249 389 198 Q411 249 426 300Z M1009 300 Q1006 232 995 164 Q1009 232 1019 300Z"/>
+        <path d="M0 300 L0 272 C300 262 600 270 900 264 C1020 262 1110 268 1200 264 L1200 300 Z" fill="#262b1a"/>
+      </svg>
+    </div>
+    <div class="echidna" aria-hidden="true">
+      <svg viewBox="0 0 160 80">
+        <g fill="#2b2118">
+          <ellipse cx="78" cy="48" rx="50" ry="26"/>
+          <path d="M30 50 C14 52 6 58 0 62 C8 64 18 62 34 58 Z"/>
+          <rect x="44" y="64" width="9" height="14" rx="3"/><rect x="96" y="64" width="9" height="14" rx="3"/>
+        </g>
+        <g stroke="#d9c7a6" stroke-width="2.4" stroke-linecap="round">
+          <path d="M44 34 L38 18 M56 28 L52 10 M68 25 L66 6 M80 24 L80 4 M92 25 L95 6 M104 28 L109 10 M116 33 L123 17 M124 42 L135 30 M50 42 L42 30 M62 36 L58 20 M74 33 L73 15 M86 33 L88 15 M98 35 L103 19 M110 40 L118 26"/>
+        </g>
+        <circle cx="34" cy="50" r="2.2" fill="#d9c7a6"/>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="intro" aria-labelledby="h-haus">
+    <div class="wrap">
+      <div>
+        <h2 id="h-haus">A timber house for two, in the foothills of the Snug Tiers</h2>
+        <p class="lede">Snug Haus looks out over Storm Bay and the D&rsquo;Entrecasteaux Channel, half an hour from the centre of Hobart.</p>
+        <p>Your hosts live on the same five-acre block, just up the hill. They&rsquo;re there if you need them, and there are no other guests.</p>
+        <ul class="facts">
+          <li>Sleeps 2</li>
+          <li>1 queen bed</li>
+          <li>Breakfast supplied</li>
+          <li>11am checkout</li>
+          <li>EV charger</li>
+          <li>Rainwater tank</li>
+        </ul>
+      </div>
+      <figure>
+        <img src="img/haus-720.jpg" srcset="img/haus-720.jpg 720w, img/haus-1440.jpg 1440w" sizes="(min-width:760px) 50vw, 92vw" width="720" height="480" alt="The house from the paddock, timber cladding and a long window, with tussocks in front and forest behind" loading="lazy">
+        <figcaption class="cap">Eco-friendly, with solar panels and a home battery.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="rooms" aria-labelledby="h-in">
+    <div class="wrap">
+      <h2 id="h-in">Inside the Haus</h2>
+      <p>One open room with a full kitchen, a queen bed and a pair of red leather recliners. The bathroom has a rain shower and a bathtub with forest and water views.</p>
+      <div class="grid">
+        <figure class="tall"><img src="img/living-600.jpg" srcset="img/living-600.jpg 600w, img/living-1200.jpg 1200w" sizes="(min-width:760px) 34vw, 46vw" width="600" height="800" alt="The open room from the door, kitchen on the left, the table and the deck doors" loading="lazy"><figcaption>Kitchen, table and the deck doors</figcaption></figure>
+        <figure><img src="img/lounge-600.jpg" srcset="img/lounge-600.jpg 600w, img/lounge-1200.jpg 1200w" sizes="(min-width:760px) 28vw, 46vw" width="600" height="400" alt="Two red leather recliners beside the bed" loading="lazy"><figcaption>The recliners</figcaption></figure>
+        <figure class="tall"><img src="img/bed-600.jpg" srcset="img/bed-600.jpg 600w, img/bed-1200.jpg 1200w" sizes="(min-width:760px) 28vw, 46vw" width="600" height="800" alt="The queen bed against a Tasmanian oak wall, with a crochet blanket" loading="lazy"><figcaption>The queen bed</figcaption></figure>
+        <figure><img src="img/bath-600.jpg" srcset="img/bath-600.jpg 600w, img/bath-1200.jpg 1200w" sizes="(min-width:760px) 28vw, 46vw" width="600" height="400" alt="The bathtub under a window of gum trees" loading="lazy"><figcaption>The bath</figcaption></figure>
+        <figure class="wide"><img src="img/kitchen-1200.jpg" srcset="img/kitchen-600.jpg 600w, img/kitchen-1200.jpg 1200w" sizes="(min-width:760px) 60vw, 92vw" width="1200" height="800" alt="The kitchen and the round table, with glass doors to the deck and the bay beyond" loading="lazy"><figcaption>Glass doors to the deck</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="breakfast" aria-labelledby="h-bf">
+    <div class="wrap">
+      <div>
+        <h2 id="h-bf">Breakfast is in the kitchen</h2>
+        <p>A fully equipped kitchen with quality cookware, bespoke local pottery and lovely glassware. Make the coffee in the mokapot or the French press, or pick from the loose-leaf teas.</p>
+        <ul class="supplies">
+          <li>Fresh-ground coffee</li>
+          <li>Local bread</li>
+          <li>Milk and eggs</li>
+          <li>Tasmanian jam</li>
+        </ul>
+      </div>
+      <div class="trio">
+        <img class="t1" src="img/coffee-600.jpg" srcset="img/coffee-600.jpg 600w, img/coffee-1200.jpg 1200w" sizes="(min-width:760px) 30vw, 55vw" width="600" height="450" alt="The coffee grinder, toaster and knife block on the bench" loading="lazy">
+        <img src="img/pottery-600.jpg" srcset="img/pottery-600.jpg 600w, img/pottery-1200.jpg 1200w" sizes="(min-width:760px) 22vw, 38vw" width="600" height="360" alt="Two handmade bowls, one glazed green" loading="lazy">
+        <img src="img/tea-600.jpg" srcset="img/tea-600.jpg 600w, img/tea-1200.jpg 1200w" sizes="(min-width:760px) 22vw, 38vw" width="600" height="400" alt="A teapot and cups on a tray" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="wild dark" aria-labelledby="h-wild">
+    <div class="wrap">
+      <div>
+        <h2 id="h-wild">Neighbours with feathers and spines</h2>
+        <p>Your private deck is the place to watch the wildlife. Currawongs land on the rail and chicks wander the grass. In October, going by Heidi&rsquo;s Instagram, the echidna came back.</p>
+        <blockquote>Sounds of a running spring down the gully. Very warm and cosy inside with crochet blankets.<cite>Alice, Airbnb</cite></blockquote>
+      </div>
+      <div class="pics">
+        <img src="img/currawong-600.jpg" srcset="img/currawong-600.jpg 600w, img/currawong-1200.jpg 1200w" sizes="(min-width:760px) 25vw, 46vw" width="600" height="450" alt="A currawong perched on the deck rail with the bush behind" loading="lazy">
+        <img src="img/chicks-600.jpg" srcset="img/chicks-600.jpg 600w, img/chicks-1200.jpg 1200w" sizes="(min-width:760px) 25vw, 46vw" width="600" height="450" alt="Three fluffy dark chicks on the grass" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="scope dark" aria-labelledby="h-scope">
+    <div class="stage">
+      <img class="view" src="img/bay-1440.jpg" srcset="img/bay-720.jpg 720w, img/bay-1440.jpg 1440w" sizes="100vw" width="1440" height="1080" alt="Storm Bay from the deck, the water dark blue below the hills of the channel" loading="lazy">
+      <div class="lens" aria-hidden="true"><img src="img/ironpot-1440.jpg" srcset="img/ironpot-720.jpg 720w, img/ironpot-1440.jpg 1440w" sizes="620px" width="1440" height="1080" alt="" loading="lazy"></div>
+      <div class="scope-copy">
+        <h2 id="h-scope">There&rsquo;s a telescope in the Haus</h2>
+        <p>&ldquo;You can see all the way past Tinderbox and Dennes Point on Bruny Island to the mountains of the Tasman Peninsula.&rdquo;</p>
+      </div>
+      <div class="scope-end">
+        <p>&ldquo;At night, spot the Iron Pot lighthouse and do a little stargazing with the telescope.&rdquo;</p>
+        <small>Heidi. The photo in the lens is from her listing, taken through the telescope.</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="where" aria-labelledby="h-where">
+    <div class="wrap">
+      <div>
+        <h2 id="h-where">Getting to Snug Haus</h2>
+        <p style="margin-top:12px">4 Sproules Road, Snug. Two steps up to the front porch, and the rest of the house is on one level.</p>
+        <ul class="legs">
+          <li><span>Snug village</span><b>2 km</b></li>
+          <li><span>Kettering, for the Bruny Island ferry</span><b>10 km</b></li>
+          <li><span>Hobart city centre</span><b>about 30 min</b></li>
+        </ul>
+      </div>
+      <img src="img/sunrise-600.jpg" srcset="img/sunrise-600.jpg 600w, img/sunrise-1200.jpg 1200w" sizes="(min-width:760px) 45vw, 92vw" width="600" height="450" alt="Sunrise over Storm Bay, the sky pink and orange above the dark hills" loading="lazy">
+    </div>
+  </section>
+
+  <section class="said" aria-labelledby="h-said">
+    <div class="wrap">
+      <h2 id="h-said">Guests at Snug Haus</h2>
+      <ul>
+        <li><blockquote>The morning sunrise was beautiful and we could see it right from the bed.</blockquote><cite>Lasith, Airbnb</cite></li>
+        <li><blockquote>Even though we arrived in the pouring rain, we immediately felt warm and comfortable.</blockquote><cite>Yurie, Airbnb</cite></li>
+        <li><blockquote>Peaceful retreat, our second stay here. The personal touches makes it stand out.</blockquote><cite>Alicia, Airbnb</cite></li>
+        <li><blockquote>Looking over the bush and seascape was stunning, as was watching the local wildlife at night.</blockquote><cite>Rosemary, Airbnb</cite></li>
+        <li><blockquote>4 nights was not enough!</blockquote><cite>Gemma, Airbnb</cite></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="book dark" aria-labelledby="h-book">
+    <img src="img/deck-1200.jpg" srcset="img/deck-600.jpg 600w, img/deck-1200.jpg 1200w" sizes="100vw" width="1200" height="800" alt="The deck with a table and chairs in the sun, gum trees beyond" loading="lazy">
+    <div class="wrap">
+      <div>
+        <h2 id="h-book">Stay at Snug Haus</h2>
+        <p>Book your dates on Airbnb. Heidi usually replies within the hour.</p>
+        <a class="btn primary" href="https://www.airbnb.com.au/rooms/22506812" rel="noopener">Check dates on Airbnb</a>
+      </div>
+      <ul class="terms">
+        <li>Check in after 2pm, self check-in</li>
+        <li>Check out by 11am</li>
+        <li>For two guests. Not suited to children and infants.</li>
+        <li>Wi-Fi, with a desk if you ask</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>A preview made by Lampbound Studio for Snug Haus. Not affiliated, not live.</p>
+    <p>Photos and words are from Snug Haus&rsquo;s public listings. Guest lines are from reviews on Airbnb.</p>
+  </div>
+</footer>
+
+<div class="bar" role="region" aria-label="Check dates">
+  <span>Snug Haus, Snug TAS. Breakfast supplied.</span>
+  <a class="btn primary" href="https://www.airbnb.com.au/rooms/22506812" rel="noopener">Check dates</a>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  var hero=document.querySelector('.hero'), scope=document.querySelector('.scope');
+  function clamp(v){return v<0?0:v>1?1:v}
+  function prog(el){var r=el.getBoundingClientRect();var span=el.offsetHeight-window.innerHeight;return clamp(-r.top/(span||1))}
+  var ticking=false;
+  function update(){
+    ticking=false;
+    if(mq.matches){return}
+    var p=prog(hero), h=hero.style;
+    h.setProperty('--p',p.toFixed(3));
+    h.setProperty('--e-o',clamp(p/0.15).toFixed(3));
+    h.setProperty('--n-o',clamp((p-0.35)/0.25).toFixed(3));
+    var q=prog(scope), s=scope.style;
+    s.setProperty('--l',clamp(q/0.4).toFixed(3));
+    s.setProperty('--z',clamp((q-0.1)/0.45).toFixed(3));
+    s.setProperty('--i',clamp((q-0.5)/0.2).toFixed(3));
+    s.setProperty('--c1',(1-clamp((q-0.3)/0.15)).toFixed(3));
+    s.setProperty('--c2',clamp((q-0.66)/0.16).toFixed(3));
+  }
+  function apply(){root.classList.toggle('rm',mq.matches);update()}
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(update)}},{passive:true});
+  window.addEventListener('resize',update);
+  if(mq.addEventListener){mq.addEventListener('change',apply)}
+  apply();
+})();
+</script>
+</body>
+</html>
