@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en-AU" class="static">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<script>if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.remove('static')</script>
+<title>The Bungalow &amp; Ivy Leaf Chapel | A 1915 B&amp;B in Tenterfield</title>
+<meta name="description" content="A 1915 bungalow for up to four in Tenterfield, with breakfast provisions, a wood fire and 1.5 acres of garden around the Ivy Leaf Chapel. A website idea made by Lampbound Studio.">
+<meta property="og:title" content="The Bungalow &amp; Ivy Leaf Chapel, Tenterfield">
+<meta property="og:description" content="A website idea made by Lampbound Studio for The Bungalow &amp; Ivy Leaf Chapel. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/ivyleafchapel/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/ivyleafchapel/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231f2b1e'/%3E%3Cpath d='M50 92C48 84 46 78 44 72C34 76 20 78 10 68C18 64 20 58 18 50C28 52 34 54 40 58C34 46 32 34 35 20C41 26 46 22 50 8C54 22 59 26 65 20C68 34 66 46 60 58C66 54 72 52 82 50C80 58 82 64 90 68C80 78 66 76 56 72C54 78 52 84 50 92Z' fill='%23a8262c'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/s-green-1800.jpg" media="(min-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/s-green-phone.jpg" media="(max-width: 699px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&family=Josefin+Sans:wght@600;700&display=swap">
+<style>
+/* Tokens from the property itself (see brand.md):
+   hedge  = the clipped hedges either side of the chapel path
+   ivy    = Boston ivy in autumn, the accent
+   duck   = the duck-egg walls of the bedroom and lounge
+   gravel = the chapel path
+   leaf   = the ivy in leaf
+   Josefin Sans for headings (1920s signwriting feel for a 1915 house), Crimson Pro for reading. */
+:root{
+  --hedge:#1f2b1e;
+  --hedge-2:#2c3b2a;
+  --ivy:#a8262c;
+  --ivy-2:#8e1f24;
+  --duck:#e4ebe8;
+  --duck-2:#cfd9d5;
+  --gravel:#c9b79a;
+  --leaf:#6c8a2e;
+  --ink:#1c241b;
+  --ink-soft:#4e5a50;
+  --display:"Josefin Sans","Futura","Century Gothic",sans-serif;
+  --text:"Crimson Pro","Iowan Old Style","Georgia",serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--duck);color:var(--ink);font-family:var(--text);font-size:20px;line-height:1.55}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ivy);outline-offset:3px}
+.dark :focus-visible,.path :focus-visible,.strip :focus-visible,.top :focus-visible,.guests :focus-visible,.close :focus-visible,.phonebar :focus-visible,footer :focus-visible{outline-color:var(--gravel)}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--duck);padding:8px 12px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.strip{background:var(--hedge);color:var(--duck);font-family:var(--text);font-size:16px;text-align:center;margin:0;
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  padding:14px var(--gut-r) 0 var(--gut)}
+.word{display:block;width:min(300px,56vw);filter:drop-shadow(0 0 8px rgba(240,244,242,.85))}
+.word img{width:100%;height:auto}
+.top nav{display:flex;gap:22px;align-items:center;font-family:var(--display);font-weight:600;font-size:15px}
+.top nav a{color:var(--ink);text-decoration:none;text-shadow:0 0 8px rgba(240,244,242,.9)}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:3px;
+  font-family:var(--display);font-weight:600;font-size:16px;line-height:1.1;text-decoration:none;border:0;cursor:pointer;text-align:center;
+  background:var(--ivy);color:#fff}
+.btn:hover{background:var(--ivy-2)}
+.btn.hedge{background:var(--hedge);color:var(--duck)}
+.btn.hedge:hover{background:var(--hedge-2)}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.line:hover{background:rgba(255,255,255,.08)}
+.top nav .btn{text-shadow:none;color:#fff}
+@media (max-width:820px){.top nav a:not(.btn){display:none}.top nav .btn{min-height:44px;padding:0 14px;font-size:15px}}
+
+/* ---------- Act 1: up the chapel path while the season turns ---------- */
+.path{position:relative;height:360vh;background:var(--hedge)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--hedge)}
+.season{position:absolute;inset:0;will-change:transform,opacity;transform-origin:50% 42%}
+.season img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.season.red,.season.frost{opacity:0}
+.leaves{position:absolute;inset:0 0 -30% 0;z-index:4;pointer-events:none;will-change:transform,opacity}
+.lset{position:absolute;inset:0}
+.lset.lr{opacity:0}
+.lf{position:absolute;height:auto;aspect-ratio:1;filter:blur(2.5px);opacity:.92}
+.shade{position:absolute;inset:auto 0 0 0;height:55%;z-index:3;pointer-events:none;
+  background:linear-gradient(to top, rgba(20,28,19,.78), rgba(20,28,19,0))}
+@media (min-width:700px){.shade{height:100%;background:linear-gradient(to top, rgba(20,28,19,.7), rgba(20,28,19,0) 60%),linear-gradient(to right, rgba(20,28,19,.55), rgba(20,28,19,0) 55%)}}
+.beat{position:absolute;z-index:6;left:var(--gut);bottom:clamp(28px,8vh,80px);max-width:min(620px, calc(100% - 40px));color:#fff;will-change:transform,opacity}
+.beat .where{font-family:var(--display);font-weight:600;font-size:15px;color:var(--gravel)}
+.beat h1{font-size:clamp(34px,5vw,70px);margin-top:10px}
+.beat h2{font-size:clamp(32px,4.2vw,58px)}
+.beat p.lede{font-size:clamp(19px,1.6vw,22px);margin-top:14px;max-width:30em;text-shadow:0 1px 12px rgba(15,20,14,.6)}
+.beat h1,.beat h2{text-shadow:0 2px 18px rgba(15,20,14,.5)}
+.b2,.b3{opacity:0}
+.b2{left:auto;right:var(--gut-r);text-align:right}
+.b2 p.lede{margin-left:auto}
+@media (max-width:699px){
+  .path{height:320vh}
+  .beat{left:var(--gut);right:var(--gut-r);max-width:none;bottom:24px}
+  .b1{bottom:76px}
+  .b2{text-align:left}
+  .b2 p.lede{margin-left:0}
+  .shade{height:72%}
+  .beat p.lede{font-size:18px}
+}
+@media (max-height:600px){.beat p.lede{display:none}.beat .where{display:none}}
+
+/* ---------- Sections ---------- */
+.wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
+.inner{max-width:1180px;margin:0 auto}
+section{scroll-margin-top:10px}
+.lede{font-size:clamp(21px,1.8vw,24px);max-width:32em}
+.who{font-family:var(--display);font-weight:600;font-size:14px;color:var(--ink-soft);margin-top:10px}
+.cap-s{font-size:16px;color:var(--ink-soft);margin-top:8px;font-style:italic}
+dl.facts{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:22px;row-gap:12px;font-size:19px;line-height:1.45}
+dl.facts dt{font-family:var(--display);font-weight:600;font-size:15px;padding-top:4px;white-space:nowrap}
+dl.facts dd{margin:0;border-bottom:1px solid var(--duck-2);padding-bottom:12px}
+
+/* The Bungalow */
+.bung{padding-block:clamp(72px,9vw,128px) 0}
+.bung .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.bung h2,.garden h2,.guests h2,.around h2,.book h2{font-size:clamp(40px,5.4vw,72px)}
+.bung .lede{margin-top:18px}
+.bung blockquote{margin:28px 0 0;padding:0}
+.bung blockquote p{font-size:22px;line-height:1.4;font-style:italic}
+@media (max-width:880px){.bung .inner{grid-template-columns:minmax(0,1fr)}}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;
+  padding:clamp(36px,5vw,56px) var(--gut-r) clamp(56px,7vw,96px) var(--gut);margin:0}
+.rail figure{margin:0;flex:0 0 auto;width:clamp(250px,26vw,380px);scroll-snap-align:start}
+.rail img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px;background:var(--duck-2)}
+.rail figcaption{font-size:17px;margin-top:8px;color:var(--ink-soft)}
+
+/* Breakfast: dark band */
+.dark{background:var(--hedge);color:var(--duck)}
+.bfast{padding-block:clamp(72px,9vw,120px)}
+.bfast .inner{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,64px);align-items:center}
+.bfast h2{font-size:clamp(36px,4.4vw,60px)}
+.bfast p{margin-top:16px;color:#d8e0dc;max-width:30em}
+.bfast .pair{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:12px;align-items:end}
+.bfast .pair img{width:100%;object-fit:cover;border-radius:3px}
+.bfast .pair .a img{aspect-ratio:3/4}
+.bfast .pair .b img{aspect-ratio:3/2}
+.bfast figure{margin:0}
+.bfast figcaption{font-size:16px;color:#b7c3bd;margin-top:8px;font-style:italic}
+@media (max-width:880px){.bfast .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* The garden */
+.garden{padding-block:clamp(72px,9vw,128px)}
+.g-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:start}
+.g-head .lede{margin-top:0}
+.g-head p + p{margin-top:14px}
+.kim{margin:0}
+.kim img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;border-radius:3px}
+.aerial{margin:clamp(36px,5vw,56px) 0 0}
+.aerial img{width:100%;aspect-ratio:1800/1052;object-fit:cover;border-radius:3px}
+.g-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;margin-top:12px}
+.g-grid figure{margin:0}
+.g-grid img{width:100%;object-fit:cover;border-radius:3px;aspect-ratio:4/5}
+.g-grid .a{grid-column:span 3}.g-grid .b{grid-column:span 3}.g-grid .c{grid-column:span 3}.g-grid .d{grid-column:span 3}
+.g-grid figcaption{font-size:16px;color:var(--ink-soft);margin-top:6px}
+.events{margin-top:clamp(36px,5vw,60px);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,56px);align-items:center}
+.events img{width:100%;aspect-ratio:1800/1418;object-fit:cover;border-radius:3px}
+.events h3{font-size:clamp(28px,3vw,40px)}
+.events p{margin-top:12px}
+@media (max-width:880px){.g-head,.events{grid-template-columns:minmax(0,1fr)}.g-grid .a,.g-grid .b,.g-grid .c,.g-grid .d{grid-column:span 6}}
+
+/* Guests */
+.guests{background:var(--ivy);color:#fff;padding-block:clamp(72px,9vw,120px)}
+.score{margin-top:22px;display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
+.score b{font-family:var(--display);font-size:clamp(72px,9vw,128px);line-height:.9;font-variant-numeric:tabular-nums}
+.score span{font-size:20px;max-width:18em}
+.quotes{list-style:none;margin:clamp(40px,5vw,60px) 0 0;padding:0;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:24px clamp(28px,5vw,64px)}
+.quotes li{border-top:1px solid rgba(255,255,255,.4);padding-top:16px}
+.quotes li:first-child{grid-row:span 2}
+.quotes .q{font-size:clamp(21px,1.9vw,25px);line-height:1.4}
+.quotes li:first-child .q{font-size:clamp(26px,2.8vw,36px);line-height:1.28}
+.guests .who{color:#f6d7d6}
+@media (max-width:880px){.quotes{grid-template-columns:minmax(0,1fr)}.quotes li:first-child{grid-row:auto}}
+
+/* Around */
+.around{padding-block:clamp(72px,9vw,128px)}
+.around .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+table.dist{width:100%;border-collapse:collapse;margin-top:24px;font-size:19px}
+table.dist th{text-align:left;font-family:var(--display);font-size:14px;color:var(--ink-soft);font-weight:600;padding:0 0 8px}
+table.dist td{padding:12px 0;border-top:1px solid var(--duck-2);vertical-align:top}
+table.dist td:last-child{text-align:right;font-family:var(--display);font-weight:600;font-size:17px;white-space:nowrap;padding-left:16px;font-variant-numeric:tabular-nums}
+.small{font-size:16px;color:var(--ink-soft);margin-top:12px}
+.around .ph{margin:0}
+.around .ph img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
+@media (max-width:880px){.around .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Book */
+.book{background:var(--duck-2);padding-block:clamp(72px,9vw,128px)}
+.book .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,64px);align-items:start}
+.book .lede{margin-top:16px}
+.price{font-family:var(--display);font-weight:700;font-size:clamp(40px,5vw,64px);line-height:1;margin-top:26px;font-variant-numeric:tabular-nums}
+.price small{display:block;font-family:var(--text);font-weight:400;font-size:20px;margin-top:8px;color:var(--ink-soft)}
+.book .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.book dl.facts dd{border-color:#b9c6c1}
+.book .card{background:var(--duck);border-radius:3px;padding:clamp(22px,3vw,32px)}
+.book .card h3{font-size:24px;margin-bottom:16px}
+@media (max-width:880px){.book .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Close */
+.close{position:relative;color:#fff;background:var(--hedge)}
+.close img{width:100%;height:min(86vh,760px);object-fit:cover;object-position:50% 60%}
+.close .panel{position:absolute;left:var(--gut);bottom:clamp(24px,6vh,60px);max-width:560px;background:rgba(31,43,30,.9);padding:clamp(22px,3vw,34px);border-radius:3px}
+.close h2{font-size:clamp(32px,4vw,54px)}
+.close p{margin-top:10px}
+.close .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+@media (max-width:700px){.close img{height:52vh}.close .panel{position:relative;left:auto;bottom:auto;max-width:none;border-radius:0;background:var(--hedge)}}
+footer{background:var(--hedge);color:#c4cec9;font-size:16px;padding-block:28px calc(28px + env(safe-area-inset-bottom,0px))}
+footer .inner{display:grid;gap:6px}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;
+  padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);
+  background:rgba(31,43,30,.97);transform:translateY(110%);visibility:hidden;transition:transform .25s ease-out,visibility 0s .25s}
+.phonebar.on{transform:none;visibility:visible;transition:transform .25s ease-out}
+.phonebar .btn{flex:1;min-height:50px}
+.phonebar .btn.line{color:var(--duck)}
+@media (max-width:820px){.phonebar{display:flex}footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}}
+
+/* Static layout: reduced motion, or before the script runs */
+.static .path{height:auto}
+.static .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column}
+.static .season{position:relative;inset:auto;opacity:1 !important;transform:none !important}
+.static .season img{height:auto;aspect-ratio:1800/1152}
+.static .leaves,.static .shade{display:none}
+.static .beat{position:relative;left:auto;right:auto;bottom:auto;max-width:none;opacity:1 !important;transform:none !important;
+  background:var(--hedge);padding:28px var(--gut-r) 32px var(--gut);text-align:left}
+.static .b2 p.lede{margin-left:0}
+.static .s1{order:1}.static .b1{order:2}.static .s2{order:3}.static .b2{order:4}.static .s3{order:5}.static .b3{order:6}
+.static .beat p.lede,.static .beat .where{display:block}
+@media (prefers-reduced-motion: reduce){.phonebar,.phonebar.on{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#book">Skip to booking</a>
+<p class="strip">A website idea made by Lampbound Studio for The Bungalow &amp; Ivy Leaf Chapel. Not their official site.</p>
+
+<header class="top">
+  <a class="word" href="#path"><img src="img/logo-dark.png" alt="The Bungalow &amp; Ivy Leaf Chapel, back to top" width="1763" height="168"></a>
+  <nav aria-label="Main">
+    <a href="#bungalow">The Bungalow</a>
+    <a href="#garden">The garden</a>
+    <a class="btn" href="#book">Check dates</a>
+  </nav>
+</header>
+
+<main>
+<section class="path" id="path" aria-label="The path to the Ivy Leaf Chapel, through the seasons">
+  <div class="stage">
+    <div class="season green s1">
+      <picture>
+        <source media="(min-width:700px)" srcset="img/s-green-1800.jpg">
+        <img src="img/s-green-phone.jpg" alt="The gravel path between clipped hedges and tall cypresses, leading to the Ivy Leaf Chapel covered in green Boston ivy" width="714" height="1152" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="season red s2">
+      <picture>
+        <source media="(min-width:700px)" srcset="img/s-red-1800.jpg">
+        <img src="img/s-red-phone.jpg" alt="The same path in autumn, with the chapel's Boston ivy turned deep red" width="714" height="1152">
+      </picture>
+    </div>
+    <div class="season frost s3">
+      <picture>
+        <source media="(min-width:700px)" srcset="img/s-frost-1800.jpg">
+        <img src="img/s-frost-phone.jpg" alt="The same path on a frosty winter morning, the ivy gone and the chapel's steel frame showing" width="714" height="1152">
+      </picture>
+    </div>
+    <div class="shade" aria-hidden="true"></div>
+    <div class="leaves" aria-hidden="true">
+      <div class="lset lg">
+        <svg class="lf" viewBox="0 0 100 100" style="left:-7%;top:6%;width:min(26vw,230px);transform:rotate(-24deg)"><path d="M50 97L48 84L45 74L38 77L30 76L22 78L15 74L8 71L4 68L9 64L13 60L12 55L16 50L22 52L29 54L35 57L39 59L36 52L33 46L33 38L31 31L34 24L38 18L42 20L45 13L48 9L50 3L52 9L55 13L58 20L62 18L66 24L69 31L67 38L67 46L64 52L61 59L65 57L71 54L78 52L84 50L88 55L87 60L91 64L96 68L92 71L85 74L78 78L70 76L62 77L55 74L52 84Z" fill="#4c6a1f"/><path d="M50 95V26M50 64L20 66M50 64L80 66" fill="none" stroke="rgba(0,0,0,.22)" stroke-width="1.2"/></svg>
+        <svg class="lf" viewBox="0 0 100 100" style="left:-4%;top:44%;width:min(15vw,130px);transform:rotate(18deg)"><path d="M50 97L48 84L45 74L38 77L30 76L22 78L15 74L8 71L4 68L9 64L13 60L12 55L16 50L22 52L29 54L35 57L39 59L36 52L33 46L33 38L31 31L34 24L38 18L42 20L45 13L48 9L50 3L52 9L55 13L58 20L62 18L66 24L69 31L67 38L67 46L64 52L61 59L65 57L71 54L78 52L84 50L88 55L87 60L91 64L96 68L92 71L85 74L78 78L70 76L62 77L55 74L52 84Z" fill="#62822a"/><path d="M50 95V26M50 64L20 66M50 64L80 66" fill="none" stroke="rgba(0,0,0,.22)" stroke-width="1.2"/></svg>
+        <svg class="lf" viewBox="0 0 100 100" style="left:auto;right:-6%;top:3%;width:min(24vw,210px);transform:rotate(32deg)"><path d="M50 97L48 84L45 74L38 77L30 76L22 78L15 74L8 71L4 68L9 64L13 60L12 55L16 50L22 52L29 54L35 57L39 59L36 52L33 46L33 38L31 31L34 24L38 18L42 20L45 13L48 9L50 3L52 9L55 13L58 20L62 18L66 24L69 31L67 38L67 46L64 52L61 59L65 57L71 54L78 52L84 50L88 55L87 60L91 64L96 68L92 71L85 74L78 78L70 76L62 77L55 74L52 84Z" fill="#3d5718"/><path d="M50 95V26M50 64L20 66M50 64L80 66" fill="none" stroke="rgba(0,0,0,.22)" stroke-width="1.2"/></svg>
+        <svg class="lf" viewBox="0 0 100 100" style="left:auto;right:-3%;top:40%;width:min(14vw,120px);transform:rotate(-12deg)"><path d="M50 97L48 84L45 74L38 77L30 76L22 78L15 74L8 71L4 68L9 64L13 60L12 55L16 50L22 52L29 54L35 57L39 59L36 52L33 46L33 38L31 31L34 24L38 18L42 20L45 13L48 9L50 3L52 9L55 13L58 20L62 18L66 24L69 31L67 38L67 46L64 52L61 59L65 57L71 54L78 52L84 50L88 55L87 60L91 64L96 68L92 71L85 74L78 78L70 76L62 77L55 74L52 84Z" fill="#4c6a1f"/><path d="M50 95V26M50 64L20 66M50 64L80 66" fill="none" stroke="rgba(0,0,0,.22)" stroke-width="1.2"/></svg>
+        <svg class="lf" viewBox="0 0 100 100" style="left:-6%;top:78%;width:min(22vw,190px);transform:rotate(40deg)"><path d="M50 97L48 84L45 74L38 77L30 76L22 78L15 74L8 71L4 68L9 64L13 60L12 55L16 50L22 52L29 54L35 57L39 59L36 52L33 46L33 38L31 31L34 24L38 18L42 20L45 13L48 9L50 3L52 9L55 13L58 20L62 18L66 24L69 31L67 38L67 46L64 52L61 59L65 57L71 54L78 52L84 50L88 55L87 60L91 64L96 68L92 71L85 74L78 78L70 76L62 77L55 74L52 84Z" fill="#62822a"/><path d="M50 95V26M50 64L20 66M50 64L80 66" fill="none" stroke="rgba(0,0,0,.22)" stroke-width="1.2"/></svg>
+        <svg class="lf" viewBox="0 0 100 100" style="left:auto;right:-7%;top:82%;width:min(26vw,230px);transform:rotate(-30deg)"><path d="M50 97L48 84L45 74L38 77L30 76L22 78L15 74L8 71L4 68L9 64L13 60L12 55L16 50L22 52L29 54L35 57L39 59L36 52L33 46L33 38L31 31L34 24L38 18L42 20L45 13L48 9L50 3L52 9L55 13L58 20L62 18L66 24L69 31L67 38L67 46L64 52L61 59L65 57L71 54L78 52L84 50L88 55L87 60L91 64L96 68L92 71L85 74L78 78L70 76L62 77L55 74L52 84Z" fill="#3d5718"/><path d="M50 95V26M50 64L20 66M50 64L80 66" fill="none" stroke="rgba(0,0,0,.22)" stroke-width="1.2"/></svg>
+      </div>
+      <div class="lset lr">
+        <svg class="lf" viewBox="0 0 100 100" style="left:-7%;top:6%;width:min(26vw,230px);transform:rotate(-24deg)"><path d="M50 97L48 84L45 74L38 77L30 76L22 78L15 74L8 71L4 68L9 64L13 60L12 55L16 50L22 52L29 54L35 57L39 59L36 52L33 46L33 38L31 31L34 24L38 18L42 20L45 13L48 9L50 3L52 9L55 13L58 20L62 18L66 24L69 31L67 38L67 46L64 52L61 59L65 57L71 54L78 52L84 50L88 55L87 60L91 64L96 68L92 71L85 74L78 78L70 76L62 77L55 74L52 84Z" fill="#9a1f26"/><path d="M50 95V26M50 64L20 66M50 64L80 66" fill="none" stroke="rgba(0,0,0,.22)" stroke-width="1.2"/></svg>
+        <svg class="lf" viewBox="0 0 100 100" style="left:-4%;top:44%;width:min(15vw,130px);transform:rotate(18deg)"><path d="M50 97L48 84L45 74L38 77L30 76L22 78L15 74L8 71L4 68L9 64L13 60L12 55L16 50L22 52L29 54L35 57L39 59L36 52L33 46L33 38L31 31L34 24L38 18L42 20L45 13L48 9L50 3L52 9L55 13L58 20L62 18L66 24L69 31L67 38L67 46L64 52L61 59L65 57L71 54L78 52L84 50L88 55L87 60L91 64L96 68L92 71L85 74L78 78L70 76L62 77L55 74L52 84Z" fill="#b8332b"/><path d="M50 95V26M50 64L20 66M50 64L80 66" fill="none" stroke="rgba(0,0,0,.22)" stroke-width="1.2"/></svg>
+        <svg class="lf" viewBox="0 0 100 100" style="left:auto;right:-6%;top:3%;width:min(24vw,210px);transform:rotate(32deg)"><path d="M50 97L48 84L45 74L38 77L30 76L22 78L15 74L8 71L4 68L9 64L13 60L12 55L16 50L22 52L29 54L35 57L39 59L36 52L33 46L33 38L31 31L34 24L38 18L42 20L45 13L48 9L50 3L52 9L55 13L58 20L62 18L66 24L69 31L67 38L67 46L64 52L61 59L65 57L71 54L78 52L84 50L88 55L87 60L91 64L96 68L92 71L85 74L78 78L70 76L62 77L55 74L52 84Z" fill="#7d1a20"/><path d="M50 95V26M50 64L20 66M50 64L80 66" fill="none" stroke="rgba(0,0,0,.22)" stroke-width="1.2"/></svg>
+        <svg class="lf" viewBox="0 0 100 100" style="left:auto;right:-3%;top:40%;width:min(14vw,120px);transform:rotate(-12deg)"><path d="M50 97L48 84L45 74L38 77L30 76L22 78L15 74L8 71L4 68L9 64L13 60L12 55L16 50L22 52L29 54L35 57L39 59L36 52L33 46L33 38L31 31L34 24L38 18L42 20L45 13L48 9L50 3L52 9L55 13L58 20L62 18L66 24L69 31L67 38L67 46L64 52L61 59L65 57L71 54L78 52L84 50L88 55L87 60L91 64L96 68L92 71L85 74L78 78L70 76L62 77L55 74L52 84Z" fill="#9a1f26"/><path d="M50 95V26M50 64L20 66M50 64L80 66" fill="none" stroke="rgba(0,0,0,.22)" stroke-width="1.2"/></svg>
+        <svg class="lf" viewBox="0 0 100 100" style="left:-6%;top:78%;width:min(22vw,190px);transform:rotate(40deg)"><path d="M50 97L48 84L45 74L38 77L30 76L22 78L15 74L8 71L4 68L9 64L13 60L12 55L16 50L22 52L29 54L35 57L39 59L36 52L33 46L33 38L31 31L34 24L38 18L42 20L45 13L48 9L50 3L52 9L55 13L58 20L62 18L66 24L69 31L67 38L67 46L64 52L61 59L65 57L71 54L78 52L84 50L88 55L87 60L91 64L96 68L92 71L85 74L78 78L70 76L62 77L55 74L52 84Z" fill="#b8332b"/><path d="M50 95V26M50 64L20 66M50 64L80 66" fill="none" stroke="rgba(0,0,0,.22)" stroke-width="1.2"/></svg>
+        <svg class="lf" viewBox="0 0 100 100" style="left:auto;right:-7%;top:82%;width:min(26vw,230px);transform:rotate(-30deg)"><path d="M50 97L48 84L45 74L38 77L30 76L22 78L15 74L8 71L4 68L9 64L13 60L12 55L16 50L22 52L29 54L35 57L39 59L36 52L33 46L33 38L31 31L34 24L38 18L42 20L45 13L48 9L50 3L52 9L55 13L58 20L62 18L66 24L69 31L67 38L67 46L64 52L61 59L65 57L71 54L78 52L84 50L88 55L87 60L91 64L96 68L92 71L85 74L78 78L70 76L62 77L55 74L52 84Z" fill="#7d1a20"/><path d="M50 95V26M50 64L20 66M50 64L80 66" fill="none" stroke="rgba(0,0,0,.22)" stroke-width="1.2"/></svg>
+      </div>
+    </div>
+    <div class="beat b1">
+      <p class="where">141 Miles Street, Tenterfield</p>
+      <h1>A 1915 bungalow, and a chapel grown from Boston ivy.</h1>
+      <p class="lede">The Bungalow sleeps up to four, with breakfast in the room and a wood fire in the lounge. Kim's garden covers 1.5 acres, five minutes' walk from the main street.</p>
+    </div>
+    <div class="beat b2">
+      <h2>In autumn the ivy turns red.</h2>
+      <p class="lede">Kim designed the chapel with her eldest son after a trip to Japan. It went up in the winter of 2016, and the ivy has covered the frame since.</p>
+    </div>
+    <div class="beat b3">
+      <h2>In winter you can see the frame.</h2>
+      <p class="lede">Frost on the hedges outside. Inside, the fire is lit and the bed has an electric blanket.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bung" id="bungalow">
+  <div class="wrap">
+    <div class="inner">
+      <div>
+        <h2>The Bungalow</h2>
+        <p class="lede">The front door opens into your own lounge and its fireplace. A second door leads to the bedroom, with its ensuite and walk-in robe. The verandah looks over the garden.</p>
+        <blockquote>
+          <p>"We visited in winter but never once went cold between the fire in the lounge, the heater in the bedroom and the toasty heated blankets."</p>
+          <p class="who">Millie, on Airbnb, June 2026</p>
+        </blockquote>
+      </div>
+      <dl class="facts">
+        <dt>Sleeps 4</dt><dd>A queen bed in the bedroom and a queen sofa bed in the lounge. For couples, friends, and families with children 12 and over.</dd>
+        <dt>Warm</dt><dd>Wood fire in the lounge, air conditioning, electric blankets.</dd>
+        <dt>Inside</dt><dd>A piano, Netflix and a CD player.</dd>
+        <dt>Ensuite</dt><dd>Shared by both sleeping areas, with Washpool toiletries. There's an extra outdoor toilet too.</dd>
+        <dt>Yours</dt><dd>Your own entrance and off-street parking. Kim lives on site with a very friendly cat.</dd>
+        <dt>Times</dt><dd>Check in after 2pm, out by 10am.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="rail" tabindex="0" role="region" aria-label="Photos of The Bungalow">
+    <figure><img src="img/lounge-1200.jpg" srcset="img/lounge-600.jpg 600w, img/lounge-1200.jpg 1200w" sizes="(max-width:880px) 72vw, 26vw" alt="The lounge with a black brick fireplace, armchairs and a painting above the mantel" width="1200" height="1681" loading="lazy"><figcaption>The lounge and its fireplace</figcaption></figure>
+    <figure><img src="img/bed-1200.jpg" srcset="img/bed-600.jpg 600w, img/bed-1200.jpg 1200w" sizes="(max-width:880px) 72vw, 26vw" alt="A brass bed with navy linen against duck-egg walls" width="1200" height="800" loading="lazy"><figcaption>The bedroom</figcaption></figure>
+    <figure><img src="img/piano-1200.jpg" srcset="img/piano-600.jpg 600w, img/piano-1200.jpg 1200w" sizes="(max-width:880px) 72vw, 26vw" alt="An upright piano with flowers on top, beside a floral armchair" width="1200" height="1631" loading="lazy"><figcaption>The piano</figcaption></figure>
+    <figure><img src="img/door-1200.jpg" srcset="img/door-600.jpg 600w, img/door-1200.jpg 1200w" sizes="(max-width:880px) 72vw, 26vw" alt="Looking from the bedroom through an open door into the lounge" width="1200" height="1681" loading="lazy"><figcaption>Bedroom through to the lounge</figcaption></figure>
+    <figure><img src="img/lamp-1200.jpg" srcset="img/lamp-600.jpg 600w, img/lamp-1200.jpg 1200w" sizes="(max-width:880px) 72vw, 26vw" alt="A small dining table by the window with a lamp and dark curtains" width="1200" height="1681" loading="lazy"><figcaption>The table by the window</figcaption></figure>
+    <figure><img src="img/ensuite-600.jpg" alt="The ensuite shower with grey tiles and a glass screen" width="462" height="681" loading="lazy"><figcaption>Ensuite</figcaption></figure>
+    <figure><img src="img/verandah-1200.jpg" srcset="img/verandah-600.jpg 600w, img/verandah-1200.jpg 1200w" sizes="(max-width:880px) 72vw, 26vw" alt="The weatherboard bungalow's verandah with white wicker chairs" width="1024" height="1538" loading="lazy"><figcaption>The verandah</figcaption></figure>
+  </div>
+</section>
+
+<section class="bfast dark wrap" id="breakfast">
+  <div class="inner">
+    <div>
+      <h2>Breakfast is already in the room.</h2>
+      <p>Kim leaves the provisions: bread, cereals, her homemade granola, yoghurt, fruit, juice, local jams, Nespresso and a choice of teas. Cheeses are waiting when you arrive.</p>
+      <p>"Really enjoyed the home made granola and all needs catered to." <span class="who" style="color:#b7c3bd">Madonna, Airbnb, October 2026</span></p>
+    </div>
+    <div class="pair">
+      <figure class="a"><img src="img/tray-1200.jpg" srcset="img/tray-600.jpg 600w, img/tray-1200.jpg 1200w" sizes="(max-width:880px) 44vw, 26vw" alt="A breakfast tray on the bed with a teapot, toast, juice and a bowl of yoghurt and fruit" width="1200" height="1600" loading="lazy"><figcaption>Breakfast in bed</figcaption></figure>
+      <figure class="b"><img src="img/cheese-1200.jpg" srcset="img/cheese-600.jpg 600w, img/cheese-1200.jpg 1200w" sizes="(max-width:880px) 52vw, 32vw" alt="Two glasses of red wine, a bottle and a cheese board beside a vase of magnolias" width="1200" height="800" loading="lazy"><figcaption>Cheese on arrival</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="garden wrap" id="garden">
+  <div class="inner">
+    <div class="g-head">
+      <figure class="kim"><img src="img/kim-1200.jpg" srcset="img/kim-600.jpg 600w, img/kim-1200.jpg 1200w" sizes="(max-width:880px) 100vw, 40vw" alt="Kim sitting on the steps of the bungalow by the leadlight front door" width="1200" height="1793" loading="lazy"><figcaption class="cap-s">Kim, on the verandah.</figcaption></figure>
+      <div>
+        <h2>Kim's garden</h2>
+        <p class="lede" style="margin-top:18px">Kim bought the house in 2010, when the front yard was a stretch of lawn and one old pine. She is a landscape gardener, and she planted the rest.</p>
+        <p>Out the front is a formal parterre of low box hedges, lavender and berberis. The back garden is softer, with grasses and salvia under deciduous trees and a few spiral conifers. The chapel stands in what used to be the back paddock.</p>
+        <p>Better Homes and Gardens filmed here with Graham Ross in December 2022.</p>
+      </div>
+    </div>
+    <figure class="aerial"><img src="img/aerial-1200.jpg" srcset="img/aerial-600.jpg 600w, img/aerial-1200.jpg 1200w" sizes="100vw" alt="The front parterre from above, circles of clipped box hedges around a central bed" width="1200" height="701" loading="lazy"></figure>
+    <div class="g-grid">
+      <figure class="a"><img src="img/spiral-1200.jpg" srcset="img/spiral-600.jpg 600w, img/spiral-1200.jpg 1200w" sizes="(max-width:880px) 50vw, 25vw" alt="A spiral-clipped conifer among purple and green shrubs" width="1199" height="1800" loading="lazy"><figcaption>A spiral conifer</figcaption></figure>
+      <figure class="b"><img src="img/gate-1200.jpg" srcset="img/gate-600.jpg 600w, img/gate-1200.jpg 1200w" sizes="(max-width:880px) 50vw, 25vw" alt="A white garden arch with pink climbing flowers, the bungalow beyond" width="1200" height="1500" loading="lazy"><figcaption>The garden arch</figcaption></figure>
+      <figure class="c"><img src="img/hydrangea-1200.jpg" srcset="img/hydrangea-600.jpg 600w, img/hydrangea-1200.jpg 1200w" sizes="(max-width:880px) 50vw, 25vw" alt="Pink hydrangeas in a timber planter on the verandah" width="1200" height="1494" loading="lazy"><figcaption>Hydrangeas on the verandah</figcaption></figure>
+      <figure class="d"><img src="img/cat-1200.jpg" srcset="img/cat-600.jpg 600w, img/cat-1200.jpg 1200w" sizes="(max-width:880px) 50vw, 25vw" alt="A black cat sitting in the garden under a climbing vine" width="1200" height="1600" loading="lazy"><figcaption>The friendly cat</figcaption></figure>
+    </div>
+    <div class="events">
+      <img src="img/longtable-1200.jpg" srcset="img/longtable-600.jpg 600w, img/longtable-1200.jpg 1200w" sizes="(max-width:880px) 100vw, 56vw" alt="A long table set for lunch inside the green ivy chapel, guests seated along both sides" width="1200" height="945" loading="lazy">
+      <div>
+        <h3>Weddings and long lunches</h3>
+        <p>Couples have married in the chapel, and Kim hosts small functions, high teas and long table events in the garden. Ask her about dates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="guests wrap" id="guests">
+  <div class="inner">
+    <h2>What guests say</h2>
+    <p class="score"><b>5.0</b><span>from 158 reviews on Airbnb, where Kim is a Superhost</span></p>
+    <ul class="quotes">
+      <li><p class="q">"The fireplace, piano, breakfast and one morning of light frost were also a hit."</p><p class="who">Aimee, Airbnb, July 2026</p></li>
+      <li><p class="q">"Kim was a friendly and welcoming host and had the fire on for our arrival."</p><p class="who">Matt, Airbnb, October 2026</p></li>
+      <li><p class="q">"To walk around the beautiful gardens or just sit on the verandah with a drink are delightful things to do."</p><p class="who">Stephanie, Airbnb, April 2026</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="around wrap" id="around">
+  <div class="inner">
+    <div>
+      <h2>Getting around</h2>
+      <p class="lede" style="margin-top:16px">Miles Street is away from the highway, and the cafes and shops on High Street are a short walk.</p>
+      <table class="dist">
+        <thead><tr><th scope="col">From The Bungalow, by road</th><th scope="col"><span class="vh">Distance</span></th></tr></thead>
+        <tbody>
+          <tr><td>Tenterfield Saddler, High Street</td><td>600 m</td></tr>
+          <tr><td>Bald Rock National Park</td><td>33 km</td></tr>
+          <tr><td>Boonoo Boonoo Falls</td><td>37 km</td></tr>
+          <tr><td>Girraween National Park</td><td>39 km</td></tr>
+          <tr><td>Ballandean, Granite Belt</td><td>47 km</td></tr>
+          <tr><td>Brisbane</td><td>265 km</td></tr>
+        </tbody>
+      </table>
+      <p class="small">Road distances on OpenStreetMap, rounded.</p>
+    </div>
+    <figure class="ph"><img src="img/verandah-wine-1200.jpg" srcset="img/verandah-wine-600.jpg 600w, img/verandah-wine-1200.jpg 1200w" sizes="(max-width:880px) 100vw, 44vw" alt="Two glasses of red wine and a cheese board on a small table on the verandah, wicker chairs beside it" width="1200" height="800" loading="lazy"><figcaption class="cap-s">Back on the verandah after a day out.</figcaption></figure>
+  </div>
+</section>
+
+<section class="book wrap" id="book">
+  <div class="inner">
+    <div>
+      <h2>Check dates</h2>
+      <p class="lede">See open nights on Airbnb, or ring Kim and book with her.</p>
+      <p class="price">A$355 a night<small>for up to two guests. Each extra guest, up to two more, is A$80.</small></p>
+      <div class="acts">
+        <a class="btn" href="https://www.airbnb.com.au/rooms/28215339" rel="noopener" target="_blank">See dates on Airbnb</a>
+        <a class="btn hedge" href="tel:+61428669121">Call Kim, 0428 669 121</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Good to know</h3>
+      <dl class="facts">
+        <dt>Guests</dt><dd>Up to 4. Children 12 and over.</dd>
+        <dt>Breakfast</dt><dd>Provisions included.</dd>
+        <dt>Arrive</dt><dd>After 2pm. Leave by 10am.</dd>
+        <dt>House</dt><dd>No smoking, no pets.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="close" aria-label="The Bungalow from the garden">
+  <img src="img/bungalow-1200.jpg" srcset="img/bungalow-600.jpg 600w, img/bungalow-1200.jpg 1200w" sizes="100vw" alt="The bungalow behind the front parterre of round box hedges and lavender" width="1200" height="800" loading="lazy">
+  <div class="panel">
+    <h2>The Bungalow, from the front garden.</h2>
+    <p>141 Miles Street, Tenterfield. Up to four guests, breakfast included, and the chapel down the back.</p>
+    <div class="acts">
+      <a class="btn" href="#book">Check dates</a>
+      <a class="btn line" href="https://www.instagram.com/ivyleafchapel/" rel="noopener" target="_blank">@ivyleafchapel</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="inner">
+    <p>A preview made by Lampbound Studio for The Bungalow &amp; Ivy Leaf Chapel. Not affiliated, not live.</p>
+    <p>Photos are The Bungalow &amp; Ivy Leaf Chapel's own, from their website. The ivy leaves are drawn for this preview.</p>
+  </div>
+</footer>
+
+<div class="phonebar" id="phonebar">
+  <a class="btn" href="#book">Check dates</a>
+  <a class="btn line" href="tel:+61428669121">Call Kim</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var bar = document.getElementById('phonebar');
+  var path = document.getElementById('path');
+  var q = function(s){return document.querySelector(s)};
+  var sG=q('.season.green'), sR=q('.season.red'), sF=q('.season.frost');
+  var lv=q('.leaves'), lg=q('.lset.lg'), lr=q('.lset.lr');
+  var b1=q('.b1'), b2=q('.b2'), b3=q('.b3');
+  var clamp=function(v){return v<0?0:v>1?1:v};
+  var seg=function(p,a,b){return clamp((p-a)/(b-a))};
+  var ease=function(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
+  function prog(el){var r=el.getBoundingClientRect();var st=el.firstElementChild;var span=el.offsetHeight-(st?st.offsetHeight:window.innerHeight);return span>0?clamp(-r.top/span):0}
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    var vh=window.innerHeight;
+    var bk=document.getElementById('book').getBoundingClientRect();
+    bar.classList.toggle('on', bar.contains(document.activeElement) || (path.getBoundingClientRect().bottom<vh*.5 && (bk.top>vh*.9 || bk.bottom<0)));
+    if(reduce) return;
+    var p=prog(path);
+    if(p>1.01) return;
+    // walking up the path: every season plate shares one camera, so they stay aligned
+    var walk=ease(seg(p,0,1));
+    var sc=(1+walk*.42).toFixed(4);
+    var tf='scale('+sc+')';
+    sG.style.transform=tf; sR.style.transform=tf; sF.style.transform=tf;
+    var toRed=seg(p,.28,.44), toFrost=seg(p,.62,.78);
+    sR.style.opacity=toRed.toFixed(3);
+    sF.style.opacity=toFrost.toFixed(3);
+    // leaves sit closer than the path, so they travel further and faster
+    var lift=ease(seg(p,0,.8));
+    lv.style.transform='translate3d(0,'+(-lift*22).toFixed(2)+'%,0) scale('+(1+lift*.3).toFixed(4)+')';
+    lg.style.opacity=(1-toRed).toFixed(3);
+    lr.style.opacity=toRed.toFixed(3);
+    lv.style.opacity=(1-seg(p,.6,.72)).toFixed(3);
+    // copy beats
+    var o1=1-seg(p,.12,.24);
+    b1.style.opacity=o1.toFixed(3);
+    b1.style.transform='translate3d(0,'+(-(1-o1)*36).toFixed(1)+'px,0)';
+    var in2=seg(p,.38,.48), out2=seg(p,.58,.66), o2=in2*(1-out2);
+    b2.style.opacity=o2.toFixed(3);
+    b2.style.transform='translate3d(0,'+((1-in2)*28-out2*28).toFixed(1)+'px,0)';
+    var in3=seg(p,.76,.86);
+    b3.style.opacity=in3.toFixed(3);
+    b3.style.transform='translate3d(0,'+((1-in3)*28).toFixed(1)+'px,0)';
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(mq.addEventListener) mq.addEventListener('change',function(){location.reload()});
+  frame();
+})();
+</script>
+</body>
+</html>
