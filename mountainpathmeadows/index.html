@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>The Domes at Mountain Path Meadows | Mount Schank, South Australia</title>
+<meta name="description" content="Two timber geodesic domes at the foot of Mount Schank, off-grid, near Mount Gambier. A website idea made by Lampbound Studio for Mountain Path Meadows.">
+<meta property="og:title" content="The Domes at Mountain Path Meadows">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Mountain Path Meadows. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/mountainpathmeadows/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/mountainpathmeadows/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0d12'/%3E%3Cpath d='M16 5L28 26H4z' fill='none' stroke='%23d29a57' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/hero.jpg" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;600;700&family=Libre+Franklin:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Tokens from their photos (see brand.md).
+   night = the sky in their night dome shot. canvas = the dome's white skin, kept cool.
+   strut/lamp = the timber frame and the dome lit from inside. teal = the Birdcage's painted floor.
+   Josefin Sans: geometric, Futura bones, Fuller's era, sharp A and V. Libre Franklin to read. */
+:root{
+  --night:#0b0d12; --night-2:#161a22;
+  --canvas:#ecebe8; --canvas-2:#dcdad6;
+  --strut:#b07a45; --lamp:#d29a57; --lamp-2:#e0ad6d;
+  --teal:#2f7f8f; --grass:#c9ad86;
+  --ink:#16181d; --ink-soft:#4b4f57;
+  --display:"Josefin Sans","Futura","Century Gothic",sans-serif;
+  --text:"Libre Franklin","Helvetica Neue",Arial,sans-serif;
+  --gut:max(20px, env(safe-area-inset-left,0px)); --gut-r:max(20px, env(safe-area-inset-right,0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--canvas);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.dark :focus-visible{outline-color:var(--lamp-2)}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--canvas);padding:8px 12px}
+.strip{background:var(--night);color:var(--canvas);font-size:14px;text-align:center;margin:0;padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px var(--gut-r) 0 var(--gut);color:#fff}
+.mark{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:19px;text-decoration:none;text-transform:uppercase;letter-spacing:.06em;text-shadow:0 1px 10px rgba(0,0,0,.55)} /* slop-ok: the wordmark, set in caps like a dome builder's plate, not an eyebrow */
+.mark svg{width:26px;height:24px;flex:none}
+.top nav{display:flex;gap:22px;align-items:center;font-weight:600;font-size:15px}
+.top nav a:not(.btn){text-decoration:none;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.top nav a:not(.btn):hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:4px;font-family:var(--text);font-weight:600;font-size:16px;text-decoration:none;border:0;cursor:pointer;background:var(--lamp);color:var(--night)}
+.btn:hover{background:var(--lamp-2)}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.line:hover{background:rgba(255,255,255,.12)}
+
+/* Hero: three planes. The domes in the gums, the name, and a stand of gum trunks in front moving faster. */
+.hero{position:relative;height:165vh;background:var(--night)}
+.hero .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.hero .photo{position:absolute;inset:-5% -3% -3% -3%;will-change:transform}
+.hero .photo img{width:100%;height:100%;object-fit:cover;object-position:52% 62%}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,13,18,.6) 0%,rgba(11,13,18,0) 28%,rgba(11,13,18,0) 52%,rgba(11,13,18,.72) 100%)}
+.hero .name{position:absolute;left:var(--gut);right:var(--gut-r);bottom:25vh;color:#fff;will-change:transform,opacity;z-index:2}
+.hero h1{font-size:clamp(46px,8.4vw,128px);font-weight:700;text-transform:uppercase; /* slop-ok: the name itself, not a label */ letter-spacing:.01em;text-shadow:0 2px 24px rgba(0,0,0,.45)}
+.hero h1 span{display:block;font-weight:300;font-size:.42em;letter-spacing:.08em;margin-bottom:.35em}
+.hero .name p{max-width:34ch;font-size:clamp(17px,1.6vw,21px);margin-top:16px;text-shadow:0 1px 10px rgba(0,0,0,.75)}
+.hero .trunks{position:absolute;inset:0;pointer-events:none;will-change:transform;z-index:1}
+.hero .trunks svg{position:absolute;bottom:0;height:100%;width:auto}
+.hero .cta{position:absolute;left:var(--gut);bottom:9vh;display:flex;gap:12px;flex-wrap:wrap;z-index:4}
+.hero .cta .line{color:#fff}
+
+.lull{max-width:1180px;margin:0 auto;padding:100px var(--gut-r) 90px var(--gut);display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:56px;align-items:start}
+.lull h2{font-size:clamp(34px,4.2vw,58px)}
+.lull .facts{list-style:none;margin:0;padding:0}
+.lull .facts li{display:grid;grid-template-columns:7.5ch 1fr;gap:16px;padding:14px 0;border-top:1px solid var(--canvas-2)}
+.lull .facts li:last-child{border-bottom:1px solid var(--canvas-2)}
+.lull .facts b{font-family:var(--display);font-weight:700;font-size:22px;color:var(--strut);font-variant-numeric:tabular-nums}
+.lull .lede{margin-top:20px;color:var(--ink-soft);max-width:44ch}
+
+/* Signature: lie back under the skylight. The struts stay, the day goes, the stars fill the triangles. */
+.lie{position:relative;height:430vh;background:var(--night);color:var(--canvas)}
+.lie .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.lie .day,.lie .out{position:absolute;inset:0}
+.lie .day img,.lie .out img{width:100%;height:100%;object-fit:cover}
+.lie .out img{object-position:50% 70%}
+.lie .day{will-change:opacity}
+.lie .out{opacity:0;will-change:opacity,transform}
+.lie .frame{position:absolute;left:50%;top:50%;width:170vmax;height:170vmax;margin:-85vmax 0 0 -85vmax;will-change:transform,opacity;opacity:0}
+.lie .frame svg{width:100%;height:100%;display:block}
+.lie .frame .stars circle{opacity:0}
+.lie .scrim{position:absolute;left:0;right:0;bottom:0;height:55%;background:linear-gradient(180deg,rgba(11,13,18,0),rgba(11,13,18,.82));z-index:2;pointer-events:none}
+.lie .say{position:absolute;left:var(--gut);right:var(--gut-r);bottom:11vh;z-index:3;min-height:5em}
+.lie .say p{position:absolute;left:0;bottom:0;max-width:22ch;font-family:var(--display);font-weight:600;font-size:clamp(28px,3.6vw,50px);line-height:1.08;opacity:0;will-change:opacity,transform;text-shadow:0 2px 20px rgba(0,0,0,.8)}
+.lie .say p small{display:block;font-family:var(--text);font-weight:400;font-size:16px;line-height:1.5;margin-top:12px;color:#d9d4cc;max-width:40ch}
+.lie .intro{position:absolute;left:var(--gut);top:8vh;z-index:3;max-width:28ch;will-change:opacity;background:rgba(236,235,232,.9);padding:14px 18px;border-radius:2px}
+.lie .intro h2{font-size:clamp(28px,3vw,42px);color:var(--night)}
+.lie .intro p{margin-top:8px;font-size:16px;color:#2b2d33}
+
+.domes{max-width:1240px;margin:0 auto;padding:110px var(--gut-r) 40px var(--gut)}
+.domes h2{font-size:clamp(34px,4.2vw,58px);max-width:17ch}
+.domes .lede{margin-top:16px;max-width:54ch;color:var(--ink-soft)}
+.pair{margin-top:52px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:22px;align-items:start}
+.pair figure{margin:0}
+.pair figcaption{font-size:15px;color:var(--ink-soft);margin-top:10px;max-width:42ch}
+.pair figcaption b{color:var(--ink)}
+.pair img{width:100%;border-radius:2px}
+.d1{grid-column:1 / span 7}
+.d1b{grid-column:9 / span 4;margin-top:90px}
+.d2{grid-column:2 / span 4;margin-top:-40px}
+.d2b{grid-column:7 / span 6;margin-top:40px}
+.d2b figcaption b{color:#23606c}
+.bits{grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,5fr) minmax(0,3fr);gap:22px;margin-top:30px;align-items:end}
+.bits img{aspect-ratio:4/5;object-fit:cover}
+
+.outside{background:var(--night);color:var(--canvas);margin-top:100px}
+.outside .in{max-width:1240px;margin:0 auto;padding:100px var(--gut-r) 100px var(--gut);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:center}
+.outside h2{font-size:clamp(32px,3.8vw,52px)}
+.outside p{margin-top:16px;color:#cfcac2;max-width:46ch}
+.outside ul{margin:22px 0 0;padding:0;list-style:none}
+.outside li{padding:11px 0;border-top:1px solid rgba(236,235,232,.16);color:#e6e2dc}
+.outside .shots{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,4fr);gap:18px;align-items:end}
+.outside .shots img{border-radius:2px}
+
+.where{max-width:1240px;margin:0 auto;padding:110px var(--gut-r) 40px var(--gut);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px;align-items:center}
+.where h2{font-size:clamp(32px,3.8vw,52px)}
+.where ul{list-style:none;padding:0;margin:26px 0 0}
+.where li{display:grid;grid-template-columns:7.5em 1fr;gap:16px;padding:13px 0;border-top:1px solid var(--canvas-2)}
+.where li b{font-family:var(--display);font-weight:700;font-size:22px;color:var(--strut);font-variant-numeric:tabular-nums}
+.where .small{margin-top:16px;font-size:15px;color:var(--ink-soft);max-width:46ch}
+.where figure{margin:0}
+.where figcaption{font-size:14px;color:var(--ink-soft);margin-top:10px}
+
+.guests{max-width:1120px;margin:0 auto;padding:100px var(--gut-r) 40px var(--gut)}
+.guests .head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.guests h2{font-size:clamp(32px,3.8vw,52px)}
+.guests .score{font-size:16px;color:var(--ink-soft)}
+.guests .score b{font-family:var(--display);font-weight:700;font-size:42px;color:var(--ink);margin-right:6px}
+.quotes{margin-top:40px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,4fr);gap:36px}
+.quotes blockquote{margin:0;padding-top:18px;border-top:3px solid var(--strut)}
+.quotes blockquote:nth-child(2){margin-top:44px}
+.quotes p{font-size:19px;line-height:1.45}
+.quotes cite{display:block;margin-top:12px;font-style:normal;font-size:14px;color:var(--ink-soft)}
+
+.book{background:var(--night);color:var(--canvas);margin-top:110px;position:relative;overflow:hidden}
+.book .in{max-width:1240px;margin:0 auto;padding:110px var(--gut-r) 120px var(--gut);display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:56px;align-items:center;position:relative;z-index:1}
+.book h2{font-size:clamp(36px,4.6vw,64px)}
+.book p{margin-top:16px;color:#cfcac2;max-width:44ch}
+.book .acts{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+.book .acts .line{color:var(--canvas)}
+.book .note{font-size:14px;color:#a9a39a;margin-top:18px}
+.book img{border-radius:2px}
+
+footer{background:#06070a;color:#b8b3ab;font-size:14px;padding:30px var(--gut-r) calc(96px + env(safe-area-inset-bottom,0px)) var(--gut);text-align:center}
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);background:rgba(11,13,18,.96);border-top:1px solid rgba(236,235,232,.12)}
+.phonebar .btn{flex:1}
+.phonebar span{color:#d9d4cc;font-size:14px;line-height:1.25;align-self:center;flex:1}
+
+@media (max-width:860px){
+  body{font-size:17px}
+  .top nav a:not(.btn){display:none}
+  .top nav .btn{display:none}
+  .phonebar{display:flex}
+  .hero .name{bottom:27vh}
+  .hero .cta{display:none}
+  .lull,.outside .in,.where,.book .in{grid-template-columns:1fr;gap:34px}
+  .lull{padding-top:72px;padding-bottom:64px}
+  .pair{display:block}
+  .pair figure{margin:0 0 26px}
+  .d1b,.d2{width:72%}
+  .d1b{margin-left:auto}
+  .bits{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .bits figure:nth-child(3){display:none}
+  .quotes{grid-template-columns:1fr;gap:26px}
+  .quotes blockquote:nth-child(2){margin-top:0}
+  .lie .intro{top:6vh}
+  .lie .say{bottom:calc(96px + 5vh)}
+  .outside .shots{grid-template-columns:1fr 1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero{height:auto}.hero .stage{position:relative}
+  .lie{height:auto}.lie .stage{position:relative}
+  .lie .day{opacity:0}.lie .frame{display:none}.lie .out{opacity:1}
+  .lie .intro{display:none}
+  .lie .say{position:absolute;min-height:0}
+  .lie .say p{opacity:0}.lie .say p:last-child{opacity:1;position:relative}
+}
+</style>
+<noscript><style>.hero{height:auto}.hero .stage{position:relative}.lie{height:auto}.lie .stage{position:relative}.lie .day{opacity:0}.lie .frame{display:none}.lie .out{opacity:1}.lie .intro{display:none}.lie .say p{opacity:0}.lie .say p:last-child{opacity:1}</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the page</a>
+<p class="strip">A website idea made by Lampbound Studio for Mountain Path Meadows. Not their official site.</p>
+
+<header class="top">
+  <a class="mark" href="#main" aria-label="The Domes at Mountain Path Meadows, top of page">
+    <svg viewBox="0 0 26 24" aria-hidden="true"><path d="M13 2L24 22H2z M13 2L13 22 M2 22L18.5 12 M24 22L7.5 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+    The Domes
+  </a>
+  <nav aria-label="Page">
+    <a href="#domes">The domes</a>
+    <a href="#where">Where</a>
+    <a href="#book">How to book</a>
+    <a class="btn" href="https://www.airbnb.com.au/rooms/599535170810349340" rel="noopener" target="_blank">Check dates</a>
+  </nav>
+</header>
+
+<main id="main">
+<section class="hero dark" aria-label="The Domes at Mountain Path Meadows">
+  <div class="stage">
+    <div class="photo" data-plane="0.1"><img src="img/hero.jpg" width="1440" height="960" alt="A white dome in dry grass among tall gum trees at Mountain Path Meadows" fetchpriority="high"></div>
+    <div class="shade"></div>
+    <div class="name" data-name>
+      <h1><span>Mountain Path Meadows</span>The Domes</h1>
+      <p>Two timber geodesic domes at the foot of Mount Schank, off the grid, fifteen minutes from Mount Gambier.</p>
+    </div>
+    <div class="trunks" data-plane="0.32" aria-hidden="true">
+      <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMax slice" style="left:-4%;width:108%">
+        <g fill="#1b150e">
+          <path d="M0 1000 L0 0 L34 0 C30 420 34 760 52 1000z"/>
+          <path d="M1388 1000 C1400 700 1412 420 1404 0 L1452 0 C1456 380 1452 700 1470 1000z"/>
+          <path d="M1505 1000 C1520 720 1530 360 1522 0 L1600 0 L1600 1000z"/>
+        </g>
+        <g fill="#2a2015" opacity=".9">
+                    <path d="M1268 1000 C1274 820 1276 600 1270 320 L1290 320 C1292 600 1294 820 1302 1000z"/>
+        </g>
+      </svg>
+    </div>
+    <div class="cta">
+      <a class="btn" href="https://www.airbnb.com.au/rooms/599535170810349340" rel="noopener" target="_blank">Check dates on Airbnb</a>
+      <a class="btn line" href="#domes">See inside</a>
+    </div>
+  </div>
+</section>
+
+<section class="lull" aria-labelledby="lull-h">
+  <div>
+    <h2 id="lull-h">Leave the car, walk 250 metres over old lava flows, and the domes are yours.</h2>
+    <p class="lede">Dan and Rachel treat the two domes as a pair, so whoever books gets both. No wifi, no power, no heating or cooling. You get a charged battery bank, solar lights, torches and a fire pit instead.</p>
+  </div>
+  <ul class="facts">
+    <li><b>2</b><span>timber geodesic domes, the only ones in South Australia that Dan and Rachel know of</span></li>
+    <li><b>8</b><span>guests across both domes: a king bed and three fold-out queens</span></li>
+    <li><b>250 m</b><span>stroll from the car park, past eucalyptus and sheoaks</span></li>
+    <li><b>12</b><span>acres at the base of Mount Schank, a dormant volcano</span></li>
+  </ul>
+</section>
+
+<section class="lie dark" aria-labelledby="lie-h">
+  <div class="stage">
+    <div class="out"><img src="img/night.jpg" width="1440" height="1354" alt="A dome glowing gold from inside under a starry sky" loading="lazy"></div>
+    <div class="day"><img src="img/skylight.jpg" width="1440" height="958" alt="Looking straight up inside a dome: timber struts in triangles and the skylight" loading="lazy"></div>
+    <div class="scrim"></div>
+    <div class="frame" aria-hidden="true"><svg viewBox="-100 -100 200 200" data-frame></svg></div>
+    <div class="intro"><h2 id="lie-h">Lie back in Dome 1</h2><p>The king bed sits right under the skylight.</p></div>
+    <div class="say">
+      <p>Every edge is a timber strut.<small>Buckminster Fuller's "Bucky Ball": a strong frame from very little material.</small></p>
+      <p>Then the skylight goes dark.<small>No wifi out here. Phones still get signal, guests say.</small></p>
+      <p>Then the stars fill the panes.<small>"Sleeping while looking at the night sky was a highlight." Raj, Airbnb</small></p>
+      <p>From outside, the dome glows.<small>Torches and solar lights are left in the dome for you.</small></p>
+    </div>
+  </div>
+</section>
+
+<section class="domes" id="domes" aria-labelledby="domes-h">
+  <h2 id="domes-h">Dome 1, and The Birdcage</h2>
+  <p class="lede">Bedding, cushions and homewares were sourced from all over the world, and the hosts ask you to treat them gently. Dome 1 holds the king bed. Dome 2 has two fold-out queens and a set of golden birdcages to find.</p>
+  <div class="pair">
+    <figure class="d1"><img src="img/dome1.jpg" width="1440" height="958" alt="Dome 1: a king bed with linen bedding under the timber frame, windows onto the grass" loading="lazy"><figcaption><b>Dome 1.</b> An Eva king mattress with Bed Threads flax linen, and a queen fold-out sofa.</figcaption></figure>
+    <figure class="d1b"><img src="img/bed.jpg" width="900" height="1353" alt="The king bed with green and rust cushions against the dome wall" loading="lazy"><figcaption>Extra quilts live in the storage boxes for cold nights.</figcaption></figure>
+    <figure class="d2"><img src="img/trolley.jpg" width="900" height="1350" alt="A gold drinks trolley and hanging plants inside the dome" loading="lazy"></figure>
+    <figure class="d2b"><img src="img/birdcage.jpg" width="1440" height="960" alt="Dome 2, The Birdcage: two navy sofas on a teal painted floor with gold lines" loading="lazy"><figcaption><b>The Birdcage.</b> Two Koala fold-out queens on the painted floor. Can you spot the golden birdcages?</figcaption></figure>
+    <div class="bits">
+      <figure><img src="img/camera.jpg" width="900" height="1350" alt="An old camera and a leather case hanging by the dome door" loading="lazy"></figure>
+      <figure><img src="img/linen.jpg" width="900" height="896" alt="A Bed Threads linen bag on a timber floor" loading="lazy"></figure>
+      <figure><img src="img/tray.jpg" width="900" height="1350" alt="A timber caddy and a silver tray on a lace cloth" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="outside dark" aria-labelledby="out-h">
+  <div class="in">
+    <div>
+      <h2 id="out-h">Outside is half the stay</h2>
+      <p>Bring layers. The hosts list the cooler months for you: July's average low is 5.2 degrees, and the domes have no heating or cooling bar the sun and the wind.</p>
+      <ul>
+        <li>A fire pit by the domes</li>
+        <li>A Camp Coffee Nook with a kettle and gas burner (bring your own pots)</li>
+        <li>An outdoor shower and separate toilets</li>
+        <li>Pets allowed</li>
+      </ul>
+    </div>
+    <div class="shots">
+      <img src="img/shower.jpg" width="900" height="1200" alt="The outdoor shower with its painted triangle screen and corrugated iron walls" loading="lazy">
+      <img src="img/toilets.jpg" width="1200" height="900" alt="The timber toilet block among the gums" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="where" id="where" aria-labelledby="where-h">
+  <div>
+    <h2 id="where-h">At the foot of Mount Schank</h2>
+    <ul>
+      <li><b>Next door</b><span>the heritage-listed crater of Mount Schank, with its walk to the rim</span></li>
+      <li><b>15 min</b><span>Mount Gambier</span></li>
+      <li><b>15 min</b><span>Port MacDonnell and the beach</span></li>
+      <li><b>Nearby</b><span>Coonawarra wineries, "just up the road"</span></li>
+    </ul>
+    <p class="small">Dan runs a guided walk up Mount Schank through Airbnb Experiences. Private yoga, outdoors or in a dome, can be arranged, and the meadow hosts weddings, elopements and yoga retreats too.</p>
+  </div>
+  <figure><img src="img/crater.jpg" width="1440" height="960" alt="Mount Schank's crater from the air, ringed by trees and farmland" loading="lazy"><figcaption>Mount Schank, on Bunganditj / Boandik land.</figcaption></figure>
+</section>
+
+<section class="guests" aria-labelledby="guests-h">
+  <div class="head">
+    <h2 id="guests-h">What guests say</h2>
+    <p class="score"><b>4.88</b>from 208 reviews on Airbnb</p>
+  </div>
+  <div class="quotes">
+    <blockquote><p>"Who wouldn't want to sleep inside a soccer ball at the base of a volcano?"</p><cite>Colin, Airbnb</cite></blockquote>
+    <blockquote><p>"Sitting outside with a cup of tea in the morning is bliss."</p><cite>Emma, Airbnb</cite></blockquote>
+    <blockquote><p>"Spotted a couple wallabies and farm animals!"</p><cite>Patra, Airbnb</cite></blockquote>
+  </div>
+</section>
+
+<section class="book dark" id="book" aria-labelledby="book-h">
+  <div class="in">
+    <div>
+      <h2 id="book-h">Book both domes</h2>
+      <p>Pick your dates on Airbnb. One night is fine, and the price covers both domes for up to eight people. Tell Dan and Rachel when you'll arrive and they can help tote your luggage to the domes.</p>
+      <div class="acts">
+        <a class="btn" href="https://www.airbnb.com.au/rooms/599535170810349340" rel="noopener" target="_blank">Check dates on Airbnb</a>
+        <a class="btn line" href="https://www.mountainpathmeadows.com/weddings-and-elopements-enquiry" rel="noopener" target="_blank">Weddings and events</a>
+      </div>
+      <p class="note">Gift cards and yoga retreats are on the Mountain Path Meadows website.</p>
+    </div>
+    <img src="img/night-tall.jpg" width="1000" height="1500" alt="A dome lit from inside at night among dark trees" loading="lazy">
+  </div>
+</section>
+</main>
+
+<footer>A preview made by Lampbound Studio for Mountain Path Meadows. Not affiliated, not live. Photos from their Airbnb listing.</footer>
+
+<div class="phonebar dark">
+  <span>Both domes, from one night</span>
+  <a class="btn" href="https://www.airbnb.com.au/rooms/599535170810349340" rel="noopener" target="_blank">Check dates</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Build the dome frame: a triangle lattice in timber, with stars waiting inside the panes.
+  var svg = document.querySelector('[data-frame]');
+  var ns = 'http://www.w3.org/2000/svg', s = 16, h = s * Math.sqrt(3) / 2, lines = '', stars = '';
+  var seed = 7; function rnd(){ seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+  for (var r = -8; r <= 8; r++) {
+    for (var c = -8; c <= 8; c++) {
+      var x = c * s + (r % 2 ? s / 2 : 0), y = r * h;
+      lines += 'M' + x + ' ' + y + 'L' + (x + s) + ' ' + y + 'M' + x + ' ' + y + 'L' + (x + s / 2) + ' ' + (y + h) + 'M' + (x + s) + ' ' + y + 'L' + (x + s / 2) + ' ' + (y + h);
+      for (var k = 0; k < 3; k++) if (rnd() > .3) stars += '<circle cx="' + (x + s / 2 + (rnd() - .5) * 7).toFixed(1) + '" cy="' + (y + h * .45 + (rnd() - .5) * 5).toFixed(1) + '" r="' + (.12 + rnd() * rnd() * .45).toFixed(2) + '" fill="#f4efe6" data-t="' + rnd().toFixed(3) + '"/>';
+    }
+  }
+  svg.innerHTML = '<rect x="-100" y="-100" width="200" height="200" fill="#0b0d12" data-sky opacity="0"/><g class="stars">' + stars + '</g><path d="' + lines + '" fill="none" stroke="#b07a45" stroke-width="1.05" stroke-linecap="round"/>';
+  var sky = svg.querySelector('[data-sky]'), starEls = [].slice.call(svg.querySelectorAll('.stars circle'));
+
+  if (reduce) return;
+  var hero = document.querySelector('.hero'), planes = [].slice.call(hero.querySelectorAll('[data-plane]')), name = hero.querySelector('[data-name]');
+  var lie = document.querySelector('.lie'), day = lie.querySelector('.day'), out = lie.querySelector('.out'), frame = lie.querySelector('.frame'), intro = lie.querySelector('.intro'), says = [].slice.call(lie.querySelectorAll('.say p'));
+  var vh = window.innerHeight, ticking = false, box = {};
+  function measure(){ vh = window.innerHeight; [hero, lie].forEach(function(el){ var r = el.getBoundingClientRect(); box[el.className.split(' ')[0]] = { top: r.top + window.scrollY, h: el.offsetHeight }; }); }
+  function prog(k){ var b = box[k]; return Math.min(1, Math.max(0, (window.scrollY - b.top) / (b.h - vh))); }
+  function band(p, a, b){ return Math.min(1, Math.max(0, (p - a) / (b - a))); }
+  function frameDraw(){
+    ticking = false;
+    var p = prog('hero');
+    planes.forEach(function(el){ el.style.transform = 'translate3d(' + (el.dataset.plane > .2 ? -p * 9 : 0) + 'vw,' + (-p * el.dataset.plane * 60) + 'vh,0) scale(' + (1 + p * el.dataset.plane * .35) + ')'; });
+    name.style.transform = 'translate3d(0,' + (-p * 14) + 'vh,0)'; name.style.opacity = 1 - band(p, .55, .95);
+    var q = prog('lie');
+    day.style.opacity = 1 - band(q, .14, .42);
+    sky.setAttribute('opacity', band(q, .14, .42).toFixed(3));
+    intro.style.opacity = 1 - band(q, .08, .2);
+    var starP = band(q, .4, .72);
+    starEls.forEach(function(st){ st.style.opacity = starP > +st.dataset.t ? 1 : 0; });
+    var z = band(q, .74, .96);
+    frame.style.transform = 'rotate(' + (q * 18).toFixed(2) + 'deg) scale(' + (1 + z * 2.4).toFixed(3) + ')';
+    frame.style.opacity = Math.min(band(q, .12, .34), 1 - z);
+    out.style.opacity = band(q, .76, .94);
+    out.style.transform = 'scale(' + (1.12 - .12 * band(q, .76, 1)).toFixed(3) + ')';
+    var stops = [[.02, .26], [.26, .44], [.46, .72], [.8, 1.01]];
+    says.forEach(function(el, i){ var a = stops[i][0], b = stops[i][1], v = Math.min(band(q, a, a + .05), 1 - band(q, b - .04, b)); if (i === 3) v = band(q, a, a + .06); el.style.opacity = v; el.style.transform = 'translate3d(0,' + ((1 - v) * 18) + 'px,0)'; });
+  }
+  function onScroll(){ if (!ticking) { ticking = true; requestAnimationFrame(frameDraw); } }
+  var lastW = window.innerWidth, lastH = window.innerHeight;
+  window.addEventListener('resize', function(){ if (window.innerWidth !== lastW || Math.abs(window.innerHeight - lastH) > 120) { lastW = window.innerWidth; lastH = window.innerHeight; measure(); onScroll(); } });
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('load', function(){ measure(); onScroll(); });
+  measure(); frameDraw();
+})();
+</script>
+</body>
+</html>

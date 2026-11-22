@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Acorn Nook at Lazy Ballerina | A tiny house under the oaks, Kuitpo Forest</title>
+<meta name="description" content="A tiny house under oak trees at Lazy Ballerina winery, on the edge of Kuitpo Forest, with an outdoor bath. A website idea made by Lampbound Studio for Acorn Nook.">
+<meta property="og:title" content="Acorn Nook at Lazy Ballerina">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Acorn Nook. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/acornnook/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/acornnook/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231b120b'/%3E%3Cpath d='M8 13h16M9 13c0 7 3 12 7 14 4-2 7-7 7-14M10 13c0-4 3-6 6-6s6 2 6 6M16 7V4' fill='none' stroke='%23f0b65e' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/hero.jpg" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;700&family=Mulish:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+/* Tokens from their photos (see brand.md).
+   bark = the night shot's dark timber. enamel = the clawfoot bath. timber = the weathered posts.
+   oak = the canopy. bulb = the festoon lights.
+   Zilla Slab reads like sawn timber; Mulish stays out of its way. */
+:root{
+  --bark:#1b120b; --bark-2:#2a1d13;
+  --enamel:#f1f0ec; --enamel-2:#e2dfd8;
+  --timber:#6b5440; --oak:#4c5a34;
+  --bulb:#f0b65e; --bulb-2:#f6c97f;
+  --ink:#1f1913; --ink-soft:#5a4f45;
+  --display:"Zilla Slab","Rockwell",Georgia,serif;
+  --text:"Mulish","Avenir Next","Segoe UI",sans-serif;
+  --gut:max(20px, env(safe-area-inset-left,0px)); --gut-r:max(20px, env(safe-area-inset-right,0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--enamel);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--oak);outline-offset:3px}
+.dark :focus-visible{outline-color:var(--bulb)}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.04;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--enamel);padding:8px 12px}
+.strip{background:var(--bark);color:var(--enamel);font-size:14px;text-align:center;margin:0;padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px var(--gut-r) 0 var(--gut);color:#fff}
+.mark{display:flex;align-items:center;gap:8px;font-family:var(--display);font-weight:700;font-size:22px;text-decoration:none;text-shadow:0 1px 10px rgba(0,0,0,.6)}
+.mark svg{width:22px;height:26px;flex:none}
+.top nav{display:flex;gap:22px;align-items:center;font-weight:700;font-size:15px}
+.top nav a:not(.btn){text-decoration:none;text-shadow:0 1px 8px rgba(0,0,0,.7)}
+.top nav a:not(.btn):hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;font-family:var(--text);font-weight:700;font-size:16px;text-decoration:none;border:0;cursor:pointer;background:var(--bulb);color:var(--bark)}
+.btn:hover{background:var(--bulb-2)}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.line:hover{background:rgba(255,255,255,.1)}
+
+/* Hero: three planes. The Nook at dusk, the name, and oak leaves hanging in front. */
+.hero{position:relative;height:160vh;background:var(--bark)}
+.hero .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.hero .photo{position:absolute;inset:-4% -2% -2% -2%;will-change:transform}
+.hero .photo img{width:100%;height:100%;object-fit:cover;object-position:55% 60%}
+.hero .photo .m{display:none}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,18,11,.55) 0%,rgba(27,18,11,0) 30%,rgba(27,18,11,.15) 55%,rgba(27,18,11,.8) 100%)}
+.hero .leaves{position:absolute;left:0;right:0;top:0;height:42vh;pointer-events:none;will-change:transform;z-index:2}
+.hero .leaves svg{width:100%;height:100%;display:block}
+.hero .name{position:absolute;left:var(--gut);right:var(--gut-r);bottom:9vh;color:#fff;z-index:3;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end;will-change:transform,opacity}
+.hero h1{font-size:clamp(54px,9vw,140px);text-shadow:0 2px 24px rgba(0,0,0,.5)}
+.hero .name p{max-width:32ch;font-size:clamp(17px,1.5vw,20px);margin-top:12px;text-shadow:0 1px 10px rgba(0,0,0,.8)}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero .cta .line{color:#fff}
+
+.lull{max-width:1100px;margin:0 auto;padding:96px var(--gut-r) 80px var(--gut)}
+.lull h2{font-size:clamp(32px,3.9vw,54px);max-width:22ch}
+.lull .cols{margin-top:30px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px}
+.lull .cols p{color:var(--ink-soft)}
+.lull .hosts{font-size:16px;border-left:0;padding-top:16px;border-top:2px solid var(--timber)}
+
+/* Signature: lights on. The festoon string lights bulb by bulb as evening comes, and the day photo turns to night. */
+.dusk{position:relative;height:400vh;background:var(--bark);color:var(--enamel)}
+.dusk .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.dusk .day,.dusk .night{position:absolute;inset:0}
+.dusk .day img,.dusk .night img{width:100%;height:100%;object-fit:cover}
+.dusk .day img{object-position:35% 55%}
+.dusk .night img{object-position:40% 50%}
+.dusk .night{opacity:0;will-change:opacity;z-index:1}
+.dusk .dim{position:absolute;inset:0;background:#120b05;opacity:0;will-change:opacity}
+.dusk .string{position:absolute;left:-2%;right:-2%;top:0;height:30vh;z-index:2;pointer-events:none}
+.dusk .string svg{width:100%;height:100%;display:block}
+.dusk .glow{opacity:0}
+.dusk .clock{position:absolute;left:var(--gut);right:var(--gut-r);bottom:10vh;z-index:3;min-height:6em}
+.dusk .clock div{position:absolute;left:0;bottom:0;max-width:30ch;opacity:0;will-change:opacity,transform}
+.dusk .clock b{display:block;font-family:var(--display);font-size:clamp(20px,2vw,26px);color:var(--bulb);margin-bottom:4px}
+.dusk .clock p{font-family:var(--display);font-weight:500;font-size:clamp(28px,3.4vw,46px);line-height:1.1;text-shadow:0 2px 18px rgba(0,0,0,.85)}
+.dusk .scrim{position:absolute;left:0;right:0;bottom:0;height:55%;background:linear-gradient(180deg,rgba(18,11,5,0),rgba(18,11,5,.85));z-index:2}
+
+.inside{max-width:1240px;margin:0 auto;padding:110px var(--gut-r) 30px var(--gut)}
+.inside .head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:48px;align-items:end}
+.inside h2{font-size:clamp(34px,4.2vw,58px)}
+.inside .head p{color:var(--ink-soft);max-width:50ch}
+.rooms{margin-top:50px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:20px;align-items:start}
+.rooms figure{margin:0}
+.rooms img{width:100%;border-radius:3px}
+.rooms figcaption{font-size:15px;color:var(--ink-soft);margin-top:10px;max-width:40ch}
+.rooms figcaption b{color:var(--ink)}
+.r1{grid-column:1 / span 8}
+.r2{grid-column:9 / span 4;margin-top:70px}
+.r3{grid-column:1 / span 4;margin-top:20px}
+.r4{grid-column:5 / span 4;margin-top:80px}
+.r5{grid-column:9 / span 4;margin-top:-40px}
+
+.bath{background:var(--oak);color:var(--enamel);margin-top:100px}
+.bath .in{max-width:1240px;margin:0 auto;padding:100px var(--gut-r) 100px var(--gut);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px;align-items:center}
+.bath h2{font-size:clamp(34px,4.2vw,58px)}
+.bath p{margin-top:16px;color:#e4e6da;max-width:44ch}
+.bath blockquote{margin:28px 0 0;padding-top:16px;border-top:2px solid var(--bulb);font-family:var(--display);font-weight:500;font-size:24px;line-height:1.3;max-width:26ch}
+.bath cite{display:block;margin-top:8px;font-family:var(--text);font-style:normal;font-size:14px;color:#d3d7c6}
+.bath img{border-radius:3px}
+
+.winery{max-width:1240px;margin:0 auto;padding:110px var(--gut-r) 30px var(--gut);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:center}
+.winery h2{font-size:clamp(32px,3.8vw,52px)}
+.winery p{margin-top:16px;color:var(--ink-soft);max-width:46ch}
+.winery .two{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr);gap:18px;align-items:end}
+.winery img{border-radius:3px}
+
+.where{background:var(--bark);color:var(--enamel);margin-top:100px}
+.where .in{max-width:1240px;margin:0 auto;padding:100px var(--gut-r) 100px var(--gut);display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:56px;align-items:center}
+.where h2{font-size:clamp(32px,3.8vw,52px)}
+.where ul{list-style:none;padding:0;margin:26px 0 0}
+.where li{display:grid;grid-template-columns:6.5em 1fr;gap:16px;padding:13px 0;border-top:1px solid rgba(241,240,236,.16)}
+.where li b{font-family:var(--display);font-size:22px;color:var(--bulb);font-variant-numeric:tabular-nums}
+.where .small{margin-top:16px;font-size:15px;color:#cbbfb2;max-width:48ch}
+.where img{border-radius:3px}
+
+.guests{max-width:1120px;margin:0 auto;padding:100px var(--gut-r) 40px var(--gut)}
+.guests .head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.guests h2{font-size:clamp(32px,3.8vw,52px)}
+.guests .score{font-size:16px;color:var(--ink-soft)}
+.guests .score b{font-family:var(--display);font-size:42px;color:var(--ink);margin-right:6px}
+.quotes{margin-top:40px;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:36px 48px}
+.quotes blockquote{margin:0}
+.quotes blockquote:first-child{grid-row:span 2}
+.quotes blockquote:first-child p{font-family:var(--display);font-weight:500;font-size:clamp(26px,2.8vw,36px);line-height:1.2}
+.quotes p{font-size:19px;line-height:1.45}
+.quotes cite{display:block;margin-top:12px;font-style:normal;font-size:14px;color:var(--ink-soft)}
+
+.book{max-width:1240px;margin:100px auto 0;padding:0 var(--gut-r) 110px var(--gut);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:56px;align-items:center}
+.book h2{font-size:clamp(36px,4.6vw,64px)}
+.book p{margin-top:16px;color:var(--ink-soft);max-width:44ch}
+.book .acts{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.book .acts .line{color:var(--ink)}
+.book dl{margin:26px 0 0;display:grid;grid-template-columns:auto 1fr;gap:8px 18px;font-size:16px}
+.book dt{font-weight:700}
+.book dd{margin:0;color:var(--ink-soft)}
+.book img{border-radius:3px}
+
+footer{background:var(--bark);color:#c9bdb0;font-size:14px;padding:30px var(--gut-r) calc(96px + env(safe-area-inset-bottom,0px)) var(--gut);text-align:center}
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);background:rgba(27,18,11,.96);border-top:1px solid rgba(241,240,236,.12)}
+.phonebar .btn{flex:1}
+.phonebar span{color:#e7ddd2;font-size:14px;line-height:1.25;align-self:center;flex:1}
+
+@media (max-width:860px){
+  body{font-size:17px}
+  .top nav{display:none}
+  .phonebar{display:flex}
+  .hero .photo .d{display:none}.hero .photo .m{display:block}
+  .hero .name{grid-template-columns:1fr;bottom:18vh}
+  .hero .cta{display:none}
+  .lull .cols,.inside .head,.bath .in,.winery,.where .in,.book{grid-template-columns:1fr;gap:30px}
+  .lull{padding-top:70px;padding-bottom:60px}
+  .rooms{display:block}
+  .rooms figure{margin:0 0 24px}
+  .r2,.r4{width:70%;margin-left:auto}
+  .r3,.r5{width:78%}
+  .quotes{grid-template-columns:1fr;gap:26px}
+  .dusk .clock{bottom:14vh}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero{height:auto}.hero .stage{position:relative}
+  .dusk{height:auto}.dusk .stage{position:relative}
+  .dusk .day{display:none}.dusk .night{opacity:1}
+  .dusk .glow{opacity:1}
+  .dusk .clock div{opacity:0}.dusk .clock div:last-child{opacity:1}
+}
+</style>
+<noscript><style>.hero{height:auto}.hero .stage{position:relative}.dusk{height:auto}.dusk .stage{position:relative}.dusk .day{display:none}.dusk .night{opacity:1}.dusk .glow{opacity:1}.dusk .clock div:last-child{opacity:1}</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the page</a>
+<p class="strip">A website idea made by Lampbound Studio for Acorn Nook. Not their official site.</p>
+
+<header class="top">
+  <a class="mark" href="#main" aria-label="Acorn Nook, top of page">
+    <svg viewBox="0 0 22 26" aria-hidden="true"><path d="M3 10h16M4 10c0 7 3 12 7 14 4-2 7-7 7-14M5 10c0-4 3-6 6-6s6 2 6 6M11 4V1.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    Acorn Nook
+  </a>
+  <nav aria-label="Page">
+    <a href="#inside">Inside</a>
+    <a href="#where">Where</a>
+    <a href="#book">How to book</a>
+    <a class="btn" href="https://www.airbnb.com.au/rooms/52588434" rel="noopener" target="_blank">Check dates</a>
+  </nav>
+</header>
+
+<main id="main">
+<section class="hero dark" aria-label="Acorn Nook">
+  <div class="stage">
+    <div class="photo" data-plane="0.12">
+      <img class="d" src="img/hero.jpg" width="1440" height="960" alt="The Nook at dusk with its festoon lights on, under big trees" fetchpriority="high">
+      <img class="m" src="img/hero-m.jpg" width="1000" height="1333" alt="The Nook at dusk with its lights on, tall trees behind">
+    </div>
+    <div class="shade"></div>
+    <div class="leaves" data-plane="-0.25" aria-hidden="true">
+      <svg viewBox="0 0 1600 400" preserveAspectRatio="xMidYMin slice">
+        <defs><path id="leaf" d="M0 0C6 6 2 12 8 16C14 14 15 22 10 26C16 28 18 34 12 38C18 42 16 50 8 50C10 56 4 62 0 68C-4 62-10 56-8 50C-16 50-18 42-12 38C-18 34-16 28-10 26C-15 22-14 14-8 16C-2 12-6 6 0 0z"/></defs>
+        <g fill="#1f2a12" stroke="#141b0c" stroke-width=".6"><use href="#leaf" transform="translate(1480 -6) rotate(8) scale(2.6)"/><use href="#leaf" transform="translate(1545 30) rotate(-22) scale(2.2)"/><use href="#leaf" transform="translate(1405 10) rotate(30) scale(1.9)"/><use href="#leaf" transform="translate(1590 120) rotate(-40) scale(2.0)"/><use href="#leaf" transform="translate(1500 150) rotate(15) scale(1.6)"/><use href="#leaf" transform="translate(60 -10) rotate(-20) scale(2.0)"/><use href="#leaf" transform="translate(10 40) rotate(25) scale(1.7)"/></g>
+        <g stroke="#141b0c" stroke-width="3" fill="none"><path d="M1420 0C1460 40 1500 60 1600 70M0 20C40 30 70 26 100 0"/></g>
+      </svg>
+    </div>
+    <div class="name" data-name>
+      <div>
+        <h1>Acorn Nook</h1>
+        <p>A tiny house under the oaks at Lazy Ballerina winery, on the edge of Kuitpo Forest.</p>
+      </div>
+      <div class="cta">
+        <a class="btn" href="https://www.airbnb.com.au/rooms/52588434" rel="noopener" target="_blank">Check dates on Airbnb</a>
+        <a class="btn line" href="#inside">See inside</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lull" aria-labelledby="lull-h">
+  <h2 id="lull-h">Room for two, a clawfoot bath outside, and a cellar door a stone's throw away.</h2>
+  <div class="cols">
+    <p>The Nook is built for two and styled on wabi-sabi (less is more) principles. It runs on a trickle of solar power: enough for the fridge, the TV and your phones, though not a hair dryer. There's wifi the whole time.</p>
+    <p class="hosts">James Douglas and his wife Miriam own Lazy Ballerina. James is a winemaker who grew up in Willunga. Guests say the two of them are generous with tips on other wineries and places to eat.</p>
+  </div>
+</section>
+
+<section class="dusk dark" aria-labelledby="dusk-h">
+  <h2 id="dusk-h" class="skip">An evening at the Nook</h2>
+  <div class="stage">
+    <div class="night"><img src="img/night.jpg" width="1440" height="1074" alt="The Nook's deck at night, lit by a string of festoon bulbs" loading="lazy"></div>
+    <div class="day"><img src="img/day.jpg" width="1440" height="1080" alt="The Nook's timber deck and pergola in daylight, oaks behind" loading="lazy"></div>
+    <div class="dim"></div>
+    <div class="scrim"></div>
+    <div class="string" aria-hidden="true">
+      <svg viewBox="0 0 1000 200" preserveAspectRatio="none" data-string></svg>
+    </div>
+    <div class="clock">
+      <div><b>After 3pm</b><p>Let yourself in with the key safe.</p></div>
+      <div><b>Weekends</b><p>Wood-fired pizza and a red at the cellar door next door.</p></div>
+      <div><b>Evening</b><p>Fill the outdoor bath under the oaks.</p></div>
+      <div><b>After dark</b><p>The deck lights come on. Light the fire pit, outside the December to March fire ban.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="inside" id="inside" aria-labelledby="inside-h">
+  <div class="head">
+    <h2 id="inside-h">Inside the Nook</h2>
+    <p>A queen bed in the bedroom and another in the living room, a kitchenette with a barbecue, an indoor shower, a TV and air conditioning. Rustic timber, a stone basin and pierced screens let the light through.</p>
+  </div>
+  <div class="rooms">
+    <figure class="r1"><img src="img/bed.jpg" width="1200" height="1037" alt="The queen bed with white linen, a pierced white screen beside it" loading="lazy"><figcaption><b>The bedroom.</b> Queen bed, air conditioning and a window onto the trees.</figcaption></figure>
+    <figure class="r2"><img src="img/door.jpg" width="900" height="1348" alt="The bedroom seen through the open door at night, hanging baskets on the deck" loading="lazy"></figure>
+    <figure class="r3"><img src="img/kitchen.jpg" width="1000" height="746" alt="The kitchenette: a sink, a small fridge and timber shelves" loading="lazy"><figcaption><b>The kitchenette.</b> With a barbecue out on the deck.</figcaption></figure>
+    <figure class="r4"><img src="img/basin.jpg" width="900" height="1200" alt="A stone basin under a brass tap against white tiles" loading="lazy"></figure>
+    <figure class="r5"><img src="img/deck.jpg" width="1000" height="999" alt="The deck with a barbecue, bar stools and a small table" loading="lazy"><figcaption><b>The veranda.</b> Sit with a glass of wine and the rural views.</figcaption></figure>
+  </div>
+</section>
+
+<section class="bath dark" aria-labelledby="bath-h">
+  <div class="in">
+    <img src="img/bath.jpg" width="1200" height="895" alt="A guest soaking in the clawfoot bath on the deck, trees all round" loading="lazy">
+    <div>
+      <h2 id="bath-h">The bath is outside</h2>
+      <p>A clawfoot tub on the deck, tucked under the oak trees. Three of the five newest reviews bring it up.</p>
+      <blockquote>"What's better than an outdoor bath? Nothing, that's what."<cite>Jessica, Airbnb</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="winery" aria-labelledby="winery-h">
+  <div>
+    <h2 id="winery-h">The winery is next door</h2>
+    <p>The Nook sits behind the Lazy Ballerina cellar door. On weekends you can join other guests in the garden, or keep to yourselves on the deck. Search Acorn Nook rather than Lazy Ballerina in your maps, as one guest suggests.</p>
+  </div>
+  <div class="two">
+    <img src="img/platter.jpg" width="900" height="1200" alt="A cheese and salmon platter with a bottle of wine on the deck" loading="lazy">
+    <img src="img/fire.jpg" width="1200" height="895" alt="The fire pit burning in front of the Nook at dusk" loading="lazy">
+  </div>
+</section>
+
+<section class="where dark" id="where" aria-labelledby="where-h">
+  <div class="in">
+    <div>
+      <h2 id="where-h">On the brink of Kuitpo Forest</h2>
+      <ul>
+        <li><b>Next door</b><span>Kuitpo Forest: three Native Forest Reserves, 469 hectares of bush and birdlife</span></li>
+        <li><b>10 min</b><span>McLaren Vale, Willunga, Mount Compass and Meadows</span></li>
+        <li><b>A drive</b><span>Port Willunga, Maslins, Aldinga and Silver Sands beaches, and the Adelaide Hills</span></li>
+      </ul>
+      <p class="small">The Willunga Markets and the local wedding venues are close by too.</p>
+    </div>
+    <img src="img/dam.jpg" width="1440" height="1080" alt="A still dam reflecting gum trees and cloud near the Nook" loading="lazy">
+  </div>
+</section>
+
+<section class="guests" aria-labelledby="guests-h">
+  <div class="head">
+    <h2 id="guests-h">What guests say</h2>
+    <p class="score"><b>4.87</b>from 225 reviews on Airbnb</p>
+  </div>
+  <div class="quotes">
+    <blockquote><p>"You feel so tucked in by the trees around the building, even while you're bathing!"</p><cite>Tayla, Airbnb</cite></blockquote>
+    <blockquote><p>"A stones throw from the cellar door but perfectly private and secluded."</p><cite>Grace, Airbnb</cite></blockquote>
+    <blockquote><p>"James and Miriam were incredibly helpful with suggestions of other local wineries and restaurants to eat at."</p><cite>Ben, Airbnb</cite></blockquote>
+  </div>
+</section>
+
+<section class="book" id="book" aria-labelledby="book-h">
+  <img src="img/blanket.jpg" width="1200" height="895" alt="A guest wrapped in a blanket with a mug on the deck" loading="lazy">
+  <div>
+    <h2 id="book-h">Book the Nook</h2>
+    <p>Bookings are through Airbnb for now. Stays are two nights or more.</p>
+    <dl>
+      <dt>Check in</dt><dd>after 3pm, key safe</dd>
+      <dt>Check out</dt><dd>before 11am</dd>
+      <dt>Sleeps</dt><dd>2</dd>
+    </dl>
+    <div class="acts">
+      <a class="btn" href="https://www.airbnb.com.au/rooms/52588434" rel="noopener" target="_blank">Check dates on Airbnb</a>
+      <a class="btn line" href="https://lazy-ballerina.myshopify.com/collections/gift-vouchers" rel="noopener" target="_blank">Gift vouchers</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>A preview made by Lampbound Studio for Acorn Nook. Not affiliated, not live. Photos from their Airbnb listing.</footer>
+
+<div class="phonebar dark">
+  <span>Two nights or more, for two</span>
+  <a class="btn" href="https://www.airbnb.com.au/rooms/52588434" rel="noopener" target="_blank">Check dates</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // The festoon string: a sagging wire with eleven bulbs, each with a warm glow that switches on in turn.
+  var svg = document.querySelector('[data-string]'), n = 11, out = '', wire = 'M0 30';
+  function sag(x){ var t = (x % 500) / 500; return 30 + Math.sin(t * Math.PI) * 70; }
+  for (var x = 0; x <= 1000; x += 20) wire += 'L' + x + ' ' + sag(x).toFixed(1);
+  for (var i = 0; i < n; i++) {
+    var bx = 45 + i * 91, by = sag(bx) + 6;
+    out += '<g data-b="' + i + '"><line x1="' + bx + '" y1="' + (by - 8) + '" x2="' + bx + '" y2="' + by + '" stroke="#2a1d13" stroke-width="2"/>' +
+      '<ellipse class="glow" cx="' + bx + '" cy="' + (by + 9) + '" rx="26" ry="30" fill="url(#g)"/>' +
+      '<ellipse cx="' + bx + '" cy="' + (by + 9) + '" rx="5" ry="8" fill="#5a4a3a"/>' +
+      '<ellipse class="glow" cx="' + bx + '" cy="' + (by + 9) + '" rx="5" ry="8" fill="#ffd99a"/></g>';
+  }
+  svg.innerHTML = '<defs><radialGradient id="g"><stop offset="0" stop-color="#f6c97f" stop-opacity=".75"/><stop offset="1" stop-color="#f0b65e" stop-opacity="0"/></radialGradient></defs>' +
+    '<path d="' + wire + '" fill="none" stroke="#2a1d13" stroke-width="2.5"/>' + out;
+  if (reduce) return;
+  var bulbs = [].slice.call(svg.querySelectorAll('[data-b]')).map(function(g){ return [].slice.call(g.querySelectorAll('.glow')); });
+  var hero = document.querySelector('.hero'), planes = [].slice.call(hero.querySelectorAll('[data-plane]')), name = hero.querySelector('[data-name]');
+  var dusk = document.querySelector('.dusk'), night = dusk.querySelector('.night'), dim = dusk.querySelector('.dim'), lines = [].slice.call(dusk.querySelectorAll('.clock div'));
+  var vh = window.innerHeight, ticking = false, box = {};
+  function measure(){ vh = window.innerHeight; [hero, dusk].forEach(function(el){ var r = el.getBoundingClientRect(); box[el.className.split(' ')[0]] = { top: r.top + window.scrollY, h: el.offsetHeight }; }); }
+  function prog(k){ var b = box[k]; return Math.min(1, Math.max(0, (window.scrollY - b.top) / (b.h - vh))); }
+  function band(p, a, b){ return Math.min(1, Math.max(0, (p - a) / (b - a))); }
+  function draw(){
+    ticking = false;
+    var p = prog('hero');
+    planes.forEach(function(el){ var k = +el.dataset.plane; el.style.transform = 'translate3d(0,' + (-p * k * 55) + 'vh,0)' + (k > 0 ? ' scale(' + (1 + p * .06) + ')' : ''); });
+    name.style.transform = 'translate3d(0,' + (-p * 12) + 'vh,0)'; name.style.opacity = 1 - band(p, .6, .95); name.style.visibility = p > .94 ? 'hidden' : 'visible';
+    var q = prog('dusk');
+    dim.style.opacity = (band(q, .2, .55) * .55).toFixed(3);
+    night.style.opacity = band(q, .55, .8).toFixed(3);
+    var lit = band(q, .3, .72) * n;
+    bulbs.forEach(function(gl, i){ var v = Math.min(1, Math.max(0, lit - i)); gl.forEach(function(e){ e.style.opacity = v; }); });
+    var stops = [[0, .26], [.26, .5], [.5, .72], [.74, 1.01]];
+    lines.forEach(function(el, i){ var a = stops[i][0], b = stops[i][1]; var v = i === 0 ? 1 - band(q, b - .04, b) : Math.min(band(q, a, a + .05), 1 - band(q, b - .04, b)); if (i === 3) v = band(q, a, a + .05); el.style.opacity = v; el.style.transform = 'translate3d(0,' + ((1 - v) * 16) + 'px,0)'; });
+  }
+  function onScroll(){ if (!ticking) { ticking = true; requestAnimationFrame(draw); } }
+  var lastW = window.innerWidth, lastH = window.innerHeight;
+  window.addEventListener('resize', function(){ if (window.innerWidth !== lastW || Math.abs(window.innerHeight - lastH) > 120) { lastW = window.innerWidth; lastH = window.innerHeight; measure(); onScroll(); } });
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('load', function(){ measure(); onScroll(); });
+  measure(); draw();
+})();
+</script>
+</body>
+</html>
