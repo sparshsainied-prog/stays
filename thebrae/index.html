@@ -101,7 +101,7 @@ p{margin:0;text-wrap:pretty}
 .pour .story{position:relative;padding:12vh var(--gut-r) 8vh calc(var(--gut) + 44px);display:flex;flex-direction:column;justify-content:center}
 .pour .story h2{font-size:clamp(28px,3vw,42px);max-width:14ch;margin-bottom:5vh}
 .pour ol{list-style:none;margin:0;padding:0;position:relative}
-.pour li{position:relative;padding:0 0 3.4vh;opacity:.28;will-change:opacity}
+.pour li{position:relative;padding:0 0 3.4vh;opacity:.55;will-change:opacity}
 .pour li b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(24px,2.4vw,34px);line-height:1;color:var(--copper)}
 .pour li span{display:block;margin-top:6px;font-size:16px;line-height:1.5;max-width:40ch;color:#e3ddd3}
 .pour li::before{content:"";position:absolute;left:-36px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--soot);box-shadow:inset 0 0 0 2px var(--copper)}
@@ -216,9 +216,8 @@ footer p{max-width:70ch;margin:0 auto}
 @media (max-width:400px){
   .top nav{display:none}
 }
-@media (max-width:820px){
-  .pour li span{display:none}
-  .pour li.on span{display:block}
+@media (max-width:820px),(max-height:760px){
+  .mo .pour li:not(.on) span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 }
 
 /* No JS, or reduced motion: every pinned scene shows its end state and scrolls like a page. */
@@ -229,7 +228,6 @@ html:not(.mo) .pour .pics{min-height:60vh}
 html:not(.mo) .pour .pics figure{opacity:0!important}
 html:not(.mo) .pour .pics figure:last-child{opacity:1!important}
 html:not(.mo) .pour li{opacity:1!important}
-html:not(.mo) .pour li span{display:block!important}
 html:not(.mo) .pour .metal{transform:none!important}
 html:not(.mo) .pour .track,html:not(.mo) .pour .metal{display:none}
 html:not(.mo) .hero .photo,html:not(.mo) .hero .name,html:not(.mo) .hero .oats{transform:none!important;opacity:1!important}
@@ -324,9 +322,9 @@ html:not(.mo) .hero .photo,html:not(.mo) .hero .name,html:not(.mo) .hero .oats{t
       <h2 id="pour-h">The copper smelter's office.</h2>
       <ol>
         <li data-step><b>1847</b><span>A copper smelter starts on a little stream that became Scott's Creek, now Dawesley Creek.</span></li>
-        <li data-step><b>1857</b><span>William Bower Dawes lays out the township. This cottage, one of its first buildings, is the smelter's office.</span></li>
+        <li data-step><b>1857</b><span>William Bower Dawes lays out the township. The cottage, one of its first buildings, was the smelter's office.</span></li>
         <li data-step><b>After the smelters</b><span>Mr and Mrs Hawthorn turn the more than 300 acres into an award-winning merino stud.</span></li>
-        <li data-step><b>2019</b><span>Maddie and Milos move in on Australia Day weekend, and renovate the old office for two.</span></li>
+        <li data-step><b>2019</b><span>Maddie and Milos move in on Australia Day weekend. Since then they've renovated the old office for two.</span></li>
         <li data-step><b>Tonight</b><span>Firewood is supplied, so you can light the fire whenever you like.</span></li>
       </ol>
     </div>
@@ -335,7 +333,7 @@ html:not(.mo) .hero .photo,html:not(.mo) .hero .name,html:not(.mo) .hero .oats{t
 
 <section class="room" id="room" aria-labelledby="room-h">
   <h2 id="room-h">One room, under the old trusses.</h2>
-  <p class="lede">Sleeps two. A four-poster bed hung with sheer curtains, the stone and brick fireplace, a couch, a small kitchen with a Nespresso machine, and a new bathroom with a freestanding bath.</p>
+  <p class="lede">Sleeps two. A four-poster bed hung with sheer curtains, the stone and brick fireplace, a couch, a small kitchen with a Nespresso machine, and a renovated bathroom with a freestanding bath.</p>
   <div class="tiles">
     <figure class="t1"><img src="img/room.jpg" width="1440" height="635" alt="The whole cottage in one room: four-poster bed, fireplace, couch and kitchen under timber roof trusses" loading="lazy"></figure>
     <figure class="t2"><img src="img/bed-fire.jpg" width="1440" height="960" alt="Looking from the bed past the curtains to the lit fireplace" loading="lazy"><figcaption><b>The four-poster.</b> It faces the fire.</figcaption></figure>
@@ -458,7 +456,7 @@ html:not(.mo) .hero .photo,html:not(.mo) .hero .name,html:not(.mo) .hero .oats{t
     metal.style.transform = 'scaleY(' + m.toFixed(4) + ')';
     for (var i = 0; i < steps.length; i++) {
       var at = i / (steps.length - 1) * 0.86;
-      steps[i].style.opacity = String(0.28 + 0.72 * clamp((m - at + 0.06) / 0.08));
+      steps[i].style.opacity = String(0.55 + 0.45 * clamp((m - at + 0.06) / 0.08));
       var next = i + 1 < steps.length ? (i + 1) / (steps.length - 1) * 0.86 : 2;
       steps[i].classList.toggle('on', (m >= at - 0.02 || i === 0) && m < next - 0.02);
     }
