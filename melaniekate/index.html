@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Melanie Kate Celebrancy, Tamworth: a website preview</title>
+<meta name="description" content="A website idea for Melanie McGilchrist of Melanie Kate Celebrancy, civil marriage celebrant in Tamworth, the North West and New England. A preview by Lampbound Studio, not her official site.">
+<meta property="og:title" content="Melanie Kate Celebrancy">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Melanie Kate Celebrancy. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/melaniekate/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/melaniekate/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231d2333'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%23f2f3f1' stroke-width='1.4'/%3E%3Ctext x='16' y='20.5' font-family='Arial' font-size='11' fill='%23f2f3f1' text-anchor='middle'%3EMK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1d2333; --navy-2:#283048; --white:#f2f3f1; --pink:#e48aa6; --pink-deep:#a83a5c; --gold:#c9a865; --soft:#555b6b; --line:#cfd2d6;
+  --display:"Tenor Sans", Georgia, sans-serif; --text:"Nunito Sans", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--white);color:var(--navy);font:17px/1.6 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid #111;outline-offset:0;box-shadow:0 0 0 6px #fff}
+.skip{position:absolute;left:-999px;top:0;background:var(--navy);color:var(--white);padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.strip{background:var(--navy);color:#cfd3dc;font-size:13.5px;line-height:1.4;padding:9px 16px;text-align:center}
+.strip strong{color:#fff}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.1;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:3px;background:var(--pink);color:var(--navy);text-decoration:none;border:0;font:800 16px/1 var(--text);cursor:pointer}
+.btn:hover{background:#ec9db5}
+.btn.alt{background:var(--white);color:var(--navy);border:1.5px solid var(--navy)}
+
+/* hero: photo slow, words, ring fast */
+.hero{position:relative;height:170svh;background:var(--navy);color:#fff}
+.hero-stage{position:sticky;top:0;height:100svh;overflow:hidden;display:grid}
+.h-photo{position:absolute;inset:0;transform:scale(calc(1.08 - var(--p,0) * .08))}
+.h-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+.h-shade{position:absolute;inset:auto 0 0 0;height:60%;background:linear-gradient(to top,rgba(29,35,51,.92) 25%,rgba(29,35,51,0))}
+.h-ring{position:absolute;left:50%;top:30%;width:150vmax;height:150vmax;margin:-75vmax 0 0 -75vmax;border-radius:50%;box-shadow:0 0 0 200vmax rgba(29,35,51,.94);transform:scale(calc(.24 + var(--p,0) * .8));pointer-events:none}
+.h-ring::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid rgba(255,255,255,.85)}
+.h-copy{position:relative;align-self:end;padding:0 20px 128px;transform:translate3d(0,calc(var(--p,0) * -10svh),0)}
+.h-copy .tag{font-family:var(--display);font-size:clamp(30px,7.6vw,60px);line-height:1.1;max-width:15ch;margin:0}
+.hero h1{font:700 16px/1.4 var(--text);margin-top:16px;color:#dfe2ea}
+@media (min-width:860px){.h-copy{max-width:1080px;width:100%;margin:0 auto;padding:0 20px 13svh}}
+
+/* about */
+.about{padding:86px 0 70px}
+.about-grid{display:grid;gap:30px}
+.about h2{font-size:clamp(32px,7vw,56px);max-width:14ch}
+.about .big{font-size:21px;line-height:1.45;max-width:32ch;margin-top:22px}
+.about figure{margin:0;max-width:300px}
+.about figcaption{font-size:14px;color:var(--soft);margin-top:8px}
+.tick{list-style:none;padding:0;margin:20px 0 0;font-size:15.5px;color:var(--soft)}
+.tick li{padding:4px 0}
+@media (min-width:860px){.about-grid{grid-template-columns:1.2fr .8fr;align-items:center}}
+
+/* the ring */
+.ringsec{position:relative;height:560svh;background:var(--navy-2);color:#fff}
+.ring-stage{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;grid-template-rows:auto 1fr auto;padding:22px 20px 92px}
+.ringsec h2{font-size:clamp(26px,6vw,42px);max-width:18ch}
+.frame{position:relative;align-self:center;justify-self:center;width:min(74vw,42svh,440px);aspect-ratio:1}
+.window{position:absolute;inset:0;border-radius:50%;overflow:hidden;background:var(--navy)}
+.window img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity .6s ease,transform 1.2s ease}
+.window img.on{opacity:1;transform:none}
+.frame svg{position:absolute;inset:-9%;width:118%;height:118%;overflow:visible}
+.lv{transform-box:fill-box;transform-origin:0 100%;transform:scale(0);transition:transform .5s ease}
+.lv.on{transform:none}
+.quotes{position:relative;display:grid;min-height:150px}
+.qt{grid-area:1 / 1;opacity:0;transform:translate3d(0,12px,0);transition:opacity .35s ease,transform .35s ease;margin:0}
+.qt.on{opacity:1;transform:none}
+.qt p{font-family:var(--display);font-size:clamp(20px,4.8vw,28px);line-height:1.3;margin:0 0 8px;max-width:30ch}
+.pnote{grid-row:3;font-size:13px;color:#aeb4c2;margin:8px 0 0;text-align:center}
+@media (min-width:860px){.pnote{grid-row:3;grid-column:1}}
+.qt cite{font-style:normal;font-size:15px;color:var(--pink)}
+@media (min-width:860px){
+  .ring-stage{grid-template-columns:1fr 1fr;grid-template-rows:auto 1fr;column-gap:60px;max-width:1080px;margin:0 auto;width:100%;padding:46px 20px 60px}
+  .ringsec h2{grid-column:1 / -1}
+  .frame{grid-row:2;width:min(38vw,58svh,480px)}
+  .quotes{grid-row:2;align-self:center;min-height:220px}
+}
+
+/* ceremonies */
+.cer{padding:90px 0}
+.cer h2{font-size:clamp(32px,7vw,56px);margin-bottom:10px}
+.cer .intro{max-width:46ch;margin-bottom:30px}
+.list{border-top:1.5px solid var(--navy)}
+.item{display:grid;gap:6px;padding:22px 0;border-bottom:1px solid var(--line)}
+.item h3{font-size:clamp(24px,5vw,32px)}
+.item p{margin:0;max-width:56ch}
+.item .off{font-weight:800;color:var(--pink-deep);font-size:15px}
+@media (min-width:860px){.item{grid-template-columns:.8fr 1.2fr;column-gap:40px}}
+.strip-photos{display:grid;grid-template-columns:1.3fr 1fr;gap:10px;margin-top:44px}
+.strip-photos img{width:100%;height:100%;object-fit:cover;border-radius:3px}
+.strip-photos .tall{grid-row:span 2}
+
+/* enquire */
+.enq{background:#fff;padding:88px 0 120px;border-top:1px solid var(--line)}
+.enq-grid{display:grid;gap:34px}
+.enq h2{font-size:clamp(32px,7vw,54px);margin-bottom:14px}
+form{display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:800;font-size:15px}
+select,input,textarea{font:400 17px/1.4 var(--text);padding:12px 14px;border:1.5px solid #6f7584;border-radius:3px;background:#fff;color:var(--navy);min-height:48px;width:100%}
+textarea{min-height:120px;resize:vertical}
+.two{display:grid;gap:16px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.note{font-size:14px;color:var(--soft);margin:0}
+.done{overflow-wrap:anywhere;display:none;padding:16px;border:1.5px solid var(--pink-deep);border-radius:3px;background:#fbeef2}
+.done.show{display:block}
+@media (min-width:860px){.enq-grid{grid-template-columns:.8fr 1.2fr}}
+
+footer{background:var(--navy);color:#c1c6d2;padding:40px 0 110px;font-size:14.5px}
+footer strong{color:#fff}
+footer img{width:96px;margin-bottom:16px}
+
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px}
+.bar .btn{flex:1;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+@media (min-width:860px){.bar{left:auto;right:24px;bottom:24px}.bar .btn{flex:none}}
+
+@media (prefers-reduced-motion:reduce),(max-height:520px){
+  .hero{height:auto}.hero-stage{position:relative;height:100svh}
+  .h-photo,.h-copy{transform:none!important}.h-ring{display:none}
+  .ringsec{height:auto}.ring-stage{position:relative;height:auto;grid-template-rows:auto}
+  .frame{width:min(74vw,400px);margin:24px auto}
+  .window img{transition:none}.window img:first-child{opacity:1;transform:none}
+  .lv{transform:none!important;transition:none}
+  .quotes{min-height:0;display:block}.qt{position:static;opacity:1;transform:none;margin-bottom:24px;transition:none}
+  .frame,.quotes{grid-row:auto}
+}
+
+@media (max-height:520px){.hero-stage{height:auto!important;min-height:100svh;overflow:hidden}.h-copy{padding-top:24px}}
+</style>
+<noscript><style>
+  .hero{height:auto}.hero-stage{position:relative;height:100svh}
+  .h-photo,.h-copy{transform:none!important}.h-ring{display:none}
+  .ringsec{height:auto}.ring-stage{position:relative;height:auto;grid-template-rows:auto}
+  .frame{width:min(74vw,400px);margin:24px auto}
+  .window img:first-child{opacity:1;transform:none}
+  .lv{transform:none!important}
+  .quotes{min-height:0;display:block}.qt{position:static;opacity:1;transform:none;margin-bottom:24px}
+  .frame,.quotes{grid-row:auto}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip">A website idea made by <strong>Lampbound Studio</strong> for Melanie Kate Celebrancy. Not her official site.</div>
+
+<main id="main">
+<section class="hero" data-pin aria-label="Introduction">
+  <div class="hero-stage">
+    <div class="h-photo"><img src="img/hero.jpg" width="1200" height="1799" alt="The celebrant in pink, smiling as a couple hold hands in a golden paddock" fetchpriority="high"></div>
+    <div class="h-shade"></div>
+    <div class="h-ring" aria-hidden="true"></div>
+    <div class="h-copy">
+      <p class="tag">Together is a beautiful place to be</p>
+      <h1>Melanie Kate Celebrancy. Civil marriage celebrant in Tamworth, the North West and New England.</h1>
+    </div>
+  </div>
+</section>
+
+<section class="about" aria-labelledby="about-h">
+  <div class="wrap about-grid">
+    <div>
+      <h2 id="about-h">A primary teacher by day</h2>
+      <p class="big">And a marriage celebrant in between. Mel gets a buzz out of helping people celebrate the milestones in their lives.</p>
+      <p>She calls herself a lover of all things sweet and surprising. With so many options open to couples now, she brings flexibility and creativity, so your ceremony is personalised and tailored to you.</p>
+      <ul class="tick">
+        <li>Member of The Celebrants Network</li>
+        <li>Professional indemnity and public liability insurance</li>
+      </ul>
+    </div>
+    <figure>
+      <img src="img/mel.jpg" width="319" height="486" alt="Melanie McGilchrist, smiling, in a white top" loading="lazy">
+      <figcaption>Melanie McGilchrist</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="ringsec" data-pin data-steps="6" aria-labelledby="ring-h">
+  <div class="ring-stage">
+    <h2 id="ring-h">What couples and families wrote</h2>
+    <div class="frame">
+      <div class="window">
+        <img class="on" src="img/vows-pink.jpg" width="1000" height="675" alt="The celebrant holding a microphone as a couple say their vows in a paddock" loading="lazy">
+        <img src="img/forest.jpg" width="1200" height="799" alt="A bride smiling at her groom as the celebrant reads, among tall trees" loading="lazy">
+        <img src="img/groom.jpg" width="1000" height="1247" alt="A groom grinning at his bride during the ceremony" loading="lazy">
+        <img src="img/smile.jpg" width="1080" height="1080" alt="The celebrant laughing with a couple under a draped arbour" loading="lazy">
+        <img src="img/toast.jpg" width="1000" height="1247" alt="The celebrant raising a glass with a bride and groom" loading="lazy">
+        <img src="img/exit.jpg" width="1400" height="867" alt="A bride holding her bouquet up high as she walks out married, in black and white" loading="lazy">
+      </div>
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="46" fill="none" stroke="#f2f3f1" stroke-width=".5"/>
+        <path d="M60 96 C 70 93, 80 88, 90 78" fill="none" stroke="#c9a865" stroke-width=".7" stroke-linecap="round"/>
+        <g fill="#c9a865">
+          <path class="lv" d="M64 94.5 c 1 -4 4 -6 7 -6 c -1 3 -4 5 -7 6 z"/>
+          <path class="lv" d="M68 93 c 0 4 2 6 5 7 c 0 -3 -2 -6 -5 -7 z"/>
+          <path class="lv" d="M74 90.5 c 1 -4 4 -6 7 -6 c -1 3 -4 5 -7 6 z"/>
+          <path class="lv" d="M78 88 c 0 4 2 6 5 7 c 0 -3 -2 -6 -5 -7 z"/>
+          <path class="lv" d="M83 84.5 c 1 -4 4 -6 7 -6 c -1 3 -4 5 -7 6 z"/>
+          <path class="lv" d="M87 81 c 0 4 2 6 5 6.5 c 0 -3 -2 -5.5 -5 -6.5 z"/>
+        </g>
+      </svg>
+    </div>
+    <p class="pnote">Photos from Mel's gallery, reviews from her testimonials page.</p>
+    <div class="quotes">
+      <blockquote class="qt on"><p>"A lot of our guests assumed she was a close family friend!"</p><cite>Hannah and Troy</cite></blockquote>
+      <blockquote class="qt"><p>"A warm, bubbly and friendly celebrant ... you seriously cannot go past Mel!"</p><cite>George and Sophie</cite></blockquote>
+      <blockquote class="qt"><p>"She personalised everything and was so kind and nurturing to my 7 year old step son"</p><cite>Paul and Jessie</cite></blockquote>
+      <blockquote class="qt"><p>"Heartfelt and romantic with just the right level of humor and fun."</p><cite>Sal and Ben, married 1,500 kilometres from home</cite></blockquote>
+      <blockquote class="qt"><p>"We had an amazing day and we appreciate all of the work you put in to make our day so special."</p><cite>Phil and Mel</cite></blockquote>
+      <blockquote class="qt"><p>"The nicest I have ever attended."</p><cite>Tracie, mother of the groom</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="cer" aria-labelledby="cer-h">
+  <div class="wrap">
+    <h2 id="cer-h">Ceremonies that celebrate you</h2>
+    <p class="intro">Legalities aside, a wedding ceremony can be whatever you choose it to be. An elopement, something simple and sweet, or all the bells and whistles.</p>
+    <div class="list">
+      <div class="item"><h3>Weddings</h3><p>As each couple is unique, so is each ceremony. Mel shapes yours around your dream day.</p></div>
+      <div class="item"><h3>Commitment ceremonies</h3><p>Not legally binding, and often with the same frills and fun as a wedding, without the official paperwork.</p></div>
+      <div class="item"><h3>Vow renewals</h3><p>An intimate ceremony to honour your marriage, for an anniversary or to refresh your promises.</p></div>
+      <div class="item"><h3>Naming days</h3><p><span class="off">Currently unavailable until further notice.</span> A special celebration all about your little one.</p></div>
+    </div>
+    <div class="strip-photos">
+      <img class="tall" src="img/kiss.jpg" width="1000" height="1500" alt="A couple kissing under a flower arch in the vines" loading="lazy">
+      <img src="img/creek.jpg" width="1400" height="933" alt="A bridal party standing on the grass under gum trees for a bush ceremony" loading="lazy">
+      <img src="img/dog.jpg" width="900" height="1600" alt="A wedding party at an arbour, with the couple's dog on a lead" loading="lazy" style="aspect-ratio:3/2">
+    </div>
+  </div>
+</section>
+
+<section class="enq" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap enq-grid">
+    <div>
+      <h2 id="enq-h">Tell Mel about your day</h2>
+      <p>Send your date and place, and what kind of ceremony you're dreaming of. Or call her on <a href="tel:0439015393">0439 015 393</a>.</p>
+      <p class="note">This is a preview, so the form does not send anything.</p>
+    </div>
+    <form id="enq-form" novalidate>
+      <div class="two">
+        <label>Your names<input name="names" autocomplete="name"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <div class="two">
+        <label>Ceremony<select name="kind"><option>Wedding</option><option>Elopement</option><option>Commitment ceremony</option><option>Vow renewal</option></select></label>
+        <label>Date, if you have one<input name="date" type="date"></label>
+      </div>
+      <label>Venue or town<input name="venue"></label>
+      <label>Anything else<textarea name="msg"></textarea></label>
+      <button class="btn" type="button" id="send">Send to Mel</button>
+      <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Mel. To reach her today, email <a href="mailto:melaniekatecelebrancy@gmail.com">melaniekatecelebrancy@gmail.com</a>.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="img/mk.png" width="500" height="500" alt="Melanie Kate Celebrancy monogram" loading="lazy">
+    <p><strong>A preview made by Lampbound Studio for Melanie Kate Celebrancy.</strong> Not affiliated, not live.</p>
+    <p>Words, reviews and photos are from Melanie's own website, melaniekatecelebrancy.com.au.</p>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn alt" href="tel:0439015393">Call Mel</a><a class="btn" href="#enquire">Check your date</a></div>
+
+<script>
+(function(){
+  var pins=[].slice.call(document.querySelectorAll('[data-pin]'));
+  var imgs=[].slice.call(document.querySelectorAll('.window img'));
+  var qts=[].slice.call(document.querySelectorAll('.qt'));
+  var lvs=[].slice.call(document.querySelectorAll('.lv'));
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce), (max-height:520px)');
+  var on=false,ticking=false;
+  function show(i){
+    imgs.forEach(function(m,k){m.classList.toggle('on',k===i)});
+    qts.forEach(function(q,k){q.classList.toggle('on',k===i)});
+    lvs.forEach(function(l,k){l.classList.toggle('on',k<=i)});
+  }
+  function finish(){pins.forEach(function(el){el.style.setProperty('--p','1')});show(0);qts.forEach(function(q){q.classList.add('on')});lvs.forEach(function(l){l.classList.add('on')});}
+  function update(){
+    ticking=false;
+    pins.forEach(function(el){
+      var r=el.getBoundingClientRect(),total=el.offsetHeight-window.innerHeight;
+      var p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;
+      el.style.setProperty('--p',p.toFixed(4));
+      if(el.dataset.steps){show(Math.min(qts.length-1,Math.floor(p*qts.length*0.999)));}
+    });
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
+  function start(){if(on)return;on=true;addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);update();}
+  function stop(){on=false;removeEventListener('scroll',onScroll);removeEventListener('resize',onScroll);finish();}
+  if(mq.matches)finish();else start();
+  if(mq.addEventListener)mq.addEventListener('change',function(){mq.matches?stop():start()});
+  document.getElementById('send').addEventListener('click',function(){var d=document.getElementById('done');d.classList.add('show');d.focus();});
+})();
+</script>
+</body>
+</html>

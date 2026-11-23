@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Zoe Wieringa Celebrant: a website preview</title>
+<meta name="description" content="A website idea for Zoe Wieringa, marriage celebrant for simple, relaxed ceremonies. A preview by Lampbound Studio, not her official site.">
+<meta property="og:title" content="Zoe Wieringa Celebrant">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Zoe Wieringa Celebrant. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/zoewieringa/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/zoewieringa/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%2326261d'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='17' fill='%23d6a032' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --olive:#26261d; --olive-2:#323226; --white:#efeeea; --gold:#d6a032; --gold-deep:#875f12; --bronze:#625b48; --mute:#bdb7a6; --line:#d3d1c9; --ink:#26261d;
+  --display:"Young Serif", Georgia, serif; --text:"Figtree", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--white);color:var(--ink);font:17px/1.6 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid #111;outline-offset:0;box-shadow:0 0 0 6px #fff}
+.skip{position:absolute;left:-999px;top:0;background:var(--olive);color:var(--white);padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.strip{background:var(--olive);color:#d7d3c7;font-size:13.5px;line-height:1.4;padding:9px 16px;text-align:center}
+.strip strong{color:#fff}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.06;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:24px;background:var(--gold);color:var(--olive);text-decoration:none;border:0;font:800 16px/1 var(--text);cursor:pointer}
+.btn:hover{background:#e2b04a}
+.btn.alt{background:var(--white);color:var(--olive)}
+
+/* hero: photo slow, name, giddy note fast */
+.hero{position:relative;height:160svh;background:var(--olive);color:#fff}
+.hero-stage{position:sticky;top:0;height:100svh;overflow:hidden;display:grid}
+.h-photo{position:absolute;inset:0;transform:translate3d(0,calc(var(--p,0) * -4%),0) scale(calc(1.12 - var(--p,0) * .1))}
+.h-photo img{width:100%;height:100%;object-fit:cover;object-position:58% 30%}
+.h-shade{position:absolute;inset:auto 0 0 0;height:62%;background:linear-gradient(to top,rgba(38,38,29,.92) 30%,rgba(38,38,29,0))}
+.h-copy{position:relative;align-self:end;padding:0 20px 120px;transform:translate3d(0,calc(var(--p,0) * -12svh),0)}
+.hero h1{font-size:clamp(52px,14vw,128px)}
+.h-copy p{font-size:18px;max-width:30ch;margin:14px 0 0;color:#ebe8df}
+.note{position:absolute;right:16px;top:18svh;max-width:190px;background:var(--white);color:var(--olive);padding:14px 16px;border-radius:18px 18px 18px 4px;font-family:var(--display);font-size:19px;line-height:1.2;box-shadow:0 8px 20px rgba(0,0,0,.28);transform:translate3d(0,calc(var(--p,0) * -40svh),0) rotate(calc(-4deg + var(--p,0) * 8deg))}
+.note small{display:block;font:600 13px/1.3 var(--text);color:var(--bronze);margin-top:6px}
+@media (min-width:860px){.h-copy{max-width:1100px;width:100%;margin:0 auto;padding:0 20px 14svh}.note{right:10vw;top:22svh;max-width:240px;font-size:22px}}
+
+/* about */
+.about{padding:88px 0 70px}
+.about-grid{display:grid;gap:32px}
+.about h2{font-size:clamp(34px,7.4vw,60px);max-width:15ch}
+.about .big{font-size:21px;line-height:1.45;max-width:34ch;margin-top:22px}
+.about figure{margin:0;max-width:340px}
+.about figcaption{font-size:14px;color:var(--bronze);margin-top:8px}
+@media (min-width:860px){.about-grid{grid-template-columns:1.2fr .8fr;align-items:center}}
+
+/* the clock */
+.clock{position:relative;height:560svh;background:var(--olive);color:var(--white)}
+.clock-stage{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;grid-template-rows:auto 1fr auto;padding:22px 20px 92px}
+.clock h2{font-size:clamp(26px,6vw,44px);max-width:18ch}
+.dial{align-self:center;justify-self:center;width:min(70vw,40svh,420px);aspect-ratio:1}
+.dial svg{width:100%;height:100%;overflow:visible}
+.face{fill:#323226;stroke:#4a4a3a;stroke-width:2}
+.ticks line{stroke:#8c8672;stroke-width:1.6}
+.ticks line.maj{stroke:var(--white);stroke-width:2.6}
+.nums text{fill:#d7d3c7;font:600 13px var(--text);text-anchor:middle}
+.legal{fill:none;stroke:var(--gold);stroke-width:14;opacity:0;transition:opacity .5s ease}
+.legal.on{opacity:1}
+.hand{transform:rotate(calc(var(--p,0) * 360deg));transition:none}
+.hand line{stroke:var(--gold);stroke-width:4;stroke-linecap:round}
+.hub{fill:var(--gold)}
+.mins{fill:var(--white);font:400 22px var(--display);text-anchor:middle}
+.caps{position:relative;display:grid;min-height:132px}
+.cap{grid-area:1 / 1;opacity:0;transform:translate3d(0,12px,0);transition:opacity .35s ease,transform .35s ease}
+.cap.on{opacity:1;transform:none}
+.cap h3{font-size:clamp(24px,5.6vw,36px);color:var(--gold)}
+.cap p{margin:6px 0 0;max-width:40ch;color:#dcd8cc;font-size:16.5px}
+@media (min-width:860px){
+  .clock-stage{grid-template-columns:1fr 1fr;grid-template-rows:auto 1fr;column-gap:60px;max-width:1100px;margin:0 auto;width:100%;padding:46px 20px 60px}
+  .clock h2{grid-column:1 / -1}
+  .dial{grid-row:2;width:min(38vw,58svh,480px)}
+  .caps{grid-row:2;align-self:center;min-height:220px}
+  .cap p{font-size:18px}
+}
+
+/* packages */
+.pk{padding:90px 0}
+.pk h2{font-size:clamp(34px,7vw,56px);margin-bottom:10px}
+.pk .intro{max-width:46ch;margin-bottom:32px}
+.pk-grid{display:grid;gap:18px}
+.main-pk{background:#fff;border:1px solid var(--line);padding:24px;border-radius:6px}
+.main-pk h3{font-size:clamp(28px,6vw,40px)}
+.main-pk .sub{color:var(--gold-deep);font-weight:800;margin:6px 0 14px}
+.main-pk ul{margin:0;padding-left:1.1em}
+.main-pk li{padding:3px 0}
+.side-pk{display:grid;gap:18px}
+.side-pk div{border-top:1.5px solid var(--olive);padding-top:16px}
+.side-pk h3{font-size:26px;margin-bottom:6px}
+.side-pk p{margin:0}
+@media (min-width:860px){.pk-grid{grid-template-columns:1.3fr .7fr;gap:44px}}
+.pics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:44px}
+.pics img{width:100%;height:100%;object-fit:cover;border-radius:4px}
+.pics .wide{grid-column:1 / -1;order:-1}
+@media (min-width:860px){.pics{grid-template-columns:1fr 1.5fr 1fr}.pics .wide{grid-column:auto;order:0}}
+
+/* words */
+.words{background:var(--olive-2);color:var(--white);padding:90px 0}
+.words h2{font-size:clamp(32px,6.5vw,52px);margin-bottom:34px}
+.ws{display:grid;gap:30px}
+.ws blockquote{margin:0}
+.ws p{font-family:var(--display);font-size:clamp(22px,4.6vw,30px);line-height:1.25;margin:0 0 8px}
+.ws cite{font-style:normal;color:var(--gold);font-size:15px}
+@media (min-width:860px){.ws{grid-template-columns:1fr 1fr;column-gap:56px}.ws blockquote:nth-child(2){margin-top:70px}}
+
+/* faq */
+.faq{padding:88px 0}
+.faq h2{font-size:clamp(32px,6.5vw,52px);margin-bottom:24px}
+.faq dl{margin:0;max-width:760px}
+.faq dt{font-family:var(--display);font-size:22px;padding-top:18px;border-top:1px solid var(--line)}
+.faq dd{margin:6px 0 18px}
+
+/* enquire */
+.enq{background:#fff;padding:88px 0 120px;border-top:1px solid var(--line)}
+.enq-grid{display:grid;gap:34px}
+.enq h2{font-size:clamp(34px,7vw,56px);margin-bottom:14px}
+form{display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:800;font-size:15px}
+select,input,textarea{font:400 17px/1.4 var(--text);padding:12px 14px;border:1.5px solid #77735f;border-radius:6px;background:#fff;color:var(--ink);min-height:48px;width:100%}
+textarea{min-height:120px;resize:vertical}
+.two{display:grid;gap:16px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.pnote{font-size:14px;color:var(--bronze);margin:0}
+.done{display:none;padding:16px;border:1.5px solid var(--gold-deep);border-radius:6px;background:#f8f0de}
+.done.show{display:block}
+@media (min-width:860px){.enq-grid{grid-template-columns:.8fr 1.2fr}}
+
+footer{background:var(--olive);color:#c8c3b4;padding:40px 0 110px;font-size:14.5px}
+footer strong{color:#fff}
+
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px}
+.bar .btn{flex:1;box-shadow:0 6px 16px rgba(0,0,0,.28)}
+@media (min-width:860px){.bar{left:auto;right:24px;bottom:24px}.bar .btn{flex:none}}
+
+@media (prefers-reduced-motion:reduce),(max-height:520px){
+  .hero{height:auto}.hero-stage{position:relative;height:100svh}
+  .h-photo,.h-copy,.note{transform:none!important}
+  .clock{height:auto}.clock-stage{position:relative;height:auto;grid-template-rows:auto}
+  .dial{width:min(70vw,380px);margin:24px auto}
+  .legal{opacity:1;transition:none}
+  .caps{min-height:0;display:block}.cap{position:static;opacity:1;transform:none;margin-bottom:22px;transition:none}
+  .dial,.caps{grid-row:auto}
+}
+
+@media (max-height:520px){.hero-stage{height:auto!important;min-height:100svh;overflow:hidden}.h-copy{padding-top:24px}.note{display:none}}
+</style>
+<noscript><style>
+  .hero{height:auto}.hero-stage{position:relative;height:100svh}
+  .h-photo,.h-copy,.note{transform:none!important}
+  .clock{height:auto}.clock-stage{position:relative;height:auto;grid-template-rows:auto}
+  .dial{width:min(70vw,380px);margin:24px auto}
+  .legal{opacity:1}
+  .caps{min-height:0;display:block}.cap{position:static;opacity:1;transform:none;margin-bottom:22px}
+  .dial,.caps{grid-row:auto}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip">A website idea made by <strong>Lampbound Studio</strong> for Zoe Wieringa Celebrant. Not her official site.</div>
+
+<main id="main">
+<section class="hero" data-pin aria-label="Introduction">
+  <div class="hero-stage">
+    <div class="h-photo"><img src="img/laugh.jpg" width="1600" height="1067" alt="The celebrant laughing with a bride and groom during their lakeside ceremony" fetchpriority="high"></div>
+    <div class="h-shade"></div>
+    <p class="note" aria-hidden="true">"It makes me slightly giddy."<small>Zoe, on the warmth around a wedding</small></p>
+    <div class="h-copy">
+      <h1>Zoe Wieringa</h1>
+      <p>Marriage celebrant for simple, relaxed ceremonies, with a professional but bubbly touch.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" aria-labelledby="about-h">
+  <div class="wrap about-grid">
+    <div>
+      <h2 id="about-h">Like someone you already know</h2>
+      <p class="big">"The happiness and warmth that surrounds a wedding ceremony is like nothing else, it makes me slightly giddy."</p>
+      <p>Zoe is a Commonwealth registered marriage celebrant. She gets to know you both before the day, so the ceremony reflects your personalities, your relationship and the little things that make your story yours. Guests often assume you've been friends for years.</p>
+      <p>On the day she brings a calm, reassuring energy, so you can relax and soak in every moment.</p>
+    </div>
+    <figure>
+      <img src="img/zoe.jpg" width="800" height="1200" alt="Zoe Wieringa smiling, in black and white" loading="lazy">
+      <figcaption>Zoe Wieringa</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="clock" data-pin data-steps="6" aria-labelledby="clock-h">
+  <div class="clock-stage">
+    <h2 id="clock-h">Thirty minutes, nearly all of it yours</h2>
+    <div class="dial">
+      <svg viewBox="-120 -120 240 240" role="img" aria-label="A 30 minute clock face. About 5 to 7 minutes of a ceremony is legal wording; the rest is personalised.">
+        <circle class="face" r="104"/>
+        <path class="legal" d="M -51.7 71.2 A 88 88 0 0 1 -83.7 -27.2"/>
+        <g class="ticks"><line x1="0.0" y1="-100.0" x2="0.0" y2="-84.0" class="maj"/><line x1="20.8" y1="-97.8" x2="19.1" y2="-90.0"/><line x1="40.7" y1="-91.4" x2="37.4" y2="-84.0"/><line x1="58.8" y1="-80.9" x2="54.1" y2="-74.4"/><line x1="74.3" y1="-66.9" x2="68.4" y2="-61.6"/><line x1="86.6" y1="-50.0" x2="72.7" y2="-42.0" class="maj"/><line x1="95.1" y1="-30.9" x2="87.5" y2="-28.4"/><line x1="99.5" y1="-10.5" x2="91.5" y2="-9.6"/><line x1="99.5" y1="10.5" x2="91.5" y2="9.6"/><line x1="95.1" y1="30.9" x2="87.5" y2="28.4"/><line x1="86.6" y1="50.0" x2="72.7" y2="42.0" class="maj"/><line x1="74.3" y1="66.9" x2="68.4" y2="61.6"/><line x1="58.8" y1="80.9" x2="54.1" y2="74.4"/><line x1="40.7" y1="91.4" x2="37.4" y2="84.0"/><line x1="20.8" y1="97.8" x2="19.1" y2="90.0"/><line x1="0.0" y1="100.0" x2="0.0" y2="84.0" class="maj"/><line x1="-20.8" y1="97.8" x2="-19.1" y2="90.0"/><line x1="-40.7" y1="91.4" x2="-37.4" y2="84.0"/><line x1="-58.8" y1="80.9" x2="-54.1" y2="74.4"/><line x1="-74.3" y1="66.9" x2="-68.4" y2="61.6"/><line x1="-86.6" y1="50.0" x2="-72.7" y2="42.0" class="maj"/><line x1="-95.1" y1="30.9" x2="-87.5" y2="28.4"/><line x1="-99.5" y1="10.5" x2="-91.5" y2="9.6"/><line x1="-99.5" y1="-10.5" x2="-91.5" y2="-9.6"/><line x1="-95.1" y1="-30.9" x2="-87.5" y2="-28.4"/><line x1="-86.6" y1="-50.0" x2="-72.7" y2="-42.0" class="maj"/><line x1="-74.3" y1="-66.9" x2="-68.4" y2="-61.6"/><line x1="-58.8" y1="-80.9" x2="-54.1" y2="-74.4"/><line x1="-40.7" y1="-91.4" x2="-37.4" y2="-84.0"/><line x1="-20.8" y1="-97.8" x2="-19.1" y2="-90.0"/></g>
+        <g class="nums"><text x="0" y="-60">0</text><text x="60.6" y="-30">5</text><text x="60.6" y="40">10</text><text x="0" y="68">15</text><text x="-60.6" y="40">20</text><text x="-60.6" y="-30">25</text></g>
+        <g class="hand" id="hand"><line x1="0" y1="10" x2="0" y2="-80"/></g>
+        <circle class="hub" r="6"/>
+      </svg>
+    </div>
+    <div class="caps">
+      <div class="cap on"><h3>Before the aisle</h3><p>"Zoe came to see us both prior to the ceremony. She listened, grounded us, and passed on her signature calm." Grace and Hayden</p></div>
+      <div class="cap"><h3>Your story</h3><p>A completely personalised ceremony, written from your answers to a detailed questionnaire and from getting to know you.</p></div>
+      <div class="cap"><h3>Your vows</h3><p>Zoe highly recommends personal vows. She has a vow writing guide, and will always vibe check with you beforehand.</p></div>
+      <div class="cap"><h3>The legal part</h3><p>Around 5 to 7 minutes. Everything else is personalised: readings, poems, a cultural tradition, or short and sharp.</p></div>
+      <div class="cap"><h3>Tears, then laughter, then applause</h3><p>"The holy trinity of wedding storytelling." Grace and Hayden</p></div>
+      <div class="cap"><h3>One wedding a day</h3><p>Zoe only ever does one wedding a day, so you get all her attention. If things run late, there's zero stress.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pk" aria-labelledby="pk-h">
+  <div class="wrap">
+    <h2 id="pk-h">Packages</h2>
+    <p class="intro">Ask Zoe for a quote for your date and location.</p>
+    <div class="pk-grid">
+      <div class="main-pk">
+        <h3>The Full Shebang</h3>
+        <p class="sub">Your personal right hand girl through the whole wedding process</p>
+        <ul>
+          <li>As many video calls as you need, and an in person catch up</li>
+          <li>Liaising with your vendors and coordinating the ceremony logistics</li>
+          <li>Organising the wedding party and guests for the ceremony</li>
+          <li>All legal paperwork prepared and lodged</li>
+          <li>A ceremony written from your questionnaire answers and getting to know you</li>
+          <li>Help writing your vows</li>
+          <li>A professional PA system</li>
+        </ul>
+      </div>
+      <div class="side-pk">
+        <div><h3>Legals Only</h3><p>The registry style wedding, with a celebrant, in a location you choose. A popular choice before a destination wedding.</p></div>
+        <div><h3>Celebrant and MC</h3><p>Zoe can also MC your reception, from the timeline and speeches to the cake cutting and first dance, so the ceremony flows straight into the party.</p></div>
+      </div>
+    </div>
+    <div class="pics">
+      <img src="img/arch.jpg" width="1100" height="1649" alt="A couple at a white floral arch by a lake, with mountains behind" loading="lazy">
+      <img class="wide" src="img/vows.jpg" width="1600" height="1067" alt="The celebrant holding the microphone as a groom says his vows" loading="lazy">
+      <img src="img/table.jpg" width="1000" height="1452" alt="Two guests laughing at the signing table as the couple look on" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="words" aria-labelledby="words-h">
+  <div class="wrap">
+    <h2 id="words-h">What couples wrote</h2>
+    <div class="ws">
+      <blockquote><p>"She legit taught us how to wedding."</p><cite>Christine and Sean</cite></blockquote>
+      <blockquote><p>"Even making sure we had champagne after the ceremony so Liam could pop a couple of bottles (albeit not that well)."</p><cite>Izzy and Liam</cite></blockquote>
+      <blockquote><p>"She was able to include every family member we wanted in our ceremony."</p><cite>Kirsty and Michael</cite></blockquote>
+      <blockquote><p>"It felt like she'd known us for a lifetime!"</p><cite>Pipp and Nate</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <h2 id="faq-h">Quick answers</h2>
+    <dl>
+      <dt>Do you travel?</dt><dd>Yes, 100%. Zoe loves travelling to different venues. Travel or accommodation costs may apply, depending on where.</dd>
+      <dt>Do you bring a PA?</dt><dd>Yes, a high quality Bose PA system that doesn't need power.</dd>
+      <dt>How long is the ceremony?</dt><dd>Zoe recommends allowing 30 minutes.</dd>
+      <dt>What if you're unwell on the day?</dt><dd>Everything is written and organised, ready for another celebrant to take over.</dd>
+    </dl>
+  </div>
+</section>
+
+<section class="enq" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap enq-grid">
+    <div>
+      <h2 id="enq-h">Let's chat</h2>
+      <p>Tell Zoe your date and wedding location and she'll be in touch. Or call her on <a href="tel:0421828040">0421 828 040</a>.</p>
+      <p class="pnote">This is a preview, so the form does not send anything.</p>
+    </div>
+    <form id="enq-form" novalidate>
+      <div class="two">
+        <label>Your names<input name="names" autocomplete="name"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <div class="two">
+        <label>Wedding date<input name="date" type="date"></label>
+        <label>Wedding location<input name="venue"></label>
+      </div>
+      <label>Package you're interested in<select name="pk"><option>The Full Shebang</option><option>Legals Only</option><option>Celebrant and MC</option><option>Not sure yet</option></select></label>
+      <label>Anything else<textarea name="msg"></textarea></label>
+      <button class="btn" type="button" id="send">Send to Zoe</button>
+      <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Zoe. To reach her today, email <a href="mailto:hello@zoewieringacelebrant.com.au">hello@zoewieringacelebrant.com.au</a>.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>A preview made by Lampbound Studio for Zoe Wieringa Celebrant.</strong> Not affiliated, not live.</p>
+    <p>Words, reviews and photos are from Zoe's own website. Photography as credited there: Alex Marks, Jason Corroto, Lost in Love Photography, Maple and June, Awkwrd Media, Chamore Creations, Acacia and Grace Photography, James Day Weddings, Oak Folk Photography and Moments Photography.</p>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn alt" href="tel:0421828040">Call Zoe</a><a class="btn" href="#enquire">Check your date</a></div>
+
+<script>
+(function(){
+  var pins=[].slice.call(document.querySelectorAll('[data-pin]'));
+  var caps=[].slice.call(document.querySelectorAll('.cap'));
+  var legal=document.querySelector('.legal');
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce), (max-height:520px)');
+  var on=false,ticking=false;
+  function show(i){caps.forEach(function(c,k){c.classList.toggle('on',k===i)});legal.classList.toggle('on',i>=3);}
+  function finish(){pins.forEach(function(el){el.style.setProperty('--p','1')});caps.forEach(function(c){c.classList.add('on')});legal.classList.add('on');}
+  function update(){
+    ticking=false;
+    pins.forEach(function(el){
+      var r=el.getBoundingClientRect(),total=el.offsetHeight-window.innerHeight;
+      var p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;
+      el.style.setProperty('--p',p.toFixed(4));
+      if(el.dataset.steps){show(Math.min(caps.length-1,Math.floor(p*caps.length*0.999)));}
+    });
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
+  function start(){if(on)return;on=true;addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);update();}
+  function stop(){on=false;removeEventListener('scroll',onScroll);removeEventListener('resize',onScroll);finish();}
+  if(mq.matches)finish();else start();
+  if(mq.addEventListener)mq.addEventListener('change',function(){mq.matches?stop():start()});
+  document.getElementById('send').addEventListener('click',function(){var d=document.getElementById('done');d.classList.add('show');d.focus();});
+})();
+</script>
+</body>
+</html>

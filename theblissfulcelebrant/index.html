@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>The Blissful Celebrant, Shannea Morris: a website preview</title>
+<meta name="description" content="A website idea for Shannea Morris, The Blissful Celebrant, marriage celebrant in Glenreagh for Coffs Harbour, the Clarence Valley and Dorrigo. A preview by Lampbound Studio, not her official site.">
+<meta property="og:title" content="The Blissful Celebrant, Shannea Morris">
+<meta property="og:description" content="A website idea made by Lampbound Studio for The Blissful Celebrant. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/theblissfulcelebrant/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/theblissfulcelebrant/">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500;700&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#1e1e1e; --black-2:#262424; --white:#edefeb; --rose:#8c2536; --rose-deep:#472128; --rose-lit:#e0a0aa; --grey:#b9bcb7; --ink:#1e1e1e;
+  --display:"Grenze Gotisch", Georgia, serif; --text:"Work Sans", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--black);color:var(--white);font:17px/1.6 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid #111;outline-offset:0;box-shadow:0 0 0 6px #fff}
+.skip{position:absolute;left:-999px;top:0;background:var(--white);color:var(--black);padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.strip{background:#111;color:#c9ccc7;font-size:13.5px;line-height:1.4;padding:9px 16px;text-align:center}
+.strip strong{color:#fff}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:2px;background:var(--rose);color:#fff;text-decoration:none;border:0;font:700 16px/1 var(--text);cursor:pointer}
+.btn:hover{background:#a12d40}
+.btn.alt{background:var(--white);color:var(--black)}
+
+/* hero: logo plane, name, loose petals */
+.hero{position:relative;height:160svh}
+.hero-stage{position:sticky;top:0;height:100svh;overflow:hidden;display:grid}
+.h-logo{position:absolute;left:50%;top:4svh;width:min(92vw,58svh,560px);margin-left:calc(min(92vw,58svh,560px) / -2);transform:translate3d(0,calc(var(--p,0) * 8svh),0) scale(calc(1 + var(--p,0) * .12))}
+.h-copy{position:relative;align-self:end;padding:0 20px 112px;transform:translate3d(0,calc(var(--p,0) * -8svh),0)}
+.hero h1{font-size:clamp(48px,13vw,120px);letter-spacing:.01em}
+.h-copy .who{font-size:17px;margin:12px 0 0;color:var(--grey)}
+.loose{position:absolute;width:44px;fill:var(--rose)}
+.loose.a{right:12%;top:52svh;transform:translate3d(0,calc(var(--p,0) * -70svh),0) rotate(calc(20deg + var(--p,0) * 160deg))}
+.loose.b{left:8%;top:68svh;width:30px;transform:translate3d(0,calc(var(--p,0) * -95svh),0) rotate(calc(-30deg - var(--p,0) * 120deg))}
+.loose.c{right:30%;top:88svh;width:24px;fill:#6d1d2b;transform:translate3d(0,calc(var(--p,0) * -120svh),0) rotate(calc(60deg + var(--p,0) * 200deg))}
+@media (min-width:860px){
+  .h-logo{left:auto;right:6vw;margin-left:0;top:8svh;width:min(46vw,80svh,620px)}
+  .h-copy{max-width:1060px;width:100%;margin:0 auto;padding:0 20px 16svh}
+  .hero h1{max-width:8.5ch}
+}
+
+/* intro */
+.intro{background:var(--white);color:var(--ink);padding:88px 0 72px}
+.intro h2{font-size:clamp(40px,9vw,76px);max-width:12ch}
+.intro-grid{display:grid;gap:30px;margin-top:26px}
+.intro .big{font-size:21px;line-height:1.45;max-width:32ch}
+.areas{list-style:none;margin:0;padding:0}
+.areas li{font-family:var(--display);font-size:clamp(28px,6vw,40px);padding:10px 0;border-top:1px solid #c3c6c0}
+.areas li:last-child{border-bottom:1px solid #c3c6c0}
+.areas small{display:block;font:500 14px/1.3 var(--text);color:#5a5d58;margin-top:2px}
+@media (min-width:860px){.intro-grid{grid-template-columns:1.1fr .9fr;column-gap:60px}}
+
+/* the rose */
+.rose{position:relative;height:500svh;background:var(--black)}
+.rose-stage{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;grid-template-rows:auto 1fr auto;padding:22px 20px 92px}
+.rose h2{font-size:clamp(32px,7vw,52px);max-width:16ch}
+.bloom{align-self:center;justify-self:center;height:min(48svh,460px);aspect-ratio:300/420}
+.bloom svg{width:100%;height:100%;overflow:visible}
+.pt{transform-box:fill-box;transform-origin:50% 100%;opacity:0;transform:scale(.25);transition:opacity .5s ease,transform .7s ease}
+.s1 .pt.in1,.s2 .pt.in1,.s3 .pt.in1,.s4 .pt.in1{opacity:1;transform:none}
+.s2 .pt.out,.s3 .pt.out,.s4 .pt.out{opacity:1;transform:none}
+.fall{transform-box:fill-box;transform-origin:50% 100%;transition:transform 1.1s ease,opacity 1.1s ease}
+.s3 .pt.fall,.s4 .pt.fall{transform:translate3d(-40px,190px,0) rotate(-70deg);opacity:.85}
+.lf{transform-box:fill-box;transform-origin:0 50%;transform:scale(.2);opacity:0;transition:transform .6s ease,opacity .6s ease}
+.s1 .lf,.s2 .lf,.s3 .lf,.s4 .lf{transform:none;opacity:1}
+.caps{position:relative;display:grid;min-height:128px}
+.cap{grid-area:1 / 1;opacity:0;transform:translate3d(0,12px,0);transition:opacity .35s ease,transform .35s ease}
+.cap.on{opacity:1;transform:none}
+.cap h3{font-size:clamp(30px,7vw,44px);color:var(--rose-lit)}
+.cap p{margin:6px 0 0;max-width:40ch;color:#d4d7d2;font-size:16.5px}
+@media (min-width:860px){
+  .rose-stage{grid-template-columns:1fr 1fr;grid-template-rows:auto 1fr;column-gap:56px;max-width:1060px;margin:0 auto;width:100%;padding:46px 20px 60px}
+  .rose h2{grid-column:1 / -1}
+  .bloom{grid-row:2;height:min(66svh,560px)}
+  .caps{grid-row:2;align-self:center;min-height:200px}
+  .cap p{font-size:18px}
+}
+
+/* circle line */
+.circle{background:var(--white);color:var(--ink);padding:96px 0 84px}
+.circle blockquote{margin:0;font-family:var(--display);font-size:clamp(38px,8.6vw,74px);line-height:1.02;max-width:15ch}
+.circle p{max-width:46ch;margin-top:26px}
+
+/* enquire */
+.enq{background:var(--black-2);padding:88px 0 120px}
+.enq-grid{display:grid;gap:34px}
+.enq h2{font-size:clamp(40px,8vw,64px);margin-bottom:14px}
+.enq .logo{width:120px;margin-bottom:20px}
+form{display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:700;font-size:15px}
+select,input,textarea{font:400 17px/1.4 var(--text);padding:12px 14px;border:1.5px solid #8d908b;border-radius:2px;background:#fff;color:var(--ink);min-height:48px;width:100%}
+textarea{min-height:120px;resize:vertical}
+.two{display:grid;gap:16px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.note{font-size:14px;color:#b9bcb7;margin:0}
+.done{display:none;padding:16px;border:1.5px solid var(--rose-lit);border-radius:2px;background:#3a2328}
+.done.show{display:block}
+@media (min-width:860px){.enq-grid{grid-template-columns:.85fr 1.15fr}}
+
+footer{background:#111;color:#b4b7b2;padding:40px 0 110px;font-size:14.5px}
+footer strong{color:#fff}
+
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px}
+.bar .btn{flex:1;box-shadow:0 6px 16px rgba(0,0,0,.4)}
+@media (min-width:860px){.bar{left:auto;right:24px;bottom:24px}.bar .btn{flex:none}}
+
+@media (prefers-reduced-motion:reduce),(max-height:520px){
+  .hero{height:auto}.hero-stage{position:relative;height:100svh}
+  .h-logo,.h-copy,.loose{transform:none!important}
+  .rose{height:auto}.rose-stage{position:relative;height:auto;grid-template-rows:auto}
+  .bloom{height:min(60svh,460px);margin:20px auto}
+  .pt,.lf,.fall{opacity:1!important;transform:none!important;transition:none}
+  .caps{min-height:0;display:block}.cap{position:static;opacity:1;transform:none;margin-bottom:20px;transition:none}
+  .bloom,.caps{grid-row:auto}
+}
+
+@media (max-height:520px){.hero-stage{height:auto!important;min-height:100svh;overflow:hidden}.h-copy{padding-top:24px}.h-logo{position:relative;left:auto;top:auto;margin:16px auto 0;width:36svh}.hero-stage{display:block}.h-copy{padding-bottom:110px}}
+</style>
+<noscript><style>
+  .hero{height:auto}.hero-stage{position:relative;height:100svh}
+  .h-logo,.h-copy,.loose{transform:none!important}
+  .rose{height:auto}.rose-stage{position:relative;height:auto;grid-template-rows:auto}
+  .bloom{height:min(60svh,460px);margin:20px auto}
+  .pt,.lf,.fall{opacity:1!important;transform:none!important}
+  .caps{min-height:0;display:block}.cap{position:static;opacity:1;transform:none;margin-bottom:20px}
+  .bloom,.caps{grid-row:auto}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip">A website idea made by <strong>Lampbound Studio</strong> for The Blissful Celebrant. Not her official site.</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="petal" d="M0 0 C -52 -4 -72 -70 -26 -104 C -10 -114 10 -114 26 -104 C 72 -70 52 -4 0 0 Z"/>
+    <path id="small" d="M0 0 C -30 -4 -40 -44 -14 -64 C -5 -70 5 -70 14 -64 C 40 -44 30 -4 0 0 Z"/>
+  </defs>
+</svg>
+
+<main id="main">
+<section class="hero" data-pin aria-label="Introduction">
+  <div class="hero-stage">
+    <img class="h-logo" src="img/logo.png" width="800" height="800" alt="The Blissful Celebrant logo: a white B with a red rose" fetchpriority="high">
+    <svg class="loose a" viewBox="-60 -110 120 112" aria-hidden="true"><use href="#petal"/></svg>
+    <svg class="loose b" viewBox="-60 -110 120 112" aria-hidden="true"><use href="#petal"/></svg>
+    <svg class="loose c" viewBox="-60 -110 120 112" aria-hidden="true"><use href="#petal"/></svg>
+    <div class="h-copy">
+      <h1>The Blissful Celebrant</h1>
+      <p class="who">Shannea Morris, marriage celebrant, Glenreagh NSW</p>
+    </div>
+  </div>
+</section>
+
+<section class="intro" aria-labelledby="intro-h">
+  <div class="wrap">
+    <h2 id="intro-h">From a small country town</h2>
+    <div class="intro-grid">
+      <div>
+        <p class="big">Shannea is a registered marriage celebrant in Glenreagh, a small country town on the mid-north coast.</p>
+        <p>She is also a holistic therapist and a mother of three. Her calling is to bring family and friends together for life's most important ceremonies and rituals, each one personalised for you.</p>
+      </div>
+      <ul class="areas" aria-label="Areas she travels to">
+        <li>Coffs Harbour</li>
+        <li>Clarence Valley</li>
+        <li>Dorrigo<small>and the surrounding areas</small></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="rose" data-pin data-steps="5" aria-labelledby="rose-h">
+  <div class="rose-stage">
+    <h2 id="rose-h">With you for your full life's circle</h2>
+    <div class="bloom" id="bloom">
+      <svg viewBox="0 0 300 420" role="img" aria-label="A red rose drawn after Shannea's logo, opening from a bud to full bloom">
+        <g transform="translate(150 170)">
+          <path d="M0 40 C 8 110, -14 170, 4 250" fill="none" stroke="#5d6b57" stroke-width="5" stroke-linecap="round"/>
+          <path class="lf" d="M2 130 C 40 104, 84 112, 98 132 C 70 150, 30 150, 2 130 Z" fill="#5d6b57"/>
+          <path class="lf" d="M-2 190 C -36 164, -78 170, -92 190 C -64 210, -26 208, -2 190 Z" fill="#4c5947" style="transform-origin:100% 50%"/>
+          <g fill="#6d1d2b">
+            <g transform="rotate(36)"><use class="pt out" href="#petal"/></g>
+            <g transform="rotate(108)"><use class="pt out" href="#petal"/></g>
+            <g transform="rotate(180)"><use class="pt out" href="#petal"/></g>
+            <g transform="rotate(252)"><use class="pt out" href="#petal"/></g>
+          </g>
+          <g transform="rotate(324)"><use class="fall pt out" href="#petal" fill="#6d1d2b"/></g>
+          <g fill="#8c2536">
+            <g transform="rotate(0)"><use class="pt in1" href="#small"/></g>
+            <g transform="rotate(72)"><use class="pt in1" href="#small"/></g>
+            <g transform="rotate(144)"><use class="pt in1" href="#small"/></g>
+            <g transform="rotate(216)"><use class="pt in1" href="#small"/></g>
+            <g transform="rotate(288)"><use class="pt in1" href="#small"/></g>
+          </g>
+          <path d="M0 -34 C 24 -32 32 -6 20 16 C 10 28 -10 28 -20 16 C -32 -6 -24 -32 0 -34 Z" fill="#a12d40"/>
+          <path d="M-12 -8 C -6 -22 14 -20 12 -4 C 10 8 -4 8 -4 -2" fill="none" stroke="#472128" stroke-width="3" stroke-linecap="round"/>
+        </g>
+      </svg>
+    </div>
+    <div class="caps">
+      <div class="cap on"><h3>Mothers blessings</h3><p>The start of the circle, before a baby arrives.</p></div>
+      <div class="cap"><h3>Naming ceremonies</h3><p>Welcoming a new child into the family.</p></div>
+      <div class="cap"><h3>Weddings and vow renewals</h3><p>Personalised ceremonies for Coffs Harbour, the Clarence Valley and Dorrigo, written for the two of you.</p></div>
+      <div class="cap"><h3>Funerals</h3><p>Bringing family and friends together to say goodbye.</p></div>
+      <div class="cap"><h3>And all the in-between</h3><p>"From conception to the afterlife", ceremonies and rituals crafted for you.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="circle" aria-labelledby="circle-h">
+  <div class="wrap">
+    <h2 id="circle-h" class="vh">In Shannea's words</h2>
+    <blockquote>"Life forms this beautiful imperfect circle"</blockquote>
+    <p>Life, death and all the in-between. Knowing that gave Shannea her calling, and the name for her work.</p>
+  </div>
+</section>
+
+<section class="enq" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap enq-grid">
+    <div>
+      <img class="logo" src="img/logo.png" width="800" height="800" alt="" loading="lazy">
+      <h2 id="enq-h">Tell Shannea about your ceremony</h2>
+      <p>Send your date and where you'd like to hold it. Or call her on <a href="tel:0421831143">0421 831 143</a>.</p>
+      <p class="note">This is a preview, so the form does not send anything.</p>
+    </div>
+    <form id="enq-form" novalidate>
+      <div class="two">
+        <label>Your name<input name="names" autocomplete="name"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <div class="two">
+        <label>The ceremony
+          <select name="kind"><option>Wedding</option><option>Vow renewal</option><option>Something else</option></select>
+        </label>
+        <label>Date, if you have one<input name="date" type="date"></label>
+      </div>
+      <label>Where?<input name="venue"></label>
+      <label>Anything else<textarea name="msg"></textarea></label>
+      <button class="btn" type="button" id="send">Send to Shannea</button>
+      <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Shannea. To reach her today, email <a href="mailto:blissfulcircleceremonies@gmail.com">blissfulcircleceremonies@gmail.com</a>.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>A preview made by Lampbound Studio for The Blissful Celebrant.</strong> Not affiliated, not live.</p>
+    <p>Words and logo are from Shannea's Celebrants Network profile and her earlier Blissful Circle Ceremonies site. The rose is drawn after her logo.</p>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn alt" href="tel:0421831143">Call Shannea</a><a class="btn" href="#enquire">Ask about your date</a></div>
+
+<script>
+(function(){
+  var pins=[].slice.call(document.querySelectorAll('[data-pin]'));
+  var bloom=document.getElementById('bloom');
+  var caps=[].slice.call(document.querySelectorAll('.cap'));
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce), (max-height:520px)');
+  var on=false,ticking=false;
+  function show(i){bloom.className='bloom s'+i;caps.forEach(function(c,k){c.classList.toggle('on',k===i)});}
+  function finish(){pins.forEach(function(el){el.style.setProperty('--p','1')});bloom.className='bloom s4';caps.forEach(function(c){c.classList.add('on')});}
+  function update(){
+    ticking=false;
+    pins.forEach(function(el){
+      var r=el.getBoundingClientRect(),total=el.offsetHeight-window.innerHeight;
+      var p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;
+      el.style.setProperty('--p',p.toFixed(4));
+      if(el.dataset.steps){show(Math.min(caps.length-1,Math.floor(p*caps.length*0.999)));}
+    });
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
+  function start(){if(on)return;on=true;addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);update();}
+  function stop(){on=false;removeEventListener('scroll',onScroll);removeEventListener('resize',onScroll);finish();}
+  if(mq.matches)finish();else start();
+  if(mq.addEventListener)mq.addEventListener('change',function(){mq.matches?stop():start()});
+  document.getElementById('send').addEventListener('click',function(){var d=document.getElementById('done');d.classList.add('show');d.focus();});
+})();
+</script>
+</body>
+</html>

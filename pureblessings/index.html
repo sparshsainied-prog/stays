@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Pure Blessings Celebrancy, Melissa Sloane: a website preview</title>
+<meta name="description" content="A website idea for Melissa Sloane of Pure Blessings Celebrancy, celebrant in Ballarat. A preview by Lampbound Studio, not her official site.">
+<meta property="og:title" content="Pure Blessings Celebrancy, Melissa Sloane">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Pure Blessings Celebrancy. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/pureblessings/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/pureblessings/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-32 -32 64 64'%3E%3Crect x='-32' y='-32' width='64' height='64' fill='%231c322b'/%3E%3Cg fill='none' stroke='%23c2a066' stroke-width='2.4'%3E%3Ccircle r='10'/%3E%3Ccircle cx='10' r='10'/%3E%3Ccircle cx='-10' r='10'/%3E%3Ccircle cx='5' cy='8.66' r='10'/%3E%3Ccircle cx='-5' cy='8.66' r='10'/%3E%3Ccircle cx='5' cy='-8.66' r='10'/%3E%3Ccircle cx='-5' cy='-8.66' r='10'/%3E%3Ccircle r='20'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gum:#1c322b; --gum-2:#243f37; --white:#f5f7f4; --gold:#c2a066; --gold-deep:#8a6a35; --leaf:#7f9c8a; --ink:#1c2621; --soft:#4f5d55;
+  --display:"Marcellus", Georgia, serif; --text:"Mulish", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--white);color:var(--ink);font:17px/1.65 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid #111;outline-offset:0;box-shadow:0 0 0 6px #fff}
+.skip{position:absolute;left:-999px;top:0;background:var(--gum);color:var(--white);padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.strip{background:#13231e;color:#cdd6d0;font-size:13.5px;line-height:1.4;padding:9px 16px;text-align:center}
+.strip strong{color:var(--white)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:24px;background:var(--gold);color:#1a1408;text-decoration:none;border:0;font:700 16px/1 var(--text);cursor:pointer}
+.btn:hover{background:#d0b07a}
+
+/* hero: leaves (slow), title, seed of life (fast) */
+.hero{position:relative;height:160svh;background:var(--gum);color:var(--white)}
+.hero-stage{position:sticky;top:0;height:100svh;overflow:hidden;display:grid}
+.leaves{position:absolute;inset:-10% -20% auto auto;width:min(110vw,760px);opacity:.9;transform:translate3d(0,calc(var(--p,0) * 8%),0) rotate(calc(var(--p,0) * 6deg))}
+.leaves.b{inset:auto auto -12% -30%;width:min(90vw,600px);transform:translate3d(0,calc(var(--p,0) * -4%),0) rotate(calc(180deg - var(--p,0) * 5deg))}
+.seed{position:absolute;right:-18vw;top:14svh;width:min(86vw,560px);transform:translate3d(0,calc(var(--p,0) * -46svh),0) rotate(calc(var(--p,0) * 30deg))}
+.h-copy{position:relative;align-self:end;padding:0 20px 124px;transform:translate3d(0,calc(var(--p,0) * -16svh),0)}
+.h-copy .who{color:var(--gold);font-size:16px;margin:0 0 12px}
+.hero h1{font-size:clamp(46px,12.5vw,118px);line-height:1}
+.h-copy .tag{margin:18px 0 0;font-size:18px;max-width:30ch;color:#dbe3de}
+@media (min-width:860px){.seed{right:6vw;top:16svh}.h-copy{max-width:1080px;width:100%;margin:0 auto;padding:0 20px 14svh}}
+
+/* story */
+.story{padding:88px 0 70px}
+.story h2{font-size:clamp(34px,7.5vw,62px);max-width:13ch;color:var(--gum)}
+.story-grid{display:grid;gap:30px;margin-top:28px}
+.story .big{font-size:21px;line-height:1.5;max-width:34ch}
+.facts{list-style:none;margin:0;padding:0;border-top:1px solid #cdd6d0}
+.facts li{padding:14px 0;border-bottom:1px solid #cdd6d0;display:grid;grid-template-columns:5.5em 1fr;gap:14px}
+.facts b{font-family:var(--display);font-weight:400;font-size:22px;color:var(--gold-deep);line-height:1.2}
+@media (min-width:860px){.story-grid{grid-template-columns:1fr 1fr;column-gap:60px}}
+
+/* the circle of life */
+.circle{position:relative;height:540svh;background:var(--gum);color:var(--white)}
+.circle-stage{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;grid-template-rows:auto 1fr auto;padding:22px 20px 92px}
+.circle h2{font-size:clamp(26px,6vw,44px);max-width:18ch}
+.flower{align-self:center;justify-self:center;width:min(78vw,46svh,440px);aspect-ratio:1}
+.flower svg{width:100%;height:100%;overflow:visible}
+.ring{fill:none;stroke:var(--gold);stroke-width:2.2;opacity:.12;transform:scale(.55);transform-box:fill-box;transform-origin:center;transition:opacity .5s ease,transform .6s ease}
+.ring.on{opacity:1;transform:none}
+.ring.now{stroke-width:3.4}
+.outer{fill:none;stroke:var(--gold);stroke-width:1.6;opacity:0;transition:opacity .6s ease}
+.outer.on{opacity:1}
+.caps{position:relative;display:grid;min-height:122px}
+.cap{grid-area:1 / 1;opacity:0;transform:translate3d(0,12px,0);transition:opacity .35s ease,transform .35s ease}
+.cap.on{opacity:1;transform:none}
+.cap h3{font-size:clamp(26px,6vw,38px);color:var(--gold)}
+.cap p{margin:6px 0 0;max-width:40ch;color:#dbe3de;font-size:16.5px}
+@media (min-width:860px){
+  .circle-stage{grid-template-columns:1fr 1fr;grid-template-rows:auto 1fr;column-gap:56px;max-width:1080px;margin:0 auto;width:100%;padding:46px 20px 60px}
+  .circle h2{grid-column:1 / -1}
+  .flower{grid-row:2;width:min(40vw,62svh,500px)}
+  .caps{grid-row:2;align-self:center;min-height:200px}
+  .cap p{font-size:18px}
+}
+
+/* best seat */
+.seat{padding:96px 0 80px}
+.seat blockquote{margin:0;max-width:20ch;font-family:var(--display);font-size:clamp(32px,7vw,60px);line-height:1.12;color:var(--gum)}
+.seat .after{max-width:46ch;margin-top:28px}
+.homes{margin-top:54px;max-width:760px}
+.homes h3{font-family:var(--text);font-weight:700;font-size:16px;margin-bottom:12px}
+.homes ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 0}
+.homes li{font-family:var(--display);font-size:20px;color:var(--soft)}
+.homes li:not(:last-child)::after{content:"";display:inline-block;width:26px;height:1px;background:var(--gold-deep);vertical-align:middle;margin:0 10px}
+.homes li.now{color:var(--gum)}
+.homes .again{font-size:15px;color:var(--soft);margin-top:12px}
+
+/* logo card */
+.mark{padding:0 0 88px}
+.mark-card{display:grid;gap:26px;border:1px solid #cdd6d0;background:#fff;padding:22px;border-radius:4px}
+.mark-card p{margin:0;max-width:40ch}
+@media (min-width:760px){.mark-card{grid-template-columns:1.1fr .9fr;align-items:center;padding:34px}}
+
+/* enquire */
+.enq{background:var(--gum-2);color:var(--white);padding:88px 0 120px}
+.enq-grid{display:grid;gap:34px}
+.enq h2{font-size:clamp(34px,7vw,56px);margin-bottom:14px}
+form{display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:700;font-size:15px}
+select,input,textarea{font:400 17px/1.4 var(--text);padding:12px 14px;border:1.5px solid #9fb1a6;border-radius:6px;background:#fff;color:var(--ink);min-height:48px;width:100%}
+textarea{min-height:120px;resize:vertical}
+.two{display:grid;gap:16px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.note{font-size:14px;color:#c4cfc8;margin:0}
+.done{display:none;padding:16px;border:1.5px solid var(--gold);border-radius:6px;background:#2f4c43}
+.done.show{display:block}
+@media (min-width:860px){.enq-grid{grid-template-columns:.85fr 1.15fr}}
+
+footer{background:#13231e;color:#b9c5bd;padding:40px 0 110px;font-size:14.5px}
+footer strong{color:var(--white)}
+
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex}
+.bar .btn{flex:1;box-shadow:0 6px 16px rgba(0,0,0,.3)}
+@media (min-width:860px){.bar{left:auto;right:24px;bottom:24px}.bar .btn{flex:none}}
+
+@media (prefers-reduced-motion:reduce),(max-height:520px){
+  .hero{height:auto}.hero-stage{position:relative;height:100svh}
+  .leaves,.seed,.h-copy{transform:none!important}.leaves.b{transform:rotate(180deg)!important}
+  .circle{height:auto}.circle-stage{position:relative;height:auto;grid-template-rows:auto}
+  .flower{width:min(78vw,420px);margin:24px auto}
+  .ring,.outer{opacity:1;transform:none;transition:none}
+  .caps{min-height:0;display:block}.cap{position:static;opacity:1;transform:none;margin-bottom:20px;transition:none}
+  .flower,.caps{grid-row:auto}
+}
+
+@media (max-height:520px){.hero-stage{height:auto!important;min-height:100svh;overflow:hidden}.h-copy{padding-top:24px}}
+</style>
+<noscript><style>
+  .hero{height:auto}.hero-stage{position:relative;height:100svh}
+  .leaves,.seed,.h-copy{transform:none!important}.leaves.b{transform:rotate(180deg)!important}
+  .circle{height:auto}.circle-stage{position:relative;height:auto;grid-template-rows:auto}
+  .flower{width:min(78vw,420px);margin:24px auto}
+  .ring,.outer{opacity:1;transform:none}
+  .caps{min-height:0;display:block}.cap{position:static;opacity:1;transform:none;margin-bottom:20px}
+  .flower,.caps{grid-row:auto}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip">A website idea made by <strong>Lampbound Studio</strong> for Pure Blessings Celebrancy. Not her official site.</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="leaf" d="M0 0 C 14 -20, 46 -26, 74 -4 C 46 10, 18 10, 0 0 Z"/>
+    <g id="sprig">
+      <path d="M10 360 C 90 280, 150 200, 250 120 S 400 30, 470 10" fill="none" stroke="#7f9c8a" stroke-width="3" stroke-linecap="round"/>
+      <use href="#leaf" transform="translate(60 312) rotate(-70) scale(1.3)" fill="#5f8070"/>
+      <use href="#leaf" transform="translate(96 268) rotate(30) scale(1.2)" fill="#7f9c8a"/>
+      <use href="#leaf" transform="translate(150 214) rotate(-80) scale(1.45)" fill="#7f9c8a"/>
+      <use href="#leaf" transform="translate(196 166) rotate(20) scale(1.3)" fill="#5f8070"/>
+      <use href="#leaf" transform="translate(262 116) rotate(-95) scale(1.5)" fill="#5f8070"/>
+      <use href="#leaf" transform="translate(316 86) rotate(10) scale(1.25)" fill="#7f9c8a"/>
+      <use href="#leaf" transform="translate(380 52) rotate(-100) scale(1.2)" fill="#7f9c8a"/>
+      <use href="#leaf" transform="translate(430 30) rotate(-5) scale(1.05)" fill="#5f8070"/>
+    </g>
+  </defs>
+</svg>
+
+<main id="main">
+<section class="hero" data-pin aria-label="Introduction">
+  <div class="hero-stage">
+    <svg class="leaves" viewBox="0 0 480 380" aria-hidden="true"><use href="#sprig"/></svg>
+    <svg class="leaves b" viewBox="0 0 480 380" aria-hidden="true"><use href="#sprig"/></svg>
+    <svg class="seed" viewBox="-230 -230 460 460" aria-hidden="true">
+      <g fill="none" stroke="#c2a066" stroke-width="2">
+        <circle r="100"/><circle cx="100" r="100"/><circle cx="-100" r="100"/>
+        <circle cx="50" cy="86.6" r="100"/><circle cx="-50" cy="86.6" r="100"/><circle cx="50" cy="-86.6" r="100"/><circle cx="-50" cy="-86.6" r="100"/>
+        <circle r="200" stroke-width="1.4"/>
+      </g>
+    </svg>
+    <div class="h-copy">
+      <p class="who">Melissa Sloane, celebrant, Ballarat</p>
+      <h1>Pure Blessings Celebrancy</h1>
+      <p class="tag">Celebrating the circle of life, locally, nationally and internationally.</p>
+    </div>
+  </div>
+</section>
+
+<section class="story" aria-labelledby="story-h">
+  <div class="wrap">
+    <h2 id="story-h">Pulling beers by the age of eight</h2>
+    <div class="story-grid">
+      <div>
+        <p class="big">Melissa was born into the hospitality industry and grew up in her family's pubs and hotels.</p>
+        <p>For a number of years she was the wedding coordinator in the family hotels. In that time she watched hundreds of priests and celebrants at work, and formed strong opinions about how she would write and present a ceremony, given the chance.</p>
+        <p>She had wanted to be a celebrant for over 20 years. COVID gave her the push, and she qualified in 2022.</p>
+      </div>
+      <ul class="facts">
+        <li><b>30+ years</b><span>of public speaking, including as emcee at lots of weddings</span></li>
+        <li><b>2022</b><span>Cert IV in Celebrancy, The Gordon</span></li>
+        <li><b>JP</b><span>Justice of the Peace (Qualified)</span></li>
+        <li><b>Two homes</b><span>Ballarat, and a place in Townsville where her family is</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="circle" data-pin data-steps="7" aria-labelledby="circle-h">
+  <div class="circle-stage">
+    <h2 id="circle-h">Every ceremony in the circle of life</h2>
+    <div class="flower">
+      <svg viewBox="-230 -230 460 460" role="img" aria-label="The Flower of Life from Melissa's logo, one circle for each kind of ceremony">
+        <circle class="ring" r="100"/>
+        <circle class="ring" cx="50" cy="-86.6" r="100"/>
+        <circle class="ring" cx="100" r="100"/>
+        <circle class="ring" cx="50" cy="86.6" r="100"/>
+        <circle class="ring" cx="-50" cy="86.6" r="100"/>
+        <circle class="ring" cx="-100" r="100"/>
+        <circle class="ring" cx="-50" cy="-86.6" r="100"/>
+        <circle class="outer" r="200"/>
+        <circle class="outer" r="212" stroke-width="1"/>
+      </svg>
+    </div>
+    <div class="caps">
+      <div class="cap on"><h3>It starts with you</h3><p>Melissa believes a ceremony should never be "merely the necessary part of the day". It should be interactive, interesting, enjoyable and memorable, for you and your guests.</p></div>
+      <div class="cap"><h3>Weddings</h3><p>Highly personalised and engaging ceremonies that reflect your personalities, values and vision.</p></div>
+      <div class="cap"><h3>Commitment ceremonies</h3><p>Not a legal marriage, but a way to celebrate your commitment in front of the people you love.</p></div>
+      <div class="cap"><h3>Vow renewals</h3><p>"Marry me again." For a milestone, or a stronger couple on the other side of a hard time.</p></div>
+      <div class="cap"><h3>Naming days</h3><p>"Let's welcome your child to the world in style!" For a birth, a blended family or an adoption.</p></div>
+      <div class="cap"><h3>Pet ceremonies</h3><p>Pet naming days, pet farewells and, yes, pet weddings.</p></div>
+      <div class="cap"><h3>Funerals and memorials</h3><p>A personal tribute that reflects the life of the person you love, led with sensitivity and empathy.</p></div>
+      <div class="cap"><h3>Celebrating the circle of life</h3><p>The words on Melissa's logo. Welcomes, weddings, farewells and the milestones in between.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="seat" aria-labelledby="seat-h">
+  <div class="wrap">
+    <h2 id="seat-h" class="vh">In Melissa's words</h2>
+    <blockquote>"I get the best seat in the house and I'm so grateful for that!"</blockquote>
+    <p class="after">She describes herself as friendly, attentive, organised and professional. She never takes for granted being invited into people's lives for such an important moment.</p>
+    <div class="homes">
+      <h3>Where she has called home</h3>
+      <ol>
+        <li>Papua New Guinea</li><li>Wollongong</li><li>Wagga Wagga</li><li>Bundaberg</li><li>Dirranbandi</li><li>Cairns</li><li>Ingham</li><li>Townsville</li><li class="now">Ballarat</li>
+      </ol>
+      <p class="again">She still keeps a place in Townsville and travels back often.</p>
+    </div>
+  </div>
+</section>
+
+<section class="mark" aria-label="Pure Blessings Celebrancy logo">
+  <div class="wrap">
+    <div class="mark-card">
+      <img src="img/logo.jpg" width="800" height="470" alt="Pure Blessings Celebrancy logo: a gold Flower of Life with eucalyptus leaves and the words Celebrating the circle of life" loading="lazy">
+      <p>Pure Blessings Celebrancy is based in Ballarat and serves couples and families locally, nationally and internationally.</p>
+    </div>
+  </div>
+</section>
+
+<section class="enq" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap enq-grid">
+    <div>
+      <h2 id="enq-h">A drink and a chat</h2>
+      <p>Tell Melissa what you're celebrating and when. If she's available, she'd love to meet you for a drink and a chat.</p>
+      <p class="note">This is a preview, so the form does not send anything.</p>
+    </div>
+    <form id="enq-form" novalidate>
+      <div class="two">
+        <label>Your name<input name="names" autocomplete="name"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <div class="two">
+        <label>What are you celebrating?
+          <select name="kind"><option>Wedding</option><option>Commitment ceremony</option><option>Vow renewal</option><option>Naming day</option><option>Pet ceremony</option><option>Funeral or memorial</option><option>Something else</option></select>
+        </label>
+        <label>Date, if you have one<input name="date" type="date"></label>
+      </div>
+      <label>Where?<input name="venue"></label>
+      <label>Anything else<textarea name="msg"></textarea></label>
+      <button class="btn" type="button" id="send">Send to Melissa</button>
+      <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Melissa. To reach her today, email <a href="mailto:pureblessings@outlook.com">pureblessings@outlook.com</a>.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>A preview made by Lampbound Studio for Pure Blessings Celebrancy.</strong> Not affiliated, not live.</p>
+    <p>Words and logo are adapted from Melissa's Celebrants Network profile and flyers. The leaves and circles are drawn after her logo.</p>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn" href="#enquire">Ask about your date</a></div>
+
+<script>
+(function(){
+  var pins=[].slice.call(document.querySelectorAll('[data-pin]'));
+  var rings=[].slice.call(document.querySelectorAll('.ring'));
+  var outers=[].slice.call(document.querySelectorAll('.outer'));
+  var caps=[].slice.call(document.querySelectorAll('.cap'));
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce), (max-height:520px)');
+  var on=false,ticking=false;
+  function show(i){
+    rings.forEach(function(r,k){r.classList.toggle('on',k<=i);r.classList.toggle('now',k===i)});
+    outers.forEach(function(o){o.classList.toggle('on',i>=rings.length)});
+    caps.forEach(function(c,k){c.classList.toggle('on',k===i)});
+  }
+  function finish(){pins.forEach(function(el){el.style.setProperty('--p','1')});rings.forEach(function(r){r.classList.add('on');r.classList.remove('now')});outers.forEach(function(o){o.classList.add('on')});caps.forEach(function(c){c.classList.add('on')});}
+  function update(){
+    ticking=false;
+    pins.forEach(function(el){
+      var r=el.getBoundingClientRect(),total=el.offsetHeight-window.innerHeight;
+      var p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;
+      el.style.setProperty('--p',p.toFixed(4));
+      if(el.dataset.steps){show(Math.min(caps.length-1,Math.floor(p*caps.length*0.999)));}
+    });
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
+  function start(){if(on)return;on=true;caps.forEach(function(c){c.classList.remove('on')});addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);update();}
+  function stop(){on=false;removeEventListener('scroll',onScroll);removeEventListener('resize',onScroll);finish();}
+  if(mq.matches)finish();else start();
+  if(mq.addEventListener)mq.addEventListener('change',function(){mq.matches?stop():start()});
+  document.getElementById('send').addEventListener('click',function(){var d=document.getElementById('done');d.classList.add('show');d.focus();});
+})();
+</script>
+</body>
+</html>
