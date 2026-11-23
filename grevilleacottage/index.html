@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en-AU" class="nojs">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.className="js"</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Grevillea Cottage | A farm cottage in Murrumbateman, near Canberra</title>
+<meta name="description" content="A two-bedroom cottage on a hobby farm in Murrumbateman, with sheep and alpacas out the front. A website idea made by Lamplit Studio for Grevillea Cottage.">
+<meta property="og:title" content="Grevillea Cottage, Murrumbateman">
+<meta property="og:description" content="A website idea made by Lamplit Studio for Grevillea Cottage. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/grevilleacottage/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/grevilleacottage/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%239c6c37'/%3E%3Cg fill='none' stroke='%232c2a25' stroke-width='1.8' stroke-linecap='round'%3E%3Cpath d='M12 28C13 20 15 14 20 7M15 18c-3-2-5-5-5-9M17 14c3-2 6-2 8 0M18 11c-1-3 0-5 2-7M14 22c-3 0-5-2-6-4'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/cottage-2000.jpg" media="(min-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/cottage-1000.jpg" media="(max-width: 699px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800&family=Sansita:ital,wght@0,700;0,800;1,700;1,800&display=swap">
+<style>
+/* Tokens come from the cottage itself (see brand.md):
+   bark   = the wicker deck furniture and window frames in shade
+   board  = the white weatherboards
+   flower = the red grevillea by the deck
+   corten = the sign on the front gate
+   galv   = the galvanised gate and roof
+   Sansita sits near the slanted script on their sign. Mulish is for reading. */
+:root{
+  --bark:#2c2a25;
+  --bark-2:#3d3a33;
+  --board:#eef0ee;
+  --board-2:#dde1df;
+  --flower:#b43235;
+  --flower-2:#9c2a2d;
+  --corten:#9c6c37;
+  --galv:#aeb4b6;
+  --ink:#2c2a25;
+  --ink-soft:#56544d;
+  --display:"Sansita","Trebuchet MS",sans-serif;
+  --text:"Mulish","Avenir Next","Segoe UI",sans-serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--board);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--bark);outline-offset:3px}
+.hero :focus-visible,.paddock :focus-visible,.guests :focus-visible,.close :focus-visible,.phonebar :focus-visible,footer :focus-visible,.strip :focus-visible,.top :focus-visible,.direct :focus-visible{outline-color:#fff}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.02;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--board);padding:8px 12px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.strip{background:var(--bark);color:var(--board);font-size:14px;text-align:center;margin:0;
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  padding:16px var(--gut-r) 0 var(--gut)}
+.word{text-decoration:none;color:#fff;font-family:var(--display);font-style:italic;font-weight:800;font-size:24px;line-height:1;text-shadow:0 1px 10px rgba(30,28,24,.6)}
+.top nav{display:flex;gap:22px;align-items:center;font-weight:700;font-size:15px}
+.top nav a{color:#fff;text-decoration:none;text-shadow:0 1px 8px rgba(30,28,24,.7)}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:4px;
+  font-family:var(--text);font-weight:800;font-size:16px;text-decoration:none;border:0;cursor:pointer;white-space:nowrap;
+  background:var(--bark);color:var(--board)}
+.btn:hover{background:var(--bark-2)}
+.btn.red{background:var(--flower);color:#fff}
+.btn.red:hover{background:var(--flower-2)}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.line:hover{background:rgba(255,255,255,.1)}
+.top nav .btn{background:var(--flower);color:#fff;text-shadow:none}
+@media (max-width:820px){.top nav a:not(.btn){display:none}}
+
+/* ---------- Act 1: the front gate swings open onto the drive ---------- */
+.hero{position:relative;height:300vh;background:var(--bark)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:#7d8f6b;perspective:1600px;perspective-origin:50% 70%}
+.l-cottage{position:absolute;inset:0;transform:scale(1.14);transform-origin:50% 62%;will-change:transform}
+.l-cottage img{width:100%;height:100%;object-fit:cover}
+.gates{position:absolute;left:0;right:0;bottom:0;height:64%;z-index:3;transform-style:preserve-3d}
+.leaf{position:absolute;bottom:0;height:100%;width:50%;will-change:transform}
+.leaf svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.leaf.l{left:0;transform-origin:0 50%}
+.leaf.r{right:0;transform-origin:100% 50%}
+.leaf .plate{position:absolute;right:6%;top:24%;width:min(78%,440px);margin:0;filter:drop-shadow(0 8px 14px rgba(0,0,0,.35))}
+.leaf .plate img{width:100%}
+.copy-a{position:absolute;z-index:6;right:var(--gut-r);top:clamp(70px,12vh,120px);max-width:min(620px, calc(100% - 40px));color:#fff}
+.copy-a .panel{background:rgba(44,42,37,.8);padding:clamp(20px,2.4vw,30px) clamp(20px,2.6vw,34px);border-radius:4px}
+.copy-a .where{font-weight:800;font-size:15px;color:#f3c9c4}
+.copy-a h1{font-size:clamp(38px,5.2vw,74px);margin-top:8px}
+.copy-a p.lede{font-size:clamp(17px,1.5vw,20px);margin-top:14px;max-width:30em}
+.copy-b{position:absolute;z-index:6;left:var(--gut);bottom:clamp(30px,8vh,90px);max-width:440px;opacity:0;color:#fff}
+.copy-b .panel{background:rgba(44,42,37,.84);padding:22px 24px;border-radius:4px}
+.copy-b h2{font-size:clamp(28px,3vw,40px)}
+.copy-b p{margin-top:10px;font-size:17px}
+@media (max-width:699px){
+  .gates{height:52%}
+  .leaf .plate{width:92%;right:4%;top:18%}
+  .copy-a{top:68px;left:var(--gut);right:var(--gut-r)}
+  .copy-b{left:var(--gut);right:var(--gut-r);bottom:22px;max-width:none}
+}
+@media (max-height:620px) and (prefers-reduced-motion: no-preference){html.js .copy-a p.lede{display:none}}
+@media (max-height:520px) and (prefers-reduced-motion: no-preference){html.js .copy-a .where{display:none}html.js .copy-a h1{font-size:clamp(28px,4.4vw,42px);margin-top:0}html.js .copy-a .panel{padding:14px 18px}html.js .copy-b p{display:none}}
+
+/* ---------- Sections ---------- */
+.wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
+.inner{max-width:1200px;margin:0 auto}
+section{scroll-margin-top:10px}
+.lede{font-size:clamp(19px,1.6vw,21px);max-width:34em}
+.who{font-size:15px;color:var(--ink-soft);margin-top:8px}
+.cap-s{font-size:14px;color:var(--ink-soft);margin-top:8px}
+dl.facts{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:22px;row-gap:12px;font-size:17px;line-height:1.5}
+dl.facts dt{font-weight:800;font-size:15px;padding-top:2px;white-space:nowrap}
+dl.facts dd{margin:0;border-bottom:1px solid var(--board-2);padding-bottom:12px}
+.inside h2,.paddock h2,.guests h2,.around h2,.book h2{font-size:clamp(44px,6vw,80px)}
+
+/* Inside */
+.inside{padding-block:clamp(72px,9vw,130px) 0}
+.inside .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.inside .lede{margin-top:18px}
+.inside .basket{margin-top:26px;display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;align-items:center}
+.inside .basket img{width:120px;aspect-ratio:1;object-fit:cover;border-radius:4px}
+@media (max-width:880px){.inside .inner{grid-template-columns:minmax(0,1fr)}}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;
+  padding:clamp(36px,5vw,60px) var(--gut-r) clamp(64px,8vw,110px) var(--gut);margin:0}
+.rail figure{margin:0;flex:0 0 auto;width:clamp(240px,28vw,400px);scroll-snap-align:start}
+.rail img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px;background:var(--board-2)}
+.rail figcaption{font-size:15px;margin-top:8px;color:var(--ink-soft)}
+
+/* The front paddock */
+.paddock{background:var(--corten);color:#fff;padding-block:clamp(72px,9vw,130px)}
+.paddock-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:end}
+.paddock .wide{margin:clamp(30px,4vw,48px) 0 0}
+.paddock .wide img{width:100%;aspect-ratio:2000/900;object-fit:cover;border-radius:4px}
+.flock{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;margin-top:12px}
+.flock figure{margin:0;grid-column:span 3}
+.flock img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px}
+.flock figcaption{font-size:15px;color:#fff;margin-top:8px}
+.feed{margin-top:clamp(36px,5vw,60px);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,56px);align-items:center}
+.feed img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:4px}
+.feed h3{font-size:clamp(28px,3vw,40px)}
+.feed p{margin-top:12px}
+.feed .note{font-size:15px;background:rgba(44,42,37,.35);padding:12px 14px;border-radius:4px;margin-top:18px}
+@media (max-width:880px){.paddock-head,.feed{grid-template-columns:minmax(0,1fr)}.flock figure{grid-column:span 6}}
+
+/* Guests: scores only (no review text is public logged out) */
+.guests{background:var(--bark);color:var(--board);padding-block:clamp(72px,9vw,120px)}
+.guests .inner{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:center}
+.score b{display:block;font-family:var(--display);font-size:clamp(84px,11vw,150px);line-height:.9;font-variant-numeric:tabular-nums}
+.score span{display:block;font-size:17px;margin-top:10px}
+table.cats{width:100%;border-collapse:collapse;font-size:17px}
+table.cats td,table.cats th{padding:12px 0;border-top:1px solid #4d4a42;text-align:left;font-weight:400}
+table.cats td:last-child{text-align:right;font-weight:800;font-variant-numeric:tabular-nums}
+.guests .who{color:#c9c6bd}
+@media (max-width:880px){.guests .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Around */
+.around{padding-block:clamp(72px,9vw,130px)}
+.around .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.around .lede{margin-top:16px}
+table.dist{width:100%;border-collapse:collapse;margin-top:24px;font-size:17px}
+table.dist th{text-align:left;font-size:15px;color:var(--ink-soft);font-weight:700;padding:0 0 8px}
+table.dist td{padding:12px 0;border-top:1px solid var(--board-2);vertical-align:top}
+table.dist td:last-child{text-align:right;font-weight:800;white-space:nowrap;padding-left:16px;font-variant-numeric:tabular-nums}
+.around .ph img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:4px}
+.small{font-size:14px;color:var(--ink-soft);margin-top:12px}
+@media (max-width:880px){.around .inner{grid-template-columns:minmax(0,1fr)}.around .ph img{aspect-ratio:3/2}}
+
+/* Book */
+.book{background:var(--board-2);padding-block:clamp(72px,9vw,130px)}
+.book .lede{margin-top:16px}
+.book-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(24px,4vw,56px);margin-top:34px;align-items:start}
+.book-grid img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:4px}
+.book dl.facts dd{border-color:#c2c7c5}
+.book .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.direct{margin-top:clamp(24px,3vw,36px);background:var(--bark);color:var(--board);border-radius:4px;padding:clamp(22px,3vw,36px);
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center}
+.direct h3{font-size:clamp(28px,3vw,40px)}
+.direct p{margin-top:8px;color:#d9dad6;max-width:36em}
+.direct .acts{margin-top:0}
+.direct .btn.line{color:var(--board)}
+@media (max-width:820px){.book-grid,.direct{grid-template-columns:minmax(0,1fr)}}
+
+/* Close: the sign again, on the deck photo */
+.close{position:relative;color:#fff;background:var(--bark)}
+.close > img{width:100%;height:min(86vh,760px);object-fit:cover;object-position:50% 60%}
+.close .panel{position:absolute;left:var(--gut);bottom:clamp(24px,6vh,60px);max-width:560px;background:rgba(44,42,37,.86);padding:clamp(22px,3vw,34px);border-radius:4px}
+.close .panel img{width:min(260px,70%);margin-bottom:16px;border-radius:2px}
+.close h2{font-size:clamp(32px,4vw,52px)}
+.close p{margin-top:10px}
+.close .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+@media (max-width:700px), (max-height:520px){.close > img{height:56vh}.close .panel{position:relative;left:auto;bottom:auto;max-width:none;border-radius:0;background:var(--bark)}}
+footer{background:var(--bark);color:#cfcdc6;font-size:14px;padding-block:28px calc(28px + env(safe-area-inset-bottom,0px))}
+footer .inner{display:grid;gap:6px}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;
+  padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);
+  background:rgba(44,42,37,.97);transform:translateY(110%);visibility:hidden;transition:transform .25s ease-out,visibility 0s .25s}
+.phonebar.on{transform:none;visibility:visible;transition:transform .25s ease-out}
+.phonebar .btn{flex:1;min-height:50px;white-space:normal;text-align:center;padding:6px 12px;line-height:1.2}
+.phonebar .btn.line{color:var(--board)}
+@media (max-width:820px){.phonebar{display:flex}footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}}
+
+@media (prefers-reduced-motion: reduce){
+  .hero{height:auto}
+  .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column;background:var(--bark);perspective:none}
+  .l-cottage{position:relative;inset:auto;order:2;transform:none !important}
+  .l-cottage img{height:auto;aspect-ratio:16/10}
+  .gates{display:none}
+  .copy-a,.copy-b{position:relative;left:auto;right:auto;top:auto;bottom:auto;max-width:none;opacity:1 !important;transform:none !important}
+  .copy-a{order:1;padding-top:64px}
+  .copy-b{order:3}
+  .copy-a .panel,.copy-b .panel{border-radius:0;background:var(--bark)}
+  .phonebar,.phonebar.on{transition:none}
+}
+/* Without JavaScript, show the same still end state as reduced motion */
+  html.nojs .hero{height:auto}
+  html.nojs .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column;background:var(--bark);perspective:none}
+  html.nojs .l-cottage{position:relative;inset:auto;order:2;transform:none !important}
+  html.nojs .l-cottage img{height:auto;aspect-ratio:16/10}
+  html.nojs .gates{display:none}
+  html.nojs .copy-a,html.nojs .copy-b{position:relative;left:auto;right:auto;top:auto;bottom:auto;max-width:none;opacity:1 !important;transform:none !important}
+  html.nojs .copy-a{order:1;padding-top:64px}
+  html.nojs .copy-b{order:3}
+  html.nojs .copy-a .panel,html.nojs .copy-b .panel{border-radius:0;background:var(--bark)}
+  html.nojs .phonebar,html.nojs .phonebar.on{transition:none}
+</style>
+</head>
+<body>
+<a class="skip" href="#book">Skip to booking</a>
+<p class="strip">A website idea made by Lamplit Studio for Grevillea Cottage. Not their official site.</p>
+
+<header class="top">
+  <a class="word" href="#top" aria-label="Grevillea Cottage, back to top"><span aria-hidden="true">Grevillea Cottage</span></a>
+  <nav aria-label="Main">
+    <a href="#inside">Inside</a>
+    <a href="#paddock">The paddock</a>
+    <a href="#around">Getting here</a>
+    <a class="btn" href="#book">Check dates</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero" id="hero" aria-label="Through the front gate at Grevillea Cottage">
+  <div class="stage">
+    <div class="l-cottage">
+      <picture>
+        <source media="(min-width:700px)" srcset="img/cottage-2000.jpg">
+        <img src="img/cottage-1000.jpg" alt="The white weatherboard cottage at the end of a red dirt drive, under gums and a blue sky" width="1000" height="1600" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="gates" aria-hidden="true">
+      <div class="leaf l">
+        <svg viewBox="0 0 600 400" preserveAspectRatio="none"><defs><pattern id="mesh" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#c5cacb" stroke-width="2.5"/></pattern></defs><rect x="14" y="14" width="572" height="372" fill="url(#mesh)"/><rect x="10" y="10" width="580" height="380" rx="10" fill="none" stroke="#b9bfc1" stroke-width="16"/><path d="M14 200H586" stroke="#b9bfc1" stroke-width="10"/></svg>
+        <figure class="plate"><img src="img/sign.jpg" srcset="img/sign-500.jpg 500w, img/sign.jpg 1000w" sizes="(max-width:699px) 46vw, 440px" alt="" width="1000" height="476"></figure>
+      </div>
+      <div class="leaf r">
+        <svg viewBox="0 0 600 400" preserveAspectRatio="none"><rect x="14" y="14" width="572" height="372" fill="url(#mesh)"/><rect x="10" y="10" width="580" height="380" rx="10" fill="none" stroke="#b9bfc1" stroke-width="16"/><path d="M14 200H586" stroke="#b9bfc1" stroke-width="10"/></svg>
+      </div>
+    </div>
+    <div class="copy-a">
+      <div class="panel">
+        <p class="where">Murrumbateman, Yass Valley, NSW</p>
+        <h1>A cottage on a hobby farm, 30 minutes from Canberra.</h1>
+        <p class="lede">Two bedrooms, two bathrooms and a front deck over the paddock where the sheep and alpacas graze.</p>
+      </div>
+    </div>
+    <div class="copy-b">
+      <div class="panel">
+        <h2>Press the button on the post.</h2>
+        <p>The front gate opens for you and closes itself 30 seconds later. The cottage sits on its own fenced acre at the end of the drive.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="inside" id="inside">
+  <div class="wrap">
+    <div class="inner">
+      <div>
+        <h2>Inside the cottage</h2>
+        <p class="lede">Self-contained and all yours: an open kitchen and dining room, a lounge with a smart TV, two large queen bedrooms and two bathrooms, one of them an ensuite off the main bedroom.</p>
+        <div class="basket">
+          <img src="img/r-basket-600.jpg" alt="A welcome basket with eggs, bread and local treats" width="600" height="750" loading="lazy">
+          <p>A welcome breakfast basket is waiting when you arrive.</p>
+        </div>
+      </div>
+      <dl class="facts">
+        <dt>Sleeps 4</dt><dd>Two large bedrooms, each with a queen bed. The main one has an ensuite and a walk-in robe.</dd>
+        <dt>Bathrooms</dt><dd>The ensuite, plus a separate large main bathroom.</dd>
+        <dt>Kitchen</dt><dd>Fully equipped and modern, with a laundry too.</dd>
+        <dt>Outside</dt><dd>A front deck with outdoor lounges, looking over the front paddock.</dd>
+        <dt>Arrive</dt><dd>Check in from 3pm, out by 10am. Parking at the cottage.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="rail" tabindex="0" role="region" aria-label="Photos inside the cottage">
+    <figure><img src="img/r-living.jpg" srcset="img/r-living-600.jpg 600w, img/r-living.jpg 1000w" sizes="(max-width:880px) 72vw, 28vw" alt="A round timber dining table with cross-back chairs, the white kitchen behind" width="1000" height="1250" loading="lazy"><figcaption>Kitchen and dining</figcaption></figure>
+    <figure><img src="img/r-kitchen.jpg" srcset="img/r-kitchen-600.jpg 600w, img/r-kitchen.jpg 768w" sizes="(max-width:880px) 72vw, 28vw" alt="The white kitchen, with cupboards along the walls and windows onto the garden" width="768" height="960" loading="lazy"><figcaption>The kitchen</figcaption></figure>
+    <figure><img src="img/r-bed1.jpg" srcset="img/r-bed1-600.jpg 600w, img/r-bed1.jpg 864w" sizes="(max-width:880px) 72vw, 28vw" alt="A queen bed made up in grey and white with patterned cushions" width="864" height="1080" loading="lazy"><figcaption>Main bedroom</figcaption></figure>
+    <figure><img src="img/r-bed2.jpg" srcset="img/r-bed2-600.jpg 600w, img/r-bed2.jpg 864w" sizes="(max-width:880px) 72vw, 28vw" alt="The second bedroom with a check quilt and two bedside lamps" width="864" height="1080" loading="lazy"><figcaption>Second bedroom</figcaption></figure>
+    <figure><img src="img/r-bath.jpg" srcset="img/r-bath-600.jpg 600w, img/r-bath.jpg 768w" sizes="(max-width:880px) 72vw, 28vw" alt="A white bathroom with a glass shower" width="768" height="960" loading="lazy"><figcaption>One of two bathrooms</figcaption></figure>
+    <figure><img src="img/r-deck.jpg" srcset="img/r-deck-600.jpg 600w, img/r-deck.jpg 1000w" sizes="(max-width:880px) 72vw, 28vw" alt="Wicker lounges and a coffee table on the front deck" width="1000" height="1250" loading="lazy"><figcaption>The front deck</figcaption></figure>
+    <figure><img src="img/r-wine.jpg" srcset="img/r-wine-600.jpg 600w, img/r-wine.jpg 768w" sizes="(max-width:880px) 72vw, 28vw" alt="Two wine glasses and a bottle of red on the deck table, the paddock beyond" width="768" height="960" loading="lazy"><figcaption>A glass on the deck</figcaption></figure>
+  </div>
+</section>
+
+<section class="paddock" id="paddock">
+  <div class="wrap">
+    <div class="inner">
+      <div class="paddock-head">
+        <h2>The front paddock</h2>
+        <p class="lede">The deck looks straight out over the front paddock, where the sheep and alpacas often graze.</p>
+      </div>
+      <figure class="wide"><img src="img/paddock-2000.jpg" srcset="img/paddock-900.jpg 900w, img/paddock-2000.jpg 2000w" sizes="100vw" alt="Alpacas and sheep spread across a dry paddock under a big blue sky" width="2000" height="900" loading="lazy"></figure>
+      <div class="flock">
+        <figure><img src="img/p-lamb1.jpg" srcset="img/p-lamb1-600.jpg 600w, img/p-lamb1.jpg 1000w" sizes="(max-width:880px) 50vw, 25vw" alt="A woolly cream young sheep in long grass" width="1000" height="1250" loading="lazy"><figcaption>One of the flock</figcaption></figure>
+        <figure><img src="img/p-lamb2.jpg" srcset="img/p-lamb2-600.jpg 600w, img/p-lamb2.jpg 1000w" sizes="(max-width:880px) 50vw, 25vw" alt="A brown young sheep looking straight at the camera" width="1000" height="1250" loading="lazy"><figcaption>Saying hello</figcaption></figure>
+        <figure><img src="img/p-alpaca.jpg" srcset="img/p-alpaca-600.jpg 600w, img/p-alpaca.jpg 1000w" sizes="(max-width:880px) 50vw, 25vw" alt="A brown alpaca nose to nose with a sheep" width="1000" height="1250" loading="lazy"><figcaption>Alpaca and sheep</figcaption></figure>
+        <figure><img src="img/grevillea.jpg" srcset="img/grevillea-600.jpg 600w, img/grevillea.jpg 1000w" sizes="(max-width:880px) 50vw, 25vw" alt="A grevillea bush covered in red flowers beside the cottage" width="1000" height="1250" loading="lazy"><figcaption>The grevillea by the deck</figcaption></figure>
+      </div>
+      <div class="feed">
+        <img src="img/p-flock.jpg" srcset="img/p-flock-800.jpg 800w, img/p-flock.jpg 1600w" sizes="(max-width:880px) 100vw, 56vw" alt="White alpacas and black-faced sheep close up at the fence" width="1600" height="1066" loading="lazy">
+        <div>
+          <h3>Want to feed them?</h3>
+          <p>Ask Gabrielle and she'll arrange a time to feed the sheep or alpacas.</p>
+          <p class="note">Please don't go into the paddocks without asking first.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="guests wrap" id="guests">
+  <div class="inner">
+    <div>
+      <h2>What guests say</h2>
+      <p class="score" style="margin-top:24px"><b>4.99</b><span>from 71 reviews on Airbnb, a guest favourite</span></p>
+    </div>
+    <table class="cats">
+      <caption class="vh">Airbnb category scores</caption>
+      <tbody>
+        <tr><th scope="row">Accuracy</th><td>5.0</td></tr>
+        <tr><th scope="row">Check-in</th><td>5.0</td></tr>
+        <tr><th scope="row">Communication</th><td>5.0</td></tr>
+        <tr><th scope="row">Cleanliness</th><td>4.99</td></tr>
+        <tr><th scope="row">Location</th><td>4.97</td></tr>
+        <tr><th scope="row">Value</th><td>4.89</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="around wrap" id="around">
+  <div class="inner">
+    <div>
+      <h2>Getting here</h2>
+      <p class="lede">Murrumbateman is in the Yass Valley wine country, north-west of Canberra. The cottage is a good base for weddings at Shaw Estate: guests who dine at Shaw Restaurant get a voucher for a bottle of Shaw Estate wine to take home.</p>
+      <table class="dist">
+        <thead><tr><th scope="col">By car, roughly</th><th scope="col"><span class="vh">Distance and time</span></th></tr></thead>
+        <tbody>
+          <tr><td>Murrumbateman village</td><td>5 km, 10 min</td></tr>
+          <tr><th scope="row">Yass</th><td>26 km, 27 min</td></tr>
+          <tr><td>Canberra city</td><td>40 km, 42 min</td></tr>
+          <tr><td>Canberra Airport</td><td>46 km, 50 min</td></tr>
+        </tbody>
+      </table>
+      <p class="small">Road distances on OpenStreetMap, rounded.</p>
+    </div>
+    <figure class="ph" style="margin:0">
+      <img src="img/b-yard.jpg" srcset="img/b-yard-800.jpg 800w, img/b-yard.jpg 1600w" sizes="(max-width:880px) 100vw, 44vw" alt="From the deck: a red dirt drive, a bench and gums across the block" width="1600" height="1066" loading="lazy">
+      <figcaption class="cap-s">The view from the deck.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="book wrap" id="book">
+  <div class="inner">
+    <h2>Check dates</h2>
+    <p class="lede">From A$300 a night for two, with the breakfast basket and cleaning included. One-night stays on request.</p>
+    <p class="small">Rate as shown on the cottage's Australia's Guide listing. Airbnb shows the current price for your dates.</p>
+    <div class="book-grid">
+      <img src="img/b-steps.jpg" srcset="img/b-steps-800.jpg 800w, img/b-steps.jpg 1440w" sizes="(max-width:820px) 100vw, 54vw" alt="Timber steps up to the front deck, grevillea beside them" width="1440" height="960" loading="lazy">
+      <div>
+        <dl class="facts">
+          <dt>Two guests</dt><dd>The nightly rate is for two adults.</dd>
+          <dt>More guests</dt><dd>Up to four. Each extra adult adds a fee per night.</dd>
+          <dt>Times</dt><dd>Check in from 3pm, out by 10am.</dd>
+          <dt>Weekends</dt><dd>Friday and Saturday rates by request.</dd>
+        </dl>
+        <div class="acts">
+          <a class="btn" href="https://www.airbnb.com.au/h/grevillea-cottage" rel="noopener" target="_blank">Check dates on Airbnb</a>
+        </div>
+      </div>
+    </div>
+    <div class="direct" id="message">
+      <div>
+        <h3>Or ask Gabrielle directly</h3>
+        <p>Tell her your nights and how many of you are coming, and she'll come back to you.</p>
+      </div>
+      <div class="acts">
+        <a class="btn red" href="https://ig.me/m/grevillea_cottage" rel="noopener" target="_blank">Message on Instagram</a>
+        <a class="btn line" href="tel:+61424056604">Call 0424 056 604</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="close" aria-label="The cottage">
+  <img src="img/close-1440.jpg" srcset="img/close-800.jpg 800w, img/close-1440.jpg 1440w" sizes="100vw" alt="The cottage's front deck with the grevillea bushes in front" width="1440" height="810" loading="lazy">
+  <div class="panel">
+    <img src="img/sign-500.jpg" alt="The corten Grevillea Cottage sign on the front gate" width="500" height="238" loading="lazy">
+    <h2>Look for the sign on the gate.</h2>
+    <p>Murrumbateman, NSW. Two bedrooms, sheep and alpacas out the front.</p>
+    <div class="acts">
+      <a class="btn red" href="#book">Check dates</a>
+      <a class="btn line" href="https://www.instagram.com/grevillea_cottage/" rel="noopener" target="_blank">@grevillea_cottage</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="inner">
+    <p>A preview made by Lamplit Studio for Grevillea Cottage. Not affiliated, not live.</p>
+    <p>Photos are Grevillea Cottage's own, from their Airbnb listing. Scores are from Airbnb.</p>
+  </div>
+</footer>
+
+<div class="phonebar" id="phonebar">
+  <a class="btn red" href="#book">Check dates</a>
+  <a class="btn line" href="https://ig.me/m/grevillea_cottage" rel="noopener" target="_blank">Message Gabrielle</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var bar = document.getElementById('phonebar');
+  var hero = document.getElementById('hero');
+  var q = function(s){return document.querySelector(s)};
+  var cot=q('.l-cottage'), gl=q('.leaf.l'), gr=q('.leaf.r'), ca=q('.copy-a'), cb=q('.copy-b');
+  var clamp=function(v){return v<0?0:v>1?1:v};
+  var seg=function(p,a,b){return clamp((p-a)/(b-a))};
+  var ease=function(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
+  function prog(el){var r=el.getBoundingClientRect();var st=el.firstElementChild;var span=el.offsetHeight-(st?st.offsetHeight:window.innerHeight);return span>0?clamp(-r.top/span):0}
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    var vh=window.innerHeight;
+    var bk=document.getElementById('book').getBoundingClientRect();
+    bar.classList.toggle('on', bar.contains(document.activeElement) || (hero.getBoundingClientRect().bottom<vh*.5 && (bk.top>vh*.9 || bk.bottom<0)));
+    if(reduce) return;
+    var p=prog(hero);
+    if(p>1.01) return;
+    ca.style.opacity=(1-seg(p,.1,.26)).toFixed(3);
+    ca.style.transform='translate3d(0,'+(-seg(p,.1,.26)*40).toFixed(1)+'px,0)';
+    // the gate swings: left leaf a touch ahead of the right, like a real double gate
+    var a=ease(seg(p,.16,.66)), b=ease(seg(p,.22,.72));
+    gl.style.transform='rotateY('+(-a*80).toFixed(2)+'deg)';
+    gr.style.transform='rotateY('+(b*80).toFixed(2)+'deg)';
+    // and you roll up the drive
+    var c=ease(seg(p,.2,1));
+    cot.style.transform='scale('+(1.14-c*.14).toFixed(4)+')';
+    cb.style.opacity=seg(p,.74,.88).toFixed(3);
+    cb.style.transform='translate3d(0,'+((1-seg(p,.74,.88))*24).toFixed(1)+'px,0)';
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(mq.addEventListener) mq.addEventListener('change',function(){location.reload()});
+  frame();
+})();
+</script>
+</body>
+</html>

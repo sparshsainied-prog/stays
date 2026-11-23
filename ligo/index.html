@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Ligo, Wolgan Valley | A tiny house for two under the escarpment</title>
+<meta name="description" content="A black tiny house with a triangle window on 100 acres of bush in the Wolgan Valley, two hours from Sydney. A website idea made by Lamplit Studio for Ligo (Tiny Two).">
+<meta property="og:title" content="Ligo, Wolgan Valley">
+<meta property="og:description" content="A website idea made by Lamplit Studio for Ligo. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/ligo/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/ligo/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1d1f'/%3E%3Cpath d='M8 27V13l8-7 8 7v14z M12 23v-7h8v7z' fill='none' stroke='%23c26a38' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/day-1440.jpg" media="(min-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/day-p-800.jpg" media="(max-width: 699px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Karla:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+/* Tokens come from the house itself (see brand.md):
+   clad  = the black faceted cladding
+   bath  = the pale concrete outdoor bath in full sun
+   corten= their laser-cut sign plate
+   pine  = the hoop pine ply lining inside
+   Jost echoes the thin even capitals on the corten sign. Karla is for reading. */
+:root{
+  --clad:#1c1d1f;
+  --clad-2:#2a2b2e;
+  --clad-3:#3a3c40;
+  --bath:#e4e3df;
+  --bath-2:#d2d1cc;
+  --corten:#a4532a;
+  --corten-2:#8c4520;
+  --corten-lt:#d98a5c;
+  --pine:#d09443;
+  --ink:#1c1d1f;
+  --ink-soft:#55565a;
+  --display:"Jost","Futura","Century Gothic",sans-serif;
+  --text:"Karla","Helvetica Neue","Arial",sans-serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bath);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--corten);outline-offset:3px}
+.dark :focus-visible,.through :focus-visible,.close :focus-visible,.phonebar :focus-visible,footer :focus-visible,.strip :focus-visible,.top :focus-visible{outline-color:var(--corten-lt)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--bath);padding:8px 12px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.strip{background:var(--clad);color:var(--bath);font-size:14px;text-align:center;margin:0;border-bottom:1px solid var(--clad-3);
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px var(--gut-r) 0 var(--gut)}
+.mark{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--bath)}
+.mark svg{width:30px;height:34px}
+.mark span{font-family:var(--display);font-weight:400;font-size:20px;letter-spacing:.32em}
+.top nav{display:flex;gap:22px;align-items:center;font-weight:600;font-size:16px}
+.top nav a{color:var(--bath);text-decoration:none}
+.top nav a.btn{color:#fff}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:0;
+  font-family:var(--text);font-weight:700;font-size:17px;text-decoration:none;border:0;cursor:pointer;background:var(--corten);color:#fff}
+.btn:hover{background:var(--corten-2)}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.line:hover{background:rgba(255,255,255,.08)}
+@media (max-width:820px){.top nav a:not(.btn){display:none}}
+
+/* ---------- Act 1 (signature): through the triangle, afternoon to Milky Way ---------- */
+.through{position:relative;height:420vh;background:var(--clad)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--clad)}
+.view{position:absolute;inset:0;will-change:transform,opacity}
+.view img{width:100%;height:100%;object-fit:cover}
+.view.dusk,.view.night{opacity:0}
+.view.day img{object-position:50% 55%}
+.view.dusk img{object-position:50% 60%}
+.wall{position:absolute;inset:0;z-index:3;will-change:transform;transform-origin:50% 50%}
+.wall svg{width:100%;height:100%;display:block}
+.wall .skin{fill:var(--clad)}
+.wall .facet{stroke:#2c2e31;stroke-width:1.2;fill:none}
+.wall .rim{fill:none;stroke:#0e0f10;stroke-width:5}
+.lede-a{position:absolute;z-index:4;left:var(--gut);bottom:clamp(28px,8vh,90px);max-width:min(520px,40vw);color:var(--bath);will-change:transform,opacity}
+.lede-a h1{font-weight:300;font-size:clamp(46px,5.4vw,82px);letter-spacing:.02em}
+.lede-a p{font-size:clamp(17px,1.4vw,20px);margin-top:14px;color:#cfcdc8}
+.award{position:absolute;z-index:4;right:var(--gut-r);bottom:clamp(28px,8vh,90px);max-width:300px;text-align:right;color:#cfcdc8;font-size:15px;line-height:1.4;will-change:opacity}
+.award b{display:block;font-family:var(--display);font-weight:400;font-size:22px;color:var(--bath);margin-bottom:4px}
+.cap{position:absolute;z-index:5;left:var(--gut);bottom:clamp(24px,7vh,80px);max-width:min(470px,calc(100% - 40px));opacity:0;will-change:transform,opacity;
+  background:rgba(28,29,31,.88);color:var(--bath);padding:clamp(18px,2.2vw,28px) clamp(20px,2.4vw,30px)}
+.cap .t{font-family:var(--display);font-size:16px;letter-spacing:.14em;color:var(--corten-lt)}
+.cap h2{font-size:clamp(28px,2.8vw,40px);margin-top:6px}
+.cap p{font-size:17px;margin-top:8px;color:#d6d4cf}
+@media (max-width:699px){
+  .through{height:400vh}
+  .lede-a{max-width:none;right:var(--gut-r);top:72px;bottom:auto}
+  .lede-a h1{font-size:44px}
+  .lede-a p{font-size:17px}
+  .award{left:var(--gut);right:var(--gut-r);bottom:calc(20px + env(safe-area-inset-bottom,0px));text-align:left;max-width:none;font-size:14px}
+  .award b{font-size:19px}
+  .cap{bottom:calc(16px + env(safe-area-inset-bottom,0px));right:var(--gut-r)}
+  .cap p{font-size:16px}
+}
+@media (max-height:560px) and (prefers-reduced-motion: no-preference){.lede-a p,.award{display:none}.cap p{display:none}}
+
+/* ---------- Sections ---------- */
+.wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
+.inner{max-width:1200px;margin:0 auto}
+section{scroll-margin-top:10px}
+.lede{font-size:clamp(19px,1.6vw,21px);max-width:34em}
+.quote{font-size:clamp(20px,1.9vw,25px);line-height:1.4}
+.who{font-size:15px;color:var(--ink-soft);margin-top:8px}
+.cap-s{font-size:15px;color:var(--ink-soft);margin-top:8px}
+h2.big{font-size:clamp(44px,5.6vw,80px);font-weight:300}
+dl.facts{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:22px;row-gap:12px;font-size:17px;line-height:1.5}
+dl.facts dt{font-weight:700;font-size:16px;padding-top:1px;white-space:nowrap}
+dl.facts dd{margin:0;border-bottom:1px solid var(--bath-2);padding-bottom:12px}
+
+/* The house: light, ply band */
+.house{padding-block:clamp(72px,9vw,130px) 0}
+.house .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.house .lede{margin-top:18px}
+.house .lede + .lede{margin-top:14px}
+@media (max-width:880px){.house .inner{grid-template-columns:minmax(0,1fr)}}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;
+  padding:clamp(36px,5vw,60px) var(--gut-r) clamp(64px,8vw,110px) var(--gut);margin:0}
+.rail figure{margin:0;flex:0 0 auto;width:clamp(240px,27vw,380px);scroll-snap-align:start}
+.rail img{width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--bath-2)}
+.rail figcaption{font-size:15px;margin-top:8px;color:var(--ink-soft)}
+
+/* Outside: dark, big bath photo with facts beside */
+.dark{background:var(--clad);color:var(--bath)}
+.outside{padding-block:clamp(72px,9vw,130px)}
+.outside .head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:end}
+.outside .lede{color:#d6d4cf}
+.wide{margin:clamp(30px,4vw,48px) 0 0}
+.wide img{width:100%;aspect-ratio:1440/961;object-fit:cover}
+.out-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;margin-top:12px}
+.out-grid figure{margin:0}
+.out-grid img{width:100%;height:clamp(240px,32vw,460px);object-fit:cover}
+.out-grid .w5{grid-column:span 5}.out-grid .w4{grid-column:span 4}.out-grid .w3{grid-column:span 3}
+.out-grid figcaption{font-size:15px;color:#a9a8a4;margin-top:8px}
+.out-notes{margin-top:clamp(28px,4vw,44px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px clamp(28px,5vw,64px)}
+.out-notes p{border-top:1px solid var(--clad-3);padding-top:14px;color:#d6d4cf}
+.out-notes b{color:var(--bath)}
+@media (max-width:880px){.outside .head,.out-notes{grid-template-columns:minmax(0,1fr)}.out-grid .w5,.out-grid .w4{grid-column:span 6}.out-grid .w3{grid-column:span 12}.out-grid img{height:auto;aspect-ratio:4/5}.out-grid .w3 img{aspect-ratio:3/2}}
+
+/* Getting in: light, the honest bit, numbered because it is a real sequence */
+.getin{padding-block:clamp(72px,9vw,130px)}
+.getin .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.getin ol{margin:28px 0 0;padding:0;list-style:none;counter-reset:s}
+.getin li{counter-increment:s;display:grid;grid-template-columns:48px minmax(0,1fr);gap:12px;padding:16px 0;border-top:1px solid var(--bath-2)}
+.getin li::before{content:counter(s);font-family:var(--display);font-size:30px;line-height:1;color:var(--corten)}
+.getin li b{display:block}
+.getin .ph img{width:100%;aspect-ratio:1440/959;object-fit:cover}
+.small{font-size:15px;color:var(--ink-soft);margin-top:12px}
+@media (max-width:880px){.getin .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Guests: ply band */
+.guests{background:var(--pine);color:var(--ink);padding-block:clamp(72px,9vw,120px)}
+.score{display:flex;align-items:baseline;gap:20px;flex-wrap:wrap;margin-top:22px}
+.score b{font-family:var(--display);font-weight:300;font-size:clamp(76px,10vw,140px);line-height:.85;font-variant-numeric:tabular-nums}
+.score span{font-size:18px;max-width:20em}
+.quotes{list-style:none;margin:clamp(36px,5vw,56px) 0 0;padding:0;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:22px clamp(28px,5vw,64px)}
+.quotes li{border-top:1px solid rgba(28,29,31,.4);padding-top:16px}
+.quotes li:first-child{grid-row:span 2}
+.quotes li:first-child .quote{font-size:clamp(24px,2.8vw,36px);line-height:1.3}
+.guests .who{color:#3b2a14}
+@media (max-width:880px){.quotes{grid-template-columns:minmax(0,1fr)}.quotes li:first-child{grid-row:auto}}
+
+/* Book */
+.book{background:var(--bath-2);padding-block:clamp(72px,9vw,130px)}
+.book .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.book .lede{margin-top:16px}
+.book .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.before{margin-top:28px;font-size:16px;padding-left:18px}
+.before li{margin-bottom:8px}
+.book figure{margin:0}
+.book figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+@media (max-width:880px){.book .inner{grid-template-columns:minmax(0,1fr)}.book figure img{aspect-ratio:3/2}}
+
+/* Close: the house at night, the triangle lit */
+.close{position:relative;color:var(--bath);background:var(--clad)}
+.close img{width:100%;height:min(86vh,760px);object-fit:cover;object-position:50% 50%}
+.close .panel{position:absolute;left:var(--gut);bottom:clamp(24px,6vh,60px);max-width:520px;background:rgba(28,29,31,.9);padding:clamp(22px,3vw,34px)}
+.close h2{font-size:clamp(36px,4.2vw,58px);font-weight:300}
+.close p{margin-top:10px;color:#d6d4cf}
+.close .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+@media (max-width:700px){.close img{height:58vh}.close .panel{position:relative;left:auto;bottom:auto;max-width:none;background:var(--clad)}}
+footer{background:var(--clad);color:#b9b8b3;font-size:15px;padding-block:28px calc(28px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--clad-3)}
+footer .inner{display:grid;gap:6px}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;
+  padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);
+  background:rgba(28,29,31,.97);transform:translateY(110%);visibility:hidden;transition:transform .25s ease-out,visibility 0s .25s}
+.phonebar.on{transform:none;visibility:visible;transition:transform .25s ease-out}
+.phonebar .btn{flex:1;min-height:50px}
+.phonebar .btn.line{color:var(--bath)}
+@media (max-width:820px){.phonebar{display:flex}footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}}
+
+@media (prefers-reduced-motion: reduce){
+  .through{height:auto}
+  .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column}
+  .wall{display:none}
+  .view{position:relative;inset:auto;opacity:1 !important;transform:none !important}
+  .view img{height:auto;aspect-ratio:16/10}
+  .view.day{order:2}.lede-a{order:1}.award{order:3}.cap.c1{order:4}.view.dusk{order:5}.cap.c2{order:6}.view.night{order:7}.cap.c3{order:8}
+  .lede-a,.award,.cap{position:relative;left:auto;right:auto;top:auto;bottom:auto;max-width:none;opacity:1 !important;transform:none !important;text-align:left}
+  .lede-a{padding:96px var(--gut-r) 28px var(--gut)}
+  .award{padding:18px var(--gut-r) 0 var(--gut)}
+  .cap{background:var(--clad)}
+  .phonebar,.phonebar.on{transition:none}
+}
+@media (prefers-reduced-motion: reduce) and (max-width:699px){.view img{aspect-ratio:4/5}}
+</style>
+<noscript><style>
+  .through{height:auto}
+  .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column}
+  .wall{display:none}
+  .view{position:relative;inset:auto;opacity:1 !important;transform:none !important}
+  .view img{height:auto;aspect-ratio:16/10}
+  .view.day{order:2}.lede-a{order:1}.award{order:3}.cap.c1{order:4}.view.dusk{order:5}.cap.c2{order:6}.view.night{order:7}.cap.c3{order:8}
+  .lede-a,.award,.cap{position:relative;left:auto;right:auto;top:auto;bottom:auto;max-width:none;opacity:1 !important;transform:none !important;text-align:left}
+  .lede-a{padding:96px var(--gut-r) 28px var(--gut)}
+  .award{padding:18px var(--gut-r) 0 var(--gut)}
+  .cap{background:var(--clad)}
+  .phonebar,.phonebar.on{transition:none}
+.phonebar{display:none !important}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#book">Skip to booking</a>
+<p class="strip">A website idea made by Lamplit Studio for Ligo. Not their official site.</p>
+
+<header class="top">
+  <a class="mark" href="#through" aria-label="Ligo, back to top">
+    <svg viewBox="0 0 30 34" aria-hidden="true"><path d="M2 32V12.5L15 2l13 10.5V32z" fill="none" stroke="#c26a38" stroke-width="2.2"/><rect x="9" y="15" width="12" height="12" fill="none" stroke="#c26a38" stroke-width="2.2"/></svg>
+    <span aria-hidden="true">LIGO</span>
+  </a>
+  <nav aria-label="Main">
+    <a href="#house">The house</a>
+    <a href="#outside">Outside</a>
+    <a href="#getin">Getting in</a>
+    <a class="btn" href="#book">Check dates</a>
+  </nav>
+</header>
+
+<main>
+<section class="through" id="through" aria-label="Through Ligo's triangle window, from afternoon to night">
+  <div class="stage">
+    <div class="view day" aria-hidden="true">
+      <picture><source media="(min-width:700px)" srcset="img/day-1440.jpg"><img src="img/day-p-800.jpg" alt="" width="538" height="961" fetchpriority="high"></picture>
+    </div>
+    <div class="view dusk" aria-hidden="true">
+      <picture><source media="(min-width:700px)" srcset="img/dusk-1440.jpg"><img src="img/dusk-p-800.jpg" alt="" width="604" height="1080"></picture>
+    </div>
+    <div class="view night" aria-hidden="true">
+      <picture><source media="(min-width:700px)" srcset="img/night-1440.jpg"><img src="img/night-p-800.jpg" alt="" width="538" height="961"></picture>
+    </div>
+    <div class="wall" aria-hidden="true">
+      <svg viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+        <path class="skin" fill-rule="evenodd" d="M-3000-3000H4000V4000H-3000Z M500 318 L626 591 L374 591 Z"/>
+        <path class="facet" d="M500 318 L-3000 -1400 M626 591 L4000 2300 M374 591 L-3000 2600 M500 318 L4000 -900 M626 591 L640 4000"/>
+        <path class="rim" d="M500 318 L626 591 L374 591 Z"/>
+      </svg>
+    </div>
+    <div class="lede-a">
+      <h1>Ligo<span class="vh">, Wolgan Valley</span></h1>
+      <p>A black tiny house for two on 100 acres of bush in the Wolgan Valley, with a triangle window onto the escarpment.</p>
+    </div>
+    <p class="award"><b>Best Nature Stay</b>Airbnb Host Awards, 2025 winner</p>
+    <div class="cap c1">
+      <p class="t">3 PM</p>
+      <h2>Arrive in the afternoon</h2>
+      <p>Check in between 3 and 6pm. Eddie or Ange drive you into the valley by 4WD.</p>
+    </div>
+    <div class="cap c2">
+      <p class="t">DUSK</p>
+      <h2>Run the outdoor bath</h2>
+      <p>The bath sits on the deck, facing the cliffs as the light goes.</p>
+    </div>
+    <div class="cap c3">
+      <p class="t">NIGHT</p>
+      <h2>The Milky Way after dark</h2>
+      <p>There's no TV and no phone reception here. Light the fire pit and watch the Milky Way come out.</p>
+    </div>
+  </div>
+</section>
+
+<section class="house" id="house">
+  <div class="wrap">
+    <div class="inner">
+      <div>
+        <h2 class="big">The house</h2>
+        <p class="lede">An architect-designed tiny house, faceted and black outside, lined in warm ply inside. The bed sits under the big triangle window, so the escarpment is the first thing you see.</p>
+        <p class="lede">Passive heating and cooling, lofted ceilings and double-glazed windows keep it comfortable. The main house is about 100 metres away, out of sight in the bush.</p>
+      </div>
+      <dl class="facts">
+        <dt>Sleeps</dt><dd>Two, in one bed under the triangle window.</dd>
+        <dt>Kitchenette</dt><dd>Mini fridge, microwave, induction cooktop, toaster, French press and stove-top espresso maker. Coffee, organic tea, olive oil, salt and pepper are supplied.</dd>
+        <dt>Bathroom</dt><dd>Rainfall shower with gas hot water, from the rainwater tanks, and a waterless compost toilet.</dd>
+        <dt>Inside</dt><dd>Books, board games and a Bluetooth speaker. No wifi, TV or phone reception.</dd>
+        <dt>Outside</dt><dd>The outdoor bath, a fire pit, a hammock, a barbecue and outdoor dining.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="rail" tabindex="0" role="region" aria-label="Photos inside Ligo">
+    <figure><img src="img/bed-600.jpg" srcset="img/bed-600.jpg 600w, img/bed-1000.jpg 768w" sizes="(max-width:880px) 72vw, 27vw" alt="The bed under the triangle window, with the escarpment framed in it" width="600" height="751" loading="lazy"><figcaption>The bed under the triangle</figcaption></figure>
+    <figure><img src="img/kitchen-600.jpg" srcset="img/kitchen-600.jpg 600w, img/kitchen-1000.jpg 768w" sizes="(max-width:880px) 72vw, 27vw" alt="Black kitchenette cabinets against ply walls, a lit shelf of cups and a stove-top espresso maker, and a steel sink" width="600" height="751" loading="lazy"><figcaption>Kitchenette</figcaption></figure>
+    <figure><img src="img/table-600.jpg" srcset="img/table-600.jpg 600w, img/table-1000.jpg 1000w" sizes="(max-width:880px) 72vw, 27vw" alt="Two cups and a stove-top espresso maker on the small table" width="600" height="750" loading="lazy"><figcaption>Coffee is supplied</figcaption></figure>
+    <figure><img src="img/shower-600.jpg" srcset="img/shower-600.jpg 600w, img/shower-1000.jpg 768w" sizes="(max-width:880px) 72vw, 27vw" alt="The glass shower with a rainfall head, a round mirror and a white basin" width="600" height="751" loading="lazy"><figcaption>Rainfall shower</figcaption></figure>
+    <figure><img src="img/basin-600.jpg" srcset="img/basin-600.jpg 600w, img/basin-1000.jpg 1000w" sizes="(max-width:880px) 72vw, 27vw" alt="A square white basin with copper tapware under an arched mirror" width="600" height="750" loading="lazy"><figcaption>The basin</figcaption></figure>
+    <figure><img src="img/sign-600.jpg" srcset="img/sign-600.jpg 600w, img/sign-1000.jpg 1000w" sizes="(max-width:880px) 72vw, 27vw" alt="The corten Ligo sign, a house outline over the name, on a weathered timber post" width="600" height="750" loading="lazy"><figcaption>The sign at the house</figcaption></figure>
+  </div>
+</section>
+
+<section class="outside dark wrap" id="outside">
+  <div class="inner">
+    <div class="head">
+      <h2 class="big">100 acres, and the national park all round</h2>
+      <p class="lede">Bushland and riverfront, with trails under the gums and along the riverbank. The Greater Blue Mountains World Heritage parks surround the valley, and the sandstone escarpment shows between the trees.</p>
+    </div>
+    <figure class="wide"><img src="img/deck-1440.jpg" srcset="img/deck-800.jpg 800w, img/deck-1440.jpg 1440w" sizes="100vw" alt="Ligo's deck with its glass doors open, a barbecue, a bistro table and the concrete bath, with cliffs behind" width="1440" height="961" loading="lazy"></figure>
+    <div class="out-grid">
+      <figure class="w5"><img src="img/bath-600.jpg" srcset="img/bath-600.jpg 600w, img/bath-1000.jpg 1000w" sizes="(max-width:880px) 50vw, 40vw" alt="Water running from a black tap into the concrete bath, the escarpment beyond" width="600" height="750" loading="lazy"><figcaption>The outdoor bath</figcaption></figure>
+      <figure class="w4"><img src="img/pit-600.jpg" srcset="img/pit-600.jpg 600w, img/pit-1000.jpg 1000w" sizes="(max-width:880px) 50vw, 32vw" alt="A timber deck chair beside the lit fire pit on gravel, in the bush" width="600" height="750" loading="lazy"><figcaption>The fire pit</figcaption></figure>
+      <figure class="w3"><img src="img/creek-600.jpg" srcset="img/creek-600.jpg 600w, img/creek-1000.jpg 768w" sizes="(max-width:880px) 100vw, 24vw" alt="Clear water running over rocks and fallen logs on the property" width="600" height="750" loading="lazy"><figcaption>The river</figcaption></figure>
+    </div>
+    <div class="out-notes">
+      <p><b>Wildlife.</b> Kangaroos and wombats are about. So are snakes and lizards, so stick to the paths.</p>
+      <p><b>The fire pit.</b> Some timber is supplied, and you can gather fallen kindling. No fires at all on fire-ban days.</p>
+    </div>
+  </div>
+</section>
+
+<section class="getin wrap" id="getin">
+  <div class="inner">
+    <div>
+      <h2 class="big">Getting in</h2>
+      <p class="lede" style="margin-top:16px">Just over two hours' drive from Sydney. Since the 2022 landslide closed the old road through the Wolgan Gap, the way in is a steep 4WD track behind a locked gate, so the hosts bring you in.</p>
+      <ol>
+        <li><span><b>Shop on the way</b>There's nothing to buy in the valley. Stock up in Lithgow or Wallerawang.</span></li>
+        <li><span><b>Park and transfer</b>Leave your car at the offsite car park. The 4WD transfer in and out is included.</span></li>
+        <li><span><b>Check in, 3 to 6pm</b>Soft bags pack in more easily than hard cases.</span></li>
+        <li><span><b>Leave at 11am</b>You're collected from Ligo and driven back to your car.</span></li>
+      </ol>
+      <p class="small">Experienced 4WD drivers can ask about driving in under escort. Extra trips out during a stay run 10am to 6pm, booked ahead, at a fee.</p>
+    </div>
+    <figure class="ph" style="margin:0">
+      <img src="img/aerial-800.jpg" srcset="img/aerial-800.jpg 800w, img/aerial-1440.jpg 1440w" sizes="(max-width:880px) 100vw, 44vw" alt="From the air: Ligo in a clearing of bush below a long line of sandstone cliffs" width="800" height="533" loading="lazy">
+      <figcaption class="cap-s">Ligo in its clearing, under the escarpment.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="guests wrap" id="guests">
+  <div class="inner">
+    <h2 class="big">What guests say</h2>
+    <p class="score"><b>4.98</b><span>from 133 reviews on Airbnb, where it's a Guest favourite</span></p>
+    <ul class="quotes">
+      <li><p class="quote">"We thoroughly enjoyed our stay and loved the fact the digital world couldn't reach us."</p><p class="who">John, Airbnb, June 2026</p></li>
+      <li><p class="quote">"The transfer into the valley was such a great touch and made everything so easy."</p><p class="who">Ashlee, Airbnb, October 2026</p></li>
+      <li><p class="quote">"Chilly nights, full moons, and a sea of stars."</p><p class="who">Caroline, Airbnb, August 2026</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="book wrap" id="book">
+  <div class="inner">
+    <div>
+      <h2 class="big">Check dates</h2>
+      <p class="lede">For two adults. No pets, because the property is surrounded by national park.</p>
+      <div class="acts">
+        <a class="btn" href="https://www.airbnb.com.au/rooms/845757568854961723" rel="noopener" target="_blank">Dates on Airbnb</a>
+        <a class="btn line" href="https://ig.me/m/tinytwo_wv" rel="noopener" target="_blank">Message Eddie and Ange</a>
+      </div>
+      <ul class="before">
+        <li>Self-catered. Bring all your food.</li>
+        <li>No wifi or phone reception. Satellite internet is there for emergencies only.</li>
+        <li>Only booked guests at the property, children and infants included. No parties.</li>
+        <li>No smoking or vaping inside.</li>
+      </ul>
+    </div>
+    <figure>
+      <img src="img/nighttri-600.jpg" srcset="img/nighttri-600.jpg 600w, img/nighttri-1000.jpg 1000w" sizes="(max-width:880px) 100vw, 44vw" alt="Ligo at night, its triangle window glowing among dark gums under the stars" width="600" height="750" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+<section class="close" aria-label="Ligo at night">
+  <img src="img/front-1440.jpg" srcset="img/front-800.jpg 800w, img/front-1440.jpg 1440w" sizes="100vw" alt="The black house at dusk, its triangle window lit warm from inside, the bath on the deck" width="1440" height="961" loading="lazy">
+  <div class="panel">
+    <h2>See you in the Wolgan Valley.</h2>
+    <p>Ligo, by Tiny Two, in the Wolgan Valley, New South Wales.</p>
+    <div class="acts">
+      <a class="btn" href="#book">Check dates</a>
+      <a class="btn line" href="https://www.instagram.com/tinytwo_wv/" rel="noopener" target="_blank">@tinytwo_wv</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="inner">
+    <p>A preview made by Lamplit Studio for Ligo. Not affiliated, not live.</p>
+    <p>Photos are Ligo's own, from their Airbnb listing.</p>
+  </div>
+</footer>
+
+<div class="phonebar" id="phonebar">
+  <a class="btn" href="#book">Check dates</a>
+  <a class="btn line" href="https://ig.me/m/tinytwo_wv" rel="noopener" target="_blank">Message us</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var q=function(s){return document.querySelector(s)};
+  var bar=q('#phonebar'), act=q('#through');
+  var wall=q('.wall'), day=q('.view.day'), dusk=q('.view.dusk'), night=q('.view.night'), la=q('.lede-a'), aw=q('.award');
+  var caps=[q('.cap.c1'),q('.cap.c2'),q('.cap.c3')];
+  var clamp=function(v){return v<0?0:v>1?1:v};
+  var seg=function(p,a,b){return clamp((p-a)/(b-a))};
+  var ease=function(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
+  function prog(el){var r=el.getBoundingClientRect();var st=el.firstElementChild;var span=el.offsetHeight-(st?st.offsetHeight:window.innerHeight);return span>0?clamp(-r.top/span):0}
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    var vh=window.innerHeight, bk=q('#book').getBoundingClientRect();
+    bar.classList.toggle('on', bar.contains(document.activeElement) || (act.getBoundingClientRect().bottom<vh*.5 && (bk.top>vh*.9 || bk.bottom<0)));
+    if(reduce) return;
+    var p=prog(act);
+    // the window grows until you are through it
+    var w=ease(seg(p,.04,.34));
+    wall.style.transform='scale('+(1+w*w*15).toFixed(4)+')';
+    wall.style.opacity=(1-seg(p,.3,.36)).toFixed(3);
+    la.style.opacity=(1-seg(p,.03,.14)).toFixed(3);
+    la.style.transform='translate3d(0,'+(-seg(p,.03,.14)*30).toFixed(1)+'px,0)';
+    aw.style.opacity=(1-seg(p,.03,.12)).toFixed(3);
+    // the view behind moves slower than the wall, then the day turns
+    day.style.transform='scale('+(1.18-ease(seg(p,0,.4))*.18).toFixed(4)+')';
+    var d=seg(p,.5,.62), n=seg(p,.76,.88);
+    dusk.style.opacity=d.toFixed(3);
+    dusk.style.transform='scale('+(1.08-ease(seg(p,.5,.8))*.08).toFixed(4)+')';
+    night.style.opacity=n.toFixed(3);
+    night.style.transform='scale('+(1.08-ease(seg(p,.76,1))*.08).toFixed(4)+')';
+    var o=[seg(p,.34,.4)*(1-seg(p,.48,.53)), seg(p,.6,.65)*(1-seg(p,.73,.77)), seg(p,.86,.91)];
+    caps.forEach(function(c,i){c.style.opacity=o[i].toFixed(3);c.style.transform='translate3d(0,'+((1-o[i])*18).toFixed(1)+'px,0)'});
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(mq.addEventListener) mq.addEventListener('change',function(){location.reload()});
+  frame();
+})();
+</script>
+</body>
+</html>

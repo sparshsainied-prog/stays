@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>It's Bonza! at Mill About Vineyard | An accessible cabin for two in the Barossa</title>
+<meta name="description" content="A corrugated-iron cabin for two on a small vineyard near Williamstown, Barossa Valley, with no steps from the car to the bed. A website idea made by Lamplit Studio for It's Bonza! at Mill About Vineyard.">
+<meta property="og:title" content="It's Bonza! at Mill About Vineyard, Barossa Valley">
+<meta property="og:description" content="A website idea made by Lamplit Studio for It's Bonza! at Mill About Vineyard. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/itsbonza/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/itsbonza/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2322333f'/%3E%3Cpath d='M2 16c3.5-6 3.5-6 7 0s3.5 6 7 0 3.5-6 7 0 3.5 6 7 0' fill='none' stroke='%23e7eae9' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/drive-1440.jpg" media="(min-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/drive-tall-800.jpg" media="(max-width: 699px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Patrick+Hand+SC&display=swap">
+<style>
+/* Tokens come from the cabin itself (see brand.md):
+   iron   = the shaded galvanised wall beside the front door
+   silver = the sunlit roof iron and the pale gravel drive
+   red    = the red cushions on the lounge and reading chair
+   pine   = the honey pine lining inside
+   board  = the brown timber of their hand-painted welcome sign
+   Patrick Hand SC echoes the brushed capitals on that sign.
+   Atkinson Hyperlegible was drawn for readers with low vision. */
+:root{
+  --iron:#22333f;
+  --iron-2:#2e4352;
+  --iron-3:#3d5566;
+  --silver:#e7eae9;
+  --silver-2:#d3d8d7;
+  --red:#b3262d;
+  --red-2:#9a1f25;
+  --pine:#c98a4b;
+  --board:#6b3a2a;
+  --chalk:#d9e8f0;
+  --ink:#1d2a33;
+  --ink-soft:#4b5a64;
+  --display:"Patrick Hand SC","Marker Felt","Comic Sans MS",cursive;
+  --text:"Atkinson Hyperlegible","Verdana","Segoe UI",sans-serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--silver);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--iron);outline-offset:3px}
+.dark :focus-visible,.direct :focus-visible,.arrive :focus-visible,.route :focus-visible,.close :focus-visible,.phonebar :focus-visible,footer :focus-visible,.strip :focus-visible{outline-color:var(--chalk)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--silver);padding:8px 12px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.strip{background:var(--iron);color:var(--silver);font-size:14px;text-align:center;margin:0;
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:flex-end;align-items:center;gap:14px;
+  padding:16px var(--gut-r) 0 var(--gut)}
+.top nav{display:flex;gap:22px;align-items:center;font-weight:700;font-size:16px}
+.top nav a{color:#fff;text-decoration:none;text-shadow:0 1px 8px rgba(10,18,24,.7)}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:3px;
+  font-family:var(--text);font-weight:700;font-size:17px;text-decoration:none;border:0;cursor:pointer;
+  background:var(--red);color:#fff}
+.btn:hover{background:var(--red-2)}
+.btn.iron{background:var(--iron);color:var(--silver)}
+.btn.iron:hover{background:var(--iron-2)}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.line:hover{background:rgba(255,255,255,.08)}
+.top nav .btn{text-shadow:none}
+@media (max-width:820px){.top nav a:not(.btn){display:none}}
+
+/* The sign: their hand-painted board, as the wordmark */
+.board{display:inline-block;background:var(--board);color:var(--chalk);font-family:var(--display);text-align:center;
+  padding:.28em .5em .2em;border-radius:3px;transform:rotate(-1.6deg);position:relative;
+  box-shadow:0 2px 0 rgba(0,0,0,.25),0 14px 28px rgba(0,0,0,.35)}
+.board::before,.board::after{content:"";position:absolute;top:.32em;width:.16em;height:.16em;border-radius:50%;background:#a7aeb1;box-shadow:inset 0 0 0 .04em #6d7477}
+.board::before{left:.22em}.board::after{right:.22em}
+.board .l1{display:block;font-size:1em;line-height:.95}
+.board .l2{display:block;font-size:.62em;line-height:1.1;margin-top:.06em}
+
+/* ---------- Act 1: arrive. Two sheets of their corrugated iron slide open onto the drive ---------- */
+.arrive{position:relative;height:230vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--iron)}
+.layer{position:absolute;inset:0;will-change:transform,opacity}
+.layer img{width:100%;height:100%;object-fit:cover}
+.l-drive{transform:scale(1.14);transform-origin:50% 60%}
+.l-drive img{object-position:50% 62%}
+.l-cabin{inset:auto var(--gut-r) clamp(24px,7vh,80px) auto;width:min(46vw,640px);opacity:0;transform:translate3d(0,40%,0);z-index:3}
+.l-cabin img{height:auto;aspect-ratio:3/2;border-radius:3px;box-shadow:0 18px 40px rgba(10,18,24,.45)}
+.l-cabin figcaption{font-size:14px;color:#fff;margin-top:8px;text-shadow:0 1px 6px rgba(10,18,24,.9)}
+.sheet{position:absolute;top:0;bottom:0;width:50.5%;z-index:5;will-change:transform;
+  background-color:#8e9a9f;
+  background-image:repeating-linear-gradient(90deg,#76848b 0,#9aa6ab 9px,#c3cbce 15px,#9aa6ab 21px,#76848b 30px);
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}
+.sheet.a{left:0;border-right:3px solid #5f6c72;transform:translate3d(-20%,0,0)}
+.sheet.b{right:0;border-left:3px solid #5f6c72;transform:translate3d(20%,0,0)} /* slop-ok: the seam where two iron sheets meet, not a card stripe */
+.sheet .nail{position:absolute;width:7px;height:7px;border-radius:50%;background:#59656b}
+.hang{position:absolute;z-index:6;left:50%;top:50%;transform:translate(-50%,-56%);text-align:center;will-change:transform,opacity;width:max-content;max-width:92vw}
+.hang h1{font-size:clamp(58px,9vw,132px)}
+.hang .where{display:table;margin:22px auto 0;background:var(--iron);color:var(--silver);font-size:clamp(16px,1.4vw,19px);padding:8px 14px;border-radius:3px}
+.copy-a{position:absolute;z-index:4;left:var(--gut);top:clamp(70px,14vh,150px);max-width:min(560px,44vw);opacity:0;color:#fff;will-change:transform,opacity}
+.copy-a .panel{background:rgba(34,51,63,.9);padding:clamp(20px,2.4vw,32px) clamp(20px,2.6vw,34px);border-radius:3px}
+.copy-a p.big{font-weight:700;font-size:clamp(28px,2.7vw,40px);line-height:1.15}
+.copy-a p.lede{font-size:clamp(17px,1.4vw,19px);margin-top:14px}
+.copy-a .acts{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+@media (max-width:699px){
+  .arrive{height:215vh}
+  .l-cabin{left:var(--gut);right:var(--gut-r);width:auto;bottom:calc(18px + env(safe-area-inset-bottom,0px))}
+  .l-cabin figcaption{display:none}
+  .copy-a{top:64px;left:var(--gut);right:var(--gut-r);max-width:none}
+  .copy-a p.big{font-size:clamp(24px,6.6vw,28px)}
+  .copy-a .acts{display:none}
+  .hang h1{font-size:clamp(50px,16vw,72px)}
+}
+@media (max-width:699px) and (max-height:800px){.copy-a p.lede{font-size:16px;margin-top:10px}.copy-a .panel{padding:16px 18px}}
+@media (min-width:700px) and (max-height:620px){.copy-a p.lede{display:none}}
+
+/* ---------- Act 2 (signature): car to bed, no steps. Their floorplan, walked ---------- */
+.route{position:relative;height:440vh;background:var(--iron);color:var(--silver)}
+.route-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:grid;
+  grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,64px);align-items:center;
+  padding:clamp(56px,8vh,90px) var(--gut-r) clamp(32px,6vh,70px) var(--gut)}
+.route-head{position:absolute;left:var(--gut);top:clamp(20px,4vh,40px);right:var(--gut-r)}
+.route-head h2{font-size:clamp(36px,4.2vw,60px);color:var(--silver)}
+.plan{width:100%;max-height:calc(100svh - 160px);margin-top:40px}
+.plan svg{width:100%;height:100%;max-height:calc(100svh - 170px);display:block;overflow:visible}
+.plan .wall{fill:none;stroke:var(--silver);stroke-width:5;stroke-linejoin:round}
+.plan .thin{fill:none;stroke:var(--iron-3);stroke-width:2}
+.plan .deckfill{fill:#5a4232}
+.plan .porchfill{fill:#4a3a2f}
+.plan .floor{fill:#2b3f4c}
+.plan .ramp{fill:var(--pine)}
+.plan .rampline{stroke:#8a5a2c;stroke-width:2}
+.plan .bay{fill:none;stroke:var(--chalk);stroke-width:2.5;stroke-dasharray:7 6}
+.plan .lbl{fill:#b9c6cc;font-family:var(--text);font-size:17px}
+.plan .bed{fill:#d9dfe1;stroke:none}
+.plan .pillow{fill:#fff}
+.plan .door{fill:none;stroke:var(--pine);stroke-width:3}
+.plan .trail{fill:none;stroke:var(--chalk);stroke-width:3;stroke-dasharray:2 9;stroke-linecap:round;opacity:.45}
+.plan .seg{stroke:var(--red);stroke-width:6;stroke-linecap:round;opacity:0}
+.plan .dot{fill:var(--silver);stroke:var(--iron);stroke-width:2;opacity:.6}
+.plan .marker circle{fill:var(--red);stroke:#fff;stroke-width:3}
+.stops{position:relative;height:min(560px, calc(100svh - 150px))}
+.stop{position:absolute;inset:0;display:grid;grid-template-rows:minmax(0,1fr) auto;gap:16px;opacity:0;will-change:opacity}
+.stop:first-child{opacity:1}
+.stop img{width:100%;height:100%;object-fit:cover;border-radius:3px;min-height:0}
+.stop .n{font-family:var(--display);font-size:22px;color:var(--pine)}
+.stop h3{font-size:clamp(30px,2.8vw,40px);color:#fff}
+.stop p{font-size:17px;margin-top:6px;color:#dfe5e7;max-width:30em}
+.route-note{position:absolute;left:var(--gut);bottom:calc(10px + env(safe-area-inset-bottom,0px));font-size:13px;color:#a9b6bc}
+@media (max-width:820px){
+  .route{height:520vh}
+  .route-stage{grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr);align-content:start;gap:12px;padding-top:66px;padding-bottom:calc(30px + env(safe-area-inset-bottom,0px))}
+  .route-head{top:16px}
+  .route-head h2{font-size:clamp(28px,8vw,38px)}
+  .plan{margin-top:0}
+  .plan svg{height:auto;max-height:36svh}
+  .route-stage{align-items:start}
+  .stops{height:100%;min-height:0;align-self:stretch}
+  .stop{grid-template-rows:auto;grid-template-columns:38% minmax(0,1fr);align-items:start;gap:14px}
+  .stop img{height:auto;aspect-ratio:4/5}
+  .stop h3{font-size:26px}
+  .stop p{font-size:16px}
+  .stop .n{font-size:19px}
+  .route-note{display:none}
+}
+@media (max-width:820px) and (max-height:800px){.plan svg{max-height:32svh}.stop p{font-size:15px;line-height:1.5}}
+@media (min-width:821px) and (max-height:560px){.stop{grid-template-rows:auto}.stop img{display:none}.route-head h2{font-size:30px}.plan{margin-top:24px}}
+
+/* ---------- Sections ---------- */
+.wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
+.inner{max-width:1200px;margin:0 auto}
+section{scroll-margin-top:10px}
+.lede{font-size:clamp(19px,1.6vw,21px);max-width:34em}
+.quote{font-size:clamp(20px,1.9vw,25px);line-height:1.4}
+.who{font-size:15px;color:var(--ink-soft);margin-top:8px}
+.cap-s{font-size:15px;color:var(--ink-soft);margin-top:8px}
+h2.big{font-size:clamp(46px,6vw,84px)}
+dl.facts{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:22px;row-gap:12px;font-size:17px;line-height:1.5}
+dl.facts dt{font-weight:700;font-size:16px;padding-top:1px;white-space:nowrap}
+dl.facts dd{margin:0;border-bottom:2px solid var(--silver-2);padding-bottom:12px}
+
+/* The cabin */
+.cabin{padding-block:clamp(72px,9vw,130px) 0}
+.cabin .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.cabin .lede{margin-top:18px}
+.cabin .lede + .lede{margin-top:14px}
+@media (max-width:880px){.cabin .inner{grid-template-columns:minmax(0,1fr)}}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;
+  padding:clamp(36px,5vw,60px) var(--gut-r) 16px var(--gut);margin:0}
+.rail figure{margin:0;flex:0 0 auto;width:clamp(240px,27vw,380px);scroll-snap-align:start}
+.rail img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px;background:var(--silver-2)}
+.rail figcaption{font-size:15px;margin-top:8px;color:var(--ink-soft)}
+.rail-note{font-size:15px;color:var(--ink-soft);padding:0 var(--gut-r) clamp(64px,8vw,110px) var(--gut)}
+
+/* Bread: dark band, the loaf large */
+.dark{background:var(--iron);color:var(--silver)}
+.bread{padding-block:clamp(72px,9vw,130px)}
+.bread .inner{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,80px);align-items:center}
+.bread img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
+.bread .lede{margin-top:16px;color:#dfe5e7}
+.bread ul{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:20px}
+.bread li{border-top:2px solid var(--iron-3);padding-top:14px}
+.bread .who{color:#a9b6bc}
+.bread .cap-s{color:#a9b6bc}
+@media (max-width:880px){.bread .inner{grid-template-columns:minmax(0,1fr)}.bread figure{order:2}}
+
+/* The farm */
+.farm{padding-block:clamp(72px,9vw,130px)}
+.farm-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:end}
+.vines{margin:clamp(30px,4vw,48px) 0 0}
+.vines img{width:100%;aspect-ratio:1440/812;object-fit:cover;border-radius:3px}
+.grapes{margin-top:clamp(28px,4vw,44px);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,56px);align-items:start}
+.grapes h3{font-size:clamp(30px,3vw,42px)}
+.grapes p{margin-top:10px}
+.grapes ul{margin:14px 0 0;padding-left:20px}
+.farm-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;margin-top:clamp(36px,5vw,56px)}
+.farm-grid figure{margin:0}
+.farm-grid img{width:100%;height:clamp(240px,34vw,480px);object-fit:cover;border-radius:3px}
+.farm-grid .w5{grid-column:span 5}.farm-grid .w4{grid-column:span 4}.farm-grid .w3{grid-column:span 3}
+.aerial{margin:12px 0 0}
+.aerial img{width:100%;aspect-ratio:1600/558;object-fit:cover;border-radius:3px}
+.note{font-size:16px;background:var(--silver-2);padding:12px 14px;border-radius:3px;margin-top:18px}
+@media (max-width:880px){.farm-head,.grapes{grid-template-columns:minmax(0,1fr)}.farm-grid .w5,.farm-grid .w4,.farm-grid .w3{grid-column:span 6}.farm-grid img{height:auto;aspect-ratio:4/5}.farm-grid .w3{grid-column:span 12}.farm-grid .w3 img{aspect-ratio:3/2}}
+
+/* Guests: pine wall */
+.guests{background:var(--pine);color:var(--ink);padding-block:clamp(72px,9vw,120px)}
+.score{display:flex;align-items:baseline;gap:20px;flex-wrap:wrap;margin-top:22px}
+.score b{font-family:var(--display);font-weight:400;font-size:clamp(76px,10vw,140px);line-height:.85;font-variant-numeric:tabular-nums}
+.score span{font-size:18px;max-width:18em}
+.quotes{list-style:none;margin:clamp(36px,5vw,56px) 0 0;padding:0;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:22px clamp(28px,5vw,64px)}
+.quotes li{border-top:2px solid rgba(29,42,51,.35);padding-top:16px}
+.quotes li:first-child{grid-row:span 2}
+.quotes li:first-child .quote{font-size:clamp(24px,2.8vw,36px);line-height:1.3}
+.guests .who{color:#3a2a1c}
+@media (max-width:880px){.quotes{grid-template-columns:minmax(0,1fr)}.quotes li:first-child{grid-row:auto}}
+
+/* Around */
+.around{padding-block:clamp(72px,9vw,130px)}
+.around .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+table.dist{width:100%;border-collapse:collapse;margin-top:24px;font-size:17px}
+table.dist th{text-align:left;font-size:15px;color:var(--ink-soft);font-weight:700;padding:0 0 8px}
+table.dist td{padding:12px 0;border-top:2px solid var(--silver-2);vertical-align:top}
+table.dist td:last-child{text-align:right;font-weight:700;white-space:nowrap;padding-left:16px;font-variant-numeric:tabular-nums}
+.around .ph img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
+.small{font-size:15px;color:var(--ink-soft);margin-top:12px}
+@media (max-width:880px){.around .inner{grid-template-columns:minmax(0,1fr)}.around .ph img{aspect-ratio:4/3}}
+
+/* Book */
+.book{background:var(--silver-2);padding-block:clamp(72px,9vw,130px)}
+.book .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.book .lede{margin-top:16px}
+.platforms{display:grid;gap:12px;margin-top:28px;max-width:420px}
+.platforms .btn{justify-content:flex-start}
+.direct{background:var(--iron);color:var(--silver);border-radius:3px;padding:clamp(22px,3vw,34px)}
+.direct h3{font-size:clamp(30px,3vw,42px)}
+.direct p{margin-top:8px;color:#dfe5e7}
+.direct .btn{margin-top:18px}
+.direct .addr{font-size:15px;color:#c5cfd3;overflow-wrap:anywhere}
+.before{margin-top:28px;font-size:16px;padding-left:18px}
+.before li{margin-bottom:8px}
+@media (max-width:880px){.book .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Close: the sign by the door */
+.close{position:relative;color:#fff;background:var(--iron)}
+.close img{width:100%;height:min(86vh,760px);object-fit:cover;object-position:40% 45%}
+.close .panel{position:absolute;right:var(--gut-r);bottom:clamp(24px,6vh,60px);max-width:540px;background:rgba(34,51,63,.92);padding:clamp(22px,3vw,34px);border-radius:3px}
+.close h2{font-size:clamp(38px,4.6vw,62px)}
+.close p{margin-top:10px}
+.close .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+@media (max-width:700px){.close img{height:58vh;object-position:34% 40%}.close .panel{position:relative;right:auto;bottom:auto;max-width:none;border-radius:0;background:var(--iron)}}
+footer{background:var(--iron);color:#c5cfd3;font-size:15px;padding-block:28px calc(28px + env(safe-area-inset-bottom,0px))}
+footer .inner{display:grid;gap:6px}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;
+  padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);
+  background:rgba(34,51,63,.97);transform:translateY(110%);visibility:hidden;transition:transform .25s ease-out,visibility 0s .25s}
+.phonebar.on{transform:none;visibility:visible;transition:transform .25s ease-out}
+.phonebar .btn{flex:1;min-height:50px}
+.phonebar .btn.line{color:var(--silver)}
+@media (max-width:820px){.phonebar{display:flex}footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}}
+
+@media (prefers-reduced-motion: reduce){
+  .arrive,.route{height:auto}
+  .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column}
+  .layer{position:relative;inset:auto;opacity:1 !important;transform:none !important}
+  .l-drive img{height:auto;aspect-ratio:16/10}
+  .sheet{display:none}
+  .hang{position:absolute;left:50%;top:min(28vw,220px);transform:translate(-50%,-50%) !important;opacity:1 !important}
+  .hang .where{display:none}
+  .l-cabin{display:none}
+  .copy-a{position:relative;left:auto;right:auto;top:auto;max-width:none;opacity:1 !important;transform:none !important}
+  .copy-a .panel{border-radius:0;background:var(--iron)}
+  .copy-a .acts{display:flex}
+  .route-stage{position:relative;height:auto;overflow:visible;grid-template-columns:minmax(0,1fr);padding-top:110px}
+  .plan .seg{opacity:1 !important}
+  .plan .marker{display:none}
+  .stops{height:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:28px}
+  .stop{position:relative;inset:auto;opacity:1 !important;grid-template-columns:none;grid-template-rows:auto auto}
+  .stop img{height:auto;aspect-ratio:4/5}
+  .route-note{position:relative;left:auto;bottom:auto;display:block;padding-top:20px}
+  .phonebar,.phonebar.on{transition:none}
+}
+@media (prefers-reduced-motion: reduce) and (max-width:699px){.hang{top:30vw}}
+</style>
+<noscript><style>
+  .arrive,.route{height:auto}
+  .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column}
+  .layer{position:relative;inset:auto;opacity:1 !important;transform:none !important}
+  .l-drive img{height:auto;aspect-ratio:16/10}
+  .sheet{display:none}
+  .hang{position:absolute;left:50%;top:min(28vw,220px);transform:translate(-50%,-50%) !important;opacity:1 !important}
+  .hang .where{display:none}
+  .l-cabin{display:none}
+  .copy-a{position:relative;left:auto;right:auto;top:auto;max-width:none;opacity:1 !important;transform:none !important}
+  .copy-a .panel{border-radius:0;background:var(--iron)}
+  .copy-a .acts{display:flex}
+  .route-stage{position:relative;height:auto;overflow:visible;grid-template-columns:minmax(0,1fr);padding-top:110px}
+  .plan .seg{opacity:1 !important}
+  .plan .marker{display:none}
+  .stops{height:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:28px}
+  .stop{position:relative;inset:auto;opacity:1 !important;grid-template-columns:none;grid-template-rows:auto auto}
+  .stop img{height:auto;aspect-ratio:4/5}
+  .route-note{position:relative;left:auto;bottom:auto;display:block;padding-top:20px}
+  .phonebar,.phonebar.on{transition:none}
+.phonebar{display:none !important}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#book">Skip to booking</a>
+<p class="strip">A website idea made by Lamplit Studio for It's Bonza! at Mill About Vineyard. Not their official site.</p>
+
+<header class="top">
+  <nav aria-label="Main">
+    <a href="#steps">No steps</a>
+    <a href="#cabin">The cabin</a>
+    <a href="#farm">The vineyard</a>
+    <a class="btn" href="#book">Check dates</a>
+  </nav>
+</header>
+
+<main>
+<section class="arrive" id="arrive" aria-label="Arriving at It's Bonza!">
+  <div class="stage">
+    <div class="layer l-drive" aria-hidden="true">
+      <picture>
+        <source media="(min-width:700px)" srcset="img/drive-1440.jpg">
+        <img src="img/drive-tall-800.jpg" alt="" width="800" height="1292" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="copy-a">
+      <div class="panel">
+        <p class="big">A corrugated-iron cabin on a Barossa vineyard, with no steps from the car to the bed.</p>
+        <p class="lede">For two. Nelly looks after the cabin and bakes the bread, Stan grows the grapes, and Williamstown's cafes are a 15 minute walk away.</p>
+        <div class="acts"><a class="btn" href="#book">Check dates</a><a class="btn line" href="#steps">See the step-free way in</a></div>
+      </div>
+    </div>
+    <figure class="layer l-cabin" style="margin:0">
+      <img src="img/cabin-1200.jpg" srcset="img/cabin-700.jpg 700w, img/cabin-1200.jpg 1200w" sizes="(max-width:699px) 100vw, 46vw" alt="The cabin: corrugated iron walls, a pine-framed veranda and a timber ramp running up to the deck" width="1200" height="800">
+      <figcaption>The ramp runs up to the veranda.</figcaption>
+    </figure>
+    <div class="sheet a" aria-hidden="true"></div>
+    <div class="sheet b" aria-hidden="true"></div>
+    <div class="hang">
+      <h1 class="board"><span class="l1">It's Bonza!</span><span class="l2">Welcome!</span><span class="vh"> at Mill About Vineyard</span></h1>
+      <p class="where" aria-hidden="true">at Mill About Vineyard, Williamstown, Barossa Valley</p>
+    </div>
+  </div>
+</section>
+
+<section class="route" id="steps" aria-labelledby="steps-h">
+  <div class="route-stage">
+    <div class="route-head"><h2 id="steps-h">Car to bed, no steps</h2></div>
+    <figure class="plan" style="margin:0">
+      <svg viewBox="0 0 620 520" role="img" aria-labelledby="plan-t">
+        <title id="plan-t">A plan of the cabin: a parking bay, a ramp up to the front porch, the door into one open room with the bed, a kitchenette and a bathroom, and a deck on the far side.</title>
+        <rect class="deckfill" x="40" y="60" width="110" height="250"/>
+        <rect class="floor" x="150" y="60" width="410" height="250"/>
+        <rect class="porchfill" x="150" y="310" width="330" height="70"/>
+        <rect class="ramp" x="480" y="330" width="48" height="140"/>
+        <g class="rampline"><line x1="480" y1="360" x2="528" y2="360"/><line x1="480" y1="390" x2="528" y2="390"/><line x1="480" y1="420" x2="528" y2="420"/><line x1="480" y1="450" x2="528" y2="450"/></g>
+        <rect class="bay" x="60" y="420" width="150" height="80"/>
+        <path class="thin" d="M40 60H150M40 310H150M40 60V310"/>
+        <path class="thin" d="M150 380H480V310"/>
+        <rect class="wall" x="150" y="60" width="410" height="250"/>
+        <path class="wall" d="M450 60V175H560M450 175V310"/>
+        <rect class="bed" x="210" y="82" width="120" height="96" rx="4"/>
+        <rect class="pillow" x="214" y="88" width="22" height="38" rx="3"/><rect class="pillow" x="214" y="134" width="22" height="38" rx="3"/>
+        <path class="door" d="M290 310a34 34 0 0 1 34-34"/>
+        <text class="lbl" x="58" y="190">deck</text>
+        <text class="lbl" x="220" y="210">bed</text>
+        <text class="lbl" x="180" y="290">living and dining</text>
+        <text class="lbl" x="468" y="120">bath</text>
+        <text class="lbl" x="468" y="230">kitchen</text>
+        <text class="lbl" x="250" y="352">porch</text>
+        <text class="lbl" x="540" y="410">ramp</text>
+        <text class="lbl" x="72" y="472">parking</text>
+        <polyline class="trail" id="trail" points="135,460 300,460 504,460 504,345 310,345 310,290 290,210 345,200 430,240 505,250 505,200 505,120"/>
+        <g id="segs"></g>
+        <g id="dots"></g>
+        <g class="marker" id="marker"><circle cx="0" cy="0" r="11"/></g>
+      </svg>
+    </figure>
+    <div class="stops" id="stops">
+      <div class="stop">
+        <img src="img/drive-800.jpg" alt="The gravel drive running between trees and agapanthus to the cabin" width="800" height="719" loading="lazy">
+        <div><p class="n">1. Park</p><h3>A bay signed for wheelchairs</h3><p>Park in the accessible bay. The path to the door has no steps and is lit at night.</p></div>
+      </div>
+      <div class="stop">
+        <img src="img/ramp-night-500.jpg" srcset="img/ramp-night-500.jpg 500w, img/ramp-night-900.jpg 864w" sizes="(max-width:820px) 38vw, 34vw" alt="The timber ramp to the cabin at night, lit along its length" width="500" height="625" loading="lazy">
+        <div><p class="n">2. Ramp</p><h3>Up the ramp, 1 in 14 at most</h3><p>A gentle timber ramp takes you up to the porch, with lights along it after dark.</p></div>
+      </div>
+      <div class="stop">
+        <img src="img/doorp-500.jpg" srcset="img/doorp-500.jpg 500w, img/doorp-864.jpg 864w" sizes="(max-width:820px) 38vw, 34vw" alt="The front door beside the hand-painted It's Bonza Welcome sign on the iron wall" width="500" height="625" loading="lazy">
+        <div><p class="n">3. Door</p><h3>Wide doors, lever handles</h3><p>Every doorway opens to 850 mm or wider, and none of the doors is heavy.</p></div>
+      </div>
+      <div class="stop">
+        <img src="img/room-500.jpg" srcset="img/room-500.jpg 500w, img/room-900.jpg 768w" sizes="(max-width:820px) 38vw, 34vw" alt="The open room in honey pine: queen bed, lounge and a round table by the windows" width="500" height="625" loading="lazy">
+        <div><p class="n">4. Bed</p><h3>Room round three sides of the bed</h3><p>One open room with a queen bed and enough floor for a wheelchair to turn. The floors are firm and slip resistant.</p></div>
+      </div>
+      <div class="stop">
+        <img src="img/sink-500.jpg" srcset="img/sink-500.jpg 500w, img/sink-900.jpg 864w" sizes="(max-width:820px) 38vw, 34vw" alt="The kitchenette: sink under a window, induction hob, toaster oven, dishwasher and washing machine" width="500" height="625" loading="lazy">
+        <div><p class="n">5. Kitchen</p><h3>A sink you can use seated</h3><p>The cabinet door under the kitchenette sink comes off, so you can roll right up to it.</p></div>
+      </div>
+      <div class="stop">
+        <img src="img/shower-500.jpg" srcset="img/shower-500.jpg 500w, img/shower-900.jpg 864w" sizes="(max-width:820px) 38vw, 34vw" alt="The step-free shower with grab rails, a handheld shower and white tiles" width="500" height="625" loading="lazy">
+        <div><p class="n">6. Shower</p><h3>Step-free shower, grab rails</h3><p>A handheld shower, rails in the shower and by the toilet, and a shower chair if you ask.</p></div>
+      </div>
+    </div>
+    <p class="route-note">Plan drawn from the floorplan on their listing. Not to scale.</p>
+  </div>
+</section>
+
+<section class="cabin" id="cabin">
+  <div class="wrap">
+    <div class="inner">
+      <div>
+        <h2 class="big">The cabin</h2>
+        <p class="lede">Nelly and Stan built it in 2021 from reclaimed corrugated iron, in the rustic Barossa style. Inside it's honey pine, floor-to-ceiling windows and one big open room.</p>
+        <p class="lede">The deck looks out to the vines and the bush. Out the back, there are two chairs under an old Moreton Bay fig.</p>
+      </div>
+      <dl class="facts">
+        <dt>Sleeps</dt><dd>Two adults, in a queen bed. Babies who aren't crawling yet are welcome too.</dd>
+        <dt>Kitchenette</dt><dd>Induction hob, mini oven, microwave, mini fridge, dishwasher, kettle, toaster and a washing machine.</dd>
+        <dt>Breakfast</dt><dd>Bread, eggs, butter, olives, cereal, honey, jam, milk, coffee and tea are there when you arrive.</dd>
+        <dt>Comfort</dt><dd>Air conditioning, a ceiling fan, a reading corner, books, music and films.</dd>
+        <dt>Outside</dt><dd>A deck with a barbecue, picnic spots and walks round the farm.</dd>
+        <dt>Arrive</dt><dd>Self check-in with a door code.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="rail" tabindex="0" role="region" aria-label="Photos of the cabin">
+    <figure><img src="img/lounge-600.jpg" srcset="img/lounge-600.jpg 600w, img/lounge-1000.jpg 768w" sizes="(max-width:880px) 72vw, 27vw" alt="The lounge with red cushions, a pine ceiling and windows on two sides" width="600" height="750" loading="lazy"><figcaption>The lounge, windows on two sides</figcaption></figure>
+    <figure><img src="img/bed-600.jpg" srcset="img/bed-600.jpg 600w, img/bed-1000.jpg 864w" sizes="(max-width:880px) 72vw, 27vw" alt="The queen bed against pine walls, with lamps either side and a red armchair" width="600" height="750" loading="lazy"><figcaption>Queen bed</figcaption></figure>
+    <figure><img src="img/dining-600.jpg" srcset="img/dining-600.jpg 600w, img/dining-1000.jpg 768w" sizes="(max-width:880px) 72vw, 27vw" alt="A round table and iron chairs in front of floor-to-ceiling windows" width="600" height="750" loading="lazy"><figcaption>Floor-to-ceiling windows</figcaption></figure>
+    <figure><img src="img/corner-600.jpg" srcset="img/corner-600.jpg 600w, img/corner-1000.jpg 1000w" sizes="(max-width:880px) 72vw, 27vw" alt="A red armchair, a floor lamp and a stack of books in the reading corner" width="600" height="750" loading="lazy"><figcaption>The reading corner</figcaption></figure>
+    <figure><img src="img/shelves-600.jpg" srcset="img/shelves-600.jpg 600w, img/shelves-1000.jpg 864w" sizes="(max-width:880px) 72vw, 27vw" alt="Open pine shelves with mugs, plates, bowls and wine glasses" width="600" height="750" loading="lazy"><figcaption>Pine shelves by the kitchenette</figcaption></figure>
+    <figure><img src="img/deck-600.jpg" srcset="img/deck-600.jpg 600w, img/deck-1000.jpg 768w" sizes="(max-width:880px) 72vw, 27vw" alt="The covered deck with a barbecue and stools, looking out under a big fig tree" width="600" height="750" loading="lazy"><figcaption>The deck and barbecue</figcaption></figure>
+    <figure><img src="img/basin-600.jpg" srcset="img/basin-600.jpg 600w, img/basin-1000.jpg 1000w" sizes="(max-width:880px) 72vw, 27vw" alt="A white basin on a timber top over an old iron sewing-machine stand" width="600" height="750" loading="lazy"><figcaption>The basin, on an old sewing-machine stand</figcaption></figure>
+    <figure><img src="img/fig-600.jpg" srcset="img/fig-600.jpg 600w, img/fig-1000.jpg 767w" sizes="(max-width:880px) 72vw, 27vw" alt="Two outdoor chairs and a green table in the shade of a big fig tree, with bush beyond" width="600" height="750" loading="lazy"><figcaption>Under the Moreton Bay fig</figcaption></figure>
+  </div>
+  <p class="rail-note">Rain is loud on an iron roof, and in summer the fig drops fruit on it. Earplugs are there for light sleepers.</p>
+</section>
+
+<section class="bread dark wrap" id="bread">
+  <div class="inner">
+    <figure style="margin:0">
+      <img src="img/bread-500.jpg" srcset="img/bread-500.jpg 500w, img/bread-900.jpg 666w" sizes="(max-width:880px) 100vw, 42vw" alt="A round crusty loaf on a board on an outdoor table, beside a glass of rosé, with the garden behind" width="500" height="625" loading="lazy">
+      <figcaption class="cap-s">From Nelly and Stan's own page.</figcaption>
+    </figure>
+    <div>
+      <h2 class="big">The bread</h2>
+      <p class="lede">Breakfast supplies come with the stay, and many guests find Nelly's homemade bread or rolls waiting too.</p>
+      <ul>
+        <li><p class="quote">"Great stay. Absolutely loved the bread"</p><p class="who">Patrick, Airbnb, November 2026</p></li>
+        <li><p class="quote">"Nelly thinks of everything, we were even treated to warm homemade rolls on arrival."</p><p class="who">Michele, Airbnb, October 2026</p></li>
+        <li><p class="quote">"We were particularly impressed with the home made focaccia."</p><p class="who">Sarah, Airbnb, August 2026</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="farm wrap" id="farm">
+  <div class="inner">
+    <div class="farm-head">
+      <h2 class="big">The vineyard and the bush hill</h2>
+      <p class="lede">Six acres of dry-grown vines, with no pesticides, herbicides or artificial fertilisers. Above them is a hill of native bush, where Nelly and Stan made paths and planted more native species.</p>
+    </div>
+    <figure class="vines"><img src="img/vines-1440.jpg" srcset="img/vines-800.jpg 800w, img/vines-1440.jpg 1440w" sizes="100vw" alt="Sunset over the rows of vines, with gum trees on the rise behind" width="1440" height="812" loading="lazy"></figure>
+    <div class="grapes">
+      <h3>Six grape varieties, some on vines over 100 years old</h3>
+      <div>
+        <p>Stan looks after the vines and makes wine for the family.</p>
+        <ul>
+          <li>Grenache, Semillon and Muscat of Alexandria, from vines more than a century old</li>
+          <li>Saperavi, Mataro and Vermentino, planted later</li>
+        </ul>
+        <p class="note">A walking track runs along the back of the farm under old gums. It's about 20 minutes on foot to Williamstown's cafes and shops, and the neighbour's two alpacas often graze beside it.</p>
+      </div>
+    </div>
+    <div class="farm-grid">
+      <figure class="w5"><img src="img/path-600.jpg" srcset="img/path-600.jpg 600w, img/path-1000.jpg 1000w" sizes="(max-width:880px) 50vw, 40vw" alt="A grassy path between tall pale gum trees on the hill" width="600" height="750" loading="lazy"></figure>
+      <figure class="w4"><img src="img/stumps-600.jpg" srcset="img/stumps-600.jpg 600w, img/stumps-1000.jpg 864w" sizes="(max-width:880px) 50vw, 32vw" alt="A ring of log-stump seats in long grass among young gums" width="600" height="750" loading="lazy"></figure>
+      <figure class="w3"><img src="img/alpacas-600.jpg" srcset="img/alpacas-600.jpg 600w, img/alpacas-1000.jpg 768w" sizes="(max-width:880px) 50vw, 24vw" alt="Two alpacas, one fawn and one brown, in a paddock" width="600" height="750" loading="lazy"></figure>
+    </div>
+    <figure class="aerial"><img src="img/aerial-1600.jpg" srcset="img/aerial-800.jpg 800w, img/aerial-1600.jpg 1600w" sizes="100vw" alt="From the air: rows of vines curving round a hill of bush and trees" width="1600" height="558" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="guests wrap" id="guests">
+  <div class="inner">
+    <h2 class="big">What guests say</h2>
+    <p class="score"><b>4.92</b><span>from 196 reviews on Airbnb, where it's a Guest favourite</span></p>
+    <ul class="quotes">
+      <li><p class="quote">"A cute little seclude cabin with beautiful scenery."</p><p class="who">Tillie, Airbnb, November 2026</p></li>
+      <li><p class="quote">"Close to everything you would want for a great Barossa experience."</p><p class="who">Marnie, Airbnb, September 2026</p></li>
+      <li><p class="quote">"Enjoyed our time surrounded by wildlife, even spotting a kangaroo!"</p><p class="who">Delaney, Airbnb, August 2026</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="around wrap" id="around">
+  <div class="inner">
+    <div>
+      <h2 class="big">Getting here</h2>
+      <p class="lede" style="margin-top:16px">In the southern Barossa, between Williamstown and Lyndoch, with the Adelaide Hills close by.</p>
+      <table class="dist">
+        <thead><tr><th scope="col">From the cabin</th><th scope="col"><span class="vh">Time</span></th></tr></thead>
+        <tbody>
+          <tr><td>Williamstown</td><td>15 min walk, 2 min drive</td></tr>
+          <tr><td>Lyndoch</td><td>5 min drive</td></tr>
+          <tr><td>The rest of the Barossa and the Adelaide Hills</td><td>20 to 30 min</td></tr>
+          <tr><td>Adelaide's beaches</td><td>40 min</td></tr>
+        </tbody>
+      </table>
+      <p class="small">Times as Nelly and Stan give them. The exact address comes with your booking.</p>
+    </div>
+    <figure class="ph" style="margin:0">
+      <img src="img/garden-600.jpg" srcset="img/garden-600.jpg 600w, img/garden-1000.jpg 1000w" sizes="(max-width:880px) 100vw, 44vw" alt="A sloping garden of native shrubs in reds and greens below tall gums" width="600" height="750" loading="lazy">
+      <figcaption class="cap-s">Nelly's water-wise garden.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="book wrap" id="book">
+  <div class="inner">
+    <div>
+      <h2 class="big">Check dates</h2>
+      <p class="lede">Two nights at least, for two adults. Pick the site you already use.</p>
+      <div class="platforms">
+        <a class="btn" href="https://airbnb.com.au/h/bonza" rel="noopener" target="_blank">Dates on Airbnb</a>
+        <a class="btn iron" href="https://www.booking.com/hotel/au/its-bonza-at-mill-about-vineyard.en-gb.html" rel="noopener" target="_blank">Dates on Booking.com</a>
+        <a class="btn iron" href="https://www.vrbo.com/en-au/holiday-rental/p9699820" rel="noopener" target="_blank">Dates on Vrbo and Stayz</a>
+      </div>
+      <ul class="before">
+        <li>Heavy rain is audible on the iron roof. Earplugs are provided.</li>
+        <li>Not for children who crawl or walk yet: it's a farm with an unfenced pond and bees.</li>
+        <li>No fires, fire pits or smoking. No parties.</li>
+        <li>Charging an electric car is A$12 a night on a standard power point. Bring your own cable and let Nelly know first.</li>
+      </ul>
+    </div>
+    <div class="direct" id="message">
+      <h3>Or write to Nelly</h3>
+      <p>Ask about dates, the shower chair or anything to do with access before you book.</p>
+      <a class="btn" href="mailto:barossavineyard@gmail.com?subject=Staying%20at%20It%27s%20Bonza">Email Nelly</a>
+      <p class="addr">barossavineyard@gmail.com</p>
+    </div>
+  </div>
+</section>
+
+<section class="close" aria-label="The welcome sign">
+  <img src="img/door-1440.jpg" srcset="img/door-800.jpg 800w, img/door-1440.jpg 1440w" sizes="100vw" alt="Late sun on the front door and the hand-painted It's Bonza Welcome sign on the iron wall" width="1440" height="1080" loading="lazy">
+  <div class="panel">
+    <h2>Look for the sign by the door.</h2>
+    <p>It's Bonza! at Mill About Vineyard, Williamstown, in South Australia's Barossa Valley. Step-free from the parking bay to the shower.</p>
+    <div class="acts">
+      <a class="btn" href="#book">Check dates</a>
+      <a class="btn line" href="https://www.instagram.com/millaboutvineyard/" rel="noopener" target="_blank">@millaboutvineyard</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="inner">
+    <p>A preview made by Lamplit Studio for It's Bonza! at Mill About Vineyard. Not affiliated, not live.</p>
+    <p>Photos are Nelly and Stan's own, from their Airbnb listing and their Google Site.</p>
+  </div>
+</footer>
+
+<div class="phonebar" id="phonebar">
+  <a class="btn" href="#book">Check dates</a>
+  <a class="btn line" href="mailto:barossavineyard@gmail.com?subject=Staying%20at%20It%27s%20Bonza">Email Nelly</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var q=function(s){return document.querySelector(s)};
+  var bar=q('#phonebar'), arrive=q('#arrive'), route=q('#steps');
+  var drive=q('.l-drive'), cabin=q('.l-cabin'), sa=q('.sheet.a'), sb=q('.sheet.b'), hang=q('.hang'), ca=q('.copy-a');
+  var clamp=function(v){return v<0?0:v>1?1:v};
+  var seg=function(p,a,b){return clamp((p-a)/(b-a))};
+  var ease=function(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
+  function prog(el){var r=el.getBoundingClientRect();var st=el.firstElementChild;var span=el.offsetHeight-(st?st.offsetHeight:window.innerHeight);return span>0?clamp(-r.top/span):0}
+
+  // Nails along the iron sheets
+  [sa,sb].forEach(function(s){for(var i=0;i<6;i++){for(var j=0;j<2;j++){var n=document.createElement('span');n.className='nail';n.style.top=(8+i*17)+'%';n.style.left=(j?82:14)+'%';s.appendChild(n)}}});
+
+  // The route: points along the plan, and which point each stop sits on
+  var pts=document.getElementById('trail').getAttribute('points').trim().split(/\s+/).map(function(s){var a=s.split(',');return [+a[0],+a[1]]});
+  var stopAt=[0,3,5,7,9,11];
+  var NS='http://www.w3.org/2000/svg', segs=[], segG=document.getElementById('segs'), dotG=document.getElementById('dots');
+  for(var i=1;i<pts.length;i++){var l=document.createElementNS(NS,'line');l.setAttribute('class','seg');l.setAttribute('x1',pts[i-1][0]);l.setAttribute('y1',pts[i-1][1]);l.setAttribute('x2',pts[i][0]);l.setAttribute('y2',pts[i][1]);segG.appendChild(l);segs.push(l)}
+  stopAt.forEach(function(k){var c=document.createElementNS(NS,'circle');c.setAttribute('class','dot');c.setAttribute('cx',pts[k][0]);c.setAttribute('cy',pts[k][1]);c.setAttribute('r',7);dotG.appendChild(c)});
+  var marker=document.getElementById('marker'), stops=[].slice.call(document.querySelectorAll('.stop'));
+  function placeMarker(t){ // t from 0 to stopAt.length-1, in stop units
+    var a=Math.floor(t), f=t-a; if(a>=stopAt.length-1){a=stopAt.length-2;f=1}
+    var k0=stopAt[a], k1=stopAt[a+1];
+    var lens=[],tot=0; for(var i=k0;i<k1;i++){var d=Math.hypot(pts[i+1][0]-pts[i][0],pts[i+1][1]-pts[i][1]);lens.push(d);tot+=d}
+    var want=f*tot, x=pts[k0][0], y=pts[k0][1];
+    for(var j=0;j<lens.length;j++){
+      var si=k0+j;
+      if(want>=lens[j]){segs[si].style.opacity=1;want-=lens[j];x=pts[si+1][0];y=pts[si+1][1]}
+      else{var r=lens[j]?want/lens[j]:0;x=pts[si][0]+(pts[si+1][0]-pts[si][0])*r;y=pts[si][1]+(pts[si+1][1]-pts[si][1])*r;segs[si].style.opacity=r>0?.35+.65*r:0;for(var z=j+1;z<lens.length;z++)segs[k0+z].style.opacity=0;break}
+    }
+    for(var s=0;s<segs.length;s++){if(s<k0)segs[s].style.opacity=1;if(s>=k1)segs[s].style.opacity=0}
+    marker.setAttribute('transform','translate('+x.toFixed(1)+' '+y.toFixed(1)+')');
+  }
+
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    var vh=window.innerHeight;
+    var bk=q('#book').getBoundingClientRect();
+    var rr=route.getBoundingClientRect();
+    bar.classList.toggle('on', bar.contains(document.activeElement) || (arrive.getBoundingClientRect().bottom<vh*.6 && rr.bottom<vh*.8 && (bk.top>vh*.9 || bk.bottom<0)));
+    if(reduce) return;
+    // Act 1
+    var p=prog(arrive);
+    var o=.2+.8*ease(seg(p,.06,.5));
+    sa.style.transform='translate3d('+(-o*101).toFixed(2)+'%,0,0)';
+    sb.style.transform='translate3d('+(o*101).toFixed(2)+'%,0,0)';
+    var ho=ease(seg(p,.06,.5));
+    hang.style.transform='translate(-50%,-56%) translate3d('+(-ho*60).toFixed(2)+'vw,'+(-ho*6).toFixed(2)+'vh,0) rotate('+(-ho*6).toFixed(2)+'deg)';
+    hang.style.opacity=(1-seg(p,.3,.48)).toFixed(3);
+    drive.style.transform='scale('+(1.14-ease(seg(p,0,.8))*.14).toFixed(4)+')';
+    var c=ease(seg(p,.45,.78));
+    cabin.style.opacity=seg(p,.45,.62).toFixed(3);
+    cabin.style.transform='translate3d(0,'+((1-c)*40).toFixed(2)+'%,0)';
+    var t=seg(p,.5,.7);
+    ca.style.opacity=t.toFixed(3);
+    ca.style.transform='translate3d(0,'+((1-t)*24).toFixed(1)+'px,0)';
+    ca.querySelector('.acts').inert=t<.5;
+    // Act 2: walk the route; each stop gets a travel then a hold
+    var k=prog(route), n=stopAt.length-1;
+    var u=clamp((k-.04)/.9)*n; // 0..n
+    var a=Math.floor(u), f=u-a;
+    var travel=a>=n?1:ease(seg(f,0,.5));
+    placeMarker(Math.min(n,a+travel));
+    var cur=a>=n?n:(travel>.5?a+1:a);
+    stops.forEach(function(s,i){s.style.opacity=i===cur?1:0});
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(mq.addEventListener) mq.addEventListener('change',function(){location.reload()});
+  if(reduce){segs.forEach(function(s){s.style.opacity=1})}
+  frame();
+})();
+</script>
+</body>
+</html>

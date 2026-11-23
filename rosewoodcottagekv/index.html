@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Rosewood Cottage | A 1930s farm cottage in Kangaroo Valley</title>
+<meta name="description" content="A 1930s cottage on a 120-acre regenerative farm, 4 km from Kangaroo Valley village. Sleeps five. A website idea made by Lamplit Studio for Rosewood Cottage.">
+<meta property="og:title" content="Rosewood Cottage, Kangaroo Valley">
+<meta property="og:description" content="A website idea made by Lamplit Studio for Rosewood Cottage. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/rosewoodcottagekv/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/rosewoodcottagekv/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23eceee8'/%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='%238a4b2b' stroke-width='3'/%3E%3Cpath d='M16 5v22M5 12.5h11M5 19.5h11' stroke='%238a4b2b' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/cottage-cut.webp" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Young+Serif&display=swap">
+<style>
+/* Tokens come from the cottage itself (see brand.md):
+   board  = the white weatherboards, kept cool
+   bottle = their Instagram calendar green, taken down to the escarpment's shadow
+   corten = the steel firewood ring on the verandah wall
+   hydra  = the pink hydrangeas against the old brick
+   iron   = the corrugated roof */
+:root{
+  --board:#eceee8;
+  --board-2:#dcdfd6;
+  --bottle:#22301f;
+  --bottle-2:#2f412b;
+  --corten:#8a4b2b;
+  --corten-2:#9c5833;
+  --hydra:#d79bb3;
+  --iron:#8d94a8;
+  --ink:#1d241b;
+  --ink-soft:#535a50;
+  --display:"Young Serif","Georgia",serif;
+  --text:"Public Sans","Helvetica Neue","Segoe UI",sans-serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--board);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--bottle);outline-offset:3px}
+.hero :focus-visible,.farm :focus-visible,.close :focus-visible,.phonebar :focus-visible,footer :focus-visible,.strip :focus-visible,.top :focus-visible,.fire-panel :focus-visible{outline-color:var(--hydra)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--board);padding:8px 12px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.strip{background:var(--bottle);color:var(--board);font-size:14px;text-align:center;margin:0;
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  padding:16px var(--gut-r) 0 var(--gut)}
+.word{display:grid;text-decoration:none;color:#fff;line-height:1;text-shadow:0 1px 10px rgba(20,26,18,.6)}
+.word b{font-family:var(--display);font-weight:400;font-size:28px}
+.word i{font-style:normal;font-size:14px;font-weight:600;margin-top:4px}
+.top nav{display:flex;gap:22px;align-items:center;font-weight:600;font-size:15px}
+.top nav a{color:#fff;text-decoration:none;text-shadow:0 1px 8px rgba(20,26,18,.7)}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:3px;
+  font-family:var(--text);font-weight:700;font-size:16px;text-decoration:none;border:0;cursor:pointer;
+  background:var(--corten);color:#fff;text-align:center}
+.btn:hover{background:var(--corten-2)}
+.btn.pink{background:var(--hydra);color:var(--bottle)}
+.btn.pink:hover{background:#e3b0c4}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.line:hover{background:rgba(255,255,255,.08)}
+.top nav .btn{text-shadow:none;white-space:nowrap}
+@media (max-width:420px){.top nav .btn{min-height:44px;padding:0 14px;font-size:15px}}
+@media (max-width:820px){.top nav a:not(.btn){display:none}.word b{font-size:24px}}
+
+/* ---------- Act 1: the cottage steps back and the escarpment comes up behind it ---------- */
+.hero{position:relative;height:260vh;background:var(--bottle)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:#9fb3c9}
+.layer{position:absolute;inset:0;will-change:transform,opacity}
+.layer img{width:100%;height:100%;object-fit:cover}
+.l-esc{transform:translate3d(0,-20%,0) scale(1.18);transform-origin:50% 72%}
+.l-esc img{object-position:50% 70%}
+.l-cottage{transform-origin:50% 100%}
+.l-cottage img{object-position:50% 100%}
+.l-lawn{inset:auto 0 0 0;height:26%}
+.l-lawn img{object-position:50% 100%}
+.copy-a{position:absolute;z-index:6;left:var(--gut);bottom:clamp(30px,9vh,96px);max-width:min(620px, calc(100% - 40px));color:#fff}
+.panel{background:rgba(34,48,31,.86);padding:clamp(20px,2.4vw,32px) clamp(20px,2.6vw,36px);border-radius:3px}
+.copy-a .where{font-weight:600;font-size:15px;color:var(--hydra)}
+.copy-a h1{font-size:clamp(40px,5.8vw,82px);margin-top:10px}
+.copy-a .lede{font-size:clamp(17px,1.5vw,20px);margin-top:14px;max-width:30em}
+.copy-b{position:absolute;z-index:6;right:var(--gut-r);bottom:clamp(30px,8vh,90px);max-width:460px;opacity:0;color:#fff}
+.copy-b h2{font-size:clamp(28px,3.2vw,44px)}
+.copy-b p{margin-top:10px;font-size:17px}
+@media (max-width:699px){
+  .hero{height:240vh}
+  .copy-a{top:84px;bottom:auto;left:var(--gut);right:var(--gut-r)}
+  .copy-b{left:var(--gut);right:var(--gut-r);bottom:22px}
+  .l-cottage img{object-position:42% 100%}
+}
+@media (max-height:620px){.copy-a .lede{display:none}}
+@media (max-height:520px){.copy-a .where{display:none}.copy-a h1{font-size:clamp(26px,4.2vw,40px);margin-top:0}.panel{padding:14px 18px}.copy-b p{display:none}.copy-b{top:70px;bottom:auto}}
+
+/* ---------- Sections ---------- */
+.wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
+.inner{max-width:1200px;margin:0 auto}
+section{scroll-margin-top:10px}
+.lede{font-size:clamp(19px,1.6vw,21px);max-width:34em}
+.quote{font-size:clamp(20px,1.9vw,25px);line-height:1.4;font-weight:500}
+.who{font-size:15px;color:var(--ink-soft);margin-top:8px}
+.cap-s{font-size:14px;color:var(--ink-soft);margin-top:8px}
+dl.facts{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:22px;row-gap:12px;font-size:17px;line-height:1.5}
+dl.facts dt{font-weight:700;font-size:15px;padding-top:2px;white-space:nowrap}
+dl.facts dd{margin:0;border-bottom:1px solid var(--board-2);padding-bottom:12px}
+.cottage h2,.farm h2,.guests h2,.around h2,.book h2{font-size:clamp(42px,5.6vw,76px)}
+
+.cottage{padding-block:clamp(72px,9vw,130px) 0}
+.cottage .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.cottage .lede{margin-top:18px}
+.cottage blockquote{margin:30px 0 0;padding:0}
+@media (max-width:880px){.cottage .inner{grid-template-columns:minmax(0,1fr)}}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;
+  padding:clamp(36px,5vw,60px) var(--gut-r) clamp(64px,8vw,110px) var(--gut);margin:0}
+.rail figure{margin:0;flex:0 0 auto;width:clamp(250px,30vw,440px);scroll-snap-align:start}
+.rail img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px;background:var(--board-2)}
+.rail figure.tall{width:clamp(200px,22vw,330px)}
+.rail figure.tall img{aspect-ratio:4/5}
+.rail figcaption{font-size:15px;margin-top:8px;color:var(--ink-soft)}
+
+/* ---------- Act 2 (the peak): the ring on the verandah wall fills, then the fire ---------- */
+.stack{position:relative;height:330vh;background:var(--board)}
+.stack-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:#e3e6dc;
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center}
+.wallwrap{position:relative;height:100%;overflow:hidden}
+.wall{position:absolute;left:50%;top:50%;height:112%;aspect-ratio:1080/1440;transform:translate(-50%,-50%)}
+.wall > img{width:100%;height:100%;object-fit:cover}
+.logs{position:absolute;margin:0;will-change:transform,opacity}
+.logs img{width:100%;height:100%}
+.logs.r{left:50.97%;top:14.11%;width:42.85%;height:63.18%}
+.logs.tl{left:10.83%;top:14.11%;width:40.83%;height:22.29%}
+.logs.ml{left:8.89%;top:35.57%;width:42.78%;height:22.34%}
+.logs.bl{left:11.81%;top:57.08%;width:39.86%;height:20.21%}
+.fireport{position:absolute;left:50%;top:45.7%;width:88%;aspect-ratio:1;border-radius:50%;overflow:hidden;
+  transform:translate(-50%,-50%) scale(.02);opacity:0;will-change:transform,opacity;z-index:3}
+.fireport img{width:100%;height:100%;object-fit:cover;object-position:32% 60%}
+.stack-copy{position:relative;z-index:4;padding:0 var(--gut-r) 0 clamp(20px,4vw,64px);max-width:560px}
+.stack-copy .s1,.stack-copy .s2{will-change:opacity,transform}
+.stack-copy h2{font-size:clamp(38px,4.6vw,66px)}
+.stack-copy p{margin-top:14px;font-size:clamp(18px,1.5vw,20px);max-width:28em}
+.stack-copy .s2{position:absolute;left:clamp(20px,4vw,64px);right:var(--gut-r);top:50%;transform:translateY(-50%);opacity:0}
+.stack-copy .word-stacked{font-family:var(--display);font-size:clamp(54px,7vw,104px);line-height:1;color:var(--corten);margin-top:22px;opacity:0;will-change:opacity,transform}
+.fire-panel{position:absolute;inset:auto var(--gut-r) clamp(24px,7vh,70px) auto;z-index:5;max-width:520px;color:#fff;opacity:0;will-change:opacity}
+.fire-panel .panel{background:rgba(34,48,31,.9)}
+.fire-panel h2{font-size:clamp(30px,3.4vw,46px)}
+.fire-panel .quote{font-size:clamp(18px,1.6vw,21px);margin-top:12px}
+.fire-panel .who{color:#d5dccf}
+.firefull{position:absolute;inset:0;z-index:2;opacity:0;will-change:opacity}
+.firefull img{width:100%;height:100%;object-fit:cover;object-position:30% 60%}
+@media (max-width:820px) and (orientation:portrait){
+  .stack-stage{grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr);align-items:start}
+  .wallwrap{height:auto;grid-row:2;align-self:stretch}
+  .wall{height:auto;width:min(100vw,60vh);top:54%}
+  .stack-copy{grid-row:1;padding:78px var(--gut-r) 0 var(--gut);max-width:none}
+  .stack-copy h2{font-size:clamp(30px,8.4vw,42px)}
+  .stack-copy p{font-size:17px;margin-top:8px}
+  .stack-copy .word-stacked{position:absolute;left:var(--gut);bottom:-62vh;margin:0;font-size:64px;color:#fff;text-shadow:0 2px 16px rgba(20,26,18,.6)}
+  .stack-copy .s2{left:var(--gut);top:78px;transform:none}
+  .fire-panel{left:var(--gut);right:var(--gut-r);bottom:calc(18px + env(safe-area-inset-bottom,0px))}
+}
+
+/* ---------- The farm ---------- */
+.farm{background:var(--bottle);color:var(--board);padding-block:clamp(72px,9vw,130px)}
+.farm-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:end}
+.farm .lede{color:#dfe5d9}
+.farm-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;margin-top:clamp(30px,4vw,48px)}
+.farm-grid figure{margin:0}
+.farm-grid img{width:100%;object-fit:cover;border-radius:3px}
+.farm-grid .a{grid-column:span 7}.farm-grid .a img{aspect-ratio:10/7}
+.farm-grid .b{grid-column:span 5;display:grid;gap:12px;align-content:start}
+.farm-grid .b img{aspect-ratio:10/7}
+.farm-grid figcaption{font-size:14px;color:#b9c4b3;margin-top:8px}
+.animals{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);margin-top:clamp(40px,5vw,64px);align-items:start}
+.animals dl.facts dd{border-color:#3d5139}
+.animals blockquote{margin:0;padding:0}
+.farm .who{color:#c4cdbf}
+@media (max-width:880px){.farm-head,.animals{grid-template-columns:minmax(0,1fr)}.farm-grid .a,.farm-grid .b{grid-column:span 12}.farm-grid .b{grid-template-columns:1fr 1fr}}
+
+/* ---------- Guests ---------- */
+.guests{background:var(--corten);color:#fff;padding-block:clamp(72px,9vw,120px)}
+.score{margin-top:24px}
+.score b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(70px,9vw,124px);line-height:.9;font-variant-numeric:tabular-nums}
+.score span{display:block;font-size:17px;margin-top:10px}
+.quotes{list-style:none;margin:clamp(40px,5vw,64px) 0 0;padding:0;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:22px clamp(28px,5vw,64px)}
+.quotes li{border-top:1px solid rgba(255,255,255,.4);padding-top:16px}
+.quotes li:first-child{grid-row:span 2}
+.quotes li:first-child .quote{font-size:clamp(24px,2.8vw,36px);line-height:1.3}
+.guests .who{color:#f6dccd}
+@media (max-width:880px){.quotes{grid-template-columns:minmax(0,1fr)}.quotes li:first-child{grid-row:auto}}
+
+/* ---------- Around ---------- */
+.around{padding-block:clamp(72px,9vw,130px)}
+.around .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+table.dist{width:100%;border-collapse:collapse;margin-top:24px;font-size:17px}
+table.dist th{text-align:left;font-size:15px;color:var(--ink-soft);font-weight:600;padding:0 0 8px}
+table.dist td{padding:12px 0;border-top:1px solid var(--board-2);vertical-align:top}
+table.dist td:last-child{text-align:right;font-weight:600;white-space:nowrap;padding-left:16px;font-variant-numeric:tabular-nums}
+.small{font-size:14px;color:var(--ink-soft);margin-top:12px}
+.whatson{margin-top:28px;background:var(--bottle);color:var(--board);border-radius:3px;padding:20px 22px}
+.whatson h3{font-size:clamp(24px,2.4vw,30px)}
+.whatson p{margin-top:8px;font-size:17px;color:#dfe5d9}
+.around .ph img{width:100%;aspect-ratio:10/7;object-fit:cover;border-radius:3px}
+@media (max-width:880px){.around .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- Book ---------- */
+.book{background:var(--board-2);padding-block:clamp(72px,9vw,130px)}
+.book .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:center}
+.book .lede{margin-top:16px}
+.book .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.book ul{margin:24px 0 0;padding-left:18px;font-size:16px}
+.book li{margin-bottom:6px}
+.book .ph img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
+@media (max-width:880px){.book .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- Close: the verandah ---------- */
+.close{position:relative;color:#fff;background:var(--bottle);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:stretch}
+.close img{width:100%;height:100%;min-height:520px;object-fit:cover;object-position:50% 60%}
+.close .panel{background:none;align-self:center;padding:clamp(28px,5vw,72px) var(--gut-r) clamp(28px,5vw,72px) clamp(24px,4vw,64px)}
+.close h2{font-size:clamp(34px,4.4vw,60px)}
+.close p{margin-top:12px;color:#dfe5d9}
+.close .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+@media (max-width:760px){.close{grid-template-columns:minmax(0,1fr)}.close img{height:62vh;min-height:0}.close .panel{padding:28px var(--gut-r) 36px var(--gut)}}
+footer{background:var(--bottle);color:#c4cdbf;font-size:14px;padding-block:28px calc(28px + env(safe-area-inset-bottom,0px));border-top:1px solid #3d5139}
+footer .inner{display:grid;gap:6px}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;
+  padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);
+  background:rgba(34,48,31,.97);transform:translateY(110%);visibility:hidden;transition:transform .25s ease-out,visibility 0s .25s}
+.phonebar.on{transform:none;visibility:visible;transition:transform .25s ease-out}
+.phonebar .btn{flex:1;min-height:50px}
+.phonebar .btn.line{color:var(--board)}
+@media (max-width:820px){.phonebar{display:flex}footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}}
+
+@media (prefers-reduced-motion: reduce){
+  .hero,.stack{height:auto}
+  .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column;background:var(--bottle)}
+  .layer{position:relative;inset:auto;opacity:1 !important;transform:none !important}
+  .l-cottage{order:1}.copy-a{order:2}.l-esc{order:3}.copy-b{order:4}
+  .l-cottage img,.l-esc img{height:auto;aspect-ratio:10/7}
+  .l-cottage{background:#9fb3c9}
+  .l-lawn{display:none}
+  .copy-a,.copy-b{position:relative;left:auto;right:auto;top:auto;bottom:auto;max-width:none;opacity:1 !important;transform:none !important}
+  .copy-a .panel,.copy-b .panel{border-radius:0;background:var(--bottle)}
+  .stack-stage{position:relative;height:auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);overflow:visible;padding-block:60px}
+  .wallwrap{height:auto}
+  .wall{position:relative;left:auto;top:auto;transform:none;height:auto;width:100%;max-width:520px;margin:0 auto}
+  .logs{opacity:1 !important;transform:none !important}
+  .fireport{display:none}
+  .stack-copy .s2{display:none}
+  .stack-copy .word-stacked{opacity:1 !important;transform:none !important;position:static;color:var(--corten);text-shadow:none}
+  .firefull{position:relative;opacity:1 !important;grid-column:1/-1;margin-top:40px}
+  .firefull img{height:auto;aspect-ratio:10/7}
+  .fire-panel{position:relative;inset:auto;opacity:1 !important;grid-column:1/-1;max-width:none}
+  .phonebar,.phonebar.on{transition:none}
+}
+@media (prefers-reduced-motion: reduce) and (max-width:820px){.stack-stage{grid-template-columns:minmax(0,1fr)}.stack-copy{padding-top:0}}
+</style>
+</head>
+<body>
+<a class="skip" href="#book">Skip to booking</a>
+<p class="strip">A website idea made by Lamplit Studio for Rosewood Cottage. Not their official site.</p>
+
+<header class="top">
+  <a class="word" href="#hero" aria-label="Rosewood Cottage, back to top"><b aria-hidden="true">Rosewood Cottage</b><i aria-hidden="true">Kangaroo Valley</i></a>
+  <nav aria-label="Main">
+    <a href="#cottage">The cottage</a>
+    <a href="#farm">The farm</a>
+    <a href="#around">Getting here</a>
+    <a class="btn" href="#book">Check dates</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="hero" aria-label="Rosewood Cottage and the escarpment">
+  <div class="stage">
+    <div class="layer l-esc" aria-hidden="true"><img src="img/escarpment.jpg" alt="" width="900" height="630"></div>
+    <div class="layer l-cottage">
+      <img src="img/cottage-cut.webp" alt="Rosewood Cottage: a white weatherboard cottage with a wide verandah, an iron roof and a brick chimney, on green lawn" width="900" height="630" fetchpriority="high">
+    </div>
+    <div class="layer l-lawn" aria-hidden="true"><img src="img/lawn.webp" alt="" width="900" height="164"></div>
+    <div class="copy-a">
+      <div class="panel">
+        <p class="where">Kangaroo Valley, New South Wales</p>
+        <h1>A 1930s cottage on a 120&#8209;acre regenerative farm.</h1>
+        <p class="lede">Two bedrooms, sleeps five, off the grid. The village is 4 km down the road.</p>
+      </div>
+    </div>
+    <div class="copy-b">
+      <div class="panel">
+        <h2>Out the front, the Kangaroo Valley escarpment.</h2>
+        <p>Cattle on the flats, donkeys in the house paddock, and eggs to collect in the morning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cottage" id="cottage">
+  <div class="wrap">
+    <div class="inner">
+      <div>
+        <h2>The cottage</h2>
+        <p class="lede">Built around 1930 and fully renovated, the cottage stands on its own, apart from the family's house. It runs off the grid, with an open fire inside and a spa bath outside.</p>
+        <blockquote>
+          <p class="quote">"Our kids (9 and 6) loved every minute there, running on the lawn, feeding the sheep and chatting to the chooks."</p>
+          <p class="who">Freya, on Airbnb, October 2026</p>
+        </blockquote>
+      </div>
+      <dl class="facts">
+        <dt>Sleeps 5</dt><dd>Two bedrooms. Children welcome.</dd>
+        <dt>Warm</dt><dd>An open fireplace, with wood stacked on the verandah.</dd>
+        <dt>Outside</dt><dd>An outdoor spa bath, a wide verandah, and a kitchen deck that looks over the paddocks.</dd>
+        <dt>Breakfast</dt><dd>Breakfast provisions, plus eggs from the farm's chickens.</dd>
+        <dt>Off-grid</dt><dd>Unplugged on purpose. Lisa sends instructions before you arrive.</dd>
+        <dt>For kids</dt><dd>Wooden toys and a cubby house.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="rail" tabindex="0" role="region" aria-label="Photos of the cottage">
+    <figure><img src="img/dining.jpg" alt="A timber dining table and chairs in sunlight, with the French doors open onto the paddocks" width="900" height="630" loading="lazy"><figcaption>Dining room, doors open to the paddock</figcaption></figure>
+    <figure><img src="img/lounge.jpg" alt="The lounge: a grey sofa with orange cushions, a check throw and an armchair by the window" width="900" height="630" loading="lazy"><figcaption>The lounge</figcaption></figure>
+    <figure class="tall"><img src="img/dresser.jpg" srcset="img/dresser-600.jpg 600w, img/dresser.jpg 1200w" sizes="(max-width:880px) 60vw, 22vw" alt="An old timber dresser with teapots, cups and glasses on its shelves" width="1200" height="1579" loading="lazy"><figcaption>Time for a morning cuppa</figcaption></figure>
+    <figure><img src="img/bedroom.jpg" alt="A bedroom with an olive linen bed, a lamp and a timber dresser under a window" width="900" height="630" loading="lazy"><figcaption>One of the two bedrooms</figcaption></figure>
+    <figure><img src="img/hydrangea-wall.jpg" srcset="img/hydrangea-wall-600.jpg 600w, img/hydrangea-wall.jpg 1200w" sizes="(max-width:880px) 72vw, 30vw" alt="Pale hydrangeas in flower against an old brick wall below the weatherboards" width="1200" height="900" loading="lazy"><figcaption>Hydrangeas in late spring</figcaption></figure>
+  </div>
+</section>
+
+<section class="stack" id="stack" aria-label="The firewood ring on the verandah">
+  <div class="stack-stage">
+    <div class="wallwrap">
+      <div class="wall">
+        <img src="img/ring-empty.jpg" srcset="img/ring-empty-600.jpg 600w, img/ring-empty.jpg 1080w" sizes="(max-width:820px) 100vw, 50vw" alt="" width="1080" height="1440" loading="lazy" aria-hidden="true">
+        <figure class="logs r" aria-hidden="true"><img src="img/logs-r.webp" alt="" width="463" height="910" loading="lazy"></figure>
+        <figure class="logs tl" aria-hidden="true"><img src="img/logs-tl.webp" alt="" width="441" height="321" loading="lazy"></figure>
+        <figure class="logs ml" aria-hidden="true"><img src="img/logs-ml.webp" alt="" width="462" height="322" loading="lazy"></figure>
+        <figure class="logs bl" aria-hidden="true"><img src="img/logs-bl.webp" alt="" width="430" height="291" loading="lazy"></figure>
+        <div class="fireport" aria-hidden="true"><img src="img/fire.jpg" alt="" width="900" height="630" loading="lazy"></div>
+      </div>
+      <p class="vh">The round steel firewood store on the cottage wall, filled with split wood and kindling.</p>
+    </div>
+    <div class="stack-copy">
+      <div class="s1">
+        <h2>The firewood lives in a steel ring on the verandah wall.</h2>
+        <p>Split logs on one side, smaller pieces in the shelves, kindling at the bottom.</p>
+        <p class="word-stacked" aria-hidden="true">Stacked.</p>
+      </div>
+    </div>
+    <div class="firefull" aria-hidden="true"><img src="img/fire.jpg" alt="" width="900" height="630" loading="lazy"></div>
+    <div class="fire-panel">
+      <div class="panel">
+        <h2>Then light the fire.</h2>
+        <p class="quote">"The fireplace was already set up for us, the cupboards and kitchen were well-stocked."</p>
+        <p class="who">Manisha, on Airbnb, August 2026</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="farm wrap" id="farm">
+  <div class="inner">
+    <div class="farm-head">
+      <h2>The farm</h2>
+      <p class="lede">120 acres, run as a family regenerative farm. The family are first-generation farmers who left the city for a simpler life, to bring the land back and grow good food along the way. Greg has walked guests round it and answered their questions on regenerative farming.</p>
+    </div>
+    <div class="farm-grid">
+      <figure class="a"><img src="img/sheep.jpg" alt="A white sheep in long green grass looking up at a farmer's hand, with the hills behind in late sun" width="900" height="630" loading="lazy"></figure>
+      <div class="b">
+        <figure><img src="img/cows.jpg" alt="Black and white cattle grazing on the green flats under the Kangaroo Valley escarpment" width="900" height="630" loading="lazy"></figure>
+        <figure><img src="img/drive.jpg" alt="An old metal can letterbox on a post beside the dirt drive, with paddocks and hills beyond" width="900" height="630" loading="lazy"></figure>
+      </div>
+    </div>
+    <div class="animals">
+      <dl class="facts">
+        <dt>Donkeys</dt><dd>Dougie and Juckoo, often in the house paddock.</dd>
+        <dt>Sheep</dt><dd>Sheep and lambs to feed.</dd>
+        <dt>Chickens</dt><dd>Collect the eggs each morning.</dd>
+        <dt>Cattle</dt><dd>Out on the flats below the escarpment.</dd>
+        <dt>Garden</dt><dd>Forage in the veggie garden.</dd>
+      </dl>
+      <blockquote>
+        <p class="quote">"From the kitchen deck you can watch the donkeys, lambs and cows, and from the front deck you can see the chickens and lambs."</p>
+        <p class="who">Julian, on Airbnb, September 2026</p>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="guests wrap" id="guests">
+  <div class="inner">
+    <h2>What guests say</h2>
+    <p class="score"><b>4.99</b><span>from 183 reviews on Airbnb</span></p>
+    <ul class="quotes">
+      <li><p class="quote">"Didn't ask for a screen once which is the best review possible."</p><p class="who">Freya, Airbnb, October 2026</p></li>
+      <li><p class="quote">"Our daughters, aged 9 and 7, absolutely loved feeding the animals and collecting eggs each morning."</p><p class="who">Nicole, Airbnb, October 2026</p></li>
+      <li><p class="quote">"The kids toys and cubby house were very much enjoyed, too."</p><p class="who">Alice, Airbnb, October 2026</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="around wrap" id="around">
+  <div class="inner">
+    <div>
+      <h2>Getting here</h2>
+      <table class="dist">
+        <thead><tr><th scope="col">From the cottage</th><th scope="col"><span class="vh">Distance</span></th></tr></thead>
+        <tbody>
+          <tr><td>Kangaroo Valley village</td><td>4 km</td></tr>
+          <tr><td>Berry and its beaches</td><td>about 20 min</td></tr>
+          <tr><td>Bendeela and Fitzroy Falls</td><td>20 to 25 min</td></tr>
+        </tbody>
+      </table>
+      <p class="small">From the cottage's tourism listing, and a guest's note on Airbnb.</p>
+      <div class="whatson">
+        <h3>Friday 4 December, 5pm to 8pm</h3>
+        <p>Christmas twilight shopping in the village: shops open late, market stalls and family fun.</p>
+      </div>
+    </div>
+    <figure class="ph" style="margin:0">
+      <img src="img/cottage.jpg" alt="The cottage at golden hour, its verandah facing the lawn and gum trees" width="900" height="630" loading="lazy">
+      <figcaption class="cap-s">The cottage, late afternoon.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="book wrap" id="book">
+  <div class="inner">
+    <div>
+      <h2>Check dates</h2>
+      <p class="lede">The whole cottage, two bedrooms, sleeps five. Rated 4.99 by 183 guests.</p>
+      <div class="acts">
+        <a class="btn" href="https://www.airbnb.com.au/rooms/43715719" rel="noopener" target="_blank">See dates on Airbnb</a>
+        <a class="btn line" href="tel:+61413588874">Call 0413 588 874</a>
+        <a class="btn line" href="https://ig.me/m/rosewood_cottage_kv" rel="noopener" target="_blank">Message on Instagram</a>
+      </div>
+      <ul>
+        <li>Off the grid and unplugged. Lisa sends instructions before you arrive.</li>
+        <li>Breakfast provisions are supplied.</li>
+        <li>The month's free dates go up on Instagram, @rosewood_cottage_kv.</li>
+      </ul>
+    </div>
+    <figure class="ph" style="margin:0"><img src="img/hydrangea.jpg" srcset="img/hydrangea-600.jpg 600w, img/hydrangea.jpg 1200w" sizes="(max-width:880px) 100vw, 44vw" alt="Pink hydrangeas beside the cottage's timber steps" width="1200" height="900" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="close" aria-label="The verandah">
+  <img src="img/verandah.jpg" srcset="img/verandah-600.jpg 600w, img/verandah.jpg 1200w" sizes="(max-width:760px) 100vw, 45vw" alt="The rocking chair at the end of the verandah, with the garden beyond" width="1200" height="1500" loading="lazy">
+  <div class="panel">
+    <h2>Pull up the rocking chair.</h2>
+    <p>Rosewood Cottage, 4 km from Kangaroo Valley village, on the South Coast of New South Wales.</p>
+    <div class="acts">
+      <a class="btn pink" href="#book">Check dates</a>
+      <a class="btn line" href="https://www.instagram.com/rosewood_cottage_kv/" rel="noopener" target="_blank">@rosewood_cottage_kv</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="inner">
+    <p>A preview made by Lamplit Studio for Rosewood Cottage. Not affiliated, not live.</p>
+    <p>Photos are Rosewood Cottage's own, from their Instagram and their Visit Kangaroo Valley listing.</p>
+  </div>
+</footer>
+
+<div class="phonebar" id="phonebar">
+  <a class="btn pink" href="#book">Check dates</a>
+  <a class="btn line" href="tel:+61413588874">Call</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var bar = document.getElementById('phonebar');
+  var hero = document.getElementById('hero'), stack = document.getElementById('stack');
+  var q = function(s){return document.querySelector(s)};
+  var esc=q('.l-esc'), cot=q('.l-cottage'), lawn=q('.l-lawn'), ca=q('.copy-a'), cb=q('.copy-b');
+  var logs=[q('.logs.r'),q('.logs.tl'),q('.logs.ml'),q('.logs.bl')];
+  var s1=q('.stack-copy .s1'), word=q('.word-stacked'), port=q('.fireport'), full=q('.firefull'), fp=q('.fire-panel');
+  var clamp=function(v){return v<0?0:v>1?1:v};
+  var seg=function(p,a,b){return clamp((p-a)/(b-a))};
+  var ease=function(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
+  var out=function(t){return 1-Math.pow(1-t,3)};
+  function prog(el){var r=el.getBoundingClientRect();var st=el.firstElementChild;var span=el.offsetHeight-(st?st.offsetHeight:window.innerHeight);return span>0?clamp(-r.top/span):0}
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    var vh=window.innerHeight;
+    var bk=document.getElementById('book').getBoundingClientRect();
+    bar.classList.toggle('on', bar.contains(document.activeElement) || (hero.getBoundingClientRect().bottom<vh*.5 && (bk.top>vh*.9 || bk.bottom<0)));
+    if(reduce) return;
+    // Act 1: the cottage steps back down the slope; the escarpment settles in behind it
+    var p=prog(hero);
+    if(p<=1){
+      var portrait=window.innerWidth<700;
+      var c=ease(seg(p,.08,.75));
+      cot.style.transform='translate3d(0,'+(c*62).toFixed(2)+'%,0)';
+      lawn.style.transform='translate3d(0,'+(c*120).toFixed(2)+'%,0)';
+      lawn.style.opacity=(1-seg(p,.3,.6)).toFixed(3);
+      var e=ease(seg(p,0,.85));
+      var es=portrait?1.42-e*.12:1.18-e*.18;
+      esc.style.transform='translate3d(0,'+(-20+e*20).toFixed(2)+'%,0) scale('+es.toFixed(4)+')';
+      cot.style.opacity=(1-(portrait?seg(p,.38,.58):seg(p,.55,.78))).toFixed(3);
+      ca.style.opacity=(1-seg(p,.08,.24)).toFixed(3);
+      ca.style.transform='translate3d(0,'+(-seg(p,.08,.24)*40).toFixed(1)+'px,0)';
+      var b=seg(p,.7,.86);
+      cb.style.opacity=b.toFixed(3);
+      cb.style.transform='translate3d(0,'+((1-b)*24).toFixed(1)+'px,0)';
+    }
+    // Act 2: the ring fills, one bay at a time, then the camera goes into the fire
+    var k=prog(stack);
+    var bays=[[.08,.3],[.28,.44],[.4,.55],[.52,.66]];
+    for(var i=0;i<4;i++){
+      var t=out(seg(k,bays[i][0],bays[i][1]));
+      logs[i].style.opacity=seg(k,bays[i][0],bays[i][0]+.05).toFixed(3);
+      logs[i].style.transform='translate3d(0,'+((1-t)*-46).toFixed(2)+'%,0) rotate('+((1-t)*(i%2?4:-4)).toFixed(2)+'deg)';
+    }
+    var w=seg(k,.66,.72);
+    word.style.opacity=w.toFixed(3);
+    word.style.transform='translate3d(0,'+((1-w)*16).toFixed(1)+'px,0)';
+    var f=ease(seg(k,.74,.92));
+    port.style.opacity=seg(k,.74,.77).toFixed(3);
+    port.style.transform='translate(-50%,-50%) scale('+(.02+f*2.4).toFixed(4)+')';
+    full.style.opacity=seg(k,.86,.93).toFixed(3);
+    s1.style.opacity=(1-seg(k,.76,.84)).toFixed(3);
+    var g=seg(k,.9,.98);
+    fp.style.opacity=g.toFixed(3);
+    fp.inert=g<.5;
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(mq.addEventListener) mq.addEventListener('change',function(){location.reload()});
+  frame();
+})();
+</script>
+</body>
+</html>

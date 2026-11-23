@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Pemberley Cottage | A farm cottage above the Malmsbury Reservoir</title>
+<meta name="description" content="A cottage for up to six on a working grazing farm above the Malmsbury Reservoir in the Macedon Ranges. A website idea made by Lamplit Studio for Pemberley Cottage.">
+<meta property="og:title" content="Pemberley Cottage, Malmsbury">
+<meta property="og:description" content="A website idea made by Lamplit Studio for Pemberley Cottage. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/pemberleycottage/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/pemberleycottage/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231f2433'/%3E%3Cpath d='M10 7h8.5c4.4 0 7 2.3 7 5.9s-2.6 6-7 6H15V25h-5zm5 3.8v4.3h3.1c1.6 0 2.5-.8 2.5-2.2s-.9-2.1-2.5-2.1z' fill='%23c9ab86'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/hero-2000.jpg" media="(min-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/heroM-800.jpg" media="(max-width: 699px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Gloock&display=swap">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* Tokens come from the farm (see brand.md):
+   night = the sky over the reservoir in the moonrise bath photo
+   iron  = the weathered galvanised walls of the cottage and shed
+   wine  = the bedding and cushions in the bedrooms
+   straw = the hay the Highland cows stand in
+   coat  = a Highland cow's coat
+   Gloock is close to the hand-painted "Pemberley" on the old shed. Albert Sans is for reading. */
+:root{
+  --night:#1f2433;
+  --night-2:#2c3245;
+  --iron:#eceae6;
+  --iron-2:#d9d6d0;
+  --wine:#6e3a40;
+  --wine-2:#82464d;
+  --straw:#c9ab86;
+  --coat:#966740;
+  --ink:#1f2433;
+  --ink-soft:#545866;
+  --display:"Gloock","Georgia",serif;
+  --text:"Albert Sans","Avenir Next","Segoe UI",sans-serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--iron);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--wine);outline-offset:3px}
+.dark :focus-visible,.strip :focus-visible,.top :focus-visible,.phonebar :focus-visible,footer :focus-visible{outline-color:var(--straw)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.04;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--iron);padding:8px 12px}
+
+.strip{background:var(--night);color:var(--iron);font-size:14px;text-align:center;margin:0;
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  padding:16px var(--gut-r) 26px var(--gut);background:linear-gradient(rgba(31,36,51,.6),rgba(31,36,51,0))}
+.word{display:grid;text-decoration:none;color:#fff;line-height:1;text-shadow:0 1px 12px rgba(20,22,32,.6)}
+.word b{font-family:var(--display);font-weight:400;font-size:34px}
+.word i{font-style:normal;font-size:13px;font-weight:600;margin-top:4px;padding-left:2px}
+.top nav{display:flex;gap:22px;align-items:center;font-weight:600;font-size:15px}
+.top nav a{color:#fff;text-decoration:none;text-shadow:0 1px 8px rgba(20,22,32,.7)}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:3px;
+  font-family:var(--text);font-weight:700;font-size:16px;text-decoration:none;border:0;cursor:pointer;
+  background:var(--wine);color:#fff}
+.btn:hover{background:var(--wine-2)}
+.btn.straw{background:var(--straw);color:var(--night)}
+.btn.straw:hover{background:#d6bc9b}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.line:hover{background:rgba(255,255,255,.08)}
+.top nav .btn{background:var(--straw);color:var(--night);text-shadow:none}
+@media (max-width:820px){.top nav a:not(.btn){display:none}}
+
+/* ---------- Act 1: the cottage above the water, with Olivia's foraged stems in front ---------- */
+.arrive{position:relative;height:260vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--night)}
+.layer{position:absolute;inset:0;will-change:transform,opacity}
+.layer img{width:100%;height:100%;object-fit:cover}
+.l-photo{transform:scale(1.14);transform-origin:50% 60%}
+.l-photo img{object-position:50% 55%}
+.l-stems{inset:auto 0 0 0;height:58%;z-index:4;transform-origin:50% 100%}
+.l-stems svg{width:100%;height:100%;display:block}
+.st-m{display:none !important}
+@media (max-width:699px){.st-d{display:none !important}.st-m{display:block !important}}
+.l-shade{inset:auto 0 0 0;height:45%;z-index:3;background:linear-gradient(to top,rgba(31,36,51,.55),rgba(31,36,51,0))}
+.copy-a{position:absolute;z-index:6;left:var(--gut);bottom:clamp(30px,10vh,110px);max-width:min(760px, calc(100% - 40px));color:#fff}
+.panel{background:rgba(31,36,51,.82);padding:clamp(20px,2.4vw,32px) clamp(20px,2.6vw,36px);border-radius:3px}
+.copy-a .where{font-weight:600;font-size:15px;color:var(--straw)}
+.copy-a h1{font-size:clamp(40px,5vw,72px);margin-top:8px}
+.copy-a p.lede{font-size:clamp(17px,1.5vw,20px);margin-top:14px;max-width:30em}
+.copy-b{position:absolute;z-index:6;right:var(--gut-r);top:clamp(90px,18vh,180px);max-width:420px;opacity:0;color:#fff}
+.copy-b h2{font-size:clamp(28px,3vw,40px)}
+.copy-b p{margin-top:10px;font-size:17px}
+@media (max-width:699px){
+  .arrive{height:230vh}
+  .l-photo img{object-position:50% 50%}
+  .l-stems{height:44%}
+  .copy-a{top:84px;bottom:auto;right:var(--gut-r)}
+  .copy-b{left:var(--gut);right:var(--gut-r);top:auto;bottom:24px;max-width:none}
+}
+@media (max-height:620px) and (prefers-reduced-motion: no-preference){.copy-a p.lede{display:none}}
+@media (max-height:520px) and (prefers-reduced-motion: no-preference){.copy-a .where{display:none}.copy-a h1{font-size:clamp(28px,4.4vw,44px);margin-top:0}.panel{padding:14px 18px}.copy-b p{display:none}}
+
+/* ---------- Act 2 (the peak): one evening in the outdoor bath. Each new hour fills up from the bottom ---------- */
+.bath{position:relative;height:440vh;background:var(--night)}
+.bath-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--night);color:var(--iron);
+  display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.bath-words{position:relative;padding:clamp(80px,12vh,130px) clamp(20px,3vw,48px) 40px var(--gut);display:flex;flex-direction:column;justify-content:center}
+.bath-words h2{font-size:clamp(36px,4.4vw,64px)}
+.bath-words .intro{margin-top:16px;font-size:18px;color:#d6d6de;max-width:26em}
+.hours{position:relative;margin-top:clamp(24px,4vh,44px);min-height:9.5em}
+.hour{position:absolute;inset:0 0 auto 0;opacity:0;will-change:opacity,transform}
+.hour:first-child{opacity:1}
+.hour b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(26px,2.6vw,36px);color:var(--straw)}
+.hour p{margin-top:8px;font-size:18px;max-width:24em}
+.hour .who{font-size:15px;color:#b8b9c6;margin-top:8px}
+.tub{position:relative;overflow:hidden}
+.frame{position:absolute;inset:0;will-change:clip-path}
+.frame img{width:100%;height:100%;object-fit:cover}
+.frame + .frame{clip-path:inset(100% 0 0 0)}
+.level{position:absolute;left:0;right:0;height:2px;background:rgba(236,234,230,.7);top:0;z-index:3;will-change:transform;opacity:0}
+@media (max-width:820px){
+  .bath{height:400vh}
+  .bath-stage{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto}
+  .tub{order:1}
+  .bath-words{order:2;padding:20px var(--gut-r) calc(22px + env(safe-area-inset-bottom,0px)) var(--gut);justify-content:flex-start}
+  .bath-words h2{font-size:30px}
+  .bath-words .intro{display:none}
+  .hours{margin-top:12px;min-height:8.6em}
+  .hour p{font-size:16px}
+  .hour b{font-size:24px}
+}
+@media (max-width:820px) and (max-height:700px) and (prefers-reduced-motion: no-preference){.hours{min-height:7.4em}.hour .who{display:none}}
+@media (min-width:821px) and (max-height:600px) and (prefers-reduced-motion: no-preference){.bath-words{padding-top:64px;padding-bottom:16px}.bath-words h2{font-size:30px}.bath-words .intro,.hour .who{display:none}.hours{margin-top:12px;min-height:6em}.hour p{font-size:16px}}
+
+/* ---------- Sections ---------- */
+.wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
+.inner{max-width:1200px;margin:0 auto}
+section{scroll-margin-top:10px}
+.lede{font-size:clamp(19px,1.6vw,21px);max-width:34em}
+.quote{font-size:clamp(20px,1.9vw,25px);line-height:1.4;font-weight:500}
+.who{font-size:15px;color:var(--ink-soft);margin-top:8px}
+.cap-s{font-size:14px;color:var(--ink-soft);margin-top:8px}
+h2.big{font-size:clamp(44px,6vw,80px)}
+dl.facts{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:22px;row-gap:12px;font-size:17px;line-height:1.5}
+dl.facts dt{font-weight:700;font-size:15px;padding-top:2px;white-space:nowrap}
+dl.facts dd{margin:0;border-bottom:1px solid var(--iron-2);padding-bottom:12px}
+
+/* Inside */
+.inside{padding-block:clamp(72px,9vw,130px) 0}
+.inside .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.inside .lede{margin-top:18px}
+.inside blockquote{margin:30px 0 0;padding:0}
+@media (max-width:880px){.inside .inner{grid-template-columns:minmax(0,1fr)}}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;
+  padding:clamp(36px,5vw,60px) var(--gut-r) clamp(30px,4vw,48px) var(--gut);margin:0}
+.rail figure{margin:0;flex:0 0 auto;width:clamp(240px,27vw,380px);scroll-snap-align:start}
+.rail img{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:3px;background:var(--iron-2)}
+.rail figure.wide{width:clamp(320px,44vw,620px)}
+.rail figure.wide img{aspect-ratio:3/2;height:auto}
+.rail figcaption{font-size:15px;margin-top:8px;color:var(--ink-soft)}
+
+/* Hamper */
+.hamper{padding-block:clamp(40px,6vw,80px) clamp(72px,9vw,130px)}
+.hamper .inner{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr);gap:clamp(24px,4vw,64px);align-items:center}
+.hamper img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
+.hamper h3{font-size:clamp(30px,3.4vw,46px)}
+.hamper ul{margin:18px 0 0;padding-left:20px}
+.hamper li{margin-bottom:6px}
+@media (max-width:760px){.hamper .inner{grid-template-columns:minmax(0,1fr)}.hamper img{aspect-ratio:3/2}}
+
+/* Farm */
+.farm{background:var(--night);color:var(--iron);padding-block:clamp(72px,9vw,130px)}
+.farm-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:end}
+.farm .lede{color:#dcdce3}
+.farm-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;margin-top:clamp(30px,4vw,48px)}
+.farm-grid figure{margin:0}
+.farm-grid img{width:100%;object-fit:cover;border-radius:3px}
+.farm-grid .a{grid-column:span 5}.farm-grid .a img{aspect-ratio:4/5}
+.farm-grid .b{grid-column:span 7;display:grid;gap:12px;grid-template-columns:1fr 1fr;align-content:start}
+.farm-grid .b img{aspect-ratio:2/3}
+.farm-grid figcaption{font-size:14px;color:#b8b9c6;margin-top:8px}
+.farm-grid .c{grid-column:span 12}.farm-grid .c img{aspect-ratio:2000/880}
+.farm-notes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px clamp(28px,5vw,64px);margin-top:clamp(30px,4vw,48px);list-style:none;padding:0}
+.farm-notes li{border-top:1px solid #444a5e;padding-top:14px}
+.farm-notes .quote{font-size:clamp(19px,1.7vw,23px)}
+.farm .who{color:#b8b9c6}
+@media (max-width:880px){.farm-head{grid-template-columns:minmax(0,1fr)}.farm-grid .a,.farm-grid .b{grid-column:span 12}.farm-notes{grid-template-columns:minmax(0,1fr)}}
+
+/* Guests */
+.guests{padding-block:clamp(72px,9vw,120px)}
+.score{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-top:24px;border-bottom:3px solid var(--coat);padding-bottom:20px}
+.score b{font-family:var(--display);font-weight:400;font-size:clamp(72px,9vw,124px);line-height:.9;font-variant-numeric:tabular-nums;color:var(--wine)}
+.score span{font-size:18px;max-width:20em}
+.quotes{list-style:none;margin:clamp(30px,4vw,52px) 0 0;padding:0;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:26px clamp(28px,5vw,64px)}
+.quotes li{border-top:1px solid var(--iron-2);padding-top:16px}
+.quotes li:first-child{grid-row:span 2}
+.quotes li:first-child .quote{font-size:clamp(24px,2.8vw,34px);line-height:1.3;font-family:var(--display);font-weight:400}
+@media (max-width:880px){.quotes{grid-template-columns:minmax(0,1fr)}.quotes li:first-child{grid-row:auto}}
+
+/* Around */
+.around{padding-block:0 clamp(72px,9vw,130px)}
+.around .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+table.dist{width:100%;border-collapse:collapse;margin-top:24px;font-size:17px}
+table.dist th{text-align:left;font-size:15px;color:var(--ink-soft);font-weight:600;padding:0 0 8px}
+table.dist td{padding:12px 0;border-top:1px solid var(--iron-2);vertical-align:top}
+table.dist td:last-child{text-align:right;font-weight:600;white-space:nowrap;padding-left:16px}
+.around .ph img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
+.small{font-size:14px;color:var(--ink-soft);margin-top:12px}
+@media (max-width:880px){.around .inner{grid-template-columns:minmax(0,1fr)}.around .ph img{aspect-ratio:3/2}}
+
+/* Book */
+.book{background:var(--iron-2);padding-block:clamp(72px,9vw,130px)}
+.book .lede{margin-top:16px}
+.book-card{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);margin-top:34px;background:var(--iron);border-radius:3px;overflow:hidden}
+.book-card img{width:100%;height:100%;min-height:280px;object-fit:cover}
+.book-card .body{padding:clamp(22px,3vw,40px);display:grid;gap:14px;align-content:start}
+.book-card h3{font-size:clamp(30px,3vw,42px)}
+.book-card dl.facts dd{border-color:var(--iron-2)}
+.book-card .btn{justify-self:start;margin-top:6px}
+.direct{margin-top:clamp(20px,3vw,32px);background:var(--night);color:var(--iron);border-radius:3px;padding:clamp(22px,3vw,36px);
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center}
+.direct h3{font-size:clamp(28px,3vw,40px)}
+.direct p{margin-top:8px;color:#dcdce3;max-width:36em}
+.direct .acts{display:flex;gap:12px;flex-wrap:wrap}
+@media (max-width:760px){.book-card,.direct{grid-template-columns:minmax(0,1fr)}.book-card img{aspect-ratio:3/2;min-height:0;height:auto}}
+
+/* Close: the name on the old shed */
+.close{position:relative;color:#fff;background:var(--night);display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);align-items:end}
+.close img{width:100%;height:min(92vh,860px);object-fit:cover;object-position:50% 30%}
+.close .panel{max-width:560px;background:var(--night);padding:clamp(28px,4vw,56px)}
+.close h2{font-size:clamp(34px,4.4vw,58px)}
+.close p{margin-top:10px}
+.close .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+@media (max-width:760px){.close{grid-template-columns:minmax(0,1fr)}.close img{height:62vh}.close .panel{max-width:none;border-radius:0}}
+footer{background:var(--night);color:#c7c8d2;font-size:14px;padding-block:28px calc(28px + env(safe-area-inset-bottom,0px))}
+footer .inner{display:grid;gap:6px}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;
+  padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);
+  background:rgba(31,36,51,.97);transform:translateY(110%);visibility:hidden;transition:transform .25s ease-out,visibility 0s .25s}
+.phonebar.on{transform:none;visibility:visible;transition:transform .25s ease-out}
+.phonebar .btn{flex:1;min-height:50px}
+.phonebar .btn.line{color:var(--iron)}
+@media (max-width:820px){.phonebar{display:flex}footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}}
+
+@media (prefers-reduced-motion: reduce){
+  .arrive,.bath{height:auto}
+  .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column}
+  .layer{position:relative;inset:auto;opacity:1 !important;transform:none !important}
+  .l-photo img{height:auto;aspect-ratio:16/10}
+  .l-stems,.l-shade{display:none}
+  .copy-a,.copy-b{position:relative;left:auto;right:auto;top:auto;bottom:auto;max-width:none;opacity:1 !important;transform:none !important}
+  .copy-a .panel,.copy-b .panel{border-radius:0;background:var(--night)}
+  .bath-stage{position:relative;height:auto;display:block}
+  .tub{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
+  .frame{position:relative;inset:auto;clip-path:none !important}
+  .frame img{height:auto;aspect-ratio:2/3}
+  .level{display:none}
+  .hours{min-height:0;display:grid;gap:22px}
+  .hour{position:relative;opacity:1 !important;transform:none !important}
+  .bath-words{padding:48px var(--gut-r) 56px var(--gut)}
+  .bath-words .intro{display:block}
+  .phonebar,.phonebar.on{transition:none}
+}
+/* same static layout when scripts are off */
+html:not(.js) .arrive,html:not(.js) .bath{height:auto}
+html:not(.js) .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column}
+html:not(.js) .layer{position:relative;inset:auto;opacity:1 !important;transform:none !important}
+html:not(.js) .l-photo img{height:auto;aspect-ratio:16/10}
+html:not(.js) .l-stems,html:not(.js) .l-shade{display:none}
+html:not(.js) .copy-a,html:not(.js) .copy-b{position:relative;left:auto;right:auto;top:auto;bottom:auto;max-width:none;opacity:1 !important;transform:none !important}
+html:not(.js) .copy-a .panel,html:not(.js) .copy-b .panel{border-radius:0;background:var(--night)}
+html:not(.js) .bath-stage{position:relative;height:auto;display:block}
+html:not(.js) .tub{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
+html:not(.js) .frame{position:relative;inset:auto;clip-path:none !important}
+html:not(.js) .frame img{height:auto;aspect-ratio:2/3}
+html:not(.js) .level{display:none}
+html:not(.js) .hours{min-height:0;display:grid;gap:22px}
+html:not(.js) .hour{position:relative;opacity:1 !important;transform:none !important}
+html:not(.js) .bath-words{padding:48px var(--gut-r) 56px var(--gut)}
+html:not(.js) .bath-words .intro{display:block}
+html:not(.js) .phonebar,html:not(.js) .phonebar.on{transition:none}
+</style>
+</head>
+<body>
+<a class="skip" href="#book">Skip to booking</a>
+<p class="strip">A website idea made by Lamplit Studio for Pemberley Cottage. Not their official site.</p>
+
+<header class="top">
+  <a class="word" href="#arrive" aria-label="Pemberley Cottage, back to top"><b aria-hidden="true">Pemberley</b><i aria-hidden="true">Cottage, Malmsbury</i></a>
+  <nav aria-label="Main">
+    <a href="#bath">The bath</a>
+    <a href="#inside">Inside</a>
+    <a href="#farm">The farm</a>
+    <a class="btn" href="#book">Check dates</a>
+  </nav>
+</header>
+
+<main>
+<section class="arrive" id="arrive" aria-label="Pemberley Cottage above the Malmsbury Reservoir">
+  <div class="stage">
+    <div class="layer l-photo">
+      <picture>
+        <source media="(min-width:700px)" srcset="img/hero-2000.jpg">
+        <img src="img/heroM-800.jpg" alt="Pemberley Cottage, a long corrugated-iron farmhouse, with the Malmsbury Reservoir behind it" width="800" height="1200" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="layer l-shade" aria-hidden="true"></div>
+    <div class="layer l-stems" aria-hidden="true">
+      <svg class="st-d" viewBox="0 0 1600 600" preserveAspectRatio="xMidYMax slice" fill="none" stroke="#1f2433" stroke-linecap="round">
+        <g id="sl"><path stroke-width="5" d="M6 600 C21 421 -9 286 15 152"/><g transform="translate(15 152)" fill="#1f2433" stroke="none"><ellipse rx="11" ry="34" transform="rotate(0)"/><ellipse rx="11" ry="34" transform="rotate(30)"/><ellipse rx="11" ry="34" transform="rotate(60)"/><ellipse rx="11" ry="34" transform="rotate(90)"/><ellipse rx="11" ry="34" transform="rotate(120)"/><ellipse rx="11" ry="34" transform="rotate(150)"/></g><path stroke-width="3.2" d="M70 600 C78 478 62 386 75 294"/><g fill="#1f2433" stroke="none"><circle cx="60" cy="275" r="4.3"/><circle cx="62" cy="292" r="3.2"/><circle cx="79" cy="306" r="4.9"/><circle cx="79" cy="274" r="4.8"/><circle cx="52" cy="280" r="4.7"/><circle cx="56" cy="287" r="4.6"/><circle cx="79" cy="292" r="5.0"/><circle cx="55" cy="293" r="3.6"/><circle cx="54" cy="298" r="4.7"/></g><path stroke-width="4" d="M118 600 C121 450 115 337 120 224"/><path fill="#1f2433" stroke="none" d="M120 224 q-12-30 0-60 q12 30 0 60z"/><path stroke-width="5" d="M167 600 C153 527 181 473 158 419"/><path fill="#1f2433" stroke="none" d="M158 479 q-36-8-40-40 q34 6 40 40z M158 449 q34-10 38-42 q-32 8-38 42z"/><path stroke-width="3.2" d="M227 600 C201 467 253 367 212 267"/><g transform="translate(212 267)" fill="#1f2433" stroke="none"><ellipse rx="11" ry="34" transform="rotate(0)"/><ellipse rx="11" ry="34" transform="rotate(30)"/><ellipse rx="11" ry="34" transform="rotate(60)"/><ellipse rx="11" ry="34" transform="rotate(90)"/><ellipse rx="11" ry="34" transform="rotate(120)"/><ellipse rx="11" ry="34" transform="rotate(150)"/></g><path stroke-width="4" d="M268 600 C252 502 283 428 258 354"/><g fill="#1f2433" stroke="none"><circle cx="247" cy="368" r="3.4"/><circle cx="254" cy="360" r="3.5"/><circle cx="258" cy="334" r="5.0"/><circle cx="272" cy="353" r="5.6"/><circle cx="249" cy="357" r="4.8"/><circle cx="262" cy="349" r="5.5"/><circle cx="281" cy="349" r="5.0"/><circle cx="235" cy="358" r="4.9"/><circle cx="284" cy="362" r="3.9"/></g><path stroke-width="4" d="M322 600 C275 464 370 362 294 260"/><path fill="#1f2433" stroke="none" d="M294 260 q-12-30 0-60 q12 30 0 60z"/><path stroke-width="5" d="M374 600 C373 509 375 440 374 372"/><path fill="#1f2433" stroke="none" d="M374 432 q-36-8-40-40 q34 6 40 40z M374 402 q34-10 38-42 q-32 8-38 42z"/><path stroke-width="4" d="M436 600 C411 419 462 283 421 147"/><g transform="translate(421 147)" fill="#1f2433" stroke="none"><ellipse rx="11" ry="34" transform="rotate(0)"/><ellipse rx="11" ry="34" transform="rotate(30)"/><ellipse rx="11" ry="34" transform="rotate(60)"/><ellipse rx="11" ry="34" transform="rotate(90)"/><ellipse rx="11" ry="34" transform="rotate(120)"/><ellipse rx="11" ry="34" transform="rotate(150)"/></g></g><g id="sr"><path stroke-width="4" d="M1170 600 C1137 450 1203 337 1150 224"/><g transform="translate(1150 224)" fill="#1f2433" stroke="none"><ellipse rx="11" ry="34" transform="rotate(0)"/><ellipse rx="11" ry="34" transform="rotate(30)"/><ellipse rx="11" ry="34" transform="rotate(60)"/><ellipse rx="11" ry="34" transform="rotate(90)"/><ellipse rx="11" ry="34" transform="rotate(120)"/><ellipse rx="11" ry="34" transform="rotate(150)"/></g><path stroke-width="3.2" d="M1215 600 C1247 525 1183 469 1234 413"/><g fill="#1f2433" stroke="none"><circle cx="1223" cy="405" r="4.1"/><circle cx="1254" cy="425" r="3.5"/><circle cx="1217" cy="399" r="3.7"/><circle cx="1233" cy="412" r="3.8"/><circle cx="1208" cy="406" r="4.1"/><circle cx="1238" cy="425" r="5.1"/><circle cx="1235" cy="413" r="5.0"/><circle cx="1211" cy="423" r="5.3"/><circle cx="1254" cy="419" r="4.2"/></g><path stroke-width="5" d="M1265 600 C1279 417 1252 279 1273 142"/><path fill="#1f2433" stroke="none" d="M1273 142 q-12-30 0-60 q12 30 0 60z"/><path stroke-width="5" d="M1314 600 C1308 531 1320 479 1310 428"/><path fill="#1f2433" stroke="none" d="M1310 488 q-36-8-40-40 q34 6 40 40z M1310 458 q34-10 38-42 q-32 8-38 42z"/><path stroke-width="5" d="M1371 600 C1321 412 1421 272 1341 131"/><g transform="translate(1341 131)" fill="#1f2433" stroke="none"><ellipse rx="11" ry="34" transform="rotate(0)"/><ellipse rx="11" ry="34" transform="rotate(30)"/><ellipse rx="11" ry="34" transform="rotate(60)"/><ellipse rx="11" ry="34" transform="rotate(90)"/><ellipse rx="11" ry="34" transform="rotate(120)"/><ellipse rx="11" ry="34" transform="rotate(150)"/></g><path stroke-width="5" d="M1430 600 C1441 529 1418 476 1436 422"/><g fill="#1f2433" stroke="none"><circle cx="1456" cy="422" r="3.4"/><circle cx="1424" cy="413" r="4.1"/><circle cx="1417" cy="431" r="6.0"/><circle cx="1435" cy="418" r="3.3"/><circle cx="1416" cy="413" r="3.8"/><circle cx="1454" cy="406" r="3.1"/><circle cx="1460" cy="419" r="3.4"/><circle cx="1439" cy="401" r="4.6"/><circle cx="1461" cy="431" r="5.1"/></g><path stroke-width="5" d="M1477 600 C1443 439 1510 318 1457 197"/><path fill="#1f2433" stroke="none" d="M1457 197 q-12-30 0-60 q12 30 0 60z"/><path stroke-width="5" d="M1537 600 C1520 519 1554 458 1527 397"/><path fill="#1f2433" stroke="none" d="M1527 457 q-36-8-40-40 q34 6 40 40z M1527 427 q34-10 38-42 q-32 8-38 42z"/><path stroke-width="5" d="M1593 600 C1619 474 1567 380 1608 286"/><g transform="translate(1608 286)" fill="#1f2433" stroke="none"><ellipse rx="11" ry="34" transform="rotate(0)"/><ellipse rx="11" ry="34" transform="rotate(30)"/><ellipse rx="11" ry="34" transform="rotate(60)"/><ellipse rx="11" ry="34" transform="rotate(90)"/><ellipse rx="11" ry="34" transform="rotate(120)"/><ellipse rx="11" ry="34" transform="rotate(150)"/></g></g>
+      </svg>
+      <svg class="st-m" viewBox="0 0 800 600" preserveAspectRatio="xMidYMax slice" fill="none" stroke="#1f2433" stroke-linecap="round">
+        <use href="#sl"/><use href="#sr" transform="translate(-800 0)"/>
+      </svg>
+    </div>
+    <div class="copy-a">
+      <div class="panel">
+        <p class="where">Malmsbury, in the Macedon Ranges</p>
+        <h1>A farm cottage above the Malmsbury Reservoir.</h1>
+        <p class="lede">Sleeps six, with a king, a queen and two singles. The reservoir, the bluestone viaduct and Mount Macedon are all in view from the deck.</p>
+      </div>
+    </div>
+    <div class="copy-b">
+      <div class="panel">
+        <h2>The whole cottage is yours.</h2>
+        <p>Up a tree-lined driveway on a working grazing farm, with the cows, sheep and chooks next door.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bath dark" id="bath" aria-label="One evening in the outdoor bath">
+  <div class="bath-stage">
+    <div class="bath-words">
+      <h2>One evening in the outdoor bath.</h2>
+      <p class="intro">There's a claw-foot bath out on the deck, looking over the water. Run it before sunset and stay in as long as you like.</p>
+      <div class="hours">
+        <div class="hour"><b>Sunset</b><p>Fill the bath while the sun goes down behind the reservoir.</p></div>
+        <div class="hour"><b>Last light</b><p>The sky over the water goes pink and orange.</p><p class="who">"We loved feeding the cows oranges and having a bonfire as the sunset!" Jen, Airbnb</p></div>
+        <div class="hour"><b>Moonrise</b><p>Stay in for the stars, and watch the moon come up over the reservoir.</p></div>
+        <div class="hour"><b>Morning</b><p>Run it again for sunrise, with the mist still on the paddocks.</p><p class="who">"Beautiful waking up to frost and a gorgeous sunrise!" Emily, Airbnb</p></div>
+      </div>
+    </div>
+    <div class="tub">
+      <figure class="frame" style="margin:0"><img src="img/b1-1400.jpg" srcset="img/b1-800.jpg 800w, img/b1-1400.jpg 1400w" sizes="(max-width:820px) 100vw, 58vw" alt="The outdoor claw-foot bath on the deck at sunset, among the garden" width="1400" height="2101" loading="lazy"></figure>
+      <figure class="frame" style="margin:0"><img src="img/b2-1400.jpg" srcset="img/b2-800.jpg 800w, img/b2-1400.jpg 1400w" sizes="(max-width:820px) 100vw, 58vw" alt="The reservoir glowing pink and orange at dusk, past the corner of the cottage" width="1400" height="2101" loading="lazy"></figure>
+      <figure class="frame" style="margin:0"><img src="img/b3-1400.jpg" srcset="img/b3-800.jpg 800w, img/b3-1400.jpg 1400w" sizes="(max-width:820px) 100vw, 58vw" alt="A guest in the outdoor bath at night, with the full moon over the reservoir" width="1400" height="2101" loading="lazy"></figure>
+      <figure class="frame" style="margin:0"><img src="img/b4-1400.jpg" srcset="img/b4-800.jpg 800w, img/b4-1400.jpg 1400w" sizes="(max-width:820px) 100vw, 58vw" alt="Hot water running into the outdoor bath at dawn, with mist over the paddocks" width="1400" height="2100" loading="lazy"></figure>
+      <div class="level" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<section class="inside" id="inside">
+  <div class="wrap">
+    <div class="inner">
+      <div>
+        <h2 class="big">Inside the cottage</h2>
+        <p class="lede">Big windows face the water, so you see it from the lounge, the kitchen and the dining table. The rooms have old timber and iron beds, and there's a wood fire for cold nights.</p>
+        <blockquote>
+          <p class="quote">"The views are absolutely spectacular, no matter the weather."</p>
+          <p class="who">Naomi, Airbnb, November 2026</p>
+        </blockquote>
+      </div>
+      <dl class="facts">
+        <dt>Sleeps 6</dt><dd>Three bedrooms: a king, a queen, and two singles.</dd>
+        <dt>Baths</dt><dd>Two bathrooms, one with a freestanding bath. Plus the claw-foot bath on the deck.</dd>
+        <dt>Kitchen</dt><dd>Full kitchen with oven, dishwasher, coffee and a dining table by the glass doors.</dd>
+        <dt>Warm</dt><dd>A wood fire, heating and air conditioning.</dd>
+        <dt>Outside</dt><dd>A large deck with a barbecue, and a fire pit looking over the water.</dd>
+        <dt>Wifi</dt><dd>Yes. There's no washing machine or dryer.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="rail" tabindex="0" role="region" aria-label="Photos inside Pemberley Cottage">
+    <figure><img src="img/r-master-1000.jpg" srcset="img/r-master-600.jpg 600w, img/r-master-1000.jpg 1000w" sizes="(max-width:880px) 72vw, 27vw" alt="The main bedroom, a bed with a wine-red throw and floral cushions under a landscape painting" width="1000" height="1500" loading="lazy"><figcaption>The king room</figcaption></figure>
+    <figure><img src="img/r-queen-1000.jpg" srcset="img/r-queen-600.jpg 600w, img/r-queen-1000.jpg 1000w" sizes="(max-width:880px) 72vw, 27vw" alt="An iron bed with a pink rose cushion and a woven hanging above" width="1000" height="1500" loading="lazy"><figcaption>The queen room</figcaption></figure>
+    <figure class="wide"><img src="img/r-twin-1400.jpg" srcset="img/r-twin-800.jpg 800w, img/r-twin-1400.jpg 1400w" sizes="(max-width:880px) 86vw, 44vw" alt="The twin room with two timber single beds in morning light" width="1400" height="933" loading="lazy"><figcaption>Two singles</figcaption></figure>
+    <figure><img src="img/r-dining-1000.jpg" srcset="img/r-dining-600.jpg 600w, img/r-dining-1000.jpg 1000w" sizes="(max-width:880px) 72vw, 27vw" alt="The dining table set for breakfast beside glass doors open onto the deck and the water" width="1000" height="1500" loading="lazy"><figcaption>Breakfast by the doors</figcaption></figure>
+    <figure><img src="img/r-lounge-1000.jpg" srcset="img/r-lounge-600.jpg 600w, img/r-lounge-1000.jpg 1000w" sizes="(max-width:880px) 72vw, 27vw" alt="The lounge room with rust leather armchairs and a crystal chandelier" width="1000" height="1502" loading="lazy"><figcaption>The lounge</figcaption></figure>
+    <figure class="wide"><img src="img/r-kitchen-1400.jpg" srcset="img/r-kitchen-800.jpg 800w, img/r-kitchen-1400.jpg 1400w" sizes="(max-width:880px) 86vw, 44vw" alt="The white kitchen with a long bench and four stools" width="1400" height="933" loading="lazy"><figcaption>The kitchen</figcaption></figure>
+    <figure><img src="img/r-bath-1000.jpg" srcset="img/r-bath-600.jpg 600w, img/r-bath-1000.jpg 1000w" sizes="(max-width:880px) 72vw, 27vw" alt="A black freestanding bath against white herringbone tiles" width="1000" height="1500" loading="lazy"><figcaption>The bath inside</figcaption></figure>
+    <figure><img src="img/r-deck-1000.jpg" srcset="img/r-deck-600.jpg 600w, img/r-deck-1000.jpg 1000w" sizes="(max-width:880px) 72vw, 27vw" alt="A potted olive tree on the timber deck, with paddocks and the reservoir beyond the rail" width="1000" height="1500" loading="lazy"><figcaption>The deck</figcaption></figure>
+  </div>
+</section>
+
+<section class="hamper wrap" aria-labelledby="hamper-h">
+  <div class="inner">
+    <img src="img/r-hamper-1000.jpg" srcset="img/r-hamper-600.jpg 600w, img/r-hamper-1000.jpg 1000w" sizes="(max-width:760px) 100vw, 40vw" alt="A board with a coffee plunger, a mug and a tray of farm eggs on the kitchen bench" width="1000" height="1500" loading="lazy">
+    <div>
+      <h3 id="hamper-h">A hamper waits when you arrive</h3>
+      <ul>
+        <li>Cooked breakfast provisions</li>
+        <li>Locally ground coffee and fresh sourdough</li>
+        <li>Hepburn sparkling water</li>
+        <li>Mimossa Botanical bath soaks, for the tub on the deck</li>
+      </ul>
+      <p class="who">"The breakfast hamper included a bag of carrots to feed the animals." Dennis, Airbnb</p>
+    </div>
+  </div>
+</section>
+
+<section class="farm wrap dark" id="farm">
+  <div class="inner">
+    <div class="farm-head">
+      <h2 class="big">The farm</h2>
+      <p class="lede">Pemberley is a grazing and cropping property run by third-generation farmers. The Highland cattle, sheep and chooks are pets, and guests can feed them if they ask.</p>
+    </div>
+    <div class="farm-grid">
+      <figure class="a"><img src="img/f-cow-1000.jpg" srcset="img/f-cow-600.jpg 600w, img/f-cow-1000.jpg 1000w" sizes="(max-width:880px) 100vw, 40vw" alt="A shaggy Highland cow eating hay, with the reservoir behind" width="1000" height="1500" loading="lazy"></figure>
+      <div class="b">
+        <figure><img src="img/f-feed-1000.jpg" srcset="img/f-feed-600.jpg 600w, img/f-feed-1000.jpg 1000w" sizes="(max-width:880px) 50vw, 28vw" alt="A boy at the fence feeding a Highland cow, with agapanthus in the foreground" width="1000" height="1501" loading="lazy"><figcaption>Hello over the fence</figcaption></figure>
+        <figure><img src="img/f-flowers-1000.jpg" srcset="img/f-flowers-600.jpg 600w, img/f-flowers-1000.jpg 1000w" sizes="(max-width:880px) 50vw, 28vw" alt="An armful of pink dahlias just cut from the garden" width="1000" height="1500" loading="lazy"><figcaption>Dahlias from the flower garden</figcaption></figure>
+      </div>
+      <figure class="c"><img src="img/f-res-1800.jpg" srcset="img/f-res-900.jpg 900w, img/f-res-1800.jpg 1800w" sizes="100vw" alt="Cattle grazing in a dry paddock above the reservoir" width="1800" height="1200" loading="lazy" style="aspect-ratio:2000/880"></figure>
+    </div>
+    <ul class="farm-notes">
+      <li><p class="quote">"The highlight was waiting for the cows to come close enough the feed them oranges and an extra special treat was feeding baby Mog some milk."</p><p class="who">Gemma, Airbnb, September 2026</p></li>
+      <li><p class="quote">"Olivia was also kind enough to let our kids collect the eggs and pick some flowers too."</p><p class="who">Ilka and Martin, Airbnb, April 2026</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="guests wrap" id="guests">
+  <div class="inner">
+    <h2 class="big">What guests say</h2>
+    <div class="score"><b>4.95</b><span>from 194 reviews on Airbnb. 116 of them mention the view.</span></div>
+    <ul class="quotes">
+      <li><p class="quote">"You look out on to the beautiful reservoir, paddocks, a picturesque bridge and the odd train that runs over it."</p><p class="who">Gemma, Airbnb, September 2026</p></li>
+      <li><p class="quote">"Our family had a wonderful time, with feeding the cows being a particular highlight!"</p><p class="who">Naomi, Airbnb, November 2026</p></li>
+      <li><p class="quote">"It was beautiful waking up to frost and a gorgeous sunrise!"</p><p class="who">Emily, Airbnb, July 2026</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="around wrap" id="around">
+  <div class="inner">
+    <div>
+      <h2 class="big">Around Malmsbury</h2>
+      <table class="dist">
+        <thead><tr><th scope="col">From the cottage</th><th scope="col"><span style="position:absolute;left:-9999px">How far</span></th></tr></thead>
+        <tbody>
+          <tr><td>Malmsbury Reservoir, for fishing or a picnic</td><td>Right below</td></tr>
+          <tr><td>Malmsbury village, the botanical gardens and the bakery</td><td>Walking distance</td></tr>
+          <tr><td>Kyneton and Piper Street</td><td>10 min drive</td></tr>
+          <tr><td>Camp David Farm, Little Church at Springhill, The Burrow and Churchill Events</td><td>Within 10 min</td></tr>
+          <tr><td>Daylesford and its day spas</td><td>20 min drive</td></tr>
+        </tbody>
+      </table>
+      <p class="small">Times are Pemberley's own. The cottage is a favourite for bridal parties getting ready for a wedding nearby.</p>
+    </div>
+    <figure class="ph" style="margin:0">
+      <img src="img/drive-1000.jpg" srcset="img/drive-600.jpg 600w, img/drive-1000.jpg 1000w" sizes="(max-width:880px) 100vw, 44vw" alt="The gravel driveway running between tall old pines and gums" width="1000" height="1500" loading="lazy">
+      <figcaption class="cap-s">The tree-lined driveway in.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="book wrap" id="book">
+  <div class="inner">
+    <h2 class="big">Check dates</h2>
+    <p class="lede">A$600 a night plus Airbnb's fees, with a two-night minimum. The whole cottage for up to six.</p>
+    <div class="book-card">
+      <img src="img/b2-1400.jpg" srcset="img/b2-800.jpg 800w, img/b2-1400.jpg 1400w" sizes="(max-width:760px) 100vw, 55vw" alt="The reservoir at dusk from beside the cottage" width="1400" height="2101" loading="lazy" style="object-position:50% 70%">
+      <div class="body">
+        <h3>Pemberley Cottage</h3>
+        <dl class="facts">
+          <dt>Sleeps</dt><dd>6, in a king, a queen and two singles</dd>
+          <dt>Minimum</dt><dd>2 nights</dd>
+          <dt>Includes</dt><dd>Breakfast hamper, outdoor bath, fire pit</dd>
+        </dl>
+        <a class="btn" href="https://www.airbnb.com.au/rooms/31360775" rel="noopener" target="_blank">See dates on Airbnb</a>
+      </div>
+    </div>
+    <div class="direct dark">
+      <div>
+        <h3>Or ask Olivia</h3>
+        <p>Tell her your dates and how many are coming, or ask about bridal parties.</p>
+      </div>
+      <div class="acts">
+        <a class="btn straw" href="tel:+61409372881">Call 0409 372 881</a>
+        <a class="btn line" href="https://ig.me/m/pemberleyofmalmsbury" rel="noopener" target="_blank">Message on Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="close dark" aria-label="The shed">
+  <img src="img/close-1400.jpg" srcset="img/close-800.jpg 800w, img/close-1400.jpg 1400w" sizes="100vw" alt="Pemberley painted on the end wall of the old corrugated-iron shed, with a tree's shadow across it" width="1400" height="2099" loading="lazy">
+  <div class="panel">
+    <h2>Look for the name on the old shed.</h2>
+    <p>Pemberley Cottage sits on a working farm above the Malmsbury Reservoir.</p>
+    <div class="acts">
+      <a class="btn straw" href="#book">Check dates</a>
+      <a class="btn line" href="https://www.instagram.com/pemberleyofmalmsbury/" rel="noopener" target="_blank">@pemberleyofmalmsbury</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="inner">
+    <p>A preview made by Lamplit Studio for Pemberley Cottage. Not affiliated, not live.</p>
+    <p>Photos are Pemberley Cottage's own, from their Airbnb listing. The stems in the opening are drawn for this page.</p>
+  </div>
+</footer>
+
+<div class="phonebar" id="phonebar">
+  <a class="btn straw" href="#book">Check dates</a>
+  <a class="btn line" href="tel:+61409372881">Call Olivia</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var bar=document.getElementById('phonebar');
+  var arrive=document.getElementById('arrive'), bath=document.getElementById('bath');
+  var q=function(s){return document.querySelector(s)};
+  var photo=q('.l-photo'), stems=q('.l-stems'), shade=q('.l-shade'), ca=q('.copy-a'), cb=q('.copy-b');
+  var frames=[].slice.call(document.querySelectorAll('.frame')), hours=[].slice.call(document.querySelectorAll('.hour')), level=q('.level');
+  var clamp=function(v){return v<0?0:v>1?1:v};
+  var seg=function(p,a,b){return clamp((p-a)/(b-a))};
+  var ease=function(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
+  function prog(el){var r=el.getBoundingClientRect();var st=el.firstElementChild;var span=el.offsetHeight-(st?st.offsetHeight:window.innerHeight);return span>0?clamp(-r.top/span):0}
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    var vh=window.innerHeight;
+    var bk=document.getElementById('book').getBoundingClientRect();
+    bar.classList.toggle('on', bar.contains(document.activeElement) || (bath.getBoundingClientRect().bottom<vh*.5 && (bk.top>vh*.9 || bk.bottom<0)));
+    if(reduce) return;
+    // Act 1: the photo eases back, the stems rise past you faster, the words hand over
+    var p=prog(arrive);
+    var e=ease(p);
+    photo.style.transform='scale('+(1.14-e*.14).toFixed(4)+') translate3d(0,'+(-e*2).toFixed(2)+'%,0)';
+    stems.style.transform='translate3d(0,'+(-e*30).toFixed(2)+'%,0) scale('+(1+e*.5).toFixed(4)+')';
+    stems.style.opacity=(1-seg(p,.55,.85)).toFixed(3);
+    shade.style.opacity=(1-seg(p,.5,.9)*.5).toFixed(3);
+    ca.style.opacity=(1-seg(p,.18,.36)).toFixed(3);
+    ca.style.transform='translate3d(0,'+(-seg(p,.18,.36)*40).toFixed(1)+'px,0)';
+    cb.style.opacity=seg(p,.5,.66).toFixed(3);
+    cb.style.transform='translate3d(0,'+((1-seg(p,.5,.66))*24).toFixed(1)+'px,0)';
+    // Act 2: each hour fills the frame from the bottom, like the bath filling
+    var k=prog(bath), n=frames.length, steps=n-1, cur=0;
+    for(var i=1;i<n;i++){
+      var a=(i-1)/steps, b=i/steps, f=ease(seg(k,a+.08/steps,b-.1/steps));
+      frames[i].style.clipPath='inset('+((1-f)*100).toFixed(2)+'% 0 0 0)';
+      if(f>.5) cur=i;
+    }
+    var live=0,H=level.parentNode.offsetHeight;for(var j=1;j<n;j++){var a2=(j-1)/steps,b2=j/steps,ff=seg(k,a2+.08/steps,b2-.1/steps);if(ff>0&&ff<1){live=1;level.style.transform='translate3d(0,'+((1-ease(ff))*H).toFixed(1)+'px,0)'}}
+    level.style.opacity=live?'1':'0';
+    hours.forEach(function(h,i){h.style.opacity=i===cur?'1':'0';h.style.transform='translate3d(0,'+(i===cur?0:(i<cur?-12:12))+'px,0)'});
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(mq.addEventListener) mq.addEventListener('change',function(){location.reload()});
+  frame();
+})();
+</script>
+</body>
+</html>

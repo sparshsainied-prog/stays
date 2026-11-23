@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Bowhill Grange | Two heritage cottages near Oatlands, Tasmania</title>
+<meta name="description" content="Elizabeth's Cottage and Shepherd's Rest, two private sandstone cottages at Bowhill Grange, five minutes from Oatlands. A website idea made by Lamplit Studio for Bowhill Grange.">
+<meta property="og:title" content="Bowhill Grange, Oatlands">
+<meta property="og:description" content="A website idea made by Lamplit Studio for Bowhill Grange. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/bowhillgrange/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/bowhillgrange/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23241a12'/%3E%3Cpath d='M5 27V15L16 5l11 10v12z' fill='%23b4884f'/%3E%3Cpath d='M5 19h22M5 23h22M11 15v4M20 19v4M14 23v4' stroke='%23241a12' stroke-width='1.2'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/shep-1000.jpg" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600&display=swap">
+<style>
+/* Tokens (see brand.md):
+   hearth = the shadows in the firelit sitting rooms
+   stone  = Shepherd's Rest sandstone in late sun
+   lime   = Elizabeth's Cottage limewashed walls, cooled
+   storm  = the Midlands storm skies in their photos
+   tractor= the old red tractor in the paddock (accents only) */
+:root{
+  --hearth:#241a12;
+  --hearth-2:#33261b;
+  --stone:#b4884f;
+  --stone-2:#cfa66b;
+  --lime:#eceae4;
+  --lime-2:#dcd8cf;
+  --storm:#535b63;
+  --tractor:#b23b26;
+  --ink:#1f1912;
+  --soft:#5b5248;
+  --display:"Old Standard TT","Times New Roman",serif;
+  --text:"Libre Franklin","Franklin Gothic Book",Arial,sans-serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overflow-x:clip}
+body{margin:0;background:var(--lime);color:var(--ink);font-family:var(--text);font-size:17px;line-height:1.65}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--tractor);outline-offset:3px}
+.dark :focus-visible,.top :focus-visible,.strip :focus-visible,.phonebar :focus-visible,footer :focus-visible{outline-color:var(--stone-2)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.04;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--lime);padding:8px 12px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.strip{background:var(--hearth);color:var(--lime);font-size:14px;text-align:center;margin:0;border-bottom:1px solid #3d2f23;
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  padding:16px var(--gut-r) 0 var(--gut);color:var(--lime)}
+.name{text-decoration:none;display:grid;line-height:1}
+.name b{font-family:var(--display);font-weight:400;font-size:30px;font-style:italic}
+.name i{font-style:normal;font-size:12px;margin-top:6px;color:#d6cbbd;letter-spacing:.04em}
+.top nav{display:flex;gap:22px;align-items:center;font-weight:500;font-size:15px}
+.top nav a{text-decoration:none}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:0;
+  font-family:var(--text);font-weight:600;font-size:16px;text-decoration:none;border:0;cursor:pointer;
+  background:var(--hearth);color:var(--lime)}
+.btn:hover{background:var(--hearth-2)}
+.btn.stone{background:var(--stone-2);color:var(--hearth)}
+.btn.stone:hover{background:#dbb57e}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn{white-space:nowrap}
+@media (max-width:820px){.top nav a:not(.btn){display:none}.name b{font-size:24px}.name i{font-size:10px}}
+
+/* ---------- Act 1: the stones go back up ---------- */
+.build{position:relative;height:320vh;background:var(--hearth)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--hearth)}
+.wall{position:absolute;inset:0}
+.st{position:absolute;overflow:hidden;will-change:transform,opacity}
+.st img{position:absolute;max-width:none;width:100vw;height:100vh;height:100svh;object-fit:cover;object-position:42% 60%}
+.copy-a{position:absolute;z-index:6;left:var(--gut);bottom:clamp(26px,8vh,90px);color:var(--lime);max-width:600px;will-change:opacity,transform;background:rgba(36,26,18,.9);padding:clamp(18px,2.4vw,30px) clamp(18px,2.6vw,34px)}
+.copy-a .est{font-family:var(--display);font-style:italic;font-size:19px;color:var(--stone-2)}
+.copy-a h1{font-size:clamp(50px,7vw,108px);margin-top:6px}
+.copy-a .lede{font-size:clamp(17px,1.4vw,20px);margin-top:16px;max-width:30em;color:#e2d9cc}
+.copy-b{position:absolute;z-index:6;right:var(--gut-r);top:clamp(96px,15vh,160px);max-width:420px;opacity:0;color:var(--lime)}
+.copy-b .panel{background:rgba(36,26,18,.88);padding:20px 24px}
+.copy-b h2{font-size:clamp(30px,3vw,42px)}
+.copy-b p{margin-top:10px;font-size:16px}
+@media (max-width:699px){
+  .build{height:300vh}
+  .st img{object-position:50% 60%}
+  .copy-a{right:var(--gut-r);bottom:max(56px,8vh)}
+  .copy-b{left:var(--gut);right:var(--gut-r);top:auto;bottom:22px}
+}
+@media (max-height:600px){.copy-a .lede{display:none}}
+
+/* ---------- Sections ---------- */
+.wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
+.inner{max-width:1200px;margin:0 auto}
+section{scroll-margin-top:10px}
+.big{font-size:clamp(44px,6vw,88px)}
+.lede{font-size:clamp(19px,1.6vw,22px);max-width:34em;line-height:1.5}
+dl.facts{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:20px;row-gap:10px;font-size:16px;line-height:1.5}
+dl.facts dt{font-weight:600;font-size:14px;padding-top:2px;white-space:nowrap;color:var(--soft)}
+dl.facts dd{margin:0;border-bottom:1px solid var(--lime-2);padding-bottom:10px}
+
+/* Two cottages */
+.cottages{padding-block:clamp(72px,9vw,130px)}
+.cottages .intro{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(24px,4vw,64px);align-items:end}
+.cottages .intro .lede{color:var(--soft)}
+.pair{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,4vw,64px);margin-top:clamp(40px,6vw,90px);align-items:start}
+.cot h3{font-size:clamp(34px,3.6vw,52px)}
+.cot .yr{font-family:var(--display);font-style:italic;color:var(--tractor);font-size:18px;margin-bottom:6px}
+.cot p.desc{margin-top:14px;max-width:36em}
+.cot dl.facts{margin-top:22px}
+.cot .rate{margin-top:16px;font-size:15px;color:var(--soft)}
+.cot .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:24px}
+.cot figure{margin:0}
+.cot .grid img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.cot .grid .w{grid-column:span 2}
+.cot .grid .w img{aspect-ratio:3/2}
+.cot figcaption{font-size:13px;color:var(--soft);margin-top:5px}
+.cot.shep{margin-top:clamp(0px,10vw,160px)}
+@media (max-width:880px){.cottages .intro,.pair{grid-template-columns:minmax(0,1fr)}.cot.shep{margin-top:40px}}
+
+/* Timeline */
+.time{background:var(--hearth);color:var(--lime);padding-block:clamp(72px,9vw,130px)}
+.time .inner{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(28px,5vw,80px);align-items:start}
+.time .side{position:sticky;top:30px}
+.time .side .lede{margin-top:18px;color:#d8cebf}
+.time .side img{margin-top:28px;width:100%;aspect-ratio:1400/1200;object-fit:cover}
+.years{list-style:none;margin:0;padding:0}
+.years li{display:grid;grid-template-columns:clamp(84px,9vw,130px) minmax(0,1fr);gap:18px;border-top:1px solid rgba(236,234,228,.18);padding:22px 0}
+.years b{font-family:var(--display);font-weight:400;font-size:clamp(30px,3.2vw,46px);line-height:1;color:var(--stone-2);font-variant-numeric:tabular-nums}
+.years b.sm{font-size:clamp(22px,2vw,28px);font-style:italic}
+.years p{font-size:17px;color:#e2d9cc}
+.years p strong{color:var(--lime);font-weight:600}
+.time .src{margin-top:22px;font-size:14px;color:#b6aa9a}
+.time .src a{color:var(--lime)}
+@media (max-width:880px){.time .inner{grid-template-columns:minmax(0,1fr)}.time .side{position:static}}
+
+/* Staying */
+.stay{padding-block:clamp(72px,9vw,130px)}
+.stay .inner{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,80px);align-items:center}
+.stay img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.stay .lede{margin-top:16px}
+.stay ul{margin:22px 0 0;padding:0;list-style:none}
+.stay li{border-top:1px solid var(--lime-2);padding:12px 0}
+.stay li b{font-family:var(--display);font-weight:400;font-size:22px;display:block;line-height:1.2}
+@media (max-width:880px){.stay .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Around */
+.around{background:var(--storm);color:var(--lime);padding-block:clamp(72px,9vw,130px)}
+.around .inner{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.around figure{margin:0}
+.around img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.around figcaption{font-size:14px;color:#d3d6d8;margin-top:8px}
+.around .lede{margin-top:16px;color:#e6e7e6}
+table.dist{width:100%;border-collapse:collapse;margin-top:24px;font-size:17px}
+table.dist th{text-align:left;font-weight:400;padding:12px 0;border-top:1px solid rgba(236,234,228,.3)}
+table.dist td{padding:12px 0 12px 16px;border-top:1px solid rgba(236,234,228,.3);text-align:right;font-weight:600;white-space:nowrap}
+@media (max-width:880px){.around .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Guests */
+.said{padding-block:clamp(72px,9vw,120px)}
+.said .inner{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:clamp(24px,3vw,48px);align-items:start}
+.said h2{grid-column:1 / -1;font-size:clamp(34px,4vw,56px)}
+.said blockquote{margin:0;font-family:var(--display);font-size:clamp(21px,1.9vw,26px);line-height:1.35}
+.said blockquote:nth-of-type(2){margin-top:clamp(0px,5vw,70px)}
+.said cite{display:block;font-family:var(--text);font-style:normal;font-size:14px;color:var(--soft);margin-top:10px}
+.said .note{grid-column:1 / -1;font-size:15px;color:var(--soft)}
+@media (max-width:880px){.said .inner{grid-template-columns:minmax(0,1fr)}.said blockquote:nth-of-type(2){margin-top:0}}
+
+/* Book */
+.book{background:var(--lime-2);padding-block:clamp(72px,9vw,130px)}
+.book .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.book .lede{margin-top:16px}
+.price{font-family:var(--display);font-size:clamp(40px,4.6vw,64px);line-height:1;margin-top:26px;font-variant-numeric:tabular-nums}
+.price span{display:block;font-family:var(--text);font-size:16px;color:var(--soft);margin-top:10px}
+.book .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.book dl.facts dd{border-color:#c6c0b4}
+@media (max-width:880px){.book .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Close */
+.close{position:relative;color:var(--lime);background:var(--hearth)}
+.close > img{width:100%;height:min(84vh,760px);object-fit:cover;object-position:50% 60%}
+.close .panel{position:absolute;right:var(--gut-r);top:clamp(24px,8vh,80px);max-width:520px;background:rgba(36,26,18,.86);padding:clamp(22px,3vw,34px)}
+.close h2{font-size:clamp(34px,4.2vw,58px)}
+.close p{margin-top:10px}
+.close .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+@media (max-width:700px){.close > img{height:52vh}.close .panel{position:relative;right:auto;top:auto;max-width:none;background:var(--hearth)}}
+footer{background:var(--hearth);color:#c9bdae;font-size:14px;padding-block:28px calc(28px + env(safe-area-inset-bottom,0px));border-top:1px solid #3d2f23}
+footer .inner{display:grid;gap:6px}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;
+  padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);
+  background:rgba(36,26,18,.97);transform:translateY(110%);visibility:hidden;transition:transform .25s ease-out,visibility 0s .25s}
+.phonebar.on{transform:none;visibility:visible;transition:transform .25s ease-out}
+.phonebar .btn{flex:1;min-height:50px}
+.phonebar .btn.line{color:var(--lime)}
+@media (max-width:820px){.phonebar{display:flex}footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}}
+
+@media (prefers-reduced-motion: reduce){
+  .build{height:auto}
+  .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column;padding-top:96px}
+  .wall{position:relative;inset:auto;height:100vh;height:100svh;order:2}
+  .st{opacity:1 !important;transform:none !important}
+  .copy-a{position:relative;left:auto;right:auto;bottom:auto;max-width:none;order:1;opacity:1 !important;transform:none !important;padding:0 var(--gut-r) 26px var(--gut);background:none}
+  .copy-b{position:relative;left:auto;right:auto;top:auto;bottom:auto;max-width:none;order:3;opacity:1 !important;transform:none !important}
+  .copy-b .panel{background:var(--hearth)}
+  .phonebar,.phonebar.on{transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#book">Skip to booking</a>
+<p class="strip">A website idea made by Lamplit Studio for Bowhill Grange. Not their official site.</p>
+
+<header class="top">
+  <a class="name" href="#build"><b>Bowhill Grange</b><i>OATLANDS, TASMANIA, EST. 1854</i></a>
+  <nav aria-label="Main">
+    <a href="#cottages">The cottages</a>
+    <a href="#time">History</a>
+    <a href="#around">Around</a>
+    <a class="btn stone" href="#book">Check dates</a>
+  </nav>
+</header>
+
+<main>
+<section class="build" id="build" aria-label="Shepherd's Rest at Bowhill Grange">
+  <div class="stage">
+    <div class="wall" id="wall" role="img" aria-label="Shepherd's Rest, a sandstone cottage under the pines, in late afternoon sun with the pasture and a lone pine behind"><noscript><img src="img/shep-1000.jpg" alt="" width="1000" height="666" style="width:100%;height:100%;object-fit:cover"></noscript></div>
+    <div class="copy-a">
+      <p class="est">Our secret little valley</p>
+      <h1>Bowhill Grange</h1>
+      <p class="lede">Two private sandstone cottages among National Trust listed farm buildings, five minutes from Oatlands and about an hour from Hobart or Launceston.</p>
+    </div>
+    <div class="copy-b">
+      <div class="panel">
+        <h2>Rebuilt stone by stone.</h2>
+        <p>Shepherd's Rest first stood at Rose Hill, near Jericho, and sat empty for years. In 1982 local stonemasons took it down and built it again here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cottages wrap" id="cottages">
+  <div class="inner">
+    <div class="intro">
+      <h2 class="big">Two cottages, private from each other</h2>
+      <p class="lede">Stay in one, or take both for family or friends. Ruth and Peter leave breakfast provisions in each: free range eggs, bread, milk and cereal.</p>
+    </div>
+    <div class="pair">
+      <article class="cot eliz">
+        <p class="yr">1854</p>
+        <h3>Elizabeth's Cottage</h3>
+        <p class="desc">Designed by the ex-convict architect Frederick Thomas to house immigrant farm families. A high pitched roof, a five metre ceiling, the original wooden staircases, deep-set windows and baker's ovens, and a huge sandstone fireplace in the sitting room. The verandah runs the length of the cottage.</p>
+        <dl class="facts">
+          <dt>Bedrooms</dt><dd>Main bedroom downstairs with an ensuite and an extra single. An attic room up very steep, narrow stairs.</dd>
+          <dt>Kitchen</dt><dd>Fully equipped.</dd>
+          <dt>Note</dt><dd>Not suited to children under 12.</dd>
+        </dl>
+        <p class="rate">5.0 from 211 reviews on Airbnb</p>
+        <div class="grid">
+          <figure class="w"><img src="img/eliz-800.jpg" srcset="img/eliz-800.jpg 800w, img/eliz-1440.jpg 1440w" sizes="(max-width:880px) 100vw, 55vw" alt="Elizabeth's Cottage, white with a steep grey roof, on a green lawn under a blue sky" width="1440" height="1080" loading="lazy"><figcaption>Elizabeth's Cottage</figcaption></figure>
+          <figure><img src="img/oven-800.jpg" sizes="(max-width:880px) 50vw, 27vw" alt="The kitchen with an old stone baker's oven set into the limewashed wall" width="800" height="533" loading="lazy"><figcaption>The baker's oven</figcaption></figure>
+          <figure><img src="img/ebed-800.jpg" sizes="(max-width:880px) 50vw, 27vw" alt="An iron bed with pink cushions, lamplight and a dark window" width="800" height="533" loading="lazy"><figcaption>Main bedroom</figcaption></figure>
+          <figure class="w"><img src="img/attic-800.jpg" sizes="(max-width:880px) 100vw, 55vw" alt="The attic bedroom under timber-lined eaves, a tartan rug on the bed and a triangle window" width="800" height="533" loading="lazy"><figcaption>The attic room</figcaption></figure>
+        </div>
+      </article>
+      <article class="cot shep">
+        <p class="yr">Rebuilt 1982</p>
+        <h3>Shepherd's Rest</h3>
+        <p class="desc">Under a canopy of pines, looking out over hundreds of acres of pasture towards Table Mountain. One bedroom, a spacious open plan living room and a small kitchenette for simple meals. Ideal for couples.</p>
+        <dl class="facts">
+          <dt>Bedroom</dt><dd>One.</dd>
+          <dt>Kitchenette</dt><dd>Air fryer and a portable induction hob.</dd>
+        </dl>
+        <p class="rate">4.98 from 253 reviews on Airbnb</p>
+        <div class="grid">
+          <figure class="w"><img src="img/sfire-800.jpg" srcset="img/sfire-800.jpg 800w, img/sfire-1440.jpg 1440w" sizes="(max-width:880px) 100vw, 40vw" alt="The stone-walled living room at dusk, lamps on and the fire lit" width="1440" height="959" loading="lazy"><figcaption>Evening, fire lit</figcaption></figure>
+          <figure class="w"><img src="img/shepout-800.jpg" sizes="(max-width:880px) 100vw, 40vw" alt="Shepherd's Rest in sun among the pines and shrubs" width="800" height="530" loading="lazy"><figcaption>Under the pines</figcaption></figure>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="time wrap dark" id="time">
+  <div class="inner">
+    <div class="side">
+      <h2 class="big">170 years on one ridge</h2>
+      <p class="lede">A collection of early colonial farm buildings on a sandstone ridge above the dam, shaded by old cypress pines.</p>
+      <img src="img/aerial-900.jpg" srcset="img/aerial-900.jpg 900w, img/aerial-1400.jpg 1400w" sizes="(max-width:880px) 100vw, 34vw" alt="From above: the white farm buildings of Bowhill Grange among trees, with paddocks around" width="1400" height="1200" loading="lazy">
+    </div>
+    <div>
+      <ol class="years">
+        <li><b class="sm">Always</b><p>Country of the Oyster Bay (Paredarerme) and Big River (Lairmairanepair) peoples, who moved with the seasons between the east coast and the highlands.</p></li>
+        <li><b>1854</b><p>Henry Frampton Anstey has the cottages built as workers' homes, designed by <strong>Frederick Thomas</strong>.</p></li>
+        <li><b>1878</b><p>Dr James Wilson Agnew, later Sir James and Premier of Tasmania, buys the estate. His family keeps it for six generations.</p></li>
+        <li><b>1882</b><p><strong>The Assyrian</strong> wins the Melbourne Cup. He was stabled here for nearly two decades.</p></li>
+        <li><b>1982</b><p>Shepherd's Rest is taken down at Rose Hill and rebuilt here by local stonemasons.</p></li>
+        <li><b>2025</b><p>Ruth and Peter are finalists in the Airbnb Australian Host Awards.</p></li>
+      </ol>
+      <p class="src">The cottages also star in the film <a href="https://bowhillgrange.com/ancestry-road/" rel="noopener" target="_blank">Ancestry Road</a>, shot in and around Bowhill Grange.</p>
+    </div>
+  </div>
+</section>
+
+<section class="stay wrap" id="stay">
+  <div class="inner">
+    <img src="img/tractor-800.jpg" sizes="(max-width:880px) 100vw, 45vw" alt="An old red tractor in a golden paddock beside a pine, under a wide blue sky" width="800" height="600" loading="lazy">
+    <div>
+      <h2 class="big">Stay in, or go out</h2>
+      <p class="lede">Two and a half acres of park-like grounds, with merino pasture all round. No livestock, just the ducks.</p>
+      <ul>
+        <li><b>Breakfast is in the cottage</b>Free range eggs, milk and bread are waiting when you arrive.</li>
+        <li><b>Dinner at the door</b>Ruth's platters are popular. Ask about them when you book.</li>
+        <li><b>The fire</b>Both cottages have an open fire for cold Midlands nights.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="around wrap dark" id="around">
+  <div class="inner">
+    <figure>
+      <img src="img/rainbow-900.jpg" srcset="img/rainbow-900.jpg 900w, img/rainbow-1600.jpg 1600w" sizes="(max-width:880px) 100vw, 56vw" alt="A rainbow over the hills behind Elizabeth's Cottage under a dark storm sky" width="1600" height="1065" loading="lazy">
+      <figcaption>A Midlands storm over Elizabeth's Cottage</figcaption>
+    </figure>
+    <div>
+      <h2 class="big">So close to so much</h2>
+      <p class="lede">Oatlands has Australia's largest collection of Georgian sandstone buildings, plus galleries, antique shops, cafes, and a distillery and restaurant under the windmill.</p>
+      <table class="dist">
+        <tbody>
+          <tr><th scope="row">Oatlands village</th><td>5 min drive</td></tr>
+          <tr><th scope="row">Hobart</th><td>About an hour</td></tr>
+          <tr><th scope="row">Launceston</th><td>About an hour</td></tr>
+          <tr><th scope="row">The east coast</th><td>About an hour</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="said wrap" id="said">
+  <div class="inner">
+    <h2>What guests say</h2>
+    <blockquote><p>"We stayed in Shepherds Rest and the temperature was -2. We have never been more cosy and warm."</p><cite>Kimberley, Airbnb</cite></blockquote>
+    <blockquote><p>"Ruth's platter that we had for dinner was delicious and we enjoyed it with a wine as we sat by Peter's well lit fire."</p><cite>Jennifer, Airbnb</cite></blockquote>
+    <blockquote><p>"Ruth and Peter were the perfect hosts."</p><cite>Madeleine, Airbnb</cite></blockquote>
+  </div>
+</section>
+
+<section class="book wrap" id="book">
+  <div class="inner">
+    <div>
+      <h2 class="big">Check dates</h2>
+      <p class="lede">Each cottage has its own calendar on Airbnb. Or email or call Ruth and Peter to book direct.</p>
+      <p class="price">From A$300 a night<span>For two adults, with breakfast provisions.</span></p>
+      <div class="acts">
+        <a class="btn" href="https://www.airbnb.com.au/rooms/52656134" rel="noopener" target="_blank">Elizabeth's Cottage on Airbnb</a>
+        <a class="btn" href="https://www.airbnb.com.au/rooms/679974503057943006" rel="noopener" target="_blank">Shepherd's Rest on Airbnb</a>
+        <a class="btn line" href="mailto:bowhillgrange@gmail.com?subject=Dates%20at%20Bowhill%20Grange">Email us</a>
+        <a class="btn line" href="tel:+61423333645">Call 0423 333 645</a>
+      </div>
+    </div>
+    <dl class="facts">
+      <dt>Check in</dt><dd>From 2pm.</dd>
+      <dt>Check out</dt><dd>By 10am.</dd>
+      <dt>Where</dt><dd>500 Bowhill Road, Oatlands, Tasmania.</dd>
+    </dl>
+  </div>
+</section>
+
+<section class="close dark" aria-label="Dusk at Bowhill Grange">
+  <img src="img/dusk-900.jpg" sizes="100vw" alt="The cottage and the old pines in silhouette against a pale dusk sky" width="900" height="623" loading="lazy">
+  <div class="panel">
+    <h2>Far from the madding crowd.</h2>
+    <p>Bowhill Grange, 500 Bowhill Road, Oatlands.</p>
+    <div class="acts">
+      <a class="btn stone" href="#book">Check dates</a>
+      <a class="btn line" href="https://www.instagram.com/bowhillgrange/" rel="noopener" target="_blank">@bowhillgrange</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="inner">
+    <p>A preview made by Lamplit Studio for Bowhill Grange. Not affiliated, not live.</p>
+    <p>Photos are Bowhill Grange's own, from bowhillgrange.com and their Airbnb listing.</p>
+  </div>
+</footer>
+
+<div class="phonebar" id="phonebar">
+  <a class="btn stone" href="#book">Check dates</a>
+  <a class="btn line" href="tel:+61423333645">Call us</a>
+</div>
+
+<script>
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var q=function(s){return document.querySelector(s)};
+  var bar=document.getElementById('phonebar'), build=document.getElementById('build'), wall=document.getElementById('wall');
+  var ca=q('.copy-a'), cb=q('.copy-b');
+  var clamp=function(v){return v<0?0:v>1?1:v};
+  var seg=function(p,a,b){return clamp((p-a)/(b-a))};
+  var easeOut=function(t){return 1-Math.pow(1-t,3)};
+  var stones=[], layout='', pre=2;
+  // lay the photo out as courses of ashlar, bottom course first
+  function lay(){
+    var phone=window.innerWidth<700, key=phone?'p':'d';
+    if(key===layout) return; layout=key; wall.innerHTML=''; stones=[];
+    var src=phone?'img/shepm-900.jpg':'img/shep-1000.jpg';
+    var srcset=phone?'':'img/shep-1000.jpg 1000w, img/shep-1600.jpg 1600w';
+    var courses=phone?9:7, seed=7; pre=phone?2:3;
+    var rnd=function(){seed=(seed*9301+49297)%233280;return seed/233280};
+    var heights=[],tot=0;
+    for(var c=0;c<courses;c++){var h=.8+rnd()*.5;heights.push(h);tot+=h}
+    var top=100;
+    for(c=0;c<courses;c++){
+      var hp=heights[c]/tot*100; top-=hp;
+      var x=0, n=0, row=[];
+      while(x<100){
+        var w=phone?(22+rnd()*22):(9+rnd()*10);
+        if(x+w>94) w=100-x;
+        row.push([x,w]); x+=w; n++;
+      }
+      row.forEach(function(r){
+        var d=document.createElement('div'); d.className='st';
+        d.style.left=r[0]+'%'; d.style.top=top+'%';
+        d.style.width='calc('+r[1]+'% - 3px)'; d.style.height='calc('+hp+'% - 3px)';
+        var im=document.createElement('img'); im.src=src; if(srcset){im.srcset=srcset;im.sizes='100vw'}
+        im.alt=''; im.width=phone?900:1000; im.height=phone?1200:666;
+        im.style.left='calc('+(-r[0])+'vw)'; im.style.top='calc('+(-top)+' * 1svh)';
+        if(c<2) im.fetchPriority='high';
+        d.appendChild(im); wall.appendChild(d);
+        stones.push({el:d,course:c,x:r[0]});
+      });
+    }
+    stones.forEach(function(s,i){s.order=i/stones.length});
+  }
+  function prog(el){var r=el.getBoundingClientRect();var st=el.firstElementChild;var span=el.offsetHeight-(st?st.offsetHeight:window.innerHeight);return span>0?clamp(-r.top/span):0}
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    var vh=window.innerHeight;
+    var bk=document.getElementById('book').getBoundingClientRect();
+    bar.classList.toggle('on', bar.contains(document.activeElement) || (build.getBoundingClientRect().bottom<vh*.4 && (bk.top>vh*.9 || bk.bottom<0)));
+    if(reduce) return;
+    var p=prog(build);
+    // the first two courses are already down when the page opens
+    stones.forEach(function(s){
+      var a=.02+s.order*.62, t=s.course<pre?1:easeOut(seg(p,a,a+.12));
+      s.el.style.opacity=t<.02?0:Math.min(1,t*1.6).toFixed(3);
+      s.el.style.transform='translate3d(0,'+((1-t)*-38).toFixed(2)+'vh,0)';
+    });
+    ca.style.opacity=(1-seg(p,.28,.42)).toFixed(3);
+    ca.style.transform='translate3d(0,'+(seg(p,.28,.42)*24).toFixed(1)+'px,0)';
+    cb.style.opacity=seg(p,.8,.92).toFixed(3);
+    cb.style.transform='translate3d(0,'+((1-seg(p,.8,.92))*20).toFixed(1)+'px,0)';
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  lay();
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',function(){lay();onScroll()});
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(mq.addEventListener) mq.addEventListener('change',function(){location.reload()});
+  frame();
+})();
+</script>
+</body>
+</html>

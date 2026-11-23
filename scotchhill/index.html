@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>The Suite at Scotch Hill Truffle Farm</title>
+<meta name="description" content="A website idea for The Suite at Scotch Hill Truffle Farm, Neerim South. A couples suite on a working truffle farm, about an hour from Melbourne.">
+<meta property="og:title" content="The Suite at Scotch Hill Truffle Farm">
+<meta property="og:description" content="A couples suite on a working truffle farm in West Gippsland, looking out to Mt Baw Baw.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/scotchhill/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/scotchhill/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/gate-1600.jpg" media="(min-width: 700px)">
+<link rel="preload" as="image" href="img/gate-800.jpg" media="(max-width: 699px)">
+<style>
+:root{
+  --umber:#241c17; --skin:#5b4135; --lime:#edece7; --post:#c1cacf;
+  --haze:#8e9a9c; --rust:#a4512a; --ink:#241c17; --ink-soft:#5e534b;
+  --display:"Marcellus", "Times New Roman", serif;
+  --text:"Jost", system-ui, sans-serif;
+  --gut:clamp(20px,5vw,72px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--lime);color:var(--ink);font:300 17px/1.6 var(--text)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rust);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.1;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.skip{position:absolute;left:-999px;top:0;background:var(--umber);color:var(--lime);padding:10px 14px;z-index:30}
+.skip:focus{left:8px;top:8px}
+
+.strip{background:var(--umber);color:#d9d3cb;font-size:13px;line-height:1.4;padding:8px var(--gut);text-align:center}
+
+/* top bar */
+.top{position:absolute;left:0;right:0;top:36px;z-index:12;display:flex;align-items:center;justify-content:space-between;padding:14px var(--gut)}
+.top img{width:118px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:3px;background:var(--rust);color:#fff;text-decoration:none;font:500 15px/1 var(--text);letter-spacing:.02em}
+.btn:hover{background:#8d4322}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.7)}
+.btn.ghost:hover{background:rgba(255,255,255,.12)}
+
+/* the drive in */
+.drive{position:relative;height:340vh;background:var(--umber)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.plane{position:absolute;inset:0;will-change:transform,opacity}
+.plane img{width:100%;height:100%;object-fit:cover}
+.p-view img{object-position:50% 60%}
+.p-lane img{object-position:40% 70%}
+.p-gate{transform-origin:72% 62%}
+.p-gate img{object-position:62% 50%}
+.topshade{position:absolute;left:0;right:0;top:0;height:28%;background:linear-gradient(to bottom,rgba(24,18,14,.55),rgba(24,18,14,0));pointer-events:none}
+.shade{position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(to top,rgba(24,18,14,.82),rgba(24,18,14,0));pointer-events:none}
+.hero-copy{position:absolute;left:var(--gut);right:var(--gut);bottom:clamp(96px,14vh,140px);color:#fff;max-width:760px}
+.hero-copy h1{font-size:clamp(40px,7.4vw,96px);letter-spacing:.01em}
+.hero-copy p{font-size:clamp(17px,1.6vw,20px);max-width:34em;margin:18px 0 26px;color:#efe9e2}
+.cap{pointer-events:none;position:absolute;left:var(--gut);bottom:clamp(96px,14vh,140px);color:#fff;font-family:var(--display);font-size:clamp(30px,4.6vw,60px);line-height:1.1;max-width:13em;opacity:0}
+.cap small{display:block;font:300 clamp(16px,1.5vw,19px)/1.5 var(--text);margin-top:14px;max-width:26em;color:#efe9e2}
+.cap.c3{left:auto;right:var(--gut);text-align:right}
+
+/* sections */
+section{padding:clamp(72px,11vw,140px) var(--gut)}
+.suite{display:grid;gap:clamp(28px,5vw,72px);grid-template-columns:1fr;align-items:start}
+.suite h2,.farm h2,.near h2,.book h2{font-size:clamp(34px,4.6vw,58px);margin-bottom:18px}
+.lede{font-size:clamp(18px,1.7vw,21px);color:var(--ink);max-width:32em}
+.suite .copy p{color:var(--ink-soft);max-width:34em}
+.has{list-style:none;padding:0;margin:26px 0 0;border-top:1px solid #cfcac2}
+.has li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #cfcac2;font-size:16px}
+.has li span:last-child{color:var(--ink-soft);text-align:right}
+.big{margin:0}
+.big img{width:100%;border-radius:2px}
+.big figcaption,.fig figcaption{font-size:14px;color:var(--ink-soft);margin-top:8px}
+
+.rooms{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:0 var(--gut) clamp(72px,10vw,120px)}
+.rooms figure{margin:0}
+.rooms img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
+.rooms .wide{grid-column:span 2}
+.rooms .wide img{aspect-ratio:16/9}
+.rooms figcaption{font-size:14px;color:var(--ink-soft);margin-top:6px}
+
+.farm{background:var(--umber);color:#e9e3dc}
+.farm .grid{display:grid;gap:clamp(28px,5vw,64px);grid-template-columns:1fr}
+.farm p{color:#cfc6bd;max-width:32em}
+.farm .lede{color:#f1ece6}
+.farm .pics{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.farm .pics figure{margin:0}
+.farm .pics img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:2px}
+.farm .pics .tall{grid-row:span 2}
+.farm .pics .tall img{aspect-ratio:auto;height:100%}
+.farm figcaption{font-size:14px;color:#a99d92;margin-top:6px}
+
+.words{padding-top:clamp(72px,10vw,120px)}
+.words .score{font-family:var(--display);font-size:clamp(30px,4vw,48px);margin-bottom:6px}
+.words .score+p{color:var(--ink-soft);margin-bottom:40px}
+.quotes{display:grid;gap:34px;grid-template-columns:1fr;margin:0;padding:0;list-style:none}
+.quotes blockquote{margin:0;font-family:var(--display);font-size:clamp(22px,2.4vw,30px);line-height:1.25}
+.quotes cite{display:block;margin-top:10px;font:400 15px/1.4 var(--text);font-style:normal;color:var(--ink-soft)}
+
+.near{display:grid;gap:clamp(28px,5vw,64px);grid-template-columns:1fr;background:#e1e2dc}
+.near dl{margin:26px 0 0;display:grid;grid-template-columns:auto 1fr;gap:14px 22px}
+.near dt{font-family:var(--display);font-size:20px}
+.near dd{margin:0;color:var(--ink-soft)}
+.fig{margin:0}
+.fig img{width:100%;border-radius:2px}
+
+.book{text-align:left;max-width:900px}
+.book p{color:var(--ink-soft);max-width:34em}
+.book .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.book .btn.line{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.book .btn.line:hover{background:rgba(36,28,23,.06)}
+
+footer{background:var(--umber);color:#bfb5ab;padding:40px var(--gut) 120px;font-size:14px}
+footer img{width:110px;margin-bottom:16px}
+
+/* thumb bar */
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--umber);color:#f1ece6;border-radius:4px;padding:10px 10px 10px 16px;box-shadow:0 6px 24px rgba(0,0,0,.28);transform:translateY(140%);transition:transform .3s ease-out}
+.bar.on{transform:none}
+.bar span{font-size:14px;line-height:1.3}
+.bar b{font-weight:500}
+
+@media (min-width:760px){
+  .rooms{grid-template-columns:repeat(4,1fr)}
+  .rooms .wide{grid-column:span 2}
+  .quotes{grid-template-columns:1fr 1fr;gap:48px 64px}
+}
+@media (min-width:980px){
+  .suite{grid-template-columns:1.25fr 1fr}
+  .farm .grid{grid-template-columns:1fr 1.15fr;align-items:center}
+  .near{grid-template-columns:1fr 1.1fr;align-items:center}
+  .bar{left:auto;right:28px;bottom:28px;width:auto}
+}
+@media (max-width:699px){
+  .p-gate{transform-origin:60% 60%}
+  .p-gate img{object-position:58% 50%}
+  .cap.c3{left:var(--gut);text-align:left}
+  .top img{width:96px}
+  .top .btn{display:none}
+}
+@media (max-height:560px){
+  .hero-copy,.cap{bottom:24px}
+  .hero-copy h1{font-size:36px}
+  .hero-copy p{margin:8px 0 12px;font-size:15px}
+  .cap{font-size:26px}
+  .cap small{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .drive{height:auto}
+  .stage{position:relative;height:100vh;height:100svh}
+  .p-gate,.p-lane,.cap{display:none}
+  .bar{transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#suite">Skip to the suite</a>
+<div class="strip">A website idea made by Lamplit Studio for Scotch Hill Truffle Farm. Not their official site.</div>
+
+<header class="top">
+  <img src="img/logo.png" width="600" height="377" alt="Scotch Hill Truffle Farm">
+  <a class="btn ghost" href="https://www.airbnb.com.au/rooms/846612259546165485">Check dates</a>
+</header>
+
+<main>
+<div class="drive" id="drive">
+  <div class="stage">
+    <div class="plane p-view"><img src="img/view-1600.jpg" srcset="img/view-800.jpg 800w, img/view-1600.jpg 1000w" sizes="100vw" width="1000" height="667" alt="The suite's open doors looking out over paddocks to the hills"></div>
+    <div class="plane p-lane"><img src="img/drive-1600.jpg" srcset="img/drive-800.jpg 800w, img/drive-1600.jpg 1000w" sizes="100vw" width="1000" height="750" alt="The long drive lined with trees in white blossom"></div>
+    <div class="plane p-gate"><img src="img/gate-1600.jpg" srcset="img/gate-800.jpg 800w, img/gate-1600.jpg 1000w" sizes="100vw" width="1000" height="750" alt="A white gate post and gate at the farm entrance" fetchpriority="high"></div>
+    <div class="topshade"></div>
+    <div class="shade"></div>
+    <div class="hero-copy">
+      <h1>The Suite at Scotch Hill</h1>
+      <p>A couples suite on a working black truffle farm in Neerim South, about an hour from Melbourne, looking out to Mt Baw Baw.</p>
+      <a class="btn" href="https://www.airbnb.com.au/rooms/846612259546165485">Check dates</a>
+    </div>
+    <p class="cap c1" aria-hidden="true">Through the gates.<small>A country lane of old eucalypts leads to the gates.</small></p>
+    <p class="cap c2" aria-hidden="true">Down the long drive.<small>Horses and sheep in the paddocks, and the truffiere off to one side.</small></p>
+    <p class="cap c3">Up to the suite on the hill.<small>Its own entrance, and windows on three sides.</small></p>
+  </div>
+</div>
+
+<section class="suite" id="suite">
+  <figure class="big">
+    <img src="img/bed-1600.jpg" srcset="img/bed-800.jpg 800w, img/bed-1600.jpg 1000w" sizes="(min-width:980px) 55vw, 100vw" width="1000" height="667" alt="King bed facing glass doors and the paddocks" loading="lazy">
+    <figcaption>The king bed faces the glass doors and the paddocks.</figcaption>
+  </figure>
+  <div class="copy">
+    <h2>The Suite</h2>
+    <p class="lede">A French country wing of Michelle and Ron's home, set apart with its own entrance, made for two.</p>
+    <p>Wake to the valley from the king bed. On cool nights there's the gas log fire, and in the warmer months the pool looks over the hills. A young child can come too, with a kids mattress and sleeping bag ready.</p>
+    <ul class="has">
+      <li><span>Bathroom</span><span>Deep bath, walk-in shower with views</span></li>
+      <li><span>Warmth</span><span>Gas log fire, air conditioning, ceiling fan</span></li>
+      <li><span>Outside</span><span>Pool, fire pit, outdoor dining</span></li>
+      <li><span>On arrival</span><span>First morning's breakfast provisions and a bottle of wine</span></li>
+      <li><span>Coffee</span><span>Nespresso machine and pods</span></li>
+    </ul>
+  </div>
+</section>
+
+<div class="rooms">
+  <figure><img src="img/bath-800.jpg" width="800" height="534" alt="Freestanding bath beside a window onto the paddocks" loading="lazy"><figcaption>The bath, with a view.</figcaption></figure>
+  <figure><img src="img/fire-800.jpg" width="667" height="1000" alt="Armchair and wine beside the gas log fire" loading="lazy"><figcaption>The fire.</figcaption></figure>
+  <figure class="wide"><img src="img/pool-1600.jpg" srcset="img/pool-800.jpg 800w, img/pool-1600.jpg 1000w" sizes="(min-width:760px) 50vw, 100vw" width="1000" height="667" alt="Lap pool running out toward the hills" loading="lazy"><figcaption>The pool runs toward the hills.</figcaption></figure>
+  <figure class="wide"><img src="img/terrace-1600.jpg" srcset="img/terrace-800.jpg 800w, img/terrace-1600.jpg 1000w" sizes="(min-width:760px) 50vw, 100vw" width="1000" height="667" alt="Covered terrace with a wrought iron table" loading="lazy"><figcaption>Outdoor dining under cover.</figcaption></figure>
+  <figure><img src="img/shower-800.jpg" width="800" height="534" alt="Ensuite with walk-in shower and double basin" loading="lazy"><figcaption>The ensuite.</figcaption></figure>
+  <figure><img src="img/bar-800.jpg" width="800" height="534" alt="Coffee and breakfast bench in the suite" loading="lazy"><figcaption>Breakfast bench.</figcaption></figure>
+</div>
+
+<section class="farm">
+  <div class="grid">
+    <div>
+      <h2>A working truffle farm</h2>
+      <p class="lede">Scotch Hill grows French black truffles under its oaks, and the dogs find them.</p>
+      <p>Fresh truffles come up from June to September. In winter, guests can join a truffle hunt with the dogs, then warm up at a fireside tasting. The rest of the year there are sheep and horses in the paddocks.</p>
+    </div>
+    <div class="pics">
+      <figure class="tall"><img src="img/dog-800.jpg" width="800" height="534" alt="A truffle dog running between young oak trees" loading="lazy"><figcaption>Among the young oaks.</figcaption></figure>
+      <figure><img src="img/truffles-800.jpg" width="800" height="400" alt="Black truffles with dry oak leaves" loading="lazy"><figcaption>Black truffles.</figcaption></figure>
+      <figure><img src="img/sheep-800.jpg" width="800" height="600" alt="Two sheep in the paddock" loading="lazy"><figcaption>The neighbours.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="words" aria-labelledby="words-h">
+  <h2 id="words-h" class="score">Rated 4.96 across 89 reviews</h2>
+  <p>From reviews on Airbnb.</p>
+  <ul class="quotes">
+    <li><blockquote>Stunning views, a great place to watch the sunrise.</blockquote><cite>Kasey, Airbnb</cite></li>
+    <li><blockquote>Horses, sheep, and an alpaca right outside.</blockquote><cite>Emily, Airbnb</cite></li>
+    <li><blockquote>The sheep would wander right up to say hello.</blockquote><cite>Sandra, Airbnb</cite></li>
+    <li><blockquote>The truffle butter was absolutely amazing.</blockquote><cite>Tristan, Airbnb</cite></li>
+  </ul>
+</section>
+
+<section class="near">
+  <div>
+    <h2>Around Neerim South</h2>
+    <p class="lede">West Gippsland, between the hills of Neerim South and the forests round Noojee.</p>
+    <dl>
+      <dt>Melbourne</dt><dd>About an hour's drive.</dd>
+      <dt>Mt Baw Baw</dt><dd>In view from the suite, snow capped in winter.</dd>
+      <dt>Noojee</dt><dd>The old timber trestle bridge and forest walks.</dd>
+      <dt>Toorongo Falls</dt><dd>Rainforest walks and cascades, best in winter and spring.</dd>
+      <dt>The Ada Tree</dt><dd>A mountain ash about 76 metres tall.</dd>
+    </dl>
+  </div>
+  <figure class="fig"><img src="img/falls-1600.jpg" srcset="img/falls-800.jpg 800w, img/falls-1600.jpg 1000w" sizes="(min-width:980px) 50vw, 100vw" width="1000" height="664" alt="A mossy forest creek near Toorongo" loading="lazy"><figcaption>Toorongo River, near Noojee.</figcaption></figure>
+</section>
+
+<section class="book" id="book">
+  <h2>Book The Suite</h2>
+  <p>Pick your nights and see what's free. Listed from A$280 to A$380 a night, with breakfast provisions and a welcome bottle of wine.</p>
+  <div class="row">
+    <a class="btn" href="https://www.airbnb.com.au/rooms/846612259546165485">Check dates</a>
+    <a class="btn line" href="https://scotchhill.com.au/truffle-hunts-near-melbourne/">Truffle hunts</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <img src="img/logo.png" width="600" height="377" alt="" loading="lazy">
+  <p>The Suite at Scotch Hill Truffle Farm, Neerim South, West Gippsland, Victoria.</p>
+  <p>A preview made by Lamplit Studio for Scotch Hill Truffle Farm. Not affiliated, not live.</p>
+</footer>
+
+<div class="bar" id="bar" aria-hidden="true">
+  <span><b>The Suite</b><br>from A$280 a night</span>
+  <a class="btn" href="https://www.airbnb.com.au/rooms/846612259546165485" tabindex="-1">Check dates</a>
+</div>
+
+<script>
+(function(){
+  var bar=document.getElementById('bar');
+  var drive=document.getElementById('drive');
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  var q=function(s){return drive.querySelector(s)};
+  var gate=q('.p-gate'),lane=q('.p-lane'),view=q('.p-view'),hero=q('.hero-copy');
+  var c1=q('.c1'),c2=q('.c2'),c3=q('.c3');
+  function cl(x){return x<0?0:x>1?1:x}
+  function seg(p,a,b){return cl((p-a)/(b-a))}
+  function bell(p,a,b,c,d){return seg(p,a,b)*(1-seg(p,c,d))}
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    var r=drive.getBoundingClientRect();
+    var span=drive.offsetHeight-window.innerHeight;
+    var p=span>0?cl(-r.top/span):1;
+    var anim=[gate,lane,view,hero,c1,c2,c3];
+    if(mq.matches){anim.forEach(function(e){e.style.transform='';e.style.opacity='';e.style.visibility=''});}
+    else{
+      var g=seg(p,.04,.36);
+      gate.style.transform='scale('+(1+g*1.4)+')';
+      gate.style.opacity=1-seg(p,.18,.36);
+      var l=seg(p,.2,.78);
+      lane.style.transform='scale('+(1.04+l*.32)+') translateY('+(-l*3)+'%)';
+      lane.style.opacity=1-seg(p,.62,.8);
+      view.style.transform='scale('+(1.14-seg(p,.6,1)*.14)+')';
+      hero.style.opacity=1-seg(p,.03,.12);
+      hero.style.transform='translateY('+(-seg(p,.03,.12)*30)+'px)';
+      c1.style.opacity=bell(p,.14,.22,.34,.4);
+      c2.style.opacity=bell(p,.42,.5,.62,.68);
+      c3.style.opacity=seg(p,.78,.88);
+      c1.style.transform='translateY('+((1-seg(p,.14,.22))*24)+'px)';
+      c2.style.transform='translateY('+((1-seg(p,.42,.5))*24)+'px)';
+      c3.style.transform='translateY('+((1-seg(p,.78,.88))*24)+'px)';
+      hero.style.visibility=p>.12?'hidden':'';
+    }
+    var past=r.bottom<window.innerHeight*.6;
+    bar.classList.toggle('on',past);
+    bar.setAttribute('aria-hidden',past?'false':'true');
+    bar.querySelector('a').tabIndex=past?0:-1;
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  if(mq.addEventListener)mq.addEventListener('change',onScroll);
+  frame();
+})();
+</script>
+</body>
+</html>

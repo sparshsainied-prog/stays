@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Forest Edge Cabin | A private cabin on the edge of the forest near Bridgetown</title>
+<meta name="description" content="A private studio cabin at Glenlynn, near Bridgetown in WA's South West, between State forest and rolling paddocks. A website idea made by Lamplit Studio for Forest Edge Cabin.">
+<meta property="og:title" content="Forest Edge Cabin, Bridgetown">
+<meta property="og:description" content="A website idea made by Lamplit Studio for Forest Edge Cabin. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/forestedgecabin/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/forestedgecabin/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23202020'/%3E%3Cpath d='M4 22C10 12 20 7 29 6C24 13 15 20 5 23Z' fill='%23606c38'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/edge.jpg" media="(min-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/edge-m.jpg" media="(max-width: 699px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Poppins is the face of their own logo (slop-ok, brand) -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Poppins:wght@400;500;600&display=swap"><!-- slop-ok: Poppins is their logo face -->
+<style>
+/* Tokens come from the cabin and its logo (see brand.md):
+   char  = the charcoal of their logo and the black-stained cladding
+   leaf  = the eucalypt leaf in their logo
+   gold  = the dry summer paddock and the low sun through it
+   glow  = the festoon lights over the deck at nightfall
+   mist  = a frosty morning paddock, pale grey-green
+   Poppins is their logo face. Karla is for reading. */
+:root{
+  --char:#202020;
+  --char-2:#2e2f2b;
+  --leaf:#606c38;
+  --leaf-2:#4d5a2b;
+  --gold:#c9a35a;
+  --glow:#f2c46d;
+  --mist:#eaede5;
+  --mist-2:#d8ddd0;
+  --ink:#1f211d;
+  --ink-soft:#555a4f;
+  --display:"Poppins","Avenir Next","Segoe UI",sans-serif;
+  --text:"Karla","Helvetica Neue","Segoe UI",sans-serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--mist);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--leaf);outline-offset:3px}
+.dark :focus-visible,.phonebar :focus-visible,footer :focus-visible,.strip :focus-visible,.top :focus-visible,.night :focus-visible{outline-color:var(--glow)}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--mist);padding:8px 12px}
+
+.strip{background:var(--char);color:var(--mist);font-size:14px;text-align:center;margin:0;
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px var(--gut-r) 0 var(--gut)}
+.brand{display:block;background:rgba(32,32,32,.82);padding:8px 12px;border-radius:4px}
+.logo{display:block;width:clamp(150px,16vw,210px);}
+.top nav{display:flex;gap:22px;align-items:center;font-weight:700;font-size:15px}
+.top nav a{color:#fff;text-decoration:none;text-shadow:0 1px 8px rgba(0,0,0,.7)}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:24px;
+  font-family:var(--text);font-weight:700;font-size:16px;text-decoration:none;border:0;cursor:pointer;background:var(--leaf);color:#fff}
+.btn:hover{background:var(--leaf-2)}
+.btn.glow{background:var(--glow);color:var(--char)}
+.btn.glow:hover{background:#f6d38f}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.line:hover{background:rgba(255,255,255,.08)}
+.top nav .btn{text-shadow:none}
+@media (max-width:820px){.top nav a:not(.btn){display:none}}
+
+/* ---------- Hero: from the trees, into nightfall ---------- */
+.night{position:relative;height:320vh;background:var(--char)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--char)}
+.layer{position:absolute;inset:0;will-change:transform,opacity}
+.layer img{width:100%;height:100%;object-fit:cover}
+.l-day{transform-origin:62% 62%}
+.l-day img{object-position:50% 50%}
+.l-dusk{opacity:0;transform:scale(1.08);transform-origin:50% 60%}
+.l-dusk img{object-position:50% 60%}
+.shade{position:absolute;inset:0;background:#0d0f14;opacity:0;pointer-events:none;will-change:opacity}
+.leaf{position:absolute;z-index:5;left:8%;top:-14%;width:clamp(120px,15vw,220px);will-change:transform;pointer-events:none;filter:drop-shadow(0 10px 14px rgba(0,0,0,.35))}
+.leaf svg{width:100%;height:auto;display:block}
+.copy-a{position:absolute;z-index:6;left:var(--gut);bottom:clamp(28px,8vh,90px);max-width:min(560px, calc(100% - 40px));color:#fff;will-change:opacity,transform}
+.panel{background:rgba(32,32,32,.86);padding:clamp(20px,2.4vw,30px) clamp(20px,2.6vw,34px);border-radius:4px}
+.copy-a .where{font-weight:700;font-size:15px;color:var(--glow)}
+.copy-a h1{font-size:clamp(38px,5vw,70px);margin-top:8px}
+.copy-a p.lede{font-size:clamp(17px,1.4vw,19px);margin-top:12px}
+.copy-b{position:absolute;z-index:6;right:var(--gut-r);bottom:clamp(28px,8vh,90px);max-width:440px;opacity:0;color:#fff;will-change:opacity,transform}
+.copy-b h2{font-size:clamp(28px,3.2vw,44px)}
+.copy-b p{margin-top:10px;font-size:17px}
+@media (max-width:699px){
+  .night{height:290vh}
+  .copy-a,.copy-b{left:var(--gut);right:var(--gut-r);bottom:18px;max-width:none}
+  .copy-a h1{font-size:clamp(32px,9vw,42px)}
+  .leaf{left:auto;right:6%;width:120px}
+}
+@media (max-height:620px){.copy-a p.lede{display:none}}
+
+/* ---------- Sections ---------- */
+.wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
+.inner{max-width:1200px;margin:0 auto}
+section{scroll-margin-top:10px}
+.lede{font-size:clamp(19px,1.6vw,21px);max-width:34em}
+.quote{font-size:clamp(20px,1.9vw,25px);line-height:1.4;font-weight:500}
+.who{font-size:15px;color:var(--ink-soft);margin-top:8px}
+.cap-s{font-size:14px;color:var(--ink-soft);margin-top:8px}
+h2.big{font-size:clamp(40px,5.4vw,74px)}
+dl.facts{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:22px;row-gap:12px;font-size:17px;line-height:1.5}
+dl.facts dt{font-weight:700;font-size:15px;padding-top:2px;white-space:nowrap}
+dl.facts dd{margin:0;border-bottom:1px solid var(--mist-2);padding-bottom:12px}
+
+/* The cabin */
+.cabin{padding-block:clamp(72px,9vw,130px) clamp(56px,7vw,100px)}
+.cabin .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.cabin .lede{margin-top:18px}
+.cabin blockquote{margin:30px 0 0;padding:0}
+@media (max-width:880px){.cabin .inner{grid-template-columns:minmax(0,1fr)}}
+.cabin .nook{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;margin-top:clamp(40px,5vw,64px);align-items:start}
+.nook figure{margin:0}
+.nook img{width:100%;object-fit:cover;border-radius:4px}
+.nook .a{grid-column:span 5}.nook .a img{aspect-ratio:3/4}
+.nook .b{grid-column:span 7;display:grid;gap:12px;align-content:start}
+.nook .b img{aspect-ratio:4/3}
+.nook .c{grid-column:span 4}.nook .d{grid-column:span 4}.nook .e{grid-column:span 4}
+.nook .c img,.nook .d img,.nook .e img{aspect-ratio:3/4}
+.nook figcaption{font-size:14px;color:var(--ink-soft);margin-top:8px}
+@media (max-width:760px){.nook .a,.nook .b{grid-column:span 12}.nook .a img{aspect-ratio:4/5}.nook .c,.nook .d{grid-column:span 6}.nook .e{grid-column:span 12}.nook .e img{aspect-ratio:4/3}}
+
+/* Room for more */
+.more{background:var(--mist-2);padding-block:clamp(64px,8vw,110px)}
+.more .inner{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);align-items:center}
+.more .pics{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.more .pics img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px}
+.more h2{font-size:clamp(32px,3.6vw,48px)}
+.more p{margin-top:14px}
+@media (max-width:880px){.more .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Outside */
+.outside{background:var(--char);color:var(--mist);padding-block:clamp(72px,9vw,130px)}
+.outside .head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:end}
+.outside .lede{color:#d9ddd2}
+.wild{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;margin-top:clamp(36px,5vw,56px)}
+.wild figure{margin:0}
+.wild img{width:100%;object-fit:cover;border-radius:4px}
+.wild .a{grid-column:span 4}.wild .b{grid-column:span 4}.wild .c{grid-column:span 4}
+.wild .a img,.wild .b img,.wild .c img{aspect-ratio:3/4}
+.wild .d{grid-column:span 7}.wild .d img{aspect-ratio:4/3}
+.wild .e{grid-column:span 5;align-self:stretch;display:flex;flex-direction:column;justify-content:flex-end;gap:14px;padding:clamp(4px,2vw,24px)}
+.wild figcaption{font-size:14px;color:#b4b9ab;margin-top:8px}
+.note{font-size:16px;border-top:1px solid #4a4c46;padding-top:14px;color:#d9ddd2}
+@media (max-width:880px){.outside .head{grid-template-columns:minmax(0,1fr)}.wild .a,.wild .b{grid-column:span 6}.wild .c{grid-column:span 12}.wild .c img{aspect-ratio:4/3}.wild .d,.wild .e{grid-column:span 12}}
+
+/* Guests */
+.guests{padding-block:clamp(72px,9vw,120px)}
+.score{display:flex;gap:18px;align-items:baseline;flex-wrap:wrap;margin-top:24px}
+.score b{font-family:var(--display);font-weight:500;font-size:clamp(70px,9vw,124px);line-height:.9;font-variant-numeric:tabular-nums;color:var(--leaf)}
+.score span{font-size:17px;max-width:20em}
+.quotes{list-style:none;margin:clamp(40px,5vw,60px) 0 0;padding:0;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:22px clamp(28px,5vw,64px)}
+.quotes li{border-top:1px solid var(--mist-2);padding-top:16px}
+.quotes li:first-child{grid-row:span 2}
+.quotes li:first-child .quote{font-size:clamp(23px,2.6vw,34px);line-height:1.32}
+@media (max-width:880px){.quotes{grid-template-columns:minmax(0,1fr)}.quotes li:first-child{grid-row:auto}}
+
+/* Around */
+.around{padding-block:0 clamp(72px,9vw,130px)}
+.around .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+table.dist{width:100%;border-collapse:collapse;margin-top:24px;font-size:17px}
+table.dist td{padding:12px 0;border-top:1px solid var(--mist-2);vertical-align:top}
+table.dist td:last-child{text-align:right;font-weight:700;white-space:nowrap;padding-left:16px}
+.around .ph img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px}
+.small{font-size:14px;color:var(--ink-soft);margin-top:12px}
+@media (max-width:880px){.around .inner{grid-template-columns:minmax(0,1fr)}.around .ph img{aspect-ratio:4/3}}
+
+/* Book */
+.book{background:var(--leaf);color:#fff;padding-block:clamp(72px,9vw,130px)}
+.book .lede{margin-top:16px}
+.book-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(16px,3vw,32px);margin-top:34px}
+.card{background:var(--mist);color:var(--ink);border-radius:4px;padding:clamp(22px,3vw,34px);display:grid;gap:12px;align-content:start}
+.card h3{font-size:clamp(26px,2.8vw,36px)}
+.card .btn{justify-self:start;margin-top:6px}
+.card.dark{background:var(--char);color:var(--mist)}
+.card.dark p{color:#d9ddd2}
+.acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.rules{margin-top:24px;font-size:16px;columns:2;column-gap:40px;padding-left:18px}
+.rules li{break-inside:avoid;margin-bottom:6px}
+@media (max-width:760px){.book-grid{grid-template-columns:minmax(0,1fr)}.rules{columns:1}}
+
+/* Close */
+.close{position:relative;color:#fff;background:var(--char)}
+.close img{width:100%;height:min(86vh,760px);object-fit:cover;object-position:50% 55%}
+.close .panel{position:absolute;left:var(--gut);bottom:clamp(24px,6vh,60px);max-width:560px}
+.close h2{font-size:clamp(32px,4vw,54px)}
+.close p{margin-top:10px}
+.close .acts{margin-top:18px}
+@media (max-width:700px){.close img{height:56vh}.close .panel{position:relative;left:auto;bottom:auto;max-width:none;border-radius:0;background:var(--char)}}
+footer{background:var(--char);color:#c6cabf;font-size:14px;padding-block:28px calc(28px + env(safe-area-inset-bottom,0px));border-top:1px solid #3d3e3a}
+footer .inner{display:grid;gap:6px}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;
+  padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);
+  background:rgba(32,32,32,.97);transform:translateY(110%);visibility:hidden;transition:transform .25s ease-out,visibility 0s .25s}
+.phonebar.on{transform:none;visibility:visible;transition:transform .25s ease-out}
+.phonebar .btn{flex:1;min-height:50px}
+.phonebar .btn.line{color:var(--mist)}
+@media (max-width:820px){.phonebar{display:flex}footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}}
+
+@media (prefers-reduced-motion: reduce){
+  .night{height:auto}
+  .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column}
+  .layer{position:relative;inset:auto;opacity:1 !important;transform:none !important}
+  .layer img{height:auto;aspect-ratio:4/3}
+  .l-day{order:1}.copy-a{order:2}.l-dusk{order:3}.copy-b{order:4}
+  .shade,.leaf{display:none}
+  .copy-a,.copy-b{position:relative;left:auto;right:auto;top:auto;bottom:auto;max-width:none;opacity:1 !important;transform:none !important}
+  .copy-a .panel,.copy-b .panel{border-radius:0;background:var(--char)}
+  .phonebar,.phonebar.on{transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#book">Skip to booking</a>
+<p class="strip">A website idea made by Lamplit Studio for Forest Edge Cabin. Not their official site.</p>
+
+<header class="top">
+  <a class="brand" href="#night" aria-label="Forest Edge Cabin, back to top"><img class="logo" src="img/logo.png" alt="Forest Edge Cabin, Bridgetown" width="480" height="160"></a>
+  <nav aria-label="Main">
+    <a href="#cabin">The cabin</a>
+    <a href="#outside">Outside</a>
+    <a href="#guests">Guests</a>
+    <a class="btn glow" href="#book">Check dates</a>
+  </nav>
+</header>
+
+<main>
+<section class="night" id="night" aria-label="The cabin from the edge of the forest">
+  <div class="stage">
+    <div class="layer l-day">
+      <picture>
+        <source media="(min-width:700px)" srcset="img/edge.jpg">
+        <img src="img/edge-m.jpg" alt="The black cabin seen from the forest, framed between two big tree trunks, green paddock in front" width="1000" height="1240" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="layer l-dusk">
+      <picture>
+        <source media="(min-width:700px)" srcset="img/dusk.jpg">
+        <img src="img/dusk-m.jpg" alt="The cabin at nightfall, festoon lights glowing along the deck and the forest dark behind" width="864" height="1080" loading="lazy">
+      </picture>
+    </div>
+    <div class="shade" aria-hidden="true"></div>
+    <div class="leaf" aria-hidden="true">
+      <svg viewBox="0 0 260 70"><path d="M4 52C40 30 110 6 256 2C214 20 150 52 70 62C44 65 20 62 4 52Z" fill="#606c38"/><path d="M8 52C70 40 150 22 250 4" stroke="#202020" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+    </div>
+    <div class="copy-a">
+      <div class="panel">
+        <p class="where">Glenlynn, near Bridgetown, WA</p>
+        <h1>A private cabin on the edge of the forest.</h1>
+        <p class="lede">State forest on one side, rolling paddocks on the other, and no neighbours. Bridgetown is six minutes away.</p>
+      </div>
+    </div>
+    <div class="copy-b">
+      <div class="panel">
+        <h2>"Nightfall is magical at the Cabin."</h2>
+        <p>From the Forest Edge Cabin Instagram. At dusk the kangaroos and emus come out to feed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cabin" id="cabin">
+  <div class="wrap">
+    <div class="inner">
+      <div>
+        <h2 class="big">The cabin</h2>
+        <p class="lede">One generous studio-style room for two. The queen bed has picture windows on two sides, so the view keeps changing across the paddocks, and there's a window seat to read in.</p>
+        <blockquote>
+          <p class="quote">"A gorgeous reading nook surrounded by windows and lovely outdoor bath."</p>
+          <p class="who">Sarah, on Airbnb, November 2026</p>
+        </blockquote>
+      </div>
+      <dl class="facts">
+        <dt>Sleeps 2</dt><dd>One queen bed in the main cabin. Room for up to 6 if you ask for the bunk room.</dd>
+        <dt>Warm</dt><dd>A wood heater inside for the cool evenings.</dd>
+        <dt>Bathroom</dt><dd>Private, across the covered verandah, about 5 metres from the cabin. Under-floor heating, a large shower and views. The laundry is out there too.</dd>
+        <dt>Outside</dt><dd>A deck for sundowners, and a bath under the sky.</dd>
+        <dt>Arrive</dt><dd>Self check-in from 3pm. Check out by 10am.</dd>
+      </dl>
+    </div>
+    <div class="inner nook">
+      <figure class="a"><img src="img/nook.jpg" sizes="(max-width:760px) 100vw, 42vw" alt="The window seat: cushions on a daybed in a bay of windows, looking out to the green paddock" width="900" height="1200" loading="lazy"><figcaption>The window seat</figcaption></figure>
+      <div class="b">
+        <figure><img src="img/heater.jpg" sizes="(max-width:760px) 100vw, 58vw" alt="A black wood heater with a stack of firewood, a woven throw on the chair beside it" width="1200" height="900" loading="lazy"><figcaption>The wood heater</figcaption></figure>
+        <figure><img src="img/bed.jpg" sizes="(max-width:760px) 100vw, 58vw" alt="The queen bed in the studio room" width="1200" height="900" loading="lazy"><figcaption>Queen bed</figcaption></figure>
+      </div>
+      <figure class="c"><img src="img/dining.jpg" sizes="(max-width:760px) 50vw, 33vw" alt="A timber dining table with black pendant lights and the kitchen behind" width="1200" height="901" loading="lazy"><figcaption>Kitchen and table</figcaption></figure>
+      <figure class="d"><img src="img/bath.jpg" sizes="(max-width:760px) 50vw, 33vw" alt="A clawfoot bath and a hanging robe on the verandah, paddock beyond" width="900" height="1200" loading="lazy"><figcaption>The outdoor bath</figcaption></figure>
+      <figure class="e"><img src="img/bathroom.jpg" sizes="(max-width:760px) 100vw, 33vw" alt="The bathroom: a walk-in shower, a toilet and a window to the trees" width="900" height="1200" loading="lazy"><figcaption>Bathroom</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="more wrap" id="more">
+  <div class="inner">
+    <div>
+      <h2>Bringing more people?</h2>
+      <p>There's a separate bunk room with a double and a single, and a trundle that rolls out from under the queen. Ask for them when you book; they stay locked otherwise.</p>
+      <p>The nightly rate covers two. Each extra guest is A$50 a night, and babies stay free. A cot and high chair are there if you need them.</p>
+    </div>
+    <div class="pics">
+      <img src="img/bunks.jpg" sizes="(max-width:880px) 50vw, 30vw" alt="The bunk room: a single bunk above a double bed with a checked blanket" width="900" height="1200" loading="lazy">
+      <img src="img/bunks2.jpg" sizes="(max-width:880px) 50vw, 30vw" alt="The bunks with cushions, a ladder and a small timber shelf" width="900" height="1200" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="outside dark wrap" id="outside">
+  <div class="inner">
+    <div class="head">
+      <h2 class="big">Outside</h2>
+      <p class="lede">Kangaroos and emus feed on the property and beyond. Mornings bring the birds. In winter there are two fire pits, and after dark, the stars.</p>
+    </div>
+    <div class="wild">
+      <figure class="a"><img src="img/roos.jpg" sizes="(max-width:880px) 50vw, 33vw" alt="Three kangaroos standing in long green grass" width="900" height="1200" loading="lazy"><figcaption>Neighbours</figcaption></figure>
+      <figure class="b"><img src="img/emus.jpg" sizes="(max-width:880px) 50vw, 33vw" alt="Emus walking through a green paddock below the trees" width="900" height="1200" loading="lazy"><figcaption>Emus in the paddock</figcaption></figure>
+      <figure class="c"><img src="img/frost.jpg" sizes="(max-width:880px) 100vw, 33vw" alt="Early sun on the paddock, fence posts and the forest along its edge" width="900" height="1200" loading="lazy"><figcaption>Morning over the paddock</figcaption></figure>
+      <figure class="d"><img src="img/firepit.jpg" sizes="(max-width:880px) 100vw, 58vw" alt="A fire burning in a ring of logs on the grass at dusk, hills behind" width="1200" height="900" loading="lazy"><figcaption>One of the two fire pits</figcaption></figure>
+      <div class="e">
+        <p class="quote">"Just the sounds of kookaburras, cockatoos and beautiful birdlife."</p>
+        <p class="who" style="color:#b4b9ab">Gina, on Airbnb, October 2026</p>
+        <p class="note">Fire pits and the outdoor fireplace can't be lit in fire season.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="guests wrap" id="guests">
+  <div class="inner">
+    <h2 class="big">What guests say</h2>
+    <p class="score"><b>4.94</b><span>from 318 reviews on Airbnb. A Guest Favourite.</span></p>
+    <ul class="quotes">
+      <li><p class="quote">"We loved sipping our morning cuppa on the east-facing verandah, watching the sunrise, and sitting in the bay window in the evenings, enjoying the sunset."</p><p class="who">Gina, Airbnb, October 2026</p></li>
+      <li><p class="quote">"Surrounded by forests, fruit trees and a multitude of birds."</p><p class="who">Penny, Airbnb, November 2026</p></li>
+      <li><p class="quote">"Homemade jam was tasty and bed super comfy."</p><p class="who">Sharon, Airbnb, November 2026</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="around wrap" id="around">
+  <div class="inner">
+    <div>
+      <h2 class="big">Getting here</h2>
+      <table class="dist">
+        <tbody>
+          <tr><td>Bridgetown</td><td>6 minutes' drive</td></tr>
+        </tbody>
+      </table>
+      <p class="small">The address and directions come with your booking confirmation.</p>
+    </div>
+    <figure class="ph" style="margin:0">
+      <img src="img/chairs.jpg" sizes="(max-width:880px) 100vw, 44vw" alt="Two timber chairs with red cushions and a bottle of wine on a small table, facing the paddock and the forest edge" width="1200" height="952" loading="lazy">
+      <figcaption class="cap-s">Two chairs at the edge of the trees.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="book wrap" id="book">
+  <div class="inner">
+    <h2 class="big">Check dates</h2>
+    <p class="lede">The nightly rate covers two people. Extra guests are A$50 a night each.</p>
+    <div class="book-grid">
+      <div class="card">
+        <h3>See free dates</h3>
+        <p>The calendar and booking are on Airbnb for now.</p>
+        <a class="btn" href="https://www.airbnb.com.au/rooms/31963802" rel="noopener" target="_blank">Check dates on Airbnb</a>
+      </div>
+      <div class="card dark">
+        <h3>Or ask Sharyn</h3>
+        <p>Questions about dates, beds or the bunk room.</p>
+        <div class="acts">
+          <a class="btn glow" href="tel:+61419279995">Call 0419 279 995</a>
+          <a class="btn line" href="mailto:info@forestedgecabin.com.au">Email</a>
+        </div>
+      </div>
+    </div>
+    <ul class="rules">
+      <li>Check in from 3pm. Check out by 10am, as the cleaners come straight after.</li>
+      <li>Only the guests named on the booking.</li>
+      <li>No pets, for the wildlife's sake.</li>
+      <li>Fires can't be lit outside in fire season.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="close" aria-label="The deck">
+  <img src="img/deck.jpg" alt="The cabin's deck with stone steps, timber chairs and a slatted pergola, in afternoon sun" width="1200" height="900" loading="lazy">
+  <div class="panel">
+    <h2>Stay a night or two on the edge of the forest.</h2>
+    <p>Glenlynn, near Bridgetown. One cabin, all to yourselves.</p>
+    <div class="acts">
+      <a class="btn glow" href="#book">Check dates</a>
+      <a class="btn line" href="https://www.instagram.com/forestedgecabin/" rel="noopener" target="_blank">@forestedgecabin</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="inner">
+    <p>A preview made by Lamplit Studio for Forest Edge Cabin. Not affiliated, not live.</p>
+    <p>Photos and logo are Forest Edge Cabin's own, from their website and Airbnb listing.</p>
+  </div>
+</footer>
+
+<div class="phonebar" id="phonebar">
+  <a class="btn glow" href="#book">Check dates</a>
+  <a class="btn line" href="tel:+61419279995">Call</a>
+</div>
+
+<script>
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var bar=document.getElementById('phonebar'), night=document.getElementById('night');
+  var q=function(s){return document.querySelector(s)};
+  var day=q('.l-day'), dusk=q('.l-dusk'), shade=q('.shade'), leaf=q('.leaf'), ca=q('.copy-a'), cb=q('.copy-b');
+  var clamp=function(v){return v<0?0:v>1?1:v};
+  var seg=function(p,a,b){return clamp((p-a)/(b-a))};
+  var ease=function(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
+  function prog(el){var r=el.getBoundingClientRect();var st=el.firstElementChild;var span=el.offsetHeight-st.offsetHeight;return span>0?clamp(-r.top/span):0}
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    var vh=window.innerHeight, vw=window.innerWidth;
+    var bk=document.getElementById('book').getBoundingClientRect();
+    bar.classList.toggle('on', bar.contains(document.activeElement) || (night.getBoundingClientRect().bottom<vh*.5 && (bk.top>vh*.9 || bk.bottom<0)));
+    if(reduce) return;
+    var p=prog(night);
+    if(p>1.01) return;
+    // step out from between the trunks
+    var a=ease(seg(p,0,.55));
+    day.style.transform='scale('+(1+a*.42).toFixed(4)+')';
+    ca.style.opacity=(1-seg(p,.08,.22)).toFixed(3);
+    ca.style.transform='translate3d(0,'+(-seg(p,.08,.22)*30).toFixed(1)+'px,0)';
+    // the light goes
+    shade.style.opacity=(seg(p,.3,.55)*.55*(1-seg(p,.55,.7))).toFixed(3);
+    var d=ease(seg(p,.5,.78));
+    dusk.style.opacity=d.toFixed(3);
+    dusk.style.transform='scale('+(1.08-d*.08).toFixed(4)+')';
+    cb.style.opacity=seg(p,.8,.92).toFixed(3);
+    cb.style.transform='translate3d(0,'+((1-seg(p,.8,.92))*20).toFixed(1)+'px,0)';
+    // a leaf from their logo falls through the whole scene
+    var l=seg(p,.02,.95);
+    var x=Math.sin(l*Math.PI*2.4)*vw*.07 + l*vw*.12;
+    var y=l*vh*1.12;
+    leaf.style.transform='translate3d('+x.toFixed(1)+'px,'+y.toFixed(1)+'px,0) rotate('+(-18+Math.sin(l*Math.PI*3)*26).toFixed(1)+'deg)';
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(mq.addEventListener) mq.addEventListener('change',function(){location.reload()});
+  frame();
+})();
+</script>
+</body>
+</html>

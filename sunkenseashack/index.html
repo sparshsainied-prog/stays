@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en-AU" class="nojs">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.className="js"</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Sunken Sea Shack | A waterfront shack at Abels Bay, Huon Valley</title>
+<meta name="description" content="A two-bedroom shack on the water at Abels Bay, 15 minutes from Cygnet in Tasmania's Huon Valley. A website idea made by Lamplit Studio for Sunken Sea Shack.">
+<meta property="og:title" content="Sunken Sea Shack, Abels Bay">
+<meta property="og:description" content="A website idea made by Lamplit Studio for Sunken Sea Shack. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/sunkenseashack/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/sunkenseashack/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2334444a'/%3E%3Cg fill='none' stroke='%23d9a22b' stroke-width='2.4' stroke-linecap='round'%3E%3Ccircle cx='16' cy='7' r='2.6'/%3E%3Cpath d='M16 9.6V26M10 14h12M7 19c1 4.5 4.6 7 9 7s8-2.5 9-7'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/lounge-2000.jpg" media="(min-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/lounge-1000.jpg" media="(max-width: 699px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Zilla+Slab:wght@500;600;700&display=swap">
+<style>
+/* Tokens come from their photos (see brand.md):
+   night = the lounge and bedroom after dark
+   mist  = the grey sky and still water of the bay
+   gorse = the yellow bush flowering round the shack
+   oak   = the timber ceiling
+   deep  = the bay, darkened, for the water that rises in the first scene
+   Zilla Slab reads like painted shack and boat-shed lettering. Karla is for reading. */
+:root{
+  --night:#1b1916;
+  --night-2:#2b2824;
+  --mist:#dfe3e4;
+  --mist-2:#c9cfd1;
+  --gorse:#d9a22b;
+  --oak:#6b3a1d;
+  --deep:#34444a;
+  --ink:#1b1916;
+  --ink-soft:#4f5456;
+  --display:"Zilla Slab","Rockwell",Georgia,serif;
+  --text:"Karla","Avenir Next","Segoe UI",sans-serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--mist);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--night);outline-offset:3px}
+.hero :focus-visible,.back :focus-visible,.guests :focus-visible,.close :focus-visible,.phonebar :focus-visible,footer :focus-visible,.strip :focus-visible,.top :focus-visible,.direct :focus-visible{outline-color:var(--gorse)}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.02;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--mist);padding:8px 12px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.strip{background:var(--night);color:var(--mist);font-size:14px;text-align:center;margin:0;
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  padding:16px var(--gut-r) 0 var(--gut)}
+.word{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;text-shadow:0 1px 10px rgba(20,16,12,.6)}
+.word svg{width:30px;height:30px;flex:none;filter:drop-shadow(0 1px 6px rgba(20,16,12,.5))}
+.word span{font-family:var(--display);font-weight:700;font-size:21px;line-height:1}
+.top nav{display:flex;gap:22px;align-items:center;font-weight:700;font-size:15px}
+.top nav a{color:#fff;text-decoration:none;text-shadow:0 1px 8px rgba(20,16,12,.7)}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:3px;
+  font-family:var(--text);font-weight:700;font-size:16px;text-decoration:none;border:0;cursor:pointer;white-space:nowrap;
+  background:var(--night);color:var(--mist)}
+.btn:hover{background:var(--night-2)}
+.btn.gorse{background:var(--gorse);color:var(--night)}
+.btn.gorse:hover{background:#e4b244}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.line:hover{background:rgba(255,255,255,.08)}
+.top nav .btn{background:var(--gorse);color:var(--night);text-shadow:none}
+@media (max-width:820px){.top nav a:not(.btn){display:none}}
+
+/* ---------- Act 1: from the fire to the window, then the bay rises over the name ---------- */
+.hero{position:relative;height:320vh;background:var(--night)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--deep)}
+.layer{position:absolute;inset:0;will-change:transform,opacity}
+.layer img{width:100%;height:100%;object-fit:cover}
+.l-bay{transform:scale(1.18);transform-origin:62% 45%}
+.l-lounge{transform-origin:84% 44%;z-index:3}
+.scene{position:absolute;inset:0}
+.name{position:absolute;z-index:2;left:var(--gut);right:var(--gut-r);top:44%;opacity:0;will-change:opacity,transform;
+  font-family:var(--display);font-weight:700;color:var(--mist);line-height:.86;font-size:clamp(64px,13.5vw,220px);letter-spacing:-.01em;
+  text-shadow:0 2px 24px rgba(20,24,26,.35)}
+.name span{display:block}
+.name span+span{padding-left:.5em}
+.water{position:absolute;z-index:4;left:0;right:0;top:0;height:100%;transform:translateY(102%);will-change:transform}
+.water .edge{position:absolute;left:-10%;width:120%;top:-38px;height:40px;display:block;will-change:transform}
+.water .body{position:absolute;inset:0;background:rgba(52,68,74,.8)}
+.copy-a{position:absolute;z-index:6;left:var(--gut);bottom:clamp(30px,9vh,96px);max-width:min(620px, calc(100% - 40px));color:#fff}
+.copy-a .panel{background:rgba(27,25,22,.78);padding:clamp(20px,2.4vw,32px) clamp(20px,2.6vw,36px);border-radius:3px}
+.copy-a .where{font-weight:700;font-size:15px;color:var(--gorse)}
+.copy-a h1{font-size:clamp(40px,5.6vw,80px);margin-top:8px}
+.copy-a p.lede{font-size:clamp(17px,1.5vw,20px);margin-top:14px;max-width:30em}
+.copy-b{position:absolute;z-index:6;right:var(--gut-r);bottom:clamp(30px,8vh,90px);max-width:460px;opacity:0;color:#fff}
+.copy-b p.big{font-family:var(--display);font-weight:600;font-size:clamp(26px,2.8vw,38px);line-height:1.15}
+.copy-b p.src{font-size:15px;margin-top:10px;color:#cfd6d8}
+.copy-b p.sub{margin-top:14px;font-size:17px}
+@media (max-width:699px){
+  .hero{height:290vh}
+  .l-lounge{transform-origin:62% 46%}
+  .name{top:30%;font-size:clamp(58px,19vw,110px)}
+  .copy-a{top:72px;bottom:auto;left:var(--gut);right:var(--gut-r)}
+  .copy-b{left:var(--gut);right:var(--gut-r);bottom:24px;max-width:none}
+}
+@media (max-height:620px) and (prefers-reduced-motion: no-preference){html.js .copy-a p.lede,html.js .copy-b p.sub{display:none}}
+@media (max-height:520px) and (prefers-reduced-motion: no-preference){html.js .copy-a .where{display:none}html.js .copy-a h1{font-size:clamp(28px,4.4vw,44px);margin-top:0}html.js .copy-a .panel{padding:14px 18px}}
+
+/* ---------- Sections ---------- */
+.wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
+.inner{max-width:1200px;margin:0 auto}
+section{scroll-margin-top:10px}
+.lede{font-size:clamp(19px,1.6vw,21px);max-width:34em}
+.quote{font-size:clamp(20px,1.9vw,25px);line-height:1.4}
+.who{font-size:15px;color:var(--ink-soft);margin-top:8px}
+.cap-s{font-size:14px;color:var(--ink-soft);margin-top:8px}
+dl.facts{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:22px;row-gap:12px;font-size:17px;line-height:1.5}
+dl.facts dt{font-weight:700;font-size:15px;padding-top:2px;white-space:nowrap}
+dl.facts dd{margin:0;border-bottom:1px solid var(--mist-2);padding-bottom:12px}
+.inside h2,.back h2,.guests h2,.around h2,.book h2{font-size:clamp(44px,6vw,80px)}
+
+/* Inside: light, a rail you swipe through */
+.inside{padding-block:clamp(72px,9vw,130px) 0}
+.inside .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.inside .lede{margin-top:18px}
+.inside blockquote{margin:30px 0 0;padding:0}
+@media (max-width:880px){.inside .inner{grid-template-columns:minmax(0,1fr)}}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;
+  padding:clamp(36px,5vw,60px) var(--gut-r) clamp(64px,8vw,110px) var(--gut);margin:0}
+.rail figure{margin:0;flex:0 0 auto;width:clamp(240px,28vw,400px);scroll-snap-align:start}
+.rail img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px;background:var(--mist-2)}
+.rail figcaption{font-size:15px;margin-top:8px;color:var(--ink-soft)}
+
+/* Out the back: dark, the yard runs down to the water */
+.back{background:var(--night);color:var(--mist);padding-block:clamp(72px,9vw,130px)}
+.back-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:end}
+.back .lede{color:#e3e6e6}
+.gorse-band{margin:clamp(30px,4vw,48px) 0 0}
+.gorse-band img{width:100%;aspect-ratio:2000/900;object-fit:cover;border-radius:3px}
+.yard{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;margin-top:12px}
+.yard figure{margin:0;grid-column:span 3}
+.yard img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
+.yard figcaption{font-size:14px;color:#b9bfc1;margin-top:8px}
+.pit{margin-top:clamp(36px,5vw,60px);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,56px);align-items:center}
+.pit img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:3px}
+.pit h3{font-size:clamp(28px,3vw,40px)}
+.pit p{margin-top:12px}
+.pit .note{font-size:15px;background:var(--night-2);padding:12px 14px;border-radius:3px;margin-top:18px}
+@media (max-width:880px){.back-head,.pit{grid-template-columns:minmax(0,1fr)}.yard figure{grid-column:span 6}}
+
+/* Guests */
+.guests{background:var(--oak);color:#fff;padding-block:clamp(72px,9vw,120px)}
+.scores{display:flex;gap:clamp(28px,6vw,90px);flex-wrap:wrap;margin-top:28px}
+.score b{display:block;font-family:var(--display);font-size:clamp(64px,8.6vw,118px);line-height:.9;font-variant-numeric:tabular-nums}
+.score span{display:block;font-size:17px;margin-top:8px;max-width:16em}
+.quotes{list-style:none;margin:clamp(40px,5vw,64px) 0 0;padding:0;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:22px clamp(28px,5vw,64px)}
+.quotes li{border-top:1px solid rgba(255,255,255,.35);padding-top:16px}
+.quotes li:first-child{grid-row:span 2}
+.quotes li:first-child .quote{font-size:clamp(24px,2.8vw,36px);line-height:1.3}
+.guests .who{color:#f0dccd}
+@media (max-width:880px){.quotes{grid-template-columns:minmax(0,1fr)}.quotes li:first-child{grid-row:auto}}
+
+/* Around */
+.around{padding-block:clamp(72px,9vw,130px)}
+.around .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.around .lede{margin-top:16px}
+table.dist{width:100%;border-collapse:collapse;margin-top:24px;font-size:17px}
+table.dist th{text-align:left;font-size:15px;color:var(--ink-soft);font-weight:700;padding:0 0 8px}
+table.dist td{padding:12px 0;border-top:1px solid var(--mist-2);vertical-align:top}
+table.dist td:last-child{text-align:right;font-weight:700;white-space:nowrap;padding-left:16px;font-variant-numeric:tabular-nums}
+.around .ph img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:3px}
+.small{font-size:14px;color:var(--ink-soft);margin-top:12px}
+@media (max-width:880px){.around .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Book */
+.book{background:var(--mist-2);padding-block:clamp(72px,9vw,130px)}
+.book .lede{margin-top:16px}
+.book-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(24px,4vw,56px);margin-top:34px;align-items:start}
+.book-grid img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:3px}
+.book dl.facts dd{border-color:#b3babd}
+.book .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.direct{margin-top:clamp(24px,3vw,36px);background:var(--night);color:var(--mist);border-radius:3px;padding:clamp(22px,3vw,36px);
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center}
+.direct h3{font-size:clamp(28px,3vw,40px)}
+.direct p{margin-top:8px;color:#d6dadb;max-width:36em}
+.direct .acts{margin-top:0}
+.direct .btn.line{color:var(--mist)}
+@media (max-width:820px){.book-grid,.direct{grid-template-columns:minmax(0,1fr)}}
+
+/* Close: the shack through the gorse */
+.close{position:relative;color:#fff;background:var(--night)}
+.close img{width:100%;height:min(86vh,760px);object-fit:cover;object-position:50% 60%}
+.close .panel{position:absolute;left:var(--gut);bottom:clamp(24px,6vh,60px);max-width:560px;background:rgba(27,25,22,.84);padding:clamp(22px,3vw,34px);border-radius:3px}
+.close h2{font-size:clamp(34px,4.4vw,58px)}
+.close p{margin-top:10px}
+.close .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+@media (max-width:700px){.close img{height:60vh}.close .panel{position:relative;left:auto;bottom:auto;max-width:none;border-radius:0;background:var(--night)}}
+footer{background:var(--night);color:#c9cdce;font-size:14px;padding-block:28px calc(28px + env(safe-area-inset-bottom,0px))}
+footer .inner{display:grid;gap:6px}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;
+  padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);
+  background:rgba(27,25,22,.97);transform:translateY(110%);visibility:hidden;transition:transform .25s ease-out,visibility 0s .25s}
+.phonebar.on{transform:none;visibility:visible;transition:transform .25s ease-out}
+.phonebar .btn{flex:1;min-height:50px;white-space:normal;text-align:center;padding:6px 12px;line-height:1.2}
+.phonebar .btn.line{color:var(--mist)}
+@media (max-width:820px){.phonebar{display:flex}footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}}
+
+@media (prefers-reduced-motion: reduce){
+  .hero{height:auto}
+  .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column;background:var(--night)}
+  .l-lounge{position:relative;inset:auto;order:1;transform:none !important;opacity:1 !important}
+  .l-lounge img{height:auto;aspect-ratio:16/10}
+  .copy-a{position:relative;order:2;left:auto;right:auto;top:auto;bottom:auto;max-width:none;opacity:1 !important;transform:none !important}
+  .copy-a .panel{border-radius:0;background:var(--night)}
+  .scene{position:relative;order:3;height:100vh;height:100svh;min-height:520px;overflow:hidden}
+  .l-bay{transform:none !important}
+  .name{opacity:1 !important;transform:none !important}
+  .water{transform:translateY(38%) !important}
+  .water .edge{transform:none !important}
+  .copy-b{opacity:1 !important;transform:none !important}
+  .phonebar,.phonebar.on{transition:none}
+}
+@media (prefers-reduced-motion: reduce) and (max-width:699px){.water{transform:translateY(24%) !important}}
+/* Without JavaScript, show the same still end state as reduced motion */
+  html.nojs .hero{height:auto}
+  html.nojs .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column;background:var(--night)}
+  html.nojs .l-lounge{position:relative;inset:auto;order:1;transform:none !important;opacity:1 !important}
+  html.nojs .l-lounge img{height:auto;aspect-ratio:16/10}
+  html.nojs .copy-a{position:relative;order:2;left:auto;right:auto;top:auto;bottom:auto;max-width:none;opacity:1 !important;transform:none !important}
+  html.nojs .copy-a .panel{border-radius:0;background:var(--night)}
+  html.nojs .scene{position:relative;order:3;height:100vh;height:100svh;min-height:520px;overflow:hidden}
+  html.nojs .l-bay{transform:none !important}
+  html.nojs .name{opacity:1 !important;transform:none !important}
+  html.nojs .water{transform:translateY(38%) !important}
+  html.nojs .water .edge{transform:none !important}
+  html.nojs .copy-b{opacity:1 !important;transform:none !important}
+  html.nojs .phonebar,html.nojs .phonebar.on{transition:none}
+</style>
+</head>
+<body>
+<a class="skip" href="#book">Skip to booking</a>
+<p class="strip">A website idea made by Lamplit Studio for Sunken Sea Shack. Not their official site.</p>
+
+<header class="top">
+  <a class="word" href="#top" aria-label="Sunken Sea Shack, back to top">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="#d9a22b" stroke-width="2.2" stroke-linecap="round"><circle cx="16" cy="6.5" r="2.6"/><path d="M16 9.1V27M10.5 14h11M6.5 19.5c1.2 4.6 5 7.5 9.5 7.5s8.3-2.9 9.5-7.5"/></g></svg>
+    <span aria-hidden="true">Sunken Sea Shack</span>
+  </a>
+  <nav aria-label="Main">
+    <a href="#inside">Inside</a>
+    <a href="#back">Out the back</a>
+    <a href="#around">Getting here</a>
+    <a class="btn" href="#book">Check dates</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero" id="hero" aria-label="From the lounge to the bay at Sunken Sea Shack">
+  <div class="stage">
+    <div class="layer l-lounge">
+      <picture>
+        <source media="(min-width:700px)" srcset="img/lounge-2000.jpg">
+        <img src="img/lounge-1000.jpg" alt="The shack's lounge at dusk, lamps on, with the bay through the windows" width="1000" height="1600" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="copy-a">
+      <div class="panel">
+        <p class="where">Abels Bay, Huon Valley, Tasmania</p>
+        <h1>A shack on the water, with the fire going.</h1>
+        <p class="lede">Two bedrooms, an indoor fire and a backyard that runs down to a private bay. Cygnet is 15 minutes away, Hobart about an hour.</p>
+      </div>
+    </div>
+    <div class="scene">
+      <div class="layer l-bay">
+        <picture>
+          <source media="(min-width:700px)" srcset="img/bay-2000.jpg">
+          <img src="img/bay-1000.jpg" alt="Still grey water of the bay, a twisted tree and a round table with two glasses of red at the water's edge" width="1000" height="1601">
+        </picture>
+      </div>
+      <p class="name" aria-hidden="true"><span>Sunken</span><span>Sea Shack</span></p>
+      <div class="water" aria-hidden="true">
+        <svg class="edge" viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 22 C 60 10, 120 10, 180 20 S 300 32, 360 22 S 480 10, 540 20 S 660 32, 720 22 S 840 10, 900 20 S 1020 32, 1080 22 S 1160 12, 1200 18 L1200 40 L0 40 Z" fill="rgba(52,68,74,.8)"/></svg>
+        <div class="body"></div>
+      </div>
+      <div class="copy-b">
+        <p class="big">"Disconnect while listening to the water lapping on the shore of the bay."</p>
+        <p class="src">From the shack's own description.</p>
+        <p class="sub">The lounge and the main bedroom both look out over the water.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="inside" id="inside">
+  <div class="wrap">
+    <div class="inner">
+      <div>
+        <h2>Inside the shack</h2>
+        <p class="lede">Made for two, with room for four. The lounge sits round the wood fire with the bay through the windows, and the main bedroom has the same view. Breakfast for the first morning is there when you arrive: bread, butter, free range eggs and milk.</p>
+        <blockquote>
+          <p class="quote">"We felt welcomed and relaxed as soon as we arrived with beautiful fresh bread and eggs, wood ready to light a fire and a cosy, arty, coastal, vibe."</p>
+          <p class="who">Katrine, on Airbnb, September 2026</p>
+        </blockquote>
+      </div>
+      <dl class="facts">
+        <dt>Sleeps 4</dt><dd>Two bedrooms, each with a queen bed.</dd>
+        <dt>Warm</dt><dd>An indoor wood fire in the lounge.</dd>
+        <dt>Bathroom</dt><dd>One bathroom, with a large soaker bath and a shower.</dd>
+        <dt>Kitchen</dt><dd>Set up to cook, with tea, ground coffee, sugar, salt, pepper and olive oil in the pantry.</dd>
+        <dt>Arrive</dt><dd>Self check-in with a lock box, from 3pm. Check out by 10am.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="rail" tabindex="0" role="region" aria-label="Photos inside the shack">
+    <figure><img src="img/r-lounge.jpg" srcset="img/r-lounge-600.jpg 600w, img/r-lounge.jpg 768w" sizes="(max-width:880px) 72vw, 28vw" alt="Deep sofas with throws and cushions under white curtains, lamps lit" width="768" height="960" loading="lazy"><figcaption>The lounge</figcaption></figure>
+    <figure><img src="img/r-fire.jpg" srcset="img/r-fire-600.jpg 600w, img/r-fire.jpg 1000w" sizes="(max-width:880px) 72vw, 28vw" alt="The wood fire burning, with a basket of logs beside it" width="1000" height="1250" loading="lazy"><figcaption>The indoor fire</figcaption></figure>
+    <figure><img src="img/r-bedview.jpg" srcset="img/r-bedview-600.jpg 600w, img/r-bedview.jpg 1000w" sizes="(max-width:880px) 72vw, 28vw" alt="The main bedroom in lamplight, the bay through the window beside the bed" width="1000" height="1250" loading="lazy"><figcaption>Main bedroom, onto the water</figcaption></figure>
+    <figure><img src="img/r-bed1.jpg" srcset="img/r-bed1-600.jpg 600w, img/r-bed1.jpg 1000w" sizes="(max-width:880px) 72vw, 28vw" alt="A queen bed with a black iron frame and striped linen" width="1000" height="1250" loading="lazy"><figcaption>Queen bed</figcaption></figure>
+    <figure><img src="img/r-bed2.jpg" srcset="img/r-bed2-600.jpg 600w, img/r-bed2.jpg 1000w" sizes="(max-width:880px) 72vw, 28vw" alt="The second bedroom, white and timber, with a queen bed" width="1000" height="1250" loading="lazy"><figcaption>Second bedroom</figcaption></figure>
+    <figure><img src="img/r-bath.jpg" srcset="img/r-bath-600.jpg 600w, img/r-bath.jpg 1000w" sizes="(max-width:880px) 72vw, 28vw" alt="A freestanding white bath with a towel over the side" width="1000" height="1250" loading="lazy"><figcaption>The soaker bath</figcaption></figure>
+    <figure><img src="img/r-kitchen.jpg" srcset="img/r-kitchen-600.jpg 600w, img/r-kitchen.jpg 1000w" sizes="(max-width:880px) 72vw, 28vw" alt="The kitchen with white cupboards, a timber bench and a basket on the counter" width="1000" height="1250" loading="lazy"><figcaption>Kitchen</figcaption></figure>
+    <figure><img src="img/r-bench.jpg" srcset="img/r-bench-600.jpg 600w, img/r-bench.jpg 1000w" sizes="(max-width:880px) 72vw, 28vw" alt="Wine glasses and a cheese board on a timber bench" width="1000" height="1250" loading="lazy"><figcaption>By the window</figcaption></figure>
+  </div>
+</section>
+
+<section class="back" id="back">
+  <div class="wrap">
+    <div class="inner">
+      <div class="back-head">
+        <h2>Out the back</h2>
+        <p class="lede">In the shack's own words, "Outside is really the showstopper." The yard runs down through the gorse to the water, with a fire pit, a table at the shore and access to a bay only residents use.</p>
+      </div>
+      <figure class="gorse-band"><img src="img/o-gorse-2000.jpg" srcset="img/o-gorse-900.jpg 900w, img/o-gorse-2000.jpg 2000w" sizes="100vw" alt="Someone with a glass of red looking out over the bay through gums and flowering yellow gorse" width="2000" height="900" loading="lazy"></figure>
+      <div class="yard">
+        <figure><img src="img/o-stump.jpg" srcset="img/o-stump-600.jpg 600w, img/o-stump.jpg 1000w" sizes="(max-width:880px) 50vw, 25vw" alt="An old tree stump used as a table, with the bay behind" width="1000" height="1250" loading="lazy"><figcaption>The stump table</figcaption></figure>
+        <figure><img src="img/o-chairs.jpg" srcset="img/o-chairs-600.jpg 600w, img/o-chairs.jpg 1000w" sizes="(max-width:880px) 50vw, 25vw" alt="Two chairs with wool throws at a round table by the water" width="1000" height="1250" loading="lazy"><figcaption>A wine by the water</figcaption></figure>
+        <figure><img src="img/o-pit2.jpg" srcset="img/o-pit2-600.jpg 600w, img/o-pit2.jpg 1000w" sizes="(max-width:880px) 50vw, 25vw" alt="Timber chairs round a fire pit under gums" width="1000" height="1250" loading="lazy"><figcaption>Round the fire pit</figcaption></figure>
+        <figure><img src="img/o-dusk.jpg" srcset="img/o-dusk-600.jpg 600w, img/o-dusk.jpg 1000w" sizes="(max-width:880px) 50vw, 25vw" alt="Smoke rising from the fire pit at dusk, the bay pale behind" width="1000" height="1250" loading="lazy"><figcaption>Dusk</figcaption></figure>
+      </div>
+      <div class="pit">
+        <img src="img/o-firepit.jpg" srcset="img/o-firepit-800.jpg 800w, img/o-firepit.jpg 1600w" sizes="(max-width:880px) 100vw, 56vw" alt="The fire pit lit, chairs round it, and the bay through the trees" width="1600" height="1066" loading="lazy">
+        <div>
+          <h3>A fire pit above the bay</h3>
+          <p>Light the fire pit and sit out under the gums above the water. Walking tracks, cellar doors and cideries are all a short drive away in the Huon Valley.</p>
+          <p class="note">One guest in September met an echidna in the garden. Wildlife is about at night, so drive slowly from dusk to dawn.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="guests wrap" id="guests">
+  <div class="inner">
+    <h2>What guests say</h2>
+    <div class="scores">
+      <p class="score"><b>4.89</b><span>from 88 reviews on Airbnb</span></p>
+      <p class="score"><b>4.92</b><span>for location</span></p>
+    </div>
+    <ul class="quotes">
+      <li><p class="quote">"We absolutely loved our time at the Sunken Sea Shack, we didn't want to leave! Everything is so thoughtfully put together."</p><p class="who">Em &amp; Beau, Airbnb, November 2026</p></li>
+      <li><p class="quote">"Beautifully furnished quaint home with a view to die for."</p><p class="who">Amelia, Airbnb, November 2026</p></li>
+      <li><p class="quote">"Cutest little echidna visitor in the garden!"</p><p class="who">Hollie, Airbnb, September 2026</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="around wrap" id="around">
+  <div class="inner">
+    <div>
+      <h2>Getting here</h2>
+      <p class="lede">Abels Bay is on the water south of Cygnet, on the far side of the Huon Valley from Hobart.</p>
+      <table class="dist">
+        <thead><tr><th scope="col">By car, roughly</th><th scope="col"><span class="vh">Distance and time</span></th></tr></thead>
+        <tbody>
+          <tr><td>Cygnet</td><td>14 km, 15 min</td></tr>
+          <tr><td>Kettering, for the Bruny Island ferry</td><td>25 km, 30 min</td></tr>
+          <tr><td>Huonville</td><td>31 km, 35 min</td></tr>
+          <tr><td>Hobart</td><td>57 km, 1 hr</td></tr>
+          <tr><td>Hobart Airport</td><td>75 km, 1 hr 20</td></tr>
+        </tbody>
+      </table>
+      <p class="small">Road distances on OpenStreetMap, rounded.</p>
+    </div>
+    <figure class="ph" style="margin:0">
+      <img src="img/b-view.jpg" srcset="img/b-view-800.jpg 800w, img/b-view.jpg 1600w" sizes="(max-width:880px) 100vw, 44vw" alt="From the main bedroom: a dark room, a lamp on, and the bay through the window" width="1600" height="1066" loading="lazy">
+      <figcaption class="cap-s">The bay from the main bedroom.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="book wrap" id="book">
+  <div class="inner">
+    <h2>Check dates</h2>
+    <p class="lede">From A$300 a night. Two nights minimum, three over public holiday weekends.</p>
+    <div class="book-grid">
+      <img src="img/b-table.jpg" srcset="img/b-table-800.jpg 800w, img/b-table.jpg 1600w" sizes="(max-width:820px) 100vw, 54vw" alt="The table and chairs at the water's edge under the tree" width="1600" height="1066" loading="lazy">
+      <div>
+        <dl class="facts">
+          <dt>Two guests</dt><dd>The rate is for two sharing the main bedroom. Using both bedrooms adds A$50 to the booking.</dd>
+          <dt>More guests</dt><dd>Up to four. Each extra guest is A$50 a booking.</dd>
+          <dt>Times</dt><dd>Check in from 3pm, out by 10am.</dd>
+          <dt>Please</dt><dd>No pets, no parties.</dd>
+        </dl>
+        <div class="acts">
+          <a class="btn" href="https://airbnb.com.au/h/sunkenseashack" rel="noopener" target="_blank">Check dates on Airbnb</a>
+        </div>
+      </div>
+    </div>
+    <div class="direct" id="message">
+      <div>
+        <h3>Or ask Jaimi directly</h3>
+        <p>Tell her your nights and how many of you are coming, and she'll come back to you.</p>
+      </div>
+      <div class="acts">
+        <a class="btn gorse" href="https://ig.me/m/sunkenseashack" rel="noopener" target="_blank">Message on Instagram</a>
+        <a class="btn line" href="tel:+61416228691">Call 0416 228 691</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="close" aria-label="The shack">
+  <img src="img/shack-wide-2000.jpg" srcset="img/shack-wide-1000.jpg 1000w, img/shack-wide-2000.jpg 2000w" sizes="100vw" alt="The shack's verandah through flowering yellow gorse" width="2000" height="1125" loading="lazy">
+  <div class="panel">
+    <h2>Abels Bay, 15 minutes past Cygnet.</h2>
+    <p>Two bedrooms, a wood fire and a private bay out the back.</p>
+    <div class="acts">
+      <a class="btn gorse" href="#book">Check dates</a>
+      <a class="btn line" href="https://www.instagram.com/sunkenseashack/" rel="noopener" target="_blank">@sunkenseashack</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="inner">
+    <p>A preview made by Lamplit Studio for Sunken Sea Shack. Not affiliated, not live.</p>
+    <p>Photos are Sunken Sea Shack's own, from their Airbnb listing. Guest quotes are from Airbnb reviews.</p>
+  </div>
+</footer>
+
+<div class="phonebar" id="phonebar">
+  <a class="btn gorse" href="#book">Check dates</a>
+  <a class="btn line" href="https://ig.me/m/sunkenseashack" rel="noopener" target="_blank">Message Jaimi</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var bar = document.getElementById('phonebar');
+  var hero = document.getElementById('hero');
+  var q = function(s){return document.querySelector(s)};
+  var lounge=q('.l-lounge'), bay=q('.l-bay'), name=q('.name'), water=q('.water'), edge=q('.water .edge'), ca=q('.copy-a'), cb=q('.copy-b');
+  var clamp=function(v){return v<0?0:v>1?1:v};
+  var seg=function(p,a,b){return clamp((p-a)/(b-a))};
+  var ease=function(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
+  function prog(el){var r=el.getBoundingClientRect();var st=el.firstElementChild;var span=el.offsetHeight-(st?st.offsetHeight:window.innerHeight);return span>0?clamp(-r.top/span):0}
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    var vh=window.innerHeight;
+    var bk=document.getElementById('book').getBoundingClientRect();
+    bar.classList.toggle('on', bar.contains(document.activeElement) || (hero.getBoundingClientRect().bottom<vh*.5 && (bk.top>vh*.9 || bk.bottom<0)));
+    if(reduce) return;
+    var p=prog(hero);
+    if(p>1.01) return;
+    // 1. walk from the fire to the window: the lounge grows toward the glass and falls away
+    var g=ease(seg(p,0,.5));
+    lounge.style.transform='scale('+(1+g*1.2).toFixed(4)+')';
+    lounge.style.opacity=(1-seg(p,.34,.5)).toFixed(3);
+    ca.style.opacity=(1-seg(p,.08,.22)).toFixed(3);
+    ca.style.transform='translate3d(0,'+(-seg(p,.08,.22)*40).toFixed(1)+'px,0)';
+    // 2. out on the bay, the name stands above the water
+    var b=ease(seg(p,.3,1));
+    bay.style.transform='scale('+(1.18-b*.18).toFixed(4)+')';
+    name.style.opacity=seg(p,.42,.54).toFixed(3);
+    name.style.transform='translate3d(0,'+((1-ease(seg(p,.42,.58)))*-30).toFixed(1)+'px,0)';
+    // 3. the water rises over it: sunken
+    var w=ease(seg(p,.56,.86));
+    var sh=water.parentNode.offsetHeight||vh, end=Math.max(14,(name.offsetTop-26)/sh*100);
+    water.style.transform='translate3d(0,'+(102-w*(102-end)).toFixed(2)+'%,0)';
+    edge.style.transform='translate3d('+(-p*8).toFixed(2)+'%,0,0)';
+    cb.style.opacity=seg(p,.8,.92).toFixed(3);
+    cb.style.transform='translate3d(0,'+((1-seg(p,.8,.92))*24).toFixed(1)+'px,0)';
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(mq.addEventListener) mq.addEventListener('change',function(){location.reload()});
+  frame();
+})();
+</script>
+</body>
+</html>

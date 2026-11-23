@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.className+=" js"</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Birkenburn Farm | The Farmhouse, Bungendore, sleeps 16</title>
+<meta name="description" content="The Farmhouse at Birkenburn Farm sleeps 16, one group at a time, on a 2700 acre family farm near Bungendore. A website idea made by Lamplit Studio for Birkenburn Farm.">
+<meta property="og:title" content="Birkenburn Farm, The Farmhouse">
+<meta property="og:description" content="A website idea made by Lamplit Studio for Birkenburn Farm. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/birkenburnfarm/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/birkenburnfarm/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23262b30'/%3E%3Cg stroke='%23e2a33c' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M16 11v19M12 30l4-19 4 19'/%3E%3Cpath d='M16 11l-7-6M16 11l7-6M16 11l-7 6M16 11l7 6M16 11V2M16 11H6M16 11h10'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/hero-2400.jpg" media="(min-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-m.jpg" media="(max-width: 699px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Zilla+Slab:wght@600;700&display=swap">
+<style>
+/* Colours come from their own photos (see brand.md):
+   cladding  = the charcoal weatherboards of the Farmhouse, Studio and Bunkhouse
+   trim      = the white window frames against those walls
+   lamplight = the lit windows at dusk and the mustard bedroom cushions
+   paddock   = the dry grass of the long paddock
+   dam       = the blue-grey of the dam and the evening sky
+   Zilla Slab is the stencilled weight of farm lettering. Public Sans is for reading. */
+:root{
+  --cladding:#262b30;
+  --cladding-2:#343a40;
+  --trim:#eef0ec;
+  --trim-2:#d9ddd6;
+  --lamp:#e2a33c;
+  --lamp-2:#ecb658;
+  --paddock:#a1893e;
+  --dam:#3f5161;
+  --ink:#262b30;
+  --ink-soft:#545b60;
+  --display:"Zilla Slab","Rockwell","Georgia",serif;
+  --text:"Public Sans","Helvetica Neue","Segoe UI",sans-serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--trim);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cladding);outline-offset:3px}
+.dark :focus-visible,.book :focus-visible,.outside :focus-visible,.hero :focus-visible,.walk :focus-visible,.phonebar :focus-visible,footer :focus-visible,.strip :focus-visible{outline-color:var(--lamp)}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.02;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--trim);padding:8px 12px}
+
+.strip{background:var(--cladding);color:var(--trim);font-size:14px;text-align:center;margin:0;
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  padding:16px var(--gut-r) 26px var(--gut);background:linear-gradient(rgba(29,33,38,.62),rgba(29,33,38,0))}
+.word{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;text-shadow:0 1px 10px rgba(20,22,24,.6)}
+.word svg{width:34px;height:34px;flex:none;filter:drop-shadow(0 1px 6px rgba(20,22,24,.55))}
+.word b{font-family:var(--display);font-weight:700;font-size:22px;line-height:1}
+.top nav{display:flex;gap:22px;align-items:center;font-weight:600;font-size:15px}
+.top nav a{color:#fff;text-decoration:none;text-shadow:0 1px 8px rgba(20,22,24,.7)}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:3px;
+  font-family:var(--text);font-weight:700;font-size:16px;text-decoration:none;border:0;cursor:pointer;
+  background:var(--cladding);color:var(--trim)}
+.btn:hover{background:var(--cladding-2)}
+.btn.lamp{background:var(--lamp);color:var(--cladding)}
+.btn.lamp:hover{background:var(--lamp-2)}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.top nav .btn{text-shadow:none;white-space:nowrap;min-height:44px;padding:0 16px}
+@media (max-width:820px){.top nav a:not(.btn){display:none}}
+
+/* ---------- Hero: the Farmhouse at dusk, four planes ---------- */
+.hero{position:relative;height:210vh;background:var(--cladding)}
+.h-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.plane{position:absolute;inset:0;will-change:transform,opacity}
+.p-photo{transform:scale(1.14);transform-origin:46% 58%}
+.p-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.p-dusk{background:#1d2126;opacity:0;mix-blend-mode:multiply}
+.p-grass{inset:auto -2% -1px -2%;height:26%;z-index:4;transform:translateY(40%)}
+.p-grass svg{width:100%;height:100%;display:block}
+.h-copy{position:absolute;z-index:3;left:var(--gut);bottom:clamp(90px,17vh,170px);max-width:min(900px, calc(100% - 40px));color:#fff}
+.h-copy .where{display:inline-block;font-weight:600;font-size:15px;color:var(--lamp-2);background:rgba(38,43,48,.82);padding:4px 10px;border-radius:3px}
+.h-copy h1{font-size:clamp(44px,6.2vw,92px);margin-top:10px;text-shadow:0 2px 4px rgba(20,22,24,.5),0 2px 28px rgba(20,22,24,.7)}
+.h-copy p.lede{font-size:clamp(17px,1.5vw,21px);margin-top:14px;max-width:31em;background:rgba(38,43,48,.82);padding:14px 18px;border-radius:3px}
+.h-late{position:absolute;z-index:5;right:var(--gut-r);bottom:clamp(26px,6vh,64px);max-width:420px;color:var(--trim);opacity:0}
+.h-late p{background:rgba(38,43,48,.88);padding:18px 22px;border-radius:3px;font-size:clamp(18px,1.6vw,21px);line-height:1.45}
+.h-late p b{color:var(--lamp);font-weight:600}
+@media (max-width:699px){
+  .hero{height:190vh}
+  .p-photo img{object-position:50% 50%}
+  .h-copy{top:96px;bottom:auto;right:var(--gut-r)}
+  .h-copy p.lede{font-size:16px;padding:12px 14px}
+  .h-late{left:var(--gut);right:var(--gut-r);bottom:96px;max-width:none}
+  .p-grass{height:22%}
+}
+@media (max-height:560px){.h-copy p.lede{display:none}.h-copy{top:70px;bottom:auto}.h-copy h1{font-size:clamp(34px,5vw,56px)}.h-late{display:none}}
+
+/* ---------- Signature: the ten minute jetty walk ---------- */
+.walk{position:relative;height:460vh;background:var(--cladding);color:var(--trim)}
+.w-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.w-head{position:absolute;z-index:4;left:var(--gut);top:clamp(22px,5vh,48px);right:var(--gut-r);display:flex;justify-content:space-between;align-items:flex-start;gap:16px;pointer-events:none}
+.w-head h2{font-size:clamp(28px,3.4vw,46px);max-width:13em;text-shadow:0 2px 18px rgba(20,22,24,.6)}
+.w-clock{font-family:var(--display);font-weight:700;font-size:clamp(34px,4.4vw,64px);line-height:1;color:var(--lamp);font-variant-numeric:tabular-nums;text-align:right;text-shadow:0 2px 14px rgba(20,22,24,.7)}
+.w-clock small{display:block;font-family:var(--text);font-size:14px;font-weight:600;color:var(--trim);margin-top:4px}
+.reel{position:absolute;top:0;bottom:0;left:0;display:flex;will-change:transform}
+.frame{position:relative;flex:0 0 auto;width:100vw;height:100%;margin:0;overflow:hidden}
+.frame img{width:100%;height:100%;object-fit:cover}
+.frame figcaption{position:absolute;left:var(--gut);bottom:clamp(96px,16vh,150px);max-width:min(460px, calc(100% - 40px));
+  background:rgba(38,43,48,.88);padding:16px 20px;border-radius:3px;font-size:clamp(17px,1.4vw,20px);line-height:1.45}
+.frame figcaption b{display:block;font-family:var(--display);font-size:clamp(24px,2.4vw,32px);line-height:1.1;color:var(--lamp);margin-bottom:6px}
+.track{position:absolute;z-index:4;left:var(--gut);right:var(--gut-r);bottom:clamp(36px,7vh,70px);height:28px}
+.track .line{position:absolute;left:0;right:0;top:13px;height:2px;background:rgba(238,240,236,.35)}
+.track .done{position:absolute;left:0;right:0;top:12px;height:4px;background:var(--lamp);transform:scaleX(0);transform-origin:0 50%;will-change:transform}
+.track .stop{position:absolute;top:8px;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--cladding);box-shadow:inset 0 0 0 2px var(--trim)}
+.track .who{position:absolute;top:0;left:0;width:30px;height:30px;margin-left:-15px;will-change:transform}
+.track .ends{position:absolute;top:30px;left:0;right:0;display:flex;justify-content:space-between;font-size:13px;font-weight:600;color:var(--trim)}
+@media (max-width:699px){
+  .walk{height:430vh}
+  .frame figcaption{bottom:152px;font-size:16px;padding:14px 16px}
+  .w-head{top:20px}
+  .track{bottom:96px}
+}
+
+/* ---------- Sections ---------- */
+.wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
+.inner{max-width:1200px;margin:0 auto}
+section{scroll-margin-top:10px}
+.dark{background:var(--cladding);color:var(--trim)}
+.lede{font-size:clamp(19px,1.6vw,21px);max-width:34em}
+.small{font-size:15px;color:var(--ink-soft)}
+.dark .small{color:#b9bfba}
+h2.big{font-size:clamp(42px,5.6vw,76px)}
+
+/* The house: rooms list beside a big photo, then a rail */
+.house{padding:clamp(72px,9vw,130px) 0 0}
+.house .inner{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:start}
+.house .lede{margin-top:18px}
+.rooms{list-style:none;margin:28px 0 0;padding:0;border-top:2px solid var(--cladding)}
+.rooms li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;padding:14px 0;border-bottom:1px solid var(--trim-2)}
+.rooms b{font-family:var(--display);font-size:22px;line-height:1.2}
+.rooms span.n{font-weight:700;font-size:15px;white-space:nowrap;padding-top:4px}
+.rooms span.d{grid-column:1 / -1;font-size:16px;color:var(--ink-soft)}
+.house figure{margin:0}
+.house figure img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:3px}
+.house figcaption{font-size:15px;color:var(--ink-soft);margin-top:8px}
+@media (max-width:880px){.house .inner{grid-template-columns:minmax(0,1fr)}.house figure{order:-1}}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;
+  padding:clamp(36px,5vw,60px) var(--gut-r) clamp(64px,8vw,110px) var(--gut);margin:0}
+.rail figure{margin:0;flex:0 0 auto;width:clamp(250px,30vw,420px);scroll-snap-align:start}
+.rail img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px;background:var(--trim-2)}
+.rail figcaption{font-size:15px;margin-top:8px;color:var(--ink-soft)}
+
+/* Outside: one wide photo, three smaller, on the dam blue */
+.outside{background:var(--dam);color:var(--trim);padding:clamp(72px,9vw,130px) 0}
+.outside .head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,4vw,60px);align-items:end}
+.outside .lede{color:#e3e7e2}
+.mosaic{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin-top:clamp(32px,4vw,52px)}
+.mosaic figure{margin:0;position:relative}
+.mosaic img{width:100%;object-fit:cover;border-radius:3px}
+.mosaic figcaption{font-size:15px;margin-top:8px;color:#d7ddd8}
+.m1{grid-column:1 / 5;grid-row:1 / 3}
+.m1 img{aspect-ratio:3/2}
+.m2{grid-column:5 / 7}
+.m3{grid-column:5 / 7}
+.m2 img,.m3 img{aspect-ratio:3/2}
+.m4{grid-column:1 / 3}.m5{grid-column:3 / 5}.m6{grid-column:5 / 7}
+.m4 img,.m5 img,.m6 img{aspect-ratio:4/3}
+@media (max-width:820px){
+  .outside .head{grid-template-columns:minmax(0,1fr)}
+  .mosaic{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .m1{grid-column:1 / -1;grid-row:auto}
+  .m2,.m3,.m4,.m5{grid-column:auto}
+  .m6{grid-column:1 / -1}
+}
+
+/* Who lives here */
+.wild{padding:clamp(72px,9vw,130px) 0}
+.wild .head{max-width:780px}
+.wild .lede{margin-top:16px}
+.creek{margin-top:22px;max-width:40em;padding:16px 0 0;border-top:2px solid var(--paddock);font-size:17px}
+.critters{list-style:none;margin:clamp(30px,4vw,50px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,26px)} /* slop-ok: a photo grid of six animals, not icon tiles */
+.critters li{margin:0}
+.critters img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px}
+.critters b{display:block;font-family:var(--display);font-size:24px;margin-top:10px;line-height:1.15}
+.critters span{display:block;font-size:16px;color:var(--ink-soft);margin-top:2px}
+@media (max-width:820px){.critters{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+@media (max-width:420px){.critters b{font-size:20px}.critters span{font-size:15px}}
+
+/* Distances, on the farm */
+.dist{padding:clamp(72px,9vw,120px) 0}
+.dist .inner{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(28px,5vw,72px)}
+.dist ol{list-style:none;margin:0;padding:0}
+.dist li{display:grid;grid-template-columns:7.2em minmax(0,1fr);gap:16px;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(238,240,236,.18)}
+.dist li:first-child{border-top:1px solid rgba(238,240,236,.18)}
+.dist .k{font-family:var(--display);font-weight:700;font-size:clamp(26px,2.6vw,36px);color:var(--lamp);line-height:1;font-variant-numeric:tabular-nums}
+.dist .v{font-size:17px}
+@media (max-width:820px){.dist .inner{grid-template-columns:minmax(0,1fr)}.dist li{grid-template-columns:5.6em minmax(0,1fr)}}
+
+/* Tom and Marty */
+.hosts{padding:clamp(72px,9vw,130px) 0 clamp(40px,5vw,70px)}
+.hosts .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:center}
+.hosts figure{margin:0}
+.hosts img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px}
+.hosts figcaption{font-size:15px;color:var(--ink-soft);margin-top:8px}
+.hosts p+p{margin-top:16px}
+.hosts .lede{margin-top:18px}
+@media (max-width:880px){.hosts .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Guests */
+.guests{padding:clamp(40px,5vw,70px) 0 clamp(72px,9vw,130px)}
+.guests .inner{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(28px,5vw,72px);align-items:start;border-top:2px solid var(--cladding);padding-top:clamp(32px,4vw,52px)}
+.guests blockquote{margin:0}
+.guests blockquote p{font-family:var(--display);font-weight:600;font-size:clamp(26px,2.9vw,40px);line-height:1.2}
+.guests cite{display:block;font-style:normal;font-size:15px;color:var(--ink-soft);margin-top:14px}
+.score{font-family:var(--display);font-weight:700;font-size:clamp(54px,6vw,84px);line-height:1}
+.guests ul{margin:14px 0 0;padding:0;list-style:none;font-size:16px}
+.guests ul li{padding:6px 0;border-bottom:1px solid var(--trim-2)}
+@media (max-width:880px){.guests .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Good to know */
+.know{padding:clamp(64px,8vw,110px) 0;background:var(--trim-2)}
+.know .inner{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(28px,5vw,72px)}
+.know ul{margin:0;padding:0;list-style:none;columns:2;column-gap:40px}
+.know li{break-inside:avoid;padding:10px 0;border-bottom:1px solid #c4c9c2;font-size:17px}
+.know li b{font-weight:700}
+@media (max-width:820px){.know .inner{grid-template-columns:minmax(0,1fr)}.know ul{columns:1}}
+
+/* Book */
+.book{position:relative;padding:clamp(80px,10vw,150px) 0;color:var(--trim);overflow:hidden;background:var(--cladding)}
+.book .bg{position:absolute;inset:0;opacity:.42}
+.book .bg img{width:100%;height:100%;object-fit:cover}
+.book .inner{position:relative;max-width:900px}
+.book .panel{background:rgba(38,43,48,.9);padding:clamp(24px,4vw,48px);border-radius:3px}
+.book .lede{margin-top:16px;color:#e3e7e2}
+.book .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.book .also{margin-top:26px;font-size:16px;color:#d7ddd8}
+.book .also a{color:var(--lamp-2);font-weight:600;text-underline-offset:3px}
+.book .also p+p{margin-top:8px}
+
+footer{background:#1d2126;color:#c7ccc7;font-size:15px;padding:30px var(--gut-r) calc(110px + env(safe-area-inset-bottom,0px)) var(--gut)}
+footer .inner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+@media (min-width:821px){footer{padding-bottom:30px}}
+
+/* Phone booking bar, within thumb reach */
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:none;color:var(--trim);gap:10px;align-items:center;
+  padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);background:rgba(29,33,38,.96);
+  transform:translateY(110%);transition:transform .25s ease-out}
+.phonebar.on,.phonebar:focus-within{transform:none}
+.phonebar .btn{flex:1;min-height:52px}
+.phonebar .call{flex:0 0 auto;padding:0 18px}
+@media (max-width:820px){.phonebar{display:flex}}
+
+/* Reduced motion: every pinned scene shows its end state, nothing moves */
+@media (prefers-reduced-motion: reduce){
+  .hero{height:auto}
+  .h-stage{position:relative;height:100vh;height:100svh}
+  .p-photo{transform:none}
+  .p-grass{transform:none}
+  .h-late{opacity:1}
+  .walk{height:auto}
+  .w-stage{position:relative;height:auto;overflow:visible}
+  .w-head{position:relative;padding:40px 0 20px;left:auto;right:auto;top:auto;margin:0 var(--gut-r) 0 var(--gut)}
+  .w-clock,.track{display:none}
+  .reel{position:relative;flex-direction:column;transform:none!important;gap:4px}
+  .frame{width:100%;height:auto}
+  .frame img{height:auto;aspect-ratio:3/2}
+  .frame figcaption{bottom:20px}
+  .phonebar{transition:none}
+}
+/* Without JavaScript, show the same static end state */
+html:not(.js) .hero{height:auto}
+html:not(.js) .h-stage{position:relative;height:100vh;height:100svh}
+html:not(.js) .p-photo{transform:none}
+html:not(.js) .p-grass{transform:none}
+html:not(.js) .h-late{opacity:1}
+html:not(.js) .walk{height:auto}
+html:not(.js) .w-stage{position:relative;height:auto;overflow:visible}
+html:not(.js) .w-head{position:relative;padding:40px 0 20px;left:auto;right:auto;top:auto;margin:0 var(--gut-r) 0 var(--gut)}
+html:not(.js) .w-clock,html:not(.js) .track{display:none}
+html:not(.js) .reel{position:relative;flex-direction:column;transform:none!important;gap:4px}
+html:not(.js) .frame{width:100%;height:auto}
+html:not(.js) .frame img{height:auto;aspect-ratio:3/2}
+html:not(.js) .frame figcaption{bottom:20px}
+html:not(.js) .phonebar{transition:none}
+</style>
+</head>
+<body>
+<a class="skip" href="#house">Skip to the house</a>
+<p class="strip">A website idea made by Lamplit Studio for Birkenburn Farm. Not their official site.</p>
+
+<header class="top">
+  <a class="word" href="#top" aria-label="Birkenburn Farm, back to top">
+    <svg viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="#e2a33c" stroke-width="2.6" stroke-linecap="round"><path d="M20 14v24M14 38l6-24 6 24M16 30h8"/><path d="M20 14l-9-8M20 14l9-8M20 14l-9 8M20 14l9 8M20 14V2M20 14H7M20 14h13"/></g></svg>
+    <b>Birkenburn Farm</b>
+  </a>
+  <nav aria-label="Sections">
+    <a href="#house">The house</a>
+    <a href="#wild">Who lives here</a>
+    <a href="#book">How to book</a>
+    <a class="btn lamp" href="https://airbnb.com/h/the-farmhouse-bungendore">Check dates</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="h-stage">
+    <div class="plane p-photo">
+      <picture>
+        <source media="(max-width: 699px)" srcset="img/hero-m.jpg">
+        <img src="img/hero-2400.jpg" srcset="img/hero-1200.jpg 1200w, img/hero-2400.jpg 2400w" sizes="100vw" width="2400" height="1599" alt="The Farmhouse at dusk, lights on, with the fire going on the firepit terrace in front" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="plane p-dusk" aria-hidden="true"></div>
+    <div class="h-copy">
+      <p class="where">Bungendore, on the Great Dividing Range</p>
+      <h1 id="h1">The Farmhouse at Birkenburn Farm</h1>
+      <p class="lede">Five bedrooms, room for 16, and only one group at a time, on a 2700 acre property farmed by the same family since the 1890s.</p>
+    </div>
+    <div class="h-late">
+      <p>After dark, the firepit terrace sits between the main house, the Studio and the Bunkhouse. <b>Wood for the open fire inside is supplied.</b></p>
+    </div>
+    <div class="plane p-grass" aria-hidden="true">
+      <svg viewBox="0 0 1440 300" preserveAspectRatio="none"><path fill="#262b30" d="M0 300V250Q360 236 720 246T1440 242V300z"/><path fill="#262b30" d="M-28.8 300Q-55.2 168.4 -134.4 42.6Q-52.5 168.4 -22.1 300zM-1.4 300Q-9.0 227.4 -36.7 147.4Q-6.9 227.4 4.0 300zM-20.8 300Q-41.8 188.9 -107.1 93.9Q-39.1 188.9 -13.9 300zM-18.3 300Q-40.4 187.3 -106.2 73.2Q-38.3 187.3 -13.0 300zM-20.4 300Q-35.3 200.7 -83.8 105.3Q-32.6 200.7 -13.7 300zM-19.4 300Q-10.1 226.1 7.8 148.2Q-8.1 226.1 -14.3 300zM-44.1 300Q-29.2 189.0 2.2 87.4Q-26.6 189.0 -37.7 300zM-21.3 300Q-4.1 197.0 34.0 106.7Q-1.7 197.0 -15.4 300zM-35.9 300Q-53.6 171.7 -108.4 47.9Q-51.4 171.7 -30.3 300zM-22.6 300Q-28.2 198.3 -49.4 102.7Q-26.3 198.3 -17.9 300zM-22.4 300Q-35.0 206.9 -76.6 123.5Q-32.5 206.9 -16.3 300zM0.2 300Q-19.3 189.5 -81.5 91.7Q-16.2 189.5 7.9 300zM-30.7 300Q-36.2 194.5 -57.3 100.0Q-34.3 194.5 -26.0 300zM-44.8 300Q-55.1 178.4 -92.4 58.6Q-52.2 178.4 -37.5 300zM-33.5 300Q-25.2 179.7 -12.7 68.3Q-22.3 179.7 -26.3 300zM-3.3 300Q-10.7 158.8 -39.5 31.8Q-7.9 158.8 3.5 300zM-23.3 300Q-32.8 211.3 -66.2 126.9Q-30.4 211.3 -17.3 300zM-1.1 300Q1.5 221.0 1.2 136.3Q3.7 221.0 4.4 300zM-43.1 300Q-42.7 190.2 -52.9 91.1Q-39.4 190.2 -34.7 300zM51.2 300Q40.7 215.3 4.1 123.4Q43.2 215.3 57.6 300zM74.2 300Q69.3 233.7 48.3 157.8Q71.7 233.7 80.1 300zM72.6 300Q103.6 178.3 177.1 67.4Q106.3 178.3 79.4 300zM77.8 300Q50.8 161.4 -31.6 44.6Q54.0 161.4 85.7 300zM84.6 300Q82.8 201.8 68.7 98.4Q85.5 201.8 91.5 300zM46.9 300Q31.9 217.1 -15.9 125.1Q34.2 217.1 52.7 300zM46.4 300Q29.7 221.8 -22.4 131.7Q32.1 221.8 52.2 300zM45.2 300Q69.5 184.4 127.2 70.4Q71.7 184.4 50.6 300zM60.4 300Q59.5 224.1 45.7 150.4Q62.8 224.1 68.8 300zM67.9 300Q70.2 227.1 68.6 140.5Q72.5 227.1 73.7 300zM56.2 300Q73.3 221.0 108.0 128.7Q76.6 221.0 64.4 300zM70.8 300Q54.6 190.2 2.9 77.5Q57.2 190.2 77.3 300zM94.5 300Q119.6 177.8 178.8 61.6Q122.0 177.8 100.4 300zM52.4 300Q70.1 191.0 109.6 93.9Q72.3 191.0 58.1 300zM54.3 300Q80.8 154.5 141.2 34.6Q83.9 154.5 62.0 300zM86.2 300Q99.2 215.7 126.2 129.8Q101.5 215.7 92.0 300zM44.5 300Q27.2 211.4 -28.6 117.6Q30.0 211.4 51.6 300zM92.2 300Q92.6 158.4 82.6 43.7Q95.8 158.4 100.4 300zM62.9 300Q53.7 215.7 22.3 123.4Q55.8 215.7 68.1 300zM75.5 300Q105.8 166.2 177.2 46.5Q108.6 166.2 82.5 300zM147.8 300Q145.3 184.7 128.2 71.7Q148.5 184.7 155.7 300zM164.5 300Q172.7 231.8 185.1 165.2Q175.6 231.8 171.7 300zM165.4 300Q177.9 231.9 200.0 149.7Q181.2 231.9 173.8 300zM143.5 300Q151.4 203.2 163.1 111.8Q154.1 203.2 150.4 300zM173.2 300Q174.8 167.6 170.3 42.5Q177.5 167.6 179.8 300zM142.9 300Q164.1 183.5 210.6 67.9Q167.0 183.5 150.3 300zM150.5 300Q171.4 223.6 220.9 150.2Q173.2 223.6 155.0 300zM153.3 300Q156.7 180.7 156.8 67.7Q159.3 180.7 159.9 300zM185.4 300Q163.1 182.5 94.3 82.1Q165.9 182.5 192.4 300zM185.5 300Q189.0 175.9 191.7 70.8Q190.9 175.9 190.4 300zM150.0 300Q154.1 172.5 155.9 63.0Q156.8 172.5 156.8 300zM183.4 300Q173.2 227.6 139.4 151.8Q175.2 227.6 188.3 300zM145.0 300Q158.0 198.3 182.7 100.1Q161.0 198.3 152.5 300zM189.1 300Q174.6 223.9 129.6 134.0Q176.5 223.9 193.9 300zM166.2 300Q138.6 170.9 57.3 46.1Q140.8 170.9 171.9 300zM286.0 300Q288.1 216.8 282.8 130.9Q291.4 216.8 294.2 300zM287.1 300Q310.8 191.6 365.2 84.5Q313.5 191.6 293.7 300zM300.0 300Q313.1 241.2 339.8 164.4Q315.6 241.2 306.2 300zM254.1 300Q250.7 245.1 231.7 181.9Q253.7 245.1 261.6 300zM298.2 300Q284.4 205.5 240.9 115.8Q286.4 205.5 303.2 300zM297.0 300Q314.9 236.1 354.7 172.6Q317.3 236.1 303.0 300zM276.3 300Q304.3 198.4 370.7 93.8Q306.7 198.4 282.5 300zM277.2 300Q275.9 237.6 262.5 162.3Q278.8 237.6 284.5 300zM252.2 300Q257.2 222.5 262.8 131.2Q259.5 222.5 257.9 300zM282.7 300Q286.8 245.7 287.7 189.1Q289.9 245.7 290.3 300zM300.8 300Q291.4 233.3 256.2 149.6Q294.4 233.3 308.4 300zM264.3 300Q254.0 223.6 216.3 150.9Q257.1 223.6 272.0 300zM263.9 300Q248.8 193.0 198.7 93.1Q251.6 193.0 271.1 300zM256.4 300Q238.2 207.2 183.5 113.9Q240.1 207.2 261.1 300zM298.9 300Q309.6 200.3 327.4 95.5Q312.7 200.3 306.8 300zM254.2 300Q271.7 221.7 309.6 136.3Q274.4 221.7 260.8 300zM299.6 300Q295.5 241.7 277.4 173.3Q297.6 241.7 304.9 300zM256.9 300Q250.7 246.5 226.6 174.9Q253.0 246.5 262.6 300zM267.4 300Q278.8 231.8 302.4 156.3Q280.8 231.8 272.5 300zM268.4 300Q256.3 234.2 214.0 150.6Q259.2 234.2 275.8 300zM280.3 300Q270.4 220.4 237.4 146.0Q272.3 220.4 285.1 300zM293.7 300Q293.9 219.1 286.6 141.9Q296.3 219.1 299.6 300zM276.5 300Q290.8 189.1 318.6 82.1Q293.9 189.1 284.3 300zM395.9 300Q417.6 224.5 466.1 134.5Q420.3 224.5 402.8 300zM390.7 300Q392.3 260.2 388.6 206.9Q394.7 260.2 396.6 300zM372.0 300Q389.5 235.4 430.0 166.2Q391.3 235.4 376.5 300zM354.7 300Q353.2 262.5 341.7 204.8Q355.5 262.5 360.4 300zM396.5 300Q395.7 261.1 386.6 212.9Q397.8 261.1 401.8 300zM353.9 300Q354.1 258.9 345.0 197.0Q356.9 258.9 361.0 300zM358.4 300Q366.6 258.6 381.8 207.3Q368.6 258.6 363.3 300zM376.1 300Q375.7 249.0 368.5 187.6Q377.6 249.0 380.8 300zM394.0 300Q405.6 255.6 426.5 203.9Q408.6 255.6 401.5 300zM376.2 300Q388.2 229.8 413.0 152.9Q390.4 229.8 381.7 300zM376.9 300Q366.8 225.1 331.3 149.4Q369.4 225.1 383.3 300zM366.5 300Q376.3 239.6 392.5 177.6Q379.3 239.6 374.0 300zM373.7 300Q383.4 262.0 399.3 210.3Q386.5 262.0 381.3 300zM382.6 300Q400.1 233.4 440.6 150.7Q401.9 233.4 387.2 300zM378.8 300Q393.6 245.5 427.0 178.2Q395.4 245.5 383.4 300zM345.8 300Q349.7 251.5 351.7 184.5Q352.2 251.5 352.0 300zM348.3 300Q368.5 221.8 413.6 131.4Q371.1 221.8 354.8 300zM384.0 300Q385.7 225.8 383.2 153.3Q387.9 225.8 389.4 300zM383.4 300Q378.3 233.1 354.2 157.6Q381.4 233.1 391.2 300zM348.5 300Q362.3 249.6 389.9 176.9Q365.0 249.6 355.4 300zM354.7 300Q360.9 247.6 367.8 185.6Q363.7 247.6 361.8 300zM376.1 300Q369.4 240.7 340.4 170.9Q372.7 240.7 384.4 300zM350.3 300Q344.7 240.4 322.2 174.8Q346.9 240.4 355.9 300zM369.3 300Q383.2 217.4 412.6 133.3Q385.5 217.4 375.0 300zM428.8 300Q443.1 227.9 473.8 148.9Q445.2 227.9 434.3 300zM416.1 300Q427.8 258.5 452.5 202.4Q429.8 258.5 421.1 300zM431.7 300Q443.6 261.6 466.8 212.5Q446.2 261.6 438.1 300zM450.6 300Q458.1 257.6 469.6 207.4Q460.6 257.6 456.9 300zM406.1 300Q395.8 247.1 360.8 180.9Q398.1 247.1 411.8 300zM412.8 300Q411.4 254.2 401.9 200.5Q413.2 254.2 417.2 300zM443.1 300Q453.1 262.1 470.2 215.4Q456.0 262.1 450.3 300zM450.3 300Q449.5 252.0 436.0 187.8Q452.8 252.0 458.7 300zM436.0 300Q434.8 249.7 425.5 181.7Q436.6 249.7 440.6 300zM410.2 300Q420.4 255.5 440.3 204.5Q422.6 255.5 415.6 300zM417.4 300Q421.7 259.3 422.3 199.7Q425.0 259.3 425.6 300zM449.6 300Q462.8 241.5 487.1 180.8Q466.0 241.5 457.7 300zM433.1 300Q440.1 265.0 450.3 216.3Q442.5 265.0 439.3 300zM442.7 300Q450.0 255.4 458.6 186.7Q453.3 255.4 450.8 300zM410.6 300Q413.6 253.1 411.9 187.8Q416.6 253.1 418.0 300zM455.1 300Q451.3 240.5 432.3 166.9Q453.9 240.5 461.7 300zM424.2 300Q421.6 260.5 404.1 198.3Q424.8 260.5 432.2 300zM430.4 300Q423.8 230.4 397.8 164.0Q426.2 230.4 436.6 300zM412.5 300Q409.3 263.3 394.2 205.7Q411.2 263.3 417.3 300zM416.4 300Q413.3 244.0 395.3 184.4Q416.3 244.0 423.8 300zM426.2 300Q426.8 245.8 420.6 177.3Q429.1 245.8 432.0 300zM480.9 300Q492.9 213.4 514.4 131.6Q496.0 213.4 488.7 300zM467.8 300Q486.2 222.7 527.1 144.1Q488.7 222.7 473.9 300zM479.2 300Q500.3 185.3 548.4 71.3Q502.8 185.3 485.3 300zM503.4 300Q523.2 185.2 569.8 78.5Q525.1 185.2 508.1 300zM511.3 300Q533.0 213.5 582.3 125.3Q535.4 213.5 517.5 300zM504.4 300Q498.2 237.7 475.2 175.6Q500.1 237.7 509.2 300zM506.6 300Q519.7 193.1 548.4 99.7Q521.6 193.1 511.4 300zM504.2 300Q491.4 239.4 451.0 170.3Q493.2 239.4 508.7 300zM500.2 300Q524.7 207.2 581.9 115.9Q527.2 207.2 506.3 300zM503.2 300Q491.4 228.1 453.0 159.1Q493.5 228.1 508.4 300zM475.4 300Q487.3 247.4 507.7 183.0Q490.6 247.4 483.8 300zM477.3 300Q470.8 193.5 444.7 87.4Q473.4 193.5 483.8 300zM492.2 300Q475.9 221.0 426.3 141.3Q477.8 221.0 496.8 300zM473.5 300Q494.3 205.9 542.6 104.7Q496.4 205.9 478.8 300zM484.5 300Q482.7 215.8 468.1 133.5Q485.6 215.8 491.8 300zM481.0 300Q482.2 247.0 474.8 177.5Q485.3 247.0 488.8 300zM467.0 300Q469.4 234.6 469.1 166.3Q471.5 234.6 472.2 300zM486.8 300Q477.4 190.3 443.0 79.4Q480.1 190.3 493.7 300zM599.7 300Q583.0 214.6 532.6 136.2Q584.9 214.6 604.3 300zM553.3 300Q559.4 225.5 569.0 150.0Q561.5 225.5 558.4 300zM575.6 300Q585.3 231.6 604.6 148.3Q587.1 231.6 580.4 300zM560.1 300Q549.5 211.2 512.9 122.4Q552.0 211.2 566.4 300zM567.8 300Q582.1 199.9 612.2 112.8Q584.6 199.9 573.9 300zM556.3 300Q548.8 245.7 518.3 177.9Q552.0 245.7 564.3 300zM581.0 300Q593.2 227.6 618.2 154.7Q595.4 227.6 586.6 300zM593.1 300Q577.5 208.0 526.9 110.5Q580.1 208.0 599.7 300zM574.4 300Q569.5 206.0 547.4 112.9Q572.3 206.0 581.3 300zM564.4 300Q572.2 226.1 584.5 144.4Q574.7 226.1 570.7 300zM593.0 300Q583.0 238.8 547.3 159.3Q585.7 238.8 599.8 300zM569.8 300Q564.7 193.0 541.1 82.5Q567.6 193.0 577.2 300zM587.1 300Q604.8 232.6 642.9 162.1Q607.5 232.6 593.9 300zM594.1 300Q608.4 246.6 640.2 187.6Q610.4 246.6 598.9 300zM587.8 300Q590.2 203.7 585.8 115.3Q593.4 203.7 595.9 300zM592.9 300Q582.4 220.6 543.5 127.8Q585.7 220.6 601.1 300zM566.5 300Q576.0 241.4 591.0 167.1Q579.2 241.4 574.3 300zM636.7 300Q621.7 185.1 575.3 73.4Q623.5 185.1 641.4 300zM632.8 300Q638.9 216.3 644.8 140.1Q642.1 216.3 640.7 300zM683.1 300Q678.6 234.0 657.9 151.9Q681.1 234.0 689.5 300zM668.4 300Q669.8 223.0 664.4 140.0Q672.6 223.0 675.3 300zM667.6 300Q685.1 178.2 725.4 70.3Q687.1 178.2 672.5 300zM675.0 300Q668.2 198.7 640.4 98.6Q671.2 198.7 682.4 300zM641.4 300Q635.5 222.2 609.3 133.4Q638.7 222.2 649.3 300zM661.8 300Q657.3 211.2 636.8 131.8Q659.9 211.2 668.3 300zM644.6 300Q663.6 192.3 707.9 100.4Q665.5 192.3 649.4 300zM657.4 300Q679.0 178.6 730.6 76.0Q680.8 178.6 661.9 300zM646.9 300Q636.2 226.3 598.8 156.6Q638.9 226.3 653.6 300zM680.6 300Q675.5 176.8 654.5 63.6Q677.6 176.8 686.1 300zM672.0 300Q690.5 232.4 730.6 159.3Q693.2 232.4 678.9 300zM643.6 300Q641.7 229.8 629.4 147.1Q643.8 229.8 649.0 300zM663.3 300Q671.8 225.3 686.9 135.7Q674.1 225.3 669.0 300zM666.5 300Q657.2 217.3 622.5 126.2Q660.3 217.3 674.0 300zM660.2 300Q648.8 232.7 609.6 155.8Q651.4 232.7 666.8 300zM665.2 300Q653.5 228.2 614.4 154.2Q655.9 228.2 671.2 300zM646.4 300Q637.2 170.4 604.0 50.3Q639.9 170.4 653.0 300zM650.6 300Q648.4 176.9 634.7 74.8Q650.7 176.9 656.5 300zM641.2 300Q653.7 225.2 676.5 135.5Q656.9 225.2 649.2 300zM653.9 300Q671.4 210.4 709.6 128.4Q673.8 210.4 660.1 300zM639.4 300Q619.1 199.8 554.3 105.8Q622.3 199.8 647.4 300zM637.1 300Q644.9 213.0 659.1 125.1Q646.9 213.0 642.1 300zM646.5 300Q651.0 172.4 654.6 49.6Q653.6 172.4 652.9 300zM672.7 300Q694.2 225.7 740.4 138.7Q697.4 225.7 680.9 300zM771.6 300Q778.5 252.0 787.2 194.2Q781.4 252.0 778.8 300zM786.5 300Q796.2 211.1 812.8 124.2Q798.9 211.1 793.4 300zM749.7 300Q752.8 226.5 750.2 138.4Q756.1 226.5 757.9 300zM747.9 300Q748.1 248.6 738.5 193.8Q751.2 248.6 755.6 300zM750.1 300Q770.6 211.8 815.7 126.5Q773.4 211.8 757.2 300zM756.7 300Q756.8 232.4 746.8 164.3Q759.8 232.4 764.2 300zM774.4 300Q771.9 243.3 757.4 173.3Q774.3 243.3 780.3 300zM766.7 300Q762.8 256.4 744.1 207.0Q765.3 256.4 772.9 300zM763.0 300Q772.0 213.1 785.8 131.9Q775.1 213.1 770.7 300zM760.6 300Q750.9 237.5 714.9 163.2Q754.0 237.5 768.2 300zM765.8 300Q773.4 254.4 783.0 186.6Q776.7 254.4 773.9 300zM755.9 300Q765.2 252.3 779.2 195.6Q768.4 252.3 763.9 300zM774.1 300Q783.9 255.2 800.9 186.6Q786.7 255.2 781.0 300zM776.9 300Q769.8 249.6 743.5 193.7Q772.0 249.6 782.4 300zM783.2 300Q797.6 220.1 829.0 141.3Q799.7 220.1 788.4 300zM783.5 300Q790.1 243.2 798.4 171.8Q792.8 243.2 790.4 300zM787.5 300Q789.4 243.1 786.1 184.4Q792.0 243.1 793.8 300zM771.8 300Q777.6 244.0 786.3 174.0Q779.7 244.0 777.0 300zM761.7 300Q768.6 241.8 779.2 169.5Q770.9 241.8 767.6 300zM780.9 300Q774.9 215.8 748.4 120.6Q778.0 215.8 788.7 300zM789.9 300Q792.2 228.9 787.7 155.2Q795.4 228.9 797.9 300zM829.6 300Q843.7 227.9 872.4 159.6Q846.4 227.9 836.3 300zM827.5 300Q842.3 216.0 872.0 123.6Q845.3 216.0 834.9 300zM810.8 300Q826.4 228.6 856.9 153.8Q829.7 228.6 819.2 300zM840.7 300Q849.1 224.7 865.6 134.5Q850.9 224.7 845.2 300zM816.3 300Q825.1 216.7 838.0 131.4Q828.3 216.7 824.2 300zM817.1 300Q806.0 202.0 770.3 97.1Q807.7 202.0 821.6 300zM827.6 300Q815.5 221.7 774.4 134.0Q818.2 221.7 834.3 300zM840.6 300Q828.9 203.9 791.0 109.4Q830.9 203.9 845.6 300zM857.7 300Q852.9 235.5 830.9 154.5Q855.7 235.5 864.7 300zM855.6 300Q869.3 218.7 899.8 129.8Q871.0 218.7 860.0 300zM842.9 300Q848.4 222.2 854.9 143.2Q850.9 222.2 849.1 300zM858.9 300Q869.5 228.9 891.6 159.6Q871.3 228.9 863.5 300zM836.4 300Q836.8 229.7 828.0 143.9Q839.8 229.7 843.9 300zM810.5 300Q816.1 182.8 824.1 67.5Q818.2 182.8 815.7 300zM841.6 300Q844.4 202.8 845.3 114.2Q846.5 202.8 846.7 300zM824.8 300Q822.8 242.3 807.4 181.6Q825.8 242.3 832.3 300zM846.6 300Q822.3 189.2 749.4 90.3Q824.9 189.2 852.8 300zM848.4 300Q849.4 230.4 845.0 146.2Q851.5 230.4 853.7 300zM810.6 300Q805.9 195.6 783.0 99.8Q809.0 195.6 818.4 300zM845.7 300Q838.8 208.6 810.3 116.4Q841.8 208.6 853.3 300zM837.1 300Q828.3 202.7 797.8 117.2Q830.4 202.7 842.3 300zM854.6 300Q840.8 228.1 794.4 145.0Q843.8 228.1 861.9 300zM925.5 300Q923.2 188.1 906.6 81.1Q926.3 188.1 933.3 300zM964.2 300Q998.9 169.1 1082.9 52.6Q1001.4 169.1 970.5 300zM944.4 300Q930.6 233.4 886.8 168.1Q932.7 233.4 949.7 300zM962.1 300Q979.2 204.6 1016.0 112.7Q981.9 204.6 968.8 300zM925.8 300Q911.2 226.7 865.6 150.2Q913.3 226.7 930.9 300zM966.8 300Q977.0 233.1 994.9 151.2Q979.8 233.1 973.8 300zM917.9 300Q906.9 231.8 867.6 163.5Q909.9 231.8 925.4 300zM925.8 300Q954.0 193.4 1018.7 95.6Q957.2 193.4 933.8 300zM956.1 300Q968.8 205.2 995.5 107.0Q970.8 205.2 961.4 300zM918.8 300Q951.8 163.6 1033.5 47.8Q953.7 163.6 923.6 300zM954.7 300Q965.3 197.9 983.3 92.4Q968.3 197.9 962.3 300zM950.2 300Q943.7 209.0 918.7 113.5Q946.0 209.0 956.0 300zM964.1 300Q939.7 175.6 864.8 70.8Q942.7 175.6 971.5 300zM947.0 300Q949.7 212.8 946.9 129.6Q952.7 212.8 954.5 300zM918.8 300Q921.7 227.7 923.5 148.9Q923.6 227.7 923.4 300zM946.1 300Q962.8 170.2 999.9 55.2Q965.0 170.2 951.7 300zM939.8 300Q943.1 212.7 945.9 129.6Q945.0 212.7 944.4 300zM933.4 300Q913.4 180.7 849.1 77.6Q916.7 180.7 941.7 300zM947.7 300Q974.3 194.9 1038.4 96.3Q976.3 194.9 952.8 300zM957.8 300Q980.0 217.2 1028.3 125.4Q983.2 217.2 965.9 300zM956.9 300Q958.6 157.3 956.8 33.4Q960.6 157.3 961.7 300zM932.7 300Q908.5 162.3 834.2 48.3Q911.5 162.3 940.1 300zM938.3 300Q948.2 206.2 966.5 109.7Q950.7 206.2 944.5 300zM943.7 300Q924.4 158.0 862.2 36.0Q927.7 158.0 951.9 300zM923.8 300Q931.6 181.1 946.5 74.0Q933.4 181.1 928.3 300zM1047.2 300Q1056.1 227.8 1071.7 143.1Q1058.6 227.8 1053.3 300zM1042.7 300Q1048.4 256.3 1053.0 196.4Q1051.6 256.3 1050.6 300zM1014.9 300Q1010.8 248.2 989.5 187.7Q1013.9 248.2 1022.7 300zM1011.2 300Q1006.0 250.7 983.4 184.4Q1008.6 250.7 1017.7 300zM1011.1 300Q1010.8 253.4 1000.1 201.8Q1013.7 253.4 1018.5 300zM1007.6 300Q1021.6 257.4 1047.8 196.8Q1024.9 257.4 1015.9 300zM1044.3 300Q1054.5 242.0 1072.6 167.3Q1057.3 242.0 1051.2 300zM1009.0 300Q1003.8 244.2 981.9 167.6Q1006.2 244.2 1015.0 300zM1044.4 300Q1053.5 239.0 1069.2 171.0Q1056.0 239.0 1050.7 300zM1009.8 300Q1016.7 243.4 1024.6 180.5Q1020.0 243.4 1017.8 300zM1026.1 300Q1031.5 227.5 1038.6 147.6Q1033.6 227.5 1031.4 300zM1040.1 300Q1058.0 226.3 1095.3 151.2Q1061.1 226.3 1047.9 300zM1038.3 300Q1045.9 241.1 1057.0 168.2Q1048.7 241.1 1045.2 300zM1008.1 300Q1008.5 226.0 1000.6 150.9Q1011.3 226.0 1015.0 300zM1016.4 300Q1017.2 241.1 1011.2 174.2Q1019.6 241.1 1022.5 300zM1037.8 300Q1051.5 253.7 1078.1 195.9Q1054.5 253.7 1045.3 300zM1023.4 300Q1026.2 217.1 1025.1 122.5Q1028.9 217.1 1029.9 300zM1012.4 300Q1026.3 218.6 1056.8 134.8Q1028.2 218.6 1017.2 300zM1032.8 300Q1037.8 229.0 1041.7 151.8Q1040.5 229.0 1039.8 300zM1046.9 300Q1050.2 243.2 1051.8 184.2Q1052.3 243.2 1052.2 300zM1037.8 300Q1038.1 226.9 1027.6 140.6Q1041.4 226.9 1046.2 300zM1022.7 300Q1013.7 249.5 983.8 183.8Q1015.5 249.5 1027.1 300zM1116.5 300Q1122.0 238.3 1128.6 163.2Q1124.4 238.3 1122.5 300zM1130.9 300Q1162.5 179.4 1238.3 78.1Q1165.0 179.4 1137.2 300zM1090.4 300Q1105.7 241.0 1139.5 177.6Q1107.8 241.0 1095.6 300zM1114.3 300Q1129.8 191.3 1161.8 81.8Q1132.7 191.3 1121.4 300zM1123.9 300Q1139.8 218.0 1172.0 143.3Q1142.7 218.0 1131.4 300zM1115.6 300Q1130.2 214.3 1162.2 132.8Q1132.4 214.3 1120.9 300zM1117.9 300Q1132.3 180.1 1162.3 73.8Q1134.8 180.1 1124.2 300zM1123.5 300Q1138.0 221.7 1169.2 142.6Q1140.3 221.7 1129.2 300zM1107.2 300Q1113.4 239.9 1123.3 177.7Q1115.4 239.9 1112.2 300zM1097.4 300Q1096.8 239.9 1087.6 171.1Q1099.0 239.9 1103.1 300zM1130.0 300Q1134.7 222.6 1137.8 142.6Q1137.5 222.6 1137.0 300zM1092.0 300Q1079.5 226.0 1037.3 148.9Q1082.2 226.0 1098.7 300zM1126.3 300Q1115.6 215.5 1080.1 134.8Q1117.7 215.5 1131.5 300zM1101.2 300Q1107.0 205.0 1111.4 115.4Q1110.3 205.0 1109.5 300zM1086.4 300Q1107.4 209.0 1156.1 121.1Q1109.7 209.0 1091.9 300zM1106.6 300Q1101.6 240.3 1078.8 177.3Q1104.4 240.3 1113.7 300zM1087.4 300Q1074.8 217.6 1032.9 139.3Q1077.3 217.6 1093.7 300zM1110.7 300Q1112.5 185.3 1110.1 82.8Q1114.7 185.3 1116.1 300zM1090.2 300Q1098.2 196.6 1111.9 90.9Q1100.4 196.6 1095.9 300zM1117.6 300Q1120.5 225.8 1120.3 145.6Q1123.0 225.8 1123.7 300zM1224.0 300Q1230.0 263.7 1236.6 211.7Q1232.9 263.7 1231.1 300zM1239.7 300Q1236.4 222.9 1218.9 141.7Q1238.9 222.9 1246.1 300zM1238.2 300Q1225.8 234.2 1184.9 162.8Q1228.1 234.2 1244.0 300zM1235.5 300Q1235.6 244.6 1225.7 178.2Q1238.5 244.6 1243.0 300zM1201.6 300Q1203.7 246.9 1199.1 182.5Q1206.8 246.9 1209.3 300zM1206.9 300Q1218.3 247.7 1241.1 182.8Q1220.5 247.7 1212.4 300zM1217.9 300Q1235.8 236.9 1275.7 170.7Q1238.1 236.9 1223.6 300zM1207.2 300Q1204.9 239.8 1188.8 172.4Q1207.9 239.8 1214.7 300zM1194.2 300Q1204.7 227.0 1226.3 149.3Q1206.5 227.0 1198.8 300zM1206.7 300Q1199.4 256.8 1171.0 206.5Q1202.1 256.8 1213.5 300zM1225.2 300Q1239.4 226.0 1267.9 148.9Q1242.1 226.0 1232.1 300zM1224.4 300Q1233.0 239.4 1248.9 172.6Q1235.1 239.4 1229.7 300zM1226.6 300Q1227.7 232.3 1223.9 149.2Q1229.8 232.3 1231.7 300zM1193.4 300Q1206.6 225.8 1233.7 149.4Q1208.9 225.8 1199.3 300zM1234.4 300Q1245.7 240.9 1268.3 166.6Q1247.9 240.9 1240.0 300zM1212.3 300Q1211.5 246.5 1198.6 183.7Q1214.8 246.5 1220.5 300zM1193.5 300Q1198.5 263.3 1201.8 201.2Q1201.6 263.3 1201.1 300zM1221.4 300Q1235.7 245.8 1265.9 170.0Q1238.1 245.8 1227.3 300zM1222.2 300Q1242.1 222.9 1287.1 141.1Q1244.5 222.9 1228.3 300zM1197.5 300Q1202.9 255.9 1211.4 189.5Q1204.7 255.9 1202.0 300zM1192.3 300Q1198.4 259.7 1208.3 212.2Q1200.3 259.7 1197.1 300zM1237.0 300Q1233.0 264.2 1215.3 214.7Q1235.2 264.2 1242.4 300zM1229.0 300Q1226.8 262.8 1211.3 213.5Q1229.7 262.8 1236.2 300zM1235.3 300Q1243.4 261.3 1255.2 208.1Q1246.3 261.3 1242.6 300zM1273.9 300Q1261.3 230.8 1218.1 162.3Q1264.2 230.8 1281.1 300zM1302.8 300Q1302.0 210.9 1288.8 123.5Q1305.3 210.9 1311.0 300zM1314.5 300Q1323.1 210.6 1336.1 130.0Q1326.0 210.6 1321.9 300zM1295.1 300Q1275.8 159.4 1213.2 28.0Q1279.1 159.4 1303.3 300zM1280.2 300Q1298.7 198.0 1339.8 105.5Q1301.2 198.0 1286.4 300zM1285.5 300Q1300.5 209.2 1331.3 114.3Q1303.2 209.2 1292.4 300zM1305.0 300Q1325.5 188.3 1370.5 91.2Q1328.4 188.3 1312.3 300zM1271.4 300Q1252.9 169.9 1192.4 54.9Q1256.2 169.9 1279.7 300zM1284.9 300Q1282.3 205.9 1268.1 118.6Q1284.4 205.9 1290.2 300zM1295.7 300Q1306.7 210.2 1329.3 115.7Q1308.7 210.2 1300.8 300zM1320.2 300Q1339.3 173.8 1383.6 55.5Q1341.2 173.8 1325.1 300zM1317.3 300Q1339.8 224.0 1389.8 152.8Q1342.9 224.0 1324.9 300zM1300.0 300Q1317.7 196.1 1356.0 97.6Q1320.3 196.1 1306.5 300zM1295.8 300Q1292.5 173.5 1272.6 63.6Q1295.8 173.5 1304.2 300zM1286.8 300Q1269.7 204.4 1213.3 114.8Q1273.0 204.4 1294.9 300zM1302.0 300Q1282.0 205.2 1220.0 112.8Q1284.6 205.2 1308.5 300zM1290.5 300Q1272.3 204.2 1216.4 110.7Q1274.5 204.2 1296.0 300zM1315.5 300Q1308.8 195.7 1283.9 90.1Q1310.9 195.7 1320.7 300zM1351.2 300Q1356.5 214.9 1363.8 128.6Q1358.5 214.9 1356.2 300zM1333.7 300Q1357.8 216.9 1412.9 123.7Q1360.6 216.9 1340.6 300zM1372.6 300Q1358.8 201.4 1313.6 102.5Q1361.4 201.4 1379.0 300zM1332.7 300Q1306.5 174.0 1228.2 67.3Q1309.1 174.0 1339.1 300zM1360.3 300Q1351.1 188.7 1315.7 83.0Q1354.4 188.7 1368.4 300zM1372.5 300Q1394.5 175.9 1447.3 58.2Q1396.4 175.9 1377.0 300zM1342.0 300Q1335.3 237.2 1308.5 156.3Q1337.9 237.2 1348.6 300zM1377.8 300Q1377.6 177.0 1370.7 73.2Q1379.4 177.0 1382.5 300zM1363.2 300Q1362.6 234.6 1353.7 170.2Q1364.8 234.6 1368.7 300zM1361.2 300Q1372.9 176.4 1396.1 67.3Q1375.3 176.4 1367.2 300zM1355.5 300Q1337.0 175.7 1280.6 72.7Q1339.1 175.7 1360.8 300zM1332.9 300Q1326.9 218.5 1300.4 142.2Q1330.1 218.5 1340.9 300zM1374.9 300Q1353.1 188.2 1285.5 87.9Q1355.9 188.2 1381.9 300zM1382.0 300Q1371.2 232.9 1331.4 163.3Q1374.5 232.9 1390.2 300zM1367.6 300Q1360.2 201.8 1333.8 111.5Q1362.1 201.8 1372.5 300zM1349.2 300Q1343.7 234.3 1322.4 160.2Q1345.7 234.3 1354.2 300zM1343.6 300Q1328.7 195.8 1279.1 86.5Q1331.6 195.8 1350.9 300zM1340.9 300Q1316.8 178.4 1241.5 61.7Q1320.0 178.4 1349.1 300zM1377.5 300Q1392.9 233.3 1427.5 157.7Q1394.8 233.3 1382.3 300zM1380.3 300Q1400.4 199.2 1446.4 101.1Q1402.7 199.2 1386.0 300zM1375.0 300Q1376.5 199.2 1373.5 94.9Q1378.6 199.2 1380.3 300zM1333.9 300Q1348.0 204.4 1375.2 103.6Q1351.2 204.4 1341.7 300zM1344.8 300Q1345.7 232.1 1337.7 152.3Q1348.8 232.1 1352.6 300zM1348.2 300Q1337.1 208.8 1296.7 114.3Q1340.3 208.8 1356.3 300zM1337.3 300Q1355.4 239.0 1394.3 176.3Q1358.2 239.0 1344.3 300zM1343.2 300Q1345.0 223.0 1342.7 136.9Q1347.0 223.0 1348.4 300zM1455.7 300Q1439.6 208.7 1390.6 125.8Q1441.5 208.7 1460.3 300zM1443.9 300Q1432.4 151.9 1391.6 13.5Q1435.4 151.9 1451.5 300zM1424.4 300Q1415.5 232.4 1383.0 164.0Q1418.1 232.4 1430.9 300zM1416.2 300Q1414.9 157.4 1402.6 26.7Q1417.6 157.4 1422.9 300zM1414.5 300Q1396.1 169.1 1340.3 56.0Q1398.2 169.1 1419.7 300zM1411.3 300Q1389.8 182.4 1325.1 73.9Q1392.0 182.4 1416.8 300zM1417.2 300Q1427.7 174.2 1446.5 66.6Q1430.4 174.2 1424.0 300zM1416.8 300Q1392.6 172.2 1318.6 55.1Q1395.6 172.2 1424.1 300zM1408.8 300Q1427.5 204.9 1466.9 118.4Q1430.7 204.9 1416.7 300zM1431.6 300Q1401.0 157.5 1309.0 32.1Q1404.2 157.5 1439.5 300zM1421.2 300Q1402.4 164.0 1345.5 40.7Q1404.4 164.0 1426.3 300zM1426.1 300Q1432.4 232.2 1441.0 157.4Q1434.9 232.2 1432.3 300zM1432.8 300Q1412.7 173.7 1348.9 65.8Q1415.9 173.7 1440.6 300zM1424.3 300Q1437.0 201.1 1464.9 110.2Q1438.9 201.1 1428.9 300zM1452.0 300Q1479.8 191.8 1545.4 89.9Q1482.4 191.8 1458.5 300zM1435.3 300Q1402.6 152.8 1308.5 19.2Q1404.6 152.8 1440.4 300zM1412.8 300Q1398.4 165.2 1353.6 36.0Q1400.3 165.2 1417.6 300zM1442.9 300Q1435.7 231.1 1407.7 157.2Q1438.4 231.1 1449.6 300z"/></svg>
+    </div>
+  </div>
+</section>
+
+<section class="walk" aria-labelledby="walk-h">
+  <div class="w-stage">
+    <div class="w-head">
+      <h2 id="walk-h">The jetty walk, about ten minutes from the door</h2>
+      <p class="w-clock" aria-hidden="true"><span id="mins">0</span> min<small>walking</small></p>
+    </div>
+    <div class="reel" id="reel">
+      <figure class="frame">
+        <img src="img/w1.jpg" srcset="img/w1-700.jpg 700w, img/w1.jpg 1440w" sizes="100vw" width="1440" height="961" alt="Firepit terrace with outdoor lounges beside the Farmhouse" loading="lazy">
+        <figcaption><b>The firepit terrace</b>Toast marshmallows, stargaze and open a local wine.</figcaption>
+      </figure>
+      <figure class="frame">
+        <img src="img/w2.jpg" srcset="img/w2-700.jpg 700w, img/w2.jpg 1440w" sizes="100vw" width="1440" height="1080" alt="The old timber tack shed and horse yard at the bottom of the garden" loading="lazy">
+        <figcaption><b>The old tack shed</b>At the bottom of the garden, the tack shed and horse yard open straight into the paddocks.</figcaption>
+      </figure>
+      <figure class="frame">
+        <img src="img/w3.jpg" srcset="img/w3-700.jpg 700w, img/w3.jpg 1440w" sizes="100vw" width="1440" height="1080" alt="Long open paddock with a row of tall poplars and blue hills behind" loading="lazy">
+        <figcaption><b>The long paddock</b>Gold grass, poplars and blue hills. Walk it, or ride it on your bikes.</figcaption>
+      </figure>
+      <figure class="frame">
+        <img src="img/w4.jpg" srcset="img/w4-700.jpg 700w, img/w4.jpg 1440w" sizes="100vw" width="1440" height="1080" alt="A timber jetty on the creek-fed dam, with willows and gums" loading="lazy">
+        <figcaption><b>The jetty</b>A picnic spot on the creek-fed dam. Watch the ducks, or swim when it's warm.</figcaption>
+      </figure>
+      <figure class="frame">
+        <img src="img/w5.jpg" srcset="img/w5-700.jpg 700w, img/w5.jpg 1440w" sizes="100vw" width="1440" height="1440" alt="Two people rowing the farm's little dinghy across the dam" loading="lazy">
+        <figcaption><b>The little dinghy</b>Row it out from the jetty. Then picnic on the shady spillway lawn.</figcaption>
+      </figure>
+    </div>
+    <div class="track" aria-hidden="true">
+      <div class="line"></div><div class="done" id="done"></div>
+      <span class="stop" style="left:0%"></span><span class="stop" style="left:25%"></span><span class="stop" style="left:50%"></span><span class="stop" style="left:75%"></span><span class="stop" style="left:100%"></span>
+      <svg class="who" id="who" viewBox="0 0 30 30"><circle cx="15" cy="15" r="11" fill="#e2a33c"/><circle cx="15" cy="15" r="4" fill="#262b30"/></svg>
+      <div class="ends"><span>Farmhouse</span><span>Jetty</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="house" id="house" aria-labelledby="house-h">
+  <div class="wrap"><div class="inner">
+    <div>
+      <h2 class="big" id="house-h">Five rooms, one group</h2>
+      <p class="lede">The whole house is yours: the main house, the kitchen and sunroom, the Bunkhouse lounge, and the decks and garden around them. You book the bedrooms your group needs.</p>
+      <ul class="rooms">
+        <li><b>Room 1</b><span class="n">1 to 2</span><span class="d">King, or two singles. Kookaburras in the gums outside the window.</span></li>
+        <li><b>Room 2</b><span class="n">1 to 2</span><span class="d">King, or two singles. Shares bathroom 1 with Room 1.</span></li>
+        <li><b>The Nook</b><span class="n">1 to 3</span><span class="d">Double with a single bunk above, and its own door off the deck.</span></li>
+        <li><b>The Studio</b><span class="n">1 to 4</span><span class="d">Its own entry to the garden, a rain shower and a heated floor.</span></li>
+        <li><b>The Bunkhouse</b><span class="n">1 to 6</span><span class="d">Two triple bunks, two doors to the garden, and its own lounge.</span></li>
+      </ul>
+    </div>
+    <figure>
+      <img src="img/r-fire.jpg" width="1000" height="1000" alt="Brick open fireplace with a round mirror and art above it" loading="lazy">
+      <figcaption>The open fire, with wood supplied.</figcaption>
+    </figure>
+  </div></div>
+  <div class="rail" role="region" aria-label="Photos of the rooms" tabindex="0">
+    <figure><img src="img/r-dining.jpg" width="1000" height="750" alt="Long timber dining table with farmhouse chairs" loading="lazy"><figcaption>The dining table.</figcaption></figure>
+    <figure><img src="img/r-kitchen.jpg" width="1000" height="667" alt="White tiled kitchen with a timber island bench" loading="lazy"><figcaption>The kitchen, with a five burner gas stove.</figcaption></figure>
+    <figure><img src="img/r-sun.jpg" width="1000" height="750" alt="Sunroom with a lounge chair and garden view" loading="lazy"><figcaption>The sunroom.</figcaption></figure>
+    <figure><img src="img/r-room1.jpg" width="1000" height="750" alt="Bedroom 1 with a king bed and a window to the gums" loading="lazy"><figcaption>Room 1.</figcaption></figure>
+    <figure><img src="img/r-nook.jpg" width="1000" height="667" alt="The Nook, a built-in double with a single bunk above" loading="lazy"><figcaption>The Nook.</figcaption></figure>
+    <figure><img src="img/r-studio.jpg" width="1000" height="667" alt="The Studio bedroom with dark walls and mustard cushions" loading="lazy"><figcaption>The Studio.</figcaption></figure>
+    <figure><img src="img/r-bunk.jpg" width="1000" height="667" alt="The Bunkhouse with bunks and long paddock views" loading="lazy"><figcaption>The Bunkhouse.</figcaption></figure>
+    <figure><img src="img/r-bath.jpg" width="1000" height="750" alt="Extra-deep bathtub with a timber bench and candles" loading="lazy"><figcaption>The extra-deep bath.</figcaption></figure>
+    <figure><img src="img/r-tubs.jpg" width="1000" height="750" alt="Bathroom with traditional concrete tubs and timber" loading="lazy"><figcaption>Concrete tubs, timber, fibro and tin.</figcaption></figure>
+  </div>
+</section>
+
+<section class="outside" aria-labelledby="out-h">
+  <div class="wrap"><div class="inner">
+    <div class="head">
+      <h2 class="big" id="out-h">Most of the day happens outside</h2>
+      <p class="lede">A garden detailed by a landscape architect and fenced all round, so small children and dogs stay safe. The table under the wisteria seats 16.</p>
+    </div>
+    <div class="mosaic">
+      <figure class="m1"><img src="img/o-bath.jpg" width="1000" height="667" alt="An outdoor bath on a timber deck at dusk, with candles" loading="lazy"><figcaption>The outdoor bath deck, behind the Studio.</figcaption></figure>
+      <figure class="m2"><img src="img/o-table.jpg" width="1000" height="667" alt="Long outdoor table under festoon lights at night" loading="lazy"><figcaption>Dinner under the lights.</figcaption></figure>
+      <figure class="m3"><img src="img/o-oak.jpg" width="1000" height="668" alt="An outdoor table and hammock under a big oak tree" loading="lazy"><figcaption>The hammock under the oak.</figcaption></figure>
+      <figure class="m4"><img src="img/o-lawn.jpg" width="1000" height="667" alt="Deck chairs on the lawn in front of the house" loading="lazy"><figcaption>The lawn and deck chairs.</figcaption></figure>
+      <figure class="m5"><img src="img/o-garden.jpg" width="1000" height="750" alt="Garden path through flowering beds" loading="lazy"><figcaption>The garden in flower.</figcaption></figure>
+      <figure class="m6"><img src="img/o-dusk.jpg" width="1000" height="667" alt="The Farmhouse deck and firepit with a gold sunset" loading="lazy"><figcaption>The north-facing deck, with the BBQ.</figcaption></figure>
+    </div>
+  </div></div>
+</section>
+
+<section class="wild" id="wild" aria-labelledby="wild-h">
+  <div class="wrap"><div class="inner">
+    <div class="head">
+      <h2 class="big" id="wild-h">Who lives here</h2>
+      <p class="lede">More than 60 bird species have been counted on the farm so far. Bring binoculars for the early morning and late afternoon walks.</p>
+      <p class="creek">In October the farm took water samples from its stretch of Sandhills Creek with the Mulloon Institute. The eDNA in them will show which species live in the creek, down to the microscopic ones.</p>
+    </div>
+    <ul class="critters">
+      <li><img src="img/b-galah.jpg" width="1000" height="750" alt="Two galahs on a bare branch against blue sky" loading="lazy"><b>Galahs</b><span>One of the more obvious of the 60.</span></li>
+      <li><img src="img/b-kooka.jpg" width="1000" height="750" alt="A laughing kookaburra on a branch" loading="lazy"><b>Kookaburras</b><span>You'll hear them from bed.</span></li>
+      <li><img src="img/b-robin.jpg" width="1000" height="734" alt="A small flame robin on a pale branch" loading="lazy"><b>Flame robins</b><span>Listed as vulnerable. Look in the woodland.</span></li>
+      <li><img src="img/b-echidna.jpg" width="1000" height="751" alt="A short-beaked echidna in green grass" loading="lazy"><b>Echidnas</b><span>Shy, and hunting ants.</span></li>
+      <li><img src="img/b-wombat.jpg" width="1000" height="751" alt="A bare-nosed wombat at the mouth of its burrow" loading="lazy"><b>Wombats</b><span>Burrows in most parts of the farm.</span></li>
+      <li><img src="img/b-roos.jpg" width="1000" height="750" alt="Two kangaroos standing in a grassy clearing" loading="lazy"><b>Kangaroos</b><span>With wallabies, possums and the black Angus cows.</span></li>
+    </ul>
+  </div></div>
+</section>
+
+<section class="dist dark" aria-labelledby="dist-h">
+  <div class="wrap"><div class="inner">
+    <div>
+      <h2 class="big" id="dist-h">How far things are</h2>
+      <p class="small" style="margin-top:16px">Close to Canberra, Braidwood and Bungendore for wineries, galleries and restaurants. Everything below is on the farm.</p>
+    </div>
+    <ol>
+      <li><span class="k">6.5 km</span><span class="v">of dirt road from the Kings Highway to the door. Fine in a 2wd.</span></li>
+      <li><span class="k">3 min</span><span class="v">walk to the Camp Kitchen, a covered firepit and picnic shelter.</span></li>
+      <li><span class="k">10 min</span><span class="v">walk to the jetty and the dam.</span></li>
+      <li><span class="k">1.5, 2.5, 4 km</span><span class="v">marked walking trails, along Sandhills Creek and up to Twynam trig.</span></li>
+      <li><span class="k">2700</span><span class="v">acres in all, with 900 protected under conservation agreements.</span></li>
+    </ol>
+  </div></div>
+</section>
+
+<section class="hosts" aria-labelledby="hosts-h">
+  <div class="wrap"><div class="inner">
+    <figure>
+      <img src="img/owners.jpg" width="1000" height="750" alt="Tom and Martina standing in the bush on the farm" loading="lazy">
+      <figcaption>Tom and Martina on the farm.</figcaption>
+    </figure>
+    <div>
+      <h2 class="big" id="hosts-h">Tom and Martina</h2>
+      <p class="lede">Tom grew up here. His family has farmed Birkenburn since the 1890s, and he and Martina have lived and worked on it together since 1998.</p>
+      <p>Their backgrounds are in architecture and landscape design. They're turning a sheep and cattle farm into one with conservation work, workshops and places to stay, and are part of the group of landholders forming the Mulloon Rehydration Initiative.</p>
+    </div>
+  </div></div>
+</section>
+
+<section class="guests" aria-labelledby="guests-h">
+  <div class="wrap"><div class="inner">
+    <div>
+      <h2 class="vh" id="guests-h">What guests say</h2>
+      <blockquote>
+        <p>“An unforgettable experience, great location, very private, great views surrounded by nature but with all the comfort.”</p>
+        <cite>Julieth, The Farmhouse, July 2023</cite>
+      </blockquote>
+    </div>
+    <div>
+      <p class="score">4.95</p>
+      <p class="small">from 229 reviews on Airbnb. Guest favourite, Superhost.</p>
+      <ul>
+        <li>Hospitality comes up in 94 reviews</li>
+        <li>Family in 73</li>
+        <li>The outdoor spaces in 67</li>
+      </ul>
+    </div>
+  </div></div>
+</section>
+
+<section class="know" aria-labelledby="know-h">
+  <div class="wrap"><div class="inner">
+    <h2 class="big" id="know-h">Good to know</h2>
+    <ul>
+      <li><b>No wifi or TV reception.</b> Board games, books and a DVD player instead.</li>
+      <li><b>Patchy mobile.</b> It's a rural property.</li>
+      <li><b>Rainwater only.</b> Short showers, please.</li>
+      <li><b>Dogs.</b> Up to three outdoor dogs, by agreement. Kennels supplied.</li>
+      <li><b>Late checkout.</b> Free, when it's available.</li>
+      <li><b>Price.</b> Changes with the number of guests, so enter all of yours.</li>
+    </ul>
+  </div></div>
+</section>
+
+<section class="book" id="book" aria-labelledby="book-h">
+  <div class="bg" aria-hidden="true"><img src="img/sunrise.jpg" width="1000" height="750" alt="" loading="lazy"></div>
+  <div class="wrap"><div class="inner">
+    <div class="panel">
+      <h2 class="big" id="book-h">Book the Farmhouse</h2>
+      <p class="lede">Pick your dates and the number of guests, up to 16. Tom and Martina send a checklist so you can choose the bedrooms.</p>
+      <div class="acts">
+        <a class="btn lamp" href="https://airbnb.com/h/the-farmhouse-bungendore">Check dates</a>
+        <a class="btn line" href="tel:+61402125651">Call 0402 125 651</a>
+      </div>
+      <div class="also">
+        <p>Camping instead? Two private bush campsites are on <a href="https://www.hipcamp.com/en-AU/land/new-south-wales-southern-tablelands-bush-camping-mxvhxy0l">Hipcamp</a>.</p>
+        <p>Workshops and field days are on <a href="https://www.eventbrite.com.au/o/birkenburn-farm-32496962455">Eventbrite</a>. Email <a href="mailto:marty@birkenburnfarm.com">marty@birkenburnfarm.com</a>.</p>
+      </div>
+    </div>
+  </div></div>
+</section>
+</main>
+
+<footer>
+  <div class="inner">
+    <p>A preview made by Lamplit Studio for Birkenburn Farm. Not affiliated, not live.</p>
+    <p>Photos: Birkenburn Farm's own listing and website.</p>
+  </div>
+</footer>
+
+<div class="phonebar" id="phonebar">
+  <a class="btn lamp" href="https://airbnb.com/h/the-farmhouse-bungendore">Check dates</a>
+  <a class="btn line call" href="tel:+61402125651" aria-label="Call Birkenburn Farm">Call</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var hero = document.querySelector('.hero');
+  var photo = document.querySelector('.p-photo');
+  var dusk = document.querySelector('.p-dusk');
+  var grass = document.querySelector('.p-grass');
+  var copy = document.querySelector('.h-copy');
+  var late = document.querySelector('.h-late');
+  var walk = document.querySelector('.walk');
+  var reel = document.getElementById('reel');
+  var done = document.getElementById('done');
+  var who = document.getElementById('who');
+  var mins = document.getElementById('mins');
+  var track = document.querySelector('.track');
+  var bar = document.getElementById('phonebar');
+  var frames = reel.children.length;
+
+  function prog(el){
+    var r = el.getBoundingClientRect();
+    var span = r.height - window.innerHeight;
+    if (span <= 0) return 0;
+    return Math.min(1, Math.max(0, -r.top / span));
+  }
+  function ease(t){ return t<.5 ? 2*t*t : 1-Math.pow(-2*t+2,2)/2; }
+  function seg(p,a,b){ return Math.min(1, Math.max(0, (p-a)/(b-a))); }
+
+  var ticking = false;
+  function draw(){
+    ticking = false;
+    var y = window.scrollY;
+    bar.classList.toggle('on', y > window.innerHeight * 0.6);
+    if (reduce.matches) return;
+
+    var p = prog(hero);
+    photo.style.transform = 'scale(' + (1.14 - 0.12*p) + ') translateY(' + (-2*p) + '%)';
+    grass.style.transform = 'translateY(' + (40 - 40*seg(p,0,.7)) + '%)';
+    dusk.style.opacity = (0.38*seg(p,.35,1)).toFixed(3);
+    copy.style.opacity = (1 - seg(p,.45,.75)).toFixed(3);
+    copy.style.transform = 'translateY(' + (-30*seg(p,.45,.75)) + 'px)';
+    late.style.opacity = seg(p,.6,.85).toFixed(3);
+    late.style.transform = 'translateY(' + (20 - 20*seg(p,.6,.85)) + 'px)';
+
+    var w = prog(walk);
+    // hold briefly on each stop: map progress to a stepped path
+    var steps = frames - 1, raw = w * steps, i = Math.floor(raw), f = raw - i;
+    var t = i >= steps ? steps : i + ease(seg(f,.35,1));
+    reel.style.transform = 'translateX(' + (-t * window.innerWidth) + 'px)';
+    var k = t / steps;
+    done.style.transform = 'scaleX(' + k.toFixed(4) + ')';
+    who.style.transform = 'translateX(' + (k * track.clientWidth) + 'px)';
+    mins.textContent = Math.round(k * 10);
+  }
+  function req(){ if(!ticking){ ticking = true; requestAnimationFrame(draw); } }
+  window.addEventListener('scroll', req, {passive:true});
+  window.addEventListener('resize', req);
+  reduce.addEventListener && reduce.addEventListener('change', function(){ location.reload(); });
+  draw();
+})();
+</script>
+</body>
+</html>
