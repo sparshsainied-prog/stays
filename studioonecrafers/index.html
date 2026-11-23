@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en-AU" class="still">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Studio One Crafers | Two bedrooms in the middle of Crafers, Adelaide Hills</title>
+<meta name="description" content="A two-bedroom apartment for up to four in Crafers, in the Adelaide Hills. A website idea made by Lampbound Studio for Studio One Crafers.">
+<meta property="og:title" content="Studio One Crafers, Adelaide Hills">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Studio One Crafers. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/studioonecrafers/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/studioonecrafers/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2326303b'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' text-anchor='middle' fill='%23a9d2cf'%3ES1%3C/text%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/hero-2000.jpg" media="(min-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-p.jpg" media="(max-width: 699px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;600;700;800&display=swap">
+<style>
+/* Tokens come from the apartment itself (see brand.md):
+   navy   = the painted navy dresser and the black-framed courtyard doors
+   white  = the white lining boards and walls under the skylight
+   duck   = the duck-egg glass splashback in the kitchen
+   jarrah = the red-brown timber of the bedside drawers
+   Marcellus echoes the Roman capitals of their STUDIO logo. Mulish is close to the Avenir on their own site. */
+:root{
+  --navy:#26303b;
+  --navy-2:#333f4c;
+  --white:#f5f6f4;
+  --mist:#e2ecea;
+  --duck:#a9d2cf;
+  --duck-2:#bfe0dd;
+  --jarrah:#6e2f16;
+  --ink:#26303b;
+  --ink-soft:#56606a;
+  --display:"Marcellus","Trajan Pro","Georgia",serif;
+  --text:"Mulish","Avenir Next","Segoe UI",sans-serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--jarrah);outline-offset:3px}
+.dark :focus-visible,.close :focus-visible,.phonebar :focus-visible,footer :focus-visible,.strip :focus-visible{outline-color:var(--duck)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--white);padding:8px 12px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.strip{background:var(--navy);color:var(--white);font-size:14px;text-align:center;margin:0;
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  padding:14px var(--gut-r) 0 var(--gut)}
+.logo{display:block;background:rgba(38,48,59,.86);padding:10px 14px;border-radius:2px}
+.logo img{width:170px}
+.top nav{display:flex;gap:22px;align-items:center;font-weight:700;font-size:15px}
+.top nav a{color:#fff;text-decoration:none;text-shadow:0 1px 8px rgba(20,24,30,.7)}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:2px;
+  font-family:var(--text);font-weight:800;font-size:16px;text-decoration:none;border:0;cursor:pointer;
+  background:var(--navy);color:var(--white)}
+.btn:hover{background:var(--navy-2)}
+.btn.duck{background:var(--duck);color:var(--navy)}
+.btn.duck:hover{background:var(--duck-2)}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.line:hover{background:rgba(255,255,255,.08)}
+.top nav .btn{background:var(--duck);color:var(--navy);text-shadow:none}
+@media (max-width:820px){.top nav a:not(.btn){display:none}.logo img{width:136px}.logo{padding:8px 10px}}
+
+/* ---------- Act 1: through the courtyard doors into the room under the skylight ---------- */
+.enter{position:relative;height:260vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--navy)}
+.layer{position:absolute;inset:0;will-change:transform,opacity}
+.layer img{width:100%;height:100%;object-fit:cover}
+.l-room{transform:scale(1.16);transform-origin:50% 30%}
+.l-room img{object-position:50% 40%}
+.door{position:absolute;top:0;bottom:0;width:50%;overflow:hidden;will-change:transform;z-index:3}
+.door img{width:100%;height:100%;object-fit:cover}
+.door.l{left:0}.door.r{right:0}
+.door.l img{object-position:100% 50%}
+.door.r img{object-position:0% 50%}
+.shaft{position:absolute;z-index:2;left:50%;top:-10%;width:min(46vw,520px);height:120%;margin-left:calc(min(46vw,520px) / -2);
+  background:linear-gradient(to bottom, rgba(255,255,250,.55), rgba(255,255,250,0) 75%);
+  clip-path:polygon(38% 0, 62% 0, 100% 100%, 0 100%);opacity:0;will-change:opacity,transform;pointer-events:none}
+.copy-a{position:absolute;z-index:6;left:var(--gut);bottom:clamp(28px,8vh,90px);max-width:min(620px, calc(100% - 40px));color:#fff}
+.panel{background:rgba(38,48,59,.86);padding:clamp(20px,2.4vw,32px) clamp(20px,2.6vw,36px);border-radius:2px}
+.copy-a .where{font-weight:700;font-size:15px;color:var(--duck)}
+.copy-a h1{font-size:clamp(40px,5vw,70px);margin-top:8px}
+.copy-a p.lede{font-size:clamp(17px,1.5vw,20px);margin-top:14px;max-width:30em}
+.copy-b{position:absolute;z-index:6;right:var(--gut-r);bottom:clamp(28px,8vh,90px);max-width:460px;opacity:0;color:#fff}
+.copy-b h2{font-size:clamp(28px,3.2vw,42px)}
+.copy-b p{margin-top:10px;font-size:17px}
+@media (max-width:699px){
+  .enter{height:240vh}
+  .door.l img{object-position:96% 50%}
+  .door.r img{object-position:4% 50%}
+  .copy-a{top:84px;bottom:auto;left:var(--gut);right:var(--gut-r)}
+  .copy-b{left:var(--gut);right:var(--gut-r);bottom:22px}
+}
+@media (max-height:620px){.copy-a p.lede{display:none}}
+@media (max-height:520px){.copy-a .where{display:none}.copy-a h1{font-size:clamp(28px,4.4vw,44px);margin-top:0}.copy-a .panel{padding:14px 18px}.copy-b p{display:none}.copy-b{top:70px;bottom:auto}}
+
+/* ---------- Act 2: their floor plan. A ring walks the rooms, the photo follows ---------- */
+.walk{position:relative;height:420vh;background:var(--mist)}
+.walk-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:grid;
+  grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(20px,3vw,48px);align-items:center;padding:clamp(70px,9vh,100px) var(--gut-r) clamp(24px,5vh,60px) var(--gut)}
+.plan-wrap h2{font-size:clamp(30px,3.4vw,48px)}
+.plan-wrap .sub{font-size:16px;color:var(--ink-soft);margin-top:8px;max-width:28em}
+.plan{position:relative;margin:18px 0 0;background:#fff;border-radius:2px;box-shadow:0 1px 0 rgba(38,48,59,.08)}
+.plan img{width:100%;aspect-ratio:1400/974}
+.ring{position:absolute;left:0;top:0;width:15%;aspect-ratio:1;border-radius:50%;border:3px solid var(--jarrah);
+  margin:-7.5% 0 0 -7.5%;will-change:transform;pointer-events:none;background:rgba(169,210,207,.28)}
+.rooms-list{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 16px;font-size:15px;font-weight:700;color:var(--ink-soft)}
+.rooms-list li{transition:color .2s}
+.rooms-list li.on{color:var(--jarrah)}
+.shots{position:relative;height:100%;max-height:78vh;min-height:0}
+.shot{position:absolute;inset:0;margin:0;opacity:0;will-change:opacity;display:flex;flex-direction:column}
+.shot:first-child{opacity:1}
+.shot img{flex:1;min-height:0;width:100%;object-fit:cover;border-radius:2px}
+.shot figcaption{padding-top:14px}
+.shot h3{font-size:clamp(24px,2.4vw,34px)}
+.shot p{font-size:17px;margin-top:4px;max-width:34em}
+@media (max-width:820px){
+  .walk{height:460vh}
+  .walk-stage{grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr);gap:14px;padding-top:64px;padding-bottom:calc(84px + env(safe-area-inset-bottom,0px));align-items:stretch}
+  .plan-wrap h2{font-size:26px}
+  .plan-wrap .sub,.rooms-list{display:none}
+  .plan{margin-top:10px;max-width:420px}
+  .shots{max-height:none}
+  .shot p{font-size:16px}
+}
+@media (max-width:820px) and (max-height:700px){.plan{max-width:300px}}
+
+/* ---------- Sections ---------- */
+.wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
+.inner{max-width:1200px;margin:0 auto}
+section{scroll-margin-top:10px}
+.lede{font-size:clamp(19px,1.6vw,21px);max-width:34em}
+.quote{font-size:clamp(20px,1.9vw,25px);line-height:1.4;font-weight:600}
+.who{font-size:15px;color:var(--ink-soft);margin-top:8px}
+.cap-s{font-size:14px;color:var(--ink-soft);margin-top:8px}
+dl.facts{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:22px;row-gap:12px;font-size:17px;line-height:1.5}
+dl.facts dt{font-weight:800;font-size:15px;padding-top:2px;white-space:nowrap}
+dl.facts dd{margin:0;border-bottom:1px solid #d5dedc;padding-bottom:12px}
+h2.big{font-size:clamp(40px,5.4vw,72px)}
+
+.rooms{padding-block:clamp(72px,9vw,130px) 0}
+.rooms .inner{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:start}
+.rooms .lede{margin-top:18px}
+@media (max-width:880px){.rooms .inner{grid-template-columns:minmax(0,1fr)}}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;
+  padding:clamp(36px,5vw,60px) var(--gut-r) clamp(64px,8vw,110px) var(--gut);margin:0}
+.rail figure{margin:0;flex:0 0 auto;width:clamp(260px,34vw,480px);scroll-snap-align:start}
+.rail img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:2px;background:var(--mist)}
+.rail figcaption{font-size:15px;margin-top:8px;color:var(--ink-soft)}
+
+/* Arrive: navy, the welcome tray */
+.arrive{background:var(--navy);color:var(--white);padding-block:clamp(72px,9vw,130px)}
+.arrive .inner{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,3fr);gap:clamp(18px,3vw,40px);align-items:end}
+.arrive .lede{margin-top:18px;color:#dde3e6}
+.arrive figure{margin:0}
+.arrive img{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:2px}
+.arrive figcaption{font-size:14px;color:#b9c3c9;margin-top:8px}
+.arrive .tall{transform:translateY(clamp(0px,4vw,48px))}
+@media (max-width:880px){.arrive .inner{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.arrive .text{grid-column:1/-1}.arrive .tall{transform:none}}
+
+/* Guests */
+.guests{background:var(--duck);color:var(--navy);padding-block:clamp(72px,9vw,120px)}
+.score{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-top:22px}
+.score b{font-family:var(--display);font-weight:400;font-size:clamp(72px,9vw,124px);line-height:.9;font-variant-numeric:tabular-nums}
+.score span{font-size:18px;max-width:18em;font-weight:600}
+.quotes{list-style:none;margin:clamp(40px,5vw,64px) 0 0;padding:0;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:22px clamp(28px,5vw,64px)}
+.quotes li{border-top:1px solid rgba(38,48,59,.35);padding-top:16px}
+.quotes li:first-child{grid-row:span 2}
+.quotes li:first-child .quote{font-size:clamp(24px,2.8vw,36px);line-height:1.3;font-family:var(--display);font-weight:400}
+.guests .who{color:#2f4552}
+@media (max-width:880px){.quotes{grid-template-columns:minmax(0,1fr)}.quotes li:first-child{grid-row:auto}}
+
+/* Crafers */
+.town{padding-block:clamp(72px,9vw,130px)}
+.town .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.town .lede{margin-top:16px}
+.town .ph img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px}
+table.dist{width:100%;border-collapse:collapse;margin-top:28px;font-size:17px}
+table.dist th{text-align:left;font-size:15px;color:var(--ink-soft);font-weight:700;padding:0 0 8px}
+table.dist td{padding:12px 0;border-top:1px solid #d5dedc;vertical-align:top}
+table.dist td:last-child{text-align:right;font-weight:700;white-space:nowrap;padding-left:16px;font-variant-numeric:tabular-nums}
+.small{font-size:14px;color:var(--ink-soft);margin-top:12px}
+@media (max-width:880px){.town .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Book */
+.book{background:var(--mist);padding-block:clamp(72px,9vw,130px)}
+.book .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.book .lede{margin-top:16px}
+.book .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.book .btn.line{color:var(--navy)}
+.book .note{margin-top:18px;font-size:16px;color:var(--ink-soft);max-width:32em}
+.book dl.facts dd{border-color:#c6d4d1}
+.book img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:2px;margin-bottom:24px}
+@media (max-width:880px){.book .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Close */
+.close{position:relative;color:#fff;background:var(--navy)}
+.close img{width:100%;height:min(80vh,720px);object-fit:cover;object-position:50% 60%}
+.close .panel{position:absolute;left:var(--gut);bottom:clamp(24px,6vh,60px);max-width:560px}
+.close h2{font-size:clamp(34px,4.4vw,58px)}
+.close p{margin-top:10px}
+.close .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+@media (max-width:700px){.close img{height:52vh}.close .panel{position:relative;left:auto;bottom:auto;max-width:none;border-radius:0;background:var(--navy)}}
+footer{background:var(--navy);color:#c9d1d6;font-size:14px;padding-block:28px calc(28px + env(safe-area-inset-bottom,0px))}
+footer .inner{display:grid;gap:6px}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;
+  padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);
+  background:rgba(38,48,59,.97);transform:translateY(110%);visibility:hidden;transition:transform .25s ease-out,visibility 0s .25s}
+.phonebar.on{transform:none;visibility:visible;transition:transform .25s ease-out}
+.phonebar .btn{flex:1;min-height:50px}
+.phonebar .btn.line{color:var(--white)}
+@media (max-width:820px){.phonebar{display:flex}footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}}
+
+/* Still layout: no JavaScript, reduced motion, or a short landscape screen */
+html.still .enter,html.still .walk{height:auto}
+html.still .stage{position:relative;height:auto;display:flex;flex-direction:column}
+html.still .layer{position:relative;inset:auto;transform:none !important;opacity:1 !important}
+html.still .l-room img{height:auto;aspect-ratio:3/2}
+html.still .door,html.still .shaft{display:none}
+html.still .copy-a,html.still .copy-b{position:relative;left:auto;right:auto;top:auto;bottom:auto;max-width:none;opacity:1 !important;transform:none !important}
+html.still .copy-a .panel,html.still .copy-b .panel{border-radius:0;background:var(--navy)}
+html.still .walk-stage{position:relative;height:auto;display:block;padding-block:72px}
+html.still .plan{max-width:640px}
+html.still .ring{display:none}
+html.still .shots{height:auto;max-height:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;margin-top:36px}
+html.still .shot{position:relative;inset:auto;opacity:1 !important}
+html.still .shot img{flex:none;aspect-ratio:3/2}
+html.still .phonebar,html.still .phonebar.on{transition:none}
+html.still .rooms-list li{transition:none}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#book">Skip to booking</a>
+<p class="strip">A website idea made by Lampbound Studio for Studio One Crafers. Not their official site.</p>
+
+<header class="top">
+  <a class="logo" href="#enter"><img src="img/logo-light.png" alt="Studio One, Crafers, Adelaide Hills" width="602" height="180"></a>
+  <nav aria-label="Main">
+    <a href="#plan">The rooms</a>
+    <a href="#crafers">Crafers</a>
+    <a class="btn" href="#book">Check dates</a>
+  </nav>
+</header>
+
+<main>
+<section class="enter" id="enter" aria-label="Through the courtyard doors">
+  <div class="stage">
+    <div class="layer l-room">
+      <picture>
+        <source media="(min-width:700px)" srcset="img/hero-2000.jpg">
+        <img src="img/hero-p.jpg" alt="The long living room at Studio One under its skylight, with armchairs and a sofa in front and the kitchen and dining table behind" width="840" height="1355" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="shaft" aria-hidden="true"></div>
+    <div class="door l" aria-hidden="true"><img src="img/door-l.jpg" alt="" width="720" height="960"></div>
+    <div class="door r" aria-hidden="true"><img src="img/door-r.jpg" alt="" width="720" height="960"></div>
+    <div class="copy-a">
+      <div class="panel">
+        <p class="where">Cox Place, Crafers, in the Adelaide Hills</p>
+        <h1>Two bedrooms in the middle of Crafers.</h1>
+        <p class="lede">Studio One sleeps four. There's coffee next door at Atelier, and Stirling is about two kilometres up the road.</p>
+      </div>
+    </div>
+    <div class="copy-b">
+      <div class="panel">
+        <h2>Light from the middle of the house.</h2>
+        <p>A skylight runs over the living room, so the whole long room fills with daylight.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="walk" id="plan" aria-label="Walk through the floor plan">
+  <div class="walk-stage">
+    <div class="plan-wrap">
+      <h2>Walk the floor plan</h2>
+      <p class="sub">This is Studio One's own plan, room by room.</p>
+      <figure class="plan" style="margin-bottom:0">
+        <picture>
+          <source media="(min-width:821px)" srcset="img/plan.jpg">
+          <img src="img/plan-700.jpg" alt="Floor plan of Studio One: courtyard and pergola, kitchen and living area, bedroom 1 with a king bed, bathroom with a spa, bedroom 2 with two king singles, an undercover carport and parking" width="800" height="556" loading="lazy">
+        </picture>
+        <span class="ring" id="ring" aria-hidden="true"></span>
+      </figure>
+      <ol class="rooms-list" id="roomsList" aria-hidden="true">
+        <li class="on">Courtyard</li><li>Kitchen and living</li><li>Bedroom 1</li><li>Bathroom</li><li>Bedroom 2</li>
+      </ol>
+    </div>
+    <div class="shots">
+      <figure class="shot" data-x=".36" data-y=".77">
+        <img src="img/court.jpg" srcset="img/court-700.jpg 700w, img/court.jpg 1400w" sizes="(max-width:820px) 100vw, 55vw" alt="The private courtyard: a glass-topped table for six under a pergola, the barbecue, and pots of ferns and herbs" width="1400" height="933" loading="lazy">
+        <figcaption><h3>The courtyard</h3><p>Your own lockable courtyard, with potted plants, garden herbs and ferns, a barbecue and a six-seat table under the pergola.</p></figcaption>
+      </figure>
+      <figure class="shot" data-x=".36" data-y=".36">
+        <img src="img/kitchen.jpg" srcset="img/kitchen-700.jpg 700w, img/kitchen.jpg 1400w" sizes="(max-width:820px) 100vw, 55vw" alt="The white kitchen with a duck-egg splashback, a long island bench and a wall clock" width="1400" height="933" loading="lazy">
+        <figcaption><h3>Kitchen and living</h3><p>One long room under the skylight. A gas range cooker, dishwasher, pod coffee machine and a dining table for six.</p></figcaption>
+      </figure>
+      <figure class="shot" data-x=".44" data-y=".57">
+        <img src="img/bed1.jpg" srcset="img/bed1-700.jpg 700w, img/bed1.jpg 1400w" sizes="(max-width:820px) 100vw, 55vw" alt="Bedroom 1: a king bed with a buttoned headboard, timber bedside drawers and a rocking chair" width="1400" height="933" loading="lazy">
+        <figcaption><h3>Bedroom 1</h3><p>A king bed with woollen underlay, an electric blanket, its own TV and a ceiling fan.</p></figcaption>
+      </figure>
+      <figure class="shot" data-x=".24" data-y=".58">
+        <img src="img/bath.jpg" srcset="img/bath-700.jpg 700w, img/bath.jpg 1400w" sizes="(max-width:820px) 100vw, 55vw" alt="The bathroom: a white spa bath, a heated towel rail and a separate glass shower" width="1400" height="933" loading="lazy">
+        <figcaption><h3>The bathroom</h3><p>A spa bath for two, a separate shower, heated towel rails and bathrobes.</p></figcaption>
+      </figure>
+      <figure class="shot" data-x=".51" data-y=".15">
+        <img src="img/bed2.jpg" srcset="img/bed2-700.jpg 700w, img/bed2.jpg 1400w" sizes="(max-width:820px) 100vw, 55vw" alt="Bedroom 2: two king single beds made up side by side, with bathrobes hanging by the door" width="1400" height="933" loading="lazy">
+        <figcaption><h3>Bedroom 2</h3><p>Two king singles. Ask ahead and they can be made up as one king.</p></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="rooms" id="rooms">
+  <div class="wrap">
+    <div class="inner">
+      <div>
+        <h2 class="big">Room for four</h2>
+        <p class="lede">A self-contained apartment, lovingly updated, with its own secure entrance and parking for two cars out the front.</p>
+      </div>
+      <dl class="facts">
+        <dt>Sleeps 4</dt><dd>A king in bedroom 1, two king singles in bedroom 2. Cot and highchair on request.</dd>
+        <dt>Kitchen</dt><dd>Gas range cooker, electric oven, dishwasher, full-size fridge, microwave, pod coffee machine.</dd>
+        <dt>Bathroom</dt><dd>Two-person spa, separate shower, heated towel rails, robes.</dd>
+        <dt>Laundry</dt><dd>Washer and dryer behind full-length cupboard doors, and a clothesline in the courtyard.</dd>
+        <dt>Comfort</dt><dd>Reverse-cycle air conditioning, ceiling fans in both bedrooms, wifi, Netflix.</dd>
+        <dt>Times</dt><dd>Check in from 2pm, check out by 11am.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="rail" tabindex="0" role="region" aria-label="More photos of Studio One">
+    <figure><img src="img/living.jpg" srcset="img/living-700.jpg 700w, img/living.jpg 1400w" sizes="(max-width:880px) 80vw, 34vw" alt="The lounge with cream sofas, armchairs and a timber coffee table, glass doors behind" width="1400" height="933" loading="lazy"><figcaption>The lounge</figcaption></figure>
+    <figure><img src="img/dining.jpg" srcset="img/dining-700.jpg 700w, img/dining.jpg 1400w" sizes="(max-width:880px) 80vw, 34vw" alt="The dining table set for six, with the lounge beyond" width="1400" height="933" loading="lazy"><figcaption>Dining table for six</figcaption></figure>
+    <figure><img src="img/dresser.jpg" srcset="img/dresser-700.jpg 700w, img/dresser.jpg 1400w" sizes="(max-width:880px) 80vw, 34vw" alt="A navy painted dresser with tea, coffee and crockery, beside the dining table" width="1400" height="933" loading="lazy"><figcaption>The dresser</figcaption></figure>
+    <figure><img src="img/bed1b.jpg" srcset="img/bed1b-700.jpg 700w, img/bed1b.jpg 1400w" sizes="(max-width:880px) 80vw, 34vw" alt="Close on the king bed: a lamp on the bedside drawers and soft pillows" width="1400" height="933" loading="lazy"><figcaption>Bedroom 1</figcaption></figure>
+    <figure><img src="img/entry.jpg" srcset="img/entry-700.jpg 700w, img/entry.jpg 1400w" sizes="(max-width:880px) 80vw, 34vw" alt="A white hall table with flowers and a mirror, by the open doors to the courtyard" width="1400" height="933" loading="lazy"><figcaption>Doors to the courtyard</figcaption></figure>
+    <figure><img src="img/laundry.jpg" srcset="img/laundry-700.jpg 700w, img/laundry.jpg 1400w" sizes="(max-width:880px) 80vw, 34vw" alt="The laundry tucked behind cupboard doors, with a dryer, washer and sink" width="1400" height="933" loading="lazy"><figcaption>The laundry</figcaption></figure>
+  </div>
+</section>
+
+<section class="arrive dark wrap" id="arrive">
+  <div class="inner">
+    <div class="text">
+      <h2 class="big">When you arrive</h2>
+      <p class="lede">A taste of the Hills is waiting on the bench: locally made wine, cheese and biscuits. Breakfast for your first morning is in the kitchen too, with cereal, croissants, and local jam and juice.</p>
+    </div>
+    <figure><img src="img/wine.jpg" srcset="img/wine-500.jpg 500w, img/wine.jpg 900w" sizes="(max-width:880px) 50vw, 28vw" alt="A bottle of Adelaide Hills red on a tray with treats, on the kitchen bench" width="900" height="1350" loading="lazy"><figcaption>On the bench</figcaption></figure>
+    <figure class="tall"><img src="img/welcome.jpg" srcset="img/welcome-500.jpg 500w, img/welcome.jpg 900w" sizes="(max-width:880px) 50vw, 28vw" alt="A navy bench with cushions under a timber Welcome sign and a woven bag on a hook" width="900" height="1350" loading="lazy"><figcaption>Inside the front door</figcaption></figure>
+  </div>
+</section>
+
+<section class="guests wrap" id="guests">
+  <div class="inner">
+    <h2 class="big">What guests say</h2>
+    <p class="score"><b>4.88</b><span>from 88 reviews on Airbnb, where Studio One is a Guest favourite</span></p>
+    <ul class="quotes">
+      <li><p class="quote">"Entering Studio One was such a wonderful feeling. The living area is extremely spacious and comfortable."</p><p class="who">Sandra, Airbnb</p></li>
+      <li><p class="quote">"Great location, coffee right next door."</p><p class="who">Sue, Airbnb</p></li>
+      <li><p class="quote">"The house was spacious, comfortable, homely, clean and right in the heart of Crafers."</p><p class="who">Amy, Airbnb</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="town wrap" id="crafers">
+  <div class="inner">
+    <div>
+      <h2 class="big">Crafers, and up the hill</h2>
+      <p class="lede">Next door is Atelier Crafers, a cafe and gallery of South Australian art and craft. Both belong to local silversmith Ros Cameron, and there may be an art class running while you're here.</p>
+      <table class="dist">
+        <thead><tr><th scope="col">By car, roughly</th><th scope="col"><span class="vh">Distance</span></th></tr></thead>
+        <tbody>
+          <tr><td>Stirling</td><td>2 km</td></tr>
+          <tr><td>Cleland Wildlife Park</td><td>6 km</td></tr>
+          <tr><td>Hahndorf</td><td>12 km</td></tr>
+          <tr><td>Adelaide city centre</td><td>15 km</td></tr>
+          <tr><td>Adelaide Airport</td><td>22 km, about 30 minutes</td></tr>
+        </tbody>
+      </table>
+      <p class="small">Road distances on OpenStreetMap, rounded.</p>
+    </div>
+    <figure class="ph" style="margin:0">
+      <img src="img/atelier.jpg" srcset="img/atelier-700.jpg 700w, img/atelier.jpg 1400w" sizes="(max-width:880px) 100vw, 44vw" alt="Atelier Crafers at dusk: a stone pillar, timber beams, a wine barrel table and the lit gallery windows" width="1400" height="951" loading="lazy">
+      <figcaption class="cap-s">Atelier Crafers, next door.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="book wrap" id="book">
+  <div class="inner">
+    <div>
+      <h2 class="big">Check dates</h2>
+      <p class="lede">From A$300 a night for two adults, up to A$440 with two more.</p>
+      <div class="acts">
+        <a class="btn" href="https://airbnb.com/h/studio-one-crafers-adelaide-hills" rel="noopener" target="_blank">See dates on Airbnb</a>
+        <a class="btn line" href="tel:+61433442609">Call Ros, 0433 442 609</a>
+      </div>
+      <p class="note">Prices from the South Australia tourism listing. Airbnb shows the exact total for your dates.</p>
+    </div>
+    <div>
+      <img src="img/pergola.jpg" srcset="img/pergola-700.jpg 700w, img/pergola.jpg 1400w" sizes="(max-width:880px) 100vw, 44vw" alt="The courtyard table under the pergola, with the black-framed doors open into the house" width="1400" height="933" loading="lazy">
+      <dl class="facts">
+        <dt>Guests</dt><dd>Up to four.</dd>
+        <dt>Check in</dt><dd>From 2pm. Check out by 11am.</dd>
+        <dt>Please</dt><dd>No smoking and no pets.</dd>
+        <dt>Parking</dt><dd>Two cars, off the street.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="close" aria-label="Studio One from the street">
+  <img src="img/outside.jpg" srcset="img/outside-700.jpg 700w, img/outside.jpg 1400w" sizes="100vw" alt="Studio One from Cox Place: a grey gabled building with a stone pillar and a timber porch, under a blue sky" width="1400" height="933" loading="lazy">
+  <div class="panel">
+    <h2>1 Cox Place, Crafers.</h2>
+    <p>Two bedrooms for four, in one of the oldest towns in the Adelaide Hills.</p>
+    <div class="acts">
+      <a class="btn duck" href="#book">Check dates</a>
+      <a class="btn line" href="https://www.instagram.com/studio1crafers/" rel="noopener" target="_blank">@studio1crafers</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="inner">
+    <p>A preview made by Lampbound Studio for Studio One Crafers. Not affiliated, not live.</p>
+    <p>Photos, logo and floor plan are from Studio One's Airbnb listing and website.</p>
+  </div>
+</footer>
+
+<div class="phonebar" id="phonebar">
+  <a class="btn duck" href="#book">Check dates</a>
+  <a class="btn line" href="tel:+61433442609">Call Ros</a>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement, reduce=true;
+  function mode(){reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches || (window.innerHeight<520 && window.innerWidth>window.innerHeight);root.classList.toggle('still',reduce)}
+  mode();
+  var q=function(s){return document.querySelector(s)};
+  var bar=q('#phonebar'), enter=q('#enter'), walk=q('#plan');
+  var room=q('.l-room'), dl=q('.door.l'), dr=q('.door.r'), shaft=q('.shaft'), ca=q('.copy-a'), cb=q('.copy-b');
+  var ring=q('#ring'), shots=[].slice.call(document.querySelectorAll('.shot')), items=[].slice.call(document.querySelectorAll('#roomsList li'));
+  var plan=q('.plan');
+  var clamp=function(v){return v<0?0:v>1?1:v};
+  var seg=function(p,a,b){return clamp((p-a)/(b-a))};
+  var ease=function(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
+  function prog(el){var r=el.getBoundingClientRect();var st=el.firstElementChild;var span=el.offsetHeight-(st?st.offsetHeight:window.innerHeight);return span>0?clamp(-r.top/span):0}
+  var pts=shots.map(function(s){return [parseFloat(s.dataset.x),parseFloat(s.dataset.y)]});
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    var vh=window.innerHeight;
+    var bk=q('#book').getBoundingClientRect();
+    bar.classList.toggle('on', bar.contains(document.activeElement) || (enter.getBoundingClientRect().bottom<vh*.5 && (bk.top>vh*.9 || bk.bottom<0)));
+    if(reduce) return;
+    // Act 1: the courtyard doors part, the room settles, the skylight's light comes down
+    var p=prog(enter);
+    var d=ease(seg(p,.04,.5));
+    dl.style.transform='translate3d('+(-d*102).toFixed(2)+'%,0,0)';
+    dr.style.transform='translate3d('+(d*102).toFixed(2)+'%,0,0)';
+    room.style.transform='scale('+(1.16-ease(seg(p,0,.8))*.16).toFixed(4)+')';
+    ca.style.opacity=(1-seg(p,.08,.24)).toFixed(3);
+    ca.style.transform='translate3d(0,'+(-seg(p,.08,.24)*40).toFixed(1)+'px,0)';
+    var s=seg(p,.45,.75);
+    shaft.style.opacity=(s*(1-seg(p,.92,1))).toFixed(3);
+    shaft.style.transform='translate3d(0,'+((1-ease(s))*-18).toFixed(2)+'%,0)';
+    var b=seg(p,.62,.78);
+    cb.style.opacity=b.toFixed(3);
+    cb.style.transform='translate3d(0,'+((1-b)*24).toFixed(1)+'px,0)';
+    // Act 2: the ring walks the plan; each room's photo comes up as the ring arrives
+    var k=prog(walk), n=pts.length;
+    var f=clamp(k*1.08-.02)*(n-1);
+    var i=Math.min(n-2,Math.floor(f)), t=ease(clamp((f-i-.25)/.5));
+    var x=pts[i][0]+(pts[i+1][0]-pts[i][0])*t, y=pts[i][1]+(pts[i+1][1]-pts[i][1])*t;
+    var w=plan.offsetWidth, h=plan.offsetHeight;
+    ring.style.transform='translate3d('+(x*w).toFixed(1)+'px,'+(y*h).toFixed(1)+'px,0)';
+    var cur=Math.round(i+t);
+    shots.forEach(function(el,j){
+      var o = j===i ? 1-t : j===i+1 ? t : 0;
+      el.style.opacity=o.toFixed(3);
+    });
+    items.forEach(function(el,j){el.classList.toggle('on', j===cur)});
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',function(){mode();onScroll()});
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(mq.addEventListener) mq.addEventListener('change',function(){location.reload()});
+  frame();
+})();
+</script>
+</body>
+</html>
