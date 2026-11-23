@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en-AU" class="static">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<script>if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.remove('static')</script>
+<title>Nellie's Hideaway | On the golf course at Normanville, sleeps 10</title>
+<meta name="description" content="A four-bedroom home for up to ten guests on the Lady Bay Links course at Normanville, with a balcony for sunsets and kangaroos on the fairway. A website idea made by Lampbound Studio.">
+<meta property="og:title" content="Nellie's Hideaway, Normanville">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Nellie's Hideaway. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/nellieshideaway/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/nellieshideaway/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2315283a'/%3E%3Cpath d='M16 29 8.5 16.5A8.5 8.5 0 1 1 23.5 16.5Z' fill='%23f4c430'/%3E%3Ccircle cx='16' cy='12' r='3' fill='%2315283a'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/aerial-1440.jpg" media="(min-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/aerial-700.jpg" media="(max-width: 699px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Tokens from the house and the course (see brand.md):
+   navy    = the Hamptons navy of the bedding and the dusk sky
+   white   = the painted walls and cabinets
+   pin     = the yellow pin in their own aerial (accent)
+   fairway = the grass at the 4th
+   sky     = the clear sky over the balcony
+   Barlow Condensed for headings (club signs, scorecards), Source Sans 3 for reading. */
+:root{
+  --navy:#15283a;
+  --navy-2:#1f3850;
+  --white:#f6f8f8;
+  --white-2:#e4ebec;
+  --pin:#f4c430;
+  --pin-2:#f7d35e;
+  --fairway:#4d5a37;
+  --fairway-2:#3e4a2c;
+  --sky:#77c4e1;
+  --ink:#15283a;
+  --ink-soft:#4a5c6b;
+  --display:"Barlow Condensed","Arial Narrow",sans-serif;
+  --text:"Source Sans 3","Helvetica Neue",Arial,sans-serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.course :focus-visible,.strip :focus-visible,.top :focus-visible,.course-band :focus-visible,.close :focus-visible,.phonebar :focus-visible,footer :focus-visible{outline-color:var(--pin)}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:.98;margin:0;text-wrap:balance;letter-spacing:.005em}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--white);padding:8px 12px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.strip{background:var(--navy);color:var(--white);font-size:14px;text-align:center;margin:0;
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  padding:16px var(--gut-r) 0 var(--gut)}
+.word{display:flex;align-items:center;gap:8px;color:#fff;text-decoration:none;text-shadow:0 1px 10px rgba(10,22,34,.7)}
+.word svg{width:26px;height:34px;flex:none;filter:drop-shadow(0 1px 5px rgba(10,22,34,.5))}
+.word b{font-family:var(--display);font-weight:700;font-size:28px;line-height:1;text-transform:uppercase;letter-spacing:.02em} /* slop-ok: the wordmark, not an eyebrow */
+.top nav{display:flex;gap:22px;align-items:center;font-weight:600;font-size:16px}
+.top nav a{color:#fff;text-decoration:none;text-shadow:0 1px 8px rgba(10,22,34,.8)}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:3px;
+  font-family:var(--text);font-weight:600;font-size:17px;line-height:1.1;text-decoration:none;border:0;cursor:pointer;text-align:center;
+  background:var(--pin);color:var(--navy)}
+.btn:hover{background:var(--pin-2)}
+.btn.navy{background:var(--navy);color:#fff}
+.btn.navy:hover{background:var(--navy-2)}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.line:hover{background:rgba(255,255,255,.1)}
+.top nav .btn{text-shadow:none;color:var(--navy)}
+@media (max-width:820px){.top nav a:not(.btn){display:none}.top nav .btn{min-height:44px;padding:0 16px;font-size:16px}.word b{font-size:24px}}
+
+/* ---------- Act 1: from the pin to the fairway, and the kangaroos ---------- */
+.course{position:relative;height:430vh;background:var(--navy)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--navy)}
+.shot{position:absolute;inset:0;will-change:transform,opacity;opacity:0}
+.shot.k0{opacity:1}
+.shot img{width:100%;height:100%;object-fit:cover}
+.k0 img{object-position:44% 60%}
+.k1 img{object-position:50% 70%}
+.k2 img{object-position:50% 62%}
+@media (max-width:699px){.k0 img{object-position:44% 70%}.k1 img{object-position:40% 70%}}
+.scrim{position:absolute;inset:auto 0 0 0;height:70%;z-index:2;pointer-events:none;background:linear-gradient(to top, rgba(12,24,36,.86), rgba(12,24,36,0))}
+@media (min-width:700px){.scrim{height:100%;background:linear-gradient(to top, rgba(12,24,36,.82), rgba(12,24,36,0) 58%),linear-gradient(to right, rgba(12,24,36,.5), rgba(12,24,36,0) 55%)}}
+/* the mob: its own plane, nearest the viewer */
+.mob{position:absolute;z-index:4;left:0;right:0;bottom:clamp(14px,4vh,40px);height:clamp(84px,15vh,150px);pointer-events:none;opacity:0;will-change:opacity}
+.roo{position:absolute;bottom:0;left:0;height:100%;will-change:transform;color:var(--pin);filter:drop-shadow(0 2px 6px rgba(10,22,34,.55))}
+.roo svg{height:100%;width:auto;display:block;overflow:visible}
+.roo.r2{height:78%}
+.roo.r3{height:58%}
+.beat{position:absolute;z-index:5;left:var(--gut);bottom:clamp(170px,30vh,300px);max-width:min(640px, calc(100% - 40px));color:#fff;will-change:transform,opacity;opacity:0}
+.beat.b0{opacity:1}
+.beat .where{font-weight:600;font-size:16px;color:var(--pin)}
+.beat h1{font-size:clamp(46px,6.4vw,92px);margin-top:8px;text-transform:uppercase}
+.beat h2{font-size:clamp(40px,5.2vw,74px);text-transform:uppercase}
+.beat p.lede{font-size:clamp(17px,1.4vw,20px);margin-top:14px;max-width:30em;text-shadow:0 1px 10px rgba(10,22,34,.7)}
+.beat h1,.beat h2{text-shadow:0 2px 18px rgba(10,22,34,.5)}
+@media (max-width:699px){
+  .course{height:390vh}
+  .beat{left:var(--gut);right:var(--gut-r);max-width:none;bottom:clamp(120px,19vh,170px)}
+  .scrim{height:80%}
+}
+@media (max-height:600px){.beat p.lede{display:none}.beat .where{display:none}}
+@media (max-height:460px){.beat h1{font-size:36px}.beat h2{font-size:32px}.beat{bottom:100px}}
+
+/* ---------- Sections ---------- */
+.wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
+.inner{max-width:1200px;margin:0 auto}
+section{scroll-margin-top:10px}
+.lede{font-size:clamp(19px,1.6vw,21px);max-width:34em}
+.who{font-size:15px;font-weight:600;color:var(--ink-soft);margin-top:8px}
+.cap-s{font-size:15px;color:var(--ink-soft);margin-top:8px}
+h2.big{font-size:clamp(44px,5.6vw,80px);text-transform:uppercase}
+dl.facts{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:22px;row-gap:12px;font-size:17px;line-height:1.5}
+dl.facts dt{font-weight:600;font-size:16px;padding-top:1px;white-space:nowrap}
+dl.facts dd{margin:0;border-bottom:1px solid var(--white-2);padding-bottom:12px}
+
+/* The house: plan beside the facts */
+.house{padding-block:clamp(72px,9vw,130px) 0}
+.house .inner{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.house .lede{margin-top:18px;margin-bottom:28px}
+.plan{margin:0}
+.plan img{width:100%;max-width:440px;border:1px solid var(--white-2);background:#fff}
+@media (max-width:880px){.house .inner{grid-template-columns:minmax(0,1fr)}}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;
+  padding:clamp(36px,5vw,56px) var(--gut-r) clamp(64px,8vw,104px) var(--gut);margin:0}
+.rail figure{margin:0;flex:0 0 auto;width:clamp(270px,32vw,460px);scroll-snap-align:start}
+.rail img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px;background:var(--white-2)}
+.rail figcaption{font-size:15px;margin-top:8px;color:var(--ink-soft)}
+
+/* Bedrooms as a scorecard */
+.rooms{background:var(--white-2);padding-block:clamp(72px,9vw,120px)}
+.rooms .inner{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);align-items:start}
+.rooms .lede{margin-top:16px}
+table.card{width:100%;border-collapse:collapse;background:#fff;border:2px solid var(--navy);font-size:17px}
+table.card th,table.card td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--white-2);vertical-align:top}
+table.card thead th{background:var(--navy);color:#fff;font-family:var(--display);font-weight:600;font-size:18px;text-transform:uppercase;letter-spacing:.04em} /* slop-ok: scorecard column heads */
+table.card tbody th{font-family:var(--display);font-weight:700;font-size:22px;white-space:nowrap;width:7em}
+table.card td.n{text-align:right;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+table.card tfoot td,table.card tfoot th{background:var(--white);font-weight:600}
+.rooms .duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:28px}
+.rooms .duo figure{margin:0}
+.rooms .duo img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:2px}
+.rooms .duo figcaption{font-size:15px;margin-top:8px;color:var(--ink-soft)}
+@media (max-width:880px){.rooms .inner{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:420px){table.card tbody th{width:auto;font-size:20px}table.card th,table.card td{padding:12px 10px}}
+
+/* The course */
+.course-band{background:var(--fairway);color:#fff;padding-block:clamp(72px,9vw,120px)}
+.course-band .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(28px,5vw,64px);align-items:center}
+.course-band p{margin-top:16px;max-width:30em;color:#eef1e6}
+.course-band blockquote{margin:24px 0 0;padding:0}
+.course-band blockquote p{font-family:var(--display);font-weight:600;font-size:clamp(26px,2.4vw,34px);line-height:1.15;color:#fff}
+.course-band .who{color:#d8dfc9}
+.course-band .pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.course-band .pair figure{margin:0}
+.course-band .pair img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:2px}
+.course-band .pair figcaption{font-size:15px;margin-top:8px;color:#eef1e6}
+@media (max-width:880px){.course-band .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Guests */
+.guests{padding-block:clamp(72px,9vw,120px)}
+.score{margin-top:20px;display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
+.score b{font-family:var(--display);font-weight:700;font-size:clamp(84px,10vw,140px);line-height:.85;color:var(--navy);font-variant-numeric:tabular-nums}
+.score span{font-size:18px;max-width:18em}
+.quotes{list-style:none;margin:clamp(40px,5vw,60px) 0 0;padding:0;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:24px clamp(28px,5vw,64px)}
+.quotes li{border-top:3px solid var(--pin);padding-top:16px}
+.quotes li:first-child{grid-row:span 2}
+.quotes .q{font-size:clamp(19px,1.7vw,22px);line-height:1.45}
+.quotes li:first-child .q{font-family:var(--display);font-weight:600;font-size:clamp(32px,3.2vw,46px);line-height:1.1}
+@media (max-width:880px){.quotes{grid-template-columns:minmax(0,1fr)}.quotes li:first-child{grid-row:auto}}
+
+/* Around */
+.around{background:var(--white-2);padding-block:clamp(72px,9vw,130px)}
+.around .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+table.dist{width:100%;border-collapse:collapse;margin-top:24px;font-size:17px}
+table.dist th{text-align:left;font-size:15px;color:var(--ink-soft);font-weight:600;padding:0 0 8px}
+table.dist td{padding:12px 0;border-top:1px solid #c9d4d6;vertical-align:top}
+table.dist td:last-child{text-align:right;font-weight:600;white-space:nowrap;padding-left:16px;font-variant-numeric:tabular-nums}
+.small{font-size:15px;color:var(--ink-soft);margin-top:12px}
+.around figure{margin:0}
+.around figure img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
+@media (max-width:880px){.around .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Book */
+.book{padding-block:clamp(72px,9vw,130px)}
+.book .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,64px);align-items:start}
+.book .lede{margin-top:16px}
+.book .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.book .card2{background:var(--white-2);border-radius:2px;padding:clamp(22px,3vw,32px)}
+.book .card2 h3{font-size:28px;text-transform:uppercase;margin-bottom:16px}
+@media (max-width:880px){.book .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Close */
+.close{position:relative;color:#fff;background:var(--navy)}
+.close img{width:100%;height:min(86vh,760px);object-fit:cover;object-position:50% 55%}
+.close .panel{position:absolute;right:var(--gut-r);bottom:clamp(24px,6vh,60px);max-width:540px;background:rgba(21,40,58,.92);padding:clamp(22px,3vw,34px);border-radius:2px}
+.close h2{font-size:clamp(38px,4.4vw,60px);text-transform:uppercase}
+.close p{margin-top:10px}
+.close .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+@media (max-width:700px){.close img{height:56vh}.close .panel{position:relative;right:auto;bottom:auto;max-width:none;border-radius:0;background:var(--navy)}}
+footer{background:var(--navy);color:#b8c6d1;font-size:15px;padding-block:28px calc(28px + env(safe-area-inset-bottom,0px))}
+footer .inner{display:grid;gap:6px}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;
+  padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);
+  background:rgba(21,40,58,.97);transform:translateY(110%);visibility:hidden;transition:transform .25s ease-out,visibility 0s .25s}
+.phonebar.on{transform:none;visibility:visible;transition:transform .25s ease-out}
+.phonebar .btn{flex:1;min-height:50px}
+.phonebar .btn.line{color:var(--white)}
+@media (max-width:820px){.phonebar{display:flex}footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}}
+
+/* Static layout: reduced motion, or before the script runs */
+.static .course{height:auto}
+.static .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column}
+.static .shot{position:relative;inset:auto;opacity:1 !important;transform:none !important}
+.static .shot img{height:auto;aspect-ratio:3/2}
+.static .k2 img{aspect-ratio:4/5;max-height:80vh}
+.static .scrim{display:none}
+.static .beat{position:relative;left:auto;right:auto;bottom:auto;max-width:none;opacity:1 !important;transform:none !important;background:var(--navy);padding:26px var(--gut-r) 30px var(--gut)}
+.static .k0{order:1}.static .b0{order:2}.static .k1{order:3}.static .mob{order:4}.static .b1{order:5}.static .k2{order:6}.static .b2{order:7}
+.static .mob{position:relative;left:auto;right:auto;bottom:auto;opacity:1 !important;background:var(--fairway);height:110px;padding-top:20px}
+.static .roo{transform:none !important}
+.static .roo.r1{left:12%}.static .roo.r2{left:40%}.static .roo.r3{left:64%}
+.static .beat p.lede,.static .beat .where{display:block}
+@media (max-width:400px){dl.facts{grid-template-columns:minmax(0,1fr);row-gap:2px}dl.facts dd{margin-bottom:10px}}
+@media (min-width:701px) and (max-height:560px){.close img{height:60vh}.close .panel{position:relative;left:auto;right:auto;bottom:auto;max-width:none;border-radius:0}}
+@media (max-width:360px){.phonebar{flex-wrap:wrap}}
+@media (prefers-reduced-motion: reduce){.phonebar,.phonebar.on{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#book">Skip to booking</a>
+<p class="strip">A website idea made by Lampbound Studio for Nellie's Hideaway. Not their official site.</p>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="roo" viewBox="0 0 100 80"><path fill="currentColor" d="M4 74C18 70 34 63 44 56C45 42 55 31 66 30C72 30 76 26 78 20L80 11L83 18L86 10L88 20C92 22 96 25 95 28C91 30 87 29 85 31C83 35 81 39 77 41L84 46L82 49L75 45C73 51 71 57 73 62L88 70L88 74L66 73C58 71 52 67 48 63C36 69 20 74 4 76Z"/></symbol>
+</svg>
+
+<header class="top">
+  <a class="word" href="#course" aria-label="Nellie's Hideaway, back to top">
+    <svg viewBox="0 0 26 34" aria-hidden="true"><path d="M13 33 2.6 17.3A11 11 0 1 1 23.4 17.3Z" fill="#f4c430" stroke="#15283a" stroke-width="1.5"/><circle cx="13" cy="12" r="4" fill="#15283a"/></svg>
+    <b aria-hidden="true">Nellie's Hideaway</b>
+  </a>
+  <nav aria-label="Main">
+    <a href="#house">The house</a>
+    <a href="#golf">The course</a>
+    <a class="btn" href="#book">Check dates</a>
+  </nav>
+</header>
+
+<main>
+<section class="course" id="course" aria-label="From the house to the golf course at dusk">
+  <div class="stage">
+    <div class="shot k0"><img src="img/aerial-1440.jpg" srcset="img/aerial-700.jpg 700w, img/aerial-1440.jpg 1440w" sizes="100vw" alt="Their own aerial photo of Normanville: a yellow pin marks Nellie's Hideaway on Troon Drive, with the Lady Bay golf course behind it and Normanville Beach and the sea beyond" width="1440" height="1115" fetchpriority="high"></div>
+    <div class="shot k1"><img src="img/fairway-1440.jpg" srcset="img/fairway-700.jpg 700w, img/fairway-1440.jpg 1440w" sizes="100vw" alt="Open fairway near the house in the late afternoon, a bunker and a row of pines on the far side" width="1440" height="1080"></div>
+    <div class="shot k2"><img src="img/sunset-1440.jpg" srcset="img/sunset-700.jpg 700w, img/sunset-1440.jpg 1440w" sizes="100vw" alt="The sun setting over the course and the rooftops, seen from the balcony" width="1440" height="1920"></div>
+    <div class="scrim" aria-hidden="true"></div>
+    <div class="mob" aria-hidden="true">
+      <span class="roo r1"><svg viewBox="0 0 100 80"><use href="#roo"/></svg></span>
+      <span class="roo r2"><svg viewBox="0 0 100 80"><use href="#roo"/></svg></span>
+      <span class="roo r3"><svg viewBox="0 0 100 80"><use href="#roo"/></svg></span>
+    </div>
+    <div class="beat b0">
+      <p class="where">1/20 Troon Drive, Normanville</p>
+      <h1>On the 4th hole at Lady Bay.</h1>
+      <p class="lede">Four bedrooms for up to ten guests, a balcony over the course, and the sea beyond it.</p>
+    </div>
+    <div class="beat b1">
+      <h2>In the evening, the kangaroos come out.</h2>
+      <p class="lede">They visit every evening. Watch from the balcony with a glass of local shiraz.</p>
+    </div>
+    <div class="beat b2">
+      <h2>Then the sun goes down.</h2>
+      <p class="lede">The balcony catches the sunset. Take your morning coffee out there too.</p>
+    </div>
+  </div>
+</section>
+
+<section class="house" id="house">
+  <div class="wrap">
+    <div class="inner">
+      <div>
+        <h2 class="big">The house</h2>
+        <p class="lede">Two levels and two living areas, so a group can spread out. Upstairs, the kitchen, dining and living room open on to the balcony, next to the main bedroom and its ensuite. Downstairs are three more bedrooms, a family room, the bathroom and the laundry.</p>
+        <dl class="facts">
+          <dt>Sleeps 10</dt><dd>Four bedrooms and two full bathrooms.</dd>
+          <dt>Cook</dt><dd>A full kitchen with an espresso machine, and a BBQ outside.</dd>
+          <dt>Kids</dt><dd>A bunk room, a playroom, safety gates and a fully fenced backyard.</dd>
+          <dt>Unwind</dt><dd>A 65-inch TV with Netflix, Prime and Kayo, board games, and an outdoor shower.</dd>
+          <dt>Work</dt><dd>An office nook with an ocean view.</dd>
+          <dt>Stay</dt><dd>Two nights or more. Self check-in with a smart lock. No extra cleaning fee.</dd>
+        </dl>
+      </div>
+      <figure class="plan"><img src="img/layout-700.jpg" srcset="img/layout-700.jpg 700w, img/layout-1440.jpg 1440w" sizes="(max-width:880px) 100vw, 440px" alt="Their floor plan of 1/20 Troon Drive: the lower level with three bedrooms, family room and garage, and the upper level with a bedroom, the living area and the balcony" width="700" height="946" loading="lazy"><figcaption class="cap-s">Their own plan of the two levels.</figcaption></figure>
+    </div>
+  </div>
+  <div class="rail" tabindex="0" role="region" aria-label="Photos inside Nellie's Hideaway">
+    <figure><img src="img/living-1440.jpg" srcset="img/living-700.jpg 700w, img/living-1440.jpg 1440w" sizes="(max-width:880px) 80vw, 32vw" alt="The upstairs living room: two soft grey sofas facing a white Hamptons TV cabinet" width="1440" height="1080" loading="lazy"><figcaption>Upstairs living</figcaption></figure>
+    <figure><img src="img/kitchen-1440.jpg" srcset="img/kitchen-700.jpg 700w, img/kitchen-1440.jpg 1440w" sizes="(max-width:880px) 80vw, 32vw" alt="The white kitchen with a breakfast bar and stools, the dining table beside it set for six" width="1440" height="1080" loading="lazy"><figcaption>Kitchen and dining</figcaption></figure>
+    <figure><img src="img/table-1440.jpg" srcset="img/table-700.jpg 700w, img/table-1440.jpg 1440w" sizes="(max-width:880px) 80vw, 32vw" alt="The dining table set with navy and white placemats, light through the windows" width="1440" height="1080" loading="lazy"><figcaption>The table, set</figcaption></figure>
+    <figure><img src="img/games-1440.jpg" srcset="img/games-700.jpg 700w, img/games-1440.jpg 1440w" sizes="(max-width:880px) 80vw, 32vw" alt="A lounge with a sofa bed, a timber coffee table and shelves of games" width="1440" height="1080" loading="lazy"><figcaption>Room for games</figcaption></figure>
+    <figure><img src="img/office-1440.jpg" srcset="img/office-700.jpg 700w, img/office-1440.jpg 1440w" sizes="(max-width:880px) 80vw, 32vw" alt="A bedroom with an iron bedhead and a desk under the window, the sea in the distance" width="1440" height="1080" loading="lazy"><figcaption>The desk with a sea view</figcaption></figure>
+    <figure><img src="img/balcony-1440.jpg" srcset="img/balcony-700.jpg 700w, img/balcony-1440.jpg 1440w" sizes="(max-width:880px) 80vw, 32vw" alt="A bottle of wine on the balcony table under a clear blue sky, rooftops and the course beyond" width="1440" height="1080" loading="lazy"><figcaption>The balcony at midday</figcaption></figure>
+  </div>
+</section>
+
+<section class="rooms wrap" id="rooms">
+  <div class="inner">
+    <div>
+      <h2 class="big">Four bedrooms</h2>
+      <p class="lede">Three queens and a bunk room for the kids, plus a couch in the living room.</p>
+      <div class="duo">
+        <figure><img src="img/bunks-700.jpg" srcset="img/bunks-700.jpg 700w, img/bunks-1440.jpg 1440w" sizes="(max-width:880px) 46vw, 20vw" alt="Two sets of black bunk beds with blue and white coral-print covers" width="700" height="933" loading="lazy"><figcaption>The bunk room</figcaption></figure>
+        <figure><img src="img/bed-blue-700.jpg" srcset="img/bed-blue-700.jpg 700w, img/bed-blue-1440.jpg 1440w" sizes="(max-width:880px) 46vw, 20vw" alt="A queen bed made up in blue and white stripes under a beach print" width="700" height="933" loading="lazy"><figcaption>A queen room</figcaption></figure>
+      </div>
+    </div>
+    <table class="card">
+      <caption class="vh">Beds in each room</caption>
+      <thead><tr><th scope="col">Room</th><th scope="col">Beds</th><th scope="col" class="n">Sleeps</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Bedroom 1</th><td>Queen</td><td class="n">2</td></tr>
+        <tr><th scope="row">Bedroom 2</th><td>Queen</td><td class="n">2</td></tr>
+        <tr><th scope="row">Bedroom 3</th><td>Two sets of bunks</td><td class="n">4</td></tr>
+        <tr><th scope="row">Bedroom 4</th><td>Queen</td><td class="n">2</td></tr>
+      </tbody>
+      <tfoot><tr><th scope="row">Total</th><td>Plus a couch in the living room</td><td class="n">10</td></tr></tfoot>
+    </table>
+  </div>
+</section>
+
+<section class="course-band wrap" id="golf">
+  <div class="inner">
+    <div>
+      <h2 class="big">Across the road from the course</h2>
+      <p>The Links Lady Bay clubhouse and restaurant are a short walk away, so nobody has to drive to dinner. There's a tennis court five minutes' walk down the road.</p>
+      <blockquote>
+        <p>"For us Kiwis it was exciting to watch the many Kangaroos on the golf course."</p>
+        <p class="who">Kathryn, Airbnb, April 2026</p>
+      </blockquote>
+    </div>
+    <div class="pair">
+      <figure><img src="img/fairway-hill-700.jpg" srcset="img/fairway-hill-700.jpg 700w, img/fairway-hill-1440.jpg 1440w" sizes="(max-width:880px) 46vw, 24vw" alt="The fairway across from the house, rising to a dry grassy hill under a clear sky" width="700" height="933" loading="lazy"><figcaption>The hole across from the house</figcaption></figure>
+      <figure><img src="img/sunset-wine-700.jpg" srcset="img/sunset-wine-700.jpg 700w, img/sunset-wine-1440.jpg 1440w" sizes="(max-width:880px) 46vw, 24vw" alt="A glass of red on the balcony table as the sun sets over the rooftops" width="700" height="933" loading="lazy"><figcaption>The balcony at sunset</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="guests wrap" id="guests">
+  <div class="inner">
+    <h2 class="big">What guests say</h2>
+    <p class="score"><b>4.92</b><span>from 59 reviews on Airbnb</span></p>
+    <ul class="quotes">
+      <li><p class="q">"We really enjoyed sitting on the balcony taking in the beautiful view over a coffee or a wine."</p><p class="who">Gildi, Airbnb, October 2026</p></li>
+      <li><p class="q">"Walking distance to the Lady Bay restaurant meant no-one had to worry about driving to go out for a meal."</p><p class="who">Stephen, Airbnb, August 2026</p></li>
+      <li><p class="q">"The balcony is terrific with the views over the golf course and the beautiful surrounds."</p><p class="who">Clinton, Airbnb, June 2026</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="around wrap" id="around">
+  <div class="inner">
+    <div>
+      <h2 class="big">Getting here</h2>
+      <p class="lede" style="margin-top:16px">Normanville is on the western Fleurieu, about an hour and ten minutes' drive from Adelaide. The beach and the jetty are a few minutes away, and the Kangaroo Island ferry leaves from Cape Jervis.</p>
+      <table class="dist">
+        <thead><tr><th scope="col">From Nellie's Hideaway</th><th scope="col"><span class="vh">Distance</span></th></tr></thead>
+        <tbody>
+          <tr><td>Lady Bay clubhouse and restaurant</td><td>0.7 km</td></tr>
+          <tr><td>Normanville Jetty</td><td>4 km</td></tr>
+          <tr><td>Carrickalinga</td><td>6 km</td></tr>
+          <tr><td>Second Valley</td><td>16 km</td></tr>
+          <tr><td>Cape Jervis</td><td>31 km</td></tr>
+          <tr><td>Victor Harbor</td><td>37 km</td></tr>
+          <tr><td>Adelaide</td><td>78 km</td></tr>
+        </tbody>
+      </table>
+      <p class="small">Road distances on OpenStreetMap, rounded.</p>
+    </div>
+    <figure><img src="img/pier-700.jpg" srcset="img/pier-700.jpg 700w, img/pier-1440.jpg 1440w" sizes="(max-width:880px) 100vw, 44vw" alt="Swimmers off the end of Normanville jetty in calm water at dusk" width="700" height="933" loading="lazy"><figcaption class="cap-s">Normanville jetty.</figcaption></figure>
+  </div>
+</section>
+
+<section class="book wrap" id="book">
+  <div class="inner">
+    <div>
+      <h2 class="big">Check dates</h2>
+      <p class="lede">See open dates and prices on Airbnb, or send Dave a message on Instagram with your dates and group size.</p>
+      <div class="acts">
+        <a class="btn" href="https://www.airbnb.com.au/rooms/1167053323352151357" rel="noopener" target="_blank">See dates on Airbnb</a>
+        <a class="btn navy" href="https://ig.me/m/nellies_hideaway_normanville" rel="noopener" target="_blank">Message on Instagram</a>
+      </div>
+    </div>
+    <div class="card2">
+      <h3>Good to know</h3>
+      <dl class="facts">
+        <dt>Guests</dt><dd>Up to 10, in four bedrooms.</dd>
+        <dt>Minimum</dt><dd>Two nights.</dd>
+        <dt>Arrive</dt><dd>Self check-in with a smart lock.</dd>
+        <dt>Quiet</dt><dd>No large parties. The street has a noise rule.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="close" aria-label="Nellie's Hideaway from the air">
+  <img src="img/aerial2-1440.jpg" srcset="img/aerial2-700.jpg 700w, img/aerial2-1440.jpg 1440w" sizes="100vw" alt="Their aerial of the street and the golf course from above, the pin on the house and the hills behind" width="1440" height="1069" loading="lazy">
+  <div class="panel">
+    <h2>Find the yellow pin.</h2>
+    <p>1/20 Troon Drive, Normanville. Ten guests, the course across the road, and kangaroos at dusk.</p>
+    <div class="acts">
+      <a class="btn" href="#book">Check dates</a>
+      <a class="btn line" href="https://www.instagram.com/nellies_hideaway_normanville/" rel="noopener" target="_blank">Instagram</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="inner">
+    <p>A preview made by Lampbound Studio for Nellie's Hideaway. Not affiliated, not live.</p>
+    <p>Photos, the floor plan and the aerials are from Nellie's Hideaway's Airbnb listing. The kangaroos are drawn.</p>
+  </div>
+</footer>
+
+<div class="phonebar" id="phonebar">
+  <a class="btn" href="#book">Check dates</a>
+  <a class="btn line" href="https://ig.me/m/nellies_hideaway_normanville" rel="noopener" target="_blank">Message Dave</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var bar = document.getElementById('phonebar');
+  var course = document.getElementById('course');
+  var q = function(s){return document.querySelector(s)};
+  var shots=[q('.k0'),q('.k1'),q('.k2')];
+  var beats=[q('.b0'),q('.b1'),q('.b2')];
+  var mob=q('.mob'), roos=[q('.r1'),q('.r2'),q('.r3')];
+  var clamp=function(v){return v<0?0:v>1?1:v};
+  var seg=function(p,a,b){return clamp((p-a)/(b-a))};
+  var ease=function(t){return 1-Math.pow(1-t,2)};
+  function prog(el){var r=el.getBoundingClientRect();var st=el.firstElementChild;var span=el.offsetHeight-(st?st.offsetHeight:window.innerHeight);return span>0?clamp(-r.top/span):0}
+  // where each roo finishes, as a share of the stage width, and how far behind the leader it starts
+  var stopAt=[.62,.44,.28], lag=[0,.05,.1], hops=[9,10,12];
+  var cut=[0,.3,.7];
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    var vh=window.innerHeight, vw=window.innerWidth;
+    var bk=document.getElementById('book').getBoundingClientRect();
+    bar.classList.toggle('on', bar.contains(document.activeElement) || (course.getBoundingClientRect().bottom<vh*.5 && (bk.top>vh*.9 || bk.bottom<0)));
+    if(reduce) return;
+    var p=prog(course);
+    // the aerial starts close on their pin and pulls back to the course and the sea
+    var z=ease(seg(p,0,.26));
+    shots[0].style.transform='scale('+(2.1-z*1.1).toFixed(4)+')';
+    shots[0].style.transformOrigin='44% 70%';
+    for(var i=1;i<shots.length;i++){
+      var a=cut[i], b=i+1<cut.length?cut[i+1]:1.1;
+      shots[i].style.opacity=seg(p,a,a+.07).toFixed(3);
+      shots[i].style.transform='scale('+(1.08-clamp((p-a)/(b-a))*.08).toFixed(4)+')';
+    }
+    var o0=1-seg(p,.16,.23);
+    beats[0].style.opacity=o0.toFixed(3);
+    beats[0].style.transform='translate3d(0,'+(-(1-o0)*44).toFixed(1)+'px,0)';
+    var in1=seg(p,.34,.41), out1=seg(p,.64,.7), o1=in1*(1-out1);
+    beats[1].style.opacity=o1.toFixed(3);
+    beats[1].style.transform='translate3d(0,'+((1-in1)*30-out1*44).toFixed(1)+'px,0)';
+    var in2=seg(p,.78,.85);
+    beats[2].style.opacity=in2.toFixed(3);
+    beats[2].style.transform='translate3d(0,'+((1-in2)*30).toFixed(1)+'px,0)';
+    // the mob hops in from the left across the fairway and settles before sunset
+    mob.style.opacity=seg(p,.3,.36).toFixed(3);
+    for(var k=0;k<roos.length;k++){
+      var t=seg(p,.32+lag[k],.72+lag[k]*.5);
+      var x=(-0.2+(stopAt[k]+0.2)*t)*vw;
+      var hop=t<1?Math.abs(Math.sin(t*Math.PI*hops[k]))*(1-t*.3):0;
+      var h=roos[k].offsetHeight||80;
+      roos[k].style.transform='translate3d('+x.toFixed(1)+'px,'+(-hop*h*.35).toFixed(1)+'px,0)';
+    }
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(mq.addEventListener) mq.addEventListener('change',function(){location.reload()});
+  frame();
+})();
+</script>
+</body>
+</html>

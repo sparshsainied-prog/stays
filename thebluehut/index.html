@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en-AU" class="static">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<script>if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.remove('static')</script>
+<title>The Blue Hut | A dog-friendly beach house at Sellicks Beach</title>
+<meta name="description" content="Three bedrooms for six guests and their dog, a fenced yard, and Sellicks Beach a five-minute walk away. A website idea made by Lampbound Studio.">
+<meta property="og:title" content="The Blue Hut at Sellicks Beach">
+<meta property="og:description" content="A website idea made by Lampbound Studio for The Blue Hut. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/thebluehut/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/thebluehut/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b1a2e'/%3E%3Cpath d='M5 15 27 9v3L5 18z' fill='%23eef0ef'/%3E%3Crect x='9' y='18' width='14' height='9' fill='%23d39a52'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="img/aerial-1440.jpg" media="(min-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/aerial-700.jpg" media="(max-width: 699px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@125,800&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+/* Tokens from the hut (see brand.md):
+   navy  = the Colorbond fence round the yard
+   board = the pale weatherboards and verandah posts
+   lamp  = the woven pendant glowing in the window at dusk (accent)
+   wall  = bedroom 2's red feature wall (small use)
+   dusk  = the evening sea in their aerial
+   Anybody (wide) for headings, Atkinson Hyperlegible for reading. */
+:root{
+  --navy:#0b1a2e;
+  --navy-2:#142740;
+  --board:#eef0ef;
+  --board-2:#dde2e2;
+  --lamp:#d39a52;
+  --lamp-2:#e2b073;
+  --wall:#7a1d25;
+  --dusk:#a6a9a3;
+  --ink:#0b1a2e;
+  --ink-soft:#46556a;
+  --display:"Anybody","Arial Black",sans-serif;
+  --text:"Atkinson Hyperlegible","Helvetica Neue",Arial,sans-serif;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+  --gut-r:max(20px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--board);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--wall);outline-offset:3px}
+.eve :focus-visible,.strip :focus-visible,.top :focus-visible,.dog :focus-visible,.guests :focus-visible,.close :focus-visible,.phonebar :focus-visible,footer :focus-visible{outline-color:var(--lamp)}
+h1,h2,h3{font-family:var(--display);font-weight:800;font-stretch:125%;line-height:1.02;margin:0;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0;text-wrap:pretty}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:60;background:var(--board);padding:8px 12px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.strip{background:var(--navy);color:var(--board);font-size:14px;text-align:center;margin:0;
+  padding:8px var(--gut-r) 8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+.top{position:absolute;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  padding:16px var(--gut-r) 0 var(--gut)}
+.word{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;text-shadow:0 1px 10px rgba(6,14,26,.7)}
+.word svg{width:34px;height:34px;flex:none;filter:drop-shadow(0 1px 6px rgba(6,14,26,.5))}
+.word b{font-family:var(--display);font-weight:800;font-stretch:125%;font-size:21px;line-height:1;letter-spacing:-.02em}
+.top nav{display:flex;gap:22px;align-items:center;font-weight:700;font-size:15px}
+.top nav a{color:#fff;text-decoration:none;text-shadow:0 1px 8px rgba(6,14,26,.75)}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:4px;
+  font-family:var(--text);font-weight:700;font-size:16px;line-height:1.1;text-decoration:none;border:0;cursor:pointer;text-align:center;
+  background:var(--lamp);color:var(--navy)}
+.btn:hover{background:var(--lamp-2)}
+.btn.navy{background:var(--navy);color:#fff}
+.btn.navy:hover{background:var(--navy-2)}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.line:hover{background:rgba(255,255,255,.1)}
+.top nav .btn{text-shadow:none;color:var(--navy)}
+@media (max-width:820px){.top nav a:not(.btn){display:none}.top nav .btn{min-height:44px;padding:0 16px;font-size:15px}}
+
+/* ---------- Act 1: one evening at the hut ---------- */
+.eve{position:relative;height:440vh;background:var(--navy)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--navy)}
+.shot{position:absolute;inset:0;will-change:transform,opacity;opacity:0}
+.shot.k0{opacity:1}
+.shot img{width:100%;height:100%;object-fit:cover}
+.k0 img{object-position:30% 70%}
+.k1 img{object-position:40% 50%}
+.k2 img{object-position:55% 50%}
+.k3 img{object-position:30% 50%}
+.k4 img{object-position:55% 40%}
+@media (max-width:699px){.k0 img{object-position:18% 76%}.k2 img{object-position:62% 50%}.k3 img{object-position:22% 50%}.k4 img{object-position:66% 40%}}
+.scrim{position:absolute;inset:auto 0 0 0;height:70%;z-index:2;pointer-events:none;background:linear-gradient(to top, rgba(8,18,32,.88), rgba(8,18,32,0))}
+@media (min-width:700px){.scrim{height:100%;background:linear-gradient(to top, rgba(8,18,32,.85), rgba(8,18,32,0) 60%),linear-gradient(to right, rgba(8,18,32,.5), rgba(8,18,32,0) 55%)}}
+/* the horizon plane: the sun sinks into the gulf, then the lamps come on */
+.sky{position:absolute;z-index:3;left:0;right:0;bottom:0;height:clamp(120px,22vh,200px);pointer-events:none}
+.sun{position:absolute;right:16%;bottom:44%;width:clamp(56px,7vw,96px);aspect-ratio:1;border-radius:50%;background:var(--lamp);will-change:transform;opacity:0}
+.hills{position:absolute;inset:0;width:100%;height:100%}
+.beat{position:absolute;z-index:5;left:var(--gut);bottom:clamp(150px,26vh,250px);max-width:min(660px, calc(100% - 40px));color:#fff;will-change:transform,opacity;opacity:0}
+.beat.b0{opacity:1}
+.beat .where{font-weight:700;font-size:15px;color:var(--lamp)}
+.beat h1{font-size:clamp(36px,5.4vw,76px);margin-top:10px}
+.beat h2{font-size:clamp(30px,4.2vw,58px)}
+.beat p.lede{font-size:clamp(17px,1.4vw,20px);margin-top:14px;max-width:30em;text-shadow:0 1px 10px rgba(6,14,26,.7)}
+.beat h1,.beat h2{text-shadow:0 2px 18px rgba(6,14,26,.5)}
+.clock{position:absolute;z-index:6;right:var(--gut-r);bottom:clamp(18px,3.5vh,32px);color:var(--board);font-size:14px;font-weight:700;opacity:0;will-change:opacity}
+@media (max-width:699px){
+  .eve{height:400vh}
+  .beat{left:var(--gut);right:var(--gut-r);max-width:none;bottom:clamp(128px,20vh,170px)}
+  .scrim{height:80%}
+  .sun{right:12%}
+}
+@media (max-height:600px){.beat p.lede{display:none}.beat .where{display:none}}
+@media (max-height:460px){.beat h1{font-size:30px}.beat h2{font-size:26px}.beat{bottom:100px}}
+
+/* ---------- Sections ---------- */
+.wrap{padding-left:var(--gut);padding-right:var(--gut-r)}
+.inner{max-width:1200px;margin:0 auto}
+section{scroll-margin-top:10px}
+.lede{font-size:clamp(19px,1.6vw,21px);max-width:34em}
+.who{font-size:14px;font-weight:700;color:var(--ink-soft);margin-top:8px}
+.cap-s{font-size:15px;color:var(--ink-soft);margin-top:8px}
+dl.facts{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:22px;row-gap:12px;font-size:17px;line-height:1.5}
+dl.facts dt{font-weight:700;font-size:15px;padding-top:2px;white-space:nowrap}
+dl.facts dd{margin:0;border-bottom:1px solid var(--board-2);padding-bottom:12px}
+
+.house{padding-block:clamp(72px,9vw,130px) 0}
+.house .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.house h2,.rooms h2,.guests h2,.around h2,.book h2{font-size:clamp(34px,4.4vw,60px)}
+.house .lede{margin-top:18px}
+.house figure{margin:28px 0 0}
+.house figure img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:2px}
+@media (max-width:880px){.house .inner{grid-template-columns:minmax(0,1fr)}}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;
+  padding:clamp(36px,5vw,56px) var(--gut-r) clamp(64px,8vw,104px) var(--gut);margin:0}
+.rail figure{margin:0;flex:0 0 auto;width:clamp(270px,32vw,460px);scroll-snap-align:start}
+.rail img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:2px;background:var(--board-2)}
+.rail figcaption{font-size:15px;margin-top:8px;color:var(--ink-soft)}
+
+/* Bedrooms: three rooms, three photos */
+.rooms{background:var(--board-2);padding-block:clamp(72px,9vw,120px)}
+.rooms .lede{margin-top:16px}
+.beds{list-style:none;margin:clamp(32px,4vw,48px) 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) minmax(0,1fr);gap:18px}
+.beds img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px}
+.beds b{display:block;font-family:var(--display);font-weight:800;font-stretch:125%;font-size:20px;margin-top:12px}
+.beds span{font-size:16px;color:var(--ink-soft)}
+@media (max-width:880px){.beds{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.beds li:first-child{grid-column:1/-1}}
+@media (max-width:480px){.beds{grid-template-columns:minmax(0,1fr)}}
+
+/* The dog's holiday */
+.dog{background:var(--navy);color:var(--board);padding-block:clamp(72px,9vw,120px)}
+.dog .inner{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,64px);align-items:center}
+.dog h2{font-size:clamp(34px,4.4vw,60px)}
+.dog p{margin-top:16px;max-width:30em;color:#d4dae3}
+.dog blockquote{margin:24px 0 0;padding:0}
+.dog blockquote p{font-family:var(--display);font-weight:800;font-stretch:112%;font-size:clamp(20px,1.8vw,25px);line-height:1.3;color:#fff}
+.dog .who{color:#9fb0c4}
+.dog .pair{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:12px;align-items:end}
+.dog .pair figure{margin:0}
+.dog .pair img{width:100%;object-fit:cover;border-radius:2px}
+.dog .pair .tall img{aspect-ratio:4/5}
+.dog .pair .low img{aspect-ratio:1/1}
+.dog .pair figcaption{font-size:14px;margin-top:8px;color:#c3ccd8}
+@media (max-width:880px){.dog .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Guests */
+.guests{padding-block:clamp(72px,9vw,120px)}
+.score{margin-top:20px;display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
+.score b{font-family:var(--display);font-weight:800;font-stretch:125%;font-size:clamp(64px,8vw,112px);line-height:.9;color:var(--wall);font-variant-numeric:tabular-nums}
+.score span{font-size:18px;max-width:18em}
+.quotes{list-style:none;margin:clamp(40px,5vw,60px) 0 0;padding:0;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:24px clamp(28px,5vw,64px)}
+.quotes li{border-top:2px solid var(--navy);padding-top:16px}
+.quotes li:first-child{grid-row:span 2}
+.quotes .q{font-size:clamp(19px,1.7vw,22px);line-height:1.45}
+.quotes li:first-child .q{font-family:var(--display);font-weight:800;font-stretch:112%;font-size:clamp(24px,2.5vw,34px);line-height:1.2}
+@media (max-width:880px){.quotes{grid-template-columns:minmax(0,1fr)}.quotes li:first-child{grid-row:auto}}
+
+/* Around */
+.around{background:var(--board-2);padding-block:clamp(72px,9vw,130px)}
+.around .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+table.dist{width:100%;border-collapse:collapse;margin-top:24px;font-size:17px}
+table.dist th{text-align:left;font-size:14px;color:var(--ink-soft);font-weight:700;padding:0 0 8px}
+table.dist td{padding:12px 0;border-top:1px solid #c8d0d2;vertical-align:top}
+table.dist td:last-child{text-align:right;font-weight:700;white-space:nowrap;padding-left:16px;font-variant-numeric:tabular-nums}
+.small{font-size:14px;color:var(--ink-soft);margin-top:12px}
+.around figure{margin:0}
+.around figure img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
+@media (max-width:880px){.around .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Book */
+.book{padding-block:clamp(72px,9vw,130px)}
+.book .inner{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,64px);align-items:start}
+.book .lede{margin-top:16px}
+.book .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.book .card{border:2px solid var(--navy);border-radius:2px;padding:clamp(22px,3vw,32px)}
+.book .card h3{font-size:22px;margin-bottom:16px}
+@media (max-width:880px){.book .inner{grid-template-columns:minmax(0,1fr)}}
+
+/* Close */
+.close{position:relative;color:#fff;background:var(--navy)}
+.close img{width:100%;height:min(86vh,760px);object-fit:cover;object-position:50% 60%}
+.close .panel{position:absolute;left:var(--gut);bottom:clamp(24px,6vh,60px);max-width:540px;background:rgba(11,26,46,.92);padding:clamp(22px,3vw,34px);border-radius:2px}
+.close h2{font-size:clamp(28px,3.4vw,46px)}
+.close p{margin-top:10px}
+.close .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+@media (max-width:700px){.close img{height:52vh}.close .panel{position:relative;left:auto;bottom:auto;max-width:none;border-radius:0;background:var(--navy)}}
+footer{background:var(--navy);color:#b3bfcd;font-size:14px;padding-block:28px calc(28px + env(safe-area-inset-bottom,0px))}
+footer .inner{display:grid;gap:6px}
+
+.phonebar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;
+  padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut);
+  background:rgba(11,26,46,.97);transform:translateY(110%);visibility:hidden;transition:transform .25s ease-out,visibility 0s .25s}
+.phonebar.on{transform:none;visibility:visible;transition:transform .25s ease-out}
+.phonebar .btn{flex:1;min-height:50px}
+.phonebar .btn.line{color:var(--board)}
+@media (max-width:820px){.phonebar{display:flex}footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}}
+
+/* Static layout: reduced motion, or before the script runs */
+.static .eve{height:auto}
+.static .stage{position:relative;height:auto;overflow:visible;display:flex;flex-direction:column}
+.static .shot{position:relative;inset:auto;opacity:1 !important;transform:none !important}
+.static .shot img{height:auto;aspect-ratio:3/2}
+.static .scrim,.static .sky{display:none}
+.static .beat{position:relative;left:auto;right:auto;bottom:auto;max-width:none;opacity:1 !important;transform:none !important;background:var(--navy);padding:26px var(--gut-r) 30px var(--gut)}
+.static .k0{order:1}.static .b0{order:2}.static .k1{order:3}.static .k2{order:4}.static .b1{order:5}.static .k3{order:6}.static .k4{order:7}.static .b2{order:8}
+.static .clock{display:none}
+.static .beat p.lede,.static .beat .where{display:block}
+@media (max-width:400px){dl.facts{grid-template-columns:minmax(0,1fr);row-gap:2px}dl.facts dd{margin-bottom:10px}}
+@media (min-width:701px) and (max-height:560px){.close img{height:60vh}.close .panel{position:relative;left:auto;right:auto;bottom:auto;max-width:none;border-radius:0}}
+@media (max-width:360px){.phonebar{flex-wrap:wrap}}
+@media (prefers-reduced-motion: reduce){.phonebar,.phonebar.on{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#book">Skip to booking</a>
+<p class="strip">A website idea made by Lampbound Studio for The Blue Hut. Not their official site.</p>
+
+<header class="top">
+  <a class="word" href="#eve" aria-label="The Blue Hut, back to top">
+    <svg viewBox="0 0 34 34" aria-hidden="true"><path d="M3 15 31 8v4L3 19z" fill="#eef0ef"/><rect x="7" y="19" width="20" height="11" fill="#0b1a2e" stroke="#eef0ef" stroke-width="2"/><rect x="11" y="22" width="5" height="5" fill="#d39a52"/><rect x="19" y="22" width="5" height="5" fill="#d39a52"/></svg>
+    <b aria-hidden="true">the blue hut</b>
+  </a>
+  <nav aria-label="Main">
+    <a href="#house">The house</a>
+    <a href="#dog">Bring the dog</a>
+    <a class="btn" href="#book">Check dates</a>
+  </nav>
+</header>
+
+<main>
+<section class="eve" id="eve" aria-label="An evening at The Blue Hut">
+  <div class="stage">
+    <div class="shot k0"><img src="img/aerial-1440.jpg" srcset="img/aerial-700.jpg 700w, img/aerial-1440.jpg 1440w" sizes="100vw" alt="The Blue Hut from the air in the late afternoon: a white weatherboard house behind a navy fence on Sellicks Beach Road, the town and the sea beyond, the hills running down to the cliffs" width="1440" height="1079" fetchpriority="high"></div>
+    <div class="shot k1"><img src="img/verandah-1440.jpg" srcset="img/verandah-700.jpg 700w, img/verandah-1440.jpg 1440w" sizes="100vw" alt="The glassed-in front verandah at dusk, the evening sky reflected in its windows" width="1440" height="960"></div>
+    <div class="shot k2"><img src="img/deck-sunset-1440.jpg" srcset="img/deck-sunset-700.jpg 700w, img/deck-sunset-1440.jpg 1440w" sizes="100vw" alt="Rattan armchairs round a timber table on the deck, the low sun coming in under the roof" width="1440" height="946"></div>
+    <div class="shot k3"><img src="img/sunset-1440.jpg" srcset="img/sunset-700.jpg 700w, img/sunset-1440.jpg 1440w" sizes="100vw" alt="The sun going down beyond the navy fence and the road, the sky orange at the horizon" width="1440" height="960"></div>
+    <div class="shot k4"><img src="img/window-1440.jpg" srcset="img/window-700.jpg 700w, img/window-1440.jpg 1440w" sizes="100vw" alt="After dark: woven pendant lamps glowing in a window of the hut, cushions on the bed inside" width="1440" height="946"></div>
+    <div class="scrim" aria-hidden="true"></div>
+    <div class="sky" aria-hidden="true">
+      <div class="sun"></div>
+      <svg class="hills" viewBox="0 0 1440 200" preserveAspectRatio="none"><path d="M0 200V96C70 80 140 58 230 52C320 46 380 70 450 80C540 92 600 84 680 96C760 108 820 116 880 120L1440 120V200Z" fill="#0b1a2e"/><path d="M880 120H1440" stroke="#d39a52" stroke-width="1.5" vector-effect="non-scaling-stroke" opacity=".7"/></svg>
+    </div>
+    <div class="beat b0">
+      <p class="where">10 Sellicks Beach Road, Sellicks Beach</p>
+      <h1>A beach house for six, and the dog.</h1>
+      <p class="lede">Three bedrooms, a fenced yard, and Sellicks Beach about a five-minute walk away.</p>
+    </div>
+    <div class="beat b1">
+      <h2>Evenings are for the deck.</h2>
+      <p class="lede">Sit out on the deck and watch the sun go down over the gulf.</p>
+    </div>
+    <div class="beat b2">
+      <h2>Then the lamps come on.</h2>
+      <p class="lede">Central heating, couches to sink into, and electric blankets in winter.</p>
+    </div>
+    <p class="clock" aria-hidden="true">Sunset at Sellicks</p>
+  </div>
+</section>
+
+<section class="house" id="house">
+  <div class="wrap">
+    <div class="inner">
+      <div>
+        <h2>The house</h2>
+        <p class="lede">The Blue Hut sits on Sellicks Beach Road with a nature reserve round it and no direct neighbours. There's a deck front and back, ocean views, and room to park the car, the boat or the jet skis inside the gates.</p>
+        <figure><img src="img/living-1440.jpg" srcset="img/living-700.jpg 700w, img/living-1440.jpg 1440w" sizes="(max-width:880px) 100vw, 55vw" alt="The lounge under timber ceiling beams: a deep sofa with cushions and a throw, a teal ottoman and a round coffee table" width="1440" height="960" loading="lazy"><figcaption class="cap-s">The lounge, with a smart TV and board games.</figcaption></figure>
+      </div>
+      <dl class="facts">
+        <dt>Sleeps 6</dt><dd>Three bedrooms and two bathrooms. The main bedroom has a walk-in robe and an ensuite.</dd>
+        <dt>Cook</dt><dd>A full kitchen with a dishwasher, and a dining table that seats eight.</dd>
+        <dt>Warm or cool</dt><dd>Ducted reverse cycle air conditioning, and ceiling fans in the bedrooms and living areas.</dd>
+        <dt>Linen</dt><dd>Beds made up, towels, bath mats and robes. Electric blankets in winter.</dd>
+        <dt>Outside</dt><dd>A deck with a BBQ and outdoor dining, a back lawn and a nest swing.</dd>
+        <dt>Arrive</dt><dd>Self check-in with a smart lock. A welcome pack of locally sourced products is waiting.</dd>
+        <dt>Charge</dt><dd>A 3.5kW EV charger, on request.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="rail" tabindex="0" role="region" aria-label="Photos of The Blue Hut">
+    <figure><img src="img/kitchen-1440.jpg" srcset="img/kitchen-700.jpg 700w, img/kitchen-1440.jpg 1440w" sizes="(max-width:880px) 80vw, 32vw" alt="The kitchen: white cupboards, a red brick wall and shutters over the window" width="1440" height="960" loading="lazy"><figcaption>The kitchen</figcaption></figure>
+    <figure><img src="img/dining-1440.jpg" srcset="img/dining-700.jpg 700w, img/dining-1440.jpg 1440w" sizes="(max-width:880px) 80vw, 32vw" alt="A long timber dining table with a bench seat, afternoon light through the window" width="1440" height="960" loading="lazy"><figcaption>The table seats eight</figcaption></figure>
+    <figure><img src="img/lounge-1440.jpg" srcset="img/lounge-700.jpg 700w, img/lounge-1440.jpg 1440w" sizes="(max-width:880px) 80vw, 32vw" alt="The living room from the far end, sofas facing the windows and the TV" width="1440" height="960" loading="lazy"><figcaption>The living room</figcaption></figure>
+    <figure><img src="img/candles-1440.jpg" srcset="img/candles-700.jpg 700w, img/candles-1440.jpg 1440w" sizes="(max-width:880px) 80vw, 32vw" alt="Two candles lit on a round timber coffee table in the evening" width="1440" height="946" loading="lazy"><figcaption>Evenings in</figcaption></figure>
+    <figure><img src="img/backdeck-1440.jpg" srcset="img/backdeck-700.jpg 700w, img/backdeck-1440.jpg 1440w" sizes="(max-width:880px) 80vw, 32vw" alt="The covered back deck with a BBQ and an outdoor table, the garden beyond" width="1440" height="946" loading="lazy"><figcaption>The BBQ and outdoor table</figcaption></figure>
+    <figure><img src="img/bath-1440.jpg" srcset="img/bath-700.jpg 700w, img/bath-1440.jpg 1440w" sizes="(max-width:880px) 80vw, 32vw" alt="The main bathroom with a bath and shower and a timber vanity" width="1440" height="946" loading="lazy"><figcaption>The bathroom has a bath</figcaption></figure>
+  </div>
+</section>
+
+<section class="rooms wrap" id="rooms">
+  <div class="inner">
+    <h2>Three bedrooms</h2>
+    <p class="lede">A king and two queens, each with its own colour.</p>
+    <ul class="beds">
+      <li><img src="img/bed1-1440.jpg" srcset="img/bed1-700.jpg 700w, img/bed1-1440.jpg 1440w" sizes="(max-width:880px) 100vw, 40vw" alt="The main bedroom: a king bed against a dark wall under a woven pendant, a bright painting above" width="1440" height="960" loading="lazy"><b>Bedroom 1</b><span>King, with a walk-in robe and ensuite.</span></li>
+      <li><img src="img/bed2-700.jpg" srcset="img/bed2-700.jpg 700w, img/bed2-1440.jpg 1440w" sizes="(max-width:880px) 50vw, 28vw" alt="Bedroom 2: a queen bed with a rattan bedhead against a deep red wall" width="700" height="460" loading="lazy"><b>Bedroom 2</b><span>Queen.</span></li>
+      <li><img src="img/bed3-700.jpg" srcset="img/bed3-700.jpg 700w, img/bed3-1440.jpg 1440w" sizes="(max-width:880px) 50vw, 28vw" alt="Bedroom 3: a queen bed against a sage wall, sliding doors to the deck" width="700" height="467" loading="lazy"><b>Bedroom 3</b><span>Queen.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="dog wrap" id="dog">
+  <div class="inner">
+    <div>
+      <h2>Bring the dog.</h2>
+      <p>Your well-behaved dog is welcome inside. The yard is fenced front and back, and the reserve and the beach are right there for the morning walk.</p>
+      <blockquote>
+        <p>"The secure front and back yards were perfect for our two dogs, with plenty of space for them to enjoy."</p>
+        <p class="who">Madelyn, Airbnb, August 2026, on her second stay</p>
+      </blockquote>
+    </div>
+    <div class="pair">
+      <figure class="tall"><img src="img/front-700.jpg" srcset="img/front-700.jpg 700w, img/front-1440.jpg 1440w" sizes="(max-width:880px) 58vw, 34vw" alt="The front of the hut at dusk, steps up to the verandah and the navy fence and gate beside it" width="700" height="460" loading="lazy"><figcaption>The front verandah and gate</figcaption></figure>
+      <figure class="low"><img src="img/swing-700.jpg" srcset="img/swing-700.jpg 700w, img/swing-1440.jpg 1440w" sizes="(max-width:880px) 38vw, 22vw" alt="A round nest swing hanging over the back lawn at sunset" width="700" height="460" loading="lazy"><figcaption>The back lawn</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="guests wrap" id="guests">
+  <div class="inner">
+    <h2>What guests say</h2>
+    <p class="score"><b>4.98</b><span>from 41 reviews on Airbnb</span></p>
+    <ul class="quotes">
+      <li><p class="q">"It's only a couple of minutes walk to the beach, with a nature reserve right behind the house."</p><p class="who">Madelyn, Airbnb, August 2026</p></li>
+      <li><p class="q">"The local pub (great food) right at the end of the street and a niche little winery right there too."</p><p class="who">Jess, Airbnb, April 2026</p></li>
+      <li><p class="q">"Perfectly set up for a cozy winter stay with central heating, couches to nestle into and entertainment options."</p><p class="who">Claire, Airbnb, July 2026</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="around wrap" id="around">
+  <div class="inner">
+    <div>
+      <h2>Getting here</h2>
+      <p class="lede" style="margin-top:16px">Sellicks Beach is on the Fleurieu, under the hills where the cliffs meet the gulf. Willunga's Saturday farmers' market and the McLaren Vale cellar doors are a short drive.</p>
+      <table class="dist">
+        <thead><tr><th scope="col">From The Blue Hut</th><th scope="col"><span class="vh">Distance</span></th></tr></thead>
+        <tbody>
+          <tr><td>Sellicks Beach</td><td>5 min walk</td></tr>
+          <tr><td>Aldinga Beach</td><td>9 km</td></tr>
+          <tr><td>Port Willunga</td><td>11 km</td></tr>
+          <tr><td>Willunga</td><td>15 km</td></tr>
+          <tr><td>McLaren Vale</td><td>20 km</td></tr>
+          <tr><td>Adelaide</td><td>52 km</td></tr>
+        </tbody>
+      </table>
+      <p class="small">The walk is from their listing. Road distances on OpenStreetMap, rounded.</p>
+    </div>
+    <figure><img src="img/view-700.jpg" srcset="img/view-700.jpg 700w, img/view-1440.jpg 1440w" sizes="(max-width:880px) 100vw, 44vw" alt="Looking out past a pot plant to the coastal scrub, the road and the sea" width="700" height="594" loading="lazy"><figcaption class="cap-s">The view out to the scrub and the sea.</figcaption></figure>
+  </div>
+</section>
+
+<section class="book wrap" id="book">
+  <div class="inner">
+    <div>
+      <h2>Check dates</h2>
+      <p class="lede">See open dates and prices on Airbnb, or send John and Kirsty a message on Instagram with your dates, your group and your dog.</p>
+      <div class="acts">
+        <a class="btn" href="https://www.airbnb.com.au/rooms/1160547528259223209" rel="noopener" target="_blank">See dates on Airbnb</a>
+        <a class="btn navy" href="https://ig.me/m/thebluehutatsellicks" rel="noopener" target="_blank">Message on Instagram</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Good to know</h3>
+      <dl class="facts">
+        <dt>Guests</dt><dd>Up to 6, in three bedrooms.</dd>
+        <dt>Dogs</dt><dd>Well-behaved dogs welcome inside.</dd>
+        <dt>Arrive</dt><dd>Self check-in with a smart lock.</dd>
+        <dt>Park</dt><dd>Secure off-street parking, with room for a boat.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="close" aria-label="The Blue Hut at dusk">
+  <img src="img/deck-1440.jpg" srcset="img/deck-700.jpg 700w, img/deck-1440.jpg 1440w" sizes="100vw" alt="The deck at golden hour, festoon lights strung under the roof, chairs facing out over the yard" width="1440" height="946" loading="lazy">
+  <div class="panel">
+    <h2>Save a seat on the deck.</h2>
+    <p>10 Sellicks Beach Road, Sellicks Beach. Six guests, the dog, and the beach a short walk away.</p>
+    <div class="acts">
+      <a class="btn" href="#book">Check dates</a>
+      <a class="btn line" href="https://www.instagram.com/thebluehutatsellicks/" rel="noopener" target="_blank">@thebluehutatsellicks</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="inner">
+    <p>A preview made by Lampbound Studio for The Blue Hut. Not affiliated, not live.</p>
+    <p>Photos are from The Blue Hut's Airbnb listing.</p>
+  </div>
+</footer>
+
+<div class="phonebar" id="phonebar">
+  <a class="btn" href="#book">Check dates</a>
+  <a class="btn line" href="https://ig.me/m/thebluehutatsellicks" rel="noopener" target="_blank">Message us</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var bar = document.getElementById('phonebar');
+  var eve = document.getElementById('eve');
+  var q = function(s){return document.querySelector(s)};
+  var shots=[q('.k0'),q('.k1'),q('.k2'),q('.k3'),q('.k4')];
+  var beats=[q('.b0'),q('.b1'),q('.b2')];
+  var sun=q('.sun'), clock=q('.clock');
+  var clamp=function(v){return v<0?0:v>1?1:v};
+  var seg=function(p,a,b){return clamp((p-a)/(b-a))};
+  var ease=function(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
+  function prog(el){var r=el.getBoundingClientRect();var st=el.firstElementChild;var span=el.offsetHeight-(st?st.offsetHeight:window.innerHeight);return span>0?clamp(-r.top/span):0}
+  // when each shot fades in: aerial, verandah, deck, sunset, lamplit window
+  var cut=[0,.18,.38,.58,.8];
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    var vh=window.innerHeight;
+    var bk=document.getElementById('book').getBoundingClientRect();
+    bar.classList.toggle('on', bar.contains(document.activeElement) || (eve.getBoundingClientRect().bottom<vh*.5 && (bk.top>vh*.9 || bk.bottom<0)));
+    if(reduce) return;
+    var p=prog(eve);
+    for(var i=0;i<shots.length;i++){
+      var a=cut[i], b=i+1<cut.length?cut[i+1]:1.1;
+      var o=i===0?1:seg(p,a,a+.07);
+      shots[i].style.opacity=o.toFixed(3);
+      var local=clamp((p-a)/(b-a));
+      // the aerial pulls back from the hut; the rest drift in slowly
+      var s=i===0?1.32-local*.32:1.08-local*.08;
+      shots[i].style.transform='scale('+s.toFixed(4)+')';
+    }
+    shots[0].style.transformOrigin='22% 72%';
+    // copy plane
+    var o0=1-seg(p,.1,.17);
+    beats[0].style.opacity=o0.toFixed(3);
+    beats[0].style.transform='translate3d(0,'+(-(1-o0)*44).toFixed(1)+'px,0)';
+    var in1=seg(p,.3,.37), out1=seg(p,.6,.67), o1=in1*(1-out1);
+    beats[1].style.opacity=o1.toFixed(3);
+    beats[1].style.transform='translate3d(0,'+((1-in1)*30-out1*44).toFixed(1)+'px,0)';
+    var in2=seg(p,.84,.9);
+    beats[2].style.opacity=in2.toFixed(3);
+    beats[2].style.transform='translate3d(0,'+((1-in2)*30).toFixed(1)+'px,0)';
+    // the sun: rises into view over the gulf, then sinks behind the horizon line by the time the lamps come on
+    var sIn=seg(p,.12,.2);
+    var sk=seg(p,.24,.76), sink=sk*sk;
+    sun.style.opacity=(sIn*(1-seg(p,.76,.8))).toFixed(3);
+    sun.style.transform='translate3d(0,'+(sink*170).toFixed(1)+'%,0)';
+    clock.style.opacity=(seg(p,.32,.4)*(1-seg(p,.76,.82))).toFixed(3);
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(mq.addEventListener) mq.addEventListener('change',function(){location.reload()});
+  frame();
+})();
+</script>
+</body>
+</html>
