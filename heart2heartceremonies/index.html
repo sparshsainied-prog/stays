@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Heart2heart Ceremonies: a website preview</title>
+<meta name="description" content="A website idea for Heart2heart Ceremonies, Marlee Bruinsma, marriage celebrant in south east Queensland. A preview by Lampbound Studio, not her official site.">
+<meta property="og:title" content="Heart2heart Ceremonies">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Marlee Bruinsma. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/heart2heartceremonies/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/heart2heartceremonies/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f3e7e4'/%3E%3Cpath d='M16 26 C 4 17, 7 7, 16 12 C 25 7, 28 17, 16 26 Z' fill='none' stroke='%238c3a36' stroke-width='2.4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet"><!-- slop-ok: both faces are on her own recipe card -->
+<style>
+:root{
+  --blush:#f3e7e4; --char:#3a3434; --rose:#8c3a36; --rose-hi:#a2463f; --dusty:#c98b7e; --card:#fbf6f4; --mute:#6b5f5d;
+  --display:"Playfair Display", Georgia, serif; /* slop-ok: her brand face */
+  --text:"Montserrat", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--blush);color:var(--char);font:16.5px/1.65 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--char);color:#fff;padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.strip{background:var(--char);color:#ddd2cf;font-size:13.5px;line-height:1.4;padding:9px 16px;text-align:center}
+.strip strong{color:#fff}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.05;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;background:var(--rose);color:#fff;font:700 15.5px/1 var(--text);text-decoration:none;border:0;cursor:pointer}
+.btn:hover{background:var(--rose-hi)}
+
+/* hero */
+.hero{position:relative;height:150svh}
+.hero-in{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;align-content:center}
+.hearts{position:absolute;inset:0;transform:translate3d(0,calc(var(--p,0) * 18svh),0);opacity:.55}
+.hero-copy{position:relative;z-index:2;padding:0 20px;transform:translate3d(0,calc(var(--p,0) * -10svh),0)}
+.hero-copy .who{font-weight:700;color:var(--rose);margin:0 0 12px}
+.hero h1{font-size:clamp(44px,12vw,104px);max-width:11ch}
+.hero-copy .sub{max-width:32ch;margin-top:16px;font-size:17px}
+.polaroid{position:relative;z-index:3;margin:26px 20px 0 auto;width:min(68vw,380px);background:#fff;padding:10px 10px 34px;box-shadow:0 18px 36px rgba(58,52,52,.22);transform:translate3d(0,calc(var(--p,0) * -8svh),0) rotate(calc(4deg - var(--p,0) * 6deg))}
+.polaroid img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.polaroid span{position:absolute;left:12px;bottom:9px;font-size:13px;color:var(--mute)}
+@media (min-width:860px){.hero-in{grid-template-columns:1.2fr .8fr;align-items:center;max-width:1100px;margin:0 auto;padding:0 20px}.hero-copy{padding:0}.polaroid{margin:0}}
+
+/* intro */
+.intro{padding:80px 0}
+.intro-grid{display:grid;gap:30px}
+.intro h2{font-size:clamp(32px,7vw,54px)}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.facts div{background:var(--card);padding:16px;border-radius:12px}
+.facts b{display:block;font-family:var(--display);font-size:clamp(30px,7vw,44px);line-height:1;color:var(--rose)}
+.facts span{font-size:14px;color:var(--mute)}
+@media (min-width:860px){.intro-grid{grid-template-columns:1fr 1fr;gap:70px;align-items:center}}
+
+/* recipe */
+.recipe{position:relative;height:520svh;background:var(--card)}
+.recipe-in{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;align-content:center;gap:16px;padding:16px 16px 84px}
+.rcard{background:var(--blush);border-radius:14px;padding:20px 18px;box-shadow:0 10px 26px rgba(58,52,52,.12);max-width:520px;width:100%;justify-self:center}
+.rcard h2{font-size:clamp(28px,7.4vw,42px);text-align:center}
+.rcard .serves{text-align:center;font-weight:700;margin:6px 0 12px}
+.ing{list-style:none;margin:0;padding:0}
+.ing li{display:grid;grid-template-columns:26px 1fr;gap:12px;align-items:center;padding:5px 0;font-size:15.5px}
+.box{width:22px;height:22px;border:2px solid var(--char);border-radius:3px;position:relative}
+.box::after{content:"";position:absolute;left:5px;top:0;width:7px;height:13px;border:solid var(--rose);border-width:0 3px 3px 0;transform:rotate(45deg) scale(0);transition:transform .25s ease}
+.ing li.on .box::after{transform:rotate(45deg) scale(1)}
+.ing li.on .txt{color:var(--rose);font-weight:700}
+.note{position:relative;min-height:112px;max-width:520px;width:100%;justify-self:center}
+.n{position:absolute;inset:0;opacity:0;transform:translate3d(0,10px,0);transition:opacity .35s ease,transform .35s ease}
+.n.on{opacity:1;transform:none}
+.n p{font-family:var(--display);font-size:clamp(19px,4.8vw,26px);line-height:1.25;margin:0 0 6px}
+.n cite{font-style:normal;font-size:14px;color:var(--mute)}
+@media (min-width:860px){.recipe-in{grid-template-columns:1fr 1fr;align-items:center;max-width:1100px;margin:0 auto;gap:60px}.rcard{padding:30px 30px}.ing li{font-size:17px;padding:7px 0}.note{min-height:200px}}
+
+/* pricing */
+.price{padding:90px 0}
+.price h2{font-size:clamp(34px,7vw,56px);margin-bottom:10px}
+.price .lead{max-width:50ch;color:var(--mute)}
+.pk{display:grid;gap:18px;margin-top:34px}
+.pk article{background:var(--card);border-radius:16px;padding:26px 22px}
+.pk h3{font-size:30px}
+.pk .cost{font-family:var(--display);font-size:clamp(34px,8vw,48px);color:var(--rose);margin:8px 0 4px;font-variant-numeric:lining-nums}
+.pk .cost + p{color:var(--mute);font-size:14.5px}
+.pk ul{padding-left:1.1em;margin:14px 0 0}
+.pk li{margin-bottom:5px}
+.pk .main{border:2px solid var(--rose)}
+.extras{margin-top:24px;color:var(--mute)}
+@media (min-width:860px){.pk{grid-template-columns:1.3fr .7fr;align-items:start}}
+
+/* love + faq */
+.love{background:var(--char);color:#f5ecea;padding:90px 0}
+.love-grid{display:grid;gap:30px}
+.love h2{font-size:clamp(32px,7vw,52px)}
+.love blockquote{margin:0 0 26px}
+.love blockquote p{font-family:var(--display);font-size:clamp(22px,4.6vw,30px);line-height:1.2;margin:0 0 6px}
+.love cite{font-style:normal;color:#cdbdb9;font-size:14px}
+.love figure{margin:0}
+.love figure img{width:100%;border:8px solid #fff}
+.love figcaption{font-size:13px;color:#cdbdb9;margin-top:8px}
+@media (min-width:860px){.love-grid{grid-template-columns:1fr 1fr;gap:70px}}
+.faq{padding:80px 0 30px}
+.faq h2{font-size:clamp(30px,6vw,46px);margin-bottom:16px}
+.faq dl{margin:0;display:grid;gap:4px}
+.faq dt{font-weight:700;margin-top:16px}
+.faq dd{margin:4px 0 0;color:var(--mute);max-width:60ch}
+
+/* enquire */
+.enq{padding:60px 0 130px}
+.enq-grid{display:grid;gap:34px}
+.enq h2{font-size:clamp(36px,8vw,64px);margin-bottom:12px}
+form{display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:700;font-size:15px}
+input,textarea{font:400 17px/1.4 var(--text);padding:12px 14px;border:1.5px solid #b9a5a1;border-radius:10px;background:#fff;color:var(--char);min-height:48px;width:100%}
+textarea{min-height:120px}
+.two{display:grid;gap:16px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.small{font-size:14px;color:var(--mute)}
+.done{display:none;padding:16px;border:2px solid var(--rose);border-radius:10px;background:#fff}
+.done.show{display:block}
+@media (min-width:860px){.enq-grid{grid-template-columns:.8fr 1.2fr;gap:70px}}
+footer{background:var(--char);color:#cdbdb9;padding:40px 0 110px;font-size:14.5px}
+footer strong{color:#fff}
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px}
+.bar .btn{flex:1;box-shadow:0 6px 18px rgba(58,52,52,.3)}
+.bar .btn.call{flex:0 0 auto;background:var(--char)}
+@media (min-width:860px){.bar{left:auto;right:24px;bottom:24px}.bar .btn{flex:none}}
+
+@media (prefers-reduced-motion:reduce){
+  .hero{height:auto;padding:60px 0}.hero-in{position:relative;height:auto}
+  .hearts,.hero-copy,.polaroid{transform:none!important}
+  .recipe{height:auto}.recipe-in{position:relative;height:auto;padding:60px 16px}
+  .box::after{transform:rotate(45deg) scale(1);transition:none}
+  .note{min-height:0}.n{position:static;opacity:1;transform:none;margin-bottom:18px;transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip">A website idea made by <strong>Lampbound Studio</strong> for Marlee Bruinsma. Not her official site.</div>
+<main id="main">
+
+<section class="hero" data-pin aria-label="Introduction">
+  <div class="hero-in">
+    <svg class="hearts" aria-hidden="true" viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice"><g fill="none" stroke="#c98b7e" stroke-width="2" stroke-linecap="round"><path d="M60 120 c-18-14-10-34 6-26 c16-8 24 12 6 26 l-6 6z"/><path d="M330 220 c-24-18-14-44 8-34 c22-10 32 16 8 34 l-8 8z"/><path d="M90 560 c-14-11-8-27 5-21 c13-6 19 10 5 21 l-5 5z"/><path d="M300 690 c-20-15-12-37 7-28 c19-9 27 13 7 28 l-7 7z"/><path d="M210 40 c-10-8-6-19 3-15 c9-4 13 7 3 15 l-3 3z"/></g></svg>
+    <div class="hero-copy">
+      <p class="who">Heart2heart Ceremonies, Marlee Bruinsma</p>
+      <h1>Your story. Your vibe. Your ceremony.</h1>
+      <p class="sub">Marriage celebrant on the Gold Coast, Scenic Rim, Brisbane, Tamborine Mountain, Logan and northern NSW.</p>
+    </div>
+    <figure class="polaroid"><img src="img/water.jpg" width="900" height="598" alt="Marlee leading a ceremony by the water under a white canopy, the couple facing her" fetchpriority="high"><span>By the water</span></figure>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="wrap intro-grid">
+    <div>
+      <h2>Real, joyful and completely you</h2>
+      <p style="margin-top:18px">Marlee writes ceremonies that are relaxed, meaningful and "never, ever monotone". She gives you tips for feeling confident in the spotlight, works with your other vendors so the day flows, and keeps the whole thing calm.</p>
+      <p>Some families bring her back again and again. For one couple she named five children as their family grew, from 2007 to 2018.</p>
+      <p>All couples are welcome. In her words, "love is love".</p>
+    </div>
+    <div class="facts">
+      <div><b>2004</b><span>celebrant since</span></div>
+      <div><b>1000+</b><span>ceremonies, per her directory profile</span></div>
+      <div><b>100km</b><span>travel included in every package</span></div>
+      <div><b>24 hrs</b><span>usually all she needs to lodge your paperwork</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="recipe" data-pin data-recipe aria-labelledby="recipe-h">
+  <div class="recipe-in">
+    <div class="rcard">
+      <h2 id="recipe-h">Recipe for a Wedding Ceremony</h2>
+      <p class="serves">Serves: two people in love</p>
+      <ul class="ing">
+        <li class="on"><span class="box"></span><span class="txt">the two of you, your witnesses and your celebrant</span></li>
+        <li><span class="box"></span><span class="txt">fun, laughter and a relaxed vibe</span></li>
+        <li><span class="box"></span><span class="txt">a few happy tears</span></li>
+        <li><span class="box"></span><span class="txt">a whole lotta love</span></li>
+        <li><span class="box"></span><span class="txt">your story, told your way</span></li>
+        <li><span class="box"></span><span class="txt">promises (vows)</span></li>
+        <li><span class="box"></span><span class="txt">the legal bits</span></li>
+        <li><span class="box"></span><span class="txt">a happily ever after moment</span></li>
+      </ul>
+    </div>
+    <div class="note" aria-live="off">
+      <div class="n on"><p>You will need two witnesses. An elopement can include a few guests too.</p><cite>From Marlee's elopement notes</cite></div>
+      <div class="n"><p>"So many people commented on how refreshing it was to have a ceremony all about us."</p><cite>Catherine and Trevor</cite></div>
+      <div class="n"><p>"...there wasn't a dry eye as we exchanged our wedding vows."</p><cite>Tiarnie and Joel</cite></div>
+      <div class="n"><p>"It was truly you that made the difference."</p><cite>Rochelle and Melinda</cite></div>
+      <div class="n"><p>"The draft ceremony was perfect from the first attempt..."</p><cite>Martha and Andrew</cite></div>
+      <div class="n"><p>"Thank you for all your assistance in crafting our wedding vows."</p><cite>Karen and Casey</cite></div>
+      <div class="n"><p>Marlee prepares and lodges all the paperwork, and registers your marriage afterwards.</p><cite>Included in every package</cite></div>
+      <div class="n"><p>"Family still say it was the nicest ceremony they'd ever been to."</p><cite>Jamie and Lindsay</cite></div>
+    </div>
+  </div>
+</section>
+
+<section class="price" aria-labelledby="price-h">
+  <div class="wrap">
+    <h2 id="price-h">Packages</h2>
+    <p class="lead">Prices depend on location and what's included. A booking fee secures your date and comes off the balance.</p>
+    <div class="pk">
+      <article class="main">
+        <h3>Full ceremony</h3>
+        <p class="cost">$750 to $1,200</p>
+        <p>Your ceremony, written with you</p>
+        <ul>
+          <li>Personalised ceremony planning and a questionnaire about the two of you</li>
+          <li>An online folder of ceremony ideas and vow templates</li>
+          <li>Meetings in person, on Zoom, or both</li>
+          <li>All legal paperwork prepared and lodged</li>
+          <li>A professional PA system so every guest hears</li>
+          <li>Travel up to 100km, and registering your marriage afterwards</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Elopement</h3>
+        <p class="cost">$500 to $650</p>
+        <p>No fuss, somewhere that matters to you</p>
+        <ul>
+          <li>Your own personal vows</li>
+          <li>All basic legal elements</li>
+          <li>A signing table and chairs</li>
+          <li>Coordination with your photographer</li>
+        </ul>
+      </article>
+    </div>
+    <p class="extras">Optional extras: a rehearsal, applying for your certified marriage certificate, a signing table and chairs, and help with changing your name.</p>
+  </div>
+</section>
+
+<section class="love" aria-labelledby="love-h">
+  <div class="wrap love-grid">
+    <div>
+      <h2 id="love-h" style="margin-bottom:26px">A touch of magic</h2>
+      <p style="color:#e6d8d5">Handfasting, crystals, candles, a theme (viking, boho, glam, rustic, garden party), or a touch of tradition like jumping the broom or a wine ceremony. Marlee loves rituals.</p>
+      <blockquote><p>"Many guests had never seen a handfasting before and were impressed by the beauty and simplicity."</p><cite>Robert and Megan</cite></blockquote>
+      <blockquote><p>"...we chose her again for our son's naming ceremony."</p><cite>Amanda</cite></blockquote>
+    </div>
+    <figure><img src="img/toowoomba.jpg" width="668" height="425" alt="A wedding party gathered on a lawn under trees" loading="lazy"><figcaption>One of Marlee's weddings</figcaption></figure>
+  </div>
+</section>
+
+<section class="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <h2 id="faq-h">Quick answers</h2>
+    <dl>
+      <dt>How far ahead should we book?</dt><dd>Most couples book 12 to 18 months ahead, especially for spring and Saturdays. If your date is sooner, still ask.</dd>
+      <dt>What is a Notice of Intended Marriage?</dt><dd>The legal form you lodge at least one month before your wedding. Marlee guides you through it.</dd>
+      <dt>How long is a ceremony?</dt><dd>Most run 20 to 30 minutes, depending on readings, rituals and personal touches.</dd>
+      <dt>Do we need to meet first?</dt><dd>Not at all. You can book straight away, or have an obligation free chat in person or on Zoom.</dd>
+    </dl>
+  </div>
+</section>
+
+<section class="enq" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap enq-grid">
+    <div>
+      <h2 id="enq-h">Check your date with Marlee</h2>
+      <p>Send your date and place and she will come back to you.</p>
+      <p><a href="tel:0437713575">0437 713 575</a></p>
+      <p class="small">This is a preview, so the form does not send anything.</p>
+    </div>
+    <form id="enq-form" novalidate>
+      <div class="two">
+        <label>Your names<input name="names" autocomplete="name"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <div class="two">
+        <label>Date<input name="date" type="date"></label>
+        <label>Where<input name="where"></label>
+      </div>
+      <label>Your vibe, in a few words<textarea name="msg"></textarea></label>
+      <button class="btn" type="submit">Send to Marlee</button>
+      <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Marlee. To reach her today, call <a href="tel:0437713575">0437 713 575</a>.</div>
+    </form>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">
+  <p><strong>A preview made by Lampbound Studio for Marlee Bruinsma.</strong> Not affiliated, not live.</p>
+  <p>Words, prices, the recipe and photos are from heart2heartceremonies.com.au. Ceremony count and the five naming days are from her Celebrants Network profile.</p>
+</div></footer>
+<div class="bar"><a class="btn call" href="tel:0437713575">Call</a><a class="btn" href="#enquire">Check your date</a></div>
+<script>
+(function(){
+  var pins=[].slice.call(document.querySelectorAll('[data-pin]'));
+  var ing=[].slice.call(document.querySelectorAll('.ing li')),notes=[].slice.call(document.querySelectorAll('.n'));
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches,t=false;
+  function update(){t=false;pins.forEach(function(el){var r=el.getBoundingClientRect(),tot=el.offsetHeight-innerHeight;var p=tot>0?Math.min(1,Math.max(0,-r.top/tot)):1;el.style.setProperty('--p',p.toFixed(4));
+    if(el.hasAttribute('data-recipe')){var k=Math.min(ing.length-1,Math.floor(p*ing.length*0.999));ing.forEach(function(li,i){li.classList.toggle('on',i<=k)});notes.forEach(function(n,i){n.classList.toggle('on',i===k)})}
+  });}
+  if(reduce){pins.forEach(function(el){el.style.setProperty('--p','1')});ing.forEach(function(li){li.classList.add('on')});}
+  else{addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(update)}},{passive:true});addEventListener('resize',update);update();}
+  document.getElementById('enq-form').addEventListener('submit',function(e){e.preventDefault();var d=document.getElementById('done');d.classList.add('show');d.focus();});
+})();
+</script>
+</body>
+</html>

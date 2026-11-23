@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Ceremonies with Tanya: a website preview</title>
+<meta name="description" content="A website idea for Ceremonies with Tanya, marriage celebrant on the NSW South Coast. A preview by Lampbound Studio, not her official site.">
+<meta property="og:title" content="Ceremonies with Tanya">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Ceremonies with Tanya. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/ceremonieswithtanya/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/ceremonieswithtanya/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%237a1b2a'/%3E%3Ctext x='16' y='24' font-family='Arial' font-weight='700' font-size='20' fill='%23e7efee' text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Mulish:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sea:#13262a; --foam:#e7efee; --red:#7a1b2a; --red-hi:#93253a; --teal:#2f7f86; --brass:#d9b26a; --mute:#4a5b5e; --white:#fbfdfd;
+  --display:"Big Shoulders Display", "Arial Narrow", sans-serif; --text:"Mulish", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--foam);color:var(--sea);font:17px/1.6 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--sea);color:var(--white);padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.strip{background:var(--sea);color:#c9d6d7;font-size:13.5px;line-height:1.4;padding:9px 16px;text-align:center}
+.strip strong{color:var(--white)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:.95;margin:0;text-transform:none;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:4px;background:var(--red);color:var(--white);font:800 16px/1 var(--text);text-decoration:none;border:0;cursor:pointer}
+.btn:hover{background:var(--red-hi)}
+.btn.line{background:transparent;color:var(--sea);border:2px solid var(--sea)}
+
+/* curtain hero */
+.stage{position:relative;height:210svh;background:#0c1416}
+.stage-in{position:sticky;top:0;height:100svh;overflow:hidden}
+.scene{position:absolute;inset:0;transform:scale(calc(1.14 - var(--p,0) * .14))}
+.scene img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.scene::after{content:"";position:absolute;left:0;right:0;bottom:0;height:45%;background:linear-gradient(to top,rgba(10,20,22,.85),rgba(10,20,22,0))}
+.curtain{position:absolute;top:0;bottom:0;width:51%;z-index:3;
+  background:
+    repeating-linear-gradient(90deg,rgba(0,0,0,.28) 0 6px,rgba(255,255,255,.05) 14px,rgba(0,0,0,.18) 26px,rgba(0,0,0,.34) 34px),
+    linear-gradient(180deg,#8e2234,#5e1220);
+  box-shadow:inset 0 -40px 60px rgba(0,0,0,.35)}
+.curtain.l{left:0;transform:translate3d(calc(var(--p,0) * -100%),0,0)}
+.curtain.r{right:0;transform:translate3d(calc(var(--p,0) * 100%),0,0)}
+.valance{position:absolute;left:0;right:0;top:0;height:13svh;z-index:4;background:
+    repeating-linear-gradient(90deg,rgba(0,0,0,.25) 0 10px,rgba(255,255,255,.06) 22px,rgba(0,0,0,.25) 40px),#6b1625;
+  transform:translate3d(0,calc(var(--p,0) * -70%),0)}
+.valance::after{content:"";position:absolute;left:0;right:0;bottom:-14px;height:14px;background:radial-gradient(circle at 50% 0,#6b1625 10px,transparent 11px) 0 0/28px 14px repeat-x}
+.bill{position:absolute;z-index:5;left:50%;top:50%;width:min(88vw,560px);transform:translate3d(-50%,calc(-50% - var(--p,0) * 60svh),0);opacity:calc(1 - var(--p,0) * 1.6);
+  background:var(--foam);color:var(--sea);padding:26px 24px 22px;text-align:center;border:3px double var(--sea);box-shadow:0 18px 40px rgba(0,0,0,.4)}
+.bill .small{font:800 13px/1.3 var(--text);color:var(--red);margin:0 0 6px}
+.bill h1{font-size:clamp(46px,13vw,92px)}
+.bill p.where{margin:10px 0 0;font-weight:600}
+.reveal{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:0 20px 96px;color:var(--white);opacity:calc((var(--p,0) - .55) * 2.4);transform:translate3d(0,calc((1 - var(--p,0)) * 40px),0)}
+.reveal .wrap{padding:0}
+.reveal h2{font-size:clamp(40px,10vw,84px);max-width:12ch}
+.reveal p{max-width:34ch;font-size:18px;margin-top:12px}
+
+/* story */
+.story{padding:84px 0 70px}
+.story-grid{display:grid;gap:34px}
+.story blockquote{margin:0;font-family:var(--display);font-weight:600;font-size:clamp(32px,7vw,56px);line-height:1.02}
+.story blockquote span{color:var(--red)}
+.story cite{display:block;font:600 15px var(--text);color:var(--mute);margin-top:14px;font-style:normal}
+.story figure{margin:0}
+.story figure img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 25%}
+@media (min-width:860px){.story-grid{grid-template-columns:1.15fr .85fr;align-items:center;gap:64px}}
+
+/* anywhere */
+.any{background:var(--sea);color:var(--white);padding:84px 0}
+.any h2{font-size:clamp(38px,8vw,72px);margin-bottom:28px}
+.places{display:flex;flex-wrap:wrap;gap:10px 12px;margin:0 0 34px;padding:0;list-style:none}
+.places li{font-family:var(--display);font-weight:600;font-size:clamp(26px,6vw,42px);line-height:1;padding:10px 16px;border:1.5px solid #3e5a5f;border-radius:999px}
+.any .clock{font-size:19px;max-width:46ch;color:#cfdcdd}
+.any .clock em{color:var(--brass);font-style:normal;font-weight:800}
+
+/* programme */
+.prog{padding:84px 0}
+.prog-grid{display:grid;gap:40px}
+.playbill{background:var(--white);border:3px double var(--sea);padding:28px 22px}
+.playbill h2{font-size:clamp(36px,8vw,58px);text-align:center}
+.playbill .sub{text-align:center;color:var(--mute);margin:6px 0 22px}
+.acts{list-style:none;margin:0;padding:0}
+.acts li{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:baseline;padding:11px 0;border-top:1px dashed #a9b9ba}
+.acts b{font-family:var(--display);font-weight:800;font-size:25px}
+.acts span{font-size:14px;color:var(--mute);text-align:right}
+.acts li.must span{color:var(--red);font-weight:800}
+.rituals{margin-top:18px;font-size:15px;color:var(--mute);text-align:center}
+.provide h2{font-size:clamp(34px,7vw,52px);margin-bottom:18px}
+.provide ul{padding:0;margin:0;list-style:none}
+.provide li{padding:10px 0 10px 28px;position:relative;border-bottom:1px solid #c8d6d6}
+.provide li::before{content:"";position:absolute;left:4px;top:19px;width:10px;height:10px;border-radius:50%;background:var(--teal)}
+@media (min-width:860px){.prog-grid{grid-template-columns:1fr 1fr;gap:64px;align-items:start}}
+
+/* other + booking */
+.other{padding:0 0 84px}
+.other-grid{display:grid;gap:14px}
+.other article{background:var(--white);padding:22px;border-radius:4px}
+.other h3{font-size:32px;margin-bottom:8px;color:var(--red)}
+.other p{margin:0;font-size:16px}
+@media (min-width:760px){.other-grid{grid-template-columns:1.4fr 1fr 1fr}}
+.book{background:var(--white);padding:84px 0 120px;border-top:1px solid #c8d6d6}
+.book-grid{display:grid;gap:36px}
+.book h2{font-size:clamp(40px,9vw,72px);margin-bottom:14px}
+.book .steps{padding-left:1.1em;margin:18px 0}
+.book .steps li{margin-bottom:8px}
+.contact-line{font-weight:800}
+form{display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:800;font-size:15px}
+input,textarea{font:400 17px/1.4 var(--text);padding:12px 14px;border:1.5px solid #8fa3a5;border-radius:4px;background:#fff;color:var(--sea);min-height:48px;width:100%}
+textarea{min-height:120px}
+.two{display:grid;gap:16px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.note{font-size:14px;color:var(--mute)}
+.done{display:none;padding:16px;border:2px solid var(--red);border-radius:4px;background:#f7ecee}
+.done.show{display:block}
+@media (min-width:860px){.book-grid{grid-template-columns:.9fr 1.1fr;gap:64px}}
+
+footer{background:var(--sea);color:#b9c8c9;padding:40px 0 110px;font-size:14.5px}
+footer strong{color:var(--white)}
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px}
+.bar .btn{flex:1;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.bar .btn.call{flex:0 0 auto;background:var(--sea)}
+@media (min-width:860px){.bar{left:auto;right:24px;bottom:24px}.bar .btn{flex:none}}
+
+@media (prefers-reduced-motion:reduce){
+  .stage{height:auto}.stage-in{position:relative}
+  .curtain,.valance,.bill{display:none}
+  .scene{transform:none}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip">A website idea made by <strong>Lampbound Studio</strong> for Ceremonies with Tanya. Not her official site.</div>
+<main id="main">
+
+<section class="stage" data-pin aria-label="Introduction">
+  <div class="stage-in">
+    <div class="scene"><img src="img/beach.jpg" width="1600" height="1068" alt="Tanya leading a beach ceremony under a timber arbour with flowers, the couple facing each other by the sea" fetchpriority="high"></div>
+    <div class="curtain l" aria-hidden="true"></div>
+    <div class="curtain r" aria-hidden="true"></div>
+    <div class="valance" aria-hidden="true"></div>
+    <div class="bill">
+      <p class="small">Celebrant on the NSW South Coast</p>
+      <h1>Ceremonies with Tanya</h1>
+      <p class="where">Marriage celebrant, Jervis Bay NSW</p>
+    </div>
+    <div class="reveal"><div class="wrap">
+      <h2>The show must go on</h2>
+      <p>Weddings on the beach, on a boat, on a headland or in a garden, from big days to small elopements.</p>
+    </div></div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap story-grid">
+    <div>
+      <blockquote>"I grew up on stage, dancing, acting and singing <span>(although some would say, poorly).</span>"</blockquote>
+      <cite>Tanya</cite>
+      <p style="margin-top:28px">After all those performances, Tanya says she is still as nervous as you are on the big day. She became a celebrant after watching a close friend of the couple marry them, and loved how personal it felt.</p>
+      <p>She wants to hear how you met, when you got engaged and how you picture the day. Then you can use her words, write your own, or mix the two. She has plenty of sample ceremonies and poems to start from.</p>
+    </div>
+    <figure><img src="img/tanya.jpg" width="1067" height="1600" alt="Tanya laughing into a microphone during a ceremony on a rocky headland, in black and white" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="any" aria-labelledby="any-h">
+  <div class="wrap">
+    <h2 id="any-h">Where would you like it?</h2>
+    <ul class="places">
+      <li>A beach</li><li>A boat</li><li>A headland</li><li>A floral garden</li><li>Your favourite park</li>
+    </ul>
+    <p class="clock">And when: sunrise, sunset, or anywhere in between. In Tanya's words, <em>"the strike of midnight if you fancy."</em> She travels the beaches of the South Coast and up to the Mid North Coast.</p>
+  </div>
+</section>
+
+<section class="prog" aria-labelledby="prog-h">
+  <div class="wrap prog-grid">
+    <div class="playbill">
+      <h2 id="prog-h">Your ceremony</h2>
+      <p class="sub">About 20 to 30 minutes, longer or shorter if you prefer</p>
+      <ol class="acts">
+        <li class="must"><b>The Monitum</b><span>must be included</span></li>
+        <li class="must"><b>Your vows</b><span>must be included, no need to memorise</span></li>
+        <li><b>Readings or poems</b><span>up to two</span></li>
+        <li><b>The giving away</b><span>optional</span></li>
+        <li><b>The asking</b><span>"I do" or "I will"</span></li>
+        <li><b>The ring exchange</b><span>two rings, one or none</span></li>
+        <li><b>Declaration and kiss</b><span>you're married</span></li>
+      </ol>
+      <p class="rituals">Add a ritual if you like: sand ceremony, ring warming, hand fasting, butterfly or dove release.</p>
+    </div>
+    <div class="provide">
+      <h2>What Tanya brings</h2>
+      <ul>
+        <li>All the legal paperwork, then registration with Births Deaths and Marriages</li>
+        <li>A personalised ceremony, designed with you</li>
+        <li>A PA system so every guest hears every word, and plays your music</li>
+        <li>A portable signing table and chair with a white cloth</li>
+        <li>A commemorative marriage certificate</li>
+        <li>Two witnesses, if you are eloping</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="other" aria-label="Other ceremonies">
+  <div class="wrap other-grid">
+    <article><h3>Renewal of vows</h3><p>Rewrite your vows and make new promises, with the children who came along since the first "I do" there to see it.</p></article>
+    <article><h3>Commitment ceremonies</h3><p>Vows, rings, readings and music, without gender or religious bias.</p></article>
+    <article><h3>Naming days</h3><p>Welcome a child, name guardians or mentors, and take home a naming certificate.</p></article>
+  </div>
+</section>
+
+<section class="book" id="enquire" aria-labelledby="book-h">
+  <div class="wrap book-grid">
+    <div>
+      <h2 id="book-h">Book a chat with Tanya</h2>
+      <p>The first chat is obligation free. If you book:</p>
+      <ol class="steps">
+        <li>You complete the Notice of Intended Marriage at least one month and one day before the wedding, and up to 18 months ahead.</li>
+        <li>A booking fee holds your date.</li>
+        <li>The balance is due 7 days before the wedding.</li>
+      </ol>
+      <p class="contact-line"><a href="tel:0412689773">0412 689 773</a><br><a href="mailto:celebrant.tanya.emes@gmail.com">celebrant.tanya.emes@gmail.com</a></p>
+      <p class="note">This is a preview, so the form below does not send anything.</p>
+    </div>
+    <form id="enq-form" novalidate>
+      <div class="two">
+        <label>Your names<input name="names" autocomplete="name"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <div class="two">
+        <label>Date, if you have one<input name="date" type="date"></label>
+        <label>Where (beach, boat, garden...)<input name="where"></label>
+      </div>
+      <label>How did you meet?<textarea name="msg"></textarea></label>
+      <button class="btn" type="submit">Send to Tanya</button>
+      <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Tanya. To reach her today, call <a href="tel:0412689773">0412 689 773</a> or email <a href="mailto:celebrant.tanya.emes@gmail.com">celebrant.tanya.emes@gmail.com</a>.</div>
+    </form>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">
+  <p><strong>A preview made by Lampbound Studio for Ceremonies with Tanya.</strong> Not affiliated, not live.</p>
+  <p>Words are from Tanya's website and her Shoalhaven tourism listing. Photos are from that listing.</p>
+</div></footer>
+<div class="bar"><a class="btn call" href="tel:0412689773">Call</a><a class="btn" href="#enquire">Check your date</a></div>
+<script>
+(function(){
+  var pins=[].slice.call(document.querySelectorAll('[data-pin]'));
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches, t=false;
+  function update(){t=false;pins.forEach(function(el){var r=el.getBoundingClientRect(),tot=el.offsetHeight-innerHeight;var p=tot>0?Math.min(1,Math.max(0,-r.top/tot)):1;el.style.setProperty('--p',p.toFixed(4));});}
+  if(reduce){pins.forEach(function(el){el.style.setProperty('--p','1')})}
+  else{addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(update)}},{passive:true});addEventListener('resize',update);update();}
+  document.getElementById('enq-form').addEventListener('submit',function(e){e.preventDefault();var d=document.getElementById('done');d.classList.add('show');d.focus();});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Maria McCarthy Celebrant: a website preview</title>
+<meta name="description" content="A website idea for Maria McCarthy, marriage celebrant in Melbourne and interstate. A preview by Lampbound Studio, not her official site.">
+<meta property="og:title" content="Maria McCarthy Celebrant">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Maria McCarthy. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/mariamccarthy/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/mariamccarthy/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23191716'/%3E%3Ctext x='16' y='23' font-family='Georgia' font-size='20' fill='%23c4863a' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#191716; --paper:#ecebe7; --amber:#c4863a; --amber-deep:#8f5a1c; --smoke:#5c5751; --line:#cfccc5; --white:#f7f6f3;
+  --display:"Gloock", Georgia, serif; --text:"Karla", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--white);padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.strip{background:var(--ink);color:#d9d5cd;font-size:13.5px;line-height:1.4;padding:9px 16px;text-align:center}
+.strip strong{color:var(--white);font-weight:700}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+
+/* hero */
+.hero{position:relative;height:150svh;background:var(--ink);color:var(--white)}
+.hero-stage{position:sticky;top:0;height:100svh;overflow:hidden;display:grid}
+.hero-photo{position:absolute;inset:0 0 0 auto;width:100%;transform:translate3d(0,calc(var(--p,0) * -6%),0) scale(calc(1.06 - var(--p,0) * .06));transform-origin:50% 30%}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;opacity:.72}
+.hero-shade{position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(to top,rgba(25,23,22,.94) 30%,rgba(25,23,22,0))}
+.hero-copy{position:relative;align-self:end;padding:0 20px 104px;transform:translate3d(0,calc(var(--p,0) * -28vh),0)}
+.hero-copy .kicker{font-size:15px;color:#e3c597;margin:0 0 14px}
+.hero h1{font-size:clamp(52px,14vw,132px);letter-spacing:-.01em}
+.hero h1 span{display:block}
+.hero-rule{width:0;height:2px;background:var(--amber);margin:22px 0 18px;width:72px;transform:scaleX(calc(1 + var(--p,0) * 3));transform-origin:left}
+.hero-copy p.lede{max-width:30ch;font-size:18px;color:#e9e6e0}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:3px;background:var(--amber);color:var(--ink);font-weight:700;text-decoration:none;border:0;font:700 16px/1 var(--text);cursor:pointer}
+.btn:hover{background:#d39648}
+.btn.ghost{background:transparent;border:1.5px solid currentColor;color:inherit}
+@media (min-width:860px){
+  .hero-photo{width:54%;right:0}
+  .hero-photo img{opacity:1}
+  .hero-shade{display:none}
+  .hero-copy{max-width:1120px;width:100%;margin:0 auto;padding:0 20px 14vh}
+}
+
+/* why */
+.why{padding:88px 0 72px}
+.why-grid{display:grid;gap:36px}
+.why h2{font-size:clamp(34px,7vw,58px);max-width:16ch}
+.why .big{font-size:20px;max-width:36ch}
+.why figure{margin:0}
+.why figcaption{font-size:14px;color:var(--smoke);margin-top:8px}
+@media (min-width:860px){.why-grid{grid-template-columns:1.3fr .7fr;align-items:end}}
+
+/* signing */
+.sign{position:relative;height:520svh;background:var(--white)}
+.sign-stage{position:sticky;top:0;height:100svh;display:grid;grid-template-rows:auto 1fr;overflow:hidden}
+.sign-head{padding:22px 20px 10px}
+.sign-head h2{font-size:clamp(28px,6vw,44px)}
+.sign-body{display:grid;grid-template-rows:minmax(0,1fr) auto;gap:10px;padding:0 20px 92px;min-height:0}
+.sign-photo{position:relative;min-height:0;overflow:hidden;border-radius:2px}
+.sign-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.ink{position:relative;height:56px;overflow:hidden}
+.ink-outer{position:absolute;inset:0;overflow:hidden;transform:translate3d(calc((var(--p,0) - 1) * 100%),0,0)}
+.ink-inner{position:absolute;inset:0;transform:translate3d(calc((1 - var(--p,0)) * 100%),0,0)}
+.ink svg{width:100%;height:56px}
+.steps{position:relative;min-height:190px}
+.step{position:absolute;inset:0;opacity:0;transform:translate3d(0,14px,0);transition:opacity .35s ease,transform .35s ease}
+.step.on{opacity:1;transform:none}
+.step .n{font-family:var(--display);font-size:20px;color:var(--amber-deep)}
+.step h3{font-size:26px;margin:2px 0 8px}
+.step p{font-size:16px;max-width:42ch;margin:0}
+@media (min-width:860px){
+  .sign-head{max-width:1120px;width:100%;margin:0 auto;padding:40px 20px 16px}
+  .sign-body{max-width:1120px;width:100%;margin:0 auto;grid-template-columns:1fr 1fr;grid-template-rows:1fr auto;column-gap:56px;padding-bottom:48px}
+  .sign-photo{grid-row:1 / span 2}
+  .steps{align-self:center;min-height:240px}
+  .ink{grid-column:2}
+  .step h3{font-size:34px}
+  .step p{font-size:18px}
+}
+
+/* included */
+.inc{padding:88px 0;background:var(--ink);color:var(--white)}
+.inc-grid{display:grid;gap:40px}
+.inc h2{font-size:clamp(34px,7vw,56px)}
+.inc ul{list-style:none;padding:0;margin:0}
+.inc .main li{font-family:var(--display);font-size:clamp(24px,5vw,34px);line-height:1.2;padding:14px 0;border-top:1px solid #3a3633}
+.inc .other{color:#cbc6bd}
+.inc .other h3{font-family:var(--text);font-weight:700;font-size:15px;color:#e3c597;margin-bottom:10px}
+.inc .other li{padding:4px 0}
+.inc .note{color:#a9a39a;font-size:15px;margin-top:24px}
+@media (min-width:860px){.inc-grid{grid-template-columns:1.4fr .6fr}}
+
+/* words */
+.words{padding:96px 0 40px}
+.words h2{font-size:clamp(32px,6vw,50px);margin-bottom:40px}
+.quote{margin:0 0 44px;max-width:44ch}
+.quote p{font-family:var(--display);font-size:clamp(22px,4.4vw,30px);line-height:1.3;margin-bottom:10px}
+.quote cite{font-style:normal;font-size:15px;color:var(--smoke)}
+.quote:nth-of-type(2){margin-left:auto}
+.quote:nth-of-type(3){margin-left:12%}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:24px 0 96px}
+.gallery img{width:100%;height:100%;object-fit:cover}
+.gallery .wide{grid-column:1 / -1}
+@media (min-width:860px){.gallery{grid-template-columns:2fr 1fr 1fr}.gallery .wide{grid-column:auto}}
+
+/* enquire */
+.enq{background:var(--white);padding:88px 0 120px;border-top:1px solid var(--line)}
+.enq-grid{display:grid;gap:36px}
+.enq h2{font-size:clamp(34px,7vw,56px);margin-bottom:14px}
+form{display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:700;font-size:15px}
+input,textarea{font:400 17px/1.4 var(--text);padding:12px 14px;border:1.5px solid #b9b5ad;border-radius:3px;background:#fff;color:var(--ink);min-height:48px;width:100%}
+textarea{min-height:120px;resize:vertical}
+.two{display:grid;gap:16px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.preview-note{font-size:14px;color:var(--smoke);margin:0}
+.done{display:none;padding:16px;border:1.5px solid var(--amber);border-radius:3px;background:#fbf3e8}
+.done.show{display:block}
+@media (min-width:860px){.enq-grid{grid-template-columns:.8fr 1.2fr}}
+
+footer{background:var(--ink);color:#bdb8af;padding:40px 0 110px;font-size:14.5px}
+footer strong{color:var(--white)}
+
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px;transform:translate3d(0,0,0)}
+.bar .btn{flex:1;box-shadow:0 6px 18px rgba(0,0,0,.28)}
+@media (min-width:860px){.bar{left:auto;right:24px;bottom:24px}.bar .btn{flex:none}}
+
+@media (prefers-reduced-motion:reduce){
+  .hero{height:auto}.hero-stage{position:relative;height:100svh}
+  .hero-photo,.hero-copy,.hero-rule{transform:none!important}
+  .sign{height:auto}.sign-stage{position:relative;height:auto}
+  .sign-photo{height:60svh}
+  .ink-outer,.ink-inner{transform:none!important}
+  .steps{min-height:0}.step{position:static;opacity:1;transform:none;margin-bottom:22px;transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip">A website idea made by <strong>Lampbound Studio</strong> for Maria McCarthy. Not her official site.</div>
+
+<main id="main">
+<section class="hero" data-pin aria-label="Introduction">
+  <div class="hero-stage">
+    <div class="hero-photo"><img src="img/bride.jpg" width="800" height="1200" alt="A bride laughing with her bouquet, in black and white" fetchpriority="high"></div>
+    <div class="hero-shade"></div>
+    <div class="hero-copy">
+      <p class="kicker">Marriage celebrant. Melbourne, Greater Melbourne and interstate.</p>
+      <h1><span>Maria</span><span>McCarthy</span></h1>
+      <div class="hero-rule"></div>
+      <p class="lede">Personal ceremonies, planned with you from the first chat to the signing.</p>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap why-grid">
+    <div>
+      <h2>Her parents: nearly 80 years married</h2>
+      <p class="big" style="margin-top:24px">"I am from a large family where my parents have been married for nearly 80 years." That commitment, through good times and bad, is why Maria became a celebrant.</p>
+      <p>She married late herself, after twelve years with her partner, and planning that wedding is what led her to train. She brings that life experience, as a single person and as a married woman, to every couple she works with.</p>
+      <p>Before celebrancy, Maria ran her own architectural lighting company and worked in film and television production.</p>
+    </div>
+    <figure>
+      <img src="img/maria.jpg" width="580" height="800" alt="Maria McCarthy, smiling, in black and white" loading="lazy">
+      <figcaption>Maria McCarthy</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sign" data-pin data-steps="5" aria-labelledby="sign-h">
+  <div class="sign-stage">
+    <div class="sign-head"><h2 id="sign-h">From your first message to the signing</h2></div>
+    <div class="sign-body">
+      <div class="sign-photo"><img src="img/signing.jpg" width="800" height="1200" alt="A couple's hands signing the marriage certificate on a marble table" loading="lazy"></div>
+      <div class="steps">
+        <div class="step on"><div class="n">1</div><h3>First contact</h3><p>We talk through what you need to marry in Australia: paperwork, supporting documents, your venue, your date and my availability. Then we set a day to meet.</p></div>
+        <div class="step"><div class="n">2</div><h3>First meet up</h3><p>We get to know each other and see if we are a fit. This happens one to 18 months before the wedding. If you are happy to go ahead, we complete your Notice of Intended Marriage together.</p></div>
+        <div class="step"><div class="n">3</div><h3>Next steps</h3><p>A deposit secures the work on your ceremony. We stay in touch while we shape the service: vows, rituals and readings, with samples to choose from.</p></div>
+        <div class="step"><div class="n">4</div><h3>Closer to the day</h3><p>The last forms are done as close to the wedding as possible. It is also a good time for a rehearsal, if you want one.</p></div>
+        <div class="step"><div class="n">5</div><h3>The wedding day</h3><p>Maria usually arrives about an hour early, meets your speakers and checks everything is on plan. Afterwards she posts your paperwork and Certificate of Marriage to Births, Deaths and Marriages.</p></div>
+      </div>
+      <div class="ink" aria-hidden="true"><div class="ink-outer"><div class="ink-inner">
+        <svg viewBox="0 0 600 56" preserveAspectRatio="none"><path d="M4 40 C 40 8, 70 8, 82 34 S 120 50, 140 22 S 180 6, 196 36 S 240 46, 262 20 C 280 4, 300 44, 330 30 S 380 10, 410 32 S 470 48, 500 26 C 520 14, 560 18, 596 30" fill="none" stroke="#c4863a" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="inc" aria-labelledby="inc-h">
+  <div class="wrap inc-grid">
+    <div class="main">
+      <h2 id="inc-h" style="margin-bottom:28px">Every wedding includes</h2>
+      <ul>
+        <li>A ceremony written for the two of you</li>
+        <li>Sample vows, rituals and readings to choose from</li>
+        <li>All the legal paperwork, lodged for you</li>
+        <li>A bound copy of your ceremony to keep</li>
+      </ul>
+    </div>
+    <div class="other">
+      <h3>Maria also leads</h3>
+      <ul>
+        <li>Commitment ceremonies</li>
+        <li>Renewal of wedding vows</li>
+        <li>Post elopement ceremonies</li>
+        <li>Naming days</li>
+        <li>Milestone celebrations</li>
+        <li>Funerals and memorials</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="words" aria-labelledby="words-h">
+  <div class="wrap">
+    <h2 id="words-h">What couples wrote to her</h2>
+    <blockquote class="quote"><p>"She listened carefully to our ideas, asked perceptive questions and made numerous helpful suggestions."</p><cite>Mileta and Dougal</cite></blockquote>
+    <blockquote class="quote"><p>"You took care of all the 'technicalities' and we could simply be happy on this special day and not worry about anything."</p><cite>Konstantin and Miroslava</cite></blockquote>
+    <blockquote class="quote"><p>"Our ceremony was short and sweet but you still managed to bring out the tears and lots of laughter!"</p><cite>Emma and Aren</cite></blockquote>
+    <div class="gallery">
+      <img class="wide" src="img/hall.jpg" width="1140" height="641" alt="Guests seated in a tall brick hall during a ceremony, seen from above" loading="lazy">
+      <img src="img/table.jpg" width="800" height="1200" alt="A couple and witnesses leaning over the signing table" loading="lazy">
+      <img src="img/couple.jpg" width="1400" height="803" alt="A bride smiling at the groom during the ceremony" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="enq" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap enq-grid">
+    <div>
+      <h2 id="enq-h">Tell Maria about your day</h2>
+      <p>Send your date and venue, even if neither is set yet. Maria will get back to you as soon as she can.</p>
+      <p class="preview-note">This is a preview, so the form does not send anything.</p>
+    </div>
+    <form id="enq-form" novalidate>
+      <div class="two">
+        <label>Your names<input name="names" autocomplete="name" required></label>
+        <label>Email<input name="email" type="email" autocomplete="email" required></label>
+      </div>
+      <div class="two">
+        <label>Wedding date, if you have one<input name="date" type="date"></label>
+        <label>Venue or town<input name="venue"></label>
+      </div>
+      <label>Anything else<textarea name="msg"></textarea></label>
+      <button class="btn" type="submit">Send enquiry</button>
+      <div class="done" id="done" role="status">Preview only: nothing was sent. On the finished site this goes straight to Maria. To reach her today, email <a href="mailto:mcmc@iinet.net.au">mcmc@iinet.net.au</a>.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>A preview made by Lampbound Studio for Maria McCarthy.</strong> Not affiliated, not live.</p>
+    <p>Words, reviews and photos are from Maria's own website, mariamccarthy.com.au.</p>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn" href="#enquire">Ask about your date</a></div>
+
+<script>
+(function(){
+  var pins=[].slice.call(document.querySelectorAll('[data-pin]'));
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var steps=[].slice.call(document.querySelectorAll('.step'));
+  var ticking=false;
+  function update(){
+    ticking=false;
+    pins.forEach(function(el){
+      var r=el.getBoundingClientRect(), total=el.offsetHeight-window.innerHeight;
+      var p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;
+      el.style.setProperty('--p',p.toFixed(4));
+      if(el.dataset.steps){
+        var i=Math.min(steps.length-1,Math.floor(p*steps.length*0.999));
+        steps.forEach(function(s,k){s.classList.toggle('on',k===i)});
+      }
+    });
+  }
+  if(reduce){pins.forEach(function(el){el.style.setProperty('--p','1')});}
+  else{
+    window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(update)}},{passive:true});
+    window.addEventListener('resize',update);
+    update();
+  }
+  var f=document.getElementById('enq-form');
+  f.addEventListener('submit',function(e){e.preventDefault();var d=document.getElementById('done');d.classList.add('show');d.focus&&d.setAttribute('tabindex','-1');d.focus();});
+})();
+</script>
+</body>
+</html>

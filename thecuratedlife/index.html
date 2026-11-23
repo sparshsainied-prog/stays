@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>The Curated Life: a website preview</title>
+<meta name="description" content="A website idea for The Curated Life, wedding planning, styling and florals by Belinda Brett. A preview by Lampbound Studio, not the official site.">
+<meta property="og:title" content="The Curated Life">
+<meta property="og:description" content="A website idea made by Lampbound Studio for The Curated Life. Not the official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/thecuratedlife/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/thecuratedlife/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f5f4f0'/%3E%3Ctext x='16' y='24' font-family='Didot,Georgia' font-size='22' fill='%23d8492f' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --linen:#f5f4f0; --ink:#1d1b19; --coral:#d8492f; --coral-deep:#b5361f; --orchid:#a8235f; --grey:#6f6a62; --rule:#d9d6cf;
+  --display:"Bodoni Moda", "Didot", Georgia, serif; --text:"Jost", "Futura", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--linen);color:var(--ink);font:17px/1.65 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--coral);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.strip{background:var(--ink);color:#d6d2ca;font-size:13.5px;line-height:1.4;padding:9px 16px;text-align:center}
+.strip strong{color:#fff;font-weight:500}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:var(--ink);color:#fff;font:500 16px/1 var(--text);text-decoration:none;border:0;cursor:pointer;letter-spacing:.02em}
+.btn:hover{background:var(--coral-deep)}
+
+/* hero with planes */
+.hero{position:relative;height:160svh}
+.hero-in{position:sticky;top:0;height:100svh;overflow:hidden}
+.plane-back{position:absolute;inset:0;transform:translate3d(0,calc(var(--p,0) * -5%),0) scale(1.08)}
+.plane-back img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.plane-back::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(29,27,25,.66) 0%,rgba(29,27,25,.4) 50%,rgba(29,27,25,.45) 100%)}
+.title{position:absolute;left:20px;right:20px;top:9svh;color:#fff;transform:translate3d(0,calc(var(--p,0) * -14svh),0);z-index:2}
+.title h1{font-size:clamp(58px,16vw,190px);line-height:.88;letter-spacing:-.02em}
+.title p{font-size:17px;max-width:30ch;margin-top:16px;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.plane-front{position:absolute;z-index:3;right:20px;bottom:11svh;width:46vw;max-width:360px;box-shadow:0 22px 50px rgba(0,0,0,.35);transform:translate3d(0,calc(var(--p,0) * -38svh),0) rotate(calc(-2deg + var(--p,0) * 2deg))}
+.plane-front img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.plane-front figcaption{background:#fff;color:var(--ink);font:400 13px/1.3 var(--text);padding:8px 10px}
+@media (min-width:860px){.title{left:max(20px,calc(50% - 570px));top:12svh}.plane-front{right:max(20px,calc(50% - 570px));width:28vw}}
+
+/* intro */
+.intro{padding:96px 0 80px}
+.intro-grid{display:grid;gap:30px}
+.intro h2{font-size:clamp(34px,7vw,64px)}
+.intro .col p{font-size:18px}
+@media (min-width:860px){.intro-grid{grid-template-columns:1.1fr .9fr;gap:80px;align-items:end}}
+
+/* long table */
+.table{position:relative;height:420svh;background:var(--ink);color:#fff}
+.table-in{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.table-head{padding:0 20px 18px}
+.table-head h2{font-size:clamp(30px,6vw,52px)}
+.track{display:flex;gap:14px;padding:0 20px;width:max-content;will-change:transform;transform:translate3d(calc(var(--p,0) * var(--shift,0) * -1px),0,0)}
+.slot{position:relative;flex:0 0 auto;height:min(58svh,560px)}
+.slot img{height:100%;width:auto;max-width:none;object-fit:cover}
+.card{position:absolute;left:14px;bottom:14px;max-width:250px;background:#fff;color:var(--ink);padding:14px 16px 12px;box-shadow:0 10px 24px rgba(0,0,0,.3);transform:rotate(-1.5deg)}
+.slot:nth-child(even) .card{transform:rotate(1.2deg);left:auto;right:14px}
+.card p{font-family:var(--display);font-style:italic;font-size:19px;line-height:1.25;margin:0}
+.card small{display:block;margin-top:8px;font-size:12px;color:var(--grey)}
+@media (min-width:860px){.table-head{max-width:1180px;width:100%;margin:0 auto}.card p{font-size:22px}.card{max-width:300px}}
+
+/* services */
+.serv{padding:96px 0}
+.serv h2{font-size:clamp(36px,7vw,62px);margin-bottom:12px}
+.serv .lead{max-width:52ch;color:var(--grey)}
+.svc{display:grid;gap:18px;margin-top:44px;border-top:1px solid var(--rule)}
+.svc article{display:grid;gap:10px;padding:26px 0;border-bottom:1px solid var(--rule)}
+.svc h3{font-size:clamp(28px,5vw,42px)}
+.svc p{margin:0;max-width:60ch}
+.svc .first h3{font-size:clamp(34px,6.4vw,56px)}
+@media (min-width:860px){.svc article{grid-template-columns:1fr 1.2fr;gap:60px;align-items:baseline}}
+.pair{display:grid;grid-template-columns:1.2fr .8fr;gap:12px;margin-top:56px}
+.pair img{width:100%;height:100%;object-fit:cover}
+
+/* proof */
+.proof{background:#fff;padding:96px 0}
+.proof blockquote{margin:0 auto;max-width:900px}
+.proof blockquote p{font-family:var(--display);font-size:clamp(28px,5.6vw,50px);line-height:1.15}
+.proof cite{font-style:normal;color:var(--grey)}
+.proof .recent{max-width:900px;margin:44px auto 0;padding-top:22px;border-top:1px solid var(--rule);color:var(--grey)}
+.proof .recent b{color:var(--orchid);font-weight:500}
+
+/* enquire */
+.enq{padding:96px 0 120px}
+.enq-grid{display:grid;gap:40px}
+.enq h2{font-size:clamp(38px,8vw,72px);margin-bottom:16px}
+form{display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:500;font-size:15px}
+input,textarea,select{font:400 17px/1.4 var(--text);padding:12px 14px;border:1px solid #a9a49b;border-radius:0;background:#fff;color:var(--ink);min-height:48px;width:100%}
+textarea{min-height:120px}
+.two{display:grid;gap:16px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.note{font-size:14px;color:var(--grey)}
+.done{display:none;padding:16px;border:1px solid var(--coral);background:#fff}
+.done.show{display:block}
+@media (min-width:860px){.enq-grid{grid-template-columns:.8fr 1.2fr;gap:80px}}
+
+footer{background:var(--ink);color:#bdb8af;padding:40px 0 110px;font-size:14.5px}
+footer strong{color:#fff;font-weight:500}
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex}
+.bar .btn{flex:1;box-shadow:0 6px 18px rgba(0,0,0,.3);background:var(--coral-deep)}
+@media (min-width:860px){.bar{left:auto;right:24px;bottom:24px}}
+
+@media (prefers-reduced-motion:reduce){
+  .hero{height:auto}.hero-in{position:relative}
+  .plane-back,.title,.plane-front{transform:none!important}
+  .table{height:auto;padding:70px 0}.table-in{position:relative;height:auto}
+  .track{transform:none!important;width:auto;flex-wrap:wrap}
+  .slot{height:auto;width:100%}.slot img{width:100%;height:auto;max-width:100%}
+  .card{position:static;transform:none!important;max-width:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip">A website idea made by <strong>Lampbound Studio</strong> for The Curated Life. Not the official site.</div>
+<main id="main">
+
+<section class="hero" data-pin aria-label="Introduction">
+  <div class="hero-in">
+    <div class="plane-back"><img src="img/lawn.jpg" width="1125" height="1125" alt="Two long white tables set on a garden lawn, with garden chairs and low flowers" fetchpriority="high"></div>
+    <div class="title">
+      <h1>The Curated Life</h1>
+      <p>Wedding planning, styling and flowers by Belinda Brett. Sydney, and wherever your day is.</p>
+    </div>
+    <figure class="plane-front" style="margin:0"><img src="img/candles.jpg" width="1440" height="1440" alt="Tall candles among pink and red roses on a dinner table"><figcaption>Candles and garden roses, one of Belinda's tables</figcaption></figure>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="wrap intro-grid">
+    <h2>Pared back luxury, inspired by fashion, interiors and design</h2>
+    <div class="col">
+      <p>Belinda launched The Curated Life after almost a decade in London, running PR and events for designer and luxury brands. She brings over 16 years of that work to every wedding.</p>
+      <p>The aim is a wedding that feels like walking into a stylish party. Belinda and her team plan it, style it and build the look around flowers from their in-house florist team.</p>
+    </div>
+  </div>
+</section>
+
+<section class="table" data-pin data-track aria-labelledby="table-h">
+  <div class="table-in">
+    <div class="table-head"><h2 id="table-h">Walk the length of the table</h2></div>
+    <div class="track">
+      <div class="slot"><img src="img/longtable.jpg" width="1046" height="972" alt="A long candlelit table under festoon lights at night" loading="lazy"><div class="card"><p>"True luxury is about doing the simple things really, really well."</p><small>Our design philosophy</small></div></div>
+      <div class="slot"><img src="img/umbrellas.jpg" width="1030" height="1026" alt="White umbrellas over a lunch table with coral and yellow flowers" loading="lazy"></div>
+      <div class="slot"><img src="img/placecard.jpg" width="902" height="899" alt="Red and pink roses beside a handwritten place card reading Bride" loading="lazy"><div class="card"><p>"There won't be a satin chair cover in sight."</p><small>Nor over the top cascading florals</small></div></div>
+      <div class="slot"><img src="img/coral.jpg" width="1125" height="1125" alt="Coral peonies and blue striped cushions on a waterfront table" loading="lazy"></div>
+      <div class="slot"><img src="img/night.jpg" width="1125" height="1125" alt="A white dinner setting on a timber deck by the water at night" loading="lazy"><div class="card"><p>From 20 guests to over 300, with the same attention to the little details.</p><small>Every size of wedding</small></div></div>
+      <div class="slot"><img src="img/orchids.jpg" width="676" height="676" alt="Purple orchids and pink roses on a white table" loading="lazy"></div>
+      <div class="slot"><img src="img/bar.jpg" width="1104" height="1280" alt="A white bar dressed with blue hydrangeas and citrus" loading="lazy"><div class="card"><p>From espresso martini stations to gelato carts.</p><small>Moments your guests remember</small></div></div>
+      <div class="slot"><img src="img/white.jpg" width="1500" height="1199" alt="A long white table with green and white flowers under hanging lights" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="serv" aria-labelledby="serv-h">
+  <div class="wrap">
+    <h2 id="serv-h">Three ways to work with Belinda</h2>
+    <p class="lead">There is no one size fits all package or price. Each design is tailored to your budget.</p>
+    <div class="svc">
+      <article class="first"><h3>Complete planning</h3><p>For couples who want every detail considered without making all the small decisions. Belinda creates the design, then sources every element from her little black book of suppliers, and manages the budget around what matters most.</p></article>
+      <article><h3>Event styling</h3><p>You have found the place; she makes it feel like yours. Glassware, linens, flowers, candles, props and cutlery, plus personal touches for the ceremony space.</p></article>
+      <article><h3>Flowers</h3><p>Florals are the team's true passion, from an in-house florist team. Plenty of couples book just the flowers.</p></article>
+    </div>
+    <div class="pair">
+      <img src="img/parasol.jpg" width="1500" height="999" alt="A bride and groom laughing under a paper parasol in a garden" loading="lazy">
+      <img src="img/pool.jpg" width="1500" height="1000" alt="A poolside lounge styled with white cushions and yellow flowers" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="proof" aria-label="Kind words">
+  <div class="wrap">
+    <blockquote><p>"Belinda at The Curated Life literally made our vision a reality. She went above and beyond and created the most beautiful venue on our special day."</p><cite>Ashley, March 2019</cite></blockquote>
+    <p class="recent"><b>Recent work:</b> event planner, stylist and florist for Georgia and Ollie's wedding in Wagga Wagga, featured by Hello May in February 2025.</p>
+  </div>
+</section>
+
+<section class="enq" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap enq-grid">
+    <div>
+      <h2 id="enq-h">Book a free consultation</h2>
+      <p>Based in Darling Point, Sydney, and creating events across Australia and overseas.</p>
+      <p><a href="tel:+61497566237">+61 497 566 237</a><br><a href="mailto:Belinda@thecuratedlife.com.au">Belinda@thecuratedlife.com.au</a></p>
+      <p class="note">This is a preview, so the form does not send anything.</p>
+    </div>
+    <form id="enq-form" novalidate>
+      <div class="two">
+        <label>Your names<input name="names" autocomplete="name"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <div class="two">
+        <label>Date<input name="date" type="date"></label>
+        <label>Guests<input name="guests" inputmode="numeric"></label>
+      </div>
+      <label>What you need
+        <select name="need"><option>Complete planning</option><option>Event styling</option><option>Flowers</option><option>Not sure yet</option></select>
+      </label>
+      <label>Venue, or the kind of place you picture<textarea name="msg"></textarea></label>
+      <button class="btn" type="submit">Send to Belinda</button>
+      <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Belinda. To reach her today, call <a href="tel:+61497566237">+61 497 566 237</a> or email <a href="mailto:Belinda@thecuratedlife.com.au">Belinda@thecuratedlife.com.au</a>.</div>
+    </form>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">
+  <p><strong>A preview made by Lampbound Studio for The Curated Life.</strong> Not affiliated, not live.</p>
+  <p>Words, the review and photos are from thecuratedlife.com.au. The Wagga Wagga credit is from Hello May.</p>
+</div></footer>
+<div class="bar"><a class="btn" href="#enquire">Book a consultation</a></div>
+<script>
+(function(){
+  var pins=[].slice.call(document.querySelectorAll('[data-pin]'));
+  var track=document.querySelector('.track');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches,t=false;
+  function measure(){var s=track.parentNode.closest('[data-track]');if(s)s.style.setProperty('--shift',Math.max(0,track.scrollWidth-innerWidth));}
+  function update(){t=false;pins.forEach(function(el){var r=el.getBoundingClientRect(),tot=el.offsetHeight-innerHeight;var p=tot>0?Math.min(1,Math.max(0,-r.top/tot)):1;el.style.setProperty('--p',p.toFixed(4));});}
+  if(reduce){pins.forEach(function(el){el.style.setProperty('--p','1')})}
+  else{
+    measure();
+    addEventListener('load',function(){measure();update()});
+    addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(update)}},{passive:true});
+    addEventListener('resize',function(){measure();update()});update();
+  }
+  document.getElementById('enq-form').addEventListener('submit',function(e){e.preventDefault();var d=document.getElementById('done');d.classList.add('show');d.focus();});
+})();
+</script>
+</body>
+</html>

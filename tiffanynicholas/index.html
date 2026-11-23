@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Tiffany Nicholas Civil Celebrant: a website preview</title>
+<meta name="description" content="A website idea for Tiffany Nicholas, civil celebrant in Victoria. A preview by Lampbound Studio, not her official site.">
+<meta property="og:title" content="Tiffany Nicholas Civil Celebrant">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Tiffany Nicholas. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/tiffanynicholas/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/tiffanynicholas/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2317402d'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='900' font-size='14' fill='%23d9572a' text-anchor='middle'%3ETN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700;6..12,900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#17402d; --sky:#eaf0f3; --orange:#d9572a; --orange-deep:#b8441c; --grass:#c99a4b; --ink:#14251c; --mute:#4c5d55; --white:#fff;
+  --display:"Bowlby One", Impact, sans-serif; --text:"Nunito Sans", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--sky);color:var(--ink);font:17px/1.6 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--green);color:#fff;padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.strip{background:var(--ink);color:#cbd6d0;font-size:13.5px;line-height:1.4;padding:9px 16px;text-align:center}
+.strip strong{color:#fff}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border-radius:999px;background:var(--orange-deep);color:#fff;font:900 16px/1 var(--text);text-decoration:none;border:0;cursor:pointer}
+.btn:hover{background:#a33a16}
+
+/* hero */
+.hero{position:relative;height:150svh;background:var(--green);color:#fff}
+.hero-in{position:sticky;top:0;height:100svh;overflow:hidden}
+.back{position:absolute;inset:auto 0 0 0;height:62%;transform:translate3d(0,calc(var(--p,0) * 8%),0)}
+.back img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.back::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--green) 0%,rgba(23,64,45,0) 35%)}
+.head{position:relative;z-index:2;padding:7svh 20px 0;transform:translate3d(0,calc(var(--p,0) * -12svh),0)}
+.head .hi{font-weight:900;color:var(--grass);margin:0 0 10px}
+.head h1{font-size:clamp(46px,13vw,120px);max-width:9ch}
+.head p.sub{max-width:30ch;margin-top:16px;font-size:18px}
+.sticker{position:absolute;z-index:3;right:16px;bottom:16svh;width:36vw;max-width:250px;border-radius:50%;overflow:hidden;border:6px solid #fff;box-shadow:0 14px 30px rgba(0,0,0,.35);transform:translate3d(0,calc(var(--p,0) * -30svh),0) rotate(calc(-8deg + var(--p,0) * 20deg))}
+.sticker img{width:100%;aspect-ratio:1;object-fit:cover}
+@media (min-width:860px){.head{max-width:1100px;margin:0 auto;padding-top:10svh}.back{left:38%;height:100%;inset:0 0 0 38%}.back::before{background:linear-gradient(90deg,var(--green) 0%,rgba(23,64,45,0) 30%)}.sticker{right:auto;bottom:auto;left:min(44vw,560px);top:52svh}}
+
+/* friend */
+.friend{padding:90px 0 70px}
+.friend-grid{display:grid;gap:26px}
+.friend h2{font-size:clamp(34px,8vw,64px);color:var(--green)}
+.friend .big{font-size:20px}
+@media (min-width:860px){.friend-grid{grid-template-columns:1fr 1fr;gap:70px;align-items:center}}
+
+/* deck */
+.deck{position:relative;height:460svh;background:var(--green);color:#fff}
+.deck-in{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;grid-template-rows:auto 1fr;padding:28px 20px 90px}
+.deck-in h2{font-size:clamp(30px,7vw,54px);max-width:14ch}
+.deck-in .wrap{padding:0;width:100%}
+.pile{position:relative;align-self:center;justify-self:center;width:min(86vw,420px);height:min(46svh,340px)}
+.c{position:absolute;inset:0;border-radius:18px;background:#fff;color:var(--ink);padding:26px 24px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 12px 30px rgba(0,0,0,.28);transition:transform .55s cubic-bezier(.2,.7,.2,1),opacity .55s ease}
+.c:nth-child(2){transform:rotate(2deg)}.c:nth-child(3){transform:rotate(-2deg)}.c:nth-child(4){transform:rotate(1deg)}
+.c h3{font-size:clamp(28px,7vw,40px);line-height:1.02}
+.c p{margin:0;color:var(--mute)}
+.c .stamp{align-self:flex-start;font:900 14px/1 var(--text);color:var(--orange-deep);border:2.5px solid var(--orange-deep);border-radius:6px;padding:7px 10px;transform:rotate(-4deg)}
+.c.gone{opacity:0;transform:translate3d(-130%,10%,0) rotate(-22deg)}
+.c.gone.right{transform:translate3d(130%,10%,0) rotate(22deg)}
+.c.last{background:var(--orange-deep);color:#fff}
+.c.last p{color:#fff}
+.c.last .stamp{color:#fff;border-color:#fff}
+
+/* included */
+.inc{padding:90px 0}
+.inc h2{font-size:clamp(34px,8vw,60px);color:var(--green);margin-bottom:10px}
+.inc .lead{color:var(--mute);max-width:48ch}
+.list{columns:1;column-gap:48px;margin:30px 0 0;padding:0;list-style:none;counter-reset:n}
+.list li{break-inside:avoid;padding:12px 0 12px 46px;position:relative;border-top:2px dotted #b9c7cd;font-weight:700}
+.list li::before{counter-increment:n;content:counter(n);position:absolute;left:0;top:10px;width:32px;height:32px;border-radius:50%;background:var(--green);color:#fff;font:900 14px/32px var(--text);text-align:center}
+.list small{display:block;font-weight:400;color:var(--mute)}
+@media (min-width:760px){.list{columns:2}}
+
+/* reviews */
+.rev{background:#fff;padding:90px 0}
+.rev-grid{display:grid;gap:36px}
+.rev blockquote{margin:0}
+.rev blockquote p{font-family:var(--display);font-size:clamp(24px,5.4vw,38px);line-height:1.12;color:var(--green)}
+.rev cite{font-style:normal;font-weight:700;color:var(--mute)}
+.rev figure{margin:0}
+.rev figure img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px}
+@media (min-width:860px){.rev-grid{grid-template-columns:1fr 1fr 1fr;align-items:end}.rev figure{grid-row:span 2}}
+
+/* enquire */
+.enq{padding:90px 0 130px}
+.enq-grid{display:grid;gap:36px}
+.enq h2{font-size:clamp(40px,10vw,80px);color:var(--green);margin-bottom:12px}
+form{display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:700;font-size:15px}
+input,textarea{font:400 17px/1.4 var(--text);padding:12px 14px;border:2px solid #9fb2ba;border-radius:10px;background:#fff;color:var(--ink);min-height:50px;width:100%}
+textarea{min-height:120px}
+.two{display:grid;gap:16px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.note{font-size:14px;color:var(--mute)}
+.done{display:none;padding:16px;border:2px solid var(--orange-deep);border-radius:10px;background:#fff}
+.done.show{display:block}
+@media (min-width:860px){.enq-grid{grid-template-columns:.8fr 1.2fr;gap:70px}}
+footer{background:var(--ink);color:#b8c4be;padding:40px 0 110px;font-size:14.5px}
+footer strong{color:#fff}
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px}
+.bar .btn{flex:1;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.bar .btn.call{flex:0 0 auto;background:var(--green)}
+@media (min-width:860px){.bar{left:auto;right:24px;bottom:24px}.bar .btn{flex:none}}
+
+@media (prefers-reduced-motion:reduce){
+  .hero{height:auto}.hero-in{position:relative}
+  .back,.head,.sticker{transform:none!important}
+  .sticker{transform:rotate(-6deg)!important}
+  .deck{height:auto}.deck-in{position:relative;height:auto}
+  .pile{height:auto;display:grid;gap:14px;width:100%}
+  .c,.c.gone,.c.gone.right{position:relative;inset:auto;opacity:1;transform:none!important;transition:none;min-height:180px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip">A website idea made by <strong>Lampbound Studio</strong> for Tiffany Nicholas. Not her official site.</div>
+<main id="main">
+
+<section class="hero" data-pin aria-label="Introduction">
+  <div class="hero-in">
+    <div class="back"><img src="img/ceremony.jpg" width="1440" height="1440" alt="Tiffany leading a ceremony in a paddock beside an old wagon wheel, the couple holding hands" fetchpriority="high"></div>
+    <div class="head">
+      <p class="hi">Tiffany Nicholas, civil celebrant, Victoria</p>
+      <h1>Let's get you hitched</h1>
+      <p class="sub">A fun, modern celebrant who runs your ceremony like an old friend would.</p>
+    </div>
+    <div class="sticker"><img src="img/tiffany.jpg" width="959" height="960" alt="Tiffany Nicholas smiling"></div>
+  </div>
+</section>
+
+<section class="friend">
+  <div class="wrap friend-grid">
+    <h2>Sentimental and fun, with plenty of cheek</h2>
+    <div>
+      <p class="big">Tiffany comes from event planning, communications and performance, so she has the tools to plan your ceremony and the stage experience to perform it.</p>
+      <p>Weddings can be stressful and overwhelming. That is what she is there for. As a civil celebrant she has room to shape almost the whole ceremony around your story, and she would rather hear about you than talk about herself.</p>
+    </div>
+  </div>
+</section>
+
+<section class="deck" data-pin data-deck aria-labelledby="deck-h">
+  <div class="deck-in">
+    <div class="wrap"><h2 id="deck-h">Your ceremony, your call</h2></div>
+    <div class="pile">
+      <div class="c last"><span class="stamp">Stays</span><div><h3>The legal bits</h3><p>A few words have to be said at every ceremony. Tiffany looks after those. Almost everything else can be customised.</p></div></div>
+      <div class="c"><span class="stamp">Sorted</span><div><h3>"Wanna play some games and get the party started?"</h3><p>"Awesome!"</p></div></div>
+      <div class="c"><span class="stamp">Helped</span><div><h3>Your own vows</h3><p>She helps you prepare them, with unlimited access to her along the way.</p></div></div>
+      <div class="c"><span class="stamp">Ditched</span><div><h3>"Wanna ditch the traditions?"</h3><p>"No worries!"</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="inc" aria-labelledby="inc-h">
+  <div class="wrap">
+    <h2 id="inc-h">What her price includes</h2>
+    <p class="lead">Every quote covers the lot, from the first chat to the certificate. Ask for yours with your date and location.</p>
+    <ol class="list">
+      <li>An initial interview<small>Get to know each other, start the paperwork and the design</small></li>
+      <li>All the legal requirements</li>
+      <li>A wedding rehearsal<small>Travel extra</small></li>
+      <li>Unlimited access to Tiffany</li>
+      <li>Help preparing your vows</li>
+      <li>Designing your ceremony</li>
+      <li>Performing your ceremony</li>
+      <li>A decorative marriage certificate</li>
+      <li>Applying for your BDM certificate<small>BDM fee extra</small></li>
+      <li>A PA system on the day</li>
+    </ol>
+  </div>
+</section>
+
+<section class="rev" aria-label="Reviews">
+  <div class="wrap rev-grid">
+    <figure><img src="img/tiffany.jpg" width="959" height="960" alt="Tiffany Nicholas" loading="lazy"></figure>
+    <blockquote><p>"Tiffany was so professional but also brought the personality and fun that we asked for when booking her!"</p><cite>Tahlia, VIC</cite></blockquote>
+    <blockquote><p>"Having Tiffany as our celebrant really set the tone for our Wedding."</p><cite>Bre, VIC</cite></blockquote>
+  </div>
+</section>
+
+<section class="enq" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap enq-grid">
+    <div>
+      <h2 id="enq-h">Get a quote</h2>
+      <p>Tell Tiffany your date and where the ceremony is. She will come back with a quote.</p>
+      <p><a href="tel:0439659225">0439 659 225</a><br><a href="mailto:tiffanynicholascelebrant@gmail.com">tiffanynicholascelebrant@gmail.com</a></p>
+      <p class="note">This is a preview, so the form does not send anything.</p>
+    </div>
+    <form id="enq-form" novalidate>
+      <div class="two">
+        <label>First names<input name="names" autocomplete="name"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <div class="two">
+        <label>Wedding date<input name="date" type="date"></label>
+        <label>Ceremony location<input name="where"></label>
+      </div>
+      <label>Tell her about you two<textarea name="msg"></textarea></label>
+      <button class="btn" type="submit">Ask for a quote</button>
+      <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Tiffany. To reach her today, call <a href="tel:0439659225">0439 659 225</a> or email <a href="mailto:tiffanynicholascelebrant@gmail.com">tiffanynicholascelebrant@gmail.com</a>.</div>
+    </form>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">
+  <p><strong>A preview made by Lampbound Studio for Tiffany Nicholas.</strong> Not affiliated, not live.</p>
+  <p>Words, reviews and photos are from tiffanynicholascelebrant.com.</p>
+</div></footer>
+<div class="bar"><a class="btn call" href="tel:0439659225">Call</a><a class="btn" href="#enquire">Get a quote</a></div>
+<script>
+(function(){
+  var pins=[].slice.call(document.querySelectorAll('[data-pin]'));
+  var cards=[].slice.call(document.querySelectorAll('.pile .c')).reverse(); // top card first
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches,t=false;
+  function update(){t=false;pins.forEach(function(el){var r=el.getBoundingClientRect(),tot=el.offsetHeight-innerHeight;var p=tot>0?Math.min(1,Math.max(0,-r.top/tot)):1;el.style.setProperty('--p',p.toFixed(4));
+    if(el.hasAttribute('data-deck')){var n=cards.length-1;var k=Math.floor(p*(n+0.6));cards.forEach(function(c,i){if(i<n){c.classList.toggle('gone',i<k);c.classList.toggle('right',i%2===1)}})}
+  });}
+  if(reduce){pins.forEach(function(el){el.style.setProperty('--p','1')});document.querySelector('.pile').append.apply(document.querySelector('.pile'),cards.slice(0,-1).concat(cards.slice(-1)));}
+  else{addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(update)}},{passive:true});addEventListener('resize',update);update();}
+  document.getElementById('enq-form').addEventListener('submit',function(e){e.preventDefault();var d=document.getElementById('done');d.classList.add('show');d.focus();});
+})();
+</script>
+</body>
+</html>
