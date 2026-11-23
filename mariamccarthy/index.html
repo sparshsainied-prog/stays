@@ -25,7 +25,7 @@ html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--text)}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px}
 .skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--white);padding:10px 14px;z-index:50}
 .skip:focus{left:8px;top:8px}
 .strip{background:var(--ink);color:#d9d5cd;font-size:13.5px;line-height:1.4;padding:9px 16px;text-align:center}
@@ -124,7 +124,7 @@ p{margin:0 0 1em;text-wrap:pretty}
 .enq h2{font-size:clamp(34px,7vw,56px);margin-bottom:14px}
 form{display:grid;gap:16px}
 label{display:grid;gap:6px;font-weight:700;font-size:15px}
-input,textarea{font:400 17px/1.4 var(--text);padding:12px 14px;border:1.5px solid #b9b5ad;border-radius:3px;background:#fff;color:var(--ink);min-height:48px;width:100%}
+input,textarea{font:400 17px/1.4 var(--text);padding:12px 14px;border:1.5px solid #7a756d;border-radius:3px;background:#fff;color:var(--ink);min-height:48px;width:100%}
 textarea{min-height:120px;resize:vertical}
 .two{display:grid;gap:16px}
 @media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
@@ -140,7 +140,7 @@ footer strong{color:var(--white)}
 .bar .btn{flex:1;box-shadow:0 6px 18px rgba(0,0,0,.28)}
 @media (min-width:860px){.bar{left:auto;right:24px;bottom:24px}.bar .btn{flex:none}}
 
-@media (prefers-reduced-motion:reduce){
+@media (prefers-reduced-motion:reduce),(max-height:520px){
   .hero{height:auto}.hero-stage{position:relative;height:100svh}
   .hero-photo,.hero-copy,.hero-rule{transform:none!important}
   .sign{height:auto}.sign-stage{position:relative;height:auto}
@@ -149,6 +149,14 @@ footer strong{color:var(--white)}
   .steps{min-height:0}.step{position:static;opacity:1;transform:none;margin-bottom:22px;transition:none}
 }
 </style>
+<noscript><style>
+  .hero{height:auto}.hero-stage{position:relative;height:100svh}
+  .hero-photo,.hero-copy,.hero-rule{transform:none!important}
+  .sign{height:auto}.sign-stage{position:relative;height:auto}
+  .sign-photo{height:60svh}
+  .ink-outer,.ink-inner{transform:none!important}
+  .steps{min-height:0}.step{position:static;opacity:1;transform:none;margin-bottom:22px;transition:none}
+</style></noscript>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -172,7 +180,7 @@ footer strong{color:var(--white)}
   <div class="wrap why-grid">
     <div>
       <h2>Her parents: nearly 80 years married</h2>
-      <p class="big" style="margin-top:24px">"I am from a large family where my parents have been married for nearly 80 years." That commitment, through good times and bad, is why Maria became a celebrant.</p>
+      <p class="big" style="margin-top:24px">"I am from a large family where my parents have been married for nearly 80 years." That commitment, through good times and bad, is the first reason she gives for becoming a celebrant.</p>
       <p>She married late herself, after twelve years with her partner, and planning that wedding is what led her to train. She brings that life experience, as a single person and as a married woman, to every couple she works with.</p>
       <p>Before celebrancy, Maria ran her own architectural lighting company and worked in film and television production.</p>
     </div>
@@ -189,9 +197,9 @@ footer strong{color:var(--white)}
     <div class="sign-body">
       <div class="sign-photo"><img src="img/signing.jpg" width="800" height="1200" alt="A couple's hands signing the marriage certificate on a marble table" loading="lazy"></div>
       <div class="steps">
-        <div class="step on"><div class="n">1</div><h3>First contact</h3><p>We talk through what you need to marry in Australia: paperwork, supporting documents, your venue, your date and my availability. Then we set a day to meet.</p></div>
-        <div class="step"><div class="n">2</div><h3>First meet up</h3><p>We get to know each other and see if we are a fit. This happens one to 18 months before the wedding. If you are happy to go ahead, we complete your Notice of Intended Marriage together.</p></div>
-        <div class="step"><div class="n">3</div><h3>Next steps</h3><p>A deposit secures the work on your ceremony. We stay in touch while we shape the service: vows, rituals and readings, with samples to choose from.</p></div>
+        <div class="step on"><div class="n">1</div><h3>First contact</h3><p>Maria talks you through what you need to marry in Australia: paperwork, supporting documents, your venue, your date and her availability. Then you set a day to meet.</p></div>
+        <div class="step"><div class="n">2</div><h3>First meet up</h3><p>You get to know each other and see if you are a fit. This happens one to 18 months before the wedding. If you are happy to go ahead, you complete your Notice of Intended Marriage with her.</p></div>
+        <div class="step"><div class="n">3</div><h3>Next steps</h3><p>A deposit starts the work on your ceremony. You stay in touch while she shapes the service, with sample vows, rituals and readings to choose from.</p></div>
         <div class="step"><div class="n">4</div><h3>Closer to the day</h3><p>The last forms are done as close to the wedding as possible. It is also a good time for a rehearsal, if you want one.</p></div>
         <div class="step"><div class="n">5</div><h3>The wedding day</h3><p>Maria usually arrives about an hour early, meets your speakers and checks everything is on plan. Afterwards she posts your paperwork and Certificate of Marriage to Births, Deaths and Marriages.</p></div>
       </div>
@@ -258,8 +266,8 @@ footer strong{color:var(--white)}
         <label>Venue or town<input name="venue"></label>
       </div>
       <label>Anything else<textarea name="msg"></textarea></label>
-      <button class="btn" type="submit">Send enquiry</button>
-      <div class="done" id="done" role="status">Preview only: nothing was sent. On the finished site this goes straight to Maria. To reach her today, email <a href="mailto:mcmc@iinet.net.au">mcmc@iinet.net.au</a>.</div>
+      <button class="btn" type="button" id="send">Send enquiry</button>
+      <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Maria. To reach her today, email <a href="mailto:mcmc@iinet.net.au">mcmc@iinet.net.au</a>.</div>
     </form>
   </div>
 </section>
@@ -277,7 +285,7 @@ footer strong{color:var(--white)}
 <script>
 (function(){
   var pins=[].slice.call(document.querySelectorAll('[data-pin]'));
-  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce), (max-height:520px)'),reduce=mq.matches;if(mq.addEventListener)mq.addEventListener('change',function(){if(!mq.matches&&!window.__sc){window.__sc=1;if(typeof measure=='function')measure();addEventListener('scroll',function(){requestAnimationFrame(update)},{passive:true});addEventListener('resize',update);update()}});var _x=0;
   var steps=[].slice.call(document.querySelectorAll('.step'));
   var ticking=false;
   function update(){
@@ -293,13 +301,12 @@ footer strong{color:var(--white)}
     });
   }
   if(reduce){pins.forEach(function(el){el.style.setProperty('--p','1')});}
-  else{
+  else{window.__sc=1;
     window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(update)}},{passive:true});
     window.addEventListener('resize',update);
     update();
   }
-  var f=document.getElementById('enq-form');
-  f.addEventListener('submit',function(e){e.preventDefault();var d=document.getElementById('done');d.classList.add('show');d.focus&&d.setAttribute('tabindex','-1');d.focus();});
+  document.getElementById('send').addEventListener('click',function(){var d=document.getElementById('done');d.classList.add('show');d.focus();});
 })();
 </script>
 </body>

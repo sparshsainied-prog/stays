@@ -24,7 +24,7 @@
 body{margin:0;background:var(--linen);color:var(--ink);font:17px/1.65 var(--text)}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
-:focus-visible{outline:2px solid var(--coral);outline-offset:3px}
+:focus-visible{outline:2px solid currentColor;outline-offset:3px}
 .skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:10px 14px;z-index:50}
 .skip:focus{left:8px;top:8px}
 .strip{background:var(--ink);color:#d6d2ca;font-size:13.5px;line-height:1.4;padding:9px 16px;text-align:center}
@@ -97,7 +97,7 @@ p{margin:0 0 1em;text-wrap:pretty}
 .enq h2{font-size:clamp(38px,8vw,72px);margin-bottom:16px}
 form{display:grid;gap:16px}
 label{display:grid;gap:6px;font-weight:500;font-size:15px}
-input,textarea,select{font:400 17px/1.4 var(--text);padding:12px 14px;border:1px solid #a9a49b;border-radius:0;background:#fff;color:var(--ink);min-height:48px;width:100%}
+input,textarea,select{font:400 17px/1.4 var(--text);padding:12px 14px;border:1px solid #7c776e;border-radius:0;background:#fff;color:var(--ink);min-height:48px;width:100%}
 textarea{min-height:120px}
 .two{display:grid;gap:16px}
 @media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
@@ -112,15 +112,29 @@ footer strong{color:#fff;font-weight:500}
 .bar .btn{flex:1;box-shadow:0 6px 18px rgba(0,0,0,.3);background:var(--coral-deep)}
 @media (min-width:860px){.bar{left:auto;right:24px;bottom:24px}}
 
-@media (prefers-reduced-motion:reduce){
+@media (prefers-reduced-motion:reduce),(max-height:520px){
   .hero{height:auto}.hero-in{position:relative}
   .plane-back,.title,.plane-front{transform:none!important}
+  .hero-in{height:auto;min-height:0;padding-bottom:30px}.plane-back{position:absolute}
+  .title{position:relative;left:auto;right:auto;top:auto;padding:40px 20px 24px}
+  .plane-front{position:relative;right:auto;bottom:auto;margin:0 20px 10px auto;width:min(60vw,300px)}
   .table{height:auto;padding:70px 0}.table-in{position:relative;height:auto}
   .track{transform:none!important;width:auto;flex-wrap:wrap}
   .slot{height:auto;width:100%}.slot img{width:100%;height:auto;max-width:100%}
   .card{position:static;transform:none!important;max-width:none}
 }
 </style>
+<noscript><style>
+  .hero{height:auto}.hero-in{position:relative}
+  .plane-back,.title,.plane-front{transform:none!important}
+  .hero-in{height:auto;min-height:0;padding-bottom:30px}.plane-back{position:absolute}
+  .title{position:relative;left:auto;right:auto;top:auto;padding:40px 20px 24px}
+  .plane-front{position:relative;right:auto;bottom:auto;margin:0 20px 10px auto;width:min(60vw,300px)}
+  .table{height:auto;padding:70px 0}.table-in{position:relative;height:auto}
+  .track{transform:none!important;width:auto;flex-wrap:wrap}
+  .slot{height:auto;width:100%}.slot img{width:100%;height:auto;max-width:100%}
+  .card{position:static;transform:none!important;max-width:none}
+</style></noscript>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -171,11 +185,11 @@ footer strong{color:#fff;font-weight:500}
     <div class="svc">
       <article class="first"><h3>Complete planning</h3><p>For couples who want every detail considered without making all the small decisions. Belinda creates the design, then sources every element from her little black book of suppliers, and manages the budget around what matters most.</p></article>
       <article><h3>Event styling</h3><p>You have found the place; she makes it feel like yours. Glassware, linens, flowers, candles, props and cutlery, plus personal touches for the ceremony space.</p></article>
-      <article><h3>Flowers</h3><p>Florals are the team's true passion, from an in-house florist team. Plenty of couples book just the flowers.</p></article>
+      <article><h3>Flowers</h3><p>Flowers are the team's true passion. The in-house florists also take bookings for the flowers alone.</p></article>
     </div>
     <div class="pair">
       <img src="img/parasol.jpg" width="1500" height="999" alt="A bride and groom laughing under a paper parasol in a garden" loading="lazy">
-      <img src="img/pool.jpg" width="1500" height="1000" alt="A poolside lounge styled with white cushions and yellow flowers" loading="lazy">
+      <img src="img/pool.jpg" width="1500" height="1000" alt="A poolside lounge styled with white cushions beside potted citrus trees" loading="lazy">
     </div>
   </div>
 </section>
@@ -208,7 +222,7 @@ footer strong{color:#fff;font-weight:500}
         <select name="need"><option>Complete planning</option><option>Event styling</option><option>Flowers</option><option>Not sure yet</option></select>
       </label>
       <label>Venue, or the kind of place you picture<textarea name="msg"></textarea></label>
-      <button class="btn" type="submit">Send to Belinda</button>
+      <button class="btn" type="button" id="send">Send to Belinda</button>
       <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Belinda. To reach her today, call <a href="tel:+61497566237">+61 497 566 237</a> or email <a href="mailto:Belinda@thecuratedlife.com.au">Belinda@thecuratedlife.com.au</a>.</div>
     </form>
   </div>
@@ -223,17 +237,17 @@ footer strong{color:#fff;font-weight:500}
 (function(){
   var pins=[].slice.call(document.querySelectorAll('[data-pin]'));
   var track=document.querySelector('.track');
-  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches,t=false;
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce), (max-height:520px)'),reduce=mq.matches;if(mq.addEventListener)mq.addEventListener('change',function(){if(!mq.matches&&!window.__sc){window.__sc=1;if(typeof measure=='function')measure();addEventListener('scroll',function(){requestAnimationFrame(update)},{passive:true});addEventListener('resize',update);update()}});var _x=0,t=false;
   function measure(){var s=track.parentNode.closest('[data-track]');if(s)s.style.setProperty('--shift',Math.max(0,track.scrollWidth-innerWidth));}
   function update(){t=false;pins.forEach(function(el){var r=el.getBoundingClientRect(),tot=el.offsetHeight-innerHeight;var p=tot>0?Math.min(1,Math.max(0,-r.top/tot)):1;el.style.setProperty('--p',p.toFixed(4));});}
   if(reduce){pins.forEach(function(el){el.style.setProperty('--p','1')})}
-  else{
+  else{window.__sc=1;
     measure();
     addEventListener('load',function(){measure();update()});
     addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(update)}},{passive:true});
     addEventListener('resize',function(){measure();update()});update();
   }
-  document.getElementById('enq-form').addEventListener('submit',function(e){e.preventDefault();var d=document.getElementById('done');d.classList.add('show');d.focus();});
+  document.getElementById('send').addEventListener('click',function(){var d=document.getElementById('done');d.classList.add('show');d.focus();});
 })();
 </script>
 </body>
