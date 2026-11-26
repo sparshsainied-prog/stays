@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Kylee Payne, Perth marriage celebrant: a website preview</title>
+<meta name="description" content="A website idea for Kylee Payne, marriage celebrant in Perth and surrounds. A preview by Lampbound Studio, not her official site.">
+<meta property="og:title" content="Kylee Payne, Perth marriage celebrant">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Kylee Payne. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/kyleepayne/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/kyleepayne/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2316292a'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='14' fill='%23f5f7f9' text-anchor='middle'%3EKP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#f5f7f9; --ink:#16292a; --rust:#a64e33; --rust-deep:#86391f; --muted:#5b6b66; --line:#dfe5e4; --pale:#e2e8e7; --white:#fff;
+  --display:"Familjen Grotesk", system-ui, sans-serif; --text:"Figtree", system-ui, sans-serif;
+  --mono:ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font:17px/1.6 var(--text);overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid #111;outline-offset:2px;box-shadow:0 0 0 6px #fff}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--white);padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.strip{background:var(--ink);color:#c9d4d2;font-size:13.5px;line-height:1.4;padding:9px 16px;text-align:center}
+.strip strong{color:var(--white)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.04;margin:0;letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:clamp(30px,6.4vw,52px)}
+p{margin:0 0 1em;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:4px;background:var(--rust);color:var(--white);text-decoration:none;border:0;font:700 16px/1 var(--text);cursor:pointer}
+.btn:hover{background:var(--rust-deep)}
+.btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.alt:hover{background:var(--ink);color:var(--white)}
+
+/* hero: back word, her portrait, the words in front */
+.hero{position:relative;background:var(--white)}
+.hero .stage{position:relative;min-height:calc(100svh - 38px);overflow:hidden;display:grid}
+.js .hero{height:150svh}
+.js .hero .stage{position:sticky;top:0;height:100svh;min-height:0}
+.h-word{position:absolute;left:0;bottom:3%;white-space:nowrap;font:700 clamp(80px,19vw,250px)/.9 var(--display);color:#eaefef;letter-spacing:-.03em;will-change:transform;user-select:none}
+.h-photo{position:absolute;right:-6%;bottom:0;width:min(92vw,640px);will-change:transform}
+.h-photo img{width:100%;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent 0,#000 12%,#000 90%,transparent)}
+.h-photo{z-index:1}
+.h-text{position:relative;align-self:start;padding:46px 20px 0;max-width:620px;will-change:transform;z-index:2}
+.h-text h1{font-size:clamp(52px,14vw,112px)}
+.h-text .role{font:600 18px/1.35 var(--text);margin:10px 0 0;color:var(--muted)}
+.h-text .tag{font:500 clamp(21px,5.2vw,30px)/1.2 var(--display);margin:18px 0 22px;max-width:16em}
+.h-text .tag span{color:var(--rust)}
+.h-text .acts{display:flex;flex-wrap:wrap;gap:10px}
+.h-text .proof{font-size:15px;color:var(--muted);margin:16px 0 0}
+@media (max-width:719px){
+  .h-photo{right:-8%;bottom:66px;width:min(92vw,440px)}
+  .h-text{padding-top:30px}
+  .h-text .acts .alt{display:none}
+  .h-word{display:none}
+}
+@media (min-width:720px){
+  .hero .stage{align-content:center}
+  .h-text{padding:0 0 0 max(40px,calc((100vw - 1120px)/2 + 20px));max-width:calc(600px + max(40px,calc((100vw - 1120px)/2 + 20px)));align-self:center}
+  .h-photo{right:2%;width:min(48vw,620px)}
+}
+@media (max-width:719px) and (max-height:700px){
+  .js .hero{height:auto}
+  .js .hero .stage{position:relative;height:auto;min-height:0}
+  .h-photo{position:relative;right:auto;bottom:auto;margin:14px -20px 0 auto;width:78vw;order:2}
+}
+@media (max-height:520px) and (orientation:landscape){
+  .js .hero{height:auto}
+  .js .hero .stage{position:relative;height:auto;min-height:100svh}
+  .h-text{padding-top:24px;padding-bottom:24px}
+  .h-photo{position:absolute;right:2%;bottom:0;margin:0;width:min(40vw,320px)}
+  .h-text{max-width:60vw}
+  .h-text h1{font-size:46px}
+  .h-text .tag{margin:10px 0 14px}
+}
+
+/* the viewfinder */
+.vf{background:var(--ink);color:#e9efee;position:relative}
+.vf .stage{display:grid;gap:22px;padding:40px 20px 48px;align-content:center;justify-items:center}
+.js .vf.on{height:520svh}
+.js .vf.on .stage{position:sticky;top:0;height:100svh;padding:16px 20px 84px;overflow:hidden;align-content:start;gap:14px}
+.frame{position:relative;width:min(88vw,calc((100svh - 300px)*.8),520px);aspect-ratio:4/5;overflow:hidden;background:#0c1818;contain:paint}
+.frame .ph{position:absolute;left:0;top:0;width:100%;transform-origin:0 0;will-change:transform}
+.frame .two{opacity:0;transition:none}
+.hud{position:absolute;inset:0;pointer-events:none}
+.hud .grid{position:absolute;inset:0;background:
+  linear-gradient(90deg,transparent calc(33.33% - .5px),rgba(255,255,255,.22) 0,rgba(255,255,255,.22) calc(33.33% + .5px),transparent 0,transparent calc(66.66% - .5px),rgba(255,255,255,.22) 0,rgba(255,255,255,.22) calc(66.66% + .5px),transparent 0),
+  linear-gradient(180deg,transparent calc(33.33% - .5px),rgba(255,255,255,.22) 0,rgba(255,255,255,.22) calc(33.33% + .5px),transparent 0,transparent calc(66.66% - .5px),rgba(255,255,255,.22) 0,rgba(255,255,255,.22) calc(66.66% + .5px),transparent 0)}
+.hud .edge{position:absolute;width:26px;height:26px;border:2.5px solid #fff}
+.hud .e1{left:10px;top:10px;border-right:0;border-bottom:0}.hud .e2{right:10px;top:10px;border-left:0;border-bottom:0}
+.hud .e3{left:10px;bottom:10px;border-right:0;border-top:0}.hud .e4{right:10px;bottom:10px;border-left:0;border-top:0}
+.fc{position:absolute;left:0;top:0;width:18px;height:18px;border:2.5px solid #f0a184;will-change:transform}
+.fc.c1{border-right:0;border-bottom:0}.fc.c2{border-left:0;border-bottom:0}.fc.c3{border-right:0;border-top:0}.fc.c4{border-left:0;border-top:0}
+.flabel{position:absolute;left:0;top:0;will-change:transform;font:600 12px/1 var(--mono);color:#fff;background:rgba(22,41,42,.82);padding:5px 7px;white-space:nowrap}
+.flabel span{display:block}
+.flabel .l2,.flabel .l3{position:absolute;left:7px;top:5px;opacity:0}
+.caps{display:grid;gap:26px;width:min(88vw,520px)}
+.js .vf.on .caps{gap:0}
+.js .vf.on .cap{grid-area:1/1}
+.fc,.flabel{display:none}
+.js .vf.on .fc,.js .vf.on .flabel{display:block}
+.js .vf.on .cap{opacity:0;will-change:opacity}
+.js .vf.on .cap.first{opacity:1}
+.cap p{margin:0}
+.cap .say{font:500 clamp(18px,5vw,30px)/1.22 var(--display);color:#fff}
+.cap .who{font-size:14.5px;color:#b9c7c4;margin-top:8px}
+.vf-head{width:min(88vw,520px)}
+.vf-head h2{font-size:clamp(24px,5.6vw,40px);color:#fff}
+@media (min-width:900px){
+  .vf .stage{grid-template-columns:minmax(0,520px) minmax(0,420px);justify-content:center;column-gap:64px;align-items:center}
+  .js .vf.on .stage{align-content:center;padding:24px 40px}
+  .frame{width:min(40vw,calc((100svh - 60px)*.8),520px);grid-row:1/3}
+  .vf-head{align-self:end;width:auto}
+  .caps{align-self:start;width:auto}
+}
+.vf:not(.on) .frame{aspect-ratio:auto;display:grid;grid-template-columns:1fr 1fr;gap:6px;background:none;overflow:visible}
+.vf:not(.on) .frame .ph{position:static;opacity:1!important;transform:none!important}
+.vf:not(.on) .hud{display:none}
+@media (prefers-reduced-motion:reduce){
+  .js .vf.on{height:auto}
+}
+
+/* plain sections */
+section.plain{padding:72px 0}
+.about{display:grid;gap:32px}
+.about .pic img{width:100%;border-radius:2px}
+.about .lede{font:500 clamp(22px,4.8vw,30px)/1.25 var(--display);margin-bottom:.8em}
+.about blockquote{margin:22px 0 0;padding:0;font:600 19px/1.4 var(--text)}
+.about blockquote span{color:var(--rust)}
+@media (min-width:820px){.about{grid-template-columns:1.1fr .9fr;align-items:center;gap:64px}}
+
+.steps{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.steps ol{list-style:none;margin:34px 0 0;padding:0;display:grid;gap:26px;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:4px 14px}
+.steps li::before{content:counter(s);grid-row:1/3;font:700 30px/1 var(--display);color:var(--rust)}
+.steps h3{font-size:22px}
+.steps p{margin:0;color:var(--muted)}
+@media (min-width:820px){.steps ol{grid-template-columns:repeat(4,1fr);gap:28px}.steps li{grid-template-columns:1fr}.steps li::before{grid-row:auto;margin-bottom:6px}}
+
+.incl .cols{columns:1;column-gap:48px;margin:26px 0 0;padding:0 0 0 1.1em}
+.incl .cols li{break-inside:avoid;margin:0 0 10px}
+.incl .cols li::marker{color:var(--rust)}
+.incl .note{font-size:15px;color:var(--muted);max-width:40em}
+.incl .also{font:500 22px/1.3 var(--display);margin:30px 0 0;max-width:30em}
+@media (min-width:760px){.incl .cols{columns:2}}
+
+.words{background:var(--ink);color:#e9efee}
+.words .big{font:500 clamp(24px,5.4vw,38px)/1.25 var(--display);color:#fff;margin:26px 0 8px;max-width:26em}
+.words .who{color:#b9c7c4;font-size:15px}
+.words .pair{display:grid;gap:30px;margin-top:44px}
+.words .pair p{margin:0}
+.words .pair .q{font-size:18px}
+.words .rev{margin-top:40px;font-size:15.5px;color:#c9d4d2}
+.words .rev a{color:#fff}
+@media (min-width:820px){.words .pair{grid-template-columns:1fr 1fr;gap:48px}}
+
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:8px}
+.gallery figure{margin:0}
+.gallery img{width:100%;height:100%;object-fit:cover}
+.gallery .wide{grid-column:1/-1}
+@media (min-width:820px){.gallery{grid-template-columns:2fr 1fr 1fr}.gallery .wide{grid-column:1/2;grid-row:1/2}}
+
+.close{padding:80px 0 120px}
+.close .sign{font:700 clamp(30px,7vw,60px)/1.05 var(--display);max-width:13em;margin-bottom:12px}
+.close .sign span{color:var(--rust)}
+.close .lead{max-width:36em;color:var(--muted)}
+form{display:grid;gap:14px;max-width:640px;margin-top:30px}
+.two{display:grid;gap:14px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+label{display:grid;gap:6px;font-weight:600;font-size:15.5px}
+input,textarea,select{font:inherit;font-weight:400;color:var(--ink);background:var(--white);border:1.5px solid #6f7f7b;border-radius:3px;padding:11px 12px;min-height:48px;width:100%}
+textarea{min-height:120px;resize:vertical}
+.done{display:none;padding:14px 16px;background:var(--white);border:1.5px solid var(--rust);border-radius:3px}
+.done.show{display:block}
+.reach{margin-top:26px;font-size:17px}
+.reach a{font-weight:700}
+
+footer{background:var(--ink);color:#c9d4d2;padding:40px 0 110px;font-size:15px}
+footer strong{color:#fff}
+.bar{position:fixed;left:0;right:0;bottom:0;display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(245,247,249,.97);border-top:1px solid var(--line);z-index:20}
+.bar .btn{flex:1;padding:0 10px}
+.bar .btn.alt{flex:0 0 auto;padding:0 16px}
+@media (min-width:900px){.bar{display:none}footer{padding-bottom:40px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip"><strong>A website idea made by Lampbound Studio for Kylee Payne.</strong> Not her official site.</div>
+
+<main id="main">
+<section class="hero" aria-label="Kylee Payne, marriage celebrant">
+  <div class="stage">
+    <div class="h-word" aria-hidden="true">Completely you.</div>
+    <div class="h-photo"><img src="img/kylee.jpg" width="900" height="900" alt="Kylee Payne smiling, in a black jacket" fetchpriority="high"></div>
+    <div class="h-text">
+      <h1>Kylee Payne</h1>
+      <p class="role">Marriage celebrant. Perth and surrounds, happy to travel.</p>
+      <p class="tag">Your love story. Your ceremony. <span>Wonderfully relaxed.</span></p>
+      <div class="acts"><a class="btn" href="#enquire">Ask about your date</a><a class="btn alt" href="tel:0412870607">Call 0412 870 607</a></div>
+      <p class="proof">65 reviews on Easy Weddings, every one of them five stars.</p>
+    </div>
+  </div>
+</section>
+
+<section class="vf" id="frame" aria-labelledby="vf-h">
+  <div class="stage">
+    <div class="frame" aria-hidden="true">
+      <img class="ph one" src="img/frame-wide.jpg" width="1100" height="1650" alt="">
+      <img class="ph two" src="img/frame-two.jpg" width="1000" height="1500" alt="">
+      <div class="hud">
+        <div class="grid"></div>
+        <i class="edge e1"></i><i class="edge e2"></i><i class="edge e3"></i><i class="edge e4"></i>
+        <i class="fc c1"></i><i class="fc c2"></i><i class="fc c3"></i><i class="fc c4"></i>
+        <div class="flabel"><span class="l1">CELEBRANT</span><span class="l2">THE STARS</span><span class="l3">JUST THE TWO OF YOU</span></div>
+      </div>
+    </div>
+    <div class="vf-head"><h2 id="vf-h">Who's in the photo</h2></div>
+    <div class="caps">
+      <div class="cap first">
+        <p class="say">"With a professional background in Australian media, I have supported and guided some of our biggest stars."</p>
+        <p class="who">Kylee</p>
+      </div>
+      <div class="cap">
+        <p class="say">"On your wedding day, you and your partner are the stars."</p>
+        <p class="who">Kylee</p>
+      </div>
+      <div class="cap">
+        <p class="say">"She also made a thoughtful decision to stand off to the side during the ceremony, which meant all our photos captured just the two of us."</p>
+        <p class="who">Courtney K., Easy Weddings</p>
+      </div>
+      <div class="cap">
+        <p class="say">"Kylee moved around the set up and ensured she was not in the camera view for many of our special moments for photos."</p>
+        <p class="who">Emma B., Easy Weddings</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="plain" aria-labelledby="about-h">
+  <div class="wrap about">
+    <div>
+      <h2 id="about-h">Meet Kylee</h2>
+      <p class="lede" style="margin-top:18px">A people person through and through, with a background in communications, events and talent management.</p>
+      <p>Kylee has spent years helping people present at their best and feel comfortable in the big moments. Her ceremonies are a blend of heart, laughter and careful preparation. The approach is warm and relaxed, and she is very detail focused, so nothing is left to chance.</p>
+      <p>She takes the time to get to know you and what matters to you most, then writes a ceremony around your values and your love story.</p>
+      <blockquote>"I am THAT person who says <span>'If you love your job, you'll never have to work a day in your life'</span>."</blockquote>
+    </div>
+    <div class="pic"><img src="img/garden.jpg" width="900" height="1350" alt="Kylee in a bright floral dress beside a couple in a garden" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="plain steps" aria-labelledby="steps-h">
+  <div class="wrap">
+    <h2 id="steps-h">How it goes</h2>
+    <ol>
+      <li><h3>Get in touch</h3><p>It all starts here. Enquire and Kylee will get straight back to you.</p></li>
+      <li><h3>We'll meet</h3><p>An obligation free consult to talk about your dream wedding and the legals.</p></li>
+      <li><h3>We'll create</h3><p>Lots of inspiration and ideas, then together you create your own ceremony.</p></li>
+      <li><h3>Your wedding day</h3><p>Your ceremony, all you wished for and more. A rehearsal comes first, in the days before.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="plain incl" aria-labelledby="incl-h">
+  <div class="wrap">
+    <h2 id="incl-h">Every wedding ceremony includes</h2>
+    <ul class="cols">
+      <li>A first meeting, obligation free, to hear your ideas</li>
+      <li>All the legal paperwork, from the Notice of Intended Marriage to lodgement</li>
+      <li>Unlimited consultations with Kylee by email, phone or follow up meetings</li>
+      <li>Ideas, support and resources for your ceremony</li>
+      <li>Your ceremony written with you, from first draft to the final version you approve</li>
+      <li>A rehearsal at the venue in the days before</li>
+      <li>Her outfit planned with you, to suit your dress code</li>
+      <li>Arrival at least 40 minutes before you start</li>
+      <li>A professional PA system that plays your music from your phone or a USB</li>
+      <li>A signing table, tablecloth and two chairs if you need them</li>
+      <li>A printed presentation marriage certificate</li>
+      <li>A keepsake copy of your ceremony script</li>
+    </ul>
+    <p class="note">From Kylee's previous website. Ask her for what's current and for pricing.</p>
+    <p class="also">Renewals of vows, elopements, commitment ceremonies and other life celebrations too.</p>
+  </div>
+</section>
+
+<section class="plain words" aria-labelledby="words-h">
+  <div class="wrap">
+    <h2 id="words-h">From her couples</h2>
+    <p class="big">"Kylee's creative suggestion for the groom and our son to make a non-traditional entrance ... set the perfect tone for the day."</p>
+    <p class="who">Bianca H., Easy Weddings</p>
+    <div class="pair">
+      <div><p class="q">"Our story came out beautifully and we instantly felt so comfortable with her."</p><p class="who">Tamara D., Easy Weddings</p></div>
+      <div><p class="q">"Her planning for the ceremony was absolutely amazing and so so helpful for us, from word by word scripts to easy to fill questionnaire and a rehearsal a day before ..."</p><p class="who">Alistair C., Easy Weddings</p></div>
+    </div>
+    <p class="rev">65 reviews, all five stars. <a href="https://www.easyweddings.com.au/MarriageCelebrant/Perth/KyleePayneCelebrant/" rel="noopener">Read them on Easy Weddings</a></p>
+  </div>
+</section>
+
+<div class="gallery" aria-label="Kylee's ceremonies">
+  <figure class="wide"><img src="img/certificate.jpg" width="1400" height="630" alt="A couple holding their marriage certificate with Kylee beside them" loading="lazy"></figure>
+  <figure><img src="img/lakeside.jpg" width="900" height="1350" alt="Kylee with a couple by a lake, the groom holding the certificate" loading="lazy"></figure>
+  <figure><img src="img/signing.jpg" width="900" height="1350" alt="A couple at the signing table by the ocean with Kylee behind them" loading="lazy"></figure>
+</div>
+
+<section class="close" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap">
+    <p class="sign" aria-hidden="true">Wishing the happiest ever after, <span>Kylee X</span></p>
+    <h2 id="enq-h" style="font-size:clamp(24px,5vw,34px)">Ask about your date</h2>
+    <p class="lead">Tell Kylee a little about your wedding. Her first chat is free.</p>
+    <form id="enq-form" novalidate>
+      <div class="two">
+        <label>Your names<input name="names" autocomplete="name"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <div class="two">
+        <label>Wedding date<input name="date" type="date"></label>
+        <label>Venue or suburb<input name="venue"></label>
+      </div>
+      <label>What kind of ceremony?
+        <select name="kind"><option>Wedding</option><option>Elopement</option><option>Renewal of vows</option><option>Commitment ceremony</option><option>Something else</option></select>
+      </label>
+      <label>Anything else<textarea name="msg"></textarea></label>
+      <button class="btn" type="button" id="send">Send to Kylee</button>
+      <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Kylee. To reach her today, call <a href="tel:0412870607">0412 870 607</a>.</div>
+    </form>
+    <p class="reach">Or call Kylee on <a href="tel:0412870607">0412 870 607</a>.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>A preview made by Lampbound Studio for Kylee Payne Celebrant.</strong> Not affiliated, not live.</p>
+    <p>Words and photos are from Kylee's Easy Weddings listing and her earlier website. Kylee is a proud supporter of marriage equality.</p>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn alt" href="tel:0412870607">Call Kylee</a><a class="btn" href="#enquire">Ask about your date</a></div>
+
+<script>
+(function(){
+  var send=document.getElementById('send'), done=document.getElementById('done');
+  send.addEventListener('click',function(){done.classList.add('show');done.focus();});
+
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  var short=window.matchMedia('(max-height:520px)');
+  if(mq.matches) return;
+  document.documentElement.classList.add('js');
+
+  var hero=document.querySelector('.hero'), word=document.querySelector('.h-word'),
+      photo=document.querySelector('.h-photo'), text=document.querySelector('.h-text');
+  var vf=document.querySelector('.vf'), frame=document.querySelector('.frame'),
+      one=frame.querySelector('.one'), two=frame.querySelector('.two'),
+      cs=[].slice.call(frame.querySelectorAll('.fc')), lab=frame.querySelector('.flabel'),
+      ls=[].slice.call(lab.querySelectorAll('span')), caps=[].slice.call(document.querySelectorAll('.cap'));
+  if(!short.matches) vf.classList.add('on');
+
+  function cl(v){return v<0?0:v>1?1:v}
+  function ease(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2}
+  function seg(p,a,b){return ease(cl((p-a)/(b-a)))}
+  function mix(a,b,t){return a+(b-a)*t}
+  function prog(el){var r=el.getBoundingClientRect(),run=el.offsetHeight-window.innerHeight;return run>0?cl(-r.top/run):0}
+
+  // focus boxes, as fractions of the arch photo (x0,y0,x1,y1)
+  var KYLEE=[.585,.28,.85,.76], COUPLE=[.16,.235,.6,.86], TWO=[.12,.12,.88,.86];
+  // windows into the photo: x0, y0, scale
+  var W0=[0,.083,1], W1=[.10,.215,2.05];
+
+  function place(box,win,fw,fh){
+    // photo coords to frame pixels for the arch photo (height 1.5 x width)
+    var s=win[2], x0=(box[0]-win[0])*fw*s, y0=(box[1]-win[1])*fw*1.5*s,
+        x1=(box[2]-win[0])*fw*s, y1=(box[3]-win[1])*fw*1.5*s;
+    return [x0,y0,x1,y1];
+  }
+  function lerpBox(a,b,t){return [mix(a[0],b[0],t),mix(a[1],b[1],t),mix(a[2],b[2],t),mix(a[3],b[3],t)]}
+
+  var ticking=false;
+  function draw(){
+    ticking=false;
+    var pinned=getComputedStyle(hero.firstElementChild).position==='sticky';
+    var hp=pinned?prog(hero):0;
+    word.style.transform='translate3d('+(-hp*22)+'vw,'+(hp*-30)+'px,0)';
+    photo.style.transform='translate3d(0,'+(hp*-6)+'vh,0)';
+    text.style.transform='translate3d(0,'+(hp*-16)+'vh,0)';
+
+    if(!vf.classList.contains('on')) return;
+    var p=prog(vf), fw=frame.clientWidth, fh=frame.clientHeight;
+    var z=seg(p,.42,.7), swap=seg(p,.72,.86);
+    var win=[mix(W0[0],W1[0],z),mix(W0[1],W1[1],z),mix(W0[2],W1[2],z)];
+    one.style.transform='translate3d('+(-win[0]*win[2]*100)+'%,'+(-win[1]*win[2]*100)+'%,0) scale('+win[2]+')';
+    two.style.opacity=swap;
+    two.style.transform='translate3d(0,'+(-(fw*1.5-fh)/2)+'px,0) scale(1)';
+    // focus brackets: on Kylee, then onto the couple, then wide on the two of them
+    var m=seg(p,.2,.38);
+    var b=lerpBox(place(KYLEE,win,fw,fh),place(COUPLE,win,fw,fh),m);
+    var full=[fw*.08,fh*.08,fw*.92,fh*.92];
+    b=lerpBox(b,full,seg(p,.62,.8));
+    var c=18;
+    cs[0].style.transform='translate3d('+b[0]+'px,'+b[1]+'px,0)';
+    cs[1].style.transform='translate3d('+(b[2]-c)+'px,'+b[1]+'px,0)';
+    cs[2].style.transform='translate3d('+b[0]+'px,'+(b[3]-c)+'px,0)';
+    cs[3].style.transform='translate3d('+(b[2]-c)+'px,'+(b[3]-c)+'px,0)';
+    var lx=Math.min(Math.max(b[0],6),fw-170), ly=Math.min(b[3]+8,fh-30);
+    lab.style.transform='translate3d('+lx+'px,'+ly+'px,0)';
+    var t1=seg(p,.2,.3), t2=seg(p,.66,.76);
+    ls[0].style.opacity=1-t1; ls[1].style.opacity=t1*(1-t2); ls[2].style.opacity=t2;
+    // captions, one at a time
+    var bounds=[[-1,.18],[.22,.44],[.48,.68],[.74,2]];
+    caps.forEach(function(el,i){
+      var a=bounds[i][0], z2=bounds[i][1];
+      var o=Math.min(cl((p-a)/.04),cl((z2-p)/.04));
+      el.style.opacity=o;
+    });
+  }
+  function req(){if(!ticking){ticking=true;requestAnimationFrame(draw);}}
+  window.addEventListener('scroll',req,{passive:true});
+  window.addEventListener('resize',function(){
+    if(short.matches){
+      vf.classList.remove('on');
+      caps.forEach(function(el){el.style.opacity='';});
+      [one,two,lab].concat(cs).forEach(function(el){el.style.transform='';el.style.opacity='';});
+    } else vf.classList.add('on');
+    req();
+  });
+  mq.addEventListener&&mq.addEventListener('change',function(){location.reload();});
+  window.addEventListener('pageshow',req);
+  draw();
+})();
+</script>
+</body>
+</html>
