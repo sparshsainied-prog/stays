@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Hampton Park Estate, Murrumbateman: a website preview</title>
+<meta name="description" content="A website idea for Hampton Park Estate, a farm wedding venue and farm stay on 50 acres at Murrumbateman. A preview by Lampbound Studio, not their official site.">
+<meta property="og:title" content="Hampton Park Estate, Murrumbateman">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Hampton Park Estate. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/hamptonpark/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/hamptonpark/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231d2c47'/%3E%3Cpath d='M6 10h20M9 10v16M23 10v16' stroke='%23eceff3' stroke-width='2.2' fill='none'/%3E%3Cpath d='M11 10c2 6 8 6 10 0' stroke='%23f1b75d' stroke-width='1.8' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet"><!-- slop-ok: Playfair Display and Lora are the faces on hamptonparkestate.com.au -->
+<style>
+:root{
+  --wine:#692437; --wine-deep:#4e1a29; --dusk:#1d2c47; --dusk-2:#2c3f62; --ember:#bb5f30; --straw:#f1b75d;
+  --sky:#eceff3; --ink:#241b17; --soft:#5b5450; --line:#cfd4dc; --white:#fbfcfd;
+  --display:"Playfair Display", Georgia, serif; /* slop-ok: their own heading face */
+  --text:"Lora", Georgia, serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--sky);color:var(--ink);font:17px/1.62 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid #111;outline-offset:0;box-shadow:0 0 0 6px #fff}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:0;background:var(--dusk);color:var(--white);padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.strip{background:var(--dusk);color:#c9d1de;font:14px/1.4 var(--text);padding:9px 16px;text-align:center}
+.strip strong{color:var(--white)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.06;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:3px;background:var(--wine);color:var(--white);text-decoration:none;border:0;font:600 16px/1 var(--text);cursor:pointer}
+.btn:hover{background:var(--wine-deep)}
+.btn.alt{background:var(--white);color:var(--dusk);border:1.5px solid var(--dusk)}
+
+/* hero: paddock photo slow, logo between, alpaca print fastest */
+.hero{position:relative;height:160svh;background:var(--dusk)}
+.hero-stage{position:sticky;top:0;height:100svh;overflow:hidden}
+.h-photo{position:absolute;inset:0;transform:translate3d(0,calc(var(--p,0) * -4%),0) scale(calc(1.08 - var(--p,0) * .06))}
+.h-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.h-shade{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(16,24,40,.55),rgba(16,24,40,0) 38%,rgba(16,24,40,0) 52%,rgba(16,24,40,.78))}
+.h-logo{position:absolute;left:20px;right:20px;top:9svh;transform:translate3d(0,calc(var(--p,0) * -22svh),0)}
+.h-logo img{width:min(560px,88vw);filter:drop-shadow(0 2px 10px rgba(0,0,0,.45))}
+.h-logo h1{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.h-copy{position:absolute;left:20px;right:20px;bottom:104px;color:var(--white);max-width:30ch;transform:translate3d(0,calc(var(--p,0) * -12svh),0)}
+.h-copy p{font-size:clamp(20px,4.6vw,30px);line-height:1.3;margin:0 0 10px;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+.h-copy .where{font-size:16px;color:#e6e9ee;margin:0}
+.h-print{position:absolute;right:16px;bottom:30svh;width:min(30vw,190px);background:var(--white);padding:7px 7px 26px;box-shadow:0 10px 24px rgba(0,0,0,.35);transform:translate3d(0,calc(var(--p,0) * -58svh),0) rotate(calc(5deg - var(--p,0) * 7deg))}
+.h-print span{position:absolute;left:8px;right:8px;bottom:5px;font:italic 13px/1.2 var(--text);color:var(--soft)}
+@media (min-width:860px){
+  .h-logo,.h-copy{left:max(20px,calc((100vw - 1120px) / 2 + 20px))}
+  .h-print{right:max(24px,calc((100vw - 1120px) / 2 + 24px));bottom:22svh;width:220px}
+  .h-photo img{object-position:50% 55%}
+}
+
+/* intro */
+.intro{padding:84px 0 70px}
+.intro-grid{display:grid;gap:34px}
+.intro h2{font-size:clamp(34px,7.4vw,60px);max-width:13ch;color:var(--dusk)}
+.intro .lead{font-size:21px;line-height:1.5;max-width:34ch;margin-top:20px}
+.facts{list-style:none;padding:0;margin:26px 0 0;border-top:1px solid var(--line);max-width:520px}
+.facts li{padding:12px 0;border-bottom:1px solid var(--line);display:flex;gap:14px;justify-content:space-between}
+.facts b{font-family:var(--display);font-weight:500;color:var(--dusk);font-size:18px}
+.intro-pics{display:grid;grid-template-columns:1.1fr .9fr;gap:10px;align-items:end}
+.intro-pics figure{margin:0}
+.intro-pics figcaption{font-size:14px;color:var(--soft);margin-top:6px}
+.intro-pics .b{margin-bottom:46px}
+@media (min-width:860px){.intro-grid{grid-template-columns:1fr 1fr;align-items:center;column-gap:56px}}
+
+/* the sun going down: the signature */
+.sun{position:relative;height:640svh;background:var(--dusk)}
+.sun-stage{position:sticky;top:0;height:100svh;overflow:hidden}
+.sky{position:absolute;inset:0}
+.sky i{position:absolute;inset:0;display:block}
+.sky .s1{background:linear-gradient(#7fa4cf,#cfe0ee 70%)}
+.sky .s2{background:linear-gradient(#c98a55,#f1b75d 60%,#f6d79c);opacity:var(--o2,0)}
+.sky .s3{background:linear-gradient(#0f1a2e,#2c3f62 55%,#bb5f30);opacity:var(--o3,0)}
+.sky .s4{background:linear-gradient(#070c18,#1d2c47 70%);opacity:var(--o4,0)}
+.disc{position:absolute;left:0;top:0;width:90px;height:90px;margin:-45px 0 0 -45px;border-radius:50%;background:radial-gradient(circle,#fff6dc 0 38%,#f6c76b 62%,rgba(241,183,93,0) 72%);will-change:transform}
+.hills{position:absolute;left:0;right:0;bottom:0;height:26svh;width:100%}
+.clock{position:absolute;left:12px;top:12px;z-index:3;color:var(--white);font-family:var(--display);background:rgba(17,26,44,.72);padding:8px 12px 9px;border-radius:3px}
+.clock b{display:block;font-size:clamp(38px,9vw,64px);line-height:1;font-weight:700;font-variant-numeric:tabular-nums}
+.clock span{font:15px/1.3 var(--text);color:#eef1f5}
+.frame{position:absolute;left:50%;top:45%;width:min(70vw,44svh,330px);aspect-ratio:4/5;transform:translate(-50%,-52%);z-index:2}
+.shot{position:absolute;inset:0;margin:0;background:var(--white);padding:8px;box-shadow:0 14px 30px rgba(0,0,0,.35);opacity:0;transform:translate3d(0,14px,0) rotate(var(--r,0deg));transition:opacity .45s ease,transform .45s ease}
+.shot img{width:100%;height:100%;object-fit:cover}
+.shot.on{opacity:1;transform:rotate(var(--r,0deg))}
+.shot figcaption{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);padding:10px 4px 2px;font:15px/1.4 var(--text);color:var(--ink)}
+.shot figcaption b{display:block;font-family:var(--display);font-size:22px;color:var(--dusk)}
+.cap{position:absolute;left:12px;right:12px;bottom:76px;z-index:3;background:var(--white);color:var(--ink);padding:14px 16px 12px;border-radius:3px;box-shadow:0 6px 18px rgba(0,0,0,.25);min-height:96px}
+.cap div{display:none}
+.cap div.on{display:block}
+.cap h3{font-size:clamp(22px,5.4vw,30px);color:var(--dusk)}
+.cap p{margin:4px 0 0;font-size:15.5px;line-height:1.45;color:var(--soft)}
+@media (min-width:860px){
+  .frame{left:auto;right:max(40px,calc((100vw - 1120px) / 2 + 40px));width:min(34vw,400px);transform:translate(0,-52%)}
+  .frame{top:50%}
+  .cap{left:max(20px,calc((100vw - 1120px) / 2 + 20px));right:auto;bottom:auto;top:44%;width:min(40vw,440px);padding:22px 24px 18px}
+  .cap h3{font-size:36px}
+  .cap p{font-size:17px}
+  .clock{left:max(20px,calc((100vw - 1120px) / 2 + 20px));top:30px}
+}
+
+/* on the estate */
+.estate{background:var(--dusk);color:#dfe4ec;padding:90px 0}
+.estate h2{font-size:clamp(34px,7vw,56px);color:var(--white);max-width:14ch;margin-bottom:30px}
+.est-grid{display:grid;gap:36px}
+.est-list{list-style:none;padding:0;margin:0}
+.est-list li{padding:16px 0;border-top:1px solid #3a4b6d}
+.est-list h3{font-size:clamp(21px,4.6vw,26px);color:var(--white);font-weight:500;margin-bottom:4px}
+.est-list p{margin:0;font-size:16px;color:#c3ccda}
+.est-pics{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.est-pics img{width:100%;height:100%;object-fit:cover}
+.est-pics .w{grid-column:1 / -1}
+@media (min-width:860px){.est-grid{grid-template-columns:1.05fr .95fr;column-gap:56px;align-items:start}}
+
+/* food */
+.food{padding:90px 0}
+.food-grid{display:grid;gap:30px}
+.food h2{font-size:clamp(34px,7vw,56px);color:var(--wine);max-width:12ch;margin-bottom:18px}
+.food dl{margin:0;max-width:560px}
+.food dt{font-family:var(--display);font-size:24px;color:var(--dusk);margin-top:20px}
+.food dd{margin:4px 0 0}
+.food figure{margin:0;max-width:420px}
+.food figcaption{font-size:14px;color:var(--soft);margin-top:6px}
+@media (min-width:860px){.food-grid{grid-template-columns:.85fr 1.15fr;column-gap:64px;align-items:center}.food figure{order:-1}}
+
+/* packages */
+.pk{background:var(--white);padding:90px 0;border-top:1px solid var(--line)}
+.pk h2{font-size:clamp(34px,7vw,56px);color:var(--dusk);margin-bottom:12px}
+.pk .intro-p{max-width:52ch;margin-bottom:30px}
+.pk-table{width:100%;border-collapse:collapse;font-size:16px}
+.pk-table th{text-align:left;font:600 14px/1.3 var(--text);color:var(--soft);padding:0 10px 10px 0;border-bottom:2px solid var(--dusk)}
+.pk-table td{padding:14px 10px 14px 0;border-bottom:1px solid var(--line);vertical-align:top;font-variant-numeric:tabular-nums}
+.pk-table td:first-child{font-family:var(--display);font-size:20px;color:var(--dusk);font-weight:500}
+.pk-table tr.big td:first-child{color:var(--wine);font-weight:700}
+@media (max-width:620px){
+  .pk-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .pk-table tr{display:grid;grid-template-columns:1fr auto;border-bottom:1px solid var(--line);padding:12px 0}
+  .pk-table td{border:0;padding:2px 0}
+  .pk-table td:first-child{grid-column:1 / -1}
+  .pk-table td:nth-child(2)::before{content:"Guests: "}
+  .pk-table td:nth-child(3){text-align:right}
+  .pk-table td:nth-child(4){grid-column:1 / -1;color:var(--soft);font-size:15px}
+}
+
+/* enquire */
+.enq{padding:90px 0 120px}
+.enq-grid{display:grid;gap:34px}
+.enq h2{font-size:clamp(34px,7vw,56px);color:var(--dusk);margin-bottom:14px}
+form{display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:600;font-size:15px}
+input,textarea,select{font:400 17px/1.4 var(--text);padding:12px 14px;border:1.5px solid #6d7686;border-radius:3px;background:#fff;color:var(--ink);min-height:48px;width:100%}
+textarea{min-height:120px;resize:vertical}
+.two{display:grid;gap:16px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.note{font-size:14.5px;color:var(--soft);margin:0}
+.done{display:none;padding:16px;border:1.5px solid var(--wine);border-radius:3px;background:#f7ecef}
+.done.show{display:block}
+.enq-logo{width:260px;margin-bottom:22px}
+@media (min-width:860px){.enq-grid{grid-template-columns:.85fr 1.15fr;column-gap:56px}}
+
+footer{background:var(--dusk);color:#b9c3d3;padding:40px 0 110px;font-size:15px}
+footer strong{color:var(--white)}
+
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px}
+.bar .btn{flex:1;box-shadow:0 6px 16px rgba(0,0,0,.28)}
+.bar .btn:focus-visible{outline:3px solid #111;box-shadow:0 0 0 6px #fff}
+@media (min-width:860px){.bar{left:auto;right:24px;bottom:24px}.bar .btn{flex:none}}
+
+@media (prefers-reduced-motion:reduce),(max-height:520px){
+  .hero{height:auto}.hero-stage{position:relative;height:100svh;min-height:560px}
+  .h-photo,.h-logo,.h-copy,.h-print{transform:none!important}
+  .h-print{display:none}
+  .sun{height:auto}.sun-stage{position:relative;height:auto;padding:24px 0 30px;background:var(--dusk)}
+  .sky,.disc,.hills{display:none}
+  .clock{position:static;padding:0 20px 18px}
+  .frame{position:static;transform:none;width:auto;aspect-ratio:auto;display:grid;gap:22px;padding:0 20px;max-width:640px;margin:0 auto}
+  .shot{position:static;opacity:1;transform:none;transition:none}
+  .shot img{aspect-ratio:4/5;height:auto}
+  .cap{display:none}
+  .shot figcaption{position:static;width:auto;height:auto;overflow:visible;clip:auto;display:block}
+}
+@media (max-height:520px){.hero-stage{min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;padding:16px 20px 84px}.h-logo,.h-copy{position:relative;left:auto;right:auto;top:auto;bottom:auto}.h-logo img{width:min(340px,50vw)}.h-copy p{font-size:20px}}
+</style>
+<noscript><style>
+  .hero{height:auto}.hero-stage{position:relative;height:100svh;min-height:560px}
+  .h-photo,.h-logo,.h-copy{transform:none!important}.h-print{display:none}
+  .sun{height:auto}.sun-stage{position:relative;height:auto;padding:24px 0 30px}
+  .sky,.disc,.hills,.cap{display:none}
+  .clock{position:static;padding:0 20px 18px}
+  .frame{position:static;transform:none;width:auto;aspect-ratio:auto;display:grid;gap:22px;padding:0 20px;max-width:640px;margin:0 auto}
+  .shot{position:static;opacity:1;transform:none}
+  .shot img{aspect-ratio:4/5;height:auto}
+  .shot figcaption{position:static;width:auto;height:auto;overflow:visible;clip:auto;display:block}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip">A website idea made by <strong>Lampbound Studio</strong> for Hampton Park Estate. Not their official site.</div>
+
+<main id="main">
+<section class="hero" data-pin aria-label="Introduction">
+  <div class="hero-stage">
+    <div class="h-photo">
+      <picture>
+        <source media="(max-width:700px) and (orientation:portrait)" srcset="img/hero-m.jpg" width="799" height="1200">
+        <img src="img/hero.jpg" width="1800" height="1197" alt="A bride and groom walking hand in hand through the dry paddock grass at sunset, gums and hills behind" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="h-shade"></div>
+    <div class="h-logo">
+      <h1>Hampton Park Estate</h1>
+      <img src="img/logo-light.png" width="1200" height="399" alt="Hampton Park Estate, wedding venue and luxury accommodation">
+    </div>
+    <div class="h-print" aria-hidden="true"><img src="img/alpacas-gate.jpg" width="525" height="700" alt=""><span>Two of the alpacas</span></div>
+    <div class="h-copy">
+      <p>Southern NSW's newest luxury wedding venue and farm escape.</p>
+      <p class="where">Gooda Creek Road, Murrumbateman. 20 km from Canberra.</p>
+    </div>
+  </div>
+</section>
+
+<section class="intro" aria-labelledby="intro-h">
+  <div class="wrap intro-grid">
+    <div>
+      <h2 id="intro-h">Fifty private acres just outside Canberra</h2>
+      <p class="lead">Formal gardens, rustic country charm, amazing district views and curious alpacas, amongst the rolling hills of Murrumbateman.</p>
+      <p>Your ceremony and reception are on the one farm, with luxury farm stay huts on the estate too. No re-runs, just your day, your way.</p>
+      <ul class="facts">
+        <li><span>Guests</span><b>Up to 120</b></li>
+        <li><span>Ceremony and reception</span><b>On the one farm</b></li>
+        <li><span>Bookings</span><b>Open now</b></li>
+      </ul>
+    </div>
+    <div class="intro-pics">
+      <figure><img src="img/view.jpg" width="900" height="1200" alt="Wattle in flower over green paddocks, with the district's hills on the horizon" loading="lazy"><figcaption>The district view</figcaption></figure>
+      <figure class="b"><img src="img/grazing.jpg" width="750" height="1000" alt="Two alpacas grazing in long grass on the estate" loading="lazy"><figcaption>Alpacas in the long grass</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sun" data-pin data-sun aria-labelledby="sun-h">
+  <div class="sun-stage">
+    <div class="sky" aria-hidden="true"><i class="s1"></i><i class="s2"></i><i class="s3"></i><i class="s4"></i></div>
+    <div class="disc" aria-hidden="true"></div>
+    <svg class="hills" viewBox="0 0 1200 260" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120 C120 70 230 96 330 82 C450 64 520 30 640 52 C760 74 820 108 930 90 C1040 72 1110 60 1200 76 L1200 260 L0 260Z" fill="#1d2c47"/><path d="M0 176 C160 138 300 160 420 150 C560 138 650 120 790 140 C930 160 1050 150 1200 132 L1200 260 L0 260Z" fill="#14203a"/></svg>
+    <div class="clock"><h2 id="sun-h" class="vh">One wedding day at the estate, from 4pm until after dark</h2><b class="time" aria-hidden="true">4:00 pm</b><span>The HPE Signature: five hours from 4pm</span></div>
+    <div class="frame">
+      <figure class="shot on" style="--r:-2deg"><img src="img/arrive.jpg" width="1050" height="1400" alt="The gravel drive into the estate, lined with young poplars and a big gum" loading="lazy"><figcaption><b>Up the drive</b>Fifty private acres, 20 km from Canberra.</figcaption></figure>
+      <figure class="shot" style="--r:2deg"><img src="img/redsofa.jpg" width="1400" height="931" alt="A bride sitting on a red velvet sofa in the long grass, hills behind" loading="lazy"><figcaption><b>Your ceremony spot</b>The formal garden and its covered rotunda, or somewhere rustic.</figcaption></figure>
+      <figure class="shot" style="--r:-1.5deg"><img src="img/alpaca-kiss.jpg" width="932" height="1400" alt="A woman in a pink dress touching noses with an alpaca over the fence" loading="lazy"><figcaption><b>Meet the alpacas</b>The estate's curious alpacas, up close.</figcaption></figure>
+      <figure class="shot" style="--r:1.5deg"><img src="img/long-table.jpg" width="1600" height="1065" alt="A long table set outdoors with white candles, crystal glasses and a bright floral centrepiece, paddocks behind" loading="lazy"><figcaption><b>Farm to Feast</b>Share plates, plated courses and house-made desserts from local produce.</figcaption></figure>
+      <figure class="shot" style="--r:-2deg"><img src="img/golden.jpg" width="1600" height="1064" alt="A couple watching the alpaca herd in the paddock as the sun goes down" loading="lazy"><figcaption><b>Golden hour</b>Out in the paddock with the herd.</figcaption></figure>
+      <figure class="shot" style="--r:2deg"><img src="img/sunset.jpg" width="1050" height="1400" alt="An orange sunset over the district, vine leaves in the foreground" loading="lazy"><figcaption><b>The sun goes down</b>Over the district.</figcaption></figure>
+      <figure class="shot" style="--r:-1deg"><img src="img/lights.jpg" width="900" height="1200" alt="A timber shed lit with fairy lights and wagon-wheel chandeliers, hay bales and a cowhide rug inside" loading="lazy"><figcaption><b>Lights on</b>Fairy lights and hay bales after dark.</figcaption></figure>
+    </div>
+    <div class="cap" aria-hidden="true">
+      <div class="on"><h3>Up the drive</h3><p>Fifty private acres, 20 km from Canberra.</p></div>
+      <div><h3>Your ceremony spot</h3><p>The formal garden and its covered rotunda, or somewhere rustic.</p></div>
+      <div><h3>Meet the alpacas</h3><p>The estate's curious alpacas, up close.</p></div>
+      <div><h3>Farm to Feast</h3><p>Share plates, plated courses and house-made desserts from local produce.</p></div>
+      <div><h3>Golden hour</h3><p>Out in the paddock with the herd.</p></div>
+      <div><h3>The sun goes down</h3><p>Over the district.</p></div>
+      <div><h3>Lights on</h3><p>Fairy lights and hay bales after dark.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="estate" aria-labelledby="est-h">
+  <div class="wrap">
+    <h2 id="est-h">Everything for the day is on the farm</h2>
+    <div class="est-grid">
+      <ul class="est-list">
+        <li><h3>Two kinds of ceremony</h3><p>The formal garden, with a covered rotunda for your vows, or a rustic spot out on the estate.</p></li>
+        <li><h3>If it rains</h3><p>Clear umbrellas for your guests, and the shearing shed or the venue pergola to move into.</p></li>
+        <li><h3>The styling studio</h3><p>Use the Hampton Park Styling Studio, or bring your own pieces and approved vendors.</p></li>
+        <li><h3>A coordinator on the day</h3><p>Timelines, vendors, styling and the logistics, looked after by the in-house team.</p></li>
+        <li><h3>Farm stay huts</h3><p>Luxury huts on the estate for the two of you and your guests. Ask Amy which are open for your date.</p></li>
+      </ul>
+      <div class="est-pics">
+        <img class="w" src="img/table.jpg" width="1400" height="931" alt="A styled outdoor table with candles and flowers, with an old carriage shed and hills behind" loading="lazy">
+        <img src="img/styling.jpg" width="675" height="900" alt="A red armchair, a timber writing table and topiary balls set up on the lawn" loading="lazy">
+        <img src="img/dusk-tree.jpg" width="675" height="900" alt="A bare tree silhouetted against a blue and orange dusk sky" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="food" aria-labelledby="food-h">
+  <div class="wrap food-grid">
+    <div>
+      <h2 id="food-h">Food and drink from the district</h2>
+      <dl>
+        <dt>Farm to Feast</dt>
+        <dd>The in-house menu: share plates, plated courses and house-made desserts, made with local produce.</dd>
+        <dt>Raise Your Glass</dt>
+        <dd>The drinks package, with local wineries, craft beers and boutique ciders, plus a cocktail menu.</dd>
+        <dt>Your own caterer</dt>
+        <dd>Outside catering is welcome too. Ask about the caterers the estate works with.</dd>
+      </dl>
+    </div>
+    <figure><img src="img/menu.jpg" width="750" height="1000" alt="A place setting on a rustic table with a printed menu, red flowers and grapes" loading="lazy"><figcaption>A table set for dinner</figcaption></figure>
+  </div>
+</section>
+
+<section class="pk" aria-labelledby="pk-h">
+  <div class="wrap">
+    <h2 id="pk-h">Six ways to marry here</h2>
+    <p class="intro-p">From an elopement for four to the full HPE Signature. Inclusions and prices come with the brochure, so ask Amy for the current one.</p>
+    <table class="pk-table">
+      <thead><tr><th scope="col">Package</th><th scope="col">Guests</th><th scope="col">Hire</th><th scope="col">Days and start</th></tr></thead>
+      <tbody>
+        <tr><td>Elopement</td><td>Up to 4</td><td>3 hours</td><td>Tuesday to Thursday, 10am or 4pm</td></tr>
+        <tr><td>Minimony</td><td>Up to 10</td><td>3 hours</td><td>Tuesday to Thursday, 10am or 4pm</td></tr>
+        <tr><td>Intimate</td><td>Up to 20</td><td>3 hours</td><td>Tuesday to Thursday, 10am or 4pm</td></tr>
+        <tr><td>I Do's Only</td><td>10 or more</td><td>3 hours</td><td>Tuesday to Thursday, 10am or 4pm</td></tr>
+        <tr><td>All In</td><td>30 or more</td><td>5 hours</td><td>Tuesday to Sunday, from 4pm</td></tr>
+        <tr class="big"><td>HPE Signature</td><td>65 or more</td><td>5 hours</td><td>Thursday to Sunday, from 4pm</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="enq" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap enq-grid">
+    <div>
+      <img class="enq-logo" src="img/logo-dark.png" width="1200" height="399" alt="" loading="lazy">
+      <h2 id="enq-h">Ask about your date</h2>
+      <p>Send Amy your date and numbers for availability, pricing and a first look at the estate. Or call <a href="tel:0418645095">0418 645 095</a>.</p>
+      <p>394 Gooda Creek Road, Murrumbateman NSW 2582. About 4 km along Gooda Creek Road from the Barton Highway.</p>
+      <p class="note">This is a preview, so the form does not send anything.</p>
+    </div>
+    <form id="enq-form" novalidate>
+      <div class="two">
+        <label>Your names<input name="names" autocomplete="name"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <div class="two">
+        <label>Wedding date<input name="date" type="date"></label>
+        <label>Roughly how many guests?<input name="guests" inputmode="numeric"></label>
+      </div>
+      <div class="two">
+        <label>Package
+          <select name="package">
+            <option value="">Not sure yet</option>
+            <option>Elopement</option><option>Minimony</option><option>Intimate</option>
+            <option>I Do's Only</option><option>All In</option><option>HPE Signature</option>
+          </select>
+        </label>
+        <label>Postcode<input name="postcode" inputmode="numeric" autocomplete="postal-code"></label>
+      </div>
+      <label>Details<textarea name="msg"></textarea></label>
+      <button class="btn" type="button" id="send">Send to Amy</button>
+      <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to the estate. To ask today, call <a href="tel:0418645095">0418 645 095</a>.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>A preview made by Lampbound Studio for Hampton Park Estate.</strong> Not affiliated, not live.</p>
+    <p>Words and photos are from the estate's own website and its public wedding directory listings.</p>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn alt" href="tel:0418645095">Call Amy</a><a class="btn" href="#enquire">Check your date</a></div>
+
+<script>
+(function(){
+  var pins=[].slice.call(document.querySelectorAll('[data-pin]'));
+  var sun=document.querySelector('[data-sun]');
+  var shots=[].slice.call(sun.querySelectorAll('.shot'));
+  var caps=[].slice.call(sun.querySelectorAll('.cap div'));
+  var disc=sun.querySelector('.disc'), time=sun.querySelector('.time'), stage=sun.querySelector('.sun-stage');
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce), (max-height:520px)');
+  var on=false,ticking=false,last=-1;
+  function clamp(v){return Math.min(1,Math.max(0,v))}
+  function fmt(p){var m=Math.round(p*300/5)*5,h=4+Math.floor(m/60),mm=m%60;return h+':'+(mm<10?'0':'')+mm+' pm'}
+  function setStage(n){
+    if(n===last)return;last=n;
+    shots.forEach(function(s,k){s.classList.toggle('on',k===n)});
+    caps.forEach(function(c,k){c.classList.toggle('on',k===n)});
+  }
+  function drawSun(p){
+    var w=stage.clientWidth,h=stage.clientHeight;
+    var x=w*(.12+.76*p), y=h*(.16+.78*Math.pow(p,1.6));
+    disc.style.transform='translate3d('+x.toFixed(1)+'px,'+y.toFixed(1)+'px,0)';
+    sun.style.setProperty('--o2',clamp((p-.25)*3.2).toFixed(3));
+    sun.style.setProperty('--o3',clamp((p-.58)*3.4).toFixed(3));
+    sun.style.setProperty('--o4',clamp((p-.86)*6).toFixed(3));
+    time.textContent=fmt(p);
+  }
+  function update(){
+    ticking=false;if(!on)return;
+    pins.forEach(function(el){
+      var r=el.getBoundingClientRect(),total=el.offsetHeight-window.innerHeight;
+      var p=total>0?clamp(-r.top/total):1;
+      el.style.setProperty('--p',p.toFixed(4));
+      if(el===sun){drawSun(p);setStage(Math.min(shots.length-1,Math.floor(p*shots.length*1.04)));}
+    });
+  }
+  function finish(){
+    shots.forEach(function(s){s.classList.add('on')});time.textContent='4:00 pm';
+    pins.forEach(function(el){el.style.setProperty('--p','0')});
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
+  function start(){if(on)return;on=true;last=-1;addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);update();}
+  function stop(){on=false;removeEventListener('scroll',onScroll);removeEventListener('resize',onScroll);finish();}
+  if(mq.matches)finish();else start();
+  if(mq.addEventListener)mq.addEventListener('change',function(){mq.matches?stop():start()});
+  document.getElementById('send').addEventListener('click',function(){var d=document.getElementById('done');d.classList.add('show');d.focus();});
+})();
+</script>
+</body>
+</html>

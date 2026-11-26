@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Mansfield Party Hire and Events: a website preview</title>
+<meta name="description" content="A website idea for Mansfield Party Hire and Events: marquees, furniture, styling and on-the-day coordination for High Country weddings. A preview by Lampbound Studio, not their official site.">
+<meta property="og:title" content="Mansfield Party Hire and Events">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Mansfield Party Hire and Events. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/mansfieldpartyhire/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/mansfieldpartyhire/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23151314'/%3E%3Ccircle cx='16' cy='16' r='12' fill='%23f075b0'/%3E%3Cpath d='M7 22 Q10 20 12 11 Q14 17 16 18 Q18 17 20 11 Q22 20 25 22Z' fill='%23fafaf7'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Raleway:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#f075b0; --pink-deep:#a63a6d; --black:#151314; --night:#0e2530; --canvas:#fafaf7; --gum:#4d5a38; --gum-2:#3a4529;
+  --ink:#1d1a1b; --soft:#57524f; --line:#dcd9d2; --sky:#cfdbe6;
+  --display:"Barlow Condensed", "Arial Narrow", sans-serif; --text:"Raleway", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--canvas);color:var(--ink);font:500 17px/1.6 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid #111;outline-offset:0;box-shadow:0 0 0 6px #fff}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:0;background:var(--black);color:#fff;padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.strip{background:var(--black);color:#d6d2d4;font-size:14px;line-height:1.4;padding:9px 16px;text-align:center}
+.strip strong{color:#fff}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:.98;margin:0;text-transform:uppercase;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;background:var(--pink);color:var(--black);text-decoration:none;border:0;font:700 16px/1 var(--text);cursor:pointer}
+.btn:hover{background:#f48fc0}
+.btn.alt{background:var(--black);color:#fff;border:1.5px solid #fff}
+
+/* hero */
+.hero{position:relative;height:160svh;background:var(--black)}
+.hero-stage{position:sticky;top:0;height:100svh;overflow:hidden}
+.h-photo{position:absolute;inset:0;transform:translate3d(0,calc(var(--p,0) * -5%),0) scale(calc(1.1 - var(--p,0) * .08))}
+.h-photo img{width:100%;height:100%;object-fit:cover;object-position:46% 60%}
+.h-shade{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,12,.62),rgba(10,10,12,.08) 40%,rgba(10,10,12,0) 55%,rgba(10,10,12,.7))}
+.h-copy{position:absolute;left:20px;right:20px;top:7svh;color:#fff;transform:translate3d(0,calc(var(--p,0) * -16svh),0)}
+.hero h1{font-size:min(clamp(54px,15.5vw,150px),15svh);max-width:9ch;text-shadow:0 2px 14px rgba(0,0,0,.35)}
+.hero h1 span{display:block;font-size:.42em;letter-spacing:.04em;margin-top:.25em;color:var(--pink)}
+.h-sub{position:absolute;left:20px;right:20px;bottom:100px;color:#fff;max-width:28ch;font-size:clamp(19px,4.4vw,26px);line-height:1.35;text-shadow:0 1px 10px rgba(0,0,0,.5);transform:translate3d(0,calc(var(--p,0) * -10svh),0)}
+.h-print{position:absolute;right:14px;bottom:27svh;width:min(42vw,250px);background:#fff;padding:7px 7px 28px;box-shadow:0 12px 26px rgba(0,0,0,.4);transform:translate3d(0,calc(var(--p,0) * -62svh),0) rotate(calc(-4deg + var(--p,0) * 6deg))}
+.h-print span{position:absolute;left:9px;right:9px;bottom:6px;font:600 12.5px/1.2 var(--text);color:var(--soft)}
+@media (min-width:860px){
+  .h-copy,.h-sub{left:max(20px,calc((100vw - 1120px) / 2 + 20px))}
+  .hero h1{max-width:12ch}
+  .h-print{right:max(24px,calc((100vw - 1120px) / 2 + 24px));width:300px;bottom:20svh}
+}
+
+/* intro */
+.intro{padding:84px 0 70px}
+.intro-grid{display:grid;gap:30px}
+.intro h2{font-size:clamp(44px,10vw,84px);max-width:11ch}
+.intro .lead{font-size:21px;line-height:1.5;max-width:36ch}
+.areas{font-size:15.5px;color:var(--soft);max-width:60ch;border-top:1px solid var(--line);padding-top:14px;margin-top:22px}
+.areas b{color:var(--ink)}
+.intro figure{margin:0}
+.intro figcaption{font-size:14px;color:var(--soft);margin-top:6px}
+@media (min-width:860px){.intro-grid{grid-template-columns:1.1fr .9fr;column-gap:56px;align-items:center}}
+
+/* the signature: up, on and gone */
+.pitch{position:relative;height:600svh;background:var(--night)}
+.pitch-stage{position:sticky;top:0;height:100svh;overflow:hidden;background:var(--sky)}
+.night{position:absolute;inset:0;background:linear-gradient(#071820,#0e2530 60%,#22394a);opacity:var(--n,0)}
+.scene{position:absolute;left:0;right:0;bottom:68px;width:100%;height:34svh;overflow:visible}
+.poles line{stroke:#6d5a43;stroke-width:7;stroke-linecap:round}
+.pole{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(var(--a,0))}
+.canopy{transform:translate3d(0,calc((1 - var(--b,0)) * -60px),0);opacity:var(--b,0)}
+.ropes{opacity:var(--b,0)}
+.walls{opacity:var(--c,0)}
+.inside{opacity:var(--c,0)}
+.glow{opacity:var(--n,0)}
+.hilldim{opacity:calc(var(--n,0) * .6)}
+.bulbs circle{fill:#ffe3a3;opacity:var(--n,0)}
+.marquee{transform:translate3d(0,calc(var(--g,0) * 30px),0);opacity:calc(1 - var(--g,0))}
+.pegs{opacity:calc(var(--a,0) - var(--g,0))}
+.p-cap{position:absolute;left:12px;right:12px;top:14px;z-index:3;background:#fff;color:var(--ink);padding:14px 16px;border-radius:4px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.p-cap > div{display:none}
+.p-cap > div.on{display:block}
+.p-cap h3{font-size:clamp(30px,8vw,46px);color:var(--black)}
+.p-cap p{margin:6px 0 0;font-size:15.5px;line-height:1.45}
+.p-cap q{display:block;margin-top:8px;font-size:15px;color:var(--soft);quotes:"\201C" "\201D"}
+.p-cap q + span{display:block;font-size:13.5px;color:var(--pink-deep);font-weight:700;margin-top:2px}
+.p-photos{position:absolute;right:16px;top:41%;width:min(50vw,250px);aspect-ratio:4/3;z-index:2}
+.pp{position:absolute;inset:0;margin:0;background:#fff;padding:6px;box-shadow:0 10px 22px rgba(0,0,0,.3);opacity:0;transform:translate3d(0,12px,0) rotate(var(--r,0deg));transition:opacity .4s ease,transform .4s ease}
+.pp img{width:100%;height:100%;object-fit:cover}
+.pp.on{opacity:1;transform:rotate(var(--r,0deg))}
+.pp figcaption{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.gone{position:absolute;left:20px;right:20px;top:16svh;z-index:3;color:var(--black);opacity:0;transform:translate3d(0,18px,0);transition:opacity .5s ease,transform .5s ease}
+.gone.on{opacity:1;transform:none}
+.gone p{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(40px,11vw,92px);line-height:.95;margin:0}
+.gone span{display:block;font:600 17px/1.45 var(--text);margin-top:14px;color:var(--gum-2);max-width:34ch}
+@media (min-width:860px){
+  .p-cap{left:max(20px,calc((100vw - 1120px) / 2 + 20px));right:auto;top:8svh;width:420px;padding:22px 24px}
+  .p-photos{right:max(24px,calc((100vw - 1120px) / 2 + 24px));top:8svh;bottom:auto;width:360px}
+  .gone{left:max(20px,calc((100vw - 1120px) / 2 + 20px));top:14svh}
+  .scene{height:64svh;bottom:0}
+}
+
+/* hire */
+.hire{padding:90px 0}
+.hire h2{font-size:clamp(44px,10vw,84px);margin-bottom:12px}
+.hire .intro-p{max-width:50ch;margin-bottom:34px}
+.lead-item{display:grid;gap:18px;margin-bottom:40px}
+.lead-item h3{font-size:clamp(34px,7vw,52px)}
+.lead-item p{margin:8px 0 0;max-width:46ch}
+.sizes{font-family:var(--display);font-weight:700;font-size:clamp(24px,5vw,32px);text-transform:uppercase;color:var(--gum);margin-top:12px;line-height:1.1}
+.items{list-style:none;padding:0;margin:0;display:grid;gap:0;border-top:2px solid var(--black)}
+.items li{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);align-items:start}
+.items img{width:96px;height:96px;object-fit:cover;border-radius:3px}
+.items h3{font-size:28px}
+.items p{margin:4px 0 0;font-size:16px}
+@media (min-width:860px){.lead-item{grid-template-columns:1.2fr .8fr;column-gap:48px;align-items:center}.items{grid-template-columns:1fr 1fr;column-gap:40px}.items li:nth-child(-n+2){border-top:0}}
+
+/* mavis */
+.mavis{background:var(--black);color:#e6e1e3;padding:84px 0}
+.mavis-grid{display:grid;gap:28px}
+.mavis h2{font-size:clamp(48px,12vw,104px);color:var(--pink)}
+.mavis p{max-width:40ch}
+.mavis blockquote{margin:22px 0 0;font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(26px,5.6vw,38px);line-height:1.05;color:#fff}
+.mavis cite{display:block;font:600 15px/1.4 var(--text);color:#bdb6b9;margin-top:8px;font-style:normal}
+@media (min-width:860px){.mavis-grid{grid-template-columns:.9fr 1.1fr;column-gap:56px;align-items:center}}
+
+/* coordination */
+.coord{padding:90px 0}
+.coord h2{font-size:clamp(44px,10vw,84px);max-width:12ch;margin-bottom:14px}
+.coord .intro-p{max-width:52ch}
+.levels{display:grid;gap:0;margin-top:30px;border-top:2px solid var(--black)}
+.level{display:grid;grid-template-columns:auto 1fr;column-gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
+.level .hrs{font-family:var(--display);font-weight:800;font-size:clamp(64px,16vw,104px);line-height:.85;color:var(--black);font-variant-numeric:tabular-nums}
+.level .hrs small{display:block;font-size:.24em;letter-spacing:.06em;color:var(--soft);margin-top:6px}
+.level h3{font-size:30px}
+.level ul{margin:6px 0 0;padding-left:1.1em;font-size:16px}
+.level .pop{display:inline-block;font:700 13px/1 var(--text);background:var(--pink);color:var(--black);padding:6px 9px;border-radius:999px;margin-left:6px;vertical-align:4px;text-transform:none;letter-spacing:0}
+.coord .ask{margin-top:24px;font-size:16px;color:var(--soft)}
+@media (min-width:860px){.levels{grid-template-columns:1fr 1.2fr 1fr;column-gap:36px;border-top:0}.level{grid-template-columns:1fr;border-top:2px solid var(--black);border-bottom:0}.level .hrs{margin-bottom:12px}}
+
+/* words */
+.words{background:var(--gum);color:#eef0e8;padding:84px 0}
+.words h2{font-size:clamp(40px,9vw,72px);color:#fff;margin-bottom:28px}
+.wq{display:grid;gap:26px}
+.wq figure{margin:0}
+.wq blockquote{margin:0;font-size:19px;line-height:1.5}
+.wq figcaption{margin-top:8px;font-weight:700;color:#fff}
+.wq .big blockquote{font-family:var(--display);font-weight:700;font-size:clamp(28px,6vw,42px);line-height:1.1;text-transform:uppercase;color:#fff}
+@media (min-width:860px){.wq{grid-template-columns:1.3fr 1fr;column-gap:56px}.wq .big{grid-row:span 2}}
+
+/* enquire */
+.enq{padding:90px 0 120px}
+.enq-grid{display:grid;gap:34px}
+.enq h2{font-size:clamp(44px,10vw,84px);margin-bottom:14px}
+.enq-logo{width:150px;border-radius:4px;margin-bottom:20px}
+.hours{margin:18px 0;border-collapse:collapse;font-size:15.5px}
+.hours th{text-align:left;font-weight:600;padding:3px 18px 3px 0}
+.hours td{padding:3px 0}
+form{display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:700;font-size:15px}
+input,textarea{font:500 17px/1.4 var(--text);padding:12px 14px;border:1.5px solid #6f6a66;border-radius:4px;background:#fff;color:var(--ink);min-height:48px;width:100%}
+textarea{min-height:120px;resize:vertical}
+fieldset{border:0;padding:0;margin:0}
+legend{font-weight:700;font-size:15px;margin-bottom:8px}
+.checks{display:flex;flex-wrap:wrap;gap:8px}
+.checks label{display:flex;align-items:center;gap:8px;font-weight:600;border:1.5px solid #6f6a66;border-radius:999px;padding:0 14px;min-height:44px}
+.checks input{width:18px;height:18px;min-height:0;margin:0;accent-color:var(--pink-deep)}
+.two{display:grid;gap:16px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.note{font-size:14.5px;color:var(--soft);margin:0}
+.done{display:none;padding:16px;border:1.5px solid var(--pink-deep);border-radius:4px;background:#fdf0f6}
+.done.show{display:block}
+@media (min-width:860px){.enq-grid{grid-template-columns:.85fr 1.15fr;column-gap:56px}}
+
+footer{background:var(--black);color:#c3bcbf;padding:40px 0 110px;font-size:15px}
+footer strong{color:#fff}
+
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px}
+.bar .btn{flex:1;box-shadow:0 6px 16px rgba(0,0,0,.3)}
+.bar .btn:focus-visible{outline:3px solid #111;box-shadow:0 0 0 6px #fff}
+@media (min-width:860px){.bar{left:auto;right:24px;bottom:24px}.bar .btn{flex:none}}
+
+@media (prefers-reduced-motion:reduce),(max-height:520px){
+  .hero{height:auto}.hero-stage{position:relative;height:100svh;min-height:560px}
+  .h-photo,.h-copy,.h-sub{transform:none!important}.h-print{display:none}
+  .pitch{height:auto;background:var(--sky)}.pitch-stage{position:relative;height:auto;padding:20px 0 40px}
+  .night,.p-cap{display:none}
+  .scene{position:relative;height:auto;bottom:auto;aspect-ratio:1200/520;max-height:60svh;overflow:hidden}
+  .p-photos{position:static;width:auto;aspect-ratio:auto;display:grid;gap:18px;padding:0 20px;max-width:640px;margin:0 auto 20px}
+  .pp{position:static;opacity:1;transform:none;transition:none}
+  .pp img{aspect-ratio:4/3;height:auto}
+  .pp figcaption{position:static;width:auto;height:auto;overflow:visible;clip:auto;display:block}
+  .gone{position:static;opacity:1;transform:none;padding:10px 20px 0;max-width:640px;margin:0 auto}
+}
+@media (max-height:520px){.hero-stage{min-height:100svh}.h-copy{top:16px}.hero h1{font-size:54px}.h-sub{bottom:80px}}
+.pp figcaption{padding:10px 4px 2px;font-size:15px;line-height:1.45}
+.pp figcaption b{display:block;font-family:var(--display);font-size:26px;text-transform:uppercase;line-height:1}
+</style>
+<noscript><style>
+  .hero{height:auto}.hero-stage{position:relative;height:100svh;min-height:560px}
+  .h-photo,.h-copy,.h-sub{transform:none!important}.h-print{display:none}
+  .pitch{height:auto}.pitch-stage{position:relative;height:auto;padding:20px 0 40px}
+  .night,.p-cap{display:none}
+  .scene{position:relative;height:auto;bottom:auto;aspect-ratio:1200/520;max-height:60svh;overflow:hidden}
+  .p-photos{position:static;width:auto;aspect-ratio:auto;display:grid;gap:18px;padding:0 20px;max-width:640px;margin:0 auto 20px}
+  .pp{position:static;opacity:1;transform:none}
+  .pp img{aspect-ratio:4/3;height:auto}
+  .pp figcaption{position:static;width:auto;height:auto;overflow:visible;clip:auto;display:block}
+  .gone{position:static;opacity:1;transform:none;padding:10px 20px 0}
+  .pitch{--a:1;--b:1;--c:1}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip">A website idea made by <strong>Lampbound Studio</strong> for Mansfield Party Hire and Events. Not their official site.</div>
+
+<main id="main">
+<section class="hero" data-pin aria-label="Introduction">
+  <div class="hero-stage">
+    <div class="h-photo"><img src="img/hero.jpg" width="1800" height="1192" alt="A long white peg and pole marquee on a green lawn under a big cloudy sky, hills behind" fetchpriority="high"></div>
+    <div class="h-shade"></div>
+    <div class="h-copy"><h1>Mansfield Party Hire <span>and Events</span></h1></div>
+    <div class="h-print" aria-hidden="true"><img src="img/night.jpg" width="900" height="605" alt=""><span>After dark</span></div>
+    <p class="h-sub">Marquees, furniture, styling and on-the-day coordination for weddings in the High Country.</p>
+  </div>
+</section>
+
+<section class="intro" aria-labelledby="intro-h">
+  <div class="wrap intro-grid">
+    <div>
+      <h2 id="intro-h">Kim and Nathan Peterson</h2>
+      <p class="lead">Kim and Nathan have reinvented the business, with a focus on service, good gear and fair rates. It has been running for over twenty years.</p>
+      <p>Kim has extensive experience in events and also coordinates and plans weddings. If you need catering, flowers, photography or accommodation, she can link you with local suppliers and partners.</p>
+      <p class="areas"><b>Based in Mansfield</b>, serving Bonnie Doon, Eildon, Jamieson, Mt Buller, Benalla, Shepparton, Alexandra, Euroa, Yea, Kyneton, Wangaratta, Bright, Tatong and Swanpool.</p>
+    </div>
+    <figure><img src="img/bridesmaids.jpg" width="960" height="639" alt="A bride and four bridesmaids in blue gingham with red shoes, sitting on a big rock under a tree" loading="lazy"><figcaption>Photo: billie mae photography</figcaption></figure>
+  </div>
+</section>
+
+<section class="pitch" data-pin data-pitch aria-labelledby="pitch-h">
+  <div class="pitch-stage">
+    <h2 id="pitch-h" class="vh">A marquee wedding, from the truck arriving to the pack down</h2>
+    <div class="night" aria-hidden="true"></div>
+    <svg class="scene" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+      <path d="M-1600 170 C-800 120 -200 160 0 150 C160 110 300 70 470 96 C610 118 700 60 860 70 C990 78 1100 120 1200 110 C1500 90 2200 140 2800 130 L2800 1800 L-1600 1800Z" fill="#7c8a60"/>
+      <path d="M-1600 330 L0 330 C200 300 420 318 600 320 C800 322 1000 300 1200 318 L2800 318 L2800 1800 L-1600 1800Z" fill="#4d5a38"/>
+      <path class="hilldim" d="M-1600 170 C-800 120 -200 160 0 150 C160 110 300 70 470 96 C610 118 700 60 860 70 C990 78 1100 120 1200 110 C1500 90 2200 140 2800 130 L2800 1800 L-1600 1800Z" fill="#0e2530"/>
+      <g class="pegs" stroke="#e9e6dd" stroke-width="2"><line x1="400" y1="140" x2="150" y2="410"/><line x1="800" y1="140" x2="1050" y2="410"/></g>
+      <g class="marquee">
+        <g class="glow"><ellipse cx="600" cy="408" rx="420" ry="40" fill="#ffd98a" opacity=".35"/></g>
+        <g class="walls"><path d="M290 300 L910 300 L910 405 L290 405Z" fill="#f4f1e8"/><path d="M330 315 h540 v80 h-540z" fill="#e2dccd"/></g>
+        <g class="inside"><g fill="#fff"><rect x="360" y="352" width="140" height="8"/><rect x="530" y="352" width="140" height="8"/><rect x="700" y="352" width="140" height="8"/></g><g fill="#c9b79a"><rect x="370" y="360" width="4" height="34"/><rect x="486" y="360" width="4" height="34"/><rect x="540" y="360" width="4" height="34"/><rect x="656" y="360" width="4" height="34"/><rect x="710" y="360" width="4" height="34"/><rect x="826" y="360" width="4" height="34"/></g></g>
+        <g class="ropes" stroke="#cfc9ba" stroke-width="2"><line x1="400" y1="140" x2="160" y2="405"/><line x1="800" y1="140" x2="1040" y2="405"/><line x1="290" y1="300" x2="200" y2="405"/><line x1="910" y1="300" x2="1000" y2="405"/></g>
+        <g class="poles"><line class="pole" x1="400" y1="140" x2="400" y2="405"/><line class="pole" x1="600" y1="140" x2="600" y2="405"/><line class="pole" x1="800" y1="140" x2="800" y2="405"/><line class="pole" x1="290" y1="300" x2="290" y2="405"/><line class="pole" x1="910" y1="300" x2="910" y2="405"/></g>
+        <path class="canopy" d="M270 306 Q340 290 400 132 Q450 262 500 276 Q560 250 600 132 Q640 250 700 276 Q750 262 800 132 Q860 290 930 306 Q600 322 270 306Z" fill="#fbfaf6" stroke="#d9d3c4" stroke-width="2"/>
+        <g class="bulbs"><circle cx="310" cy="318" r="4"/><circle cx="350" cy="326" r="4"/><circle cx="390" cy="331" r="4"/><circle cx="430" cy="333" r="4"/><circle cx="470" cy="331" r="4"/><circle cx="510" cy="326" r="4"/><circle cx="550" cy="321" r="4"/><circle cx="650" cy="321" r="4"/><circle cx="690" cy="326" r="4"/><circle cx="730" cy="331" r="4"/><circle cx="770" cy="333" r="4"/><circle cx="810" cy="331" r="4"/><circle cx="850" cy="326" r="4"/><circle cx="890" cy="318" r="4"/><circle cx="600" cy="318" r="4"/></g>
+      </g>
+    </svg>
+    <div class="p-cap" aria-hidden="true">
+      <div class="on"><h3>Down the driveway</h3><p>The truck brings everything to your paddock.</p><q>Your guys managed to navigate your way down the high country's most difficult driveways in a truck with no worries at all.</q><span>Lauren and Jason</span></div>
+      <div><h3>Poles up</h3><p>Peg and pole, frame, pagoda or clear span, from 3 x 3 metres up to 12 x 24 and 10 x 45.</p></div>
+      <div><h3>Canopy on</h3><p>Window walls and silk lining if you want them.</p><q>The Marquee looked absolutely incredible on top of the hill.</q><span>Rachel and Chris, Rubicon</span></div>
+      <div><h3>Set the tables</h3><p>Tables, chairs, linen, crockery and glassware, styled to suit your day.</p></div>
+      <div><h3>Lights on</h3><p>Fairy lights, festoons and chandeliers. When the lights in Gill's trees drooped, Nathan moved them all onto the fences and the marquee.</p></div>
+    </div>
+    <div class="p-photos">
+      <figure class="pp on" style="--r:-2deg"><img src="img/day.jpg" width="640" height="480" alt="A white peg and pole marquee on a green rise below a wooded hill" loading="lazy"><figcaption><b>Down the driveway</b>The truck brings everything to your paddock. "Your guys managed to navigate your way down the high country's most difficult driveways in a truck with no worries at all." Lauren and Jason</figcaption></figure>
+      <figure class="pp" style="--r:2deg"><img src="img/pole.jpg" width="938" height="426" alt="A long peg and pole marquee with several peaks on a lawn by tall trees" loading="lazy"><figcaption><b>Poles up</b>Peg and pole, frame, pagoda or clear span, from 3 x 3 metres up to 12 x 24 and 10 x 45.</figcaption></figure>
+      <figure class="pp" style="--r:-1.5deg"><img src="img/pitched.jpg" width="930" height="960" alt="A tall white marquee with its sides rolled up, tables set inside, hills behind" loading="lazy"><figcaption><b>Canopy on</b>Window walls and silk lining if you want them. "The Marquee looked absolutely incredible on top of the hill." Rachel and Chris, Rubicon</figcaption></figure>
+      <figure class="pp" style="--r:1.5deg"><img src="img/inside.jpg" width="960" height="720" alt="Inside a marquee: round tables, timber chairs and greenery, lanterns at the entrance" loading="lazy"><figcaption><b>Set the tables</b>Tables, chairs, linen, crockery and glassware, styled to suit your day.</figcaption></figure>
+      <figure class="pp" style="--r:-1deg"><img src="img/night.jpg" width="900" height="605" alt="A clear roof marquee glowing with fairy lights in a dark paddock" loading="lazy"><figcaption><b>Lights on</b>Fairy lights, festoons and chandeliers. When the lights in Gill's trees drooped, Nathan moved them all onto the fences and the marquee.</figcaption></figure>
+    </div>
+    <div class="gone"><p>And then, gone</p><span>"The fellows did a great job cleaning up on Monday, not a sign that it had even been there." Liz</span></div>
+  </div>
+</section>
+
+<section class="hire" aria-labelledby="hire-h">
+  <div class="wrap">
+    <h2 id="hire-h">What you can hire</h2>
+    <p class="intro-p">Everything from the marquee to the salt and pepper mills.</p>
+    <div class="lead-item">
+      <div>
+        <h3>Marquees</h3>
+        <p>Clearspan and clear roof structure marquees, pagodas, peg and pole and frame marquees, with window walls and silk lining. Also the Hamptons marquee and clear roof panelling.</p>
+        <p class="sizes">3 x 3 m up to 12 x 24 m and 10 x 45 m</p>
+      </div>
+      <img src="img/clear.jpg" width="960" height="635" alt="A clear roof marquee full of guests at long tables beside a lake" loading="lazy">
+    </div>
+    <ul class="items">
+      <li><img src="img/long-table.jpg" width="960" height="960" alt="" loading="lazy"><div><h3>Furnishings</h3><p>Chairs and covers, timber crossback chairs, tables, dance floors, flooring, picket or wrought iron fencing, and post and rope aisles.</p></div></li>
+      <li><img src="img/reception.jpg" width="1400" height="927" alt="" loading="lazy"><div><h3>Decor</h3><p>Linen, runners, table numbers and candleware. Kim can theme the whole event with you.</p></div></li>
+      <li><img src="img/drinks.jpg" width="900" height="600" alt="" loading="lazy"><div><h3>Tableware</h3><p>Crockery, glassware and silverware, from champagne flutes to silver cake servers.</p></div></li>
+      <li><img src="img/umbrellas.jpg" width="1200" height="800" alt="" loading="lazy"><div><h3>Lighting and kitchen</h3><p>Soft, festoon and fairy lights, white 3 x 3 m wedding umbrellas, bain maries, hot boxes and barbeques.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="mavis" aria-labelledby="mavis-h">
+  <div class="wrap mavis-grid">
+    <img src="img/mavis.jpg" width="1024" height="684" alt="Mavis, a white vintage caravan bar with a red serving hatch, guests ordering at the window" loading="lazy">
+    <div>
+      <h2 id="mavis-h">Mavis</h2>
+      <p>The vintage caravan bar. Park her by the marquee and she keeps the bottles and glasses in one place, which makes the clean-up the next day easier.</p>
+      <blockquote>Mavis was amazing, a big hit.<cite>Erin and Zac</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="coord" aria-labelledby="coord-h">
+  <div class="wrap">
+    <h2 id="coord-h">Kim on the day</h2>
+    <p class="intro-p">An on-the-day coordinator manages your suppliers and makes sure "your granny gets a seat in the front row". The team lets every vendor know they're the people to call on the day, not you.</p>
+    <div class="levels">
+      <div class="level"><p class="hrs" aria-hidden="true">5<small>hours</small></p><div><h3>Small</h3><ul><li>5 hours on the day</li><li>1 preparation meeting</li><li>Unlimited email</li><li>A list of jobs you hand over</li></ul></div></div>
+      <div class="level"><p class="hrs" aria-hidden="true">8<small>hours</small></p><div><h3>Medium <span class="pop">Most popular</span></h3><ul><li>8 hours on the day</li><li>2 preparation meetings</li><li>Run sheet and contacts list</li><li>Vendor confirmation</li><li>Rehearsal coordination</li></ul></div></div>
+      <div class="level"><p class="hrs" aria-hidden="true">10<small>hours</small></p><div><h3>Large</h3><ul><li>10 hours on the day, plus 3 the day before</li><li>Site visit of your ceremony and reception</li><li>Floor plan help</li><li>Run sheet, vendor confirmation and rehearsal</li></ul></div></div>
+    </div>
+    <p class="ask">An extra assistant can be added for big weddings. Ask Kim for current prices.</p>
+  </div>
+</section>
+
+<section class="words" aria-labelledby="words-h">
+  <div class="wrap">
+    <h2 id="words-h">From their couples</h2>
+    <div class="wq">
+      <figure class="big"><blockquote>We never felt pushed into things at all. You actually had our interests in mind.</blockquote><figcaption>Andy, married on a friend's farm out of Eildon</figcaption></figure>
+      <figure><blockquote>We absolutely loved our amazing marquee (complete with clear panels and fairy lights), festoon lights, wine barrels, umbrellas and all the other things that came together.</blockquote><figcaption>Simone and Ryan</figcaption></figure>
+      <figure><blockquote>Thanks for putting up with my numerous emails and questions.</blockquote><figcaption>Lauren and Jason</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="enq" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap enq-grid">
+    <div>
+      <img class="enq-logo" src="img/logo.jpg" width="600" height="600" alt="Mansfield Party Hire and Events logo" loading="lazy">
+      <h2 id="enq-h">Tell Kim about your day</h2>
+      <p>Send your date, the property and what you need, and Kim will come back to you. Or call <a href="tel:0477665274">0477 665 274</a> or email <a href="mailto:info@mansfieldpartyhire.com.au">info@mansfieldpartyhire.com.au</a>.</p>
+      <table class="hours">
+        <caption class="vh">Opening hours</caption>
+        <tr><th scope="row">Mon and Tue</th><td>9am to 5pm</td></tr>
+        <tr><th scope="row">Wed</th><td>Closed</td></tr>
+        <tr><th scope="row">Thu and Fri</th><td>9am to 5pm</td></tr>
+        <tr><th scope="row">Sat and Sun</th><td>Closed</td></tr>
+      </table>
+      <p>Meetings by appointment only.</p>
+      <p class="note">This is a preview, so the form does not send anything.</p>
+    </div>
+    <form id="enq-form" novalidate>
+      <div class="two">
+        <label>Your names<input name="names" autocomplete="name"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <div class="two">
+        <label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
+        <label>Wedding date<input name="date" type="date"></label>
+      </div>
+      <div class="two">
+        <label>Property or town<input name="where"></label>
+        <label>Roughly how many guests?<input name="guests" inputmode="numeric"></label>
+      </div>
+      <fieldset>
+        <legend>What do you need?</legend>
+        <div class="checks">
+          <label><input type="checkbox" name="need" value="marquee">Marquee</label>
+          <label><input type="checkbox" name="need" value="furniture">Furniture</label>
+          <label><input type="checkbox" name="need" value="styling">Styling and decor</label>
+          <label><input type="checkbox" name="need" value="lighting">Lighting</label>
+          <label><input type="checkbox" name="need" value="mavis">Mavis</label>
+          <label><input type="checkbox" name="need" value="coordination">Coordination</label>
+        </div>
+      </fieldset>
+      <label>Anything else<textarea name="msg"></textarea></label>
+      <button class="btn" type="button" id="send">Send to Kim</button>
+      <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Kim. To ask today, email <a href="mailto:info@mansfieldpartyhire.com.au">info@mansfieldpartyhire.com.au</a> or call <a href="tel:0477665274">0477 665 274</a>.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>A preview made by Lampbound Studio for Mansfield Party Hire and Events.</strong> Not affiliated, not live.</p>
+    <p>Words, reviews and photos are from mansfieldpartyhire.com.au.</p>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn alt" href="tel:0477665274">Call Kim</a><a class="btn" href="#enquire">Check your date</a></div>
+
+<script>
+(function(){
+  var pins=[].slice.call(document.querySelectorAll('[data-pin]'));
+  var pitch=document.querySelector('[data-pitch]');
+  var caps=[].slice.call(pitch.querySelectorAll('.p-cap > div'));
+  var pics=[].slice.call(pitch.querySelectorAll('.pp'));
+  var capBox=pitch.querySelector('.p-cap'), picBox=pitch.querySelector('.p-photos'), gone=pitch.querySelector('.gone');
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce), (max-height:520px)');
+  var scene=pitch.querySelector('.scene');
+  function fitScene(){scene.setAttribute('viewBox',(window.innerWidth<700&&!mq.matches)?'200 96 800 326':'0 0 1200 520')}
+  var on=false,ticking=false,last=-1;
+  function clamp(v){return Math.min(1,Math.max(0,v))}
+  function seg(p,a,b){return clamp((p-a)/(b-a))}
+  function setVars(el,v){for(var k in v)el.style.setProperty(k,v[k].toFixed(3))}
+  function drawPitch(p){
+    setVars(pitch,{'--a':seg(p,.14,.3),'--b':seg(p,.3,.44),'--c':seg(p,.46,.58),'--n':seg(p,.64,.72)-seg(p,.82,.88),'--g':seg(p,.82,.88)});
+    var n=p>=.86?5:Math.min(4,Math.floor(p/.168));
+    if(n===last)return;last=n;
+    caps.forEach(function(c,k){c.classList.toggle('on',k===n)});
+    pics.forEach(function(c,k){c.classList.toggle('on',k===n)});
+    capBox.style.opacity=n===5?'0':'1';picBox.style.opacity=n===5?'0':'1';
+    gone.classList.toggle('on',n===5);
+  }
+  function update(){
+    ticking=false;if(!on)return;
+    pins.forEach(function(el){
+      var r=el.getBoundingClientRect(),total=el.offsetHeight-window.innerHeight;
+      var p=total>0?clamp(-r.top/total):1;
+      el.style.setProperty('--p',p.toFixed(4));
+      if(el===pitch)drawPitch(p);
+    });
+  }
+  function onResize(){fitScene();onScroll()}
+  function finish(){
+    setVars(pitch,{'--a':1,'--b':1,'--c':1,'--n':0,'--g':0});
+    pics.forEach(function(c){c.classList.add('on')});capBox.style.opacity='';picBox.style.opacity='';
+    pins.forEach(function(el){if(el!==pitch)el.style.setProperty('--p','0')});
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
+  function start(){if(on)return;on=true;last=-1;pics.forEach(function(c,k){c.classList.toggle('on',k===0)});addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onResize);fitScene();update();}
+  function stop(){on=false;removeEventListener('scroll',onScroll);removeEventListener('resize',onResize);fitScene();finish();}
+  if(mq.matches){fitScene();finish();}else start();
+  if(mq.addEventListener)mq.addEventListener('change',function(){mq.matches?stop():start()});
+  document.getElementById('send').addEventListener('click',function(){var d=document.getElementById('done');d.classList.add('show');d.focus();});
+})();
+</script>
+</body>
+</html>
