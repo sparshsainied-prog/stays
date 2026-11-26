@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Lets Celebrant, Ellise Saunders: a website preview</title>
+<meta name="description" content="A website idea for Ellise Saunders of Lets Celebrant, marriage celebrant in Adelaide and surrounds. A preview by Lampbound Studio, not her official site.">
+<meta property="og:title" content="Lets Celebrant, Ellise Saunders">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Lets Celebrant. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/letscelebrant/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/letscelebrant/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%23fff' stroke='%233cd2d4' stroke-width='3'/%3E%3Ctext x='16' y='21' font-family='Arial' font-weight='700' font-size='12' fill='%2316201f' text-anchor='middle'%3ELC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ring:#3cd2d4; --teal:#0d5b63; --teal-deep:#083f45; --rose:#e8889f; --ink:#16201f; --soft:#4c5f5e; --paper:#f7fbfb; --line:#cfe1e1; --white:#fff;
+  --display:"Barlow Condensed", "Arial Narrow", system-ui, sans-serif; --text:"Karla", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid #111;outline-offset:0;box-shadow:0 0 0 6px #fff}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.strip{background:var(--ink);color:#c9d6d5;font-size:13.5px;line-height:1.4;padding:9px 16px;text-align:center}
+.strip strong{color:#fff}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:.98;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:999px;background:var(--teal);color:#fff;text-decoration:none;border:0;font:700 16px/1 var(--text);cursor:pointer}
+.btn:hover{background:var(--teal-deep)}
+.btn.alt{background:#fff;color:var(--ink);border:1.5px solid var(--ink)}
+
+/* hero: photo plane slow, words faster, logo badge */
+.hero{position:relative;height:150svh;background:var(--ink)}
+.hero-stage{position:sticky;top:0;height:100svh;overflow:hidden}
+.h-photo{position:absolute;inset:0;transform:translate3d(0,calc(var(--p,0) * -4%),0) scale(calc(1.08 - var(--p,0) * .08))}
+.h-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.h-shade{position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(to top,rgba(10,22,22,.88),rgba(10,22,22,0))}
+.h-logo{position:absolute;top:16px;left:16px;width:84px;height:84px;border-radius:50%;overflow:hidden;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.25);transform:translate3d(0,calc(var(--p,0) * -60px),0)}
+.h-copy{position:absolute;left:0;right:0;bottom:0;padding:0 20px 100px;color:#fff;transform:translate3d(0,calc(var(--p,0) * -30vh),0);opacity:calc(1 - var(--p,0) * 1.5)}
+.h-copy .tag{font-size:16px;margin:0 0 8px;color:#d7ecec}
+.hero h1{font-size:clamp(64px,19vw,168px);text-transform:uppercase;letter-spacing:-.005em}
+.h-copy .line{font-size:19px;line-height:1.4;margin:14px 0 0;max-width:30ch}
+@media (min-width:860px){.h-copy{max-width:1120px;margin:0 auto;padding-bottom:80px}.h-logo{width:104px;height:104px;top:24px;left:24px}}
+
+/* about */
+.about{padding:84px 0 70px}
+.about-grid{display:grid;gap:34px}
+.about h2{font-size:clamp(42px,10vw,78px);text-transform:uppercase;max-width:12ch}
+.about h2 span{display:block;color:var(--teal)}
+.about .lead{font-size:21px;line-height:1.45;max-width:34ch;margin-top:22px}
+.about figure{margin:0}
+.about figure img{border-radius:4px}
+.about figcaption{font-size:14px;color:var(--soft);margin-top:8px}
+@media (min-width:860px){.about-grid{grid-template-columns:1.1fr .9fr;align-items:center}}
+
+/* the aisle walk */
+.aisle{position:relative;height:480svh;background:var(--ink)}
+.aisle-stage{position:sticky;top:0;height:100svh;overflow:hidden}
+.shot{position:absolute;inset:0;opacity:0;will-change:transform,opacity}
+.shot:first-child{opacity:1}
+.shot img{width:100%;height:100%;object-fit:cover}
+@media (max-aspect-ratio:4/5){.shot:nth-child(2) img{object-position:52% 50%}.shot:nth-child(3) img{object-position:47% 50%}}
+.frame{position:absolute;inset:0;pointer-events:none;border:0 solid var(--ink);opacity:0}
+.cap{position:absolute;left:20px;right:20px;top:22px;display:grid}
+.cap p{grid-area:1/1;margin:0;font-family:var(--display);font-weight:700;font-size:clamp(28px,7vw,52px);line-height:1;text-transform:uppercase;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.6);opacity:0;transform:translate3d(0,10px,0);transition:opacity .35s ease,transform .35s ease}
+.cap p.on{opacity:1;transform:none}
+.runner{position:absolute;left:0;bottom:0;height:6px;width:100%;background:rgba(255,255,255,.18)}
+.runner i{display:block;height:100%;width:100%;background:var(--ring);transform-origin:left;transform:scaleX(var(--p,0))}
+.best{position:absolute;left:20px;right:20px;bottom:92px;color:#fff;opacity:0;transform:translate3d(0,18px,0);transition:opacity .45s ease,transform .45s ease}
+.best.on{opacity:1;transform:none}
+.best blockquote{margin:0;font-family:var(--display);font-weight:600;font-size:clamp(28px,6.6vw,54px);line-height:1.04;max-width:20ch;text-shadow:0 2px 16px rgba(0,0,0,.7)}
+.best p{margin:12px 0 0;font-size:15px;color:#e3f1f1;text-shadow:0 1px 8px rgba(0,0,0,.8)}
+.a-shade{position:absolute;left:0;right:0;bottom:0;height:55%;background:linear-gradient(to top,rgba(10,22,22,.85),rgba(10,22,22,0));opacity:0}
+.a-top{position:absolute;left:0;right:0;top:0;height:30%;background:linear-gradient(to bottom,rgba(10,22,22,.55),rgba(10,22,22,0))}
+@media (min-width:860px){.cap,.best{left:max(24px,calc(50% - 540px));right:auto}.best{bottom:40px}}
+
+/* what she looks after */
+.care{background:var(--teal-deep);color:#e7f3f3;padding:90px 0}
+.care-grid{display:grid;gap:36px}
+.care h2{font-size:clamp(40px,9vw,72px);text-transform:uppercase;max-width:12ch;color:#fff}
+.care ul{list-style:none;margin:28px 0 0;padding:0}
+.care li{padding:16px 0;border-top:1px solid rgba(255,255,255,.2);max-width:52ch}
+.care li strong{display:block;font-family:var(--display);font-size:26px;line-height:1.1;color:#fff;font-weight:600;margin-bottom:4px}
+.care li:first-child strong{color:var(--rose)}
+.care figure{margin:0}
+.care figure img{border-radius:4px}
+@media (min-width:860px){.care-grid{grid-template-columns:1fr 1fr;align-items:start}.care figure{position:sticky;top:40px}}
+
+/* couples */
+.couples{padding:90px 0}
+.couples h2{font-size:clamp(40px,9vw,72px);text-transform:uppercase;margin-bottom:34px}
+.q-list{display:grid;gap:0}
+.q{margin:0;padding:22px 0;border-top:2px solid var(--ink)}
+.q p{font-size:clamp(21px,4.4vw,28px);line-height:1.3;margin:0 0 10px;max-width:36ch}
+.q cite{font-style:normal;font-size:15px;color:var(--soft)}
+.q.big p{font-family:var(--display);font-weight:600;font-size:clamp(34px,8vw,60px);line-height:1;text-transform:uppercase;color:var(--teal)}
+.couples .src{font-size:14px;color:var(--soft);margin-top:20px}
+@media (min-width:860px){.q-list{grid-template-columns:1fr 1fr;column-gap:48px}.q.big{grid-column:1 / -1}}
+
+/* enquire */
+.enq{background:#fff;padding:88px 0 120px;border-top:1px solid var(--line)}
+.enq-grid{display:grid;gap:34px}
+.enq h2{font-size:clamp(42px,9vw,72px);text-transform:uppercase;margin-bottom:14px}
+form{display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:700;font-size:15px}
+input,textarea{font:400 17px/1.4 var(--text);padding:12px 14px;border:1.5px solid #5f7473;border-radius:6px;background:#fff;color:var(--ink);min-height:48px;width:100%}
+textarea{min-height:120px;resize:vertical}
+.two{display:grid;gap:16px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.note{font-size:14px;color:var(--soft);margin:0}
+.done{display:none;padding:16px;border:1.5px solid var(--teal);border-radius:6px;background:#eaf7f7}
+.done.show{display:block}
+@media (min-width:860px){.enq-grid{grid-template-columns:.85fr 1.15fr}}
+
+footer{background:var(--ink);color:#b9c8c7;padding:40px 0 110px;font-size:14.5px}
+footer strong{color:#fff}
+
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px}
+.bar .btn{flex:1;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+.bar .btn:focus-visible{box-shadow:0 0 0 6px #fff}
+.bar .btn:not(.alt){border:1.5px solid #fff}
+@media (min-width:860px){.bar{left:auto;right:24px;bottom:24px}.bar .btn{flex:none}}
+
+.still .hero{height:auto}.still .hero-stage{position:relative;height:100svh;min-height:520px}
+.still .h-photo,.still .h-logo,.still .h-copy{transform:none!important;opacity:1!important}
+.still .aisle{height:auto}.still .aisle-stage{position:relative;height:auto;display:grid;gap:6px;background:var(--ink)}
+.still .shot{position:relative;inset:auto;opacity:1!important;transform:none!important;height:62svh;min-height:300px}
+.still .frame,.still .runner,.still .cap,.still .a-top{display:none}
+.still .a-shade{display:none}
+.still .best{position:relative;left:auto;right:auto;bottom:auto;opacity:1;transform:none;padding:28px 20px 40px;transition:none}
+@media (max-height:520px){.hero-stage,.still .hero-stage{min-height:100svh;height:auto!important;display:flex;flex-direction:column;justify-content:flex-end}.h-copy{position:relative;padding-top:110px}.h-shade{height:90%}.hero h1{font-size:58px}.h-copy{padding-bottom:84px}.h-logo{width:64px;height:64px}}
+</style>
+<noscript><style>
+  .hero{height:auto}.hero-stage{position:relative;height:100svh;min-height:520px}
+  .h-photo,.h-logo,.h-copy{transform:none!important;opacity:1!important}
+  .aisle{height:auto}.aisle-stage{position:relative;height:auto;display:grid;gap:6px}
+  .shot{position:relative;opacity:1;height:62svh;min-height:300px}
+  .frame,.runner,.cap,.a-top,.a-shade{display:none}
+  .best{position:relative;left:auto;right:auto;bottom:auto;opacity:1;transform:none;padding:28px 20px 40px}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip">A website idea made by <strong>Lampbound Studio</strong> for Lets Celebrant. Not her official site.</div>
+
+<main id="main">
+<section class="hero" data-pin aria-label="Introduction">
+  <div class="hero-stage">
+    <picture class="h-photo">
+      <source media="(min-aspect-ratio: 4/5)" srcset="img/jetty.jpg" width="1600" height="1067">
+      <img src="img/signing.jpg" width="900" height="1350" alt="Ellise with a just-married couple at one of her ceremonies" fetchpriority="high">
+    </picture>
+    <div class="h-shade"></div>
+    <div class="h-logo"><img src="img/logo.jpg" width="400" height="400" alt="Lets Celebrant logo"></div>
+    <div class="h-copy">
+      <p class="tag">Lets Celebrant, Adelaide and surrounds</p>
+      <h1>Ellise Saunders</h1>
+      <p class="line">Marriage celebrant. She gets to know you both, then writes a ceremony that suits you.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" aria-labelledby="about-h">
+  <div class="wrap about-grid">
+    <div>
+      <h2 id="about-h">A wife, a mumma <span>and a celebrant</span></h2>
+      <p class="lead">"I like to be able to get to know the couple so I can tailor a ceremony that is suited to them as individuals."</p>
+      <p>Ellise writes a ceremony script for each couple. She'll put in your funny and romantic moments and the moment you knew you'd met the one, and she helps with your vows, readings and the shape of the ceremony.</p>
+      <p>A religious tradition, a poem that matters or a song you love can all go in. So can a floral lei at a beach wedding, or a shout out to someone in the family.</p>
+    </div>
+    <figure>
+      <img src="img/ellise.jpg" width="900" height="675" alt="Ellise taking a selfie with a smiling couple" loading="lazy">
+      <figcaption>Ellise with one of her couples</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="aisle" data-pin data-aisle aria-labelledby="aisle-h">
+  <h2 id="aisle-h" class="vh">Walk up the aisle</h2>
+  <div class="aisle-stage">
+    <div class="shot" data-o="52% 52%"><img src="img/back.jpg" width="1600" height="1067" alt="A glasshouse ceremony seen from the back of the aisle, guests standing either side" loading="lazy"></div>
+    <div class="shot" data-o="52% 48%"><img src="img/tree.jpg" width="1600" height="1067" alt="Ellise marrying two grooms under a huge old gum, bridesmaids either side" loading="lazy"></div>
+    <div class="shot" data-o="50% 45%"><img src="img/close.jpg" width="1600" height="1046" alt="Ellise reading between a bride and groom under the gums" loading="lazy"></div>
+    <div class="a-top" aria-hidden="true"></div>
+    <div class="a-shade" aria-hidden="true"></div>
+    <div class="frame" aria-hidden="true"></div>
+    <div class="cap" aria-hidden="true">
+      <p>From the back of the room</p>
+      <p>From the front row</p>
+      <p>Up where Ellise stands</p>
+    </div>
+    <div class="best">
+      <blockquote>"I love the feeling I get when I have the best view to witness two people who are madly in love."</blockquote>
+      <p>Ellise Saunders</p>
+    </div>
+    <div class="runner" aria-hidden="true"><i></i></div>
+  </div>
+</section>
+
+<section class="care" aria-labelledby="care-h">
+  <div class="wrap care-grid">
+    <div>
+      <h2 id="care-h">She looks after the rest</h2>
+      <ul>
+        <li><strong>The legal paperwork</strong>She takes care of all of it.</li>
+        <li><strong>Planning the ceremony</strong>Once she knows what you like, she can point you to readings, poems and songs.</li>
+        <li><strong>Quick answers</strong>She'll email or call you back in good time with anything you're unsure of.</li>
+        <li><strong>Her own PA system</strong>If your venue has no microphone, Ellise can bring hers and set it up.</li>
+        <li><strong>Adelaide and further</strong>She's based 15 minutes from the city and travels for venues further afield.</li>
+      </ul>
+    </div>
+    <figure>
+      <picture>
+        <source media="(min-aspect-ratio: 4/5)" srcset="img/signing.jpg" width="900" height="1350">
+        <img src="img/jetty.jpg" width="1600" height="1067" alt="Ellise with a just-married couple at one of her ceremonies" loading="lazy">
+      </picture>
+    </figure>
+  </div>
+</section>
+
+<section class="couples" aria-labelledby="couples-h">
+  <div class="wrap">
+    <h2 id="couples-h">From her couples</h2>
+    <div class="q-list">
+      <figure class="q big"><p>"She made us laugh and cry (of happiness)"</p><cite>Jane F., October 2024</cite></figure>
+      <figure class="q"><p>"We lived out of state when doing the wedding planning, she was able to video call us to discuss everything."</p><cite>Daniella V., June 2026, who also wrote: "We had a mixed faith ceremony, and it was perfect."</cite></figure>
+      <figure class="q"><p>"On our wedding day, she was calm, charismatic, and well presented."</p><cite>Amanda, March 2026</cite></figure>
+      <figure class="q"><p>Guests were "even asking if Ellise had known us or been a close friend because of her lovely words and our big smiles."</p><cite>Jess H., December 2024</cite></figure>
+    </div>
+    <p class="src">Reviews from her Easy Weddings listing, where she is rated 5.0 from 23 reviews.</p>
+  </div>
+</section>
+
+<section class="enq" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap enq-grid">
+    <div>
+      <h2 id="enq-h">Is Ellise free on your date?</h2>
+      <p>Tell her your date and venue, and ask for her info pack and pricing. You can also call or text her on <a href="tel:0431156481">0431 156 481</a>.</p>
+      <p class="note">This is a preview, so the form does not send anything.</p>
+    </div>
+    <form id="enq-form" novalidate>
+      <div class="two">
+        <label>Your names<input name="names" autocomplete="name"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <div class="two">
+        <label>Wedding date<input name="date" type="date"></label>
+        <label>Venue or suburb<input name="venue"></label>
+      </div>
+      <label>Anything you'd like in the ceremony<textarea name="msg"></textarea></label>
+      <button class="btn" type="button" id="send">Send to Ellise</button>
+      <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Ellise. To reach her today, call or text <a href="tel:0431156481">0431 156 481</a>.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>A preview made by Lampbound Studio for Lets Celebrant.</strong> Not affiliated, not live.</p>
+    <p>Words, logo and photos are from Ellise's Easy Weddings listing. Signing photo by Chantelle Renee Photography.</p>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn alt" href="tel:0431156481">Call Ellise</a><a class="btn" href="#enquire">Check your date</a></div>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var pins=[].slice.call(document.querySelectorAll('[data-pin]'));
+  var aisle=document.querySelector('[data-aisle]');
+  var shots=[].slice.call(aisle.querySelectorAll('.shot'));
+  var caps=[].slice.call(aisle.querySelectorAll('.cap p'));
+  var frame=aisle.querySelector('.frame'),shade=aisle.querySelector('.a-shade'),best=aisle.querySelector('.best');
+  shots.forEach(function(s){s.style.transformOrigin=s.dataset.o});
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce), (max-height:520px)');
+  var on=false,ticking=false;
+  function clamp(v){return Math.min(1,Math.max(0,v))}
+  function walk(p){
+    // three steps up the aisle, then the frame closes on the couple
+    var steps=0.8,n=shots.length,seg=steps/n,z=innerWidth/innerHeight<.8?.35:1;
+    shots.forEach(function(s,i){
+      var t=clamp((p-i*seg)/seg);
+      var inStart=(i*seg)-seg*.16;
+      var o=i===0?1:clamp((p-inStart)/(seg*.16));
+      var sc=1+(i===n-1?clamp((p-i*seg)/(1-i*seg))*.22:t*.32)*z;
+      s.style.opacity=o.toFixed(3);
+      s.style.transform='scale('+sc.toFixed(4)+')';
+    });
+    var k=Math.min(n-1,Math.floor(p/seg));
+    caps.forEach(function(c,i){c.classList.toggle('on',i===k&&p<.86)});
+    var f=clamp((p-.8)/.12);
+    var w=Math.round(f*Math.min(innerWidth,innerHeight)*.09);
+    frame.style.opacity=f>0?1:0;
+    frame.style.borderWidth=w+'px';
+    shade.style.opacity=f.toFixed(3);
+    best.classList.toggle('on',p>.86);
+  }
+  function update(){
+    ticking=false;
+    pins.forEach(function(el){
+      var r=el.getBoundingClientRect(),total=el.offsetHeight-innerHeight;
+      var p=total>0?clamp(-r.top/total):1;
+      el.style.setProperty('--p',p.toFixed(4));
+      if(el===aisle)walk(p);
+    });
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
+  function start(){root.classList.remove('still');if(on)return;on=true;addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);update();}
+  function stop(){on=false;removeEventListener('scroll',onScroll);removeEventListener('resize',onScroll);root.classList.add('still');pins.forEach(function(el){el.style.setProperty('--p','0')});shots.forEach(function(s){s.style.opacity='';s.style.transform=''});}
+  if(mq.matches)stop();else start();
+  if(mq.addEventListener)mq.addEventListener('change',function(){mq.matches?stop():start()});
+  document.getElementById('send').addEventListener('click',function(){var d=document.getElementById('done');d.classList.add('show');d.focus();});
+})();
+</script>
+</body>
+</html>

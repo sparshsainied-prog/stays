@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Trav Dittmar, Celebrant and MC: a website preview</title>
+<meta name="description" content="A website idea for Trav Dittmar Celebrancy, celebrant and MC for Adelaide and across South Australia. A preview by Lampbound Studio, not his official site.">
+<meta property="og:title" content="Trav Dittmar, Celebrant and MC">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Trav Dittmar Celebrancy. Not his official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/travdittmar/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/travdittmar/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23151c2c'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='14' fill='%23e7a27a' text-anchor='middle'%3ETD%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --stone:#e8dcc2; --day:#f5efe3; --ivy:#2f3d25; --night:#151c2c; --peach:#e7a27a; --rust:#9a4a26; --ink:#1d1f1a; --soft:#5a5a4c; --white:#fff;
+  --display:"Archivo", system-ui, sans-serif; --text:"Source Serif 4", Georgia, serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#fbfaf7;color:var(--ink);font:18px/1.6 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid #111;outline-offset:0;box-shadow:0 0 0 6px #fff}
+.skip{position:absolute;left:-999px;top:0;background:var(--night);color:#fff;padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.strip{background:var(--night);color:#c9cdd6;font:14px/1.4 var(--display);padding:9px 16px;text-align:center}
+.strip strong{color:#fff}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:.98;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0 0 1em;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:4px;background:var(--night);color:#fff;text-decoration:none;border:0;font:700 16px/1 var(--display);cursor:pointer}
+.btn:hover{background:#0b101b}
+.btn.alt{background:#fff;color:var(--ink);border:1.5px solid var(--ink)}
+
+/* hero */
+.hero{position:relative;height:150svh;background:var(--night)}
+.hero-stage{position:sticky;top:0;height:100svh;overflow:hidden}
+.h-photo{position:absolute;inset:0;transform:translate3d(0,calc(var(--p,0) * 5%),0) scale(calc(1.1 - var(--p,0) * .1))}
+.h-photo img{width:100%;height:100%;object-fit:cover;object-position:82% 60%}
+@media (min-aspect-ratio:4/5){.h-photo img{object-position:50% 60%}}
+.h-top{position:absolute;left:0;right:0;top:0;height:58%;background:linear-gradient(to bottom,rgba(16,20,30,.82),rgba(16,20,30,0))}
+.h-copy{position:absolute;left:0;right:0;top:0;padding:28px 20px 0;color:#fff;transform:translate3d(0,calc(var(--p,0) * -26vh),0);opacity:calc(1 - var(--p,0) * 1.4)}
+.hero h1{font-size:clamp(58px,17vw,168px);font-variation-settings:"wdth" 70;text-transform:uppercase}
+.roles-tag{display:flex;gap:10px;margin:14px 0 0;font:700 15px/1 var(--display);font-variation-settings:"wdth" 118;text-transform:uppercase}
+.roles-tag span{padding:9px 12px;border:1.5px solid #fff;border-radius:3px}
+.roles-tag span+span{background:var(--peach);border-color:var(--peach);color:var(--night)}
+.h-copy .line{font-size:19px;line-height:1.4;max-width:30ch;margin:16px 0 0;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+@media (min-width:860px){.h-copy{max-width:1120px;margin:0 auto;padding-top:48px}}
+
+/* about */
+.about{padding:84px 0 70px}
+.about-grid{display:grid;gap:34px}
+.about h2{font-size:clamp(38px,8.6vw,70px);font-variation-settings:"wdth" 80;max-width:14ch}
+.about .lead{font-size:22px;line-height:1.45;max-width:36ch;margin-top:22px}
+.about figure{margin:0;max-width:380px}
+.about figure img{border-radius:3px}
+.about figcaption{font-size:15px;color:var(--soft);margin-top:8px}
+.about .yt{font-family:var(--display);font-weight:700}
+@media (min-width:860px){.about-grid{grid-template-columns:1.2fr .8fr;align-items:center}}
+
+/* run sheet: day into night */
+.run{position:relative;height:620svh;background:var(--day);--g:0}
+.run-stage{position:sticky;top:0;height:100svh;overflow:hidden;background:var(--stone);transition:background-color .6s ease;color:var(--ink)}
+.run.night .run-stage{background:var(--night);color:#eef0f4}
+.run-head{position:relative;padding:22px 20px 0;display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.run-head h2{font-size:clamp(22px,5.4vw,36px);font-variation-settings:"wdth" 110;text-transform:uppercase}
+.role{position:relative;display:grid;font:800 clamp(15px,3.6vw,20px)/1 var(--display);font-variation-settings:"wdth" 120;text-transform:uppercase}
+.role span{grid-area:1/1;transition:opacity .4s ease,transform .4s ease;text-align:right}
+.role .mc{opacity:0;transform:translate3d(0,8px,0);color:var(--peach)}
+.run.night .role .cel{opacity:0;transform:translate3d(0,-8px,0)}
+.run.night .role .mc{opacity:1;transform:none}
+.sheet{position:absolute;left:20px;right:20px;top:80px;bottom:170px}
+.track{position:absolute;left:11px;top:6px;bottom:6px;width:4px;background:rgba(29,31,26,.14);border-radius:2px}
+.run.night .track{background:rgba(255,255,255,.14)}
+.track i{position:absolute;inset:0;background:var(--rust);border-radius:2px;transform-origin:top;transform:scaleY(var(--line,0))}
+.run.night .track i{background:var(--peach)}
+.cues{list-style:none;margin:0;padding:0;height:100%;display:flex;flex-direction:column;justify-content:space-between}
+.cue{position:relative;padding-left:40px;opacity:.58;transition:opacity .35s ease}
+.cue::before{content:"";position:absolute;left:4px;top:.32em;width:18px;height:18px;border-radius:50%;background:var(--stone);border:3px solid currentColor;box-sizing:border-box;transition:background-color .3s ease}
+.run.night .cue::before{background:var(--night)}
+.cue.lit{opacity:1}
+.cue.lit::before{background:var(--rust);border-color:var(--rust)}
+.run.night .cue.lit::before{background:var(--peach);border-color:var(--peach)}
+.cue b{display:block;font:800 clamp(19px,4.6vw,30px)/1.05 var(--display);font-variation-settings:"wdth" 75;text-transform:uppercase}
+.cue span{display:block;font-size:clamp(14px,3.4vw,17px);line-height:1.3;max-height:0;overflow:hidden;opacity:0;transition:opacity .35s ease,max-height .35s ease}
+.cue.now span{max-height:4.2em;opacity:1;margin-top:4px}
+.run-end{position:absolute;left:20px;right:20px;bottom:80px;font:800 clamp(22px,5.2vw,40px)/1.05 var(--display);font-variation-settings:"wdth" 90;max-width:22ch;opacity:0;transform:translate3d(0,14px,0);transition:opacity .4s ease,transform .4s ease;color:var(--peach)}
+.run-end.on{opacity:1;transform:none}
+.run-end small{display:block;font:400 15px/1.4 var(--text);color:#c9cdd6;margin-top:8px}
+@media (min-width:860px){
+  .run-head,.sheet,.run-end{max-width:1120px;margin:0 auto;left:0;right:0}
+  .run-head{padding:40px 20px 0;position:static}
+  .role{position:absolute;right:max(20px,calc(50% - 540px));top:26%;font-size:clamp(44px,5vw,76px);font-variation-settings:"wdth" 100;letter-spacing:0;justify-items:end}
+  .cue b{font-size:28px}
+  .sheet{top:120px;bottom:90px;padding:0 20px;right:auto;width:min(640px,100%);left:max(0px,calc(50% - 560px))}
+  .track{left:31px}
+  .run-end{left:auto;right:max(20px,calc(50% - 540px));bottom:auto;top:52%;width:min(440px,38vw);margin:0}
+}
+@media (max-height:620px) and (min-width:500px){html:not(.still) .cue span{display:none}}
+
+/* both roles */
+.both{background:var(--night);color:#dfe3ea;padding:30px 0 90px}
+.both-grid{display:grid;gap:36px}
+.both h2{font-size:clamp(36px,8vw,64px);color:#fff;font-variation-settings:"wdth" 80;max-width:14ch;margin-bottom:22px}
+.both .lead{font-size:21px;line-height:1.45;color:#fff;max-width:38ch}
+.jobs{margin:30px 0 0;padding:0;list-style:none}
+.jobs li{padding:16px 0;border-top:1px solid rgba(255,255,255,.18);max-width:54ch}
+.jobs li b{display:block;font:800 19px/1.2 var(--display);font-variation-settings:"wdth" 110;text-transform:uppercase;color:var(--peach);margin-bottom:4px}
+.pics{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-content:start}
+.pics img{width:100%;height:100%;object-fit:cover;border-radius:3px}
+.pics .w{grid-column:1 / -1}
+@media (min-width:860px){.both-grid{grid-template-columns:1.05fr .95fr}.pics{position:sticky;top:40px}}
+
+/* where */
+.where{padding:88px 0;background:var(--stone)}
+.where h2{font-size:clamp(36px,8vw,64px);font-variation-settings:"wdth" 80;max-width:16ch;margin-bottom:16px}
+.where p{max-width:50ch}
+.places{list-style:none;padding:0;margin:26px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+.places li{font:800 clamp(24px,6vw,44px)/1.1 var(--display);font-variation-settings:"wdth" 65;text-transform:uppercase;color:var(--ivy)}
+.places li:last-child{color:var(--rust)}
+
+/* couples */
+.couples{padding:88px 0}
+.couples h2{font-size:clamp(36px,8vw,64px);font-variation-settings:"wdth" 80;margin-bottom:30px}
+.q{margin:0 0 30px;padding-top:16px;border-top:2px solid var(--ivy);max-width:52ch}
+.q p{font-size:clamp(20px,4.4vw,26px);line-height:1.35;margin:0 0 8px}
+.q cite{font:600 15px/1.3 var(--display);font-style:normal;color:var(--soft)}
+.couples .src{font-size:15px;color:var(--soft)}
+
+/* enquire */
+.enq{background:#fff;padding:88px 0 120px;border-top:1px solid #ddd3bd}
+.enq-grid{display:grid;gap:34px}
+.enq h2{font-size:clamp(36px,8vw,64px);font-variation-settings:"wdth" 80;margin-bottom:14px}
+form{display:grid;gap:16px}
+label,fieldset{display:grid;gap:6px;font:700 15px/1.3 var(--display)}
+fieldset{border:0;padding:0;margin:0}
+legend{padding:0;margin-bottom:6px}
+.pick{display:flex;flex-wrap:wrap;gap:8px}
+.pick label{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border:1.5px solid #6c6a5c;border-radius:4px;font-weight:600}
+input,textarea{font:400 17px/1.4 var(--text);padding:12px 14px;border:1.5px solid #6c6a5c;border-radius:4px;background:#fff;color:var(--ink);min-height:48px;width:100%}
+.pick input{width:auto;min-height:0;margin:0}
+textarea{min-height:120px;resize:vertical}
+.two{display:grid;gap:16px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.note{font-size:15px;color:var(--soft);margin:0}
+.done{display:none;padding:16px;border:1.5px solid var(--ivy);border-radius:4px;background:#eef1ea}
+.done.show{display:block}
+@media (min-width:860px){.enq-grid{grid-template-columns:.85fr 1.15fr}}
+
+footer{background:var(--night);color:#b8bdc8;padding:40px 0 110px;font-size:15px}
+footer strong{color:#fff}
+
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px}
+.bar .btn{flex:1;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+.bar .btn:focus-visible{box-shadow:0 0 0 6px #fff}
+.bar .btn:not(.alt){background:var(--peach);color:var(--night);border:1.5px solid var(--night)}
+.bar .btn:not(.alt):hover{background:#f0b896}
+@media (min-width:860px){.bar{left:auto;right:24px;bottom:24px}.bar .btn{flex:none}}
+
+@media (max-height:520px){.hero h1{font-size:60px}.h-copy{padding-top:16px}}
+/* still version: reduced motion, short screens, script turned off mid-visit */
+.still .hero{height:auto}.still .hero-stage{position:relative;height:100svh;min-height:540px}
+.still .h-photo,.still .h-copy{transform:none!important;opacity:1!important}
+.still .run{height:auto}
+.still .run-stage{position:relative;height:auto;background:var(--night);color:#eef0f4;padding-bottom:30px}
+.still .role{display:none}
+.still .sheet{position:relative;inset:auto;margin:20px 20px 0;padding:0;width:auto;max-width:none}
+.still .track{display:none}
+.still .cues{display:block}
+.still .cue{opacity:1;margin-bottom:22px}
+.still .cue::before{display:none}
+.still .cue{padding-left:0}
+.still .cue span{max-height:none;opacity:1;margin-top:4px}
+.still .cue.n{color:#eef0f4}
+.still .run-end{position:static;opacity:1;transform:none;margin:10px 20px 0;width:auto}
+</style>
+<noscript><style>
+  .hero{height:auto}.hero-stage{position:relative;height:100svh;min-height:540px}
+  .h-photo,.h-copy{transform:none!important;opacity:1!important}
+  .run{height:auto}
+  .run-stage{position:relative;height:auto;background:var(--night);color:#eef0f4;padding-bottom:30px}
+  .cue span{display:block!important}
+  .role,.track{display:none}
+  .sheet{position:relative;inset:auto;margin:20px 20px 0;padding:0;width:auto;max-width:none}
+  .cues{display:block}
+  .cue{opacity:1;margin-bottom:22px;padding-left:0}.cue::before{display:none}
+  .cue span{max-height:none;opacity:1;margin-top:4px}
+  .cue.n{color:#eef0f4}
+  .run-end{position:static;opacity:1;transform:none;margin:10px 20px 0;width:auto}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip">A website idea made by <strong>Lampbound Studio</strong> for Trav Dittmar Celebrancy. Not his official site.</div>
+
+<main id="main">
+<section class="hero" data-pin aria-label="Introduction">
+  <div class="hero-stage">
+    <picture class="h-photo">
+      <source media="(min-aspect-ratio: 4/5)" srcset="img/porch.jpg" width="1600" height="1068">
+      <img src="img/trio.jpg" width="900" height="1349" alt="Trav with a just-married couple at one of his ceremonies" fetchpriority="high">
+    </picture>
+    <div class="h-top"></div>
+    <div class="h-copy">
+      <h1>Trav Dittmar</h1>
+      <p class="roles-tag"><span>Celebrant</span><span>and MC</span></p>
+      <p class="line">From the moment you walk down the aisle to the final track on the dance floor.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" aria-labelledby="about-h">
+  <div class="wrap about-grid">
+    <div>
+      <h2 id="about-h">Nearly a decade in SA events and hospitality</h2>
+      <p class="lead">"I launched my own celebrancy business to follow my passion for love, storytelling, and the unique journeys of every couple."</p>
+      <p>Trav is a husband and father who loves travelling, exploring new places, sport and music. Your ceremony is written around your relationship. Apart from a few legal phrases, everything (how you met, the tone, the jokes and the vows) is written for you, with the balance of heart and humour you're after.</p>
+      <p class="yt"><a href="https://www.youtube.com/watch?v=a-7wCUOyCFY" rel="noopener">Watch Trav say hello on YouTube</a></p>
+    </div>
+    <figure>
+      <img src="img/trav.jpg" width="673" height="659" alt="Trav Dittmar smiling, in a suit and tie against a sandstone wall" loading="lazy">
+      <figcaption>Travis Dittmar, celebrant and emcee</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="run" data-pin data-run aria-labelledby="run-h">
+  <div class="run-stage">
+    <div class="run-head">
+      <h2 id="run-h">Your day, one voice</h2>
+      <p class="role" aria-hidden="true"><span class="cel">Celebrant</span><span class="mc">MC</span></p>
+    </div>
+    <div class="sheet">
+      <div class="track" aria-hidden="true"><i></i></div>
+      <ol class="cues">
+        <li class="cue"><b>The aisle</b><span>"From the moment you walk down the aisle"</span></li>
+        <li class="cue"><b>Your story</b><span>How you met, the tone, the jokes and the vows, written for you.</span></li>
+        <li class="cue"><b>"I do"</b><span>The emotional high of the ceremony.</span></li>
+        <li class="cue"><b>The legal bits</b><span>"I handle every legal detail, timing cue, and reception transition behind the scenes"</span></li>
+        <li class="cue n"><b>Straight into reception</b><span>Same person, the same warm, relaxed energy, now as your MC.</span></li>
+        <li class="cue n"><b>Family announcements</b><span>He runs them with your venue staff and vendors, so nobody asks you.</span></li>
+        <li class="cue n"><b>Speeches</b><span>"If a speech runs long or dinner is delayed, I adjust everything smoothly"</span></li>
+        <li class="cue n"><b>Dinner</b><span>You sit back with a champagne. He keeps an eye on the main meals.</span></li>
+        <li class="cue n"><b>The dance floor</b><span>Through to the final track.</span></li>
+      </ol>
+    </div>
+    <p class="run-end">"&hellip;without a single awkward transition."<small>Trav Dittmar</small></p>
+  </div>
+</section>
+
+<section class="both" aria-labelledby="both-h">
+  <div class="wrap both-grid">
+    <div>
+      <h2 id="both-h">Why book one person for both?</h2>
+      <p class="lead">"I'll already know your story, your personalities, and your guests, so transitioning from the emotional high of the ceremony into the reception feels natural".</p>
+      <p>It's also one less vendor to organise. On the day he works with your photographer, caterers, venue staff and DJ.</p>
+      <ul class="jobs">
+        <li><b>Total presence on your day</b>Every timeline detail, microphone check and reception cue, handled behind the scenes so you can laugh and be present.</li>
+        <li><b>Day to night</b>From "I do" straight into reception host mode.</li>
+        <li><b>The conductor</b>Vendors, venue staff and family announcements go through him, so you never answer a logistics question on the day.</li>
+        <li><b>Peace of mind</b>The legal paperwork, the timing and the move into reception, all taken care of.</li>
+      </ul>
+    </div>
+    <div class="pics">
+      <img class="w" src="img/mic.jpg" width="1200" height="801" alt="Trav reading into a microphone beside a bride and her bridesmaid" loading="lazy">
+      <img src="img/signing.jpg" width="900" height="1349" alt="The couple signing their marriage certificate at a timber desk while Trav points to the line" loading="lazy">
+      <img src="img/laugh.jpg" width="1200" height="801" alt="The couple laughing after their vows, Trav behind them" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="where" aria-labelledby="where-h">
+  <div class="wrap">
+    <h2 id="where-h">Anywhere in South Australia</h2>
+    <p>Trav serves Adelaide and travels across the state, bringing his setup to your venue.</p>
+    <ul class="places">
+      <li>Barossa Valley</li>
+      <li>McLaren Vale</li>
+      <li>Adelaide Hills</li>
+      <li>Fleurieu Peninsula</li>
+      <li>Anywhere in between</li>
+    </ul>
+  </div>
+</section>
+
+<section class="couples" aria-labelledby="couples-h">
+  <div class="wrap">
+    <h2 id="couples-h">What couples wrote</h2>
+    <figure class="q"><p>"He even called me prior to the wedding to make sure I was happy with the suit and tie he had chosen for the day."</p><cite>Lori K., April 2026, who booked him a month and a half before the wedding</cite></figure>
+    <figure class="q"><p>Trav "did a great job of communicating with our other vendors to ensure everything went smoothly throughout the day."</p><cite>Abbey, January 2026</cite></figure>
+    <p class="src">Reviews from his Easy Weddings listing.</p>
+  </div>
+</section>
+
+<section class="enq" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap enq-grid">
+    <div>
+      <h2 id="enq-h">Is Trav free on your date?</h2>
+      <p>Tell him your date and venue, and whether you're after a celebrant, an MC or both. You can also call or text him on <a href="tel:0448298728">0448 298 728</a>.</p>
+      <p class="note">This is a preview, so the form does not send anything.</p>
+    </div>
+    <form id="enq-form" novalidate>
+      <div class="two">
+        <label>Your names<input name="names" autocomplete="name"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <div class="two">
+        <label>Wedding date<input name="date" type="date"></label>
+        <label>Venue or town<input name="venue"></label>
+      </div>
+      <fieldset>
+        <legend>You're after</legend>
+        <div class="pick">
+          <label><input type="radio" name="role" value="celebrant"> Celebrant</label>
+          <label><input type="radio" name="role" value="mc"> MC</label>
+          <label><input type="radio" name="role" value="both" checked> Both</label>
+        </div>
+      </fieldset>
+      <label>Anything else<textarea name="msg"></textarea></label>
+      <button class="btn" type="button" id="send">Send to Trav</button>
+      <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Trav. To reach him today, call or text <a href="tel:0448298728">0448 298 728</a>.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>A preview made by Lampbound Studio for Trav Dittmar Celebrancy.</strong> Not affiliated, not live.</p>
+    <p>Words and photos are from Trav's Easy Weddings listing.</p>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn alt" href="tel:0448298728">Call Trav</a><a class="btn" href="#enquire">Check your date</a></div>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var pins=[].slice.call(document.querySelectorAll('[data-pin]'));
+  var run=document.querySelector('[data-run]');
+  var cues=[].slice.call(run.querySelectorAll('.cue'));
+  var end=run.querySelector('.run-end'),track=run.querySelector('.track');
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce), (max-height:520px)');
+  var on=false,ticking=false,N=cues.length;
+  function clamp(v){return Math.min(1,Math.max(0,v))}
+  function sheet(p){
+    // nine cues over the first 88%, then the closing line
+    var q=clamp(p/.88),k=Math.min(N-1,Math.floor(q*N));
+    cues.forEach(function(c,i){c.classList.toggle('lit',i<=k);c.classList.toggle('now',i===k&&p<.92)});
+    // the line runs to the dot of the current cue, no gaps
+    var tr=track.getBoundingClientRect();
+    function cy(i){var b=cues[i].getBoundingClientRect();return b.top+14}
+    var f=q*N-k,y=k<N-1?cy(k)+(cy(k+1)-cy(k))*f:cy(N-1)+(tr.bottom-cy(N-1))*clamp((p-.88)/.1);
+    var frac=clamp((y-tr.top)/tr.height);
+    track.style.setProperty('--line',frac.toFixed(4));
+    run.classList.toggle('night',k>=4);
+    end.classList.toggle('on',p>=.9);
+  }
+  function update(){
+    ticking=false;
+    pins.forEach(function(el){
+      var r=el.getBoundingClientRect(),total=el.offsetHeight-innerHeight;
+      var p=total>0?clamp(-r.top/total):1;
+      el.style.setProperty('--p',p.toFixed(4));
+      if(el===run)sheet(p);
+    });
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
+  function start(){root.classList.remove('still');if(on)return;on=true;addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);update();}
+  function stop(){on=false;removeEventListener('scroll',onScroll);removeEventListener('resize',onScroll);root.classList.add('still');run.classList.remove('night');pins.forEach(function(el){el.style.setProperty('--p','0')});}
+  if(mq.matches)stop();else start();
+  if(mq.addEventListener)mq.addEventListener('change',function(){mq.matches?stop():start()});
+  document.getElementById('send').addEventListener('click',function(){var d=document.getElementById('done');d.classList.add('show');d.focus();});
+})();
+</script>
+</body>
+</html>
