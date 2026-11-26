@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Josh Events, Adelaide wedding decor: a website preview</title>
+<meta name="description" content="A website idea for Josh Events, the family-run wedding decor and styling business of Joshma and Praveen in Adelaide. A preview by Lampbound Studio, not their official site.">
+<meta property="og:title" content="Josh Events, Adelaide wedding decor">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Josh Events. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/joshevents/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/joshevents/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0b08'/%3E%3Ctext x='16' y='23' font-family='Georgia' font-size='17' fill='%23ddbd81' text-anchor='middle'%3EJE%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Hanken+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0d0b08; --black-2:#1a1611; --gold:#ddbd81; --gold-deep:#92774a; --white:#f7f4ee; --paper:#fff;
+  --ink:#16130f; --soft:#5b544a; --line:#ddd6ca; --blush:#e8a7b4;
+  --display:"Cinzel", "Times New Roman", serif; --text:"Hanken Grotesk", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--white);color:var(--ink);font:400 17px/1.6 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid #111;outline-offset:0;box-shadow:0 0 0 6px #fff}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:0;background:var(--black);color:#fff;padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.strip{background:var(--black);color:#cfc8bb;font-size:14px;line-height:1.4;padding:9px 16px;text-align:center}
+.strip strong{color:#fff}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.05;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:3px;background:var(--gold);color:var(--black);text-decoration:none;border:0;font:700 16px/1 var(--text);cursor:pointer}
+.btn:hover{background:#e8cd9a}
+.btn.alt{background:var(--black);color:#fff;border:1.5px solid var(--blush)}
+
+/* hero: the room, their name, a welcome board coming in close */
+.hero{position:relative;height:150svh;background:var(--black)}
+.hero-stage{position:sticky;top:0;height:100svh;overflow:hidden}
+.h-photo{position:absolute;inset:0;transform:scale(calc(1.12 - var(--p,0) * .1))}
+.h-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.h-shade{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,11,8,.72),rgba(13,11,8,.1) 38%,rgba(13,11,8,0) 52%,rgba(13,11,8,.82))}
+.h-copy{position:absolute;left:20px;right:20px;top:6svh;color:#fff;transform:translate3d(0,calc(var(--p,0) * -12svh),0)}
+.hero h1{font-size:min(clamp(52px,15vw,138px),14svh);letter-spacing:.04em;line-height:.95}
+.hero h1 span{display:block;font-size:.3em;letter-spacing:.32em;color:var(--gold);margin-top:.5em;font-weight:500}
+.h-sub{position:absolute;left:20px;right:20px;bottom:96px;color:#fff;max-width:30ch;font-size:clamp(18px,4.4vw,24px);line-height:1.4;text-shadow:0 1px 10px rgba(0,0,0,.55);transform:translate3d(0,calc(var(--p,0) * -9svh),0)}
+.h-board{position:absolute;right:16px;top:17svh;width:min(36vw,190px);aspect-ratio:3 / 4.4;background:var(--paper);border-radius:999px 999px 4px 4px;box-shadow:0 18px 30px rgba(0,0,0,.45);display:grid;place-content:center;text-align:center;padding:14px;transform:translate3d(0,calc(var(--p,0) * -58svh),0) rotate(calc(3deg - var(--p,0) * 5deg))}
+.h-board b{font:700 clamp(17px,4.6vw,26px)/1 var(--display);color:var(--black);letter-spacing:.06em}
+.h-board i{font-style:normal;font-size:12.5px;color:var(--soft);margin-top:6px;display:block}
+.h-board::after{content:"";position:absolute;left:12%;right:12%;bottom:-14px;height:14px;background:var(--blush);border-radius:8px}
+@media (min-width:860px){
+  .h-copy,.h-sub{left:max(20px,calc((100vw - 1120px) / 2 + 20px))}
+  .h-board{right:max(24px,calc((100vw - 1120px) / 2 + 24px));width:220px;top:auto;bottom:18svh}
+}
+
+/* about */
+.about{padding:84px 0 72px}
+.about-grid{display:grid;gap:32px}
+.about h2{font-size:clamp(34px,8.4vw,64px);max-width:13ch}
+.about .lead{font-size:21px;line-height:1.5;max-width:36ch;margin-top:22px}
+.about .where{font-size:15.5px;color:var(--soft);border-top:1px solid var(--line);padding-top:14px;margin-top:22px;max-width:56ch}
+.about figure{margin:0}
+.about figcaption{font-size:14px;color:var(--soft);margin-top:6px}
+@media (min-width:860px){.about-grid{grid-template-columns:1.15fr .85fr;column-gap:60px;align-items:center}.about figure{max-width:440px;justify-self:end}}
+
+/* looks */
+.looks{padding:0 0 84px}
+.looks h2{font-size:clamp(30px,7vw,52px);margin-bottom:22px;max-width:18ch}
+.look-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.look-grid figure{margin:0;position:relative;overflow:hidden;background:var(--black)}
+.look-grid img{width:100%;height:100%;object-fit:cover}
+.look-grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;background:linear-gradient(to top,rgba(13,11,8,.85),rgba(13,11,8,0));color:#fff;font:700 15px/1.2 var(--text)}
+.look-grid .big{grid-column:1 / -1;aspect-ratio:3 / 2}
+.look-grid .tall{aspect-ratio:3 / 4}
+.look-grid .wide{grid-column:1 / -1;aspect-ratio:3 / 2}
+@media (min-width:860px){.look-grid{grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:300px 300px}.look-grid .big{grid-column:1;grid-row:1 / span 2;aspect-ratio:auto}.look-grid .tall{aspect-ratio:auto}.look-grid .wide{grid-column:2 / span 2}}
+
+/* door to dance floor */
+.door{background:var(--black);color:#e4ddd0;padding:80px 0}
+.door h2{font-size:clamp(30px,7vw,52px);color:#fff;max-width:16ch}
+.door .intro-p{max-width:48ch;margin:14px 0 30px}
+.door ol{list-style:none;margin:0;padding:0;display:grid;gap:22px}
+.door li{display:grid;grid-template-columns:110px 1fr;gap:16px;align-items:center}
+.door li img{width:110px;height:140px;object-fit:cover;border-radius:999px 999px 3px 3px}
+.door h3{font-size:22px;color:var(--gold);letter-spacing:.04em}
+.door li p{margin:4px 0 0;font-size:16px}
+@media (min-width:860px){.door ol{grid-template-columns:1fr 1fr 1.5fr;column-gap:36px}.door li{grid-template-columns:1fr;align-items:start}.door li img{width:100%;height:340px}}
+
+/* collections */
+.coll{padding:88px 0}
+.coll-grid{display:grid;gap:34px}
+.coll h2{font-size:clamp(34px,8vw,60px)}
+.coll .names{margin:18px 0 8px;padding:0;list-style:none;border-top:2px solid var(--black)}
+.coll .names li{font:700 clamp(32px,8.6vw,56px)/1 var(--display);letter-spacing:.05em;padding:14px 0;border-bottom:1px solid var(--line)}
+.coll .inc{font-size:18px;max-width:40ch;margin-top:18px}
+.coll h3{font-size:20px;letter-spacing:.06em;margin:30px 0 10px}
+.addons{margin:0;padding:0;list-style:none;display:grid;gap:0;border-top:1px solid var(--line)}
+.addons li{padding:11px 0;border-bottom:1px solid var(--line);font-size:16.5px}
+.coll .ask{font-size:16px;color:var(--soft);margin-top:18px}
+.coll figure{margin:0}
+@media (min-width:860px){.coll-grid{grid-template-columns:1fr 1fr;column-gap:60px;align-items:start}.coll figure{position:sticky;top:30px}.addons{grid-template-columns:1fr 1fr;column-gap:28px}}
+
+/* the signature: the first dance */
+.dance{position:relative;height:560svh;background:var(--black)}
+.dance-stage{position:sticky;top:0;height:100svh;overflow:hidden;background:var(--black)}
+.d-photo{position:absolute;inset:0;transform:scale(calc(1.04 + var(--d,0) * .04))}
+.d-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.d-dark{position:absolute;inset:0;background:#050403;opacity:calc(var(--d,0) * .72)}
+.fog{position:absolute;left:-30%;right:-30%;bottom:-12%;height:58%;opacity:calc(var(--f,0) * .95);transform:translate3d(calc((1 - var(--f,0)) * -18%),0,0);pointer-events:none}
+.fog span{position:absolute;bottom:0;width:70%;height:100%;border-radius:50%;background:radial-gradient(closest-side,rgba(240,240,246,.9),rgba(240,240,246,.5) 50%,rgba(240,240,246,0));animation:drift 14s ease-in-out infinite alternate}
+.fog span:nth-child(1){left:0}
+.fog span:nth-child(2){left:32%;height:80%;animation-duration:18s;animation-delay:-6s}
+.fog span:nth-child(3){left:58%;height:92%;animation-duration:16s;animation-delay:-3s}
+@keyframes drift{from{transform:translate3d(-6%,0,0)}to{transform:translate3d(8%,-4%,0)}}
+.fount{position:absolute;bottom:13%;width:0;height:0;opacity:var(--s,0)}
+.fount.l{left:13%}.fount.r{right:13%}
+.fount i{position:absolute;left:-2px;bottom:0;width:5px;height:5px;border-radius:50%;background:#fff6dc;box-shadow:0 0 8px 2px rgba(255,214,140,.85);opacity:0} /* slop-ok: a spark is a point of light, not UI glow */
+.dance.fire .fount i{animation:spark 1.15s linear infinite}
+@keyframes spark{0%{transform:translate3d(0,0,0);opacity:1}55%{transform:translate3d(calc(var(--dx) * .6),calc(var(--dy) * -1),0);opacity:1}100%{transform:translate3d(var(--dx),calc(var(--dy) * -.55),0);opacity:0}}
+.fount::before{content:"";position:absolute;left:-30px;bottom:-6px;width:60px;height:26px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,220,160,.55),rgba(255,220,160,0))}
+.d-cap{position:absolute;left:12px;right:12px;top:14px;z-index:3;background:var(--paper);color:var(--ink);padding:14px 16px;border-radius:3px;box-shadow:0 8px 20px rgba(0,0,0,.35);transition:opacity .4s ease}
+.d-cap > div{display:none}
+.d-cap > div.on{display:block}
+.d-cap h3{font-size:clamp(24px,6.6vw,36px);letter-spacing:.04em}
+.d-cap p{margin:6px 0 0;font-size:16px;line-height:1.45}
+.d-end{position:absolute;left:20px;right:20px;bottom:16svh;z-index:3;color:#fff;opacity:0;transform:translate3d(0,20px,0);transition:opacity .6s ease,transform .6s ease;text-shadow:0 2px 16px rgba(0,0,0,.7)}
+.dance.end .d-end{opacity:1;transform:none}
+.dance.end .d-cap{opacity:0}
+.d-end p{font:700 clamp(44px,12vw,120px)/.95 var(--display);letter-spacing:.04em;margin:0}
+.d-end span{display:block;font:500 17px/1.45 var(--text);margin-top:14px;max-width:34ch;color:#f1ead9;background:rgba(8,6,4,.72);padding:10px 12px;border-radius:3px;text-shadow:none}
+@media (min-width:860px){
+  .d-cap{left:max(20px,calc((100vw - 1120px) / 2 + 20px));right:auto;top:8svh;width:400px;padding:22px 24px}
+  .d-end{left:max(20px,calc((100vw - 1120px) / 2 + 20px))}
+}
+
+/* words */
+.words{background:var(--black-2);color:#e7e0d3;padding:84px 0}
+.words h2{font-size:clamp(30px,7vw,52px);color:#fff;margin-bottom:28px}
+.wq{display:grid;gap:30px}
+.wq figure{margin:0}
+.wq blockquote{margin:0;font-size:19px;line-height:1.5}
+.wq .big blockquote{font:500 clamp(24px,5.6vw,36px)/1.25 var(--display);color:#fff}
+.wq figcaption{margin-top:10px;font-weight:700;color:var(--gold)}
+@media (min-width:860px){.wq{grid-template-columns:1.4fr 1fr;column-gap:60px;align-items:end}}
+
+/* enquire */
+.enq{padding:88px 0 120px}
+.enq-grid{display:grid;gap:34px}
+.enq h2{font-size:clamp(34px,8vw,60px);margin-bottom:14px}
+.enq-logo{width:150px;margin-bottom:22px}
+form{display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:700;font-size:15px}
+input,textarea,select{font:400 17px/1.4 var(--text);padding:12px 14px;border:1.5px solid #6c655b;border-radius:3px;background:#fff;color:var(--ink);min-height:48px;width:100%}
+textarea{min-height:120px;resize:vertical}
+fieldset{border:0;padding:0;margin:0}
+legend{font-weight:700;font-size:15px;margin-bottom:8px}
+.checks{display:flex;flex-wrap:wrap;gap:8px}
+.checks label{display:flex;align-items:center;gap:8px;font-weight:500;border:1.5px solid #6c655b;border-radius:3px;padding:0 14px;min-height:44px}
+.checks input{width:18px;height:18px;min-height:0;margin:0;accent-color:var(--black)}
+.two{display:grid;gap:16px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.note{font-size:14.5px;color:var(--soft);margin:0}
+.done{display:none;padding:16px;border:1.5px solid var(--gold-deep);border-radius:3px;background:#fbf6ec}
+.done.show{display:block}
+@media (min-width:860px){.enq-grid{grid-template-columns:.85fr 1.15fr;column-gap:60px}}
+
+footer{background:var(--black);color:#bfb7aa;padding:40px 0 110px;font-size:15px}
+footer strong{color:#fff}
+
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px}
+.bar .btn{flex:1;box-shadow:0 6px 16px rgba(0,0,0,.35)}
+.bar .btn:focus-visible{outline:3px solid #111;outline-offset:0;box-shadow:0 0 0 6px #fff}
+@media (min-width:860px){.bar{left:auto;right:24px;bottom:24px}.bar .btn{flex:none}}
+
+@media (prefers-reduced-motion:reduce),(max-height:520px){
+  .hero{height:auto}.hero-stage{position:relative;height:100svh;min-height:560px}
+  .h-photo,.h-copy,.h-sub{transform:none!important}.h-board{display:none}
+  .dance{height:auto;--d:.55;--f:1;--s:1}
+  .dance-stage{position:relative;height:auto;display:grid}
+  .dance-stage > *{grid-area:1 / 1}
+  .d-photo,.d-dark,.fog{position:relative;inset:auto}
+  .d-photo{transform:none;height:min(90svh,760px)}
+  .d-dark,.fog{align-self:stretch}
+  .fog{align-self:end;height:46%;margin:0 -30%;transform:none}
+  .fog span{animation:none}
+  .fount{position:relative;align-self:end;justify-self:start;margin:0 0 13% 13%}
+  .fount.r{justify-self:end;margin:0 13% 13% 0}
+  .fount i,.dance.fire .fount i{animation:none;opacity:.95;transform:translate3d(calc(var(--dx) * .6),calc(var(--dy) * -1),0)}
+  .d-cap{display:none}
+  .d-end{position:relative;align-self:end;opacity:1;transform:none;padding:0 0 40px;bottom:auto}
+}
+@media (max-height:520px){.hero-stage{min-height:100svh}.h-copy{top:16px}.hero h1{font-size:48px}.h-sub{bottom:76px}}
+</style>
+<noscript><style>
+  .hero{height:auto}.hero-stage{position:relative;height:100svh;min-height:560px}
+  .h-photo,.h-copy,.h-sub{transform:none!important}.h-board{display:none}
+  .dance{height:auto}.dance-stage{position:relative;height:min(90svh,760px)}
+  .d-cap{display:none}.fount{display:none}
+  .d-end{opacity:1;transform:none}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip">A website idea made by <strong>Lampbound Studio</strong> for Josh Events. Not their official site.</div>
+
+<main id="main">
+<section class="hero" data-pin aria-label="Introduction">
+  <div class="hero-stage">
+    <picture class="h-photo">
+      <source media="(max-width:700px)" srcset="img/pathway.jpg" width="1000" height="1333">
+      <img src="img/room.jpg" width="1800" height="1052" alt="Wedding decor by Josh Events: white flowers, a lit stage and a floral entrance" fetchpriority="high">
+    </picture>
+    <div class="h-shade"></div>
+    <div class="h-copy"><h1>Josh <span>Events</span></h1></div>
+    <div class="h-board" aria-hidden="true"><div><b>Welcome</b><i>to your wedding</i></div></div>
+    <p class="h-sub">Wedding stages, floral arches and mirror pathways in Adelaide, styled by husband and wife Joshma and Praveen.</p>
+  </div>
+</section>
+
+<section class="about" aria-labelledby="about-h">
+  <div class="wrap about-grid">
+    <div>
+      <h2 id="about-h">Your vision is our passion.</h2>
+      <p class="lead">Josh Events is a family business, owned and run by Joshma and Praveen. They take the time to understand your vision and honour your traditions, then build a setting that feels like yours.</p>
+      <p>Their collection has premium artificial and real-touch flowers, backdrops and centrepieces, with dance floors and mirror pathways to go with them.</p>
+      <p class="where">Based in Andrews Farm, in Adelaide's north. Weddings across Adelaide.</p>
+    </div>
+    <figure><img src="img/mandap.jpg" width="900" height="1199" alt="A mandap framed in pink and white roses with brass lamps, the couple seated on red cushions beneath it" loading="lazy"><figcaption>A ceremony styled by Josh Events.</figcaption></figure>
+  </div>
+</section>
+
+<section class="looks" aria-labelledby="looks-h">
+  <div class="wrap">
+    <h2 id="looks-h">Clean, romantic, colourful or traditional</h2>
+    <div class="look-grid">
+      <figure class="big"><img src="img/clean.jpg" width="900" height="1200" alt="A white sculpted stage backdrop with M and G initials, white flowers and a white lounge" loading="lazy"><figcaption>Clean</figcaption></figure>
+      <figure class="tall"><img src="img/ceremony.jpg" width="1000" height="968" alt="A pink and white rose arch with gold lamps over a low ceremony seat" loading="lazy"><figcaption>Traditional</figcaption></figure>
+      <figure class="tall"><img src="img/colourful.jpg" width="1000" height="866" alt="A bright stage with red drapes, a patterned floor and a tall yellow centrepiece" loading="lazy"><figcaption>Colourful</figcaption></figure>
+      <figure class="wide tall"><img src="img/romantic.jpg" width="1000" height="644" alt="Blush draping and a pink and purple floral frame around a white bench" loading="lazy"><figcaption>Romantic</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="door" aria-labelledby="door-h">
+  <div class="wrap">
+    <h2 id="door-h">From the door to the dance floor</h2>
+    <p class="intro-p">Entrances, aisles, tables and the main stage can all be styled as one look.</p>
+    <ol>
+      <li><img src="img/welcome2.jpg" width="800" height="1065" alt="An arched welcome board with the couple's names among pink flowers" loading="lazy"><div><h3>Entry</h3><p>Welcome boards and entry decor at the door.</p></div></li>
+      <li><img src="img/aisle.jpg" width="900" height="1380" alt="An outdoor aisle lined with red and white flowers leading to a draped arch" loading="lazy"><div><h3>Pathway</h3><p>Floral aisles and mirror pathways from the door to the stage.</p></div></li>
+      <li><img src="img/ds.jpg" width="1100" height="786" alt="A lit white stage with D and S initials, flower stands and a white lounge" loading="lazy"><div><h3>Main stage</h3><p>The backdrop behind you for the speeches and the photos.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="coll" aria-labelledby="coll-h">
+  <div class="wrap coll-grid">
+    <div>
+      <h2 id="coll-h">Three collections</h2>
+      <ul class="names"><li>Couture</li><li>Prestige</li><li>Opulence</li></ul>
+      <p class="inc">Each one includes main stage and backdrop styling and 10 table centrepieces, with entry decor options.</p>
+      <h3>Add-ons</h3>
+      <ul class="addons">
+        <li>Dance floors and pathways</li>
+        <li>Extra florals and lighting</li>
+        <li>Cold sparks and low fog</li>
+        <li>Lasers, bubbles and artificial snow</li>
+        <li>360 photo booth</li>
+        <li>LED displays</li>
+      </ul>
+      <p class="ask">Ask Praveen what each collection includes and what it costs for your date.</p>
+    </div>
+    <figure><img src="img/couture.jpg" width="1100" height="920" alt="A white stage with two lit chandeliers, white flowers and a long white sofa on a lit dance floor" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="dance" data-pin data-dance aria-labelledby="dance-h">
+  <div class="dance-stage">
+    <h2 id="dance-h" class="vh">The first dance: lights down, low fog and cold sparks on the stage</h2>
+    <div class="d-photo"><img src="img/stage.jpg" width="1600" height="1301" alt="A white stage with K and H initials, pink and white flowers and lit candle stands, on a white dance floor" loading="lazy"></div>
+    <div class="d-dark" aria-hidden="true"></div>
+    <div class="fog" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="fount l" aria-hidden="true"></div>
+    <div class="fount r" aria-hidden="true"></div>
+    <div class="d-cap" aria-hidden="true">
+      <div class="on"><h3>The stage</h3><p>Main stage and backdrop, styled with your flowers and your initials.</p></div>
+      <div><h3>Lights down</h3><p>The room lights go down for the first dance.</p></div>
+      <div><h3>Low fog</h3><p>A layer of fog rolls across the dance floor.</p></div>
+      <div><h3>Cold sparks</h3><p>Fountains of cold sparks on both sides of the stage.</p></div>
+    </div>
+    <div class="d-end"><p>First dance</p><span>Lighting, low fog and cold sparks are add-ons. The fog and sparks here are drawn for this preview over one of their stages.</span></div>
+  </div>
+</section>
+
+<section class="words" aria-labelledby="words-h">
+  <div class="wrap">
+    <h2 id="words-h">From their couples</h2>
+    <div class="wq">
+      <figure class="big"><blockquote>The final result was exactly what we had discussed during our consultation. There were no surprises, no compromises and no disappointment.</blockquote><figcaption>Sim, Easy Weddings</figcaption></figure>
+      <figure><blockquote>Our ceremony space looked stunning and truly felt like us.</blockquote><figcaption>Jemimah, Easy Weddings</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="enq" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap enq-grid">
+    <div>
+      <img class="enq-logo" src="img/logo.jpg" width="600" height="600" alt="Josh Events logo: a gold JE monogram with a white flower, Elegant events. Timeless memories." loading="lazy">
+      <h2 id="enq-h">Tell Praveen about your day</h2>
+      <p>Send your date, venue and the look you have in mind, and Joshma and Praveen will come back to you. Or call <a href="tel:0411867008">0411 867 008</a>.</p>
+      <p class="note">This is a preview, so the form does not send anything.</p>
+    </div>
+    <form id="enq-form" novalidate>
+      <div class="two">
+        <label>Your names<input name="names" autocomplete="name"></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
+      </div>
+      <div class="two">
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+        <label>Wedding date<input name="date" type="date"></label>
+      </div>
+      <div class="two">
+        <label>Venue<input name="venue"></label>
+        <label>Roughly how many guests?<input name="guests" inputmode="numeric"></label>
+      </div>
+      <label>Collection
+        <select name="collection"><option>Not sure yet</option><option>Couture</option><option>Prestige</option><option>Opulence</option></select>
+      </label>
+      <fieldset>
+        <legend>Add-ons you'd like to ask about</legend>
+        <div class="checks">
+          <label><input type="checkbox" name="add" value="pathway">Mirror pathway</label>
+          <label><input type="checkbox" name="add" value="dancefloor">Dance floor</label>
+          <label><input type="checkbox" name="add" value="sparks">Cold sparks</label>
+          <label><input type="checkbox" name="add" value="fog">Low fog</label>
+          <label><input type="checkbox" name="add" value="360">360 booth</label>
+        </div>
+      </fieldset>
+      <label>Your traditions, colours or anything else<textarea name="msg"></textarea></label>
+      <button class="btn" type="button" id="send">Send to Josh Events</button>
+      <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Joshma and Praveen. To ask today, call <a href="tel:0411867008">0411 867 008</a>.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>A preview made by Lampbound Studio for Josh Events.</strong> Not affiliated, not live.</p>
+    <p>Photos and reviews are from the Josh Events listing on Easy Weddings, and the wording is adapted from it. Instagram: <a href="https://www.instagram.com/joshevents_adelaide/">@joshevents_adelaide</a></p>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn alt" href="tel:0411867008">Call Praveen</a><a class="btn" href="#enquire">Check your date</a></div>
+
+<script>
+(function(){
+  var pins=[].slice.call(document.querySelectorAll('[data-pin]'));
+  var dance=document.querySelector('[data-dance]');
+  var caps=[].slice.call(dance.querySelectorAll('.d-cap > div'));
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce), (max-height:520px)');
+  // sparks: fixed spreads so every visit looks the same
+  [].forEach.call(dance.querySelectorAll('.fount'),function(f,side){
+    for(var k=0;k<32;k++){
+      var i=document.createElement('i');
+      var spread=((k*37)%23-11)*(window.innerWidth<700?4:7);
+      var h=(190+((k*53)%17)*16)*(window.innerWidth<700?.8:1.15);
+      i.style.setProperty('--dx',spread+'px');i.style.setProperty('--dy',h+'px');
+      i.style.animationDelay=(-(k*0.037)).toFixed(3)+'s';
+      f.appendChild(i);
+    }
+  });
+  var on=false,ticking=false,last=-1;
+  function clamp(v){return Math.min(1,Math.max(0,v))}
+  function seg(p,a,b){return clamp((p-a)/(b-a))}
+  function drawDance(p){
+    dance.style.setProperty('--d',seg(p,.2,.34).toFixed(3));
+    dance.style.setProperty('--f',seg(p,.38,.52).toFixed(3));
+    dance.style.setProperty('--s',seg(p,.56,.62).toFixed(3));
+    dance.classList.toggle('fire',p>.55);
+    var n=p<.2?0:p<.38?1:p<.56?2:3;
+    dance.classList.toggle('end',p>=.8);
+    if(n===last)return;last=n;
+    caps.forEach(function(c,k){c.classList.toggle('on',k===n)});
+  }
+  function update(){
+    ticking=false;if(!on)return;
+    pins.forEach(function(el){
+      var r=el.getBoundingClientRect(),total=el.offsetHeight-window.innerHeight;
+      var p=total>0?clamp(-r.top/total):1;
+      el.style.setProperty('--p',p.toFixed(4));
+      if(el===dance)drawDance(p);
+    });
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
+  function finish(){
+    pins.forEach(function(el){el.style.removeProperty('--p')});
+    ['--d','--f','--s'].forEach(function(k){dance.style.removeProperty(k)});
+    dance.classList.remove('fire');dance.classList.add('end');
+  }
+  function start(){if(on)return;on=true;last=-1;dance.classList.remove('end');addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);update();}
+  function stop(){on=false;ticking=false;removeEventListener('scroll',onScroll);removeEventListener('resize',onScroll);finish();}
+  if(mq.matches)finish();else start();
+  if(mq.addEventListener)mq.addEventListener('change',function(){mq.matches?stop():start()});
+  addEventListener('pageshow',function(e){if(e.persisted&&on)update()});
+  document.getElementById('send').addEventListener('click',function(){var d=document.getElementById('done');d.classList.add('show');d.focus();});
+})();
+</script>
+</body>
+</html>
