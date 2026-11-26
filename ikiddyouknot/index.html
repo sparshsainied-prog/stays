@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>I Kidd You Knot, Laura Kidd: a website preview</title>
+<meta name="description" content="A website idea for I Kidd You Knot, Laura Kidd, celebrant, MC and DJ in Brisbane. A preview by Lampbound Studio, not her official site.">
+<meta property="og:title" content="I Kidd You Knot, Laura Kidd">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Laura Kidd. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/ikiddyouknot/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/ikiddyouknot/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231d3b30'/%3E%3Ccircle cx='16' cy='16' r='9' fill='%23f6c445'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --tartan:#1d3b30; --tartan-2:#163026; --tinsel:#cf2366; --gold:#f6c445; --petal:#fff4f2; --ink:#1a1714; --soft:#5d5651; --white:#fff;
+  --display:"Bowlby One", "Arial Black", Impact, sans-serif; --text:"Work Sans", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--petal);color:var(--ink);font:18px/1.6 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid #111;outline-offset:0;box-shadow:0 0 0 6px #fff}
+.skip{position:absolute;left:-999px;top:0;background:var(--tartan);color:#fff;padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.strip{background:var(--tartan);color:#cfd9d3;font:14px/1.4 var(--text);padding:9px 16px;text-align:center}
+.strip strong{color:#fff}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:6px;background:var(--tinsel);color:#fff;text-decoration:none;border:0;font:700 16px/1 var(--text);cursor:pointer}
+.btn:hover{background:#b31a57}
+.btn.alt{background:#fff;color:var(--ink);border:2px solid var(--ink)}
+
+/* hero */
+.hero{position:relative;height:150svh;background:var(--tartan)}
+.hero-stage{position:sticky;top:0;height:100svh;overflow:hidden}
+.h-photo{position:absolute;inset:0;transform:translate3d(0,calc(var(--p,0) * 6%),0) scale(calc(1.08 - var(--p,0) * .08))}
+.h-photo img{width:100%;height:100%;object-fit:cover;object-position:40% 30%}
+@media (min-aspect-ratio:4/5){.h-photo img{object-position:60% 40%}}
+.h-foot{position:absolute;left:0;right:0;bottom:0;height:72%;background:linear-gradient(to top,rgba(14,30,24,.92),rgba(14,30,24,0))}
+.h-copy{position:absolute;left:0;right:0;bottom:0;padding:0 20px 150px;color:#fff;text-shadow:0 2px 16px rgba(10,22,17,.55);transform:translate3d(0,calc(var(--p,0) * -22vh),0)}
+.h-copy .biz{font:700 15px/1.2 var(--text);color:var(--gold);margin:0 0 8px}
+.hero h1{font-size:clamp(54px,15vw,150px);line-height:.92;overflow-wrap:anywhere}
+.h-copy .line{font-size:19px;line-height:1.4;max-width:30ch;margin:14px 0 0}
+.sticker{position:absolute;right:16px;top:22px;width:min(54vw,260px);background:var(--gold);color:var(--ink);padding:14px 16px 16px;border:3px solid var(--ink);border-radius:8px;box-shadow:4px 6px 0 rgba(0,0,0,.35);transform:translate3d(0,calc(var(--p,0) * -34vh),0) rotate(calc(-5deg + var(--p,0) * 14deg))}
+.sticker b{display:block;font:400 clamp(24px,6.4vw,38px)/1 var(--display)}
+.sticker span{display:block;font:500 15px/1.3 var(--text);margin-top:6px}
+@media (min-width:860px){.h-copy{max-width:1120px;margin:0 auto;padding-bottom:110px}.sticker{right:max(24px,calc(50% - 540px));top:60px}}
+
+/* about */
+.about{padding:84px 0 70px}
+.about-grid{display:grid;gap:34px}
+.about h2{font-size:clamp(36px,8.4vw,66px);max-width:13ch}
+.about .lead{font-size:22px;line-height:1.45;max-width:36ch;margin-top:22px}
+.about figure{margin:0;max-width:380px}
+.about figure img{border-radius:6px}
+.about figcaption{font-size:15px;color:var(--soft);margin-top:8px}
+.facts{display:flex;flex-wrap:wrap;gap:10px 26px;margin:24px 0 0;padding:0;list-style:none}
+.facts li{font:700 16px/1.3 var(--text)}
+.facts li b{display:block;font:400 clamp(30px,7vw,44px)/1 var(--display);color:var(--tinsel)}
+@media (min-width:860px){.about-grid{grid-template-columns:1.2fr .8fr;align-items:center}}
+
+/* the floor: nobody stays seated */
+.floor{position:relative;height:560svh;background:var(--tartan)}
+.floor-stage{position:sticky;top:0;height:100svh;overflow:hidden;background:var(--tartan);color:#fff;display:grid;grid-template-rows:auto 1fr;padding:18px 16px 84px}
+.floor-head{position:relative;display:grid;min-height:7.4em}
+.cap{grid-area:1/1;opacity:0;transform:translate3d(0,10px,0);transition:opacity .35s ease,transform .35s ease;max-width:34ch}
+.cap.on{opacity:1;transform:none}
+.cap q,.cap p{display:block;margin:0;font-size:clamp(17px,4.2vw,22px);line-height:1.35}
+.cap q{quotes:"\201C" "\201D" "\2018" "\2019"}
+.cap small{display:block;font-size:15px;color:#b9c9c0;margin-top:6px}
+.cap .word{font:400 clamp(30px,10vw,64px)/1 var(--display);color:var(--gold);display:block;overflow-wrap:anywhere}
+.cap.end p{font:400 clamp(26px,6.6vw,44px)/1.05 var(--display);color:var(--gold)}
+.plan{position:relative;align-self:center;justify-self:center;width:min(100%,calc((100svh - 260px) * .8),560px);aspect-ratio:4/5}
+.tiles{position:absolute;inset:6% 4% 4%;display:grid;grid-template-columns:repeat(8,1fr);grid-template-rows:repeat(10,1fr);gap:3px}
+.tiles i{border-radius:2px;background:rgba(255,255,255,.04);transition:background-color .5s ease}
+.floor.party .tiles i.lit{background:rgba(207,35,102,.42)}
+.floor.party .tiles i.lit.g{background:rgba(246,196,69,.38)}
+.floor.party .tiles i.lit.d{background:rgba(255,255,255,.14)}
+.arbour{position:absolute;left:34%;right:34%;top:2%;height:9%;border:3px solid var(--gold);border-bottom:0;border-radius:60px 60px 0 0;transition:opacity .5s ease}
+.floor.party .arbour{opacity:.25}
+.aisle{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.aisle path{fill:none;stroke-linecap:round}
+.aisle .straight{stroke:rgba(255,255,255,.55);stroke-width:1.2;stroke-dasharray:2 2.4;transition:opacity .4s ease}
+.aisle .wiggle{stroke:var(--gold);stroke-width:1.4;opacity:0;transition:opacity .3s ease}
+.floor.bend .aisle .straight,.floor.party .aisle .straight{opacity:0}
+.floor.bend .aisle .wiggle{opacity:1}
+.floor.party .aisle .wiggle{opacity:0}
+.couple{position:absolute;left:0;top:0;width:5%;aspect-ratio:1;margin:-2.5% 0 0 -2.5%;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--tartan);opacity:0;transition:opacity .3s ease}
+.floor.bend .couple{opacity:1}
+.floor.party .couple{opacity:0}
+.seat,.guest{position:absolute;left:0;top:0;width:8%;aspect-ratio:1;margin:-4% 0 0 -4%}
+.seat{border:2px solid rgba(255,255,255,.32);border-radius:3px;transition:opacity .5s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.floor.party .seat{opacity:0}
+.guest{transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.guest i{position:absolute;inset:22%;border-radius:50%;background:#9fb3a8;transition:transform .3s ease,background-color .3s ease,inset .3s ease}
+.guest.up i{background:var(--tinsel);transform:translate3d(0,-28%,0) scale(1.45);box-shadow:0 3px 0 rgba(0,0,0,.35)}
+.guest.up.g i{background:var(--gold)}
+.floor.party .guest i{transform:scale(1.3);box-shadow:0 0 0 2px var(--tartan)}
+.floor-note{position:absolute;left:16px;right:16px;bottom:84px;font-size:14px;color:#b9c9c0;margin:0;text-align:center}
+.still-list{display:none}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (min-width:860px){
+  .floor-stage{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:1fr;align-items:center;padding:40px max(24px,calc(50% - 560px)) 40px}
+  .floor-head{min-height:0}
+  .plan{width:min(100%,calc((100svh - 120px) * .8),560px)}
+  .floor-note{left:auto;right:max(24px,calc(50% - 560px));bottom:20px;width:46%;}
+}
+@media (max-height:560px){.floor-stage{padding-bottom:70px}.floor-head{min-height:5.5em}.cap .word{font-size:40px}.floor-note{display:none}}
+
+/* three in one */
+.three{background:var(--tartan-2);color:#dfe7e2;padding:80px 0 90px}
+.three-grid{display:grid;gap:36px}
+.three h2{font-size:clamp(34px,7.6vw,62px);color:#fff;max-width:14ch;margin-bottom:20px}
+.three .lead{font-size:21px;line-height:1.45;color:#fff;max-width:38ch}
+.roles{margin:28px 0 0;padding:0;list-style:none}
+.roles li{padding:18px 0;border-top:1px solid rgba(255,255,255,.2);max-width:54ch}
+.roles li b{display:block;font:400 22px/1.1 var(--display);color:var(--gold);margin-bottom:6px}
+.three .note{font-size:15px;color:#b9c9c0;margin-top:18px}
+.pics{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-content:start}
+.pics img{width:100%;height:100%;object-fit:cover;border-radius:6px}
+.pics .w{grid-column:1 / -1;aspect-ratio:3/2;object-position:50% 62%}
+@media (min-width:860px){.three-grid{grid-template-columns:1.05fr .95fr}.pics{position:sticky;top:40px}}
+
+/* how it goes */
+.how{padding:86px 0}
+.how h2{font-size:clamp(34px,7.6vw,62px);max-width:15ch;margin-bottom:26px}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:22px;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:52px 1fr;gap:4px 14px;max-width:60ch}
+.steps li::before{content:counter(s);grid-row:1 / 3;font:400 34px/1 var(--display);color:var(--tinsel)}
+.steps b{font:700 19px/1.3 var(--text)}
+.steps span{color:#3d3833}
+@media (min-width:860px){.steps{grid-template-columns:1fr 1fr;gap:30px 48px}}
+
+/* where */
+.where{padding:80px 0;background:var(--gold)}
+.where h2{font-size:clamp(34px,7.6vw,62px);max-width:16ch;margin-bottom:16px}
+.where p{max-width:50ch}
+.places{list-style:none;padding:0;margin:24px 0 0;display:flex;flex-wrap:wrap;gap:6px 34px}
+.places li{font:400 clamp(24px,6vw,42px)/1.15 var(--display);color:var(--tartan)}
+
+/* couples */
+.couples{padding:86px 0}
+.couples h2{font-size:clamp(34px,7.6vw,62px);margin-bottom:8px}
+.couples .src{font-size:15px;color:var(--soft);margin-bottom:30px}
+.q{margin:0 0 28px;padding-top:16px;border-top:3px solid var(--tinsel);max-width:52ch}
+.q p{font-size:clamp(20px,4.4vw,25px);line-height:1.35;margin:0 0 8px}
+.q cite{font:600 15px/1.3 var(--text);font-style:normal;color:var(--soft)}
+.q-grid{display:grid;gap:4px 48px}
+@media (min-width:860px){.q-grid{grid-template-columns:1fr 1fr}}
+
+/* enquire */
+.enq{background:#fff;padding:86px 0 120px;border-top:1px solid #ecd9d5}
+.enq-grid{display:grid;gap:34px}
+.enq h2{font-size:clamp(34px,7.6vw,62px);margin-bottom:14px}
+form{display:grid;gap:16px}
+label,fieldset{display:grid;gap:6px;font:700 15px/1.3 var(--text)}
+fieldset{border:0;padding:0;margin:0}
+legend{padding:0;margin-bottom:6px}
+.pick{display:flex;flex-wrap:wrap;gap:8px}
+.pick label{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border:1.5px solid #6d6560;border-radius:6px;font-weight:500}
+input,textarea{font:400 17px/1.4 var(--text);padding:12px 14px;border:1.5px solid #6d6560;border-radius:6px;background:#fff;color:var(--ink);min-height:48px;width:100%}
+.pick input{width:auto;min-height:0;margin:0}
+textarea{min-height:120px;resize:vertical}
+.two{display:grid;gap:16px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.note{font-size:15px;color:var(--soft);margin:0}
+.done{display:none;padding:16px;border:2px solid var(--tartan);border-radius:6px;background:#eef3f0}
+.done.show{display:block}
+@media (min-width:860px){.enq-grid{grid-template-columns:.85fr 1.15fr}}
+
+footer{background:var(--tartan);color:#b9c9c0;padding:40px 0 110px;font-size:15px}
+footer strong{color:#fff}
+
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px}
+.bar .btn{flex:1;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+@media (max-width:360px){.bar .btn{padding:0 10px;font-size:15px;white-space:nowrap}}
+.bar .btn:focus-visible{box-shadow:0 0 0 6px #fff}
+@media (min-width:860px){.bar{left:auto;right:24px;bottom:24px}.bar .btn{flex:none}}
+
+@media (max-height:520px){.hero h1{font-size:54px}.h-copy{padding-bottom:76px}.sticker{width:200px;top:12px}.h-copy .line{display:none}}
+/* still version: reduced motion, very short screens, or no script */
+.still .hero{height:auto}.still .hero-stage{position:relative;height:100svh;min-height:540px}
+.still .h-photo,.still .h-copy,.still .sticker{transform:none!important}
+.still .sticker{transform:rotate(-4deg)!important}
+.still .floor{height:auto}
+.still .floor-stage{position:relative;height:auto;display:block;padding:70px 20px 60px}
+.still .floor-head,.still .plan,.still .floor-note{display:none}
+.still .still-list{display:block;max-width:1120px;margin:0 auto}
+</style>
+<noscript><style>
+  .hero{height:auto}.hero-stage{position:relative;height:100svh;min-height:540px}
+  .h-photo,.h-copy{transform:none!important}.sticker{transform:rotate(-4deg)!important}
+  .floor{height:auto}
+  .floor-stage{position:relative;height:auto;display:block;padding:70px 20px 60px}
+  .floor-head,.plan,.floor-note{display:none}
+  .still-list{display:block;max-width:1120px;margin:0 auto}
+</style></noscript>
+<style>
+.still-list h2{font-size:clamp(34px,7.6vw,62px);color:#fff;margin-bottom:18px;max-width:14ch}
+.still-list .qq{font-size:20px;line-height:1.4;max-width:40ch}
+.still-list ul{list-style:none;padding:0;margin:20px 0;display:flex;flex-wrap:wrap;gap:4px 18px}
+.still-list li{font:400 clamp(26px,6.4vw,44px)/1.15 var(--display);color:var(--gold)}
+.still-list .last{font:400 clamp(24px,6vw,40px)/1.1 var(--display);color:var(--gold);max-width:20ch;margin-top:24px}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip">A website idea made by <strong>Lampbound Studio</strong> for I Kidd You Knot. Not Laura's official site.</div>
+
+<main id="main">
+<section class="hero" data-pin aria-label="Introduction">
+  <div class="hero-stage">
+    <picture class="h-photo">
+      <source media="(min-aspect-ratio: 4/5)" srcset="img/dance.jpg" width="1620" height="1080">
+      <img src="img/tinsel.jpg" width="1000" height="1500" alt="Laura laughing and dancing at one of her weddings" fetchpriority="high">
+    </picture>
+    <div class="h-foot"></div>
+    <p class="sticker"><b>Warning</b><span>Ceremonies are loud, fun and interactive.</span></p>
+    <div class="h-copy">
+      <p class="biz">I Kidd You Knot</p>
+      <h1>Laura Kidd</h1>
+      <p class="line">Celebrant, MC and DJ, in Brisbane and all over Australia.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" aria-labelledby="about-h">
+  <div class="wrap about-grid">
+    <div>
+      <h2 id="about-h">Less bitchin, more hitchin</h2>
+      <p class="lead">"I am the only Celebrant who comes with a warning..."</p>
+      <p>Laura is obsessed with not being part of a boring wedding. Her ceremonies are loud, fun and interactive, because she believes your vibe starts the moment your guests arrive. If you want them up and dancing at the end of the night, why not start at the ceremony?</p>
+      <ul class="facts">
+        <li><b>8 years</b>as a marriage celebrant</li>
+        <li><b>200+</b>couples married</li>
+      </ul>
+    </div>
+    <figure>
+      <img src="img/laura.jpg" width="900" height="1350" alt="Laura standing in front of a timber arbour hung with wildflowers, hands together" loading="lazy">
+      <figcaption>Miss Laura Kidd, celebrant by day</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="floor" data-pin data-floor aria-labelledby="floor-h">
+  <div class="floor-stage">
+    <h2 id="floor-h" class="vh">Nobody stays seated</h2>
+    <div class="floor-head" aria-live="off">
+      <div class="cap" data-cap="0"><q>If you want your guests sitting back, being quiet, minding their P's &amp; Q's.... I AM NOT YOUR GIRL.</q><small>Laura Kidd</small></div>
+      <div class="cap" data-cap="1"><span class="word">Standing up</span></div>
+      <div class="cap" data-cap="2"><span class="word">Cheering</span></div>
+      <div class="cap" data-cap="3"><span class="word">Moving</span></div>
+      <div class="cap" data-cap="4"><span class="word">Clapping</span></div>
+      <div class="cap" data-cap="5"><span class="word">WOOHOOOing</span></div>
+      <div class="cap" data-cap="6"><q>Who says you have to walk down the aisle? Why can't we skip, shimmy, dance or everything above?</q></div>
+      <div class="cap end" data-cap="7"><p>Let me start and finish the party with you.</p><small>Celebrant by day. DJ Oprah Spin Free by night.</small></div>
+    </div>
+    <div class="plan" aria-hidden="true">
+      <div class="tiles"></div>
+      <div class="arbour"></div>
+      <svg class="aisle" viewBox="0 0 100 125" preserveAspectRatio="none">
+        <path class="straight" d="M50 16 L50 118"/>
+        <path class="wiggle" d="M50 118 C38 108 62 98 50 88 C38 78 62 68 50 58 C38 48 62 38 50 28 C44 23 50 18 50 16"/>
+      </svg>
+      <div class="couple"></div>
+    </div>
+    <div class="still-list">
+      <h2>Nobody stays seated</h2>
+      <p class="qq">"If you want your guests sitting back, being quiet, minding their P's &amp; Q's.... I AM NOT YOUR GIRL." At Laura's ceremonies your guests are:</p>
+      <ul><li>Standing up</li><li>Cheering</li><li>Moving</li><li>Clapping</li><li>WOOHOOOing</li></ul>
+      <p class="qq">"Who says you have to walk down the aisle? Why can't we skip, shimmy, dance or everything above?"</p>
+      <p class="last">Let me start and finish the party with you.</p>
+    </div>
+  </div>
+</section>
+
+<section class="three" aria-labelledby="three-h">
+  <div class="wrap three-grid">
+    <div>
+      <h2 id="three-h">Celebrant, MC and DJ in one booking</h2>
+      <p class="lead">Laura's Celebrant, MC and DJ package covers your ceremony, your MC and your dance floor, so you aren't searching for three separate people.</p>
+      <ul class="roles">
+        <li><b>The ceremony</b>Apart from the legal wording, the rest is up to you. Not sure what you want? She has lots of ceremony examples to get the ideas rolling.</li>
+        <li><b>The MC</b>Couples say she keeps the day running smoothly and the guests entertained, so you can just enjoy it.</li>
+        <li><b>DJ Oprah Spin Free</b>70s, 80s, 90s and modern dance floor bangers.</li>
+      </ul>
+      <p class="note">Ask her for the info pack to see what each option includes and costs.</p>
+    </div>
+    <div class="pics">
+      <img class="w" src="img/vows.jpg" width="900" height="1350" alt="Laura reading the vows under a timber arbour while two brides hold hands" loading="lazy">
+      <img src="img/jacket.jpg" width="700" height="1033" alt="A wedding guest in a tinsel jacket dancing at a reception" loading="lazy">
+      <img src="img/kick.jpg" width="900" height="1350" alt="Laura kicking a leg up beside two brides on the lawn" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <h2 id="how-h">From first coffee to "I do"</h2>
+    <ol class="steps">
+      <li><b>Meet for a coffee, breakfast or beer</b><span>You get to know each other. Once it feels right, you start locking things in.</span></li>
+      <li><b>Book early for the busy months</b><span>September to December is wedding season. Laura recommends booking 9 to 12 months ahead.</span></li>
+      <li><b>Sort the paperwork</b><span>It has to be with her at least one calendar month before the wedding. Bring your licence and original birth certificate, or your passport.</span></li>
+      <li><b>On the day, just turn up</b><span>She arrives an hour early to set up, meet your guests, put some music on and maybe have a sneaky beer with you.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="where" aria-labelledby="where-h">
+  <div class="wrap">
+    <h2 id="where-h">Take her somewhere unusual</h2>
+    <p>"I challenge any couple out there to take me to the most unique wedding venue you can think of within Australia."</p>
+    <ul class="places">
+      <li>Brisbane</li>
+      <li>Gold Coast</li>
+      <li>Sunshine Coast</li>
+      <li>Noosa</li>
+      <li>Byron Bay</li>
+    </ul>
+  </div>
+</section>
+
+<section class="couples" aria-labelledby="couples-h">
+  <div class="wrap">
+    <h2 id="couples-h">What couples wrote</h2>
+    <p class="src">5.0 from 71 reviews on her Easy Weddings listing.</p>
+    <div class="q-grid">
+      <figure class="q"><p>"We and our guests were cackling with laughter one minute, then sobbing (in a good way) the next."</p><cite>Tim and Luke, October 2024</cite></figure>
+      <figure class="q"><p>"Having Laura as our celebrant, MC and DJ was one of the best decisions we made."</p><cite>Kaitlyn, August 2026</cite></figure>
+      <figure class="q"><p>"Hosting the maddest kids disco. Playing Nutbush (a must for any Elder Millennial party)."</p><cite>Brooke and Nick, September 2025</cite></figure>
+      <figure class="q"><p>"She engaged our guests throughout the entire ceremony, hyped them up before we arrived."</p><cite>Debennie, September 2025</cite></figure>
+    </div>
+  </div>
+</section>
+
+<section class="enq" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap enq-grid">
+    <div>
+      <h2 id="enq-h">Is Laura free on your date?</h2>
+      <p>Tell her your date and venue, and whether you're after the ceremony or the lot. You can also call her on <a href="tel:0400055186">0400 055 186</a>.</p>
+      <p class="note">This is a preview, so the form does not send anything.</p>
+    </div>
+    <form id="enq-form" novalidate>
+      <div class="two">
+        <label>Your names<input name="names" autocomplete="name"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <div class="two">
+        <label>Wedding date<input name="date" type="date"></label>
+        <label>Venue or town<input name="venue"></label>
+      </div>
+      <fieldset>
+        <legend>You're after</legend>
+        <div class="pick">
+          <label><input type="radio" name="role" value="celebrant"> Celebrant</label>
+          <label><input type="radio" name="role" value="all" checked> Celebrant, MC and DJ</label>
+          <label><input type="radio" name="role" value="unsure"> Not sure yet</label>
+        </div>
+      </fieldset>
+      <label>Anything else<textarea name="msg"></textarea></label>
+      <button class="btn" type="button" id="send">Send to Laura</button>
+      <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Laura. To reach her today, call <a href="tel:0400055186">0400 055 186</a>.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>A preview made by Lampbound Studio for I Kidd You Knot.</strong> Not affiliated, not live.</p>
+    <p>Words and photos are from Laura's Easy Weddings listing.</p>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn alt" href="tel:0400055186">Call Laura</a><a class="btn" href="#enquire">Check your date</a></div>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var pins=[].slice.call(document.querySelectorAll('[data-pin]'));
+  var floor=document.querySelector('[data-floor]');
+  var plan=floor.querySelector('.plan'),tiles=floor.querySelector('.tiles');
+  var caps=[].slice.call(floor.querySelectorAll('.cap'));
+  var wig=floor.querySelector('.wiggle'),couple=floor.querySelector('.couple');
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce), (max-height:420px)');
+  var on=false,ticking=false;
+  function clamp(v){return Math.min(1,Math.max(0,v))}
+
+  // seats: two blocks of 4 across, 5 rows deep, either side of the aisle (plan units: 0-100 wide, 0-125 tall)
+  var COLS=[12,22,32,42,58,68,78,88],ROWS=[40,55,70,85,100];
+  var seats=[],guests=[];
+  ROWS.forEach(function(y,r){COLS.forEach(function(x,c){
+    var s=document.createElement('div');s.className='seat';plan.appendChild(s);
+    var g=document.createElement('div');g.className='guest'+((r+c)%3===0?' g':'');g.innerHTML='<i></i>';plan.appendChild(g);
+    // where each guest ends up on the dance floor: a loose crowd round the middle
+    var a=(r*8+c)*2.399,d=6+Math.sqrt(r*8+c)*5.2;
+    seats.push({el:s,x:x,y:y,side:c<4?-1:1});
+    guests.push({el:g,x:x,y:y,row:r,dx:50+Math.cos(a)*d*.9,dy:68+Math.sin(a)*d*.95});
+  });});
+  for(var t=0;t<80;t++){var i=document.createElement('i');i.className=(t%5===0?'g':(t%7===0?'d':''));tiles.appendChild(i);}
+  var tileEls=[].slice.call(tiles.children);
+  var W=0,H=0;
+  function measure(){W=plan.clientWidth;H=plan.clientHeight;}
+  function put(el,x,y){el.style.transform='translate3d('+(x*W/100).toFixed(1)+'px,'+(y*H/125).toFixed(1)+'px,0)';}
+  var wigLen=0;try{wigLen=wig.getTotalLength();}catch(e){}
+
+  var last={stage:-1};
+  function scene(p){
+    // 0: seated. 1-5: rows stand, back row first. 6: the aisle bends. 7: the party
+    var stage=p<.1?0:p<.58?1+Math.min(4,Math.floor((p-.1)/.096)):p<.78?6:7;
+    caps.forEach(function(c,i){c.classList.toggle('on',i===stage)});
+    var standing=stage===0?0:stage>=6?5:stage;
+    guests.forEach(function(g){g.el.classList.toggle('up',(4-g.row)<standing)});
+    floor.classList.toggle('bend',stage===6);
+    floor.classList.toggle('party',stage===7);
+    if(stage===6&&wigLen){var q=clamp((p-.58)/.18),pt=wig.getPointAtLength(q*wigLen);put(couple,pt.x,pt.y);}
+    if(stage!==last.stage||last.W!==W){
+      var party=stage===7;
+      seats.forEach(function(s){put(s.el,party?s.x+s.side*30:s.x,s.y)});
+      guests.forEach(function(g){party?put(g.el,g.dx,g.dy):put(g.el,g.x,g.y)});
+      tileEls.forEach(function(el,k){el.style.transitionDelay=party?((k*37)%600)+'ms':'0ms';el.classList.toggle('lit',party&&(k*13)%10<6)});
+      last.stage=stage;last.W=W;
+    }
+  }
+  function update(){
+    ticking=false;
+    pins.forEach(function(el){
+      var r=el.getBoundingClientRect(),total=el.offsetHeight-innerHeight;
+      var p=total>0?clamp(-r.top/total):1;
+      el.style.setProperty('--p',p.toFixed(4));
+      if(el===floor)scene(p);
+    });
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
+  function onResize(){measure();last.W=-1;onScroll();}
+  function start(){root.classList.remove('still');if(on)return;on=true;measure();addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onResize);update();}
+  function stop(){on=false;removeEventListener('scroll',onScroll);removeEventListener('resize',onResize);root.classList.add('still');pins.forEach(function(el){el.style.setProperty('--p','0')});}
+  if(mq.matches)stop();else start();
+  if(mq.addEventListener)mq.addEventListener('change',function(){mq.matches?stop():start()});
+  if(window.ResizeObserver)new ResizeObserver(function(){if(on)onResize()}).observe(plan);
+  document.getElementById('send').addEventListener('click',function(){var d=document.getElementById('done');d.classList.add('show');d.focus();});
+})();
+</script>
+</body>
+</html>
