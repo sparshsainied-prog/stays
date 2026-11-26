@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Tied By Teila, civil celebrant: a website preview</title>
+<meta name="description" content="A website idea for Tied By Teila, civil marriage celebrant in Mount Gambier and the Limestone Coast. A preview by Lampbound Studio, not her official site.">
+<meta property="og:title" content="Tied By Teila, civil celebrant">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Tied By Teila. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/tiedbyteila/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/tiedbyteila/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23eef1f1'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='13' fill='%231d1b19' text-anchor='middle'%3ETBT%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Marcellus&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1d1b19; --haze:#eef1f1; --blue:#26648b; --blue-deep:#1b4b69; --bark:#5b625f; --rule:#d5dbda; --white:#fbfcfc;
+  --display:"Marcellus", Georgia, serif; --text:"Karla", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--haze);color:var(--ink);font:17px/1.6 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid #111;outline-offset:0;box-shadow:0 0 0 6px #fff}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--white);padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.strip{background:var(--ink);color:#d6dbda;font-size:13.5px;line-height:1.4;padding:9px 16px;text-align:center}
+.strip strong{color:var(--white)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:4px;background:var(--blue);color:var(--white);text-decoration:none;border:0;font:700 16px/1 var(--text);cursor:pointer}
+.btn:hover{background:var(--blue-deep)}
+.btn.alt{background:var(--white);color:var(--ink);border:1.5px solid var(--ink)}
+
+/* cords, shared by hero and the steps */
+.cord{position:absolute;top:0;width:50%;height:44px;will-change:transform}
+.cord svg{width:100%;height:100%;display:block;overflow:visible}
+.cord.l{left:0;transform:translate3d(calc(-100% + var(--c,0) * 100%),0,0)}
+.cord.r{right:0;transform:translate3d(calc(100% - var(--c,0) * 100%),0,0)}
+.cord path{fill:none;vector-effect:non-scaling-stroke;stroke-linecap:round}
+.cord .main{stroke-width:8}
+.cord .twist{stroke-width:8;stroke-dasharray:3 10;stroke:rgba(255,255,255,.35)}
+.cord.l .main{stroke:var(--ink)}
+.cord.r .main{stroke:var(--blue)}
+
+/* hero */
+.hero{position:relative;height:160svh;background:var(--ink)}
+.hero-stage{position:sticky;top:0;height:100svh;overflow:hidden}
+.h-photo{position:absolute;inset:0;transform:scale(calc(1.12 - var(--p,0) * .12))}
+.h-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.h-shade{position:absolute;left:0;right:0;bottom:0;height:70%;background:linear-gradient(to top,rgba(20,19,17,.86),rgba(20,19,17,0))}
+.h-copy{position:absolute;left:0;right:0;bottom:158px;padding:0 20px;color:var(--white);transform:translate3d(0,calc(var(--p,0) * -9vh),0)}
+.h-copy .tag{font-size:16px;margin:0 0 10px;color:#e3e8e7}
+.hero h1{font-size:min(clamp(52px,13.5vw,132px),16svh);letter-spacing:.01em}
+.h-copy .areas{font-size:18px;margin:14px 0 0;max-width:32ch;color:#eef1f1}
+.h-cords{position:absolute;left:0;right:0;bottom:96px;height:44px;--c:calc(.2 + var(--p,0) * .3)}
+.h-cords .cord.l .main{stroke:var(--white)}
+.h-cords .cord .twist{stroke:rgba(29,27,25,.25)}
+@media (min-width:860px){.h-copy{max-width:1100px;margin:0 auto}}
+
+/* about */
+.about{padding:84px 0 70px}
+.about-grid{display:grid;gap:34px}
+.about h2{font-size:clamp(36px,8vw,64px);max-width:13ch}
+.about .lead{font-size:21px;line-height:1.45;max-width:34ch;margin-top:22px}
+.about figure{margin:0;max-width:380px}
+.about figcaption{font-size:14px;color:var(--bark);margin-top:8px}
+.logo-plate{background:var(--white);padding:14px 18px;display:inline-block;margin-top:18px;border:1px solid var(--rule)}
+.logo-plate img{width:190px}
+@media (min-width:860px){.about-grid{grid-template-columns:1.2fr .8fr;align-items:center}}
+
+/* the steps: tied */
+.tied-photo{display:none}
+.tied{position:relative;height:620svh;background:var(--white)}
+.tied-stage{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;grid-template-rows:auto 1fr auto;padding:22px 0 96px}
+.tied-head{padding:0 20px}
+.tied-head h2{font-size:clamp(26px,6vw,46px);max-width:19ch}
+.tied-head p{margin:8px 0 0;color:var(--bark);font-size:15px}
+.steps{display:grid;align-items:end;padding:0 20px 18px;max-width:760px;margin:0;list-style:none}
+.st{grid-area:1 / 1;opacity:0;transform:translate3d(0,14px,0);transition:opacity .35s ease,transform .35s ease}
+.st.on{opacity:1;transform:none}
+.st .n{font-family:var(--display);color:var(--blue);font-size:20px;display:block;margin-bottom:6px}
+.st h3{font-size:clamp(30px,7.4vw,58px);max-width:16ch}
+.st p{margin:12px 0 0;font-size:18px;max-width:34ch;color:#3b403e}
+.knotrow{position:relative;height:150px}
+.knotrow .cord{top:53px}
+.bow{position:absolute;left:50%;top:0;width:150px;height:110px;margin-left:-75px;opacity:0;transform:scale(.55);transition:opacity .45s ease,transform .5s ease}
+.bow.on{opacity:1;transform:none}
+.bow path,.bow rect{vector-effect:non-scaling-stroke}
+.tied-word{position:absolute;left:0;right:0;top:112px;text-align:center;font-family:var(--display);font-size:clamp(30px,7vw,48px);opacity:0;transform:translate3d(0,10px,0);transition:opacity .4s ease .15s,transform .4s ease .15s}
+.tied-word.on{opacity:1;transform:none}
+@media (min-width:860px){
+  .tied-stage{max-width:1100px;margin:0 auto;width:100%;padding:48px 0 70px;grid-template-columns:1.2fr .8fr;column-gap:40px}
+  .tied-head,.knotrow{grid-column:1 / -1}
+  .knotrow{height:170px}
+  .tied-photo{display:block;grid-column:2;grid-row:2;align-self:center;margin-right:20px;max-height:52svh;overflow:hidden;border-radius:3px;transform:translate3d(0,calc((.5 - var(--p,0)) * 60px),0)}
+  .tied-photo img{width:100%;height:100%;object-fit:cover}
+}
+
+/* ceremonies */
+.cer{padding:90px 0 70px}
+.cer h2{font-size:clamp(36px,7.5vw,60px);margin-bottom:14px}
+.cer .intro{max-width:46ch;margin-bottom:38px}
+.wed{display:grid;gap:26px;border-top:2px solid var(--ink);padding-top:28px}
+.wed h3,.other h3{font-size:clamp(28px,6vw,40px)}
+.wed ul{margin:14px 0 0;padding-left:1.1em}
+.wed li{margin-bottom:6px}
+.wed img{border-radius:3px}
+@media (min-width:860px){.wed{grid-template-columns:1fr 1fr;column-gap:48px;align-items:start}}
+.others{display:grid;gap:0;margin-top:56px}
+.other{display:grid;gap:16px;padding:28px 0;border-top:1px solid var(--rule)}
+.other p{margin:0;max-width:52ch}
+.other .where{color:var(--bark);font-size:15px;margin-top:8px}
+.other img{border-radius:3px;width:100%;aspect-ratio:3/2;object-fit:cover}
+@media (min-width:700px){.other{grid-template-columns:1.1fr .9fr;column-gap:40px;align-items:center}}
+
+/* kind words */
+.words{background:var(--ink);color:var(--haze);padding:88px 0}
+.words h2{font-size:clamp(34px,7vw,56px);margin-bottom:30px}
+.qs{display:grid;gap:30px}
+.qs blockquote{margin:0;padding-top:18px;border-top:1px solid #3d3b38}
+.qs p{font-size:19px;line-height:1.5}
+.qs cite{font-style:normal;color:#aeb6b4;font-size:15px}
+@media (min-width:860px){.qs{grid-template-columns:repeat(2,1fr);column-gap:44px}.qs blockquote:first-child{grid-column:1 / -1}.qs blockquote:first-child p{font-size:24px;max-width:40ch}}
+.film{display:grid;grid-template-columns:1.3fr 1fr;gap:10px;margin-top:52px}
+.film img{width:100%;height:100%;object-fit:cover;border-radius:3px}
+.film .tall{grid-row:span 2}
+
+/* enquire */
+.enq{background:var(--white);padding:88px 0 120px}
+.enq-grid{display:grid;gap:34px}
+.enq h2{font-size:clamp(34px,7vw,56px);margin-bottom:14px}
+form{display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:700;font-size:15px}
+input,textarea{font:400 17px/1.4 var(--text);padding:12px 14px;border:1.5px solid #6f7774;border-radius:4px;background:#fff;color:var(--ink);min-height:48px;width:100%}
+textarea{min-height:120px;resize:vertical}
+.two{display:grid;gap:16px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.note{font-size:14px;color:var(--bark);margin:0}
+.done{display:none;padding:16px;border:1.5px solid var(--blue);border-radius:4px;background:#eaf1f6}
+.done.show{display:block}
+@media (min-width:860px){.enq-grid{grid-template-columns:.8fr 1.2fr}}
+
+footer{background:var(--haze);color:#3b403e;padding:40px 0 112px;font-size:14.5px;border-top:1px solid var(--rule)}
+footer .logo-plate{margin:0 0 18px}
+
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px}
+.bar .btn{flex:1;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+.bar .btn:focus-visible{box-shadow:0 0 0 6px #fff}
+@media (min-width:860px){.bar{left:auto;right:24px;bottom:24px}.bar .btn{flex:none}}
+
+@media (prefers-reduced-motion:reduce),(max-height:520px){
+  .hero{height:auto}.hero-stage{position:relative;height:100svh}
+  .h-photo,.h-copy{transform:none!important}
+  .tied{height:auto}.tied-stage{position:relative;height:auto;display:block;padding:70px 0 60px}
+  .steps{display:block;margin-top:26px}
+  .st{opacity:1;transform:none;transition:none;padding:16px 0;border-top:1px solid var(--rule)}
+  .st h3{font-size:clamp(24px,5.6vw,34px)}
+  .bow,.tied-word{opacity:1;transform:none;transition:none}
+  .knotrow{margin-top:20px}
+  .tied-photo{transform:none!important}
+}
+@media (min-width:860px) and (max-height:760px){
+  .tied-stage{padding:28px 0 64px}
+  .tied-head h2{font-size:34px}
+  .st h3{font-size:40px}
+  .st p{font-size:17px}
+  .knotrow{height:132px}
+  .tied-word{top:96px;font-size:34px}
+  .tied-photo{max-height:42svh}
+}
+@media (max-height:520px){.hero-stage{height:auto!important;min-height:100svh}.h-copy{position:relative;padding-top:40vh;bottom:auto;padding-bottom:110px}}
+</style>
+<noscript><style>
+  .hero{height:auto}.hero-stage{position:relative;height:100svh}
+  .tied{height:auto}.tied-stage{position:relative;height:auto;display:block;padding:70px 0 60px}
+  .steps{display:block;margin-top:26px}
+  .st{opacity:1;transform:none;padding:16px 0;border-top:1px solid var(--rule)}
+  .bow,.tied-word{opacity:1;transform:none}
+  .cord{--c:1}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip">A website idea made by <strong>Lampbound Studio</strong> for Tied By Teila. Not her official site.</div>
+
+<main id="main">
+<section class="hero" data-pin aria-label="Introduction">
+  <div class="hero-stage">
+    <div class="h-photo"><img src="img/gum.jpg" width="1800" height="1200" alt="A bride, groom and their wedding party in blue standing in a line under a huge old gum tree" fetchpriority="high"></div>
+    <div class="h-shade"></div>
+    <div class="h-copy">
+      <p class="tag">Civil marriage celebrant</p>
+      <h1>Tied By Teila</h1>
+      <p class="areas">Weddings, vow renewals and naming ceremonies across Mount Gambier and the Limestone Coast.</p>
+    </div>
+    <div class="h-cords" aria-hidden="true">
+      <div class="cord l"><svg viewBox="0 0 600 44" preserveAspectRatio="none"><path class="main" d="M0 22 C100 8,200 36,300 22 S500 8,600 22"/><path class="twist" d="M0 22 C100 8,200 36,300 22 S500 8,600 22"/></svg></div>
+      <div class="cord r"><svg viewBox="0 0 600 44" preserveAspectRatio="none"><path class="main" d="M0 22 C100 36,200 8,300 22 S500 36,600 22"/><path class="twist" d="M0 22 C100 36,200 8,300 22 S500 36,600 22"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" aria-labelledby="about-h">
+  <div class="wrap about-grid">
+    <div>
+      <h2 id="about-h">"I just simply love love"</h2>
+      <p class="lead">Teila is a civil marriage celebrant living in Mount Gambier. As a little girl she was mesmerised by all things weddings: the dress, the rings, the celebration.</p>
+      <p>She always thought she'd become a celebrant when she retired. Then, at the lowest point of her life, a funeral celebrant helped her through her grief, and she decided she wouldn't wait to celebrate love.</p>
+      <p>"Your event isn't a business transaction to me." She'll stand by you, laugh with you, cry happy tears with you, and be your calm at the end of the aisle. She's a lover of coffee and wine, and your first meeting is over one or the other.</p>
+      <div class="logo-plate"><img src="img/logo.png" width="255" height="147" alt="Tied By Teila, civil celebrant logo" loading="lazy"></div>
+    </div>
+    <figure>
+      <img src="img/teila.jpg" width="900" height="1350" alt="Teila smiling in a floral dress, holding her black Tied By Teila ceremony folder" loading="lazy">
+      <figcaption>Teila with her ceremony folder</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="tied" data-pin data-steps="7" aria-labelledby="tied-h">
+  <div class="tied-stage">
+    <div class="tied-head">
+      <h2 id="tied-h">So you're ready to book your celebrant. What's next?</h2>
+      <p>Teila's own steps, from first chat to I do.</p>
+    </div>
+    <ol class="steps" aria-label="Teila's steps">
+      <li class="st"><span class="n">1</span><h3>A first chat</h3><p>To make sure Teila is free on your date, and to set a time to meet.</p></li>
+      <li class="st"><span class="n">2</span><h3>Coffee, or wine</h3><p>You meet, and fill in a booking form and your Notice of Intended Marriage.</p></li>
+      <li class="st"><span class="n">3</span><h3>Designing your ceremony</h3><p>Teila sends a Couples Questionnaire, if you'd like one.</p></li>
+      <li class="st"><span class="n">4</span><h3>Your first draft</h3><p>Yours to read at least two weeks before the wedding.</p></li>
+      <li class="st"><span class="n">5</span><h3>Your final draft</h3><p>With any changes you asked for, at least a week before.</p></li>
+      <li class="st"><span class="n">6</span><h3>A rehearsal or final meeting</h3><p>You sign the last legal form and walk through the ceremony together.</p></li>
+      <li class="st"><span class="n">7</span><h3>The big day arrives and you get married</h3><p>Teila lodges the paperwork afterwards.</p></li>
+    </ol>
+    <div class="tied-photo" aria-hidden="true"><img src="img/arch.jpg" width="800" height="1200" alt="" loading="lazy"></div>
+    <div class="knotrow" aria-hidden="true">
+      <div class="cord l"><svg viewBox="0 0 600 44" preserveAspectRatio="none"><path class="main" d="M0 22 C100 8,200 36,300 22 S500 8,600 22"/><path class="twist" d="M0 22 C100 8,200 36,300 22 S500 8,600 22"/></svg></div>
+      <div class="cord r"><svg viewBox="0 0 600 44" preserveAspectRatio="none"><path class="main" d="M0 22 C100 36,200 8,300 22 S500 36,600 22"/><path class="twist" d="M0 22 C100 36,200 8,300 22 S500 36,600 22"/></svg></div>
+      <svg class="bow" viewBox="-100 -70 200 146">
+        <path d="M-8 0 C-40 -52,-96 -46,-88 -6 C-82 26,-40 20,-8 0" fill="none" stroke="#1d1b19" stroke-width="8" stroke-linecap="round"/>
+        <path d="M8 0 C40 -52,96 -46,88 -6 C82 26,40 20,8 0" fill="none" stroke="#26648b" stroke-width="8" stroke-linecap="round"/>
+        <path d="M-6 8 C-18 30,-26 48,-40 68" fill="none" stroke="#1d1b19" stroke-width="8" stroke-linecap="round"/>
+        <path d="M6 8 C18 30,26 48,40 68" fill="none" stroke="#26648b" stroke-width="8" stroke-linecap="round"/>
+        <rect x="-12" y="-11" width="24" height="22" rx="7" fill="#26648b" stroke="#1d1b19" stroke-width="4"/>
+      </svg>
+      <p class="tied-word">Tied.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cer" aria-labelledby="cer-h">
+  <div class="wrap">
+    <h2 id="cer-h">Ceremonies</h2>
+    <p class="intro">Teila works with you on every ceremony. She covers the whole Limestone Coast, with 100km of travel included.</p>
+    <div class="wed">
+      <div>
+        <h3>Weddings</h3>
+        <ul>
+          <li>A first meeting face to face, with no obligation, to see if she's the right fit</li>
+          <li>All the legal documents prepared and lodged</li>
+          <li>Unlimited email and phone contact</li>
+          <li>A full rehearsal so the day runs smoothly</li>
+          <li>A ceremony written around your love story, and help writing your vows</li>
+          <li>A resource kit of ceremony ideas, poems, rituals and music</li>
+          <li>Signing table and chairs</li>
+          <li>Wireless PA with Bluetooth and a wireless microphone</li>
+          <li>100km of travel included, further by arrangement</li>
+        </ul>
+      </div>
+      <img src="img/beach.jpg" width="1200" height="800" alt="Teila reading the ceremony to a couple under a hexagon arbour by the sea" loading="lazy">
+    </div>
+    <div class="others">
+      <div class="other">
+        <div><h3>Vow renewals</h3><p>Recommit to each other with a ceremony written for you two, help with your vows, a rehearsal and a commemorative certificate.</p></div>
+        <img src="img/garden.jpg" width="1200" height="801" alt="Teila holding her folder beside a couple in a green garden" loading="lazy">
+      </div>
+      <div class="other">
+        <div><h3>Naming ceremonies</h3><p>Celebrate the arrival of your little one with a ceremony for your family, a commemorative certificate and her PA and wireless microphone.</p></div>
+        <img src="img/baby.jpg" width="1000" height="667" alt="A sleeping newborn held in a parent's hands" loading="lazy">
+      </div>
+      <div class="other">
+        <div><h3>Elopements</h3><p>With Mountain Path Meadows at the base of Mount Schank, between Mount Gambier and Port MacDonnell: the venue, Teila and glamping accommodation in one package.</p><p class="where">Ask Teila what the package includes now.</p></div>
+        <img src="img/dome.jpg" width="680" height="1020" alt="A glamping dome lit from inside under a starry night sky" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="words" aria-labelledby="words-h">
+  <div class="wrap">
+    <h2 id="words-h">Kind words</h2>
+    <div class="qs">
+      <blockquote><p>"We had so many compliments from our guests, on how well she conducted the ceremony."</p><cite>Ashlee and Bray, on Easy Weddings</cite></blockquote>
+      <blockquote><p>"From our first phone call with Teila, we knew we wanted her as our celebrant for our special day."</p><cite>Stacey, on Easy Weddings</cite></blockquote>
+      <blockquote><p>"She is very professional, organised and such a lovely and caring person."</p><cite>Emma and Nathan</cite></blockquote>
+    </div>
+    <div class="film">
+      <img class="tall" src="img/orchard.jpg" width="1600" height="900" alt="A couple walking hand in hand through old trees, in black and white" loading="lazy">
+      <img src="img/bench.jpg" width="1400" height="935" alt="A couple on a park bench by a lake, in black and white" loading="lazy">
+      <img src="img/vines.jpg" width="1200" height="800" alt="A ceremony under a white arbour among vines, guests seated" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="enq" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap enq-grid">
+    <div>
+      <h2 id="enq-h">Is your date free?</h2>
+      <p>Ask Teila if she's free on your date, and tell her a little about the day. You can also call or text her on <a href="tel:0421518282">0421 518 282</a>.</p>
+      <p class="note">This is a preview, so the form does not send anything.</p>
+    </div>
+    <form id="enq-form" novalidate>
+      <div class="two">
+        <label>Your names<input name="names" autocomplete="name"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <div class="two">
+        <label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
+        <label>Ceremony date<input name="date" type="date"></label>
+      </div>
+      <label>Type of ceremony<input name="kind" placeholder="Wedding, vow renewal, naming or elopement"></label>
+      <label>Tell Teila a little about your day<textarea name="msg"></textarea></label>
+      <button class="btn" type="button" id="send">Send to Teila</button>
+      <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Teila. To reach her today, call or text <a href="tel:0421518282">0421 518 282</a>.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="logo-plate"><img src="img/logo.png" width="255" height="147" alt="" loading="lazy"></div>
+    <p><strong>A preview made by Lampbound Studio for Tied By Teila.</strong> Not affiliated, not live.</p>
+    <p>Words and photos are from Teila's website and her Easy Weddings listing.</p>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn alt" href="tel:0421518282">Call Teila</a><a class="btn" href="#enquire">Check your date</a></div>
+
+<script>
+(function(){
+  var pins=[].slice.call(document.querySelectorAll('[data-pin]'));
+  var steps=[].slice.call(document.querySelectorAll('.st'));
+  var tied=document.querySelector('.tied');
+  var row=document.querySelector('.knotrow');
+  var bow=document.querySelector('.bow'),word=document.querySelector('.tied-word');
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce), (max-height:520px)');
+  var on=false,ticking=false;
+  function finish(){pins.forEach(function(el){el.style.setProperty('--p','1')});steps.forEach(function(s){s.classList.add('on')});row.style.setProperty('--c','1');bow.classList.add('on');word.classList.add('on');}
+  function update(){
+    ticking=false;if(!on)return;
+    pins.forEach(function(el){
+      var r=el.getBoundingClientRect(),total=el.offsetHeight-window.innerHeight;
+      var p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;
+      el.style.setProperty('--p',p.toFixed(4));
+      if(el===tied){
+        var n=Math.min(steps.length-1,Math.floor(p*(steps.length+1)));
+        steps.forEach(function(s,k){s.classList.toggle('on',k===n)});
+        var c=Math.min(1,.08+p*(steps.length+1)/steps.length*.92);
+        row.style.setProperty('--c',c.toFixed(4));
+        var done=p>=steps.length/(steps.length+1)*.97;
+        bow.classList.toggle('on',done);word.classList.toggle('on',done);
+      }
+    });
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
+  function start(){if(on)return;on=true;steps.forEach(function(s){s.classList.remove('on')});addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);update();}
+  function stop(){on=false;ticking=false;removeEventListener('scroll',onScroll);removeEventListener('resize',onScroll);finish();}
+  if(mq.matches)finish();else start();
+  if(mq.addEventListener)mq.addEventListener('change',function(){mq.matches?stop():start()});
+  document.getElementById('send').addEventListener('click',function(){var d=document.getElementById('done');d.classList.add('show');d.focus();});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Ceremonies by Cathryn, Bunbury celebrant: a website preview</title>
+<meta name="description" content="A website idea for Cathryn Elliott of Ceremonies by Cathryn, marriage celebrant in Bunbury, Margaret River, Perth and the South West. A preview by Lampbound Studio, not her official site.">
+<meta property="og:title" content="Ceremonies by Cathryn, Cathryn Elliott">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Ceremonies by Cathryn. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/ceremoniesbycathryn/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/ceremoniesbycathryn/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2320251c'/%3E%3Ctext x='16' y='23' font-family='Arial' font-weight='700' font-size='19' fill='%23f0f1ef' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --dark:#20251c; --light:#f0f1ef; --red:#b0323b; --red-deep:#8d2730; --fern:#5e6358; --rule:#d6d8d2; --white:#fbfbfa;
+  --display:"Schibsted Grotesk", system-ui, sans-serif; --text:"Source Serif 4", Georgia, serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--light);color:var(--dark);font:18px/1.6 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid #111;outline-offset:0;box-shadow:0 0 0 6px #fff}
+.skip{position:absolute;left:-999px;top:0;background:var(--dark);color:var(--white);padding:10px 14px;z-index:50;font-family:var(--display)}
+.skip:focus{left:8px;top:8px}
+.strip{background:var(--dark);color:#d3d7cf;font:14px/1.4 var(--display);padding:9px 16px;text-align:center}
+.strip strong{color:var(--white)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.02;margin:0;letter-spacing:-.02em;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:2px;background:var(--red);color:var(--white);text-decoration:none;border:0;font:700 16px/1 var(--display);cursor:pointer}
+.btn:hover{background:var(--red-deep)}
+.btn.alt{background:var(--white);color:var(--dark);border:1.5px solid var(--dark)}
+
+/* swatch: a fabric sample with a pinked top edge */
+.sw{--a:#ccc;--b:#999;background:linear-gradient(var(--a) 0 58%,var(--b) 58% 100%);clip-path:polygon(0 4%,5% 0,10% 4%,15% 0,20% 4%,25% 0,30% 4%,35% 0,40% 4%,45% 0,50% 4%,55% 0,60% 4%,65% 0,70% 4%,75% 0,80% 4%,85% 0,90% 4%,95% 0,100% 4%,100% 100%,0 100%)}
+
+/* hero */
+.hero{position:relative;height:160svh;background:var(--dark)}
+.hero-stage{position:sticky;top:0;height:100svh;overflow:hidden}
+.h-photo{position:absolute;inset:0;transform:scale(calc(1.1 - var(--p,0) * .1))}
+.h-photo img{width:100%;height:100%;object-fit:cover;object-position:58% 50%}
+.h-shade{position:absolute;left:0;right:0;bottom:0;height:72%;background:linear-gradient(to top,rgba(22,26,19,.9),rgba(22,26,19,0))}
+.h-copy{position:absolute;left:0;right:0;bottom:136px;padding:0 20px;color:var(--white);transform:translate3d(0,calc(var(--p,0) * -8vh),0)}
+.h-copy .tag{font:500 16px/1.3 var(--display);margin:0 0 12px;color:#e2e6de}
+.hero h1{font-size:min(clamp(48px,12.6vw,124px),15svh);max-width:10ch}
+.h-copy .areas{font-size:18px;margin:16px 0 0;max-width:30ch;color:#eef0eb}
+.h-chips{position:absolute;right:20px;top:24px;display:flex;gap:8px;transform:translate3d(0,calc(var(--p,0) * -38vh),0)}
+.h-chips .sw{width:44px;height:58px;box-shadow:0 3px 8px rgba(0,0,0,.3)}
+.h-chips .sw:nth-child(2){transform:translateY(14px) rotate(4deg)}
+.h-chips .sw:nth-child(3){transform:translateY(4px) rotate(-3deg)}
+.h-chips .sw:nth-child(4){transform:translateY(18px) rotate(6deg)}
+@media (min-width:860px){.h-copy{max-width:1100px;margin:0 auto}.h-chips{right:max(20px,calc((100vw - 1100px) / 2));top:48px}.h-chips .sw{width:64px;height:84px}}
+
+/* about */
+.about{padding:84px 0 70px}
+.about-grid{display:grid;gap:34px}
+.about h2{font-size:clamp(34px,7.6vw,62px);max-width:14ch}
+.about .lead{font-size:22px;line-height:1.45;max-width:32ch;margin-top:22px}
+.about blockquote{margin:26px 0 0;padding-left:18px;border-left:2px solid var(--dark);font-style:italic;max-width:46ch}
+.about blockquote cite{display:block;font:500 15px/1.4 var(--display);font-style:normal;margin-top:8px;color:var(--fern)}
+.about figure{margin:0;max-width:420px}
+.about figcaption{font:500 14px/1.4 var(--display);color:var(--fern);margin-top:8px}
+@media (min-width:860px){.about-grid{grid-template-columns:1.2fr .8fr;align-items:center}}
+
+/* the wardrobe: matched to your day */
+.ward{position:relative;height:540svh;background:var(--white)}
+.ward-stage{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;grid-template-rows:auto 1fr;padding:22px 20px 92px;row-gap:16px}
+.ward-head .q{font:700 15px/1.3 var(--display);color:var(--fern);margin:0 0 6px}
+.ward-head h2{font-size:clamp(30px,7.4vw,54px)}
+.board{position:relative;min-height:0}
+.frame{position:absolute;left:0;top:0;width:76%;height:86%;overflow:hidden;transition:opacity .5s ease}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s ease}
+.frame img.on{opacity:1}
+.cards{position:absolute;right:0;bottom:0;width:46%;aspect-ratio:4 / 5;max-height:62%}
+.cards .sw{position:absolute;inset:0;opacity:0;transform-origin:50% 100%;transition:opacity .4s ease,transform .6s cubic-bezier(.2,.7,.2,1);box-shadow:0 8px 18px rgba(0,0,0,.22)}
+.cards .sw.on{opacity:1}
+.tagl{position:absolute;left:8%;right:8%;bottom:8%;background:var(--white);padding:6px 8px;font:700 13px/1.2 var(--display);color:var(--dark)}
+.ward-head{position:relative;z-index:2}
+.answer{position:absolute;left:0;right:0;top:calc(100% + 14px);font-size:clamp(21px,4.8vw,32px);line-height:1.35;opacity:0;transform:translate3d(0,12px,0);transition:opacity .45s ease .2s,transform .45s ease .2s;max-width:30ch}
+.answer cite{display:block;font:500 15px/1.4 var(--display);font-style:normal;color:var(--fern);margin-top:10px}
+.ward.fan .frame{opacity:0}
+.ward.fan .cards .sw{opacity:1}
+.ward.fan .answer{opacity:1;transform:none}
+.tagl{transition:opacity .3s ease}
+.ward.fan .tagl{opacity:0}
+.ward.fan .cards .sw:nth-child(1){transform:translate3d(-100%,-4%,0) rotate(-14deg)}
+.ward.fan .cards .sw:nth-child(2){transform:translate3d(-72%,-9%,0) rotate(-5deg)}
+.ward.fan .cards .sw:nth-child(3){transform:translate3d(-44%,-9%,0) rotate(5deg)}
+.ward.fan .cards .sw:nth-child(4){transform:translate3d(-16%,-4%,0) rotate(14deg)}
+@media (min-width:860px){
+  .ward-stage{max-width:1100px;margin:0 auto;width:100%;grid-template-columns:.8fr 1.2fr;grid-template-rows:1fr;column-gap:48px;padding:60px 20px 104px}
+  .ward-head{align-self:center}
+  .board{grid-column:2}
+  .answer{position:relative;margin-top:26px;font-size:24px}
+  .frame{width:72%;height:90%}
+  .cards{width:38%;max-height:70%}
+  .ward.fan .cards .sw:nth-child(1){transform:translate3d(-122%,-4%,0) rotate(-14deg)}
+  .ward.fan .cards .sw:nth-child(2){transform:translate3d(-94%,-9%,0) rotate(-5deg)}
+  .ward.fan .cards .sw:nth-child(3){transform:translate3d(-66%,-9%,0) rotate(5deg)}
+  .ward.fan .cards .sw:nth-child(4){transform:translate3d(-38%,-4%,0) rotate(14deg)}
+}
+
+/* included */
+.inc{padding:90px 0 70px}
+.inc h2{font-size:clamp(34px,7.4vw,58px);margin-bottom:14px}
+.inc .intro{max-width:46ch;font-size:20px;margin-bottom:36px}
+.list{border-top:2px solid var(--dark)}
+.item{display:grid;gap:6px;padding:22px 0;border-bottom:1px solid var(--rule)}
+.item h3{font-size:clamp(22px,4.8vw,30px);letter-spacing:-.01em}
+.item p{margin:0;max-width:56ch}
+@media (min-width:860px){.item{grid-template-columns:.8fr 1.2fr;column-gap:40px}}
+.areas-line{margin-top:34px;font:700 18px/1.4 var(--display);max-width:44ch}
+
+/* kind words */
+.words{background:var(--dark);color:var(--light);padding:88px 0}
+.words-grid{display:grid;gap:36px}
+.words h2{font-size:clamp(34px,7vw,56px);margin-bottom:26px}
+.qs blockquote{margin:0 0 30px;padding-top:18px;border-top:1px solid #3a4134}
+.qs p{font-size:20px;line-height:1.5}
+.qs cite{font:500 15px/1.4 var(--display);font-style:normal;color:#b3baa9}
+.words img{border-radius:2px}
+@media (min-width:860px){.words-grid{grid-template-columns:1.2fr .8fr;align-items:start;column-gap:56px}}
+
+/* enquire */
+.enq{background:var(--white);padding:88px 0 120px}
+.enq-grid{display:grid;gap:34px}
+.enq h2{font-size:clamp(34px,7vw,56px);margin-bottom:14px}
+form{display:grid;gap:16px}
+label{display:grid;gap:6px;font:700 15px/1.3 var(--display)}
+input,textarea{font:400 17px/1.4 var(--text);padding:12px 14px;border:1.5px solid #6c7166;border-radius:2px;background:#fff;color:var(--dark);min-height:48px;width:100%}
+textarea{min-height:120px;resize:vertical}
+.two{display:grid;gap:16px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.note{font:500 14px/1.4 var(--display);color:var(--fern);margin:0}
+.done{display:none;padding:16px;border:1.5px solid var(--red);border-radius:2px;background:#f8ecec}
+.done.show{display:block}
+@media (min-width:860px){.enq-grid{grid-template-columns:.8fr 1.2fr}}
+
+footer{background:var(--dark);color:#c3c9bc;padding:40px 0 112px;font-size:15px}
+footer strong{color:var(--white)}
+.wm{font:800 26px/1 var(--display);color:var(--white);letter-spacing:-.02em;margin:0 0 16px}
+
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px}
+.bar .btn{flex:1;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+.bar .btn:focus-visible{box-shadow:0 0 0 6px #fff}
+@media (min-width:860px){.bar{left:auto;right:24px;bottom:24px}.bar .btn{flex:none}}
+
+@media (prefers-reduced-motion:reduce),(max-height:520px){
+  .hero{height:auto}.hero-stage{position:relative;height:100svh}
+  .h-photo,.h-copy,.h-chips{transform:none!important}
+  .ward{height:auto}.ward-stage{position:relative;height:auto;display:block;padding:70px 20px 60px}
+  .board{height:auto;margin-top:24px}
+  .frame{display:none}
+  .cards{position:relative;width:min(42%,200px);margin:40px auto 20px;max-height:none;right:auto;bottom:auto}
+  .cards .sw,.answer,.frame img{transition:none}
+  .answer{position:relative;margin-top:36px}
+  .ward.fan .cards .sw:nth-child(1){transform:translate3d(-36%,0,0) rotate(-12deg)}
+  .ward.fan .cards .sw:nth-child(2){transform:translate3d(-12%,-4%,0) rotate(-4deg)}
+  .ward.fan .cards .sw:nth-child(3){transform:translate3d(12%,-4%,0) rotate(4deg)}
+  .ward.fan .cards .sw:nth-child(4){transform:translate3d(36%,0,0) rotate(12deg)}
+}
+@media (max-height:520px){.hero-stage{height:auto!important;min-height:100svh}.h-copy{position:relative;padding-top:40vh;bottom:auto;padding-bottom:110px}}
+</style>
+<noscript><style>
+  .hero{height:auto}.hero-stage{position:relative;height:100svh}
+  .ward{height:auto}.ward-stage{position:relative;height:auto;display:block;padding:70px 20px 60px}
+  .frame{display:none}
+  .cards{position:relative;width:min(42%,200px);margin:40px auto 20px;max-height:none;right:auto;bottom:auto}
+  .cards .sw{opacity:1}
+  .cards .sw:nth-child(1){transform:translate3d(-36%,0,0) rotate(-12deg)}
+  .cards .sw:nth-child(2){transform:translate3d(-12%,-4%,0) rotate(-4deg)}
+  .cards .sw:nth-child(3){transform:translate3d(12%,-4%,0) rotate(4deg)}
+  .cards .sw:nth-child(4){transform:translate3d(36%,0,0) rotate(12deg)}
+  .answer{position:relative;opacity:1;transform:none;margin-top:36px}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip">A website idea made by <strong>Lampbound Studio</strong> for Ceremonies by Cathryn. Not her official site.</div>
+
+<main id="main">
+<section class="hero" data-pin aria-label="Introduction">
+  <div class="hero-stage">
+    <div class="h-photo"><img src="img/confetti.jpg" width="1800" height="1200" alt="A just-married couple walking out under a timber arbour among gum trees as guests throw confetti" fetchpriority="high"></div>
+    <div class="h-shade"></div>
+    <div class="h-chips" aria-hidden="true">
+      <span class="sw" style="--a:#1c1c1c;--b:#f2f2ef"></span>
+      <span class="sw" style="--a:#c83942;--b:#307ba5"></span>
+      <span class="sw" style="--a:#484b36;--b:#e8e3d6"></span>
+      <span class="sw" style="--a:#374965;--b:#8b5c41"></span>
+    </div>
+    <div class="h-copy">
+      <p class="tag">Cathryn Elliott, marriage celebrant</p>
+      <h1>Ceremonies by Cathryn</h1>
+      <p class="areas">Weddings in Bunbury, Margaret River, Perth and across the South West.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" aria-labelledby="about-h">
+  <div class="wrap about-grid">
+    <div>
+      <h2 id="about-h">"I am very much a people person"</h2>
+      <p class="lead">Cathryn grew up in the Southern Highlands of NSW, and the South West of WA has been home for over 25 years.</p>
+      <p>She starts by getting to know you both, over a coffee or a glass of wine, then writes a ceremony that tells your story. Weddings and family are her two great loves, and she has officiated her own daughter's wedding.</p>
+      <blockquote>"I will take the time to get to know you to ensure your wedding day reflects you and to create a memorable wedding experience."<cite>Cathryn Elliott</cite></blockquote>
+    </div>
+    <figure>
+      <img src="img/kiss.jpg" width="960" height="960" alt="A groom kissing his bride's forehead, in black and white" loading="lazy">
+      <figcaption>One of Cathryn's couples</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="ward" data-pin aria-labelledby="ward-h">
+  <div class="ward-stage">
+    <div class="ward-head">
+      <p class="q">From Cathryn's FAQ</p>
+      <h2 id="ward-h">"What will you wear?"</h2>
+      <p class="answer">"I always make every effort to co-ordinate my wardrobe to your bridal party and wedding style."<cite>Cathryn's answer</cite></p>
+    </div>
+    <div class="board" aria-hidden="true">
+      <div class="frame">
+        <img src="img/walk.jpg" width="1000" height="1249" alt="" loading="lazy" style="object-position:50% 40%">
+        <img src="img/marquee.jpg" width="1170" height="780" alt="" loading="lazy" style="object-position:20% 50%">
+        <img src="img/forest.jpg" width="1000" height="1250" alt="" loading="lazy">
+        <img src="img/confetti.jpg" width="1800" height="1200" alt="" loading="lazy" style="object-position:62% 50%">
+      </div>
+      <div class="cards">
+        <span class="sw" style="--a:#1c1c1c;--b:#f2f2ef"><span class="tagl">Black and white</span></span>
+        <span class="sw" style="--a:#c83942;--b:#307ba5"><span class="tagl">Rose red and blue</span></span>
+        <span class="sw" style="--a:#484b36;--b:#e8e3d6"><span class="tagl">Fern and lace</span></span>
+        <span class="sw" style="--a:#374965;--b:#8b5c41"><span class="tagl">Navy and red earth</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="inc" aria-labelledby="inc-h">
+  <div class="wrap">
+    <h2 id="inc-h">One quote that covers everything</h2>
+    <p class="intro">Every ceremony is different, so Cathryn sends a detailed quote for yours. It covers everything, the rehearsal included.</p>
+    <div class="list">
+      <div class="item"><h3>A ceremony about you</h3><p>She learns your story first, then writes the ceremony around it, with heart and a touch of humour where it suits.</p></div>
+      <div class="item"><h3>Help with the words</h3><p>Pointers for writing your vows and choosing poems and readings, and a reminder when your Notice of Intended Marriage is due.</p></div>
+      <div class="item"><h3>Her own PA system</h3><p>Her own top of the range Bluetooth PA is included in her fees.</p></div>
+      <div class="item"><h3>Travel</h3><p>She's happy to travel anywhere. A travel fee may apply more than 80km from Bunbury.</p></div>
+    </div>
+    <p class="areas-line">Bunbury, Margaret River, Perth and the Greater South West.</p>
+  </div>
+</section>
+
+<section class="words" aria-labelledby="words-h">
+  <div class="wrap words-grid">
+    <div>
+      <h2 id="words-h">From her couples</h2>
+      <div class="qs">
+        <blockquote><p>"From our very first conversation, she was incredibly warm, kind, and so easy to talk to."</p><cite>Casey B., March 2026, on Easy Weddings</cite></blockquote>
+        <blockquote><p>"She creates a sense of calmness on your wedding day. She created and told the most beautiful story of us with the information we gave her."</p><cite>Cheyenne G., June 2023, on Easy Weddings</cite></blockquote>
+        <blockquote><p>"She is very stylish, organised and caring."</p><cite>Tina C., married at Caves House, February 2024, on Easy Weddings</cite></blockquote>
+      </div>
+    </div>
+    <img src="img/recess.jpg" width="1000" height="1250" alt="A couple walking back down the aisle past their cheering guests, in black and white" loading="lazy">
+  </div>
+</section>
+
+<section class="enq" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap enq-grid">
+    <div>
+      <h2 id="enq-h">Is your date free?</h2>
+      <p>Send Cathryn your date and venue to ask if she's free and for a quote. You can also call her on <a href="tel:0406684669">0406 684 669</a>.</p>
+      <p class="note">This is a preview, so the form does not send anything.</p>
+    </div>
+    <form id="enq-form" novalidate>
+      <div class="two">
+        <label>Your names<input name="names" autocomplete="name"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <div class="two">
+        <label>Wedding date<input name="date" type="date"></label>
+        <label>Venue or town<input name="venue"></label>
+      </div>
+      <label>Your colours, if you know them<input name="colours"></label>
+      <label>Anything else<textarea name="msg"></textarea></label>
+      <button class="btn" type="button" id="send">Send to Cathryn</button>
+      <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Cathryn. To reach her today, call <a href="tel:0406684669">0406 684 669</a>.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="wm">Ceremonies by Cathryn</p>
+    <p><strong>A preview made by Lampbound Studio for Ceremonies by Cathryn.</strong> Not affiliated, not live.</p>
+    <p>Words and photos are from Cathryn's Easy Weddings listing.</p>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn alt" href="tel:0406684669">Call Cathryn</a><a class="btn" href="#enquire">Check your date</a></div>
+
+<script>
+(function(){
+  var pins=[].slice.call(document.querySelectorAll('[data-pin]'));
+  var ward=document.querySelector('.ward');
+  var imgs=[].slice.call(ward.querySelectorAll('.frame img'));
+  var cards=[].slice.call(ward.querySelectorAll('.cards .sw'));
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce), (max-height:520px)');
+  var on=false,ticking=false;
+  function finish(){pins.forEach(function(el){el.style.setProperty('--p','1')});ward.classList.add('fan');}
+  function update(){
+    ticking=false;if(!on)return;
+    pins.forEach(function(el){
+      var r=el.getBoundingClientRect(),total=el.offsetHeight-window.innerHeight;
+      var p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;
+      el.style.setProperty('--p',p.toFixed(4));
+      if(el===ward){
+        var n=Math.min(cards.length-1,Math.floor(p*(cards.length+1.2)));
+        imgs.forEach(function(im,k){im.classList.toggle('on',k===n)});
+        cards.forEach(function(c,k){c.classList.toggle('on',k===n)});
+        ward.classList.toggle('fan',p>=.8);
+      }
+    });
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
+  function start(){if(on)return;on=true;ward.classList.remove('fan');addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);update();}
+  function stop(){on=false;ticking=false;removeEventListener('scroll',onScroll);removeEventListener('resize',onScroll);finish();}
+  if(mq.matches)finish();else start();
+  if(mq.addEventListener)mq.addEventListener('change',function(){mq.matches?stop():start()});
+  document.getElementById('send').addEventListener('click',function(){var d=document.getElementById('done');d.classList.add('show');d.focus();});
+})();
+</script>
+</body>
+</html>
