@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Chris Ceremonies, Melbourne celebrant and MC: a website preview</title>
+<meta name="description" content="A website idea for Chris Ceremonies, celebrant and MC in Melbourne. A preview by Lampbound Studio, not his official site.">
+<meta property="og:title" content="Chris Ceremonies, Melbourne celebrant and MC">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Chris Ceremonies. Not his official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/chrisceremonies/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/chrisceremonies/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231b1d1a'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='14' fill='%23f1f2ee' text-anchor='middle'%3ECC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Big+Shoulders+Display:wght@700;800&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#f1f2ee; --paper:#fff; --ink:#1b1d1a; --ginger:#b9471f; --ginger-deep:#943512; --plum:#3f3046;
+  --muted:#5d605a; --line:#d6d8d1;
+  --display:"Big Shoulders Display", Impact, "Arial Narrow", sans-serif;
+  --text:"Atkinson Hyperlegible", system-ui, sans-serif;
+  --type:"Courier Prime", "Courier New", Courier, monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font:17px/1.6 var(--text);overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:2px;box-shadow:0 0 0 6px #fff}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.strip{background:var(--ink);color:#cfd2ca;font-size:13.5px;line-height:1.4;padding:9px 16px;text-align:center}
+.strip strong{color:#fff}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:.95;margin:0;text-wrap:balance}
+h2{font-size:clamp(40px,9vw,72px);text-transform:uppercase}
+h3{font-size:28px;text-transform:uppercase;line-height:1}
+p{margin:0 0 1em;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:2px;background:var(--ginger);color:#fff;text-decoration:none;border:0;font:700 16px/1 var(--text);cursor:pointer}
+.btn:hover{background:var(--ginger-deep)}
+.btn.alt{background:transparent;color:inherit;border:2px solid currentColor}
+.btn.alt:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+/* hero: his laughing ceremony, the name over it, a ginger tag in front */
+.hero{position:relative;background:var(--ink);color:#fff}
+.hero .stage{position:relative;min-height:calc(100svh - 38px);overflow:hidden;display:grid;align-content:end}
+.js .hero{height:150svh}
+.js .hero .stage{position:sticky;top:0;height:100svh;min-height:0}
+.h-photo{position:absolute;inset:0;will-change:transform}
+.h-photo img{width:100%;height:100%;object-fit:cover;object-position:52% 30%}
+.h-photo::after{content:"";position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(180deg,rgba(27,29,26,0),rgba(27,29,26,.86) 58%)}
+.h-text{position:relative;padding:0 20px 96px;max-width:760px;will-change:transform}
+.h-tag{position:absolute;right:16px;top:22px;background:var(--ginger);color:#fff;font:700 15px/1 var(--type);padding:9px 12px;transform:rotate(-3deg);will-change:transform}
+.h-text h1{font-size:clamp(64px,19vw,168px);text-transform:uppercase;letter-spacing:-.005em}
+.h-text .role{font:700 19px/1.35 var(--text);margin:12px 0 4px}
+.h-text .lede{font-size:17px;color:#e4e6df;margin:0 0 20px;max-width:30em}
+.h-text .acts{display:flex;flex-wrap:wrap;gap:10px}
+@media (max-width:719px){.h-text .acts .alt{display:none}}
+@media (min-width:720px){
+  .h-text{padding:0 0 72px max(40px,calc((100vw - 1120px)/2 + 20px));max-width:calc(760px + max(40px,calc((100vw - 1120px)/2 + 20px)))}
+  .h-tag{right:max(40px,calc((100vw - 1120px)/2 + 20px));top:40px;font-size:18px}
+}
+@media (max-height:520px) and (orientation:landscape){
+  .js .hero{height:auto}
+  .js .hero .stage{position:relative;height:auto;min-height:100svh}
+  .h-text{padding-bottom:28px}
+  .h-text h1{font-size:64px}
+  .h-text .lede{margin-bottom:12px}
+}
+
+/* about */
+section.plain{padding:76px 0}
+.about{display:grid;gap:34px}
+.about .pic img{width:100%;max-width:520px}
+.about .big{font:700 clamp(22px,5vw,30px)/1.25 var(--text);margin:18px 0 .7em}
+.about .note{font-family:var(--type);font-size:15.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;margin-top:22px}
+@media (min-width:820px){.about{grid-template-columns:1.1fr .9fr;align-items:center;gap:64px}}
+
+/* the script */
+.script{background:var(--ink);color:#e9eae4;position:relative}
+.script .stage{display:grid;gap:22px;padding:56px 20px 60px;justify-items:center}
+.js .script.on{height:560svh}
+.js .script.on .stage{position:sticky;top:0;height:100svh;padding:18px 16px 86px;overflow:hidden;align-content:start;gap:14px}
+.sc-head{width:min(100%,560px)}
+.sc-head h2{font-size:clamp(34px,8vw,60px);color:#fff}
+.page{width:min(100%,560px);background:var(--paper);color:var(--ink);font:400 14.5px/1.3 var(--type);padding:16px 16px 14px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.page .title{display:flex;justify-content:space-between;gap:10px;font-weight:700;border-bottom:1px solid #c9cbc4;padding-bottom:8px;margin-bottom:6px}
+.page ol{list-style:none;margin:0;padding:0}
+.row{display:grid;grid-template-columns:108px 1fr;gap:0 10px;align-items:start;padding:5px 0;--t:0}
+.cue{position:relative;display:grid;font-weight:700;letter-spacing:.02em}
+.cue span{grid-area:1/1;white-space:nowrap}
+.cue .old{position:relative;justify-self:start}
+.cue .old::after{content:"";position:absolute;left:-2px;right:-2px;top:52%;height:2px;background:var(--ginger);transform-origin:0 50%;transform:scaleX(clamp(0, var(--t) * 2.2, 1))}
+.cue .new{color:var(--ginger);opacity:0;transform:translateY(calc((1 - var(--t)) * 6px))}
+.row .part{color:#33362f}
+.row.keep .part{font-weight:700;color:var(--ink)}
+.row.keep .legal{display:block;font-weight:400;font-size:13.5px;color:#454840;margin-top:3px}
+.row.keep{position:relative}
+.row.keep::before{content:"";position:absolute;inset:0 -8px;border:2px solid var(--ink);opacity:var(--b,0);pointer-events:none}
+.row.keep .still{display:block;font-size:12.5px;line-height:1.3;color:var(--ginger-deep);font-weight:700;opacity:var(--b,0);max-height:calc(var(--b,0) * 2.8em);overflow:hidden}
+.script:not(.on) .row.keep .still{max-height:none}
+.js .script.on .cue .old{opacity:clamp(0, 2.4 - var(--t) * 2.4, 1)}
+.js .script.on .cue .new{opacity:clamp(0, var(--t) * 2.4 - 1.4, 1)}
+/* without the pinned run, show the end state */
+.script:not(.on) .row:not(.keep){--t:1}
+.script:not(.on) .row:not(.keep) .cue .old{opacity:.45}
+.script:not(.on) .row:not(.keep) .cue .new{opacity:1;transform:none}
+.script:not(.on) .row .cue .new{grid-area:auto}
+.script:not(.on) .row:not(.keep) .cue{grid-template-rows:auto auto}
+.script:not(.on) .row.keep{--b:1}
+.caps{display:grid;width:min(100%,560px)}
+.cap{grid-area:1/1}
+.cap p{margin:0}
+.cap .say{font:700 clamp(18px,4.6vw,26px)/1.3 var(--text);color:#fff}
+.cap .who{font-size:14.5px;color:#b8bbb2;margin-top:6px}
+.cap .say em{font-style:normal;color:#f08a5d}
+.script:not(.on) .caps{gap:22px}
+.script:not(.on) .cap{grid-area:auto}
+.js .script.on .cap{opacity:0}
+.js .script.on .cap.first{opacity:1}
+@media (max-width:380px){.page{font-size:13.5px;padding:12px}.row{grid-template-columns:96px 1fr;padding:4px 0}}
+@media (max-height:760px){.js .script.on .row.keep .legal{display:none}}
+@media (max-height:700px){.js .script.on .cap .who{display:none}}
+@media (max-height:640px){.js .script.on .row .more{display:none}.js .script.on .row{padding:3px 0}.js .script.on .page{font-size:13px;padding:10px 12px}.js .script.on .sc-head h2{font-size:30px}.js .script.on .cap .say{font-size:16px}.js .script.on .stage{padding-top:12px;gap:10px}}
+@media (min-width:900px){
+  .script .stage{grid-template-columns:minmax(0,620px) minmax(0,400px);justify-content:center;column-gap:64px;align-items:center}
+  .js .script.on .stage{align-content:center;padding:24px 40px}
+  .page{grid-row:1/3;width:min(100%,620px);font-size:17px;padding:24px 28px}
+  .row{grid-template-columns:130px 1fr;padding:6px 0}
+  .sc-head{align-self:end;width:auto}
+  .caps{align-self:start;width:auto}
+}
+
+/* ceremonies */
+.cer{border-top:1px solid var(--line)}
+.cer .list{margin:34px 0 0;padding:0;list-style:none;border-top:2px solid var(--ink)}
+.cer .list li{display:grid;gap:8px 32px;padding:26px 0;border-bottom:1px solid var(--line)}
+.cer .list h3{font-size:clamp(28px,6vw,40px)}
+.cer .list .line{font-weight:700;margin:0}
+.cer .list ul{margin:0;padding-left:1.1em;color:#33362f}
+.cer .list ul li{display:list-item;padding:0;border:0;margin:0 0 4px}
+.cer .lead-item h3{color:var(--ginger)}
+.cer .fine{font-size:15px;color:var(--muted);margin-top:22px;max-width:38em}
+@media (min-width:820px){.cer .list>li{grid-template-columns:300px 1fr}}
+
+/* the questions */
+.qs{background:var(--paper)}
+.qs .grid{display:grid;gap:36px;margin-top:34px}
+.qs .big{font:700 clamp(22px,5vw,32px)/1.25 var(--text);margin:0 0 10px}
+.qs .big span{color:var(--ginger)}
+.qs h3{font-size:24px;margin-bottom:10px}
+.qs .pic img{width:100%}
+@media (min-width:820px){.qs .grid{grid-template-columns:1fr 1fr;gap:56px;align-items:start}}
+
+/* couples */
+.words{background:var(--plum);color:#ece8ef}
+.words .big{font:700 clamp(24px,5.4vw,38px)/1.25 var(--text);color:#fff;margin:26px 0 8px;max-width:24em}
+.words .who{color:#c9bfd0;font-size:15px;margin:0}
+.words .more{display:grid;gap:28px;margin-top:44px}
+.words .more p{margin:0}
+.words .rev{margin-top:40px;font-size:15.5px;color:#d7cfdc}
+.words .rev a{color:#fff}
+@media (min-width:820px){.words .more{grid-template-columns:1.3fr 1fr 1fr;gap:40px}}
+
+.strip-photos{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:6px;background:var(--ink)}
+.strip-photos figure{margin:0}
+.strip-photos img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+.strip-photos .tall img{aspect-ratio:auto}
+.strip-photos .wide{grid-column:1/-1}
+@media (min-width:820px){.strip-photos{grid-template-columns:1.4fr 1fr 1fr}.strip-photos .wide{grid-column:auto}}
+
+/* enquire */
+.close{padding:80px 0 120px}
+.close .big{font:800 clamp(46px,11vw,96px)/.92 var(--display);text-transform:uppercase;margin:0 0 14px}
+.close .lead{max-width:36em;color:var(--muted)}
+form{display:grid;gap:14px;max-width:660px;margin-top:28px}
+.two{display:grid;gap:14px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+label,legend{display:grid;gap:6px;font-weight:700;font-size:15.5px}
+fieldset{border:0;margin:0;padding:0;display:grid;gap:8px}
+.choice{display:flex;flex-wrap:wrap;gap:8px}
+.choice label{display:flex;align-items:center;gap:8px;font-weight:400;min-height:44px;padding:0 14px;border:1.5px solid #8a8d85;border-radius:2px;background:var(--paper);cursor:pointer}
+.choice input{width:18px;height:18px;min-height:0;accent-color:var(--ginger);margin:0}
+input,textarea{font:inherit;font-weight:400;color:var(--ink);background:var(--paper);border:1.5px solid #8a8d85;border-radius:2px;padding:11px 12px;min-height:48px;width:100%}
+textarea{min-height:120px;resize:vertical}
+.done{display:none;padding:14px 16px;background:var(--paper);border:2px solid var(--ginger)}
+.done.show{display:block}
+.reach{margin-top:26px}
+.reach a{font-weight:700}
+
+footer{background:var(--ink);color:#cfd2ca;padding:40px 0 110px;font-size:15px}
+footer strong{color:#fff}
+.bar{position:fixed;left:0;right:0;bottom:0;display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(241,242,238,.97);border-top:1px solid var(--line);z-index:20}
+.bar .btn{flex:1;padding:0 10px}
+.bar .btn.alt{flex:0 0 auto;padding:0 16px;color:var(--ink)}
+@media (min-width:900px){.bar{display:none}footer{padding-bottom:40px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip"><strong>A website idea made by Lampbound Studio for Chris Ceremonies.</strong> Not his official site.</div>
+
+<main id="main">
+<section class="hero" aria-label="Chris Ceremonies">
+  <div class="stage">
+    <div class="h-photo"><img src="img/laugh.jpg" width="1620" height="1080" alt="Chris in a plum jacket laughing with a bride and groom at their ceremony" fetchpriority="high"></div>
+    <p class="h-tag" aria-hidden="true">To infinity and beyond</p>
+    <div class="h-text">
+      <h1>Chris Ceremonies</h1>
+      <p class="role">Celebrant and MC in Melbourne</p>
+      <p class="lede">Fun ceremonies without the massive price tag. You worry about making a lifetime of memories, while Chris sorts out the legal stuff.</p>
+      <div class="acts"><a class="btn" href="#enquire">Check your date</a><a class="btn alt" href="tel:0431566515">Call 0431 566 515</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="plain" aria-labelledby="about-h">
+  <div class="wrap about">
+    <div>
+      <h2 id="about-h">Why can't a ceremony be fun?</h2>
+      <p class="big">Born and raised in Sydney, now in Melbourne, Chris kept leaving friends' weddings asking why the ceremony couldn't feel as exciting as everyone in the room.</p>
+      <p>His answer is that it can. Ceremonies can be fun, exhilarating and joyous, while you look back on the moments that brought the two of you together.</p>
+      <p>He has years of hosting events of all shapes and sizes, and a couple of Melbourne International Comedy Festival shows behind him. So he can be your celebrant, your MC, or both.</p>
+    </div>
+    <div class="pic"><img src="img/chris.jpg" width="900" height="1200" alt="Chris in a grey suit and floral tie, grinning under a tree in pink blossom" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="script" id="script" aria-labelledby="sc-h">
+  <div class="stage">
+    <div class="sc-head"><h2 id="sc-h">The Joey Tribbiani</h2></div>
+    <div class="page" role="group" aria-label="A ceremony script, showing who says each part">
+      <p class="title"><span>THE CEREMONY</span><span>WHO</span></p>
+      <ol>
+        <li class="row"><span class="cue"><span class="old">CHRIS</span><span class="new">YOUR FRIEND</span></span><span class="part">Introduction</span></li>
+        <li class="row"><span class="cue"><span class="old">CHRIS</span><span class="new">YOUR FRIEND</span></span><span class="part">Acknowledgments</span></li>
+        <li class="row"><span class="cue"><span class="old">CHRIS</span><span class="new">YOUR FRIEND</span></span><span class="part">Readings</span></li>
+        <li class="row"><span class="cue"><span class="old">CHRIS</span><span class="new">YOUR FRIEND</span></span><span class="part">Your story<span class="more">: how you met, first dates, the engagement, the pets</span></span></li>
+        <li class="row"><span class="cue"><span class="old">CHRIS</span><span class="new">YOUR FRIEND</span></span><span class="part">Parental blessing</span></li>
+        <li class="row keep"><span class="cue"><span class="old">CHRIS</span></span><span class="part">The legal paragraph<span class="legal">"I am duly authorised by law to solemnise marriages according to law..."</span><span class="still">Still Chris. It has to be.</span></span></li>
+        <li class="row"><span class="cue"><span class="old">CHRIS</span><span class="new">YOUR FRIEND</span></span><span class="part">I do's and vows</span></li>
+        <li class="row"><span class="cue"><span class="old">CHRIS</span><span class="new">YOUR FRIEND</span></span><span class="part">Ring ceremony</span></li>
+        <li class="row keep"><span class="cue"><span class="old">CHRIS</span></span><span class="part">Music, before, during and after<span class="still">Still Chris, on his own speaker.</span></span></li>
+      </ol>
+    </div>
+    <div class="caps">
+      <div class="cap first">
+        <p class="say">"I will build your ceremony from the ground up, crafting every word for you as a couple."</p>
+        <p class="who">Chris, on the Fully Customised Ceremony</p>
+      </div>
+      <div class="cap">
+        <p class="say">"Want someone you actually know to tell your story? Have a friend or family member conduct your entire ceremony."</p>
+        <p class="who">Chris, on the Joey Tribbiani</p>
+      </div>
+      <div class="cap">
+        <p class="say">There's only one paragraph that needs to be spoken by a legal celebrant. <em>The rest is up to you.</em></p>
+        <p class="who">Chris writes the script and handles the paperwork. Your friend tells your story in their own words.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="plain cer" aria-labelledby="cer-h">
+  <div class="wrap">
+    <h2 id="cer-h">Pick your ceremony</h2>
+    <ol class="list">
+      <li class="lead-item">
+        <h3>Fully Customised Ceremony</h3>
+        <div>
+          <p class="line">The whole shebang, 15 to 30 minutes.</p>
+          <ul>
+            <li>Your story retold: how you met, first dates, the engagement, pets, what makes you you. Full of laughs and maybe a couple of tears.</li>
+            <li>Introduction, acknowledgments, readings, parental blessing, a special ceremony, I do's, legal and personal vows, rings</li>
+            <li>All your music before, during and after</li>
+            <li>Your official marriage certificate from Births, Deaths and Marriages, bought and organised for you</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <h3>The Joey Tribbiani</h3>
+        <div>
+          <p class="line">A friend or family member marries you.</p>
+          <ul>
+            <li>A full ceremony script for your friend to make their own</li>
+            <li>Chris looks after every legal part, the paperwork and the music</li>
+            <li>Your friend comes to the first meeting, and usually gets an online catch-up with Chris before the day</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <h3>Just the Basics</h3>
+        <div>
+          <p class="line">Skip the waffling and get to the party. 5 to 10 minutes.</p>
+          <ul>
+            <li>A brief introduction, I do's, legal vows, personal vows and rings</li>
+            <li>All your music, and your official certificate</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <h3>MC the Reception</h3>
+        <div>
+          <p class="line">Keep your guests laughing and the night on time.</p>
+          <ul>
+            <li>Chris runs the run sheet and keeps your vendors and speech makers up to date as things change</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+    <p class="fine">Ask Chris for current prices.</p>
+  </div>
+</section>
+
+<section class="plain qs" aria-labelledby="qs-h">
+  <div class="wrap">
+    <h2 id="qs-h">Questions couples ask</h2>
+    <div class="grid">
+      <div>
+        <p class="big">Who plays the music when we walk down the aisle? <span>Chris does.</span></p>
+        <p>He plays your music before, during and after the ceremony, out of his own speaker. In his words, many celebrants "think 'Spotify' is for stain removal".</p>
+        <h3 style="margin-top:34px">What happens between booking and the day?</h3>
+        <p>You meet about six months out to sign and lodge the Notice of Intended Marriage and talk through each part of the ceremony. Then two questionnaires: one about wording and songs, one about your story. Chris writes the ceremony from those, and checks in when something needs ironing out. Most couples need one meeting and a few emails.</p>
+        <h3 style="margin-top:34px">Can we read it first?</h3>
+        <p>You're welcome to. Chris's advice is that you'll have a better time if you don't. You'll have planned every other part of the day, so a surprise is nice.</p>
+      </div>
+      <div class="pic"><img src="img/mic.jpg" width="1400" height="933" alt="Chris speaking into a microphone at a flower arch, the groom beside him" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="plain words" aria-labelledby="words-h">
+  <div class="wrap">
+    <h2 id="words-h">From his couples</h2>
+    <p class="big">"His ceremony perfectly matched the vibe we were going for of a little bit light hearted as well as the more formal pieces."</p>
+    <p class="who">Alex B., October 2026, Easy Weddings</p>
+    <div class="more">
+      <div><p>"On the day, Chris struck the perfect balance between being professional and relaxed."</p><p class="who">Tim S., April 2026</p></div>
+      <div><p>"We also asked Chris to hang around and MC our reception and we are grateful we did. He kept the crowd entertained effortlessly."</p><p class="who">Jamila G., May 2026</p></div>
+      <div><p>"So all in all, especially for any LGBTQ+ weddings especially, Chris is a great pick as a celebrant."</p><p class="who">Cody D., May 2026</p></div>
+    </div>
+    <p class="rev">Seven reviews, all five stars. <a href="https://www.easyweddings.com.au/MarriageCelebrant/Melbourne/ChrisCeremonies/" rel="noopener">Read them on Easy Weddings</a></p>
+  </div>
+</section>
+
+<div class="strip-photos" aria-label="Chris's ceremonies">
+  <figure class="wide"><img src="img/hills.jpg" width="1400" height="933" alt="A ceremony under a flowered pergola, hills behind the wedding party" loading="lazy"></figure>
+  <figure><img src="img/beach.jpg" width="1400" height="933" alt="Chris marrying a couple at a birch arch on the beach" loading="lazy"></figure>
+  <figure><img src="img/bridesmaids.jpg" width="1400" height="933" alt="A bride laughing with her bridesmaids as Chris looks on" loading="lazy"></figure>
+</div>
+
+<section class="close" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap">
+    <p class="big" aria-hidden="true">Who's marrying you?</p>
+    <h2 id="enq-h" style="font-size:clamp(26px,5vw,36px)">Check your date with Chris</h2>
+    <p class="lead">Tell him a little about the day. If a friend is going to marry you, say who.</p>
+    <form id="enq-form" novalidate>
+      <div class="two">
+        <label>Your names<input name="names" autocomplete="name"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <div class="two">
+        <label>Wedding date<input name="date" type="date"></label>
+        <label>Venue or suburb<input name="venue"></label>
+      </div>
+      <fieldset>
+        <legend>Who's marrying you?</legend>
+        <div class="choice">
+          <label><input type="radio" name="who" value="chris" checked> Chris</label>
+          <label><input type="radio" name="who" value="friend"> A friend or family member</label>
+          <label><input type="radio" name="who" value="unsure"> Not sure yet</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>MC for the reception too?</legend>
+        <div class="choice">
+          <label><input type="radio" name="mc" value="yes"> Yes please</label>
+          <label><input type="radio" name="mc" value="no" checked> Just the ceremony</label>
+        </div>
+      </fieldset>
+      <label>Anything else<textarea name="msg"></textarea></label>
+      <button class="btn" type="button" id="send">Send to Chris</button>
+      <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Chris. To reach him today, call <a href="tel:0431566515">0431 566 515</a> or email <a href="mailto:chrisceremonies@gmail.com">chrisceremonies@gmail.com</a>.</div>
+    </form>
+    <p class="reach">Or call Chris on <a href="tel:0431566515">0431 566 515</a>.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>A preview made by Lampbound Studio for Chris Ceremonies.</strong> Not affiliated, not live.</p>
+    <p>Words and photos are from Chris's own website and his Easy Weddings listing.</p>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn alt" href="tel:0431566515">Call Chris</a><a class="btn" href="#enquire">Check your date</a></div>
+
+<script>
+(function(){
+  var send=document.getElementById('send'), done=document.getElementById('done');
+  send.addEventListener('click',function(){done.classList.add('show');done.focus();});
+
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(mq.matches) return;
+  mq.addEventListener && mq.addEventListener('change',function(){location.reload();});
+  document.documentElement.classList.add('js');
+
+  var hero=document.querySelector('.hero'), photo=hero.querySelector('.h-photo'),
+      text=hero.querySelector('.h-text'), tag=hero.querySelector('.h-tag');
+  var sc=document.getElementById('script'),
+      flips=[].slice.call(sc.querySelectorAll('.row:not(.keep)')),
+      keeps=[].slice.call(sc.querySelectorAll('.row.keep')),
+      caps=[].slice.call(sc.querySelectorAll('.cap'));
+  var tooShort=window.matchMedia('(max-height:520px)');
+  function setOn(){ sc.classList.toggle('on', !tooShort.matches); }
+  setOn();
+
+  function cl(v){return v<0?0:v>1?1:v}
+  function ease(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2}
+  function prog(el){var r=el.getBoundingClientRect(),run=el.offsetHeight-window.innerHeight;return run>0?cl(-r.top/run):0}
+
+  var ticking=false;
+  function draw(){
+    ticking=false;
+    var pinned=getComputedStyle(hero.firstElementChild).position==='sticky';
+    var hp=pinned?prog(hero):0;
+    photo.style.transform='translate3d(0,'+(hp*-4)+'vh,0) scale('+(1.06-hp*.06)+')';
+    text.style.transform='translate3d(0,'+(hp*-14)+'vh,0)';
+    tag.style.transform='translate3d(0,'+(hp*-30)+'vh,0) rotate('+(-3+hp*6)+'deg)';
+
+    if(!sc.classList.contains('on')){
+      caps.forEach(function(el){el.style.opacity='';});
+      flips.concat(keeps).forEach(function(r){r.style.removeProperty('--t');r.style.removeProperty('--b');});
+      return;
+    }
+    var p=prog(sc), n=flips.length, a=.2, b=.76, step=(b-a)/n;
+    flips.forEach(function(row,i){
+      var t=ease(cl((p-(a+i*step))/(step*1.4)));
+      row.style.setProperty('--t',t.toFixed(3));
+    });
+    var box=ease(cl((p-.8)/.08));
+    keeps.forEach(function(row){row.style.setProperty('--b',box.toFixed(3));});
+    var c=p<.18?0:p<.8?1:2;
+    caps.forEach(function(el,i){el.style.opacity=i===c?1:0;});
+  }
+  function req(){ if(!ticking){ticking=true;requestAnimationFrame(draw);} }
+  window.addEventListener('scroll',req,{passive:true});
+  window.addEventListener('resize',function(){setOn();req();});
+  window.addEventListener('pageshow',req);
+  draw();
+})();
+</script>
+</body>
+</html>

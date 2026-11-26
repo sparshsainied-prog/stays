@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Emma Chapman, Sydney marriage celebrant: a website preview</title>
+<meta name="description" content="A website idea for Emma Chapman, marriage celebrant in Sydney. A preview by Lampbound Studio, not her official site.">
+<meta property="og:title" content="Emma Chapman, Sydney marriage celebrant">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Emma Chapman Celebrant. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/emmachapman/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/emmachapman/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231f2a38'/%3E%3Ctext x='16' y='21' font-family='Georgia' font-size='13' fill='%23ffffff' text-anchor='middle'%3EEC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet"><!-- slop-ok: Bodoni mirrors her own logo's capitals -->
+<style>
+:root{
+  --ground:#ffffff; --band:#f6f3f4; --ink:#1f2a38; --peri:#4f5a92; --peri-deep:#3c4679; --blush:#f4dfd6;
+  --wood:#8a5b3d; --wood-dark:#6e4630; --muted:#56606c; --line:#e1dde0;
+  --name:"Bodoni Moda", Didot, "Bodoni 72", Georgia, serif; /* slop-ok: her logo's face */
+  --text:"Hanken Grotesk", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font:17px/1.6 var(--text);overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:2px;box-shadow:0 0 0 6px #fff}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.strip{background:var(--ink);color:#cdd3dc;font-size:13.5px;line-height:1.4;padding:9px 16px;text-align:center}
+.strip strong{color:#fff}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--name);font-weight:400;line-height:1.08;margin:0;text-wrap:balance}
+h2{font-size:clamp(32px,7vw,56px)}
+h3{font-size:26px}
+p{margin:0 0 1em;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;background:var(--peri);color:#fff;text-decoration:none;border:0;font:700 16px/1 var(--text);cursor:pointer}
+.btn:hover{background:var(--peri-deep)}
+.btn.alt{background:transparent;color:inherit;border:1.5px solid currentColor}
+
+/* hero: the garden ceremony, her name in her logo's capitals, a sprig in front */
+.hero{position:relative;background:var(--ink);color:#fff}
+.hero .stage{position:relative;min-height:calc(100svh - 38px);overflow:hidden;display:grid;align-content:end}
+.js .hero{height:155svh}
+.js .hero .stage{position:sticky;top:0;height:100svh;min-height:0}
+.h-photo{position:absolute;inset:0;will-change:transform}
+.h-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.h-photo::after{content:"";position:absolute;left:0;right:0;bottom:0;height:58%;background:linear-gradient(180deg,rgba(31,42,56,0),rgba(31,42,56,.88) 60%)}
+.h-sprig{position:absolute;left:-30px;top:8%;width:min(46vw,300px);color:#fff;opacity:.9;will-change:transform}
+.h-text{position:relative;padding:0 20px 98px;will-change:transform}
+.h-text h1{font-size:clamp(46px,12.5vw,118px);letter-spacing:.06em;text-transform:uppercase;line-height:1} /* slop-ok: her logo sets her name in spaced capitals */
+.h-text .role{font:600 13px/1 var(--text);letter-spacing:.32em;text-transform:uppercase;margin:12px 0 18px} /* slop-ok: the small CELEBRANT line under her logo */
+.h-text .lede{font-size:18px;max-width:28em;color:#e6eaf0;margin:0 0 22px}
+.h-text .acts{display:flex;flex-wrap:wrap;gap:10px}
+@media (min-width:720px){.h-text{padding:0 0 80px max(40px,calc((100vw - 1120px)/2 + 20px))}.h-sprig{left:auto;right:4%;top:10%}}
+@media (max-height:520px) and (orientation:landscape){
+  .js .hero{height:auto}
+  .js .hero .stage{position:relative;height:auto;min-height:100svh}
+  .h-text{padding-bottom:26px}.h-text h1{font-size:46px}.h-sprig{display:none}
+}
+
+/* about */
+section.plain{padding:76px 0}
+.about{display:grid;gap:34px}
+.about .pic img{width:100%;max-width:460px}
+.about .big{font:500 clamp(22px,5vw,30px)/1.3 var(--name);margin:18px 0 .8em}
+@media (min-width:820px){.about{grid-template-columns:1.1fr .9fr;align-items:center;gap:64px}}
+
+/* the signing table */
+.table{background:var(--band);position:relative}
+.table .stage{display:grid;gap:20px;padding:56px 20px 60px;justify-items:center}
+.js .table.on{height:600svh}
+.js .table.on .stage{position:sticky;top:0;height:100svh;padding:20px 16px 86px;overflow:hidden;align-content:center;gap:12px}
+.t-head{width:min(100%,560px)}
+.t-head h2{font-size:clamp(28px,7vw,48px)}
+.desk{width:min(100%,560px,calc((100svh - 330px) * 1.25))}
+.desk{overflow:hidden}
+.desk svg{width:100%;height:auto;display:block}
+.caps{display:grid;width:min(100%,560px)}
+.cap{grid-area:1/1}
+.cap p{margin:0}
+.cap .n{font:700 15px/1 var(--text);color:var(--peri);margin-bottom:8px}
+.cap .say{font:500 clamp(18px,4.6vw,26px)/1.32 var(--name);color:var(--ink)}
+.cap .who{font-size:15px;color:var(--muted);margin-top:8px}
+.js .table.on .cap{opacity:0}
+.js .table.on .cap.first{opacity:1}
+.table:not(.on) .caps{gap:24px}
+.table:not(.on) .cap{grid-area:auto}
+@media (max-height:700px){.js .table.on .cap .who{display:none}}
+@media (min-width:900px){
+  .table .stage{grid-template-columns:minmax(0,720px) minmax(0,380px);justify-content:center;column-gap:64px;align-items:center}
+  .js .table.on .stage{align-content:center;padding:24px 40px}
+  .desk{grid-row:1/3;width:min(100%,720px,calc((100svh - 80px) * 1.25))}
+  .t-head{align-self:end;width:auto}
+  .caps{align-self:start;width:auto}
+}
+
+/* ceremonies */
+.cer .pair{display:grid;gap:40px;margin-top:36px}
+.cer .one h3{margin-bottom:6px}
+.cer .len{font-weight:700;color:var(--peri);margin-bottom:12px}
+.cer ul{margin:0;padding-left:1.1em}
+.cer li{margin:0 0 6px}
+.cer .free{margin-top:48px;padding-top:28px;border-top:1px solid var(--line)}
+.cer .free h3{margin-bottom:14px}
+.cer .fine{font-size:15px;color:var(--muted);margin-top:18px}
+@media (min-width:820px){.cer .pair{grid-template-columns:1.25fr 1fr;gap:64px}}
+
+/* the day */
+.day{background:var(--ink);color:#e6eaf0}
+.day h2{color:#fff}
+.day .grid{display:grid;gap:36px;margin-top:34px}
+.day h3{color:#fff;margin-bottom:10px;font-size:24px}
+.day .pic img{width:100%}
+@media (min-width:820px){.day .grid{grid-template-columns:1fr 1fr 1fr;gap:44px}}
+
+/* couples */
+.words .lead{font:500 clamp(24px,5.4vw,38px)/1.28 var(--name);margin:26px 0 8px;max-width:24em}
+.words .who{color:var(--muted);font-size:15px;margin:0}
+.words .more{display:grid;gap:28px;margin-top:44px}
+.words .more p{margin:0}
+.words .rev{margin-top:38px;font-size:15.5px}
+@media (min-width:820px){.words .more{grid-template-columns:1.3fr 1fr 1fr;gap:40px}}
+
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:0 6px}
+.photos figure{margin:0}
+.photos img{width:100%;height:100%;object-fit:cover}
+.photos .wide{grid-column:1/-1}
+@media (min-width:820px){.photos{grid-template-columns:1.6fr 1fr}.photos .wide{grid-column:auto;grid-row:1/3}}
+
+/* enquire */
+.close{padding:80px 0 120px}
+.close .lead{max-width:36em;color:var(--muted)}
+form{display:grid;gap:14px;max-width:660px;margin-top:28px}
+.two{display:grid;gap:14px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+label{display:grid;gap:6px;font-weight:700;font-size:15.5px}
+input,textarea,select{font:inherit;font-weight:400;color:var(--ink);background:#fff;border:1.5px solid #6f7681;border-radius:6px;padding:11px 12px;min-height:48px;width:100%}
+textarea{min-height:120px;resize:vertical}
+.done{display:none;padding:14px 16px;background:var(--band);border:1.5px solid var(--peri);border-radius:6px}
+.done.show{display:block}
+.reach{margin-top:26px}
+
+footer{background:var(--ink);color:#cdd3dc;padding:40px 0 110px;font-size:15px}
+footer strong{color:#fff}
+.bar{position:fixed;left:0;right:0;bottom:0;display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid var(--line);z-index:20}
+.bar .btn{flex:1}
+@media (min-width:900px){.bar{display:none}footer{padding-bottom:40px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip"><strong>A website idea made by Lampbound Studio for Emma Chapman Celebrant.</strong> Not her official site.</div>
+
+<main id="main">
+<section class="hero" aria-label="Emma Chapman, celebrant">
+  <div class="stage">
+    <div class="h-photo"><img src="img/garden.jpg" width="1620" height="1080" alt="Emma in a floral dress reading the ceremony between a bride and groom on a garden lawn" fetchpriority="high"></div>
+    <svg class="h-sprig" viewBox="0 0 200 200" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+      <path d="M30 180 C70 140 110 100 170 30"/>
+      <path d="M62 146 c-14 -6 -22 -18 -22 -32 c14 4 22 16 22 32z"/>
+      <path d="M62 146 c12 -10 26 -12 38 -6 c-10 10 -24 12 -38 6z"/>
+      <path d="M96 106 c-12 -8 -18 -20 -16 -34 c12 6 18 20 16 34z"/>
+      <path d="M96 106 c12 -8 26 -8 36 0 c-12 8 -26 8 -36 0z"/>
+      <path d="M128 68 c-10 -8 -14 -20 -10 -32 c10 6 14 18 10 32z"/>
+      <path d="M128 68 c10 -6 22 -4 30 4 c-10 6 -22 4 -30 -4z"/>
+    </svg>
+    <div class="h-text">
+      <h1>Emma Chapman</h1>
+      <p class="role">Celebrant, Sydney</p>
+      <p class="lede">Personal and intimate wedding ceremonies, with fresh, positive energy from the first meeting to the day itself.</p>
+      <div class="acts"><a class="btn" href="#enquire">Check your date</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="plain" aria-labelledby="about-h">
+  <div class="wrap about">
+    <div>
+      <h2 id="about-h">Meet Emma</h2>
+      <p class="big">"I take pride in my ability to really listen to what couples want, whether it be a traditional or modern approach."</p>
+      <p>Emma is a Sydney celebrant who cares deeply about personal, intimate ceremonies. She works closely with each couple to write a ceremony that tells their own love story.</p>
+      <p>Her couples talk about how easy she makes it. One wrote that she "made the whole process so easy, and we felt so comfortable throughout the whole lead-up and on the day."</p>
+    </div>
+    <div class="pic"><img src="img/signing.jpg" width="737" height="1100" alt="Emma smiling beside a groom as he signs at a table on a rooftop" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="table" id="table" aria-labelledby="t-h">
+  <div class="stage">
+    <div class="t-head"><h2 id="t-h">Three signatures and a table</h2></div>
+    <div class="desk" aria-hidden="true">
+      <svg viewBox="0 0 400 320">
+        <g class="furniture">
+          <g class="chair c1"><rect x="112" y="262" width="66" height="40" rx="6" fill="#6e4630"/><rect x="112" y="296" width="66" height="10" rx="4" fill="#5a3826"/></g>
+          <g class="chair c2"><rect x="222" y="262" width="66" height="40" rx="6" fill="#6e4630"/><rect x="222" y="296" width="66" height="10" rx="4" fill="#5a3826"/></g>
+          <rect x="40" y="56" width="320" height="196" rx="6" fill="#8a5b3d"/>
+          <g stroke="#7a4e33" stroke-width="2" fill="none" opacity=".7">
+            <path d="M52 92 C140 86 260 98 348 90"/><path d="M52 140 C150 134 250 146 348 138"/><path d="M52 196 C140 190 260 202 348 194"/><path d="M52 230 C150 226 240 236 348 230"/>
+          </g>
+          <rect x="40" y="56" width="320" height="196" rx="6" fill="none" stroke="#6e4630" stroke-width="4"/>
+        </g>
+        <g class="pen"><rect x="300" y="78" width="10" height="70" rx="3" fill="#1f2a38" transform="rotate(28 305 113)"/></g>
+        <g class="cert k3" transform="translate(212 128) rotate(-1 60 43)"><rect width="120" height="86" rx="2" fill="#fff" stroke="#c9c4c8"/><rect x="14" y="12" width="70" height="7" fill="#1f2a38"/><rect x="14" y="27" width="92" height="3" fill="#c8ccd3"/><rect x="14" y="35" width="80" height="3" fill="#c8ccd3"/><rect x="14" y="43" width="88" height="3" fill="#c8ccd3"/><circle cx="98" cy="68" r="10" fill="#f4dfd6"/><path class="sig" pathLength="1" d="M14 70 c6 -12 12 -14 14 -4 s6 8 12 -4 s10 -8 12 2 s8 4 18 -8" fill="none" stroke="#4f5a92" stroke-width="2.2" stroke-linecap="round"/></g>
+        <g class="cert k2" transform="translate(134 120) rotate(2 60 43)"><rect width="120" height="86" rx="2" fill="#fff" stroke="#c9c4c8"/><rect x="14" y="12" width="70" height="7" fill="#1f2a38"/><rect x="14" y="27" width="92" height="3" fill="#c8ccd3"/><rect x="14" y="35" width="80" height="3" fill="#c8ccd3"/><rect x="14" y="43" width="88" height="3" fill="#c8ccd3"/><circle cx="98" cy="68" r="10" fill="#f4dfd6"/><path class="sig" pathLength="1" d="M14 70 c6 -12 12 -14 14 -4 s6 8 12 -4 s10 -8 12 2 s8 4 18 -8" fill="none" stroke="#4f5a92" stroke-width="2.2" stroke-linecap="round"/></g>
+        <g class="cert k1" transform="translate(56 112) rotate(-4 60 43)"><rect width="120" height="86" rx="2" fill="#fff" stroke="#c9c4c8"/><rect x="14" y="12" width="70" height="7" fill="#1f2a38"/><rect x="14" y="27" width="92" height="3" fill="#c8ccd3"/><rect x="14" y="35" width="80" height="3" fill="#c8ccd3"/><rect x="14" y="43" width="88" height="3" fill="#c8ccd3"/><circle cx="98" cy="68" r="10" fill="#f4dfd6"/><path class="sig" pathLength="1" d="M14 70 c6 -12 12 -14 14 -4 s6 8 12 -4 s10 -8 12 2 s8 4 18 -8" fill="none" stroke="#4f5a92" stroke-width="2.2" stroke-linecap="round"/></g>
+      </svg>
+    </div>
+    <div class="caps">
+      <div class="cap first">
+        <p class="say">On the day you sign three marriage certificates. Emma brings the paperwork and the pen.</p>
+        <p class="who">Signing takes about five minutes, with two witnesses over 18.</p>
+      </div>
+      <div class="cap">
+        <p class="n">The first</p>
+        <p class="say">"The certificate retained by me for my records"</p>
+        <p class="who">Emma</p>
+      </div>
+      <div class="cap">
+        <p class="n">The second</p>
+        <p class="say">"The certificate that will be forwarded to the Registry of Births, Deaths and Marriages for the registration of your marriage"</p>
+        <p class="who">Emma lodges your marriage online, and orders your official certificate to your home at no extra charge.</p>
+      </div>
+      <div class="cap">
+        <p class="n">The third</p>
+        <p class="say">"The commemorative certificate that will be given to you as a record of your marriage"</p>
+        <p class="who">Yours on the day.</p>
+      </div>
+      <div class="cap">
+        <p class="say">Once, a couple's signing table never showed up. So Emma got creative, and they signed on the bride's brother's back.</p>
+        <p class="who">It caused some laughter and a happy, memorable moment. If you choose Emma, her wooden signing table and two chairs come with her, at no extra charge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="plain cer" aria-labelledby="cer-h">
+  <div class="wrap">
+    <h2 id="cer-h">Ceremonies</h2>
+    <div class="pair">
+      <div class="one">
+        <h3>Custom ceremony</h3>
+        <p class="len">About 15 to 30 minutes</p>
+        <ul>
+          <li>A ceremony guide and a planning form</li>
+          <li>Advice on the structure of your ceremony, and on your vows</li>
+          <li>Thorough research</li>
+          <li>Creative additions</li>
+          <li>A wireless PA and microphone, for up to 150 guests</li>
+        </ul>
+      </div>
+      <div class="one">
+        <h3>Short and sweet</h3>
+        <p class="len">About 5 to 10 minutes</p>
+        <p>Signing still takes about five minutes, so Emma suggests the ceremony runs at least a little longer than that.</p>
+      </div>
+    </div>
+    <div class="free">
+      <h3>With every wedding, at no extra charge</h3>
+      <ul>
+        <li>All the legal paperwork, lodged for you</li>
+        <li>Your official marriage certificate, ordered and posted to your home</li>
+        <li>A portable, battery powered PA system with a wireless microphone</li>
+        <li>A wooden signing table and two matching chairs</li>
+      </ul>
+      <p class="fine">Emma's brochure has every inclusion and her prices. Ask her for a copy.</p>
+    </div>
+  </div>
+</section>
+
+<section class="plain day" aria-labelledby="day-h">
+  <div class="wrap">
+    <h2 id="day-h">Before the day</h2>
+    <div class="grid">
+      <div>
+        <h3>No pressure to pay</h3>
+        <p>You meet Emma first, with no obligation. The deposit is only due once you decide she's your celebrant, and the balance 14 days before the wedding.</p>
+      </div>
+      <div>
+        <h3>Four songs</h3>
+        <p>Most couples pick four: one for walking in, one for the signing plus a backup in case it runs long, and one to finish. A Spotify playlist and a friend on play is usually easiest. Live music works too.</p>
+      </div>
+      <div>
+        <h3>A plan for the weather</h3>
+        <p>Heat, rain, cold and wind all count. For an outdoor ceremony, Emma recommends having a wet weather option ready.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="plain words" aria-labelledby="words-h">
+  <div class="wrap">
+    <h2 id="words-h">From her couples</h2>
+    <p class="lead">"Emma took the time to make sure the ceremony felt special and intimate, and all our family and friends commented on how incredible and warm she was."</p>
+    <p class="who">Emily J., married at Seacliff House, Easy Weddings</p>
+    <div class="more">
+      <div><p>"She is calm and collected, always making sure we were at the centre of attention while gently guiding us through the process."</p><p class="who">Luuc V., November 2025</p></div>
+      <div><p>"It was sweet with just enough humour and depth."</p><p class="who">Tanith N., September 2025</p></div>
+      <div><p>"She is warm, thoughtful, organised and caring. She made us feel completely comfortable and made our ceremony feel so personal and meaningful."</p><p class="who">Isabella K., August 2026</p></div>
+    </div>
+    <p class="rev">21 reviews, all five stars. <a href="https://www.easyweddings.com.au/MarriageCelebrant/Sydney/EmmaChapmanCelebrant/" rel="noopener">Read them on Easy Weddings</a></p>
+  </div>
+</section>
+
+<div class="photos" aria-label="Emma's ceremonies">
+  <figure class="wide"><img src="img/harbour.jpg" width="1400" height="933" alt="Emma leading a ceremony on a terrace, guests seated, the Harbour Bridge behind" loading="lazy"></figure>
+  <figure><img src="img/kiss.jpg" width="682" height="1000" alt="Black and white photo of a couple kissing under a white rose arch" loading="lazy"></figure>
+  <figure><img src="img/vows.jpg" width="1400" height="933" alt="Emma between the bride and groom on a lawn, flowers at their feet" loading="lazy"></figure>
+</div>
+
+<section class="close" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap">
+    <h2 id="enq-h">Check your date</h2>
+    <p class="lead">Tell Emma a little about your wedding. Your first meeting with her comes with no obligation.</p>
+    <form id="enq-form" novalidate>
+      <div class="two">
+        <label>Your names<input name="names" autocomplete="name"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <div class="two">
+        <label>Wedding date<input name="date" type="date"></label>
+        <label>Venue or suburb<input name="venue"></label>
+      </div>
+      <div class="two">
+        <label>Ceremony
+          <select name="kind"><option>Custom ceremony</option><option>Short and sweet</option><option>Not sure yet</option></select>
+        </label>
+        <label>Guests, roughly<input name="guests" inputmode="numeric"></label>
+      </div>
+      <label>Tell Emma about the two of you<textarea name="msg"></textarea></label>
+      <button class="btn" type="button" id="send">Send to Emma</button>
+      <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Emma. To reach her today, use the enquiry form on <a href="https://www.easyweddings.com.au/MarriageCelebrant/Sydney/EmmaChapmanCelebrant/" rel="noopener">her Easy Weddings page</a>.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>A preview made by Lampbound Studio for Emma Chapman Celebrant.</strong> Not affiliated, not live.</p>
+    <p>Words and photos are from Emma's Easy Weddings listing.</p>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn" href="#enquire">Check your date</a></div>
+
+<script>
+(function(){
+  var send=document.getElementById('send'), done=document.getElementById('done');
+  send.addEventListener('click',function(){done.classList.add('show');done.focus();});
+
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  var tb=document.getElementById('table'), certs=[].slice.call(tb.querySelectorAll('.cert')).reverse(),
+      furn=tb.querySelector('.furniture'), pen=tb.querySelector('.pen'),
+      caps=[].slice.call(tb.querySelectorAll('.cap'));
+  // pile spots on the table's left, signing spot in the middle
+  var SIGN=[140,106], PILE=[[56,72],[64,80],[72,88]];
+  function placeCert(el,x,y,r,sig){
+    el.setAttribute('transform','translate('+x.toFixed(1)+' '+y.toFixed(1)+') rotate('+r.toFixed(2)+' 60 43)');
+    var s=el.querySelector('.sig'); s.style.strokeDasharray='1'; s.style.strokeDashoffset=(1-sig).toFixed(3);
+  }
+  function endState(){ certs.forEach(function(c,i){placeCert(c,PILE[i][0]+i*70,PILE[i][1]+40,[-4,2,-1][i],1);}); pen.style.opacity=0; }
+  if(mq.matches){ endState(); return; }
+  mq.addEventListener && mq.addEventListener('change',function(){location.reload();});
+  document.documentElement.classList.add('js');
+
+  var hero=document.querySelector('.hero'), photo=hero.querySelector('.h-photo'),
+      text=hero.querySelector('.h-text'), sprig=hero.querySelector('.h-sprig');
+  var tooShort=window.matchMedia('(max-height:520px)');
+  function setOn(){ tb.classList.toggle('on', !tooShort.matches); }
+  setOn();
+
+  function cl(v){return v<0?0:v>1?1:v}
+  function ease(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2}
+  function seg(p,a,b){return ease(cl((p-a)/(b-a)))}
+  function mix(a,b,t){return a+(b-a)*t}
+  function prog(el){var r=el.getBoundingClientRect(),run=el.offsetHeight-window.innerHeight;return run>0?cl(-r.top/run):0}
+
+  var ticking=false;
+  function draw(){
+    ticking=false;
+    var pinned=getComputedStyle(hero.firstElementChild).position==='sticky';
+    var hp=pinned?prog(hero):0;
+    photo.style.transform='translate3d(0,'+(hp*-4)+'vh,0) scale('+(1.05-hp*.05)+')';
+    text.style.transform='translate3d(0,'+(hp*-14)+'vh,0)';
+    sprig.style.transform='translate3d(0,'+(hp*-34)+'vh,0) rotate('+(hp*14)+'deg)';
+
+    if(!tb.classList.contains('on')){ endState(); caps.forEach(function(el){el.style.opacity='';}); furn.style.opacity=''; furn.removeAttribute('transform'); return; }
+    var p=prog(tb);
+    var cap=0;
+    certs.forEach(function(c,i){
+      var a=.1+i*.2, inT=seg(p,a,a+.06), sg=seg(p,a+.06,a+.14), out=seg(p,a+.15,a+.2);
+      var x=mix(420,SIGN[0],inT), y=SIGN[1], r=mix(8,0,inT);
+      x=mix(x,PILE[i][0],out); y=mix(y,PILE[i][1],out); r=mix(r,[-4,2,-1][i],out);
+      placeCert(c,x,y,r,sg);
+      if(p>=a) cap=i+1;
+    });
+    // pen follows the signing
+    var active=-1; certs.forEach(function(c,i){var a=.1+i*.2; if(p>a+.05&&p<a+.15) active=i;});
+    pen.style.opacity=active>=0?1:0;
+    if(active>=0){ var a=.1+active*.2, t=cl((p-a-.06)/.08); pen.setAttribute('transform','translate('+(-150+t*80).toFixed(1)+' '+(40-Math.sin(t*12)*5).toFixed(1)+')'); }
+    // then the table goes missing
+    var gone=seg(p,.74,.86);
+    furn.style.opacity=(1-gone).toFixed(3);
+    furn.setAttribute('transform','translate(0 '+(gone*60).toFixed(1)+')');
+    if(p>=.74) cap=4;
+    caps.forEach(function(el,i){el.style.opacity=i===cap?1:0;});
+  }
+  function req(){ if(!ticking){ticking=true;requestAnimationFrame(draw);} }
+  window.addEventListener('scroll',req,{passive:true});
+  window.addEventListener('resize',function(){setOn();req();});
+  window.addEventListener('pageshow',req);
+  draw();
+})();
+</script>
+</body>
+</html>
