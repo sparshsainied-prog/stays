@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>All About Love Celebrants, Jacklyn Cimino: a website preview</title>
+<meta name="description" content="A website idea for Jacklyn Cimino of All About Love Celebrants, Melbourne civil celebrant. A preview by Lampbound Studio, not her official site.">
+<meta property="og:title" content="All About Love Celebrants, Jacklyn Cimino">
+<meta property="og:description" content="A website idea made by Lampbound Studio for All About Love Celebrants. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/allaboutlove/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/allaboutlove/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f5f4f6'/%3E%3Cpath d='M16 27C8 21 4 16 5 11c1-5 7-6 10-2l1 1 1-1c3-4 9-3 10 2 1 5-3 10-11 16' fill='none' stroke='%23dd0000' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#241b1d; --paper:#f5f4f6; --red:#dd0000; --red-btn:#c00a10; --red-deep:#990a0e; --lake:#5d6f80; --line:#e2dde1; --white:#fff;
+  --display:"Gloock", Georgia, serif; --text:"Figtree", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid #111;outline-offset:0;box-shadow:0 0 0 6px #fff}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--white);padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.strip{background:var(--ink);color:#d9d1d3;font-size:13.5px;line-height:1.4;padding:9px 16px;text-align:center}
+.strip strong{color:var(--white)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:999px;background:var(--red-btn);color:var(--white);text-decoration:none;border:0;font:700 16px/1 var(--text);cursor:pointer}
+.btn:hover{background:var(--red-deep)}
+.btn.alt{background:var(--white);color:var(--ink);border:1.5px solid var(--ink)}
+
+/* hero: photo slow, name faster, red heart line fastest */
+.hero{position:relative;height:150svh;background:var(--ink)}
+.hero-stage{position:sticky;top:0;height:100svh;overflow:hidden}
+.h-photo{position:absolute;inset:0;transform:translate3d(0,calc(var(--p,0) * -5%),0) scale(calc(1.1 - var(--p,0) * .1))}
+.h-photo img{width:100%;height:100%;object-fit:cover;object-position:6% 30%}
+.h-shade{position:absolute;left:0;right:0;bottom:0;height:58%;background:linear-gradient(to top,rgba(30,20,22,.92),rgba(30,20,22,.5) 60%,rgba(30,20,22,0))}
+.h-copy{position:absolute;left:0;right:0;bottom:0;padding:0 20px 116px;color:var(--white);transform:translate3d(0,calc(var(--p,0) * -14vh),0)}
+.h-copy .tag{font-size:16px;margin:0 0 10px;color:#f0e4e6;font-weight:500}
+.hero h1{font-size:clamp(50px,13.5vw,128px)}
+.h-copy .areas{font-size:18px;margin:14px 0 0;max-width:30ch}
+.h-heart{position:absolute;right:-8vw;top:30svh;width:min(50vw,420px);transform:translate3d(0,calc(var(--p,0) * -48vh),0) rotate(calc(-8deg + var(--p,0) * 14deg))}
+.h-heart svg{width:100%;height:auto;display:block}
+@media (min-width:860px){.h-copy{max-width:1100px;margin:0 auto}.h-photo img{object-position:50% 28%}.h-heart{right:max(20px,calc(50% - 560px));top:10svh}}
+
+/* about */
+.about{padding:84px 0 64px}
+.about-grid{display:grid;gap:30px}
+.about h2{font-size:clamp(38px,8.4vw,70px);max-width:15ch}
+.about .lead{font-size:22px;line-height:1.4;max-width:34ch;margin-top:24px}
+.about .logo{width:200px;margin-top:8px}
+@media (min-width:860px){.about-grid{grid-template-columns:1.4fr .6fr;align-items:center}.about .logo{width:240px;justify-self:end}}
+
+/* the 1, 2, 3, 4 */
+.four{position:relative;height:540svh;background:var(--white);border-top:1px solid var(--line)}
+.four-stage{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;grid-template-rows:auto auto auto;align-content:center;padding:22px 20px 86px;gap:22px;max-width:1100px;margin:0 auto}
+.four-head h2{font-size:clamp(34px,8vw,64px);max-width:16ch}
+.coins{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:start;gap:clamp(8px,2.4vw,28px);max-width:760px;width:100%;padding:12px 0}
+.coins::before{content:"";position:absolute;left:4%;right:4%;top:50%;height:3px;background:var(--red);transform:translate3d(0,-50%,0)}
+.slot{position:relative;z-index:1;width:100%;aspect-ratio:1/1;border-radius:50%;border:2px dashed #cbbfc4;background:var(--white)}
+.slot img{position:absolute;inset:-2px;width:calc(100% + 4px);height:calc(100% + 4px);border-radius:50%;object-fit:cover;box-shadow:0 6px 14px rgba(36,27,29,.22);transform:translate3d(130vw,0,0) rotate(400deg);transition:transform .8s cubic-bezier(.25,.8,.25,1)}
+.slot b{position:absolute;left:50%;top:-4px;transform:translate3d(-50%,-100%,0);font:400 18px/1 var(--display);color:var(--lake)}
+.four.s1 .c1 img,.four.s2 .c1 img,.four.s2 .c2 img,.four.s3 .c1 img,.four.s3 .c2 img,.four.s3 .c3 img,.four.s4 img,.four.s5 img{transform:none}
+.heart{position:absolute;left:50%;top:50%;width:min(36%,250px);transform:translate3d(-50%,-52%,0) scale(.6);opacity:0;transition:transform .7s ease,opacity .5s ease;pointer-events:none;z-index:0}
+.heart svg{width:100%;height:auto;display:block}
+.four.s5 .heart{opacity:1;transform:translate3d(-50%,-52%,0) scale(1)}
+.words{display:grid;align-self:start;list-style:none;margin:0;padding:0}
+.word{grid-area:1/1;display:grid;grid-template-columns:auto 1fr;column-gap:18px;align-items:start;opacity:0;transform:translate3d(0,12px,0);transition:opacity .4s ease,transform .4s ease}
+.word .n{font:400 clamp(72px,18vw,140px)/.8 var(--display);color:var(--red);grid-row:1 / span 2}
+.word h3{font-size:clamp(26px,6.4vw,42px);padding-top:4px}
+.word p{margin:8px 0 0;max-width:42ch;font-size:16.5px;line-height:1.5}
+.word.end{grid-template-columns:1fr}
+.word.end h3{font-size:clamp(34px,8.4vw,60px);color:var(--red-btn)}
+.four.s0 .w1,.four.s1 .w1,.four.s2 .w2,.four.s3 .w3,.four.s4 .w4,.four.s5 .w5{opacity:1;transform:none}
+@media (min-width:860px){
+  .four-stage{grid-template-columns:1fr 1fr;grid-template-rows:auto auto auto;column-gap:56px;align-content:center;padding:40px 24px 60px}
+  .four-head{grid-column:1 / -1}
+  .coins{grid-column:1 / -1;max-width:1000px}
+  .heart{width:300px}
+  .words{grid-column:1 / -1;max-width:760px}
+  .word p{font-size:18px}
+}
+
+/* ceremonies */
+.cer{padding:88px 0}
+.cer h2{font-size:clamp(38px,8.4vw,66px);margin-bottom:30px;max-width:14ch}
+.cer-grid{display:grid;gap:40px}
+.cer h3{font-size:clamp(26px,5.6vw,36px);margin-bottom:10px}
+.cer ul{margin:12px 0 0;padding-left:1.1em}
+.cer li{margin-bottom:4px}
+.cer .ask{margin-top:26px;color:var(--lake);font-size:15px}
+.cer .lake{border-top:3px solid var(--red);padding-top:18px}
+.cer .first{border-top:3px solid var(--ink);padding-top:18px}
+@media (min-width:860px){.cer-grid{grid-template-columns:1fr 1fr;column-gap:60px}}
+
+/* couples */
+.said{background:var(--ink);color:var(--paper);padding:84px 0}
+.said h2{font-size:clamp(38px,8.4vw,64px);margin-bottom:8px}
+.said .src{color:#bfb3b6;font-size:15px;margin-bottom:34px}
+.quotes{display:grid;gap:28px}
+.quotes blockquote{margin:0;padding-top:16px;border-top:1px solid #4a3d40}
+.quotes p{font-size:clamp(20px,4.6vw,24px);line-height:1.35;margin:0 0 8px;max-width:32ch}
+.quotes cite{font-style:normal;font-size:14.5px;color:#cbbfc2}
+@media (min-width:860px){.quotes{grid-template-columns:1fr 1fr;column-gap:60px}}
+
+/* photos */
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px;background:var(--paper)}
+.photos img{width:100%;height:100%;object-fit:cover}
+.photos .tall{grid-row:span 2}
+@media (min-width:860px){.photos{grid-template-columns:1fr 1.3fr 1fr 1fr;grid-template-rows:280px 280px}.photos .wide{grid-column:2 / span 2}}
+
+/* enquire */
+.enq{background:var(--white);padding:88px 0 120px}
+.enq-grid{display:grid;gap:34px}
+.enq h2{font-size:clamp(38px,8.4vw,66px);margin-bottom:14px}
+form{display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:700;font-size:15px}
+input,textarea,select{font:400 17px/1.4 var(--text);padding:12px 14px;border:1.5px solid #77696d;border-radius:6px;background:#fff;color:var(--ink);min-height:48px;width:100%}
+textarea{min-height:120px;resize:vertical}
+.two{display:grid;gap:16px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.note{font-size:14px;color:var(--lake);margin:0}
+.done{display:none;padding:16px;border:1.5px solid var(--red-btn);border-radius:6px;background:#fdeeee}
+.done.show{display:block}
+@media (min-width:860px){.enq-grid{grid-template-columns:.8fr 1.2fr}}
+
+footer{background:var(--ink);color:#c9bfc1;padding:40px 0 110px;font-size:14.5px}
+footer strong{color:var(--white)}
+
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px}
+.bar .btn{flex:1;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+@media (min-width:860px){.bar{left:auto;right:24px;bottom:24px}.bar .btn{flex:none}}
+
+@media (prefers-reduced-motion:reduce),(max-height:520px){
+  .hero{height:auto}.hero-stage{position:relative;height:100svh}
+  .h-photo,.h-copy{transform:none!important}.h-heart{transform:rotate(-4deg)!important}
+  .four{height:auto}.four-stage{position:relative;height:auto;padding-bottom:60px}
+  .slot img,.heart,.word{transition:none}
+  .word{grid-area:auto;opacity:1!important;transform:none!important;margin-bottom:22px}
+}
+@media (max-height:520px){.hero-stage{min-height:100svh;height:auto!important}.h-heart{display:none}.hero-stage{display:flex;flex-direction:column;justify-content:flex-end}.h-copy{position:relative;padding-top:40px;padding-bottom:96px}.hero h1{font-size:clamp(46px,10vw,92px)}}
+</style>
+<noscript><style>
+  .hero{height:auto}.hero-stage{position:relative;height:100svh}
+  .h-photo,.h-copy{transform:none!important}.h-heart{transform:rotate(-4deg)!important}
+  .four{height:auto}.four-stage{position:relative;height:auto;padding-bottom:60px}
+  .slot img{transform:none}.heart{opacity:1;transform:translate3d(-50%,-52%,0)}
+  .word{grid-area:auto;opacity:1;transform:none;margin-bottom:22px}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip">A website idea made by <strong>Lampbound Studio</strong> for All About Love Celebrants. Not her official site.</div>
+
+<main id="main">
+<section class="hero" data-pin aria-label="Introduction">
+  <div class="hero-stage">
+    <div class="h-photo"><img src="img/laugh.jpg" width="1400" height="1400" alt="Jackie laughing with a just-married couple as they hold up their marriage certificate" fetchpriority="high"></div>
+    <div class="h-shade"></div>
+    <div class="h-heart" aria-hidden="true">
+      <svg viewBox="0 0 100 92"><path d="M50 86 C22 66 5 48 8 28 C11 9 34 4 46 21 L50 27 L54 21 C66 4 91 9 92 29 C93 47 77 64 52 84 C44 90 36 92 28 90" fill="none" stroke="#dd0000" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="h-copy">
+      <p class="tag">All About Love Celebrants</p>
+      <h1>Jacklyn Cimino</h1>
+      <p class="areas">Civil celebrant for Melbourne and the surrounding suburbs. Fun, relaxed and professional.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" aria-labelledby="about-h">
+  <div class="wrap about-grid">
+    <div>
+      <h2 id="about-h">Let's relax, have fun and get you married</h2>
+      <p class="lead">"There is no need for structured scripts that allow no room for your individuality."</p>
+      <p>Jacklyn, or Jackie, meets you over a coffee and helps you plan everything, from your vows and readings to the paperwork. She marries couples, holds commitment ceremonies and renews vows.</p>
+    </div>
+    <img class="logo" src="img/logo.png" width="256" height="165" alt="All About Love Celebrants logo: a red heart drawn in one line, with Jacklyn Cimino's name" loading="lazy">
+  </div>
+</section>
+
+<section class="four s0" data-pin aria-labelledby="four-h">
+  <div class="four-stage">
+    <div class="four-head"><h2 id="four-h">It's as simple as 1, 2, 3, 4</h2></div>
+    <div class="coins" aria-hidden="true">
+      <div class="heart"><svg viewBox="0 0 100 92"><path d="M50 86 C22 66 5 48 8 28 C11 9 34 4 46 21 L50 27 L54 21 C66 4 91 9 92 29 C93 47 77 64 52 84 C44 90 36 92 28 90" fill="none" stroke="#dd0000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="slot c1"><b>1</b><img src="img/step1.jpg" width="300" height="300" alt="" loading="lazy"></div>
+      <div class="slot c2"><b>2</b><img src="img/step2.jpg" width="300" height="300" alt="" loading="lazy"></div>
+      <div class="slot c3"><b>3</b><img src="img/step3.jpg" width="300" height="300" alt="" loading="lazy"></div>
+      <div class="slot c4"><b>4</b><img src="img/step4.jpg" width="300" height="300" alt="" loading="lazy"></div>
+    </div>
+    <ol class="words" role="list">
+      <li class="word w1"><span class="n" aria-hidden="true">1</span><h3>Get in touch</h3><p>Send an enquiry or call Jackie on 0416 048 001. You'll have a chat and make a time to meet face to face.</p></li>
+      <li class="word w2"><span class="n" aria-hidden="true">2</span><h3>We'll meet</h3><p>Over a coffee, at your place or hers on the Rowville Lakes. Ask as many questions as you like, and take home her booklet of ideas and suggestions.</p></li>
+      <li class="word w3"><span class="n" aria-hidden="true">3</span><h3>Book her in</h3><p>Jackie organises all your paperwork and designs a ceremony with everything you asked for. Call her anytime.</p></li>
+      <li class="word w4"><span class="n" aria-hidden="true">4</span><h3>You're getting married</h3><p>She brings a PA system that goes anywhere and, if you need one, a signing table. While you're on your honeymoon, she finishes the paperwork and sends it off to Births, Deaths and Marriages.</p></li>
+      <li class="word w5 end"><h3>It's really that simple.</h3></li>
+    </ol>
+  </div>
+</section>
+
+<section class="cer" aria-labelledby="cer-h">
+  <div class="wrap">
+    <h2 id="cer-h">Big day or just the two of you</h2>
+    <div class="cer-grid">
+      <div class="first">
+        <h3>Weddings and commitment ceremonies</h3>
+        <p>A ceremony built around the two of you, with your own vows if you'd like them. Jackie helps you plan everything, from readings to the paperwork, and keeps the day fun and relaxed. Renewals of vows too.</p>
+      </div>
+      <div class="lake">
+        <h3>Private, small weddings on the Rowville Lakes</h3>
+        <p>A simple wedding without the bells and whistles, at your place or hers by the lake.</p>
+        <ul>
+          <li>All the legal paperwork</li>
+          <li>Your ceremony</li>
+          <li>Witnesses, if you don't have your own</li>
+          <li>A backdrop for your photos</li>
+          <li>A glass of bubbly for you and your guests</li>
+        </ul>
+      </div>
+    </div>
+    <p class="ask">Ask Jackie for current prices.</p>
+  </div>
+</section>
+
+<section class="said" aria-labelledby="said-h">
+  <div class="wrap">
+    <h2 id="said-h">Couples this year</h2>
+    <p class="src">57 reviews on Easy Weddings, averaging 5.0 out of 5.</p>
+    <div class="quotes">
+      <blockquote><p>"From the first phone call to the signing of the documents, she made the whole process stress free, relaxing and full of joy, laughter and love."</p><cite>Mariah, February 2026</cite></blockquote>
+      <blockquote><p>"She made everything about our wedding so fun and easy."</p><cite>Kat, March 2026</cite></blockquote>
+      <blockquote><p>"She brought such a warm, calming energy to our day."</p><cite>Shing, May 2026</cite></blockquote>
+      <blockquote><p>"She was professional, warm, and made the entire process feel smooth and stress-free."</p><cite>Nikki, February 2026</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<div class="photos">
+  <img class="tall" src="img/park.jpg" width="800" height="1200" alt="An outdoor ceremony in a park, the city skyline behind the guests" loading="lazy">
+  <img class="wide" src="img/joe-hayley.jpg" width="960" height="638" alt="Jackie laughing as she marries a couple among the gum trees" loading="lazy">
+  <img src="img/black.jpg" width="900" height="900" alt="A bride in black and a groom in a red vest holding hands at their ceremony" loading="lazy">
+  <img src="img/garden.jpg" width="800" height="1120" alt="Jackie with a bride and groom under a garden pergola" loading="lazy">
+  <img src="img/party.jpg" width="900" height="970" alt="A bride with her bridesmaids and groom on sandstone steps, holding white bouquets" loading="lazy">
+</div>
+
+<section class="enq" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap enq-grid">
+    <div>
+      <h2 id="enq-h">Step one: say hello</h2>
+      <p>Send Jackie your date and a little about your plans, and she'll get back to you to make a time to meet. Or call her on <a href="tel:0416048001">0416 048 001</a>.</p>
+      <p class="note">This is a preview, so the form does not send anything.</p>
+    </div>
+    <form id="enq-form" novalidate>
+      <div class="two">
+        <label>Your names<input name="names" autocomplete="name"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <div class="two">
+        <label>Date, if you have one<input name="date" type="date"></label>
+        <label>Where<input name="venue"></label>
+      </div>
+      <label>What are you planning?
+        <select name="kind"><option>A wedding</option><option>A private, small wedding</option><option>A commitment ceremony</option><option>A renewal of vows</option></select>
+      </label>
+      <label>Anything else<textarea name="msg"></textarea></label>
+      <button class="btn" type="button" id="send">Send to Jackie</button>
+      <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Jackie. To reach her today, email <a href="mailto:enquiries@allaboutlovecelebrants.com.au">enquiries@allaboutlovecelebrants.com.au</a>.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>A preview made by Lampbound Studio for All About Love Celebrants.</strong> Not affiliated, not live.</p>
+    <p>Words and photos are from Jackie's own website and her Easy Weddings listing.</p>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn alt" href="tel:0416048001">Call Jackie</a><a class="btn" href="#enquire">Say hello</a></div>
+
+<script>
+(function(){
+  var pins=[].slice.call(document.querySelectorAll('[data-pin]'));
+  var four=document.querySelector('.four');
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce), (max-height:520px)');
+  var on=false,ticking=false;
+  function setStep(n){for(var i=0;i<=5;i++)four.classList.toggle('s'+i,i===n);}
+  function finish(){setStep(5);pins.forEach(function(el){el.style.setProperty('--p','1')});}
+  function update(){
+    ticking=false;
+    pins.forEach(function(el){
+      var r=el.getBoundingClientRect(),total=el.offsetHeight-window.innerHeight;
+      var p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;
+      el.style.setProperty('--p',p.toFixed(4));
+      if(el===four){setStep(p<.04?0:Math.min(5,1+Math.floor((p-.04)/.17)));}
+    });
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
+  function start(){if(on)return;on=true;addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);update();}
+  function stop(){on=false;removeEventListener('scroll',onScroll);removeEventListener('resize',onScroll);finish();}
+  if(mq.matches)finish();else start();
+  if(mq.addEventListener)mq.addEventListener('change',function(){mq.matches?stop():start()});
+  document.getElementById('send').addEventListener('click',function(){var d=document.getElementById('done');d.classList.add('show');d.focus();});
+})();
+</script>
+</body>
+</html>

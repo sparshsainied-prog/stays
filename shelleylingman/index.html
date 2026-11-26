@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Shelley Lingman, marriage celebrant: a website preview</title>
+<meta name="description" content="A website idea for Shelley Lingman, civil marriage celebrant for Brisbane, the Gold Coast, South East Queensland and Northern NSW. A preview by Lampbound Studio, not her official site.">
+<meta property="og:title" content="Shelley Lingman, marriage celebrant">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Shelley Lingman Celebrant. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/shelleylingman/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/shelleylingman/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a5fc4'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='14' fill='%23f3f5f7' text-anchor='middle'%3ESL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#14213d; --board:#f3f5f7; --cobalt:#0a5fc4; --cobalt-deep:#084a99; --blush:#e9d3cf; --slate:#5b6577; --line:#cfd5de; --white:#fff;
+  --display:"Big Shoulders Display", "Arial Narrow", sans-serif; --text:"Karla", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--board);color:var(--navy);font:17px/1.6 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid #111;outline-offset:0;box-shadow:0 0 0 6px #fff}
+.skip{position:absolute;left:-999px;top:0;background:var(--navy);color:var(--white);padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.strip{background:var(--navy);color:#c9d1de;font-size:13.5px;line-height:1.4;padding:9px 16px;text-align:center}
+.strip strong{color:var(--white)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:.98;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:4px;background:var(--cobalt);color:var(--white);text-decoration:none;border:0;font:700 16px/1 var(--text);cursor:pointer}
+.btn:hover{background:var(--cobalt-deep)}
+.btn.alt{background:var(--white);color:var(--navy);border:1.5px solid var(--navy)}
+
+/* hero: photo plane slow, name faster, portrait print fastest */
+.hero{position:relative;height:150svh;background:var(--navy)}
+.hero-stage{position:sticky;top:0;height:100svh;overflow:hidden}
+.h-photo{position:absolute;inset:0;transform:translate3d(0,calc(var(--p,0) * -4%),0) scale(calc(1.08 - var(--p,0) * .08))}
+.h-photo img{width:100%;height:100%;object-fit:cover;object-position:54% 40%}
+.h-shade{position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(to top,rgba(14,22,40,.92),rgba(14,22,40,.55) 55%,rgba(14,22,40,0))}
+.h-copy{position:absolute;left:0;right:0;bottom:0;padding:0 20px 118px;color:var(--white);transform:translate3d(0,calc(var(--p,0) * -16vh),0)}
+.h-copy .tag{font-size:16px;margin:0 0 6px;color:#d6deea;font-weight:500}
+.hero h1{font-size:clamp(64px,19vw,168px);font-weight:900;text-transform:uppercase}
+.h-copy .areas{font-size:18px;margin:14px 0 0;max-width:32ch}
+.h-print{position:absolute;right:16px;top:22px;width:min(34vw,190px);background:var(--white);padding:7px 7px 30px;box-shadow:0 10px 26px rgba(0,0,0,.35);transform:translate3d(0,calc(var(--p,0) * -42vh),0) rotate(calc(5deg - var(--p,0) * 9deg))}
+.h-print span{position:absolute;left:0;right:0;bottom:7px;text-align:center;font:600 15px/1 var(--display);color:var(--navy);text-transform:uppercase}
+@media (min-width:860px){.h-copy{max-width:1100px;margin:0 auto;padding-bottom:110px}.h-print{right:max(24px,calc(50% - 530px));top:60px}}
+
+/* about */
+.about{padding:84px 0 64px}
+.about-grid{display:grid;gap:32px}
+.about h2{font-size:clamp(46px,10vw,84px);text-transform:uppercase;max-width:11ch}
+.about .lead{font-size:22px;line-height:1.4;max-width:32ch;margin-top:22px}
+.about figure{margin:0;max-width:340px}
+.about figcaption{font-size:14px;color:var(--slate);margin-top:8px}
+@media (min-width:860px){.about-grid{grid-template-columns:1.3fr .7fr;align-items:center}}
+
+/* the game plan */
+.plan{position:relative;height:540svh;background:var(--white);border-top:1px solid var(--line)}
+.plan-stage{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;grid-template-rows:auto auto 1fr;justify-items:center;padding:18px 16px 86px;gap:14px}
+.plan-head{width:100%;max-width:520px}
+.plan-head h2{font-size:clamp(40px,10vw,72px);text-transform:uppercase}
+.plan-head p{margin:6px 0 0;color:var(--slate);font-size:15px;line-height:1.45}
+.board-box{position:relative;width:min(92vw,46svh,560px);aspect-ratio:1/1;perspective:1400px}
+.board-box > *{position:absolute;inset:0}
+.board-photo{width:100%;height:100%;object-fit:cover;border-radius:4px}
+.board{background:var(--board);border:10px solid #d9dde3;border-radius:6px;box-shadow:0 2px 0 #b8bec8,0 14px 30px rgba(20,33,61,.18);transform-origin:50% 0;transition:transform .8s cubic-bezier(.3,.7,.2,1),opacity .8s ease;backface-visibility:hidden}
+.board::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(to right,transparent 0 23px,rgba(20,33,61,.05) 23px 24px),repeating-linear-gradient(to bottom,transparent 0 23px,rgba(20,33,61,.05) 23px 24px)}
+.board svg,.rings{width:100%;height:100%;display:block;position:relative}
+.mk{opacity:0;transform:translate3d(0,4px,0);transition:opacity .45s ease,transform .45s ease}
+.mk text{font-family:var(--display);font-weight:800}
+.rings{pointer-events:none}
+.rings .mk{transition-delay:.45s}
+.plan.s1 .m1,.plan.s2 .m2,.plan.s3 .m3,.plan.s4 .m4{opacity:1;transform:none}
+.plan.s2 .m1,.plan.s3 .m1,.plan.s3 .m2{opacity:.35}
+.plan.s3 .m1{opacity:.25}
+.plan.s4 .board{transform:rotateX(-104deg);opacity:0}
+.steps{display:grid;width:100%;max-width:520px;align-self:start}
+.step{grid-area:1/1;opacity:0;transform:translate3d(0,10px,0);transition:opacity .4s ease,transform .4s ease}
+.step h3{font-size:clamp(28px,6.6vw,40px);text-transform:uppercase;color:var(--cobalt)}
+.step p{margin:6px 0 0;font-size:16.5px;line-height:1.45;max-width:40ch}
+.step .who{display:block;font-size:14px;color:var(--slate);margin-top:6px}
+.plan.s1 .t1,.plan.s2 .t2,.plan.s3 .t3,.plan.s4 .t4{opacity:1;transform:none}
+.plan.s0 .t1{opacity:1;transform:none}
+@media (min-width:860px){
+  .plan-stage{grid-template-columns:minmax(0,560px) minmax(0,420px);grid-template-rows:auto auto;justify-content:center;align-content:center;column-gap:56px;row-gap:0;padding:40px 24px 60px}
+  .plan-head{grid-column:2;grid-row:1;align-self:end;padding-bottom:26px}
+  .board-box{grid-column:1;grid-row:1 / span 2;width:min(560px,74svh)}
+  .steps{grid-column:2;grid-row:2;align-self:start;min-height:200px}
+  .step p{font-size:18px}
+}
+
+/* included */
+.inc{padding:88px 0}
+.inc h2{font-size:clamp(46px,10vw,80px);text-transform:uppercase;margin-bottom:28px}
+.inc-list{margin:0;border-top:3px solid var(--navy);max-width:900px}
+.inc-row{display:grid;gap:2px;padding:18px 0;border-bottom:1px solid var(--line)}
+.inc-row dt{font-family:var(--display);font-weight:800;font-size:clamp(24px,5.4vw,32px);line-height:1.05;text-transform:uppercase}
+.inc-row dd{margin:0;color:#2d3a55;max-width:46ch}
+.inc .travel{margin-top:30px;font-size:19px;max-width:44ch}
+.inc .ask{color:var(--slate);font-size:15px}
+@media (min-width:860px){.inc-row{grid-template-columns:360px 1fr;column-gap:40px;align-items:baseline}}
+
+/* couples */
+.said{background:var(--blush);padding:84px 0}
+.said h2{font-size:clamp(40px,8.4vw,64px);text-transform:uppercase;margin-bottom:30px}
+.quotes{display:grid;gap:30px}
+.quotes blockquote{margin:0}
+.quotes p{font-size:clamp(20px,4.6vw,26px);line-height:1.32;margin:0 0 8px;max-width:30ch}
+.quotes cite{font-style:normal;font-size:14.5px;color:#55413e}
+.q-big p{font-family:var(--display);font-weight:800;font-size:clamp(34px,8vw,60px);line-height:1;text-transform:uppercase;max-width:16ch}
+@media (min-width:860px){.quotes{grid-template-columns:1.3fr 1fr 1fr;align-items:start;column-gap:44px}}
+
+/* photos */
+.photos{padding:10px 10px 0;display:grid;grid-template-columns:1fr 1fr;gap:10px;background:var(--navy)}
+.photos img{width:100%;height:100%;object-fit:cover}
+.photos .wide{grid-column:1 / -1}
+@media (min-width:860px){.photos{grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:300px 300px}.photos .wide{grid-column:auto;grid-row:1 / span 2}}
+
+/* enquire */
+.enq{background:var(--white);padding:88px 0 120px}
+.enq-grid{display:grid;gap:34px}
+.enq h2{font-size:clamp(46px,10vw,80px);text-transform:uppercase;margin-bottom:14px}
+form{display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:700;font-size:15px}
+input,textarea{font:400 17px/1.4 var(--text);padding:12px 14px;border:1.5px solid #6b7486;border-radius:4px;background:#fff;color:var(--navy);min-height:48px;width:100%}
+textarea{min-height:120px;resize:vertical}
+.two{display:grid;gap:16px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.note{font-size:14px;color:var(--slate);margin:0}
+.done{display:none;padding:16px;border:1.5px solid var(--cobalt);border-radius:4px;background:#eaf1fb}
+.done.show{display:block}
+@media (min-width:860px){.enq-grid{grid-template-columns:.8fr 1.2fr}}
+
+footer{background:var(--navy);color:#b9c2d1;padding:40px 0 110px;font-size:14.5px}
+footer strong{color:var(--white)}
+
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px}
+.bar .btn{flex:1;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+@media (min-width:860px){.bar{left:auto;right:24px;bottom:24px}.bar .btn{flex:none}}
+
+@media (prefers-reduced-motion:reduce),(max-height:520px){
+  .hero{height:auto}.hero-stage{position:relative;height:100svh}
+  .h-photo,.h-copy{transform:none!important}.h-print{transform:rotate(3deg)!important}
+  .plan{height:auto}.plan-stage{position:relative;height:auto;padding-bottom:60px}
+  .board,.mk,.step{transition:none}
+  .board{display:none}.step{grid-area:auto;opacity:1!important;transform:none!important;margin-bottom:18px}
+}
+@media (max-height:520px){.hero-stage{min-height:100svh;height:auto!important}.h-print{display:none}.hero-stage{display:flex;flex-direction:column;justify-content:flex-end}.h-copy{position:relative;padding-top:40px;padding-bottom:96px}.hero h1{font-size:clamp(46px,10vw,92px)}}
+</style>
+<noscript><style>
+  .hero{height:auto}.hero-stage{position:relative;height:100svh}
+  .h-photo,.h-copy{transform:none!important}.h-print{transform:rotate(3deg)!important}
+  .plan{height:auto}.plan-stage{position:relative;height:auto;padding-bottom:60px}
+  .board{display:none}.rings .mk{opacity:1;transform:none}
+  .step{grid-area:auto;opacity:1;transform:none;margin-bottom:18px}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip">A website idea made by <strong>Lampbound Studio</strong> for Shelley Lingman Celebrant. Not her official site.</div>
+
+<main id="main">
+<section class="hero" data-pin aria-label="Introduction">
+  <div class="hero-stage">
+    <div class="h-photo"><img src="img/arch.jpg" width="1500" height="1132" alt="Shelley in a cobalt suit, waiting at a flower arch on a hilltop, white chairs set out for the guests" fetchpriority="high"></div>
+    <div class="h-shade"></div>
+    <div class="h-copy">
+      <p class="tag">Marriage celebrant</p>
+      <h1>Shelley Lingman</h1>
+      <p class="areas">A warm, fun loving civil celebrant for Brisbane, the Gold Coast, South East Queensland and Northern NSW.</p>
+    </div>
+    <div class="h-print" aria-hidden="true"><img src="img/shelley.jpg" width="600" height="600" alt=""><span>Shelley</span></div>
+  </div>
+</section>
+
+<section class="about" aria-labelledby="about-h">
+  <div class="wrap about-grid">
+    <div>
+      <h2 id="about-h">A huge people person</h2>
+      <p class="lead">"I'm a local Brisbane celebrant who just loves meeting new couples and helping them plan their special day."</p>
+      <p>Shelley comes from a background in recruitment and international sports coaching, and she has always been a people person. She believes your day should be exactly how you picture it, and she sees it as her job to make that happen.</p>
+    </div>
+    <figure>
+      <img src="img/shelley.jpg" width="600" height="600" alt="Shelley Lingman smiling, in glasses and a blush pink jacket" loading="lazy">
+      <figcaption>Shelley Lingman, civil celebrant</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="plan s0" data-pin data-steps="4" aria-labelledby="plan-h">
+  <div class="plan-stage">
+    <div class="plan-head">
+      <h2 id="plan-h">The game plan</h2>
+      <p>Everyone learns where to stand before the day.</p>
+    </div>
+    <div class="board-box">
+      <img class="board-photo" src="img/day.jpg" width="1000" height="1000" alt="Shelley in a blush pink suit reading the ceremony between the bride and groom, a groomsman behind them" loading="lazy">
+      <svg class="rings" viewBox="0 0 100 100" aria-hidden="true">
+        <g class="mk m4" fill="none" stroke="#0a5fc4" stroke-width=".9" stroke-linecap="round">
+          <ellipse cx="51" cy="29" rx="8.5" ry="9.5" transform="rotate(-8 51 29)"/>
+          <ellipse cx="26.5" cy="25" rx="8" ry="9.5" transform="rotate(6 26.5 25)"/>
+          <ellipse cx="76" cy="21" rx="8" ry="9.5" transform="rotate(-4 76 21)"/>
+        </g>
+        <g class="mk m4" fill="#fff" stroke="#0a5fc4" stroke-width=".5" font-size="6.4" text-anchor="middle">
+          <text x="51" y="45.5" paint-order="stroke" stroke-width="1.6">S</text>
+          <text x="15" y="23" paint-order="stroke" stroke-width="1.6">X</text>
+          <text x="88" y="12" paint-order="stroke" stroke-width="1.6">O</text>
+        </g>
+      </svg>
+      <div class="board" aria-hidden="true">
+        <svg viewBox="0 0 100 100">
+          <g class="mk m1" fill="none" stroke="#14213d" stroke-width=".8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 16 L13 10.5 L19 16 M8.6 15 V22 H17.4 V15"/>
+            <path d="M33 9 C27 6.5 23 9 20.5 12.6" stroke="#0a5fc4" stroke-dasharray="1.6 1.4"/>
+            <path d="M22.8 10.4 L20.5 12.6 L20.2 9.4" stroke="#0a5fc4"/>
+            <circle cx="37" cy="9" r="3.4" stroke="#0a5fc4"/>
+          </g>
+          <g class="mk m1" fill="#0a5fc4" font-size="4.4"><text x="35.4" y="10.6">S</text><text x="6" y="27.5" fill="#14213d" font-size="3.6">YOUR PLACE</text></g>
+          <g class="mk m2" fill="none" stroke="#14213d" stroke-width=".8" stroke-linecap="round">
+            <path d="M30 26 C34 12 66 12 70 26"/>
+            <circle cx="50" cy="27" r="3.6" stroke="#0a5fc4"/>
+          </g>
+          <g class="mk m2" font-size="4.6" text-anchor="middle">
+            <text x="50" y="28.7" fill="#0a5fc4">S</text>
+            <text x="41" y="37" fill="#14213d" font-size="6">X</text>
+            <text x="59" y="37" fill="#14213d" font-size="6">O</text>
+            <text x="30" y="39" fill="#14213d" font-size="4">x</text><text x="24" y="42" fill="#14213d" font-size="4">x</text>
+            <text x="70" y="39" fill="#14213d" font-size="4">o</text><text x="76" y="42" fill="#14213d" font-size="4">o</text>
+            <text x="50" y="12.5" fill="#14213d" font-size="3.4">ARCH</text>
+          </g>
+          <g class="mk m3" stroke="#14213d" stroke-width=".7" stroke-linecap="round">
+            <path d="M18 54h8M30 54h8M62 54h8M74 54h8M18 61h8M30 61h8M62 61h8M74 61h8M18 68h8M30 68h8M62 68h8M74 68h8M18 75h8M30 75h8M62 75h8M74 75h8M18 82h8M30 82h8M62 82h8M74 82h8"/>
+            <path d="M50 94 C48 80 52 62 50 45" fill="none" stroke="#0a5fc4" stroke-width=".9" stroke-dasharray="2 1.6"/>
+            <path d="M47.6 48 L50 44.6 L52.4 48" fill="none" stroke="#0a5fc4" stroke-width=".9"/>
+          </g>
+          <g class="mk m3" font-size="3.4" text-anchor="middle" fill="#14213d"><text x="50" y="98">AISLE</text><text x="22" y="90">GUESTS</text><text x="78" y="90">GUESTS</text></g>
+        </svg>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step t1"><h3>She comes to you</h3><p>Shelley comes to your place for the first meeting.</p></div>
+      <div class="step t2"><h3>The rehearsal</h3><p>Before the day, Shelley runs a rehearsal at no extra cost, "that way everyone will know on the day where they need to be".</p></div>
+      <div class="step t3"><h3>Your ceremony, your way</h3><p>"I believe your day should be exactly how you envision it." She brings her own PA system and headset, included in her pricing.</p></div>
+      <div class="step t4"><h3>Then the day itself</h3><p>"Got out of the way for our kissing photos."<span class="who">Peter, May 2026, on Easy Weddings</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="inc" aria-labelledby="inc-h">
+  <div class="wrap">
+    <h2 id="inc-h">What Shelley does</h2>
+    <dl class="inc-list">
+      <div class="inc-row"><dt>A first meeting</dt><dd>Shelley comes to you.</dd></div>
+      <div class="inc-row"><dt>The rehearsal</dt><dd>Before the day, so everyone knows where to be. No extra cost.</dd></div>
+      <div class="inc-row"><dt>The ceremony</dt><dd>Planned around your wishes, so the day goes the way you picture it.</dd></div>
+      <div class="inc-row"><dt>PA system and headset</dt><dd>Her own, included in her pricing.</dd></div>
+      <div class="inc-row"><dt>The paperwork</dt><dd>All the forms for Births, Deaths and Marriages.</dd></div>
+      <div class="inc-row"><dt>MC, if you'd like</dt><dd>Shelley can MC your reception as well as marry you.</dd></div>
+    </dl>
+    <p class="travel">She is based in Brisbane and happy to travel anywhere up to three hours from the city, across the border into Northern NSW too.</p>
+    <p class="ask">Ask Shelley for her current prices.</p>
+  </div>
+</section>
+
+<section class="said" aria-labelledby="said-h">
+  <div class="wrap">
+    <h2 id="said-h">Couples on Shelley</h2>
+    <div class="quotes">
+      <blockquote class="q-big"><p>"She really makes the wedding your day."</p><cite>Zoe, September 2025, Easy Weddings</cite></blockquote>
+      <blockquote><p>"From the start Shelley was very personable and happy to create the wedding we both wanted."</p><cite>Aleric, June 2026, Easy Weddings</cite></blockquote>
+      <blockquote><p>"She was laid back, down to Earth and super efficient."</p><cite>Eliza, September 2025, Easy Weddings</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<div class="photos">
+  <img class="wide" src="img/blue.jpg" width="900" height="600" alt="Shelley in her cobalt suit beside a smiling bride" loading="lazy">
+  <img src="img/mic.jpg" width="900" height="900" alt="Shelley reading into a microphone between a bride and groom under a floral arch" loading="lazy">
+  <img src="img/vows-bw.jpg" width="900" height="598" alt="A bride and groom facing each other as Shelley reads, in black and white" loading="lazy">
+  <img src="img/arbour.jpg" width="900" height="900" alt="Shelley at a timber arbour draped in white, with the bride and groom" loading="lazy">
+  <img src="img/dance.jpg" width="828" height="552" alt="Guests dancing at a reception, Shelley among them with her arm in the air, in black and white" loading="lazy">
+</div>
+
+<section class="enq" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap enq-grid">
+    <div>
+      <h2 id="enq-h">Is your date free?</h2>
+      <p>Send Shelley your date and venue and she'll let you know if she's free. You can also call her on <a href="tel:0408007978">0408 007 978</a>.</p>
+      <p class="note">This is a preview, so the form does not send anything.</p>
+    </div>
+    <form id="enq-form" novalidate>
+      <div class="two">
+        <label>Your names<input name="names" autocomplete="name"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <div class="two">
+        <label>Wedding date<input name="date" type="date"></label>
+        <label>Venue or town<input name="venue"></label>
+      </div>
+      <label>Would you like an MC as well?<input name="mc"></label>
+      <label>Anything else<textarea name="msg"></textarea></label>
+      <button class="btn" type="button" id="send">Send to Shelley</button>
+      <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Shelley. To reach her today, email <a href="mailto:shelley@we2services.com.au">shelley@we2services.com.au</a>.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>A preview made by Lampbound Studio for Shelley Lingman Celebrant.</strong> Not affiliated, not live.</p>
+    <p>Words and photos are from Shelley's own web page and her Easy Weddings listing.</p>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn alt" href="tel:0408007978">Call Shelley</a><a class="btn" href="#enquire">Check your date</a></div>
+
+<script>
+(function(){
+  var pins=[].slice.call(document.querySelectorAll('[data-pin]'));
+  var plan=document.querySelector('.plan');
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce), (max-height:520px)');
+  var on=false,ticking=false;
+  function setStep(n){for(var i=0;i<=4;i++)plan.classList.toggle('s'+i,i===n);}
+  function finish(){setStep(4);pins.forEach(function(el){el.style.setProperty('--p','1')});}
+  function update(){
+    ticking=false;
+    pins.forEach(function(el){
+      var r=el.getBoundingClientRect(),total=el.offsetHeight-window.innerHeight;
+      var p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;
+      el.style.setProperty('--p',p.toFixed(4));
+      if(el===plan){
+        var n=p<.04?0:Math.min(4,1+Math.floor((p-.04)/.2));
+        setStep(n);
+      }
+    });
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
+  function start(){if(on)return;on=true;addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);update();}
+  function stop(){on=false;removeEventListener('scroll',onScroll);removeEventListener('resize',onScroll);finish();}
+  if(mq.matches)finish();else start();
+  if(mq.addEventListener)mq.addEventListener('change',function(){mq.matches?stop():start()});
+  document.getElementById('send').addEventListener('click',function(){var d=document.getElementById('done');d.classList.add('show');d.focus();});
+})();
+</script>
+</body>
+</html>
