@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Table and Delights: a website preview</title>
+<meta name="description" content="A website idea for Table and Delights: wedding planning, styling and on-the-day coordination with Dominika across Shepparton and Central Victoria. A preview by Lampbound Studio, not their official site.">
+<meta property="og:title" content="Table and Delights">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Table and Delights. Not their official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/tableandelights/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/tableandelights/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23e6ded1'/%3E%3Cpath d='M7 8h10M12 8v11M21 9l-9 15M17 13v13h3a6.5 6.5 0 0 0 0-13z' fill='none' stroke='%231b1714' stroke-width='1.6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* linen and ink are her logo's own colours, red and gold come from her tables: brand choices, slop-ok */
+  --linen:#e6ded1; --linen-2:#f1ece3; --white:#f7f3ec; --sand:#d8cab3;
+  --ink:#1b1714; --soft:#5a5048; --line:#cbbfac;
+  --red:#a6372c; --red-dark:#7f281f; --gold:#6a5222; --bead:#b8955a; --leaf:#7d8a6c;
+  --display:"Italiana", "Didot", Georgia, serif; --text:"Jost", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--linen-2);color:var(--ink);font:400 17.5px/1.6 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:0;box-shadow:0 0 0 6px #fff}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.strip{background:var(--ink);color:#d9d1c6;font-size:14px;line-height:1.4;padding:9px 16px;text-align:center}
+.strip strong{color:#fff;font-weight:500}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+blockquote{margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:3px;background:var(--red);color:#fff;text-decoration:none;border:0;font:500 16px/1 var(--text);letter-spacing:.02em;cursor:pointer}
+.btn:hover{background:var(--red-dark)}
+.btn.alt{background:var(--white);color:var(--ink);border:1.5px solid var(--ink)}
+.btn.alt:hover{background:#fff}
+
+/* hero: her long table, her name, her card */
+.hero{position:relative;height:150svh;background:var(--ink)}
+.hero-stage{position:sticky;top:0;height:100svh;overflow:hidden}
+.h-photo{position:absolute;inset:0;transform:translate3d(0,calc(var(--p,0) * -4%),0) scale(calc(1.08 - var(--p,0) * .06))}
+.h-photo img{width:100%;height:100%;object-fit:cover;object-position:40% 62%}
+.h-shade{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(20,16,13,0) 38%,rgba(20,16,13,.55) 64%,rgba(20,16,13,.86))}
+.h-copy{position:absolute;left:20px;right:20px;bottom:calc(120px + 4svh);color:#fff;transform:translate3d(0,calc(var(--p,0) * -12svh),0)}
+.hero h1{font-size:min(clamp(52px,14.5vw,124px),13svh);letter-spacing:.02em;line-height:.95}
+.h-copy p{margin:16px 0 0;max-width:30ch;font-size:clamp(18px,4.4vw,22px);line-height:1.45;color:#f1ebe2}
+.card{position:absolute;right:18px;top:7svh;width:min(34vw,170px);background:var(--linen);padding:0;box-shadow:0 14px 26px rgba(0,0,0,.35);transform:translate3d(0,calc(var(--p,0) * -48svh),0) rotate(calc(6deg - var(--p,0) * 10deg));transform-origin:50% 100%}
+.card img{width:100%;aspect-ratio:1;object-fit:cover}
+@media (min-width:860px){
+  .hero{background:var(--linen)}
+  .h-photo{left:46%}
+  .h-shade{left:46%;background:linear-gradient(to right,rgba(20,16,13,.18),rgba(20,16,13,0) 30%)}
+  .h-copy{left:max(20px,calc((100vw - 1120px) / 2 + 20px));right:auto;width:40%;bottom:auto;top:24svh;color:var(--ink)}
+  .h-copy p{color:var(--soft)}
+  .hero h1{font-size:min(8.4vw,15svh)}
+  .card{left:calc(46% - 110px);right:auto;top:auto;bottom:12svh;width:220px}
+}
+
+/* about */
+.about{padding:84px 0 72px;background:var(--linen-2)}
+.about-grid{display:grid;gap:30px}
+.about h2{font-size:clamp(64px,17vw,120px);line-height:.9}
+.about .lead{font-size:21px;line-height:1.5;max-width:34ch;margin-top:18px}
+.about .area{font-size:16px;color:var(--soft);max-width:52ch;border-top:1px solid var(--line);padding-top:14px;margin-top:22px}
+.about figure{margin:0}
+@media (min-width:860px){.about-grid{grid-template-columns:1fr 1fr;column-gap:64px;align-items:end}}
+
+/* the signature: a place set from above */
+.setting{position:relative;height:560svh;background:var(--linen)}
+.set-stage{position:sticky;top:0;height:100svh;overflow:hidden;background:#efe9df}
+.set-art{position:absolute;left:0;right:0;bottom:0;top:31svh;display:flex;align-items:center;justify-content:center;padding:0 12px 16px}
+.set-art svg{width:100%;height:100%;max-width:520px;overflow:visible}
+.drape{transform:translate3d(0,calc((1 - var(--a,0)) * -110%),0);opacity:var(--a,0)}
+.drape2{transform:translate3d(calc((1 - var(--a,0)) * 120%),0,0);opacity:var(--a,0)}
+.rim{opacity:var(--b0,0)}
+.bead{fill:var(--bead);stroke:#8a6f36;stroke-width:.6;opacity:0;transform-box:fill-box;transform-origin:50% 50%;transform:scale(.2);transition:opacity .25s ease,transform .25s ease}
+.bead.on{opacity:1;transform:scale(1)}
+.napkin{opacity:var(--c,0);transform:translate3d(0,calc((1 - var(--c,0)) * -40px),0) rotate(calc(-7deg - (1 - var(--c,0)) * 14deg));transform-box:fill-box;transform-origin:50% 50%}
+.fork{transform:translate3d(calc((1 - var(--d,0)) * -160px),0,0);opacity:var(--d,0)}
+.spoon{transform:translate3d(calc((1 - var(--d,0)) * 160px),0,0);opacity:var(--d,0)}
+.glass{opacity:var(--e,0);transform:scale(calc(.7 + var(--e,0) * .3));transform-box:fill-box;transform-origin:50% 50%}
+.candles{opacity:var(--f,0);transform:translate3d(0,calc((1 - var(--f,0)) * -30px),0)}
+.stem{opacity:var(--f,0);transform:rotate(calc((1 - var(--f,0)) * -25deg));transform-box:fill-box;transform-origin:50% 100%}
+.s-cap{position:absolute;left:16px;right:16px;top:3svh;z-index:3;min-height:24svh}
+.s-cap > div{display:none}
+.s-cap > div.on{display:block}
+.s-cap h3{font-size:clamp(38px,10.5vw,58px)}
+.s-cap p{margin:6px 0 0;font-size:16px;line-height:1.45;color:var(--soft);max-width:38ch}
+.s-cap blockquote{margin-top:10px;font-size:16.5px;line-height:1.45;max-width:40ch}
+.s-cap blockquote::before{content:"\201C"}.s-cap blockquote::after{content:"\201D"}
+.s-cap cite{display:block;font-style:normal;font-size:14px;color:var(--gold);font-weight:600;margin-top:3px;letter-spacing:.02em}
+.real{position:absolute;inset:0;z-index:4;margin:0;clip-path:circle(var(--r,0px) at var(--cx,50%) var(--cy,60%));pointer-events:none}
+.real img{width:100%;height:100%;object-fit:cover;object-position:58% 60%}
+.real figcaption{position:absolute;left:16px;right:16px;bottom:96px;color:#fff;font-family:var(--display);font-size:clamp(34px,9vw,64px);line-height:1;text-shadow:0 2px 16px rgba(0,0,0,.55);opacity:var(--t,0)}
+.real figcaption span{display:block;font:500 16px/1.4 var(--text);margin-top:10px;max-width:32ch}
+.real::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(to bottom,rgba(20,16,13,0),rgba(20,16,13,.62));opacity:var(--t,0)}
+.real figcaption{z-index:1}
+.steps-list,.real-static{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0;padding:0}
+@media (min-width:860px){
+  .s-cap{left:max(20px,calc((100vw - 1120px) / 2 + 20px));right:auto;top:26svh;width:380px}
+  .set-art{left:38%;top:0;padding:4svh 24px}
+  .set-art svg{max-width:none;height:92svh}
+  .real figcaption{left:max(20px,calc((100vw - 1120px) / 2 + 20px));bottom:12svh}
+}
+
+/* what she looks after */
+.does{padding:90px 0;background:var(--linen-2)}
+.does h2{font-size:clamp(48px,11vw,88px);margin-bottom:14px;max-width:12ch}
+.does .intro-p{max-width:46ch;color:var(--soft);margin-bottom:36px}
+.lead-job{display:grid;gap:20px;margin-bottom:42px}
+.lead-job h3{font-size:clamp(42px,9vw,64px)}
+.lead-job p{margin:10px 0 0;max-width:44ch}
+.q{display:block;margin-top:12px;font-size:16px;color:var(--soft);max-width:44ch}
+.q cite{font-style:normal;font-weight:600;color:var(--gold)}
+.jobs{list-style:none;padding:0;margin:0;border-top:1px solid var(--ink)}
+.jobs li{padding:20px 0;border-bottom:1px solid var(--line);display:grid;gap:6px}
+.jobs h3{font-size:34px}
+.jobs p{margin:0;max-width:52ch}
+.ask{margin-top:26px;font-size:16.5px}
+@media (min-width:860px){.lead-job{grid-template-columns:.9fr 1.1fr;column-gap:56px;align-items:center}.jobs{display:grid;grid-template-columns:1fr 1fr;column-gap:48px}.jobs li:nth-child(odd):last-child{grid-column:span 2}}
+
+/* rooms: a sideways strip */
+.rooms{padding:80px 0 70px;background:var(--ink);color:#e9e2d8}
+.rooms h2{font-size:clamp(44px,10vw,80px);color:#fff;margin-bottom:8px}
+.rooms .wrap > p{color:#bfb5a8;max-width:44ch}
+.strip-x{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:18px 20px 18px;margin-top:10px;scrollbar-color:#6b6158 transparent}
+.strip-x figure{flex:0 0 78vw;max-width:420px;margin:0;scroll-snap-align:start}
+.strip-x img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.strip-x figcaption{font-size:15px;color:#cfc6ba;margin-top:8px}
+@media (min-width:860px){.strip-x{padding-left:max(20px,calc((100vw - 1120px) / 2 + 20px))}.strip-x figure{flex-basis:340px}}
+
+/* words */
+.words{padding:86px 0;background:var(--linen)}
+.words h2{font-size:clamp(44px,10vw,80px);margin-bottom:30px}
+.wq{display:grid;gap:30px}
+.wq figure{margin:0}
+.wq blockquote{font-size:19px;line-height:1.5}
+.wq .big blockquote{font-family:var(--display);font-size:clamp(32px,7vw,50px);line-height:1.12}
+.wq figcaption{margin-top:8px;font-weight:600;color:var(--gold);font-size:15px}
+@media (min-width:860px){.wq{grid-template-columns:1.25fr 1fr;column-gap:64px}.wq .big{grid-row:span 2}}
+
+/* close: an RSVP card */
+.rsvp{padding:84px 0 120px;background:var(--linen-2)}
+.rsvp-card{background:var(--white);border:1px solid var(--line);outline:1px solid var(--line);outline-offset:-10px;padding:34px 22px 30px;max-width:760px;margin:0 auto;box-shadow:0 18px 30px -18px rgba(40,30,20,.35)}
+.mono{width:86px;margin:0 auto 10px;mix-blend-mode:multiply}
+.rsvp h2{font-size:clamp(46px,11vw,80px);text-align:center}
+.rsvp .sub{text-align:center;max-width:40ch;margin:12px auto 26px;color:var(--soft)}
+.rsvp .sub a{color:var(--ink);font-weight:600}
+form{display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:500;font-size:15px}
+input,textarea{font:400 17px/1.4 var(--text);padding:12px 14px;border:1.5px solid #7a6f64;border-radius:3px;background:#fff;color:var(--ink);min-height:48px;width:100%}
+textarea{min-height:110px;resize:vertical}
+fieldset{border:0;padding:0;margin:0}
+legend{font-weight:500;font-size:15px;margin-bottom:8px}
+.checks{display:flex;flex-wrap:wrap;gap:8px}
+.checks label{display:flex;align-items:center;gap:8px;font-weight:400;border:1.5px solid #7a6f64;border-radius:3px;padding:0 14px;min-height:44px;background:#fff}
+.checks input{width:18px;height:18px;min-height:0;margin:0;accent-color:var(--red)}
+.two{display:grid;gap:16px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}.rsvp-card{padding:48px 44px 40px}}
+.note{font-size:14.5px;color:var(--soft);margin:0}
+.done{display:none;padding:16px;border:1.5px solid var(--red);border-radius:3px;background:#fbf1ee}
+.done.show{display:block}
+
+footer{background:var(--ink);color:#c9c0b4;padding:40px 0 110px;font-size:15px}
+footer strong{color:#fff;font-weight:500}
+
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px}
+.bar .btn{flex:1;box-shadow:0 6px 16px rgba(0,0,0,.28)}
+.bar .btn.alt{flex:0 0 38%}
+@media (min-width:860px){.bar{left:auto;right:24px;bottom:24px}.bar .btn,.bar .btn.alt{flex:none}}
+
+/* reduced motion, short landscape screens, no JS: everything laid flat */
+@media (prefers-reduced-motion:reduce),(max-height:520px){
+  .hero{height:auto}.hero-stage{position:relative;height:100svh;min-height:560px}
+  .h-photo,.h-copy{transform:none!important}
+  .card{transform:rotate(4deg)!important}
+  .setting{height:auto}.set-stage{position:relative;height:auto;padding:56px 0 40px}
+  .s-cap,.real{display:none}
+  .set-art{position:relative;inset:auto;height:auto;padding:0 20px}
+  .set-art svg{height:auto;max-width:460px;max-height:none}
+  .setting{--a:1;--b0:1;--c:1;--d:1;--e:1;--f:1}
+  .bead{opacity:1;transform:none;transition:none}
+  .steps-list{position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal;display:block;list-style:none;margin:28px auto 0;padding:0 20px;max-width:640px}
+  .steps-list li{border-top:1px solid var(--line);padding:16px 0}
+  .steps-list h3{font-size:34px}
+  .steps-list p{margin:4px 0 0;color:var(--soft)}
+  .steps-list blockquote{margin-top:6px}
+  .steps-list cite{display:block;font-style:normal;color:var(--gold);font-weight:600;font-size:14px}
+  .real-static{position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal;display:block;max-width:640px;margin:20px auto 0;padding:0 20px}
+}
+@media (max-height:520px){.hero-stage{min-height:100svh}.h-copy{bottom:76px}.hero h1{font-size:56px}.card{width:110px}}
+.real-static figcaption{font-size:15px;color:var(--soft);margin-top:8px}
+</style>
+<noscript><style>
+  .hero{height:auto}.hero-stage{position:relative;height:100svh;min-height:560px}
+  .h-photo,.h-copy{transform:none!important}.card{transform:rotate(4deg)!important}
+  .setting{height:auto;--a:1;--b0:1;--c:1;--d:1;--e:1;--f:1}.set-stage{position:relative;height:auto;padding:56px 0 40px}
+  .s-cap,.real{display:none}
+  .set-art{position:relative;inset:auto;height:auto;padding:0 20px}.set-art svg{height:auto;max-width:460px}
+  .bead{opacity:1;transform:none}
+  .steps-list{position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal;display:block;list-style:none;margin:28px auto 0;padding:0 20px;max-width:640px}
+  .real-static{position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal;display:block;max-width:640px;margin:20px auto 0;padding:0 20px}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip">A website idea made by <strong>Lampbound Studio</strong> for Table and Delights. Not their official site.</div>
+
+<main id="main">
+<section class="hero" data-pin aria-label="Introduction">
+  <div class="hero-stage">
+    <div class="h-photo"><img src="img/hero.jpg" width="1280" height="1600" alt="A long table under a timber pergola, white roses, hydrangeas and trailing greenery cascading off one end, chandeliers hanging among white drapes overhead" fetchpriority="high"></div>
+    <div class="h-shade"></div>
+    <div class="card" aria-hidden="true"><img src="img/logo.jpg" width="600" height="600" alt=""></div>
+    <div class="h-copy">
+      <h1>Table and Delights</h1>
+      <p>Wedding planning, styling and on-the-day coordination with Dominika, across Shepparton and Central Victoria.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" aria-labelledby="about-h">
+  <div class="wrap about-grid">
+    <div>
+      <h2 id="about-h">Dom</h2>
+      <p class="lead">Dominika grew up in Poland and moved to Australia in December 2014 to be with her husband.</p>
+      <p>She worked in commercial law in the banking sector, then went after her creative and artistic side and started Table and Delights. She's also a mum of three. Couples call her Dom.</p>
+      <p class="area">Her listing covers <b>Shepparton and Central Victoria</b>. One mother had her organise the venue decorations for her daughter's wedding in Canberra.</p>
+    </div>
+    <figure><img src="img/colour.jpg" width="1127" height="1400" alt="A bright table close up: halved oranges, orange and pink taper candles, poppies, a cut-glass bowl and a gold-beaded charger on white linen" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="setting" data-pin data-setting aria-labelledby="set-h">
+  <div class="set-stage">
+    <h2 id="set-h" class="vh">One place at one of Dom's tables, set piece by piece</h2>
+    <div class="s-cap" aria-hidden="true">
+      <div class="on"><h3>Linen first</h3><p>Two drapes, white and sand, let fall across the table.</p><blockquote>She visited our venue many times to ensure everything would be perfect on the day.</blockquote><cite>Chena F.</cite></div>
+      <div><h3>The charger</h3><p>A glass rim, ringed with gold beads.</p><blockquote>Nothing felt rushed or overlooked, everything was done with so much care and intention.</blockquote><cite>Gracia M.</cite></div>
+      <div><h3>A folded napkin</h3><blockquote>She saw my vision and replicated it perfect without me having to lift a finger.</blockquote><cite>Brittney B.</cite></div>
+      <div><h3>Gold cutlery</h3><blockquote>I was able to look around at all the details and was blown away with how much thought and creativity went into it.</blockquote><cite>Tayla B.</cite></div>
+      <div><h3>Cut crystal</h3><blockquote>Dom is much more than decorations, she is like a wedding planner.</blockquote><cite>Annette S.</cite></div>
+      <div><h3>Candles, bows and one stem</h3><blockquote>She has an eye for styling right down to the small details that I would forget about.</blockquote><cite>Vanessa D.</cite></div>
+      <div></div>
+    </div>
+    <div class="set-art">
+      <svg viewBox="0 0 400 520" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+        <rect x="-400" y="-200" width="1200" height="920" fill="#efe9df"/>
+        <g class="drape"><path d="M-400 120 C-100 90 120 140 260 112 C420 82 600 120 800 100 L800 470 C600 500 420 452 260 486 C120 512 -100 470 -400 500Z" fill="#f7f3ec"/>
+          <g fill="none" stroke="#e3dbcd" stroke-width="2"><path d="M-60 140 C40 260 20 380 -30 480"/><path d="M90 128 C140 250 120 370 100 500"/><path d="M380 104 C420 230 400 360 430 470"/></g></g>
+        <g class="drape2"><path d="M150 -200 C190 20 120 160 170 300 C210 420 140 560 190 760 L330 760 C300 560 360 420 330 300 C300 170 350 20 320 -200Z" fill="#d8cab3"/>
+          <g fill="none" stroke="#c6b597" stroke-width="2"><path d="M200 -180 C230 40 170 180 210 320 C240 440 190 560 220 740"/><path d="M280 -180 C300 40 260 200 290 330 C310 450 270 580 290 740"/></g></g>
+        <g class="rim"><circle cx="200" cy="300" r="112" fill="#fbfaf6" stroke="#ddd5c6" stroke-width="2"/><circle cx="200" cy="300" r="84" fill="#fdfcf9" stroke="#e7e1d6" stroke-width="2"/></g>
+        <g class="beads"><circle class="bead" cx="200.00" cy="202.00" r="4.3"/><circle class="bead" cx="211.38" cy="202.66" r="4.3"/><circle class="bead" cx="222.60" cy="204.64" r="4.3"/><circle class="bead" cx="233.52" cy="207.91" r="4.3"/><circle class="bead" cx="243.98" cy="212.42" r="4.3"/><circle class="bead" cx="253.85" cy="218.12" r="4.3"/><circle class="bead" cx="262.99" cy="224.93" r="4.3"/><circle class="bead" cx="271.28" cy="232.75" r="4.3"/><circle class="bead" cx="278.61" cy="241.48" r="4.3"/><circle class="bead" cx="284.87" cy="251.00" r="4.3"/><circle class="bead" cx="289.99" cy="261.18" r="4.3"/><circle class="bead" cx="293.88" cy="271.89" r="4.3"/><circle class="bead" cx="296.51" cy="282.98" r="4.3"/><circle class="bead" cx="297.83" cy="294.30" r="4.3"/><circle class="bead" cx="297.83" cy="305.70" r="4.3"/><circle class="bead" cx="296.51" cy="317.02" r="4.3"/><circle class="bead" cx="293.88" cy="328.11" r="4.3"/><circle class="bead" cx="289.99" cy="338.82" r="4.3"/><circle class="bead" cx="284.87" cy="349.00" r="4.3"/><circle class="bead" cx="278.61" cy="358.52" r="4.3"/><circle class="bead" cx="271.28" cy="367.25" r="4.3"/><circle class="bead" cx="262.99" cy="375.07" r="4.3"/><circle class="bead" cx="253.85" cy="381.88" r="4.3"/><circle class="bead" cx="243.98" cy="387.58" r="4.3"/><circle class="bead" cx="233.52" cy="392.09" r="4.3"/><circle class="bead" cx="222.60" cy="395.36" r="4.3"/><circle class="bead" cx="211.38" cy="397.34" r="4.3"/><circle class="bead" cx="200.00" cy="398.00" r="4.3"/><circle class="bead" cx="188.62" cy="397.34" r="4.3"/><circle class="bead" cx="177.40" cy="395.36" r="4.3"/><circle class="bead" cx="166.48" cy="392.09" r="4.3"/><circle class="bead" cx="156.02" cy="387.58" r="4.3"/><circle class="bead" cx="146.15" cy="381.88" r="4.3"/><circle class="bead" cx="137.01" cy="375.07" r="4.3"/><circle class="bead" cx="128.72" cy="367.25" r="4.3"/><circle class="bead" cx="121.39" cy="358.52" r="4.3"/><circle class="bead" cx="115.13" cy="349.00" r="4.3"/><circle class="bead" cx="110.01" cy="338.82" r="4.3"/><circle class="bead" cx="106.12" cy="328.11" r="4.3"/><circle class="bead" cx="103.49" cy="317.02" r="4.3"/><circle class="bead" cx="102.17" cy="305.70" r="4.3"/><circle class="bead" cx="102.17" cy="294.30" r="4.3"/><circle class="bead" cx="103.49" cy="282.98" r="4.3"/><circle class="bead" cx="106.12" cy="271.89" r="4.3"/><circle class="bead" cx="110.01" cy="261.18" r="4.3"/><circle class="bead" cx="115.13" cy="251.00" r="4.3"/><circle class="bead" cx="121.39" cy="241.48" r="4.3"/><circle class="bead" cx="128.72" cy="232.75" r="4.3"/><circle class="bead" cx="137.01" cy="224.93" r="4.3"/><circle class="bead" cx="146.15" cy="218.12" r="4.3"/><circle class="bead" cx="156.02" cy="212.42" r="4.3"/><circle class="bead" cx="166.48" cy="207.91" r="4.3"/><circle class="bead" cx="177.40" cy="204.64" r="4.3"/><circle class="bead" cx="188.62" cy="202.66" r="4.3"/></g>
+        <g class="napkin"><rect x="138" y="246" width="124" height="104" rx="5" fill="#d9d3c8"/><rect x="148" y="256" width="104" height="84" rx="3" fill="none" stroke="#b9b0a1" stroke-width="1.5" stroke-dasharray="2 4"/><path d="M138 300 L262 296" stroke="#c7bfb2" stroke-width="2"/></g>
+        <g class="fork" stroke="#b8955a" stroke-linecap="round" fill="none"><path d="M56 460 L56 300" stroke-width="7"/><path d="M44 300 L68 300" stroke-width="5"/><path d="M45 300 L45 246 M52 300 L52 244 M60 300 L60 244 M67 300 L67 246" stroke-width="3.2"/></g>
+        <g class="spoon"><path d="M344 470 L344 300" stroke="#b8955a" stroke-width="7" stroke-linecap="round"/><ellipse cx="344" cy="266" rx="17" ry="27" fill="#c9a866" stroke="#a9884b" stroke-width="2"/><ellipse cx="340" cy="258" rx="6" ry="11" fill="#e2cc95"/></g>
+        <g class="glass"><circle cx="322" cy="128" r="34" fill="#fbfbf9" fill-opacity=".85" stroke="#bdb6ab" stroke-width="2"/><circle cx="322" cy="128" r="22" fill="none" stroke="#d0cabf" stroke-width="1.5"/><g stroke="#c8c1b5" stroke-width="1.3"><path d="M322 94 L322 106 M322 150 L322 162 M288 128 L300 128 M344 128 L356 128 M298 104 L306 112 M338 144 L346 152 M346 104 L338 112 M306 144 L298 152"/></g><path d="M306 116 a20 20 0 0 1 14 -8" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+        <g class="stem"><path d="M226 210 C214 170 200 140 182 112" stroke="#6f7b5e" stroke-width="3" fill="none"/><path d="M182 112 C150 92 128 120 146 140 C160 156 176 150 182 112Z" fill="#9aa58a" stroke="#7d8a6c" stroke-width="1.5"/><path d="M182 112 L152 132" stroke="#7d8a6c" stroke-width="1.2"/><rect x="214" y="196" width="34" height="26" rx="3" fill="#e8dfcd" stroke="#cdbf9f" stroke-width="1.5" transform="rotate(14 231 209)"/></g>
+        <g class="candles">
+          <g fill="none" stroke="#e4ddd0" stroke-width="3" stroke-linecap="round"><path d="M76 88 C60 110 66 140 58 168"/><path d="M84 92 C96 118 90 146 100 176"/><path d="M116 66 C104 92 112 120 104 150"/><path d="M124 70 C138 96 132 124 142 154"/></g>
+          <g fill="#ffffff" stroke="#dcd4c6" stroke-width="1.5"><ellipse cx="66" cy="82" rx="14" ry="8" transform="rotate(-20 66 82)"/><ellipse cx="94" cy="84" rx="14" ry="8" transform="rotate(20 94 84)"/><ellipse cx="106" cy="60" rx="14" ry="8" transform="rotate(-20 106 60)"/><ellipse cx="134" cy="62" rx="14" ry="8" transform="rotate(20 134 62)"/></g>
+          <g fill="#f6f0e2" stroke="#d3cab8" stroke-width="1.5"><circle cx="80" cy="86" r="7.5"/><circle cx="120" cy="64" r="7.5"/><circle cx="150" cy="96" r="7.5"/></g>
+          <g fill="#fff"><circle cx="80" cy="86" r="2.4"/><circle cx="120" cy="64" r="2.4"/><circle cx="150" cy="96" r="2.4"/></g>
+        </g>
+      </svg>
+    </div>
+    <figure class="real" aria-hidden="true"><img src="img/table.jpg" width="1800" height="1200" alt="" loading="lazy"><figcaption>The real table<span>The drawing was made from this one of Dom's: sand and white drapes, gold-beaded chargers, cut crystal and taper candles tied with bows.</span></figcaption></figure>
+    <ol class="steps-list">
+      <li><h3>Linen first</h3><p>Two drapes, white and sand, let fall across the table.</p><blockquote>"She visited our venue many times to ensure everything would be perfect on the day."</blockquote><cite>Chena F.</cite></li>
+      <li><h3>The charger</h3><p>A glass rim, ringed with gold beads.</p><blockquote>"Nothing felt rushed or overlooked, everything was done with so much care and intention."</blockquote><cite>Gracia M.</cite></li>
+      <li><h3>A folded napkin</h3><blockquote>"She saw my vision and replicated it perfect without me having to lift a finger."</blockquote><cite>Brittney B.</cite></li>
+      <li><h3>Gold cutlery</h3><blockquote>"I was able to look around at all the details and was blown away with how much thought and creativity went into it."</blockquote><cite>Tayla B.</cite></li>
+      <li><h3>Cut crystal</h3><blockquote>"Dom is much more than decorations, she is like a wedding planner."</blockquote><cite>Annette S.</cite></li>
+      <li><h3>Candles, bows and one stem</h3><blockquote>"She has an eye for styling right down to the small details that I would forget about."</blockquote><cite>Vanessa D.</cite></li>
+    </ol>
+    <figure class="real-static"><img src="img/table.jpg" width="1800" height="1200" alt="Dom's table: sand and white drapes, gold-beaded chargers with folded napkins, cut-crystal tumblers, gold cutlery, taper candles tied with white bows and an anthurium stem" loading="lazy"><figcaption>The real table the drawing was made from.</figcaption></figure>
+  </div>
+</section>
+
+<section class="does" aria-labelledby="does-h">
+  <div class="wrap">
+    <h2 id="does-h">What Dom looks after</h2>
+    <p class="intro-p">In her couples' words. Some hand her the whole day, some bring her in for the styling.</p>
+    <div class="lead-job">
+      <img src="img/hall.jpg" width="1400" height="933" alt="A hall dressed for a reception: white drapes across the ceiling, a chandelier, round tables set with candles and a black hoop arch" loading="lazy">
+      <div>
+        <h3>Styling</h3>
+        <p>Tables, drapes, florals and signs, from soft white and sand to bright oranges and reds. She styles bridal showers as well as weddings.</p>
+        <span class="q">"I was lucky enough to have Dom style both my bridal shower and our wedding." <cite>Vanessa D.</cite></span>
+      </div>
+    </div>
+    <ul class="jobs">
+      <li><h3>Planning</h3><p>From the first ideas through to the day, with the florist and the rest of the team organised along the way.</p><span class="q">"From organising our incredible florist to coordinating the entire ceremony and reception." <cite>Patricia R.</cite></span></li>
+      <li><h3>Suppliers and the venue</h3><p>She sources flowers and decorations, deals with suppliers and talks to the venue staff.</p><span class="q">"From sourcing flowers and decorations to managing difficult suppliers, she handled everything seamlessly." <cite>Abby H.</cite></span></li><!-- slop-ok: the couple's own word -->
+      <li><h3>On the day</h3><p>She's there through the day, so you can relax and enjoy it.</p><span class="q">"On the day of the wedding, Dom was there for absolutely everything we needed." <cite>Abby H.</cite></span></li>
+      <li><h3>Small days too</h3><p>She sets up elopements as well as big receptions.</p><span class="q">"They pulled off our elopement setup even better than I had imagined." <cite>Tayla B.</cite></span></li>
+    </ul>
+    <p class="ask">Packages and prices aren't online yet. <a href="#enquire">Ask Dom</a> and she'll send them.</p>
+  </div>
+</section>
+
+<section class="rooms" aria-labelledby="rooms-h">
+  <div class="wrap">
+    <h2 id="rooms-h">More of her work</h2>
+    <p>Swipe through.</p>
+  </div>
+  <div class="strip-x" tabindex="0" role="region" aria-label="Photos of Dom's work, scrolls sideways">
+    <figure><img src="img/chandelier.jpg" width="1040" height="1300" alt="A crystal chandelier under white ceiling drapes, candlelit tables below" loading="lazy"><figcaption>Chandeliers and ceiling drapes</figcaption></figure>
+    <figure><img src="img/backdrop.jpg" width="1400" height="951" alt="A bride and groom on a chair in front of a white draped backdrop in the bush, yellow and white flowers at its feet" loading="lazy"><figcaption>A white backdrop in the bush</figcaption></figure>
+    <figure><img src="img/sign.jpg" width="975" height="1300" alt="A red acrylic welcome sign for Hayley and Adam beside a low arrangement of red, pink and purple flowers" loading="lazy"><figcaption>A red welcome sign</figcaption></figure>
+    <figure><img src="img/night.jpg" width="1285" height="1300" alt="A bride in a satin gown and a groom in a dinner suit walking and laughing at night" loading="lazy"><figcaption>After dark</figcaption></figure>
+  </div>
+</section>
+
+<section class="words" aria-labelledby="words-h">
+  <div class="wrap">
+    <h2 id="words-h">From her couples</h2>
+    <div class="wq">
+      <figure class="big"><blockquote>They met with us so casually at the venue first and even helped [us] run around after our toddler while we spoke about ideas.</blockquote><figcaption>Tayla B.</figcaption></figure>
+      <figure><blockquote>Nothing was ever too hard, she was always friendly, professional, and incredibly quick to respond.</blockquote><figcaption>Caitlyn M.</figcaption></figure>
+      <figure><blockquote>My Mum and I had started to plan my wedding and found Dom along the way.</blockquote><figcaption>Nikia S.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="rsvp" id="enquire" aria-labelledby="rsvp-h">
+  <div class="wrap">
+    <div class="rsvp-card">
+      <img class="mono" src="img/logo.jpg" width="600" height="600" alt="Table and Delights logo" loading="lazy">
+      <h2 id="rsvp-h">Kindly reply</h2>
+      <p class="sub">Tell Dom your date and where it is, and she'll come back to you. Or call her on <a href="tel:0473014666">0473 014 666</a>.</p>
+      <form id="enq-form" novalidate>
+        <div class="two">
+          <label>Your names<input name="names" autocomplete="name"></label>
+          <label>Email<input name="email" type="email" autocomplete="email"></label>
+        </div>
+        <div class="two">
+          <label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
+          <label>Wedding date<input name="date" type="date"></label>
+        </div>
+        <div class="two">
+          <label>Venue or town<input name="where"></label>
+          <label>Roughly how many guests?<input name="guests" inputmode="numeric"></label>
+        </div>
+        <fieldset>
+          <legend>What would you like help with?</legend>
+          <div class="checks">
+            <label><input type="checkbox" name="need" value="planning">Planning</label>
+            <label><input type="checkbox" name="need" value="styling">Styling</label>
+            <label><input type="checkbox" name="need" value="on the day">On the day</label>
+            <label><input type="checkbox" name="need" value="bridal shower">Bridal shower</label>
+            <label><input type="checkbox" name="need" value="elopement">Elopement</label>
+          </div>
+        </fieldset>
+        <label>Your ideas, colours, anything else<textarea name="msg"></textarea></label>
+        <button class="btn" type="button" id="send">Send to Dom</button>
+        <p class="note">This is a preview, so the form doesn't send anything.</p>
+        <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Dom. To ask today, call <a href="tel:0473014666">0473 014 666</a>.</div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>A preview made by Lampbound Studio for Table and Delights.</strong> Not affiliated, not live.</p>
+    <p>Dom's story, the reviews and the photos are from the Table and Delights listing on Easy Weddings.</p>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn alt" href="tel:0473014666">Call Dom</a><a class="btn" href="#enquire">Check your date</a></div>
+
+<script>
+(function(){
+  var pins=[].slice.call(document.querySelectorAll('[data-pin]'));
+  var set=document.querySelector('[data-setting]');
+  var caps=[].slice.call(set.querySelectorAll('.s-cap > div'));
+  var real=set.querySelector('.real');
+  var beads=[].slice.call(set.querySelectorAll('.bead')), N=beads.length;
+  var rimEl=set.querySelector('.rim circle');
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce), (max-height:520px)');
+  var on=false,ticking=false,lastCap=-1,lastBead=-1;
+  function clamp(v){return Math.min(1,Math.max(0,v))}
+  function seg(p,a,b){return clamp((p-a)/(b-a))}
+  function centre(){
+    var r=rimEl.getBoundingClientRect(),s=set.querySelector('.set-stage').getBoundingClientRect();
+    var cx=r.left+r.width/2-s.left, cy=r.top+r.height/2-s.top;
+    set.style.setProperty('--cx',cx.toFixed(1)+'px');set.style.setProperty('--cy',cy.toFixed(1)+'px');
+    return Math.hypot(Math.max(cx,s.width-cx),Math.max(cy,s.height-cy));
+  }
+  var far=0;
+  function drawSet(p){
+    var v={'--a':seg(p,.04,.16),'--b0':seg(p,.17,.2),'--c':seg(p,.37,.45),'--d':seg(p,.47,.55),'--e':seg(p,.57,.63),'--f':seg(p,.65,.72),'--t':seg(p,.86,.92)};
+    for(var k in v)set.style.setProperty(k,v[k].toFixed(3));
+    var rr=seg(p,.75,.88);
+    if(rr>0&&!far)far=centre();
+    set.style.setProperty('--r',(rr*(far||900)).toFixed(1)+'px');
+    var nb=Math.round(seg(p,.19,.35)*N);
+    if(nb!==lastBead){lastBead=nb;beads.forEach(function(b,k){b.classList.toggle('on',k<nb)})}
+    var n=p<.17?0:p<.36?1:p<.46?2:p<.56?3:p<.64?4:p<.76?5:6;
+    if(n!==lastCap){lastCap=n;caps.forEach(function(c,k){c.classList.toggle('on',k===n)})}
+  }
+  function update(){
+    ticking=false;if(!on)return;
+    pins.forEach(function(el){
+      var r=el.getBoundingClientRect(),total=el.offsetHeight-window.innerHeight;
+      var p=total>0?clamp(-r.top/total):1;
+      el.style.setProperty('--p',p.toFixed(4));
+      if(el===set)drawSet(p);
+    });
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
+  function onResize(){far=0;if(on){far=centre();onScroll()}}
+  function finish(){
+    beads.forEach(function(b){b.classList.add('on')});
+    ['--a','--b0','--c','--d','--e','--f','--r','--t','--cx','--cy','--p'].forEach(function(k){set.style.removeProperty(k)});
+    pins.forEach(function(el){el.style.removeProperty('--p')});
+  }
+  function start(){if(on)return;on=true;lastCap=-1;lastBead=-1;far=0;addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onResize);update();}
+  function stop(){on=false;removeEventListener('scroll',onScroll);removeEventListener('resize',onResize);finish();}
+  if(mq.matches)finish();else start();
+  if(mq.addEventListener)mq.addEventListener('change',function(){mq.matches?stop():start()});
+  document.getElementById('send').addEventListener('click',function(){var d=document.getElementById('done');d.classList.add('show');d.focus();});
+})();
+</script>
+</body>
+</html>
