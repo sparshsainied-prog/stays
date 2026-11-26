@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Married by Katrina, Katrina Staples: a website preview</title>
+<meta name="description" content="A website idea for Katrina Staples, marriage celebrant in Nipaluna/Hobart: joyful, relaxed weddings and elopements. A preview by Lampbound Studio, not her official site.">
+<meta property="og:title" content="Married by Katrina">
+<meta property="og:description" content="A website idea made by Lampbound Studio for Married by Katrina. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/stays/marriedbykatrina/img/og.jpg">
+<meta property="og:url" content="https://sparshsainied-prog.github.io/stays/marriedbykatrina/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%232a2119'/%3E%3Ctext x='16' y='22' font-family='Arial Narrow,Arial' font-weight='700' font-size='14' fill='%23f3f1ec' text-anchor='middle'%3EMK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Libre+Franklin:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2a2119; --sky:#f3f1ec; --gold:#b88a3e; --gold-deep:#7d5a20; --dolerite:#4a5560; --stone:#d8d5cc; --white:#fdfdfb;
+  --display:"Barlow Condensed", "Arial Narrow", sans-serif; --text:"Libre Franklin", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--sky);color:var(--ink);font:18px/1.6 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid #111;outline-offset:0;box-shadow:0 0 0 6px #fff}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--white);padding:10px 14px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.strip{background:var(--ink);color:#d9d2c6;font-size:13.5px;line-height:1.4;padding:9px 16px;text-align:center}
+.strip strong{color:var(--white)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:.98;margin:0;letter-spacing:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:3px;background:var(--ink);color:var(--white);text-decoration:none;border:0;font:700 16px/1 var(--text);cursor:pointer}
+.btn:hover{background:#463729}
+.btn.alt{background:var(--white);color:var(--ink);border:1.5px solid var(--ink)}
+
+/* hero */
+.hero{position:relative;height:150svh;background:var(--ink)}
+.hero-stage{position:sticky;top:0;height:100svh;overflow:hidden}
+.h-photo{position:absolute;inset:0;transform:translate3d(0,calc(var(--p,0) * -3%),0) scale(calc(1.1 - var(--p,0) * .08))}
+.h-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.h-shade{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(42,33,25,.55) 0,rgba(42,33,25,0) 38%,rgba(42,33,25,0) 52%,rgba(42,33,25,.82) 100%)}
+.h-top{position:absolute;left:20px;right:20px;top:22px;color:var(--white);transform:translate3d(0,calc(var(--p,0) * -14vh),0)}
+.h-top p{margin:0;font-family:var(--display);font-weight:600;font-size:22px;letter-spacing:.01em}
+.h-copy{position:absolute;left:20px;right:20px;bottom:112px;color:var(--white);transform:translate3d(0,calc(var(--p,0) * -22vh),0)}
+.h-copy h1{font-size:clamp(64px,19vw,150px);text-transform:uppercase;line-height:.88}
+.h-copy .tag{font-size:18px;margin:14px 0 0;max-width:28ch}
+.h-dots{position:absolute;left:20px;bottom:calc(88px + 52%);display:flex;gap:10px;transform:translate3d(0,calc(var(--p,0) * -40vh),0)}
+.h-dots i{width:18px;height:18px;border-radius:50%;background:var(--gold);box-shadow:0 2px 6px rgba(0,0,0,.35)}
+@media (min-width:860px){.h-top,.h-copy{left:0;right:0;margin:0 auto;max-width:1100px;padding:0 20px}.h-dots{left:calc(50% - 530px)}}
+
+/* about */
+.about{padding:80px 0 64px}
+.about-grid{display:grid;gap:30px}
+.about h2{font-size:clamp(44px,11vw,80px);text-transform:uppercase}
+.about .lead{font-size:21px;line-height:1.45;max-width:34ch;margin-top:18px}
+.about figure{margin:0;max-width:420px}
+.about figcaption{font-size:14px;color:var(--gold-deep);margin-top:8px}
+.facts{list-style:none;padding:0;margin:22px 0 0;border-top:1px solid var(--stone)}
+.facts li{padding:10px 0;border-bottom:1px solid var(--stone)}
+@media (min-width:860px){.about-grid{grid-template-columns:1.2fr .8fr;align-items:start;gap:56px}}
+
+/* headcount: the signature moment */
+.count{position:relative;height:560svh;background:var(--white)}
+.count-stage{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;grid-template-rows:42% auto 1fr}
+.c-photos{position:relative;overflow:hidden;background:var(--ink)}
+.c-photos img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
+.c-photos img.on{opacity:1}
+.c-read{display:flex;align-items:flex-end;gap:8px;padding:14px 20px 0}
+.num{font-family:var(--display);font-weight:700;font-size:clamp(88px,25vw,150px);line-height:.8;font-variant-numeric:tabular-nums;color:var(--ink)}
+.unit{font-family:var(--display);font-weight:600;font-size:20px;text-transform:uppercase;margin:0 6px 6px 0;align-self:flex-end}
+.c-lab{padding-bottom:4px}
+.pk-name{display:inline-block;font-family:var(--display);font-weight:700;font-size:22px;text-transform:uppercase;color:var(--white);background:var(--gold-deep);padding:3px 10px 2px;border-radius:2px}
+.pk-name[data-k="relaxed"]{background:var(--dolerite)}
+.c-line{font-size:17px;line-height:1.35;margin:8px 0 0;max-width:26ch}
+.c-low{padding:16px 20px 82px;display:grid;align-content:start;gap:14px}
+.seats{display:grid;grid-template-columns:repeat(8,1fr);gap:8px;max-width:340px}
+.seats i{aspect-ratio:1;border-radius:50%;border:1.5px solid #b9b3a6;background:transparent;transform:scale(.8);transition:background-color .25s ease,border-color .25s ease,transform .25s ease}
+.seats i.on{background:var(--gold);border-color:var(--gold);transform:scale(1)}
+.seats i.c.on{background:var(--ink);border-color:var(--ink)}
+.seats i.w.on{background:var(--gold-deep);border-color:var(--gold-deep)}
+.key{font-size:14px;color:#5b5044;margin:0}
+.c-end{font-family:var(--display);font-weight:600;font-size:clamp(24px,6vw,34px);line-height:1.05;max-width:22ch;margin:0;opacity:0;transform:translate3d(0,10px,0);transition:opacity .4s ease,transform .4s ease}
+.c-end.on{opacity:1;transform:none}
+@media (min-width:860px){
+  .count-stage{grid-template-columns:1fr 1fr;grid-template-rows:1fr auto;max-width:1240px;margin:0 auto;padding:48px 20px 70px;column-gap:48px}
+  .c-photos{grid-row:1 / span 2;border-radius:3px}
+  .c-read{grid-column:2;align-self:end;padding:0}
+  .c-low{grid-column:2;padding:18px 0 0}
+  .c-line{font-size:20px}
+}
+
+/* packages */
+.pk{padding:84px 0;background:var(--sky)}
+.pk h2{font-size:clamp(44px,11vw,80px);text-transform:uppercase;margin-bottom:10px}
+.pk .intro{max-width:46ch}
+.pkg-list{display:grid;gap:18px;margin-top:28px}
+.pkg{background:var(--white);border-top:4px solid var(--gold-deep);padding:22px 20px}
+.pkg.r{border-top-color:var(--dolerite)}
+.pkg h3{font-size:40px;text-transform:uppercase}
+.pkg .price{font-family:var(--display);font-weight:600;font-size:30px;margin:2px 0 10px;font-variant-numeric:tabular-nums}
+.pkg .who{font-weight:700}
+.pkg p{margin:0 0 .6em}
+.inc{margin-top:40px;display:grid;gap:30px}
+.inc h3{font-size:30px;text-transform:uppercase;margin-bottom:10px}
+.inc ul{margin:0;padding-left:1.1em}
+.inc li{margin-bottom:6px}
+.terms{font-size:16px;border-top:1px solid var(--stone);padding-top:14px}
+@media (min-width:860px){.pkg-list{grid-template-columns:1fr 1fr}.inc{grid-template-columns:1.2fr .8fr;gap:56px}}
+
+/* steps */
+.how{background:var(--dolerite);color:#eef0f1;padding:84px 0}
+.how h2{color:var(--white);font-size:clamp(40px,10vw,72px);text-transform:uppercase;margin-bottom:26px}
+.how ol{list-style:none;counter-reset:s;margin:0;padding:0;max-width:720px}
+.how li{counter-increment:s;display:grid;grid-template-columns:56px 1fr;gap:10px;padding:16px 0;border-top:1px solid #67717b}
+.how li::before{content:counter(s);font-family:var(--display);font-weight:700;font-size:44px;line-height:.9;color:#e5c88f}
+.how li b{display:block;color:var(--white);font-size:19px}
+.how li p{margin:4px 0 0}
+
+/* pictures and thank yous */
+.ty{padding:84px 0 40px}
+.ty h2{font-size:clamp(40px,10vw,72px);text-transform:uppercase;margin-bottom:24px}
+.ty blockquote{margin:0;padding:18px 0;border-top:1px solid var(--stone)}
+.ty blockquote p{font-size:clamp(20px,4.8vw,26px);line-height:1.35;margin:0 0 6px;max-width:38ch}
+.ty cite{font-style:normal;font-size:15px;color:var(--gold-deep);font-weight:700}
+.strip-pics{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:30px 8px 0}
+.strip-pics img{width:100%;height:100%;object-fit:cover}
+.strip-pics .wide{grid-column:1 / -1}
+.strip-pics figure{margin:0;position:relative}
+.strip-pics figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 10px 8px;color:#fff;font-size:14px;background:linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,0))}
+@media (min-width:860px){.ty .cols{display:grid;grid-template-columns:1fr 1fr;column-gap:48px}.ty .cols blockquote:first-child{grid-column:1 / -1}.ty .cols blockquote:first-child p{font-size:32px}.strip-pics{grid-template-columns:2fr 1fr 1fr 1fr;max-width:1240px;margin:0 auto}.strip-pics .wide{grid-column:auto}.strip-pics img{height:360px}}
+.venues{max-width:62ch;font-size:16px;color:#5b5044;margin-top:28px}
+
+/* enquire */
+.enq{background:var(--white);padding:84px 0 120px;border-top:1px solid var(--stone)}
+.enq-grid{display:grid;gap:34px}
+.enq h2{font-size:clamp(44px,11vw,80px);text-transform:uppercase;margin-bottom:12px}
+form{display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:700;font-size:15px}
+input,textarea{font:400 17px/1.4 var(--text);padding:12px 14px;border:1.5px solid #74695c;border-radius:3px;background:#fff;color:var(--ink);min-height:48px;width:100%}
+textarea{min-height:130px;resize:vertical}
+.two{display:grid;gap:16px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.note{font-size:14px;color:#5b5044;margin:0}
+.done{display:none;overflow-wrap:anywhere;padding:16px;border:1.5px solid var(--gold-deep);border-radius:3px;background:#f7f0e2}
+.done.show{display:block}
+@media (min-width:860px){.enq-grid{grid-template-columns:.8fr 1.2fr}}
+
+footer{background:var(--ink);color:#cfc7ba;padding:40px 0 110px;font-size:14.5px}
+footer strong{color:var(--white)}
+
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px}
+.bar .btn{flex:1;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+.bar .btn:focus-visible{box-shadow:0 0 0 6px #fff}
+@media (max-width:380px){.bar .btn{padding:0 10px;font-size:15px;white-space:nowrap}}
+@media (min-width:860px){.bar{left:auto;right:24px;bottom:24px}.bar .btn{flex:none}}
+
+@media (prefers-reduced-motion:reduce),(max-height:520px){
+  .hero{height:auto}.hero-stage{position:relative;height:100svh;min-height:520px}
+  .h-photo,.h-top,.h-copy,.h-dots{transform:none!important}
+  .count{height:auto}.count-stage{position:relative;height:auto;display:block;padding:0 0 40px}
+  .c-photos{height:300px}.c-photos img{transition:none}
+  .c-read{padding-top:20px}.c-low{padding-bottom:20px}
+  .seats i{transition:none}
+  .c-end{opacity:1;transform:none}
+}
+@media (max-height:520px){.hero-stage{height:auto!important;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end}.h-top,.h-copy{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:100%}.h-top{padding:18px 20px 0;margin-bottom:auto}.h-copy{padding:40px 20px 84px}.h-copy h1{font-size:64px}.h-dots{display:none}}
+@media (max-height:640px) and (prefers-reduced-motion:no-preference){.count-stage{grid-template-rows:32% auto 1fr}.key{display:none}.num{font-size:84px}}
+</style>
+<noscript><style>
+  .hero{height:auto}.hero-stage{position:relative;height:100svh}
+  .h-photo,.h-top,.h-copy,.h-dots{transform:none!important}
+  .count{height:auto}.count-stage{position:relative;height:auto;display:block;padding:0 0 40px}
+  .c-photos{height:300px}
+  .c-read{padding-top:20px}.seats i{background:var(--gold);border-color:var(--gold);transform:none}
+  .c-end{opacity:1;transform:none}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="strip">A website idea made by <strong>Lampbound Studio</strong> for Married by Katrina. Not her official site.</div>
+
+<main id="main">
+<section class="hero" data-pin aria-label="Introduction">
+  <div class="hero-stage">
+    <div class="h-photo"><img src="img/hero.jpg" width="858" height="1286" alt="A bride and groom walking hand in hand along a hillside above the water at sunset" fetchpriority="high"></div>
+    <div class="h-shade"></div>
+    <div class="h-top"><p>Married by Katrina</p></div>
+    <div class="h-dots" aria-hidden="true"><i></i><i></i></div>
+    <div class="h-copy">
+      <h1>Katrina Staples</h1>
+      <p class="tag">Marriage celebrant for joyful, relaxed weddings and elopements, in Nipaluna/Hobart and beyond.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" aria-labelledby="about-h">
+  <div class="wrap about-grid">
+    <div>
+      <h2 id="about-h">Down-to-earth, and a bit of a coffee snob</h2>
+      <p class="lead">Katrina's ceremonies are relaxed, heartfelt and joyful. She trained as a celebrant in 2017, and says it's an absolute privilege to stand beside you on the day.</p>
+      <p>Before that she worked in project management and office administration, and spent years as a volunteer telephone crisis supporter and shift supervisor for Lifeline. She puts those organisation and communication skills to work on your paperwork and your ceremony, so the day runs smoothly and you can relax.</p>
+      <ul class="facts">
+        <li>Fur babies in your ceremony? She says yes please.</li>
+        <li>When you catch up, expect a great coffee, and it's her shout.</li>
+        <li>Off duty: yoga, bushwalking, and Tasmania's landscapes.</li>
+      </ul>
+    </div>
+    <figure>
+      <img src="img/katrina.jpg" width="708" height="800" alt="Katrina laughing as she reads a ceremony into a microphone" loading="lazy">
+      <figcaption>Katrina Staples, marriage celebrant, Hobart</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="count" data-pin data-count aria-labelledby="count-h">
+  <h2 id="count-h" class="skip-h" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">How many people will be there?</h2>
+  <div class="count-stage">
+    <div class="c-photos" aria-hidden="true">
+      <img class="on" src="img/two.jpg" width="800" height="800" alt="">
+      <img src="img/four.jpg" width="1000" height="750" alt="">
+      <img src="img/ten.jpg" width="503" height="581" alt="">
+      <img src="img/thirty.jpg" width="1100" height="733" alt="">
+    </div>
+    <div class="c-read">
+      <span class="num" id="num" aria-hidden="true">2</span><span class="unit" aria-hidden="true">guests</span>
+      <div class="c-lab">
+        <span class="pk-name" id="pkname" data-k="nofuss">No Fuss</span>
+        <p class="c-line" id="cline">Just the two of you, and your two witnesses.</p>
+      </div>
+    </div>
+    <div class="c-low">
+      <div class="seats" id="seats" aria-hidden="true"></div>
+      <p class="key" id="key" hidden>Dark: the two of you. Brown: your witnesses. Gold: your other guests.</p>
+      <p class="c-end" id="cend">Whatever the number, you're her only couple that day.</p>
+    </div>
+  </div>
+  <p class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">No Fuss is for just the two of you and your two witnesses, or up to 10 guests in total including your witnesses. Relaxed is for up to about 30 guests. Katrina takes one booking a day.</p>
+</section>
+
+<section class="pk" aria-labelledby="pk-h">
+  <div class="wrap">
+    <h2 id="pk-h">Two ways to do it</h2>
+    <p class="intro">Both are tailored to the things that matter to you, and to your budget. Prices as on Katrina's current site.</p>
+    <div class="pkg-list">
+      <div class="pkg">
+        <h3>No Fuss</h3>
+        <p class="price">$540</p>
+        <p class="who">Up to 10 guests in total, witnesses included</p>
+        <p>Elope, or get married without the fuss. Just the two of you and your two witnesses, or a few guests as well. You'll say the words the law needs, and you can add personal vows and rings if you like.</p>
+      </div>
+      <div class="pkg r">
+        <h3>Relaxed</h3>
+        <p class="price">$780</p>
+        <p class="who">Up to about 30 guests</p>
+        <p>A warm, personal ceremony. The words the law needs, a bit of your story, a favourite poem or reading, your "I do", and personal vows and rings if you wish.</p>
+      </div>
+    </div>
+    <div class="inc">
+      <div>
+        <h3>Katrina's fee includes</h3>
+        <ul>
+          <li>Unlimited contact by phone, text and email</li>
+          <li>A first meeting, in person or by Zoom or FaceTime, to plan your ceremony and do your legal paperwork</li>
+          <li>Her wedding information pack, and help with vows, readings, poems and music</li>
+          <li>Writing your ceremony with you</li>
+          <li>A catch-up a few days before, at your venue if it works, with a short rehearsal</li>
+          <li>Her Bose PA and Sennheiser microphone, and a signing table if you need one</li>
+          <li>Arriving 30 minutes early on the day, and working with your photographer and venue</li>
+          <li>Your presentation marriage certificate, and lodging everything with Births, Deaths and Marriages</li>
+        </ul>
+      </div>
+      <div class="terms">
+        <p>Travel is $0.50 a kilometre, for meetings, rehearsal and the day. Your first meeting is free.</p>
+        <p>A $200 non-refundable booking fee holds your date. The balance is due 14 days before your ceremony.</p>
+        <p>She takes one booking a day, and is now taking bookings to April 2027.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <h2 id="how-h">Getting started</h2>
+    <ol>
+      <li><div><b>Check your date</b><p>Call Katrina or send the form below.</p></div></li>
+      <li><div><b>Catch up</b><p>In person, or by Zoom or FaceTime. Talk through your wedding and the ceremony you want.</p></div></li>
+      <li><div><b>Pay your booking fee</b><p>This secures your date and time.</p></div></li>
+      <li><div><b>Do your Notice of Intended Marriage</b><p>Bring your birth certificate and licence, or your passport. Interstate? It can be done by video.</p></div></li>
+      <li><div><b>Relax</b><p>Katrina writes the ceremony with you and guides you through each step.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="ty" aria-labelledby="ty-h">
+  <div class="wrap">
+    <h2 id="ty-h">Thank you's</h2>
+    <div class="cols">
+      <blockquote><p>"We really appreciate everything you did to make our wedding day so special."</p><cite>Anisha and Bhagwan, July 2026</cite></blockquote>
+      <blockquote><p>"She saved our day and found us a beautiful location to have our ceremony and our photos."</p><cite>Sarah and Liam</cite></blockquote>
+      <blockquote><p>"She created a calm atmosphere for an emotional ceremony."</p><cite>Tom and Ayu</cite></blockquote>
+    </div>
+    <p class="venues">Her couples have married at places like Frogmore Creek, Puddleduck Vineyard, Ratho Farm and the Botanical Gardens, and in parks, gardens, beaches and private properties around Hobart. Planning a beach elopement or a hike up to Sphinx Rock on Kunanyi? She can help with that too.</p>
+  </div>
+  <div class="strip-pics">
+    <figure class="wide"><img src="img/reading.jpg" width="1100" height="733" alt="Katrina reading at a microphone as a bride laughs and the groom holds her hands" loading="lazy"></figure>
+    <figure><img src="img/beach.jpg" width="653" height="800" alt="A couple holding hands at a beach ceremony under a white arch" loading="lazy"></figure>
+    <figure><img src="img/dip.jpg" width="657" height="684" alt="A groom dipping his bride into a kiss under bunting" loading="lazy"></figure>
+    <figure><img src="img/dog.jpg" width="600" height="800" alt="A black and white dog wearing a flower collar beside a vase of lilies" loading="lazy"><figcaption>Fur babies welcome</figcaption></figure>
+  </div>
+</section>
+
+<section class="enq" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap enq-grid">
+    <div>
+      <h2 id="enq-h">Check your date</h2>
+      <p>Tell Katrina your date, time, venue and roughly how many guests, and she'll let you know if she's free. Or call her on <a href="tel:0424451850">0424 451 850</a>.</p>
+      <p class="note">This is a preview, so the form does not send anything.</p>
+    </div>
+    <form id="enq-form" novalidate>
+      <div class="two">
+        <label>Your name<input name="name" autocomplete="name"></label>
+        <label>Your partner's name<input name="partner"></label>
+      </div>
+      <div class="two">
+        <label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <label>Date, time, venue and number of guests<textarea name="details"></textarea></label>
+      <button class="btn" type="button" id="send">Send to Katrina</button>
+      <div class="done" id="done" role="status" tabindex="-1">Preview only: nothing was sent. On the finished site this goes straight to Katrina. To reach her today, email <a href="mailto:katrinaptk@gmail.com">katrinaptk@gmail.com</a>.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>A preview made by Lampbound Studio for Married by Katrina.</strong> Not affiliated, not live.</p>
+    <p>Words and photos are from Katrina's own website and her Celebrants Network profile. Photos were shared with Katrina by her couples.</p>
+    <p>Katrina acknowledges the Traditional Custodians of the lands we live on, and pays her respects to all Elders, past and present, of all Aboriginal and Torres Strait Islander nations.</p>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn alt" href="tel:0424451850">Call Katrina</a><a class="btn" href="#enquire">Check your date</a></div>
+
+<script>
+(function(){
+  var pins=[].slice.call(document.querySelectorAll('[data-pin]'));
+  var sec=document.querySelector('[data-count]');
+  var seatsEl=document.getElementById('seats');
+  for(var i=0;i<32;i++){var d=document.createElement('i');if(i<2)d.className='c';else if(i<4)d.className='w';seatsEl.appendChild(d);}
+  document.getElementById('key').hidden=false;
+  var seats=[].slice.call(seatsEl.children);
+  var photos=[].slice.call(sec.querySelectorAll('.c-photos img'));
+  var num=document.getElementById('num'),pk=document.getElementById('pkname'),line=document.getElementById('cline'),end=document.getElementById('cend');
+  var lines=['Just the two of you, and your two witnesses.','Share it with a few guests. Up to 10 in total, witnesses included.','Up to about 30 of your favourite people.'];
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce), (max-height:520px)');
+  var on=false,ticking=false;
+  function countFor(p){
+    if(p<.24)return 2;
+    if(p<.54)return Math.min(10,3+Math.floor((p-.24)/.26*8));
+    return Math.min(30,11+Math.floor((p-.54)/.32*20));
+  }
+  function paint(p){
+    var n=countFor(p); num.textContent=n;
+    var st=n<=2?0:n<=10?1:2, ph=n<=2?0:n<=5?1:n<=10?2:3;
+    line.textContent=lines[st];
+    pk.textContent=n>10?'Relaxed':'No Fuss'; pk.dataset.k=n>10?'relaxed':'nofuss';
+    photos.forEach(function(im,k){im.classList.toggle('on',k===ph)});
+    seats.forEach(function(s,k){s.classList.toggle('on',k<n+2)});
+    end.classList.toggle('on',p>.9);
+  }
+  function finish(){pins.forEach(function(el){el.style.setProperty('--p','1')});paint(1);}
+  function update(){
+    ticking=false;
+    pins.forEach(function(el){
+      var r=el.getBoundingClientRect(),total=el.offsetHeight-window.innerHeight;
+      var p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;
+      el.style.setProperty('--p',p.toFixed(4));
+      if(el===sec)paint(p);
+    });
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
+  function start(){if(on)return;on=true;addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);update();}
+  function stop(){on=false;removeEventListener('scroll',onScroll);removeEventListener('resize',onScroll);finish();}
+  if(mq.matches)finish();else start();
+  if(mq.addEventListener)mq.addEventListener('change',function(){mq.matches?stop():start()});
+  document.getElementById('send').addEventListener('click',function(){var d=document.getElementById('done');d.classList.add('show');d.focus();});
+})();
+</script>
+</body>
+</html>
