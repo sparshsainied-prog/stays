@@ -65,7 +65,7 @@ p{margin:0 0 1em;text-wrap:pretty}
 @media (max-height:520px) and (orientation:landscape){
   .js .hero{height:auto}
   .js .hero .stage{position:relative;height:auto;min-height:100svh}
-  .h-text{padding-bottom:28px}
+  .h-text{padding-bottom:84px}
   .h-text h1{font-size:64px}
   .h-text .lede{margin-bottom:12px}
 }
@@ -105,7 +105,7 @@ section.plain{padding:76px 0}
 .js .script.on .cue .new{opacity:clamp(0, var(--t) * 2.4 - 1.4, 1)}
 /* without the pinned run, show the end state */
 .script:not(.on) .row:not(.keep){--t:1}
-.script:not(.on) .row:not(.keep) .cue .old{opacity:.45}
+.script:not(.on) .row:not(.keep) .cue .old{opacity:.62}
 .script:not(.on) .row:not(.keep) .cue .new{opacity:1;transform:none}
 .script:not(.on) .row .cue .new{grid-area:auto}
 .script:not(.on) .row:not(.keep) .cue{grid-template-rows:auto auto}
@@ -195,8 +195,10 @@ footer strong{color:#fff}
 .bar{position:fixed;left:0;right:0;bottom:0;display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(241,242,238,.97);border-top:1px solid var(--line);z-index:20}
 .bar .btn{flex:1;padding:0 10px}
 .bar .btn.alt{flex:0 0 auto;padding:0 16px;color:var(--ink)}
+.bar .btn.alt:hover{color:#fff}
 @media (min-width:900px){.bar{display:none}footer{padding-bottom:40px}}
 </style>
+<noscript><style>.done{display:block}</style></noscript>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>

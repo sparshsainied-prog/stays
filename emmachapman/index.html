@@ -60,6 +60,7 @@ p{margin:0 0 1em;text-wrap:pretty}
   .js .hero{height:auto}
   .js .hero .stage{position:relative;height:auto;min-height:100svh}
   .h-text{padding-bottom:26px}.h-text h1{font-size:46px}.h-sprig{display:none}
+  .h-photo::after{height:100%;background:linear-gradient(180deg,rgba(31,42,56,.25),rgba(31,42,56,.88) 35%)}
 }
 
 /* about */
@@ -89,7 +90,7 @@ section.plain{padding:76px 0}
 .js .table.on .cap.first{opacity:1}
 .table:not(.on) .caps{gap:24px}
 .table:not(.on) .cap{grid-area:auto}
-@media (max-height:700px){.js .table.on .cap .who{display:none}}
+@media (max-height:700px){.js .table.on .desk{width:min(100%,560px,calc((100svh - 430px) * 1.25))}}
 @media (min-width:900px){
   .table .stage{grid-template-columns:minmax(0,720px) minmax(0,380px);justify-content:center;column-gap:64px;align-items:center}
   .js .table.on .stage{align-content:center;padding:24px 40px}
@@ -150,6 +151,7 @@ footer strong{color:#fff}
 .bar .btn{flex:1}
 @media (min-width:900px){.bar{display:none}footer{padding-bottom:40px}}
 </style>
+<noscript><style>.done{display:block}</style></noscript>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>

@@ -130,6 +130,7 @@ textarea{min-height:120px;resize:vertical}
 .note{font-size:14px;color:var(--lake);margin:0}
 .done{display:none;padding:16px;border:1.5px solid var(--red-btn);border-radius:6px;background:#fdeeee}
 .done.show{display:block}
+.done a{overflow-wrap:anywhere}
 @media (min-width:860px){.enq-grid{grid-template-columns:.8fr 1.2fr}}
 
 footer{background:var(--ink);color:#c9bfc1;padding:40px 0 110px;font-size:14.5px}
@@ -146,7 +147,7 @@ footer strong{color:var(--white)}
   .slot img,.heart,.word{transition:none}
   .word{grid-area:auto;opacity:1!important;transform:none!important;margin-bottom:22px}
 }
-@media (max-height:520px){.hero-stage{min-height:100svh;height:auto!important}.h-heart{display:none}.hero-stage{display:flex;flex-direction:column;justify-content:flex-end}.h-copy{position:relative;padding-top:40px;padding-bottom:96px}.hero h1{font-size:clamp(46px,10vw,92px)}}
+@media (max-height:520px){.hero-stage{min-height:100svh;height:auto!important}.h-heart{display:none}.hero-stage{display:flex;flex-direction:column;justify-content:flex-end}.h-copy{position:relative;padding-top:40px;padding-bottom:96px}.h-shade{height:100%;background:linear-gradient(to top,rgba(30,20,22,.92),rgba(30,20,22,.7) 70%,rgba(30,20,22,.45))}.hero h1{font-size:clamp(46px,10vw,92px)}}
 </style>
 <noscript><style>
   .hero{height:auto}.hero-stage{position:relative;height:100svh}
@@ -154,6 +155,7 @@ footer strong{color:var(--white)}
   .four{height:auto}.four-stage{position:relative;height:auto;padding-bottom:60px}
   .slot img{transform:none}.heart{opacity:1;transform:translate3d(-50%,-52%,0)}
   .word{grid-area:auto;opacity:1;transform:none;margin-bottom:22px}
+  .done{display:block}
 </style></noscript>
 </head>
 <body>
